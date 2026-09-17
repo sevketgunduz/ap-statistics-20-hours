@@ -1,0 +1,68 @@
+<svg viewBox="0 0 640 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Pie chart of surveyed patients by hospital with slice angles" font-family="Public Sans, system-ui, sans-serif">
+<style>
+  .ink   { fill: #15201f; }
+  .ink2  { fill: #4a5654; }
+  .ink3  { fill: #6f7b79; }
+  .axis  { stroke: #c3c9c6; }
+  .grid  { stroke: #dcdfdd; }
+  .gap   { stroke: #ffffff; }
+  .surf  { fill: #ffffff; }
+  @media (prefers-color-scheme: dark) {
+    .ink  { fill: #e9edeb; }
+    .ink2 { fill: #a5b0ad; }
+    .ink3 { fill: #7e8a87; }
+    .axis { stroke: #3a4644; }
+    .grid { stroke: #2a3533; }
+    .gap  { stroke: #182120; }
+    .surf { fill: #182120; }
+  }
+
+  .s0 { fill: #2a78d6; }
+  .s1 { fill: #eb6834; }
+  .s2 { fill: #1baf7a; }
+  .s3 { fill: #eda100; }
+  .s4 { fill: #e87ba4; }
+  .s5 { fill: #008300; }
+  @media (prefers-color-scheme: dark) {
+    .s0 { fill: #3987e5; }
+    .s1 { fill: #d95926; }
+    .s2 { fill: #199e70; }
+    .s3 { fill: #c98500; }
+    .s4 { fill: #d55181; }
+    .s5 { fill: #008300; }
+  }
+</style>
+<path class="s0 gap" d="M 172 196 L 172.00 48.00 A 148 148 0 0 1 317.38 223.73 Z" stroke-width="2" fill="#2a78d6" stroke="#ffffff"/>
+<text x="242.7" y="142.5" font-size="15" font-weight="700" text-anchor="middle" fill="#ffffff">28.0%</text>
+<path class="s1 gap" d="M 172 196 L 317.38 223.73 A 148 148 0 0 1 156.53 343.19 Z" stroke-width="2" fill="#eb6834" stroke="#ffffff"/>
+<text x="226.7" y="274.7" font-size="15" font-weight="700" text-anchor="middle" fill="#ffffff">23.7%</text>
+<path class="s2 gap" d="M 172 196 L 156.53 343.19 A 148 148 0 0 1 34.39 250.48 Z" stroke-width="2" fill="#1baf7a" stroke="#ffffff"/>
+<text x="116.5" y="274.1" font-size="15" font-weight="700" text-anchor="middle" fill="#ffffff">17.3%</text>
+<path class="s3 gap" d="M 172 196 L 34.39 250.48 A 148 148 0 0 1 47.04 116.70 Z" stroke-width="2" fill="#eda100" stroke="#ffffff"/>
+<text x="80.6" y="192.4" font-size="15" font-weight="700" text-anchor="middle" fill="#ffffff">15.0%</text>
+<path class="s4 gap" d="M 172 196 L 47.04 116.70 A 148 148 0 0 1 117.52 58.39 Z" stroke-width="2" fill="#e87ba4" stroke="#ffffff"/>
+<text x="113.5" y="130.3" font-size="15" font-weight="700" text-anchor="middle" fill="#ffffff">10.0%</text>
+<path class="s5 gap" d="M 172 196 L 117.52 58.39 A 148 148 0 0 1 172.00 48.00 Z" stroke-width="2" fill="#008300" stroke="#ffffff"/>
+<text class="ink3" x="372" y="40" font-size="12" letter-spacing="1.2" fill="#6f7b79">SECTION / SHARE / ANGLE</text>
+<rect class="s0" x="372" y="48" width="13" height="13" rx="2" fill="#2a78d6"/>
+<text class="ink" x="393" y="59" font-size="13.5" font-weight="600" fill="#15201f">St Mary's</text>
+<text class="ink2" x="393" y="75" font-size="12.5" font-family="IBM Plex Mono, monospace" fill="#4a5654">28.0%  &#183;  100.8&#176;</text>
+<rect class="s1" x="372" y="82" width="13" height="13" rx="2" fill="#eb6834"/>
+<text class="ink" x="393" y="93" font-size="13.5" font-weight="600" fill="#15201f">Riverside</text>
+<text class="ink2" x="393" y="109" font-size="12.5" font-family="IBM Plex Mono, monospace" fill="#4a5654">23.7%  &#183;  85.2&#176;</text>
+<rect class="s2" x="372" y="116" width="13" height="13" rx="2" fill="#1baf7a"/>
+<text class="ink" x="393" y="127" font-size="13.5" font-weight="600" fill="#15201f">Northgate</text>
+<text class="ink2" x="393" y="143" font-size="12.5" font-family="IBM Plex Mono, monospace" fill="#4a5654">17.3%  &#183;  62.4&#176;</text>
+<rect class="s3" x="372" y="150" width="13" height="13" rx="2" fill="#eda100"/>
+<text class="ink" x="393" y="161" font-size="13.5" font-weight="600" fill="#15201f">Parkview</text>
+<text class="ink2" x="393" y="177" font-size="12.5" font-family="IBM Plex Mono, monospace" fill="#4a5654">15.0%  &#183;  54.0&#176;</text>
+<rect class="s4" x="372" y="184" width="13" height="13" rx="2" fill="#e87ba4"/>
+<text class="ink" x="393" y="195" font-size="13.5" font-weight="600" fill="#15201f">Eastwood</text>
+<text class="ink2" x="393" y="211" font-size="12.5" font-family="IBM Plex Mono, monospace" fill="#4a5654">10.0%  &#183;  36.0&#176;</text>
+<rect class="s5" x="372" y="218" width="13" height="13" rx="2" fill="#008300"/>
+<text class="ink" x="393" y="229" font-size="13.5" font-weight="600" fill="#15201f">Hillcrest</text>
+<text class="ink2" x="393" y="245" font-size="12.5" font-family="IBM Plex Mono, monospace" fill="#4a5654">6.0%  &#183;  21.6&#176;</text>
+<line class="grid" x1="372" y1="252" x2="616" y2="252" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink" x="372" y="270" font-size="13" font-weight="600" fill="#15201f">Total</text>
+<text class="ink2" x="468" y="270" font-size="12.5" font-family="IBM Plex Mono, monospace" fill="#4a5654">100%  &#183;  360.0&#176;</text>
+</svg>

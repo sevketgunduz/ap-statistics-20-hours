@@ -1,0 +1,100 @@
+{
+  "course": "AP Statistics in Twenty Hours",
+  "kicker": "AP Statistics · Twenty-hour course",
+  "ced": "Course and Exam Description effective Fall 2026",
+  "groups": [
+    {
+      "label": "Course",
+      "items": [
+        {
+          "id": "home",
+          "label": "Home",
+          "out": "index.html",
+          "src": null,
+          "kind": "index"
+        },
+        {
+          "id": "plan",
+          "label": "The 20-hour plan",
+          "out": "plan.html",
+          "src": "AP-Statistics-20-Hour-Lesson-Plan.md",
+          "kind": "md"
+        }
+      ]
+    },
+    {
+      "label": "Block A · Describing one variable",
+      "items": [
+        {
+          "id": "s01t",
+          "label": "Session 1 · Tutor",
+          "out": "s01-tutor.html",
+          "src": "html-fragment:session-01-tutoring.html",
+          "kind": "html",
+          "session": 1,
+          "variant": "tutor",
+          "title": "Session 1, One to One",
+          "topics": "CED 1.1–1.3"
+        },
+        {
+          "id": "s01s",
+          "label": "Session 1 · Student",
+          "out": "s01-student.html",
+          "src": "Session-01-Student-Workbook.md",
+          "kind": "md",
+          "session": 1,
+          "variant": "student",
+          "title": "Session 1 Workbook",
+          "topics": "CED 1.1–1.3"
+        },
+        {
+          "id": "s01x",
+          "label": "Session 1 · Test",
+          "out": "s01-test.html",
+          "src": "Session-01-MC-Test.md",
+          "kind": "md",
+          "session": 1,
+          "variant": "test",
+          "title": "Session 1 Test",
+          "topics": "CED 1.1–1.3 · 22 questions"
+        },
+        {
+          "id": "s02t",
+          "label": "Session 2 · Tutor",
+          "out": "s02-tutor.html",
+          "src": "html-fragment:session-02-tutoring.html",
+          "kind": "html",
+          "session": 2,
+          "variant": "tutor",
+          "title": "Session 2, Shape of the Data",
+          "topics": "CED 1.4–1.6"
+        },
+        {
+          "id": "s02s",
+          "label": "Session 2 · Student",
+          "out": "s02-student.html",
+          "src": "Session-02-Student-Workbook.md",
+          "kind": "md",
+          "session": 2,
+          "variant": "student",
+          "title": "Session 2 Workbook",
+          "topics": "CED 1.4–1.6"
+        }
+      ]
+    },
+    {
+      "label": "Interactive",
+      "items": [
+        {
+          "id": "sim1",
+          "label": "Unit 1 Explorer",
+          "out": "tools/unit1-explorer.html",
+          "src": "html-fragment:unit1-explorer.html",
+          "kind": "tool",
+          "title": "Unit One Explorer",
+          "topics": "Sessions 1–2"
+        }
+      ]
+    }
+  ]
+}

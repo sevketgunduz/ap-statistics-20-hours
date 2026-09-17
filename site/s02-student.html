@@ -1,0 +1,735 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Session 2 Workbook · AP Statistics in Twenty Hours</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Spectral:ital,wght@0,600;0,700;1,600&display=swap">
+<link rel="stylesheet" href="assets/course.css">
+</head>
+<body>
+<main class="page">
+<h1>Session 2 — Showing and Describing One Variable</h1>
+<p class="standfirst"><strong>AP Statistics · Twenty-Hour Course · Student edition, to work through on your own</strong><br><strong>CED Topics 1.4, 1.5, 1.6 · About 75 minutes, plus homework</strong></p>
+<hr>
+<h2>How to use this</h2>
+<p>Same rule as last time, and it matters more in this session than it did in the last one.</p>
+<blockquote>Every <strong>Your turn</strong> box asks you to do something before the text shows you the answer. <strong>Do it on paper first.</strong> Several of these ask you to <em>draw</em> a graph — and the finished graph is hidden behind the reveal precisely so that you cannot copy it.</blockquote>
+<p>Drawing a histogram by looking at a histogram teaches you nothing. Drawing one from a list of 25 numbers, getting a bin boundary wrong, and finding out where you went wrong — that is the whole exercise.</p>
+<p><strong>What you need:</strong> paper, a pen, a ruler, and a protractor. Squared paper helps but is not essential. No calculator today.</p>
+<h3>How this maps to your tutor's document</h3>
+<div class="tbl"><table><thead><tr><th>Your section</th><th>Tutor's section</th><th>Minutes</th></tr></thead><tbody><tr><td>Part 1 — Your Session 1 homework, and a warm-up</td><td>0–8 Homework debrief and diagnostic</td><td>8</td></tr><tr><td>Part 2 — Why this matters</td><td>(the framing)</td><td>2</td></tr><tr><td>Part 3 — The hospital survey, in pictures</td><td>8–18 Scenario A</td><td>18</td></tr><tr><td>Part 4 — The commute times, in pictures</td><td>18–32 Scenario B</td><td>20</td></tr><tr><td>Part 5 — Describing a distribution</td><td>32–46 The four components</td><td>18</td></tr><tr><td>Part 6 — On your own: the café</td><td>46–54 Solo case</td><td>8</td></tr><tr><td>Part 7 — Explain it back</td><td>54–60 Teach it back</td><td>5</td></tr></tbody></table></div>
+<hr>
+<h2>Part 1 — Your Session 1 homework, and a warm-up</h2>
+<p>Before anything else, get out your marked Session 1 homework and make two lists:</p>
+<ol><li>The questions you got <strong>wrong</strong>.</li><li>The questions you marked with a <strong>?</strong> — including the ones that turned out right.</li></ol>
+<p>That second list is the more useful one. A question you guessed correctly is a question you will get wrong under exam pressure.</p>
+<p><strong>Two specific things to check.</strong> These are the two most common errors on that sheet, and both come back repeatedly:</p>
+<ul><li><strong>B5</strong> — did you answer <em>"parameter"</em>? The value 171 ÷ 450 came from the 450 people actually asked, so it describes the <strong>sample</strong>. It is a statistic. Check the denominator, every time.</li><li><strong>D4</strong> — did you answer <em>"yes, supported"</em>? Bus was 42.5%, which is the <strong>largest</strong> share but not <strong>most</strong>. "Most" means more than half. This plurality-versus-majority distinction appears in every unit of this course.</li></ul>
+<h3>Warm-up</h3>
+<p>Three questions. Answer on paper before reading on.</p>
+<p><strong>Q1.</strong> Give me a categorical variable and a quantitative variable, from anything at all.</p>
+<p><strong>Q2.</strong> If I have a table of counts for six hospitals, what could I draw?</p>
+<p><strong>Q3.</strong> What does a histogram show you that a plain list of numbers doesn't?</p>
+<details>
+<summary><strong>Reveal — and what Q3 tells you</strong></summary>
+<p><strong>Q1.</strong> Anything valid. Travel mode and journey time; eye colour and height; membership type and number of visits.</p>
+<p><strong>Q2.</strong> A bar chart or a pie chart. Both are for a single categorical variable.</p>
+<p><strong>Q3.</strong> This is the question that matters. The answer you want is something about <strong>shape</strong> or <strong>pattern</strong> — a histogram lets you see at a glance whether the values pile up at one end, whether there is a single peak, whether anything sits far away from everything else.</p>
+<p>If your answer was only <em>"it's easier to read"</em> or <em>"it looks nicer"</em>, that is exactly the gap this session fills. A graph is not decoration for a list of numbers; it shows you a property of the data — its shape — that the list contains but hides.</p>
+</details>
+<hr>
+<h2>Part 2 — Why this matters</h2>
+<p>This session has two halves, and they are not equally important.</p>
+<p>The first half is <strong>construction</strong>: turning a table into a bar chart, a pie chart, a dotplot, a stemplot, a histogram. This is genuinely a five-minute skill once you have the formulas.</p>
+<p>The second half is <strong>description</strong>: saying what a distribution looks like in a way that earns marks. Students still get this wrong in April, because a full description requires <strong>four</strong> specific things, in context, and most people say two of them and stop.</p>
+<p>If you are short of time today, spend it on Part 5.</p>
+<hr>
+<h2>Part 3 — The hospital survey, in pictures</h2>
+<p>This is the same data you tabulated in Session 1. Nothing new has been collected — you are only going to re-encode it.</p>
+<blockquote>The same <strong>300 surveyed patients</strong>, by hospital:<br><strong>St Mary's 84 · Riverside 71 · Northgate 52 · Parkview 45 · Eastwood 30 · Hillcrest 18</strong></blockquote>
+<h3>What does the height of a bar mean?</h3>
+<p class="yourturn"><strong>Your turn.</strong> If you drew a bar chart of this, what would the height of the St Mary's bar be?</p>
+<details>
+<summary><strong>Reveal</strong></summary>
+<p>Either <strong>84</strong> or <strong>0.280</strong> — and both are right. That is the point.</p>
+<p>A <strong>bar chart</strong> shows one bar per category, and the height (or length) can show either the <strong>frequency</strong> (the count, 84) or the <strong>relative frequency</strong> (the proportion, 0.280). Switching between them changes nothing about the shape of the picture — only the numbers on the axis.</p>
+<p>One rule that is easy to lose marks on: <strong>the bars must not touch.</strong> Categories are separate things, and the gaps say so. Bars that touch mean a histogram, which is for quantitative data, and that is a different graph entirely.</p>
+</details>
+<h3>The pie chart formula</h3>
+<p>A pie chart shows each category's <strong>share of the whole</strong>, so a slice has to be sized by relative frequency, not by count.</p>
+<blockquote><strong>Slice angle = (f ÷ n) × 360°</strong><br>and equivalently, <strong>slice as a percentage of the total area = 100rf</strong></blockquote>
+<p class="yourturn"><strong>Your turn.</strong> Calculate all six slice angles, to one decimal place. Then apply the self-check: what must they total?</p>
+<details>
+<summary><strong>Reveal</strong></summary>
+<div class="tbl"><table><thead><tr><th>Hospital</th><th><em>f</em></th><th><em>rf</em> = f ÷ 300</th><th>Angle = rf × 360°</th></tr></thead><tbody><tr><td>St Mary's</td><td>84</td><td>0.280</td><td>0.280 × 360 = <strong>100.8°</strong></td></tr><tr><td>Riverside</td><td>71</td><td>0.237</td><td>0.237 × 360 = <strong>85.2°</strong></td></tr><tr><td>Northgate</td><td>52</td><td>0.173</td><td>0.173 × 360 = <strong>62.4°</strong></td></tr><tr><td>Parkview</td><td>45</td><td>0.150</td><td>0.150 × 360 = <strong>54.0°</strong></td></tr><tr><td>Eastwood</td><td>30</td><td>0.100</td><td>0.100 × 360 = <strong>36.0°</strong></td></tr><tr><td>Hillcrest</td><td>18</td><td>0.060</td><td>0.060 × 360 = <strong>21.6°</strong></td></tr><tr class="tot"><td><strong>Total</strong></td><td><strong>300</strong></td><td><strong>1.000</strong></td><td><strong>360.0°</strong></td></tr></tbody></table></div>
+<p><strong>The self-check: the angles must total 360°.</strong> This is the same check as Σ*rf* = 1 from last session, wearing a different hat — because 360° <em>is</em> the whole, just as 1 is.</p>
+</details>
+<h3>From table to graph</h3>
+<p>Here is the same data three ways. Look at what stays the same and what changes.</p>
+<figure><div class="figscroll"><svg viewBox="0 0 620 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bar chart of surveyed patients by hospital" font-family="Public Sans, system-ui, sans-serif">
+<style>
+  .ink   { fill: #15201f; }
+  .ink2  { fill: #4a5654; }
+  .ink3  { fill: #6f7b79; }
+  .axis  { stroke: #c3c9c6; }
+  .grid  { stroke: #dcdfdd; }
+  .gap   { stroke: #ffffff; }
+  .surf  { fill: #ffffff; }
+  @media (prefers-color-scheme: dark) {
+    .ink  { fill: #e9edeb; }
+    .ink2 { fill: #a5b0ad; }
+    .ink3 { fill: #7e8a87; }
+    .axis { stroke: #3a4644; }
+    .grid { stroke: #2a3533; }
+    .gap  { stroke: #182120; }
+    .surf { fill: #182120; }
+  }
+
+  .s0 { fill: #2a78d6; }
+  .s1 { fill: #eb6834; }
+  .s2 { fill: #1baf7a; }
+  .s3 { fill: #eda100; }
+  .s4 { fill: #e87ba4; }
+  .s5 { fill: #008300; }
+  @media (prefers-color-scheme: dark) {
+    .s0 { fill: #3987e5; }
+    .s1 { fill: #d95926; }
+    .s2 { fill: #199e70; }
+    .s3 { fill: #c98500; }
+    .s4 { fill: #d55181; }
+    .s5 { fill: #008300; }
+  }
+</style>
+<line class="grid" x1="52" y1="338.0" x2="602" y2="338.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="44" y="342.0" font-size="13" text-anchor="end" fill="#6f7b79">0</text>
+<line class="grid" x1="52" y1="286.0" x2="602" y2="286.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="44" y="290.0" font-size="13" text-anchor="end" fill="#6f7b79">15</text>
+<line class="grid" x1="52" y1="234.0" x2="602" y2="234.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="44" y="238.0" font-size="13" text-anchor="end" fill="#6f7b79">30</text>
+<line class="grid" x1="52" y1="182.0" x2="602" y2="182.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="44" y="186.0" font-size="13" text-anchor="end" fill="#6f7b79">45</text>
+<line class="grid" x1="52" y1="130.0" x2="602" y2="130.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="44" y="134.0" font-size="13" text-anchor="end" fill="#6f7b79">60</text>
+<line class="grid" x1="52" y1="78.0" x2="602" y2="78.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="44" y="82.0" font-size="13" text-anchor="end" fill="#6f7b79">75</text>
+<line class="grid" x1="52" y1="26.0" x2="602" y2="26.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="44" y="30.0" font-size="13" text-anchor="end" fill="#6f7b79">90</text>
+<rect class="s0" x="61.0" y="46.8" width="73.7" height="291.2" rx="4" fill="#2a78d6"/>
+<rect class="s0" x="61.0" y="332.0" width="73.7" height="6" fill="#2a78d6"/>
+<text class="ink" x="97.8" y="38.8" font-size="14" font-weight="600" text-anchor="middle" fill="#15201f">84</text>
+<text class="ink2" x="97.8" y="358.0" font-size="13" text-anchor="middle" fill="#4a5654">St Mary's</text>
+<rect class="s1" x="152.7" y="91.9" width="73.7" height="246.1" rx="4" fill="#eb6834"/>
+<rect class="s1" x="152.7" y="332.0" width="73.7" height="6" fill="#eb6834"/>
+<text class="ink" x="189.5" y="83.9" font-size="14" font-weight="600" text-anchor="middle" fill="#15201f">71</text>
+<text class="ink2" x="189.5" y="358.0" font-size="13" text-anchor="middle" fill="#4a5654">Riverside</text>
+<rect class="s2" x="244.3" y="157.7" width="73.7" height="180.3" rx="4" fill="#1baf7a"/>
+<rect class="s2" x="244.3" y="332.0" width="73.7" height="6" fill="#1baf7a"/>
+<text class="ink" x="281.2" y="149.7" font-size="14" font-weight="600" text-anchor="middle" fill="#15201f">52</text>
+<text class="ink2" x="281.2" y="358.0" font-size="13" text-anchor="middle" fill="#4a5654">Northgate</text>
+<rect class="s3" x="336.0" y="182.0" width="73.7" height="156.0" rx="4" fill="#eda100"/>
+<rect class="s3" x="336.0" y="332.0" width="73.7" height="6" fill="#eda100"/>
+<text class="ink" x="372.8" y="174.0" font-size="14" font-weight="600" text-anchor="middle" fill="#15201f">45</text>
+<text class="ink2" x="372.8" y="358.0" font-size="13" text-anchor="middle" fill="#4a5654">Parkview</text>
+<rect class="s4" x="427.7" y="234.0" width="73.7" height="104.0" rx="4" fill="#e87ba4"/>
+<rect class="s4" x="427.7" y="332.0" width="73.7" height="6" fill="#e87ba4"/>
+<text class="ink" x="464.5" y="226.0" font-size="14" font-weight="600" text-anchor="middle" fill="#15201f">30</text>
+<text class="ink2" x="464.5" y="358.0" font-size="13" text-anchor="middle" fill="#4a5654">Eastwood</text>
+<rect class="s5" x="519.3" y="275.6" width="73.7" height="62.4" rx="4" fill="#008300"/>
+<rect class="s5" x="519.3" y="332.0" width="73.7" height="6" fill="#008300"/>
+<text class="ink" x="556.2" y="267.6" font-size="14" font-weight="600" text-anchor="middle" fill="#15201f">18</text>
+<text class="ink2" x="556.2" y="358.0" font-size="13" text-anchor="middle" fill="#4a5654">Hillcrest</text>
+<line class="axis" x1="52" y1="338" x2="602" y2="338" stroke-width="1.5" stroke="#c3c9c6" fill="none"/>
+<text class="ink3" x="52" y="386" font-size="12" fill="#6f7b79">Hospital</text>
+<text class="ink3" x="44" y="16" font-size="12" text-anchor="end" fill="#6f7b79">Patients</text>
+</svg>
+</div><figcaption>Bar chart — <strong>height</strong> encodes the count.</figcaption></figure>
+<figure><div class="figscroll"><svg viewBox="0 0 640 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Pie chart of surveyed patients by hospital with slice angles" font-family="Public Sans, system-ui, sans-serif">
+<style>
+  .ink   { fill: #15201f; }
+  .ink2  { fill: #4a5654; }
+  .ink3  { fill: #6f7b79; }
+  .axis  { stroke: #c3c9c6; }
+  .grid  { stroke: #dcdfdd; }
+  .gap   { stroke: #ffffff; }
+  .surf  { fill: #ffffff; }
+  @media (prefers-color-scheme: dark) {
+    .ink  { fill: #e9edeb; }
+    .ink2 { fill: #a5b0ad; }
+    .ink3 { fill: #7e8a87; }
+    .axis { stroke: #3a4644; }
+    .grid { stroke: #2a3533; }
+    .gap  { stroke: #182120; }
+    .surf { fill: #182120; }
+  }
+
+  .s0 { fill: #2a78d6; }
+  .s1 { fill: #eb6834; }
+  .s2 { fill: #1baf7a; }
+  .s3 { fill: #eda100; }
+  .s4 { fill: #e87ba4; }
+  .s5 { fill: #008300; }
+  @media (prefers-color-scheme: dark) {
+    .s0 { fill: #3987e5; }
+    .s1 { fill: #d95926; }
+    .s2 { fill: #199e70; }
+    .s3 { fill: #c98500; }
+    .s4 { fill: #d55181; }
+    .s5 { fill: #008300; }
+  }
+</style>
+<path class="s0 gap" d="M 172 196 L 172.00 48.00 A 148 148 0 0 1 317.38 223.73 Z" stroke-width="2" fill="#2a78d6" stroke="#ffffff"/>
+<text x="242.7" y="142.5" font-size="15" font-weight="700" text-anchor="middle" fill="#ffffff">28.0%</text>
+<path class="s1 gap" d="M 172 196 L 317.38 223.73 A 148 148 0 0 1 156.53 343.19 Z" stroke-width="2" fill="#eb6834" stroke="#ffffff"/>
+<text x="226.7" y="274.7" font-size="15" font-weight="700" text-anchor="middle" fill="#ffffff">23.7%</text>
+<path class="s2 gap" d="M 172 196 L 156.53 343.19 A 148 148 0 0 1 34.39 250.48 Z" stroke-width="2" fill="#1baf7a" stroke="#ffffff"/>
+<text x="116.5" y="274.1" font-size="15" font-weight="700" text-anchor="middle" fill="#ffffff">17.3%</text>
+<path class="s3 gap" d="M 172 196 L 34.39 250.48 A 148 148 0 0 1 47.04 116.70 Z" stroke-width="2" fill="#eda100" stroke="#ffffff"/>
+<text x="80.6" y="192.4" font-size="15" font-weight="700" text-anchor="middle" fill="#ffffff">15.0%</text>
+<path class="s4 gap" d="M 172 196 L 47.04 116.70 A 148 148 0 0 1 117.52 58.39 Z" stroke-width="2" fill="#e87ba4" stroke="#ffffff"/>
+<text x="113.5" y="130.3" font-size="15" font-weight="700" text-anchor="middle" fill="#ffffff">10.0%</text>
+<path class="s5 gap" d="M 172 196 L 117.52 58.39 A 148 148 0 0 1 172.00 48.00 Z" stroke-width="2" fill="#008300" stroke="#ffffff"/>
+<text class="ink3" x="372" y="40" font-size="12" letter-spacing="1.2" fill="#6f7b79">SECTION / SHARE / ANGLE</text>
+<rect class="s0" x="372" y="48" width="13" height="13" rx="2" fill="#2a78d6"/>
+<text class="ink" x="393" y="59" font-size="13.5" font-weight="600" fill="#15201f">St Mary's</text>
+<text class="ink2" x="393" y="75" font-size="12.5" font-family="IBM Plex Mono, monospace" fill="#4a5654">28.0%  &#183;  100.8&#176;</text>
+<rect class="s1" x="372" y="82" width="13" height="13" rx="2" fill="#eb6834"/>
+<text class="ink" x="393" y="93" font-size="13.5" font-weight="600" fill="#15201f">Riverside</text>
+<text class="ink2" x="393" y="109" font-size="12.5" font-family="IBM Plex Mono, monospace" fill="#4a5654">23.7%  &#183;  85.2&#176;</text>
+<rect class="s2" x="372" y="116" width="13" height="13" rx="2" fill="#1baf7a"/>
+<text class="ink" x="393" y="127" font-size="13.5" font-weight="600" fill="#15201f">Northgate</text>
+<text class="ink2" x="393" y="143" font-size="12.5" font-family="IBM Plex Mono, monospace" fill="#4a5654">17.3%  &#183;  62.4&#176;</text>
+<rect class="s3" x="372" y="150" width="13" height="13" rx="2" fill="#eda100"/>
+<text class="ink" x="393" y="161" font-size="13.5" font-weight="600" fill="#15201f">Parkview</text>
+<text class="ink2" x="393" y="177" font-size="12.5" font-family="IBM Plex Mono, monospace" fill="#4a5654">15.0%  &#183;  54.0&#176;</text>
+<rect class="s4" x="372" y="184" width="13" height="13" rx="2" fill="#e87ba4"/>
+<text class="ink" x="393" y="195" font-size="13.5" font-weight="600" fill="#15201f">Eastwood</text>
+<text class="ink2" x="393" y="211" font-size="12.5" font-family="IBM Plex Mono, monospace" fill="#4a5654">10.0%  &#183;  36.0&#176;</text>
+<rect class="s5" x="372" y="218" width="13" height="13" rx="2" fill="#008300"/>
+<text class="ink" x="393" y="229" font-size="13.5" font-weight="600" fill="#15201f">Hillcrest</text>
+<text class="ink2" x="393" y="245" font-size="12.5" font-family="IBM Plex Mono, monospace" fill="#4a5654">6.0%  &#183;  21.6&#176;</text>
+<line class="grid" x1="372" y1="252" x2="616" y2="252" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink" x="372" y="270" font-size="13" font-weight="600" fill="#15201f">Total</text>
+<text class="ink2" x="468" y="270" font-size="12.5" font-family="IBM Plex Mono, monospace" fill="#4a5654">100%  &#183;  360.0&#176;</text>
+</svg>
+</div><figcaption>Pie chart — <strong>area</strong> encodes the share.</figcaption></figure>
+<p>Notice the colour: St Mary's is the same blue in both, so your eye can follow one hospital across the two pictures. Nothing has been added or lost between the table and these graphs. The same six numbers are simply re-encoded — first as height, then as area.</p>
+<p class="yourturn"><strong>Your turn.</strong> Two questions. Decide which graph you would use for each, and why.</p>
+<ol><li><em>"Did more than half our patients come from a single hospital?"</em></li><li><em>"How many more patients did Northgate see than Parkview?"</em></li></ol>
+<details>
+<summary><strong>Reveal</strong></summary>
+<ol><li><strong>The pie chart.</strong> The question is about a share of the whole, and "more than half the circle" is something you can see instantly without doing any arithmetic. (The answer is no — St Mary's is the biggest slice at 28.0%, nowhere near half.)</li></ol>
+<ol><li><strong>The bar chart.</strong> The eye judges <em>length</em> accurately but judges <em>area</em> and <em>angle</em> badly. Northgate's 52 and Parkview's 45 are close enough that the two slices look almost identical, but the difference in bar height is easy to read.</li></ol>
+<p><strong>The general principle:</strong> pie charts are for part-to-whole at a glance. They are poor whenever you need to compare categories that are close in size, and they become unreadable past about six slices.</p>
+</details>
+<h3>The comparison trap</h3>
+<p>This is the part of this topic that actually gets examined.</p>
+<blockquote>The <strong>previous</strong> year, the same network surveyed <strong>200</strong> patients:<br><strong>St Mary's 70 · Riverside 40 · Northgate 30 · Parkview 30 · Eastwood 20 · Hillcrest 10</strong></blockquote>
+<p class="yourturn"><strong>Your turn.</strong> Did St Mary's handle <strong>more</strong> or <strong>fewer</strong> of the surveyed patients this year than last? Commit to an answer before revealing.</p>
+<details>
+<summary><strong>Reveal</strong></summary>
+<p>Most people say <strong>more</strong>, because 84 is bigger than 70. Now look at the sample sizes: <strong>200</strong> patients last year, <strong>300</strong> this year.</p>
+<div class="tbl"><table><thead><tr><th>Hospital</th><th>Last year <em>f</em> (n=200)</th><th>Last year %</th><th>This year <em>f</em> (n=300)</th><th>This year %</th></tr></thead><tbody><tr><td>St Mary's</td><td>70</td><td>35.0%</td><td>84</td><td><strong>28.0%</strong></td></tr><tr><td>Riverside</td><td>40</td><td>20.0%</td><td>71</td><td>23.7%</td></tr><tr><td>Northgate</td><td>30</td><td>15.0%</td><td>52</td><td>17.3%</td></tr><tr><td>Parkview</td><td>30</td><td>15.0%</td><td>45</td><td>15.0%</td></tr><tr><td>Eastwood</td><td>20</td><td>10.0%</td><td>30</td><td>10.0%</td></tr><tr><td>Hillcrest</td><td>10</td><td>5.0%</td><td>18</td><td>6.0%</td></tr><tr class="tot"><td><strong>Total</strong></td><td><strong>200</strong></td><td><strong>100%</strong></td><td><strong>300</strong></td><td><strong>100%</strong></td></tr></tbody></table></div>
+<p>St Mary's count went <strong>up</strong> (70 → 84) while its share went <strong>down</strong> (35.0% → 28.0%). Both statements are true, and they point in opposite directions.</p>
+<p><strong>The rule — write this down:</strong></p>
+<blockquote>When two data sets have <strong>different totals</strong>, compare <strong>relative frequencies</strong>, never raw counts.</blockquote>
+<p>A bar chart of raw counts across two groups of different size is misleading, and noticing that is worth marks. The reason is that a raw count mixes up two different things: a change in the variable, and a change in how many people you asked.</p>
+</details>
+<hr>
+<h2>Part 4 — The commute times, in pictures</h2>
+<p>More of Session 1's data. The commute study measured journey time; here are 25 of those journeys.</p>
+<blockquote>Journey times to school, in minutes, for 25 randomly chosen Lincoln High students:<br>```<br>8   9  10  11  12  12  13  14  15  15<br>16  17  18  18  20  21  22  24  25  27<br>30  33  36  42  68<br>```</blockquote>
+<p>They are already sorted. Sorting is not the skill being tested today.</p>
+<h3>Build all three</h3>
+<p class="yourturn"><strong>Your turn.</strong> On paper, construct all three of these. Give yourself about six minutes. Do not reveal until all three are drawn.</p>
+<ol><li>A <strong>dotplot</strong> — one dot per value, stacked where values repeat.</li><li>A <strong>stem-and-leaf plot</strong> — stems are the tens digit, leaves the units, both in order.</li><li>A <strong>histogram</strong> with bins of width 10.</li></ol>
+<details>
+<summary><strong>Reveal — the dotplot</strong></summary>
+<figure><div class="figscroll"><svg viewBox="0 0 720 168" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Dotplot of 25 journey times in minutes" font-family="Public Sans, system-ui, sans-serif">
+<style>
+  .ink   { fill: #15201f; }
+  .ink2  { fill: #4a5654; }
+  .ink3  { fill: #6f7b79; }
+  .axis  { stroke: #c3c9c6; }
+  .grid  { stroke: #dcdfdd; }
+  .gap   { stroke: #ffffff; }
+  .surf  { fill: #ffffff; }
+  @media (prefers-color-scheme: dark) {
+    .ink  { fill: #e9edeb; }
+    .ink2 { fill: #a5b0ad; }
+    .ink3 { fill: #7e8a87; }
+    .axis { stroke: #3a4644; }
+    .grid { stroke: #2a3533; }
+    .gap  { stroke: #182120; }
+    .surf { fill: #182120; }
+  }
+
+  .s0 { fill: #2a78d6; }
+  @media (prefers-color-scheme: dark) {
+    .s0 { fill: #3987e5; }
+  }
+</style>
+<line class="grid" x1="34.0" y1="14" x2="34.0" y2="116" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="34.0" y="135" font-size="12.5" text-anchor="middle" fill="#6f7b79">0</text>
+<line class="grid" x1="128.9" y1="14" x2="128.9" y2="116" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="128.9" y="135" font-size="12.5" text-anchor="middle" fill="#6f7b79">10</text>
+<line class="grid" x1="223.7" y1="14" x2="223.7" y2="116" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="223.7" y="135" font-size="12.5" text-anchor="middle" fill="#6f7b79">20</text>
+<line class="grid" x1="318.6" y1="14" x2="318.6" y2="116" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="318.6" y="135" font-size="12.5" text-anchor="middle" fill="#6f7b79">30</text>
+<line class="grid" x1="413.4" y1="14" x2="413.4" y2="116" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="413.4" y="135" font-size="12.5" text-anchor="middle" fill="#6f7b79">40</text>
+<line class="grid" x1="508.3" y1="14" x2="508.3" y2="116" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="508.3" y="135" font-size="12.5" text-anchor="middle" fill="#6f7b79">50</text>
+<line class="grid" x1="603.1" y1="14" x2="603.1" y2="116" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="603.1" y="135" font-size="12.5" text-anchor="middle" fill="#6f7b79">60</text>
+<line class="grid" x1="698.0" y1="14" x2="698.0" y2="116" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="698.0" y="135" font-size="12.5" text-anchor="middle" fill="#6f7b79">70</text>
+<line class="axis" x1="34" y1="116" x2="698" y2="116" stroke-width="1.5" stroke="#c3c9c6" fill="none"/>
+<circle class="s0 gap" cx="109.9" cy="108.0" r="4.6" stroke-width="1.5" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="119.4" cy="108.0" r="4.6" stroke-width="1.5" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="128.9" cy="108.0" r="4.6" stroke-width="1.5" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="138.3" cy="108.0" r="4.6" stroke-width="1.5" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="147.8" cy="108.0" r="4.6" stroke-width="1.5" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="147.8" cy="96.5" r="4.6" stroke-width="1.5" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="157.3" cy="108.0" r="4.6" stroke-width="1.5" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="166.8" cy="108.0" r="4.6" stroke-width="1.5" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="176.3" cy="108.0" r="4.6" stroke-width="1.5" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="176.3" cy="96.5" r="4.6" stroke-width="1.5" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="185.8" cy="108.0" r="4.6" stroke-width="1.5" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="195.3" cy="108.0" r="4.6" stroke-width="1.5" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="204.7" cy="108.0" r="4.6" stroke-width="1.5" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="204.7" cy="96.5" r="4.6" stroke-width="1.5" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="223.7" cy="108.0" r="4.6" stroke-width="1.5" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="233.2" cy="108.0" r="4.6" stroke-width="1.5" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="242.7" cy="108.0" r="4.6" stroke-width="1.5" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="261.7" cy="108.0" r="4.6" stroke-width="1.5" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="271.1" cy="108.0" r="4.6" stroke-width="1.5" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="290.1" cy="108.0" r="4.6" stroke-width="1.5" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="318.6" cy="108.0" r="4.6" stroke-width="1.5" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="347.0" cy="108.0" r="4.6" stroke-width="1.5" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="375.5" cy="108.0" r="4.6" stroke-width="1.5" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="432.4" cy="108.0" r="4.6" stroke-width="1.5" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="679.0" cy="108.0" r="4.6" stroke-width="1.5" fill="#2a78d6" stroke="#ffffff"/>
+<line class="axis" x1="679.0" y1="101" x2="679.0" y2="28" stroke-width="1" stroke-dasharray="3 3" stroke="#c3c9c6" fill="none"/>
+<text class="ink" x="673.0" y="26" font-size="12.5" font-weight="600" text-anchor="end" fill="#15201f">outlier</text>
+<line class="axis" x1="432.4" y1="146" x2="679.0" y2="146" stroke-width="1.5" stroke="#c3c9c6" fill="none"/>
+<line class="axis" x1="432.4" y1="142" x2="432.4" y2="150" stroke-width="1.5" stroke="#c3c9c6" fill="none"/>
+<line class="axis" x1="679.0" y1="142" x2="679.0" y2="150" stroke-width="1.5" stroke="#c3c9c6" fill="none"/>
+<text class="ink2" x="555.7" y="162" font-size="12.5" text-anchor="middle" fill="#4a5654">gap</text>
+<text class="ink3" x="34" y="162" font-size="12" fill="#6f7b79">Journey time (minutes)</text>
+</svg>
+</div></figure>
+<p>Every one of the 25 values is still visible as its own dot. Two dots stack above 12 and above 15 and above 18, because two students had each of those times.</p>
+<p>This is the display that makes the <strong>outlier</strong> and the <strong>gap</strong> unmissable: 68 sits on its own, with nothing at all between 42 and 68.</p>
+</details>
+<details>
+<summary><strong>Reveal — the stem-and-leaf plot</strong></summary>
+<pre class="data">0 | 8 9
+1 | 0 1 2 2 3 4 5 5 6 7 8 8
+2 | 0 1 2 4 5 7
+3 | 0 3 6
+4 | 2
+5 |
+6 | 8</pre>
+<p><strong>Check your <code>5 |</code> row.</strong> If you left it out because there are no values in the fifties, go back and put it in.</p>
+<p>That blank row <em>is</em> the gap. A stemplot that skips its unused stems has destroyed exactly the information it exists to show — and an examiner reading it would have no way to see that nothing lies between 42 and 68.</p>
+</details>
+<details>
+<summary><strong>Reveal — the histogram</strong></summary>
+<div class="tbl"><table><thead><tr><th>Interval</th><th>Frequency</th></tr></thead><tbody><tr><td>0 – under 10</td><td>2</td></tr><tr><td>10 – under 20</td><td>12</td></tr><tr><td>20 – under 30</td><td>6</td></tr><tr><td>30 – under 40</td><td>3</td></tr><tr><td>40 – under 50</td><td>1</td></tr><tr><td>50 – under 60</td><td>0</td></tr><tr><td>60 – under 70</td><td>1</td></tr><tr class="tot"><td><strong>Total</strong></td><td><strong>25</strong></td></tr></tbody></table></div>
+<figure><div class="figscroll"><svg viewBox="0 0 440 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Histogram of journey times, Bin width 10" font-family="Public Sans, system-ui, sans-serif">
+<style>
+  .ink   { fill: #15201f; }
+  .ink2  { fill: #4a5654; }
+  .ink3  { fill: #6f7b79; }
+  .axis  { stroke: #c3c9c6; }
+  .grid  { stroke: #dcdfdd; }
+  .gap   { stroke: #ffffff; }
+  .surf  { fill: #ffffff; }
+  @media (prefers-color-scheme: dark) {
+    .ink  { fill: #e9edeb; }
+    .ink2 { fill: #a5b0ad; }
+    .ink3 { fill: #7e8a87; }
+    .axis { stroke: #3a4644; }
+    .grid { stroke: #2a3533; }
+    .gap  { stroke: #182120; }
+    .surf { fill: #182120; }
+  }
+
+  .s0 { fill: #2a78d6; }
+  @media (prefers-color-scheme: dark) {
+    .s0 { fill: #3987e5; }
+  }
+</style>
+<text class="ink" x="18" y="22" font-size="15" font-weight="700" fill="#15201f">Bin width 10</text>
+<line class="grid" x1="52" y1="282.0" x2="424" y2="282.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="44" y="286.0" font-size="12" text-anchor="end" fill="#6f7b79">0</text>
+<line class="grid" x1="52" y1="228.5" x2="424" y2="228.5" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="44" y="232.5" font-size="12" text-anchor="end" fill="#6f7b79">3</text>
+<line class="grid" x1="52" y1="174.9" x2="424" y2="174.9" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="44" y="178.9" font-size="12" text-anchor="end" fill="#6f7b79">6</text>
+<line class="grid" x1="52" y1="121.4" x2="424" y2="121.4" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="44" y="125.4" font-size="12" text-anchor="end" fill="#6f7b79">9</text>
+<line class="grid" x1="52" y1="67.8" x2="424" y2="67.8" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="44" y="71.8" font-size="12" text-anchor="end" fill="#6f7b79">12</text>
+<rect class="s0" x="52.8" y="246.3" width="51.6" height="35.7" rx="3" fill="#2a78d6"/>
+<rect class="s0" x="52.8" y="278.0" width="51.6" height="4" fill="#2a78d6"/>
+<text class="ink" x="78.6" y="239.3" font-size="12.5" font-weight="600" text-anchor="middle" fill="#15201f">2</text>
+<rect class="s0" x="105.9" y="67.8" width="51.6" height="214.2" rx="3" fill="#2a78d6"/>
+<rect class="s0" x="105.9" y="278.0" width="51.6" height="4" fill="#2a78d6"/>
+<text class="ink" x="131.7" y="60.8" font-size="12.5" font-weight="600" text-anchor="middle" fill="#15201f">12</text>
+<rect class="s0" x="159.0" y="174.9" width="51.6" height="107.1" rx="3" fill="#2a78d6"/>
+<rect class="s0" x="159.0" y="278.0" width="51.6" height="4" fill="#2a78d6"/>
+<text class="ink" x="184.9" y="167.9" font-size="12.5" font-weight="600" text-anchor="middle" fill="#15201f">6</text>
+<rect class="s0" x="212.2" y="228.5" width="51.6" height="53.5" rx="3" fill="#2a78d6"/>
+<rect class="s0" x="212.2" y="278.0" width="51.6" height="4" fill="#2a78d6"/>
+<text class="ink" x="238.0" y="221.5" font-size="12.5" font-weight="600" text-anchor="middle" fill="#15201f">3</text>
+<rect class="s0" x="265.3" y="264.2" width="51.6" height="17.8" rx="3" fill="#2a78d6"/>
+<rect class="s0" x="265.3" y="278.0" width="51.6" height="4" fill="#2a78d6"/>
+<rect class="s0" x="371.6" y="264.2" width="51.6" height="17.8" rx="3" fill="#2a78d6"/>
+<rect class="s0" x="371.6" y="278.0" width="51.6" height="4" fill="#2a78d6"/>
+<text class="ink3" x="52.0" y="301.0" font-size="12" text-anchor="middle" fill="#6f7b79">0</text>
+<text class="ink3" x="105.1" y="301.0" font-size="12" text-anchor="middle" fill="#6f7b79">10</text>
+<text class="ink3" x="158.3" y="301.0" font-size="12" text-anchor="middle" fill="#6f7b79">20</text>
+<text class="ink3" x="211.4" y="301.0" font-size="12" text-anchor="middle" fill="#6f7b79">30</text>
+<text class="ink3" x="264.6" y="301.0" font-size="12" text-anchor="middle" fill="#6f7b79">40</text>
+<text class="ink3" x="317.7" y="301.0" font-size="12" text-anchor="middle" fill="#6f7b79">50</text>
+<text class="ink3" x="370.9" y="301.0" font-size="12" text-anchor="middle" fill="#6f7b79">60</text>
+<text class="ink3" x="424.0" y="301.0" font-size="12" text-anchor="middle" fill="#6f7b79">70</text>
+<line class="axis" x1="52" y1="282" x2="424" y2="282" stroke-width="1.5" stroke="#c3c9c6" fill="none"/>
+<text class="ink3" x="16" y="166.0" font-size="12" text-anchor="middle" transform="rotate(-90 16 166.0)" fill="#6f7b79">Frequency</text>
+<text class="ink3" x="52" y="328" font-size="12" fill="#6f7b79">Journey time (minutes)</text>
+</svg>
+</div></figure>
+<p>Two things to check on your drawing:</p>
+<ul><li><strong>The bars touch.</strong> Unlike a bar chart, a histogram runs along a continuous number line, so there are no gaps between adjacent bins — except where a bin is genuinely empty, like 50–60 here.</li><li><strong>Your frequencies total 25.</strong> Same self-check as always: Σ*f* = <em>n</em>.</li></ul>
+<p>If a value landed on a boundary — say a journey of exactly 20 minutes — the convention is that it goes in the <strong>upper</strong> bin, which is why these are written "20 – under 30".</p>
+</details>
+<h3>The bin width formula</h3>
+<p>When a question tells you how many bins to use, you have to work out how wide they are:</p>
+<blockquote><strong>bin width = (maximum − minimum) ÷ number of bins</strong></blockquote>
+<p>For this data, with 6 bins: (68 − 8) ÷ 6 = <strong>10</strong>.</p>
+<h3>Which display for which question?</h3>
+<p class="yourturn"><strong>Your turn.</strong> Three questions. Which of your three drawings answers each one best, and why?</p>
+<ol><li><em>"What was the exact longest journey?"</em></li><li><em>"Roughly what does the overall shape look like?"</em></li><li><em>"Is there a journey far away from all the others?"</em></li></ol>
+<details>
+<summary><strong>Reveal</strong></summary>
+<ol><li><strong>The stemplot or the dotplot.</strong> Both keep every individual value — you can read 68 straight off. The histogram has thrown the individual values away; all it can tell you is that one journey was somewhere between 60 and 70 minutes.</li></ol>
+<ol><li><strong>The histogram.</strong> Grouping into bins smooths out the noise and makes the single peak obvious. A dotplot of 250 values would be an unreadable smear; a histogram of 250 values still shows the shape.</li></ol>
+<ol><li><strong>The dotplot or the stemplot.</strong> The isolated dot and the empty stem row show the gap directly.</li></ol>
+<p><strong>The trade-off, in one sentence:</strong> histograms give up individual values in exchange for a clearer shape; dotplots and stemplots keep every value but stop working when <em>n</em> gets large.</p>
+</details>
+<h3>The same data, different bins</h3>
+<p class="yourturn"><strong>Your turn.</strong> Before revealing: if you redrew that histogram with bins of width <strong>5</strong> instead of 10, would it look the same?</p>
+<details>
+<summary><strong>Reveal</strong></summary>
+<p><strong>No</strong> — and the AP course description says so explicitly, which makes it fair game in an exam.</p>
+<div class="tbl"><table><thead><tr><th>Interval</th><th><em>f</em></th><th></th><th>Interval</th><th><em>f</em></th></tr></thead><tbody><tr><td>5 – under 10</td><td>2</td><td></td><td>30 – under 35</td><td>2</td></tr><tr><td>10 – under 15</td><td>6</td><td></td><td>35 – under 40</td><td>1</td></tr><tr><td>15 – under 20</td><td>6</td><td></td><td>40 – under 45</td><td>1</td></tr><tr><td>20 – under 25</td><td>4</td><td></td><td>45 – under 65</td><td>0</td></tr><tr><td>25 – under 30</td><td>2</td><td></td><td>65 – under 70</td><td>1</td></tr></tbody></table></div>
+<figure><div class="figscroll"><svg viewBox="0 0 440 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Histogram of journey times, Bin width 5" font-family="Public Sans, system-ui, sans-serif">
+<style>
+  .ink   { fill: #15201f; }
+  .ink2  { fill: #4a5654; }
+  .ink3  { fill: #6f7b79; }
+  .axis  { stroke: #c3c9c6; }
+  .grid  { stroke: #dcdfdd; }
+  .gap   { stroke: #ffffff; }
+  .surf  { fill: #ffffff; }
+  @media (prefers-color-scheme: dark) {
+    .ink  { fill: #e9edeb; }
+    .ink2 { fill: #a5b0ad; }
+    .ink3 { fill: #7e8a87; }
+    .axis { stroke: #3a4644; }
+    .grid { stroke: #2a3533; }
+    .gap  { stroke: #182120; }
+    .surf { fill: #182120; }
+  }
+
+  .s0 { fill: #2a78d6; }
+  @media (prefers-color-scheme: dark) {
+    .s0 { fill: #3987e5; }
+  }
+</style>
+<text class="ink" x="18" y="22" font-size="15" font-weight="700" fill="#15201f">Bin width 5</text>
+<line class="grid" x1="52" y1="282.0" x2="424" y2="282.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="44" y="286.0" font-size="12" text-anchor="end" fill="#6f7b79">0</text>
+<line class="grid" x1="52" y1="228.5" x2="424" y2="228.5" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="44" y="232.5" font-size="12" text-anchor="end" fill="#6f7b79">3</text>
+<line class="grid" x1="52" y1="174.9" x2="424" y2="174.9" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="44" y="178.9" font-size="12" text-anchor="end" fill="#6f7b79">6</text>
+<line class="grid" x1="52" y1="121.4" x2="424" y2="121.4" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="44" y="125.4" font-size="12" text-anchor="end" fill="#6f7b79">9</text>
+<line class="grid" x1="52" y1="67.8" x2="424" y2="67.8" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="44" y="71.8" font-size="12" text-anchor="end" fill="#6f7b79">12</text>
+<rect class="s0" x="52.8" y="246.3" width="27.1" height="35.7" rx="3" fill="#2a78d6"/>
+<rect class="s0" x="52.8" y="278.0" width="27.1" height="4" fill="#2a78d6"/>
+<text class="ink" x="66.3" y="239.3" font-size="12.5" font-weight="600" text-anchor="middle" fill="#15201f">2</text>
+<rect class="s0" x="81.4" y="174.9" width="27.1" height="107.1" rx="3" fill="#2a78d6"/>
+<rect class="s0" x="81.4" y="278.0" width="27.1" height="4" fill="#2a78d6"/>
+<text class="ink" x="94.9" y="167.9" font-size="12.5" font-weight="600" text-anchor="middle" fill="#15201f">6</text>
+<rect class="s0" x="110.0" y="174.9" width="27.1" height="107.1" rx="3" fill="#2a78d6"/>
+<rect class="s0" x="110.0" y="278.0" width="27.1" height="4" fill="#2a78d6"/>
+<text class="ink" x="123.5" y="167.9" font-size="12.5" font-weight="600" text-anchor="middle" fill="#15201f">6</text>
+<rect class="s0" x="138.6" y="210.6" width="27.1" height="71.4" rx="3" fill="#2a78d6"/>
+<rect class="s0" x="138.6" y="278.0" width="27.1" height="4" fill="#2a78d6"/>
+<text class="ink" x="152.2" y="203.6" font-size="12.5" font-weight="600" text-anchor="middle" fill="#15201f">4</text>
+<rect class="s0" x="167.2" y="246.3" width="27.1" height="35.7" rx="3" fill="#2a78d6"/>
+<rect class="s0" x="167.2" y="278.0" width="27.1" height="4" fill="#2a78d6"/>
+<text class="ink" x="180.8" y="239.3" font-size="12.5" font-weight="600" text-anchor="middle" fill="#15201f">2</text>
+<rect class="s0" x="195.8" y="246.3" width="27.1" height="35.7" rx="3" fill="#2a78d6"/>
+<rect class="s0" x="195.8" y="278.0" width="27.1" height="4" fill="#2a78d6"/>
+<text class="ink" x="209.4" y="239.3" font-size="12.5" font-weight="600" text-anchor="middle" fill="#15201f">2</text>
+<rect class="s0" x="224.4" y="264.2" width="27.1" height="17.8" rx="3" fill="#2a78d6"/>
+<rect class="s0" x="224.4" y="278.0" width="27.1" height="4" fill="#2a78d6"/>
+<rect class="s0" x="253.1" y="264.2" width="27.1" height="17.8" rx="3" fill="#2a78d6"/>
+<rect class="s0" x="253.1" y="278.0" width="27.1" height="4" fill="#2a78d6"/>
+<rect class="s0" x="396.1" y="264.2" width="27.1" height="17.8" rx="3" fill="#2a78d6"/>
+<rect class="s0" x="396.1" y="278.0" width="27.1" height="4" fill="#2a78d6"/>
+<text class="ink3" x="52.0" y="301.0" font-size="12" text-anchor="middle" fill="#6f7b79">5</text>
+<text class="ink3" x="109.2" y="301.0" font-size="12" text-anchor="middle" fill="#6f7b79">15</text>
+<text class="ink3" x="166.5" y="301.0" font-size="12" text-anchor="middle" fill="#6f7b79">25</text>
+<text class="ink3" x="223.7" y="301.0" font-size="12" text-anchor="middle" fill="#6f7b79">35</text>
+<text class="ink3" x="280.9" y="301.0" font-size="12" text-anchor="middle" fill="#6f7b79">45</text>
+<text class="ink3" x="338.2" y="301.0" font-size="12" text-anchor="middle" fill="#6f7b79">55</text>
+<text class="ink3" x="395.4" y="301.0" font-size="12" text-anchor="middle" fill="#6f7b79">65</text>
+<line class="axis" x1="52" y1="282" x2="424" y2="282" stroke-width="1.5" stroke="#c3c9c6" fill="none"/>
+<text class="ink3" x="16" y="166.0" font-size="12" text-anchor="middle" transform="rotate(-90 16 166.0)" fill="#6f7b79">Frequency</text>
+<text class="ink3" x="52" y="328" font-size="12" fill="#6f7b79">Journey time (minutes)</text>
+</svg>
+</div></figure>
+<p>Compare it with the width-10 version above. <strong>Both are drawn on the same vertical scale</strong>, so the comparison is fair — the width-5 bars really are shorter, because each bin now catches about half as many journeys.</p>
+<p>At width 10 there is one obvious tall bar and a clear single peak. At width 5 that peak has split into two equal bars of 6, and the distribution looks flatter — almost as though it had two peaks rather than one.</p>
+<p><strong>Neither picture is wrong.</strong> A histogram is a <em>choice</em>, and the choice affects the story it tells. This is exactly why an exam question asks you to describe the <strong>shape</strong> rather than to trust one particular picture.</p>
+</details>
+<hr>
+<h2>Part 5 — Describing a distribution</h2>
+<p>The most important part of the session. Everything before this was construction; this is interpretation, and interpretation is where the marks are.</p>
+<h3>The four components</h3>
+<p>A full description of a distribution needs <strong>four</strong> things, and it must be <strong>in context</strong>:</p>
+<blockquote><strong>Shape · Centre · Variability (spread) · Unusual features</strong></blockquote>
+<p>Miss one and you lose the mark. The commonest failure in Unit 1 is describing shape and centre, feeling finished, and stopping.</p>
+<p>Many textbooks compress this into the mnemonic <strong>SOCS</strong> — <em>shape, outliers, centre, spread</em>. It is the same four components in a different order; use whichever you will remember.</p>
+<h3>Shape: the word people get backwards</h3>
+<p>The vocabulary:</p>
+<ul><li><strong>Skewed right</strong> (positively skewed) — the right tail, toward larger values, is longer.</li><li><strong>Skewed left</strong> (negatively skewed) — the left tail, toward smaller values, is longer.</li><li><strong>Approximately symmetric</strong> — the left half is roughly a mirror image of the right.</li><li><strong>Unimodal</strong> — one main peak. <strong>Bimodal</strong> — two prominent peaks. <strong>Approximately uniform</strong> — frequencies all roughly equal, no prominent peak.</li></ul>
+<p class="yourturn"><strong>Your turn.</strong> Look at your histogram of the journey times. Which tail is longer — the left or the right? So which way is it skewed?</p>
+<details>
+<summary><strong>Reveal</strong></summary>
+<p>The <strong>right</strong> tail is longer: the bulk of journeys sit between 10 and 20 minutes, but the data stretches out to 30, 33, 36, 42 and finally 68.</p>
+<p>So the distribution is <strong>skewed right</strong>, and <strong>unimodal</strong>.</p>
+<p>If you answered "skewed left" because the tall bars are on the left, you have just made the single most common error in this unit:</p>
+<figure><div class="figscroll"><svg viewBox="0 0 700 270" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Skewed right versus skewed left, tails labelled" font-family="Public Sans, system-ui, sans-serif">
+<style>
+  .ink   { fill: #15201f; }
+  .ink2  { fill: #4a5654; }
+  .ink3  { fill: #6f7b79; }
+  .axis  { stroke: #c3c9c6; }
+  .grid  { stroke: #dcdfdd; }
+  .gap   { stroke: #ffffff; }
+  .surf  { fill: #ffffff; }
+  @media (prefers-color-scheme: dark) {
+    .ink  { fill: #e9edeb; }
+    .ink2 { fill: #a5b0ad; }
+    .ink3 { fill: #7e8a87; }
+    .axis { stroke: #3a4644; }
+    .grid { stroke: #2a3533; }
+    .gap  { stroke: #182120; }
+    .surf { fill: #182120; }
+  }
+
+  .s0 { fill: #2a78d6; }
+  @media (prefers-color-scheme: dark) {
+    .s0 { fill: #3987e5; }
+  }
+</style>
+<rect class="s0" x="48.8" y="164.0" width="28.9" height="22.0" rx="3" fill="#2a78d6"/>
+<rect class="s0" x="79.2" y="87.0" width="28.9" height="99.0" rx="3" fill="#2a78d6"/>
+<rect class="s0" x="109.6" y="54.0" width="28.9" height="132.0" rx="3" fill="#2a78d6"/>
+<rect class="s0" x="140.1" y="98.0" width="28.9" height="88.0" rx="3" fill="#2a78d6"/>
+<rect class="s0" x="170.5" y="131.0" width="28.9" height="55.0" rx="3" fill="#2a78d6"/>
+<rect class="s0" x="201.0" y="153.0" width="28.9" height="33.0" rx="3" fill="#2a78d6"/>
+<rect class="s0" x="231.4" y="164.0" width="28.9" height="22.0" rx="3" fill="#2a78d6"/>
+<rect class="s0" x="261.9" y="175.0" width="28.9" height="11.0" rx="3" fill="#2a78d6"/>
+<rect class="s0" x="292.3" y="175.0" width="28.9" height="11.0" rx="3" fill="#2a78d6"/>
+<line class="axis" x1="48" y1="186" x2="322" y2="186" stroke-width="1.5" stroke="#c3c9c6" fill="none"/>
+<text class="ink" x="48" y="32" font-size="15" font-weight="700" fill="#15201f">Skewed right</text>
+<line class="axis" x1="174.0" y1="212" x2="318.0" y2="212" stroke-width="1.5" stroke="#c3c9c6" fill="none"/>
+<path class="ink2" d="M 318 212 l -9 -5 l 0 10 Z" fill="#4a5654"/>
+<text class="ink2" x="246.0" y="232" font-size="12.5" text-anchor="middle" fill="#4a5654">long tail points right</text>
+<text class="ink3" x="48" y="50" font-size="12" fill="#6f7b79">bulk on the left</text>
+<rect class="s0" x="398.8" y="175.0" width="28.9" height="11.0" rx="3" fill="#2a78d6"/>
+<rect class="s0" x="429.2" y="175.0" width="28.9" height="11.0" rx="3" fill="#2a78d6"/>
+<rect class="s0" x="459.6" y="164.0" width="28.9" height="22.0" rx="3" fill="#2a78d6"/>
+<rect class="s0" x="490.1" y="153.0" width="28.9" height="33.0" rx="3" fill="#2a78d6"/>
+<rect class="s0" x="520.5" y="131.0" width="28.9" height="55.0" rx="3" fill="#2a78d6"/>
+<rect class="s0" x="551.0" y="98.0" width="28.9" height="88.0" rx="3" fill="#2a78d6"/>
+<rect class="s0" x="581.4" y="54.0" width="28.9" height="132.0" rx="3" fill="#2a78d6"/>
+<rect class="s0" x="611.9" y="87.0" width="28.9" height="99.0" rx="3" fill="#2a78d6"/>
+<rect class="s0" x="642.3" y="164.0" width="28.9" height="22.0" rx="3" fill="#2a78d6"/>
+<line class="axis" x1="398" y1="186" x2="672" y2="186" stroke-width="1.5" stroke="#c3c9c6" fill="none"/>
+<text class="ink" x="398" y="32" font-size="15" font-weight="700" fill="#15201f">Skewed left</text>
+<line class="axis" x1="546.0" y1="212" x2="402.0" y2="212" stroke-width="1.5" stroke="#c3c9c6" fill="none"/>
+<path class="ink2" d="M 402 212 l 9 -5 l 0 10 Z" fill="#4a5654"/>
+<text class="ink2" x="474.0" y="232" font-size="12.5" text-anchor="middle" fill="#4a5654">long tail points left</text>
+<text class="ink3" x="398" y="50" font-size="12" fill="#6f7b79">bulk on the right</text>
+</svg>
+</div></figure>
+<p><strong>Skew is named for the tail, not for the bulk.</strong> In both pictures above, the bulk sits on the opposite side from the tail. The left picture — bulk on the left, tail reaching right — is skewed <em>right</em>.</p>
+<p>The physical trick that works: put a finger on the long thin tail and say out loud which direction it points. That is the name.</p>
+</details>
+<h3>The other three components</h3>
+<ul><li><strong>Centre</strong> — roughly where the bulk sits. You can count to the middle value off a stemplot: with 25 values, the middle one is the 13th, which is <strong>18 minutes</strong>. <em>(Calculating the mean and median properly is Session 3.)</em></li><li><strong>Variability (spread)</strong> — how far the values reach. Here, from <strong>8 to 68 minutes</strong>.</li><li><strong>Unusual features</strong> — an <strong>outlier</strong> is a value unusually small or large relative to the rest; a <strong>gap</strong> is a region with no data at all; a <strong>cluster</strong> is a concentration of values, usually separated by gaps.</li></ul>
+<p>Here there is an <strong>outlier at 68 minutes</strong> and a <strong>gap between 42 and 68</strong>.</p>
+<blockquote>A note on honesty: there is a formal arithmetic test for outliers — the 1.5 × IQR rule — and it arrives in Session 3. For now, "unusually large relative to the rest" is the course's own definition and is entirely sufficient.</blockquote>
+<h3>Write the whole thing</h3>
+<p class="yourturn"><strong>Your turn.</strong> Write a complete description of the journey-time distribution. All four components, in context. Aim for three or four sentences. Do this properly before revealing — this is the exact task the exam sets.</p>
+<details>
+<summary><strong>Reveal — model answer and checklist</strong></summary>
+<blockquote><em>"The distribution of journey times for these 25 students is <strong>skewed right</strong> and <strong>unimodal</strong>, with one main peak between 10 and 20 minutes. The <strong>centre</strong> is about 18 minutes. Journey times <strong>range from 8 to 68 minutes</strong>. There is an <strong>outlier at 68 minutes</strong>, separated from the rest of the data by a <strong>gap</strong> between 42 and 68 — this student's journey took far longer than anyone else's."</em></blockquote>
+<p>Mark your own against this:</p>
+<ul class="checklist"><li><strong>Shape</strong> — named the skew direction, and said unimodal</li><li><strong>Centre</strong> — gave a number, about 18 minutes</li><li><strong>Variability</strong> — gave the range, 8 to 68</li><li><strong>Unusual features</strong> — named the outlier <em>and</em> the gap</li><li><strong>In context</strong> — used the words "journey times", "minutes", "students"</li></ul>
+<p><strong>That last box is not decoration.</strong> A description reading "skewed right and unimodal with an outlier" is statistically perfect and will still lose the interpretation mark, because it never says what the numbers are <em>about</em>. Name the variable, its units, and the individuals — every single time.</p>
+</details>
+<h3>Justifying a claim</h3>
+<p class="yourturn"><strong>Your turn.</strong> A parent says: <em>"A typical journey to this school takes about half an hour."</em> Does the data support that? Write a full answer.</p>
+<details>
+<summary><strong>Reveal</strong></summary>
+<p><strong>No.</strong> The centre is about 18 minutes, not 30. Only five of the 25 journeys took 30 minutes or more.</p>
+<p>What has probably happened is that the parent is thinking of the long right tail — the journeys of 30, 33, 36, 42 and 68 minutes — which are memorable but are the minority.</p>
+<p>A supportable version of the claim:</p>
+<blockquote><em>"Most journeys take under 20 minutes, though a small number take considerably longer, up to 68 minutes."</em></blockquote>
+<p>This is the same four-step template you met in Session 1, and you will use it in every unit from here to the exam:</p>
+<blockquote><strong>State the claim · quote the number · say what the number does and does not establish · keep it in context.</strong></blockquote>
+</details>
+<hr>
+<h2>Part 6 — On your own: the café</h2>
+<p>No hints, no reveals, until all four are done. Write full answers.</p>
+<blockquote>A café recorded the number of drinks sold per hour over 20 opening hours:<br>```<br>14  16  17  19  20  21  21  22  23  24<br>24  25  26  27  28  30  31  33  35  52<br>```</blockquote>
+<ol><li>Construct a stem-and-leaf plot using tens as stems.</li><li>Construct a frequency table with bins of width 10, starting at 10.</li><li>Describe the distribution — all four components, in context.</li><li>The manager claims: <em>"We usually sell over 30 drinks an hour."</em> Is that supported? Justify.</li></ol>
+<details>
+<summary><strong>Reveal</strong></summary>
+<p><strong>1. Stemplot.</strong></p>
+<pre class="data">1 | 4 6 7 9
+2 | 0 1 1 2 3 4 4 5 6 7 8
+3 | 0 1 3 5
+4 |
+5 | 2</pre>
+<p>Did you keep the empty <code>4 |</code> row? It is what shows the gap between 35 and 52.</p>
+<p><strong>2. Frequency table.</strong></p>
+<div class="tbl"><table><thead><tr><th>Interval</th><th>Frequency</th></tr></thead><tbody><tr><td>10 – under 20</td><td>4</td></tr><tr><td>20 – under 30</td><td>11</td></tr><tr><td>30 – under 40</td><td>4</td></tr><tr><td>40 – under 50</td><td>0</td></tr><tr><td>50 – under 60</td><td>1</td></tr><tr class="tot"><td><strong>Total</strong></td><td><strong>20</strong></td></tr></tbody></table></div>
+<p><strong>3. Description.</strong> <em>"The distribution of drinks sold per hour over these 20 hours is skewed right and unimodal, with one main peak in the twenties. The centre is about 24 drinks per hour — with 20 values the middle is halfway between the 10th and 11th, both 24. Sales range from 14 to 52 drinks per hour. There is an outlier at 52, separated from the rest by a gap between 35 and 52."</em></p>
+<p><strong>4. The claim is not supported.</strong> The centre is about 24 drinks per hour, and only <strong>4 of the 20 hours</strong> sold more than 30 — that is 31, 33, 35 and 52, or 20% of hours. "Usually" would need more than half. A supportable version: <em>"Sales are usually in the twenties per hour, with one unusually busy hour of 52."</em></p>
+<p><strong>Check yourself against the three classic slips:</strong></p>
+<ul><li>Did you describe shape and centre and then stop? All four components, always.</li><li>Did you call it "skewed left" because the bars are tall on the left? Skew is named for the tail.</li><li>Did you drop the empty <code>4 |</code> stem?</li></ul>
+</details>
+<hr>
+<h2>Part 7 — Explain it back</h2>
+<p class="yourturn"><strong>Your turn.</strong> Close the booklet. Describe the café distribution out loud — or write it — as if to somebody who cannot see the graph. Stop yourself the moment you miss one of the four components.</p>
+<p>Saying it aloud rather than writing it is deliberate. It exposes whether the four components have become a habit or are still a checklist you have to go and look up. In an exam you will not have the checklist.</p>
+<p>If it came out fluently, this session has landed. If it didn't, tell your tutor at the start of the next session — "I can build the graphs but the description doesn't come out in the right order" is far more useful to them than "it was fine".</p>
+<hr>
+<hr>
+<h1>Homework — Session 2</h1>
+<p><strong>40 marks · bring to Session 3, self-marked</strong></p>
+<h2>How to do this homework</h2>
+<ol><li>Do every part <strong>with the answer key closed.</strong> Where you are unsure, answer anyway and put a <strong>?</strong> beside it.</li><li>Then open the key and <strong>mark your own work honestly.</strong> Write the correct answer beside anything wrong — do not erase what you originally wrote.</li><li><strong>Bring the marked sheet.</strong> Your wrong answers and your question marks are what Session 3 opens with.</li></ol>
+<p>You will need a ruler and a protractor for Part B.</p>
+<hr>
+<h2>Part A — Vocabulary (6 marks)</h2>
+<p>Match each term to its meaning.</p>
+<div class="tbl"><table><thead><tr><th></th><th>Term</th><th></th><th>Meaning</th></tr></thead><tbody><tr><td>1</td><td>Skewed right</td><td>A</td><td>Two prominent peaks</td></tr><tr><td>2</td><td>Skewed left</td><td>B</td><td>A region of the distribution containing no data</td></tr><tr><td>3</td><td>Unimodal</td><td>C</td><td>The tail toward larger values is longer</td></tr><tr><td>4</td><td>Bimodal</td><td>D</td><td>One main peak</td></tr><tr><td>5</td><td>Gap</td><td>E</td><td>All frequencies roughly equal, no prominent peak</td></tr><tr><td>6</td><td>Approximately uniform</td><td>F</td><td>The tail toward smaller values is longer</td></tr></tbody></table></div>
+<h2>Part B — Categorical displays (10 marks)</h2>
+<p>A school library recorded which section each of <strong>250 borrowed books</strong> came from last term.</p>
+<div class="tbl"><table><thead><tr><th>Section</th><th>Frequency</th></tr></thead><tbody><tr><td>Fiction</td><td>100</td></tr><tr><td>Non-fiction</td><td>65</td></tr><tr><td>Reference</td><td>40</td></tr><tr><td>Periodicals</td><td>30</td></tr><tr><td>Other</td><td>15</td></tr></tbody></table></div>
+<p><strong>B1.</strong> Add an <em>rf</em> column and a <em>100rf</em> column. State the formula for each before you use it. (3)</p>
+<p><strong>B2.</strong> Calculate the pie chart slice angle for every section. <strong>State the formula first.</strong> Give each to one decimal place. (4)</p>
+<p><strong>B3.</strong> Show that your angles total 360°. (1)</p>
+<p><strong>B4.</strong> Draw a bar chart of the relative frequencies. Label both axes. (2)</p>
+<h2>Part C — Comparing two data sets (6 marks)</h2>
+<p>The <strong>previous</strong> term the library recorded <strong>200</strong> borrowed books:</p>
+<div class="tbl"><table><thead><tr><th>Section</th><th>Frequency</th></tr></thead><tbody><tr><td>Fiction</td><td>96</td></tr><tr><td>Non-fiction</td><td>44</td></tr><tr><td>Reference</td><td>30</td></tr><tr><td>Periodicals</td><td>20</td></tr><tr><td>Other</td><td>10</td></tr></tbody></table></div>
+<p><strong>C1.</strong> A librarian says: <em>"Fiction borrowing went up this term — it rose from 96 books to 100."</em> Calculate the percentage for Fiction in each term, and explain why the librarian's comparison is misleading. (4)</p>
+<p><strong>C2.</strong> State the general rule about comparing two data sets that have different totals. (2)</p>
+<h2>Part D — Quantitative displays (10 marks)</h2>
+<p>Twenty-four students sat a test marked out of 50. Their scores:</p>
+<pre class="data">12  24  29  31  33  35  36  37  38  38  39  40
+40  41  41  42  42  43  43  44  45  45  46  47</pre>
+<p><strong>D1.</strong> Construct a stem-and-leaf plot using tens as stems. Order the leaves. (4)</p>
+<p><strong>D2.</strong> Construct a frequency table using bins of width 10, starting at 10. (3)</p>
+<p><strong>D3.</strong> If you wanted exactly 7 bins, what bin width would you use? <strong>State the formula and substitute.</strong> (2)</p>
+<p><strong>D4.</strong> A student says the <code>1 | 2</code> row should be deleted because it only has one value. Explain why they are wrong. (1)</p>
+<h2>Part E — Describing a distribution (8 marks)</h2>
+<p>Using the test-score data from Part D:</p>
+<p><strong>E1.</strong> Describe the distribution. Your answer must cover <strong>all four components</strong> and be <strong>in context</strong>. (5)</p>
+<p><strong>E2.</strong> A teacher claims: <em>"Most of the class scored below 40."</em> Using your displays, justify whether this claim is supported. (3)</p>
+<hr>
+<hr>
+<h1>Answer key</h1>
+<p><em>Open only after attempting everything.</em></p>
+<h3>Part A (6 marks, 1 each)</h3>
+<p>1–C · 2–F · 3–D · 4–A · 5–B · 6–E</p>
+<h3>Part B (10 marks)</h3>
+<p><strong>B1–B2.</strong> (7) Formulas: rf = f ÷ n · 100rf = (f ÷ n) × 100 · angle = (f ÷ n) × 360°, with n = 250.</p>
+<div class="tbl"><table><thead><tr><th>Section</th><th><em>f</em></th><th><em>rf</em></th><th><em>100rf</em></th><th>Angle</th></tr></thead><tbody><tr><td>Fiction</td><td>100</td><td>100 ÷ 250 = 0.400</td><td>40.0%</td><td>144.0°</td></tr><tr><td>Non-fiction</td><td>65</td><td>65 ÷ 250 = 0.260</td><td>26.0%</td><td>93.6°</td></tr><tr><td>Reference</td><td>40</td><td>40 ÷ 250 = 0.160</td><td>16.0%</td><td>57.6°</td></tr><tr><td>Periodicals</td><td>30</td><td>30 ÷ 250 = 0.120</td><td>12.0%</td><td>43.2°</td></tr><tr><td>Other</td><td>15</td><td>15 ÷ 250 = 0.060</td><td>6.0%</td><td>21.6°</td></tr><tr class="tot"><td><strong>Total</strong></td><td><strong>250</strong></td><td><strong>1.000</strong></td><td><strong>100%</strong></td><td><strong>360.0°</strong></td></tr></tbody></table></div>
+<p><strong>B3.</strong> (1) 144.0 + 93.6 + 57.6 + 43.2 + 21.6 = <strong>360.0°</strong> ✓</p>
+<p><strong>B4.</strong> (2) Bars of height 0.400, 0.260, 0.160, 0.120, 0.060, with <strong>both axes labelled</strong> — one of the two marks is for the labels. The bars must <strong>not touch</strong>: this is categorical data, not a histogram.</p>
+<h3>Part C (6 marks)</h3>
+<p><strong>C1.</strong> (4) Fiction last term: 96 ÷ 200 = <strong>48.0%</strong> (1) Fiction this term: 100 ÷ 250 = <strong>40.0%</strong> (1) The comparison is misleading because the two terms had different totals — 200 books against 250. (1) Fiction's raw count rose by 4, but its <strong>share of all borrowing fell from 48.0% to 40.0%</strong>. Relative to everything else being borrowed, fiction became <em>less</em> popular, not more. (1)</p>
+<p><strong>C2.</strong> (2) When two data sets have different totals, compare <strong>relative frequencies or percentages</strong>, not raw counts. (1) A raw count confuses a change in the variable with a change in the overall total. (1)</p>
+<h3>Part D (10 marks)</h3>
+<p><strong>D1.</strong> (4)</p>
+<pre class="data">1 | 2
+2 | 4 9
+3 | 1 3 5 6 7 8 8 9
+4 | 0 0 1 1 2 2 3 3 4 5 5 6 7</pre>
+<p>Count check: 1 + 2 + 8 + 13 = 24 ✓</p>
+<p><strong>D2.</strong> (3)</p>
+<div class="tbl"><table><thead><tr><th>Interval</th><th>Frequency</th></tr></thead><tbody><tr><td>10 – under 20</td><td>1</td></tr><tr><td>20 – under 30</td><td>2</td></tr><tr><td>30 – under 40</td><td>8</td></tr><tr><td>40 – under 50</td><td>13</td></tr><tr class="tot"><td><strong>Total</strong></td><td><strong>24</strong></td></tr></tbody></table></div>
+<p><strong>D3.</strong> (2) bin width = (maximum − minimum) ÷ number of bins = (47 − 12) ÷ 7 = 35 ÷ 7 = <strong>5</strong></p>
+<p><strong>D4.</strong> (1) The <code>1 | 2</code> row must stay because it shows there is a value at 12 — an unusually low score, well separated from the rest. Deleting or skipping stems destroys the spacing that lets a stemplot show gaps and outliers.</p>
+<h3>Part E (8 marks)</h3>
+<p><strong>E1.</strong> (5) One mark each for shape, centre, variability, unusual features, and context.</p>
+<blockquote><em>"The distribution of test scores for these 24 students is <strong>skewed left</strong> and <strong>unimodal</strong>, with one main peak in the 40s. The <strong>centre</strong> is about 40 marks. Scores <strong>range from 12 to 47</strong> out of 50. There is an <strong>outlier at 12</strong>, separated from the rest of the data by a <strong>gap</strong> between 12 and 24 — one student scored far below everyone else."</em></blockquote>
+<p>"Negatively skewed" is accepted for skewed left.</p>
+<blockquote><strong>The most common error here is "skewed right".</strong> The bulk of the data sits on the right, in the 40s — but the <em>tail</em> stretches left, down to 12. Skew is named for the tail. If you got this wrong, flag it: it costs a mark every time it appears, and it will appear again.</blockquote>
+<p><strong>E2.</strong> (3) The claim is <strong>not</strong> supported. (1) From the frequency table, only 1 + 2 + 8 = <strong>11 of 24</strong> students scored below 40, which is 11 ÷ 24 = 45.8% — fewer than half. (1) A supportable version: <em>"Slightly fewer than half the class scored below 40, and the single most common band was 40–49."</em> (1)</p>
+<h3>Marks summary</h3>
+<div class="tbl"><table><thead><tr><th>Part</th><th>Marks</th></tr></thead><tbody><tr><td>A — Vocabulary</td><td>6</td></tr><tr><td>B — Categorical displays</td><td>10</td></tr><tr><td>C — Comparing data sets</td><td>6</td></tr><tr><td>D — Quantitative displays</td><td>10</td></tr><tr><td>E — Describing a distribution</td><td>8</td></tr><tr class="tot"><td><strong>Total</strong></td><td><strong>40</strong></td></tr></tbody></table></div>
+<hr>
+<hr>
+<h1>Reference sheet — keep this</h1>
+<p>Every term carries an example. This is the page to revise from.</p>
+<h3>Displays for one categorical variable</h3>
+<p><strong>Bar chart (bar graph)</strong> — one bar per category; the height or length shows the frequency <strong>or</strong> relative frequency. Bars do <strong>not</strong> touch. <em>Example: six bars, one per hospital; the St Mary's bar reaches 84, or 0.280 on a relative frequency scale.</em></p>
+<p><strong>Pie chart</strong> — one slice per category; each slice's area as a fraction of the whole equals that category's relative frequency. The slices total 1, or 100% of the area. <em>Example: the St Mary's slice takes up 28.0% of the circle — an angle of 100.8°.</em></p>
+<h3>Displays for one quantitative variable</h3>
+<p>All three keep the natural ordering of the values, smallest to largest.</p>
+<p><strong>Dotplot</strong> — one dot per value, placed above its position on the axis; near-identical values stack. <em>Example: two dots stacked above 12, because two students had 12-minute journeys.</em></p>
+<p><strong>Stem-and-leaf plot</strong> — each value splits into a <strong>stem</strong> (the leading digit or digits) and a <strong>leaf</strong> (usually the final digit). Stems and leaves are both ordered smallest to largest. <em>Example: 18 becomes stem 1, leaf 8. Keep empty stems — a blank row is a gap in the data.</em></p>
+<p><strong>Histogram</strong> — values grouped into ordered intervals (<strong>bins</strong>); each bar's height is the frequency or relative frequency in that bin. Bars <strong>touch</strong>, because the scale is continuous. <em>Example: the bin "10 – under 20" has height 12, because 12 journeys fell in that range.</em></p>
+<blockquote><strong>Changing the bin width changes the appearance of a histogram.</strong> Narrow bins show detail and noise; wide bins show shape. Neither is wrong, but the picture is a choice.</blockquote>
+<h3>Formulas</h3>
+<div class="tbl"><table><thead><tr><th>Quantity</th><th>Formula</th><th>Example</th></tr></thead><tbody><tr><td>Bar height</td><td><em>f</em> or <em>rf</em></td><td>84, or 0.280</td></tr><tr><td>Pie slice angle</td><td><strong>(f ÷ n) × 360°</strong></td><td>0.280 × 360 = 100.8°</td></tr><tr><td>Pie slice share of area</td><td><strong>100rf</strong></td><td>28.0%</td></tr><tr><td>Histogram bar height</td><td><em>f</em> or <em>rf</em> in that bin</td><td>12, or 12 ÷ 25 = 0.480</td></tr><tr><td>Bin width</td><td><strong>(maximum − minimum) ÷ number of bins</strong></td><td>(68 − 8) ÷ 6 = 10</td></tr></tbody></table></div>
+<p><strong>Self-checks:</strong> Σ*f* = <em>n</em> · Σ*rf* = 1 · pie angles total 360° · bin frequencies total <em>n</em></p>
+<h3>Describing a distribution</h3>
+<p>A full description needs <strong>four</strong> things, <strong>in context</strong>. Miss one and you lose the mark.</p>
+<p><strong>Shape — skewed right (positive)</strong> — the right tail, toward larger values, is longer. <em>Example: journey times — most under 20 minutes, stretching out to 68.</em></p>
+<p><strong>Shape — skewed left (negative)</strong> — the left tail, toward smaller values, is longer. <em>Example: test scores — most in the 40s, stretching down to 12.</em></p>
+<p><strong>Shape — symmetric and peaks</strong> — approximately symmetric if the left half mirrors the right. <strong>Unimodal</strong> = one main peak; <strong>bimodal</strong> = two; <strong>approximately uniform</strong> = frequencies roughly equal. <em>Example: the commute data is unimodal, peaking between 10 and 20 minutes.</em></p>
+<p><strong>Centre</strong> — roughly where the bulk sits. <em>Example: about 18 minutes.</em></p>
+<p><strong>Variability (spread)</strong> — how far the values reach. <em>Example: from 8 to 68 minutes.</em></p>
+<p><strong>Unusual features</strong> — an <strong>outlier</strong> is unusually small or large relative to the rest; a <strong>gap</strong> is a region with no observed data; a <strong>cluster</strong> is a concentration of values, usually separated by gaps. <em>Example: the 68-minute journey is an outlier; nothing lies between 42 and 68, so that is a gap.</em></p>
+<blockquote><strong>Skew is named for the tail, not the bulk.</strong> Put a finger on the long thin tail and say its direction out loud. This single error costs more marks in Unit 1 than anything else.</blockquote>
+<blockquote><strong>In context</strong> means naming the variable, its units and the individuals — every time. Not "skewed right with an outlier", but "journey times for these 25 students are skewed right, with one student's journey of 68 minutes far longer than anyone else's."</blockquote>
+<p>Many textbooks use the mnemonic <strong>SOCS</strong> — shape, outliers, centre, spread. It is the same four components the course description lists as shape, centre, variability and unusual features.</p>
+<hr>
+<p><em>CED references: Topic 1.4 (1.4.A.1–2, 1.4.B.1, 1.4.C.1), Topic 1.5 (1.5.A.1–4), Topic 1.6 (1.6.A.1–6, 1.6.B.1). Course and Exam Description effective Fall 2026.</em></p>
+<p><em>Further reading: Barron's pdf 83–96 · Princeton Review 105–124 · 5 Steps to a 5 60–65.</em></p>
+<p><em>Next session: Topics 1.7–1.9 — mean, median, standard deviation, the 1.5 × IQR outlier rule, boxplots, and comparing two distributions. The formal outlier test promised above arrives there.</em></p>
+</main>
+<script>window.COURSE_NAV={"kicker": "CED 1.4–1.6", "title": "Session 2 Workbook", "map": [{"label": "Course", "items": [{"href": "index.html", "label": "Home", "current": false}, {"href": "plan.html", "label": "The 20-hour plan", "current": false}]}, {"label": "Block A · Describing one variable", "items": [{"href": "s01-tutor.html", "label": "Session 1 · Tutor", "current": false}, {"href": "s01-student.html", "label": "Session 1 · Student", "current": false}, {"href": "s01-test.html", "label": "Session 1 · Test", "current": false}, {"href": "s02-tutor.html", "label": "Session 2 · Tutor", "current": false}, {"href": "s02-student.html", "label": "Session 2 · Student", "current": true}]}, {"label": "Interactive", "items": [{"href": "tools/unit1-explorer.html", "label": "Unit 1 Explorer", "current": false}]}], "prev": {"href": "s02-tutor.html", "label": "Session 2 · Tutor"}, "next": {"href": "tools/unit1-explorer.html", "label": "Unit 1 Explorer"}, "variants": [{"href": "s02-tutor.html", "label": "Tutor", "current": false}, {"href": "s02-student.html", "label": "Student", "current": true}]};</script>
+<script src="assets/course.js"></script>
+</body>
+</html>

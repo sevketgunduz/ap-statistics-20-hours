@@ -1,0 +1,63 @@
+<svg viewBox="0 0 440 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Histogram of journey times, Bin width 10" font-family="Public Sans, system-ui, sans-serif">
+<style>
+  .ink   { fill: #15201f; }
+  .ink2  { fill: #4a5654; }
+  .ink3  { fill: #6f7b79; }
+  .axis  { stroke: #c3c9c6; }
+  .grid  { stroke: #dcdfdd; }
+  .gap   { stroke: #ffffff; }
+  .surf  { fill: #ffffff; }
+  @media (prefers-color-scheme: dark) {
+    .ink  { fill: #e9edeb; }
+    .ink2 { fill: #a5b0ad; }
+    .ink3 { fill: #7e8a87; }
+    .axis { stroke: #3a4644; }
+    .grid { stroke: #2a3533; }
+    .gap  { stroke: #182120; }
+    .surf { fill: #182120; }
+  }
+
+  .s0 { fill: #2a78d6; }
+  @media (prefers-color-scheme: dark) {
+    .s0 { fill: #3987e5; }
+  }
+</style>
+<text class="ink" x="18" y="22" font-size="15" font-weight="700" fill="#15201f">Bin width 10</text>
+<line class="grid" x1="52" y1="282.0" x2="424" y2="282.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="44" y="286.0" font-size="12" text-anchor="end" fill="#6f7b79">0</text>
+<line class="grid" x1="52" y1="228.5" x2="424" y2="228.5" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="44" y="232.5" font-size="12" text-anchor="end" fill="#6f7b79">3</text>
+<line class="grid" x1="52" y1="174.9" x2="424" y2="174.9" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="44" y="178.9" font-size="12" text-anchor="end" fill="#6f7b79">6</text>
+<line class="grid" x1="52" y1="121.4" x2="424" y2="121.4" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="44" y="125.4" font-size="12" text-anchor="end" fill="#6f7b79">9</text>
+<line class="grid" x1="52" y1="67.8" x2="424" y2="67.8" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="44" y="71.8" font-size="12" text-anchor="end" fill="#6f7b79">12</text>
+<rect class="s0" x="52.8" y="246.3" width="51.6" height="35.7" rx="3" fill="#2a78d6"/>
+<rect class="s0" x="52.8" y="278.0" width="51.6" height="4" fill="#2a78d6"/>
+<text class="ink" x="78.6" y="239.3" font-size="12.5" font-weight="600" text-anchor="middle" fill="#15201f">2</text>
+<rect class="s0" x="105.9" y="67.8" width="51.6" height="214.2" rx="3" fill="#2a78d6"/>
+<rect class="s0" x="105.9" y="278.0" width="51.6" height="4" fill="#2a78d6"/>
+<text class="ink" x="131.7" y="60.8" font-size="12.5" font-weight="600" text-anchor="middle" fill="#15201f">12</text>
+<rect class="s0" x="159.0" y="174.9" width="51.6" height="107.1" rx="3" fill="#2a78d6"/>
+<rect class="s0" x="159.0" y="278.0" width="51.6" height="4" fill="#2a78d6"/>
+<text class="ink" x="184.9" y="167.9" font-size="12.5" font-weight="600" text-anchor="middle" fill="#15201f">6</text>
+<rect class="s0" x="212.2" y="228.5" width="51.6" height="53.5" rx="3" fill="#2a78d6"/>
+<rect class="s0" x="212.2" y="278.0" width="51.6" height="4" fill="#2a78d6"/>
+<text class="ink" x="238.0" y="221.5" font-size="12.5" font-weight="600" text-anchor="middle" fill="#15201f">3</text>
+<rect class="s0" x="265.3" y="264.2" width="51.6" height="17.8" rx="3" fill="#2a78d6"/>
+<rect class="s0" x="265.3" y="278.0" width="51.6" height="4" fill="#2a78d6"/>
+<rect class="s0" x="371.6" y="264.2" width="51.6" height="17.8" rx="3" fill="#2a78d6"/>
+<rect class="s0" x="371.6" y="278.0" width="51.6" height="4" fill="#2a78d6"/>
+<text class="ink3" x="52.0" y="301.0" font-size="12" text-anchor="middle" fill="#6f7b79">0</text>
+<text class="ink3" x="105.1" y="301.0" font-size="12" text-anchor="middle" fill="#6f7b79">10</text>
+<text class="ink3" x="158.3" y="301.0" font-size="12" text-anchor="middle" fill="#6f7b79">20</text>
+<text class="ink3" x="211.4" y="301.0" font-size="12" text-anchor="middle" fill="#6f7b79">30</text>
+<text class="ink3" x="264.6" y="301.0" font-size="12" text-anchor="middle" fill="#6f7b79">40</text>
+<text class="ink3" x="317.7" y="301.0" font-size="12" text-anchor="middle" fill="#6f7b79">50</text>
+<text class="ink3" x="370.9" y="301.0" font-size="12" text-anchor="middle" fill="#6f7b79">60</text>
+<text class="ink3" x="424.0" y="301.0" font-size="12" text-anchor="middle" fill="#6f7b79">70</text>
+<line class="axis" x1="52" y1="282" x2="424" y2="282" stroke-width="1.5" stroke="#c3c9c6" fill="none"/>
+<text class="ink3" x="16" y="166.0" font-size="12" text-anchor="middle" transform="rotate(-90 16 166.0)" fill="#6f7b79">Frequency</text>
+<text class="ink3" x="52" y="328" font-size="12" fill="#6f7b79">Journey time (minutes)</text>
+</svg>

@@ -1,0 +1,76 @@
+<svg viewBox="0 0 620 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bar chart of surveyed patients by hospital" font-family="Public Sans, system-ui, sans-serif">
+<style>
+  .ink   { fill: #15201f; }
+  .ink2  { fill: #4a5654; }
+  .ink3  { fill: #6f7b79; }
+  .axis  { stroke: #c3c9c6; }
+  .grid  { stroke: #dcdfdd; }
+  .gap   { stroke: #ffffff; }
+  .surf  { fill: #ffffff; }
+  @media (prefers-color-scheme: dark) {
+    .ink  { fill: #e9edeb; }
+    .ink2 { fill: #a5b0ad; }
+    .ink3 { fill: #7e8a87; }
+    .axis { stroke: #3a4644; }
+    .grid { stroke: #2a3533; }
+    .gap  { stroke: #182120; }
+    .surf { fill: #182120; }
+  }
+
+  .s0 { fill: #2a78d6; }
+  .s1 { fill: #eb6834; }
+  .s2 { fill: #1baf7a; }
+  .s3 { fill: #eda100; }
+  .s4 { fill: #e87ba4; }
+  .s5 { fill: #008300; }
+  @media (prefers-color-scheme: dark) {
+    .s0 { fill: #3987e5; }
+    .s1 { fill: #d95926; }
+    .s2 { fill: #199e70; }
+    .s3 { fill: #c98500; }
+    .s4 { fill: #d55181; }
+    .s5 { fill: #008300; }
+  }
+</style>
+<line class="grid" x1="52" y1="338.0" x2="602" y2="338.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="44" y="342.0" font-size="13" text-anchor="end" fill="#6f7b79">0</text>
+<line class="grid" x1="52" y1="286.0" x2="602" y2="286.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="44" y="290.0" font-size="13" text-anchor="end" fill="#6f7b79">15</text>
+<line class="grid" x1="52" y1="234.0" x2="602" y2="234.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="44" y="238.0" font-size="13" text-anchor="end" fill="#6f7b79">30</text>
+<line class="grid" x1="52" y1="182.0" x2="602" y2="182.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="44" y="186.0" font-size="13" text-anchor="end" fill="#6f7b79">45</text>
+<line class="grid" x1="52" y1="130.0" x2="602" y2="130.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="44" y="134.0" font-size="13" text-anchor="end" fill="#6f7b79">60</text>
+<line class="grid" x1="52" y1="78.0" x2="602" y2="78.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="44" y="82.0" font-size="13" text-anchor="end" fill="#6f7b79">75</text>
+<line class="grid" x1="52" y1="26.0" x2="602" y2="26.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="44" y="30.0" font-size="13" text-anchor="end" fill="#6f7b79">90</text>
+<rect class="s0" x="61.0" y="46.8" width="73.7" height="291.2" rx="4" fill="#2a78d6"/>
+<rect class="s0" x="61.0" y="332.0" width="73.7" height="6" fill="#2a78d6"/>
+<text class="ink" x="97.8" y="38.8" font-size="14" font-weight="600" text-anchor="middle" fill="#15201f">84</text>
+<text class="ink2" x="97.8" y="358.0" font-size="13" text-anchor="middle" fill="#4a5654">St Mary's</text>
+<rect class="s1" x="152.7" y="91.9" width="73.7" height="246.1" rx="4" fill="#eb6834"/>
+<rect class="s1" x="152.7" y="332.0" width="73.7" height="6" fill="#eb6834"/>
+<text class="ink" x="189.5" y="83.9" font-size="14" font-weight="600" text-anchor="middle" fill="#15201f">71</text>
+<text class="ink2" x="189.5" y="358.0" font-size="13" text-anchor="middle" fill="#4a5654">Riverside</text>
+<rect class="s2" x="244.3" y="157.7" width="73.7" height="180.3" rx="4" fill="#1baf7a"/>
+<rect class="s2" x="244.3" y="332.0" width="73.7" height="6" fill="#1baf7a"/>
+<text class="ink" x="281.2" y="149.7" font-size="14" font-weight="600" text-anchor="middle" fill="#15201f">52</text>
+<text class="ink2" x="281.2" y="358.0" font-size="13" text-anchor="middle" fill="#4a5654">Northgate</text>
+<rect class="s3" x="336.0" y="182.0" width="73.7" height="156.0" rx="4" fill="#eda100"/>
+<rect class="s3" x="336.0" y="332.0" width="73.7" height="6" fill="#eda100"/>
+<text class="ink" x="372.8" y="174.0" font-size="14" font-weight="600" text-anchor="middle" fill="#15201f">45</text>
+<text class="ink2" x="372.8" y="358.0" font-size="13" text-anchor="middle" fill="#4a5654">Parkview</text>
+<rect class="s4" x="427.7" y="234.0" width="73.7" height="104.0" rx="4" fill="#e87ba4"/>
+<rect class="s4" x="427.7" y="332.0" width="73.7" height="6" fill="#e87ba4"/>
+<text class="ink" x="464.5" y="226.0" font-size="14" font-weight="600" text-anchor="middle" fill="#15201f">30</text>
+<text class="ink2" x="464.5" y="358.0" font-size="13" text-anchor="middle" fill="#4a5654">Eastwood</text>
+<rect class="s5" x="519.3" y="275.6" width="73.7" height="62.4" rx="4" fill="#008300"/>
+<rect class="s5" x="519.3" y="332.0" width="73.7" height="6" fill="#008300"/>
+<text class="ink" x="556.2" y="267.6" font-size="14" font-weight="600" text-anchor="middle" fill="#15201f">18</text>
+<text class="ink2" x="556.2" y="358.0" font-size="13" text-anchor="middle" fill="#4a5654">Hillcrest</text>
+<line class="axis" x1="52" y1="338" x2="602" y2="338" stroke-width="1.5" stroke="#c3c9c6" fill="none"/>
+<text class="ink3" x="52" y="386" font-size="12" fill="#6f7b79">Hospital</text>
+<text class="ink3" x="44" y="16" font-size="12" text-anchor="end" fill="#6f7b79">Patients</text>
+</svg>

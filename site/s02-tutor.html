@@ -1,0 +1,1184 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Session 2, Shape of the Data · AP Statistics in Twenty Hours</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Spectral:ital,wght@0,600;0,700;1,600&display=swap">
+<link rel="stylesheet" href="assets/course.css">
+</head>
+<body>
+<main class="page">
+<style>/* legacy fragment: .page already supplies the column */.page > .wrap, .page section > .wrap, .page .wrap{max-width:none;padding-inline:0}.page > section, .page > header.mast{padding-block:26px}.page > header.mast{background:none;border:0}</style><style>
+  :root{
+    --paper:#f5f6f4; --surface:#ffffff; --surface-2:#eef1ef;
+    --ink:#15201f; --ink-2:#4a5654; --ink-3:#6f7b79;
+    --rule:#dcdfdd; --rule-strong:#c3c9c6;
+    --accent:#1a6b63; --accent-deep:#0f4c46; --accent-soft:#e2eeec;
+    --alarm:#9a2e28; --alarm-soft:#f8eae8; --alarm-rule:#e0bcb7;
+    --amber:#7d5a11; --amber-soft:#f6efdb; --amber-rule:#ddcb9c;
+    --f-display:"Spectral",Georgia,"Times New Roman",serif;
+    --f-body:"Public Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+    --f-mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    --wrap:70rem; --read:64ch;
+  }
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]){
+      --paper:#101615; --surface:#182120; --surface-2:#1e2827;
+      --ink:#e9edeb; --ink-2:#a5b0ad; --ink-3:#7e8a87;
+      --rule:#2a3533; --rule-strong:#3a4644;
+      --accent:#54b8ab; --accent-deep:#7fd0c4; --accent-soft:#16302d;
+      --alarm:#e58479; --alarm-soft:#2d1917; --alarm-rule:#5d312c;
+      --amber:#d9ab52; --amber-soft:#2b2312; --amber-rule:#4d3f1c;
+    }
+  }
+  :root[data-theme="dark"]{
+    --paper:#101615; --surface:#182120; --surface-2:#1e2827;
+    --ink:#e9edeb; --ink-2:#a5b0ad; --ink-3:#7e8a87;
+    --rule:#2a3533; --rule-strong:#3a4644;
+    --accent:#54b8ab; --accent-deep:#7fd0c4; --accent-soft:#16302d;
+    --alarm:#e58479; --alarm-soft:#2d1917; --alarm-rule:#5d312c;
+    --amber:#d9ab52; --amber-soft:#2b2312; --amber-rule:#4d3f1c;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.62;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:var(--wrap);margin-inline:auto;padding-inline:24px;}
+  @media (max-width:520px){.wrap{padding-inline:16px;}}
+  h1,h2,h3,h4{font-family:var(--f-display);text-wrap:balance;margin:0;line-height:1.2;}
+  p{margin:0;}
+  .eyebrow{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);font-weight:500;}
+
+  .mast{border-bottom:1px solid var(--rule);background:var(--surface);}
+  .mast-in{padding-block:52px 38px;display:flex;flex-direction:column;gap:22px;}
+  .mast h1{font-size:clamp(2rem,5vw,3.15rem);font-weight:700;letter-spacing:-.015em;}
+  .mast h1 em{font-style:italic;color:var(--accent);}
+  .standfirst{max-width:var(--read);font-size:1.06rem;color:var(--ink-2);}
+  .facts{display:flex;flex-wrap:wrap;border:1px solid var(--rule);border-radius:3px;overflow:hidden;}
+  .fact{flex:1 1 140px;padding:13px 17px;border-right:1px solid var(--rule);background:var(--surface);}
+  .fact:last-child{border-right:0;}
+  .fact dt{font-family:var(--f-mono);font-size:.64rem;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-3);margin-bottom:4px;}
+  .fact dd{margin:0;font-family:var(--f-display);font-size:1.12rem;font-weight:600;font-variant-numeric:tabular-nums;}
+
+  section{padding-block:46px;}
+  section+section{border-top:1px solid var(--rule);}
+  .sec-head{display:flex;flex-direction:column;gap:11px;margin-bottom:24px;max-width:var(--read);}
+  .sec-head h2{font-size:clamp(1.4rem,3vw,1.9rem);font-weight:600;}
+  .sec-head p{color:var(--ink-2);}
+  .prose{max-width:var(--read);display:flex;flex-direction:column;gap:14px;color:var(--ink-2);}
+  .prose strong{color:var(--ink);font-weight:600;}
+
+  .tbl{overflow-x:auto;border:1px solid var(--rule);border-radius:3px;background:var(--surface);margin-block:6px;}
+  table{border-collapse:collapse;width:100%;min-width:400px;font-size:.89rem;}
+  th,td{padding:10px 14px;text-align:left;border-bottom:1px solid var(--rule);vertical-align:top;}
+  thead th{font-family:var(--f-mono);font-size:.64rem;letter-spacing:.11em;text-transform:uppercase;color:var(--ink-3);font-weight:500;background:var(--surface-2);white-space:nowrap;}
+  tbody tr:last-child td{border-bottom:0;}
+  tbody tr.tot td{background:var(--surface-2);font-weight:600;}
+  .num{font-variant-numeric:tabular-nums;}
+  .mono{font-family:var(--f-mono);font-size:.84rem;font-variant-numeric:tabular-nums;}
+  .hl{background:var(--accent-soft);}
+
+  .seg{background:var(--surface);border:1px solid var(--rule);border-radius:3px;padding:22px 24px;margin-bottom:16px;}
+  .seg-h{display:flex;flex-wrap:wrap;align-items:baseline;gap:10px 15px;padding-bottom:11px;border-bottom:2px solid var(--accent);margin-bottom:16px;}
+  .clock{font-family:var(--f-mono);font-size:.74rem;font-weight:600;color:var(--accent);letter-spacing:.06em;white-space:nowrap;}
+  .seg-h h3{font-size:1.24rem;font-weight:600;flex:1 1 220px;}
+  .who{font-family:var(--f-mono);font-size:.64rem;letter-spacing:.11em;text-transform:uppercase;padding:3px 8px;border-radius:2px;background:var(--accent-soft);color:var(--accent-deep);font-weight:500;white-space:nowrap;}
+  .who.tutor{background:var(--surface-2);color:var(--ink-3);}
+  .seg-body{display:flex;flex-direction:column;gap:14px;}
+  .seg-body p{font-size:.94rem;color:var(--ink-2);max-width:var(--read);}
+  .seg-body h4{font-size:1.02rem;font-weight:600;margin-top:5px;}
+  .seg-body ul,.seg-body ol{margin:0;padding-left:1.15em;display:flex;flex-direction:column;gap:7px;font-size:.94rem;color:var(--ink-2);max-width:var(--read);}
+  .seg-body strong{color:var(--ink);font-weight:600;}
+
+  .script{display:flex;flex-direction:column;border:1px solid var(--rule);border-radius:3px;overflow:hidden;max-width:var(--read);}
+  .line{display:grid;grid-template-columns:82px 1fr;gap:0 14px;padding:11px 15px;border-bottom:1px solid var(--rule);font-size:.92rem;}
+  .line:last-child{border-bottom:0;}
+  .line .lbl{font-family:var(--f-mono);font-size:.62rem;letter-spacing:.11em;text-transform:uppercase;font-weight:600;padding-top:3px;}
+  .line.ask{background:var(--accent-soft);}
+  .line.ask .lbl{color:var(--accent-deep);}
+  .line.ask .txt{font-style:italic;color:var(--ink);}
+  .line.listen{background:var(--surface);}
+  .line.listen .lbl{color:var(--ink-3);}
+  .line.listen .txt{color:var(--ink-2);}
+  .line.ifsay{background:var(--amber-soft);}
+  .line.ifsay .lbl{color:var(--amber);}
+  .line.ifsay .txt{color:var(--ink-2);}
+  .line.intro{background:var(--surface-2);}
+  .line.intro .lbl{color:var(--ink-3);}
+  .line.intro .txt{color:var(--ink);font-weight:600;}
+  @media (max-width:520px){.line{grid-template-columns:1fr;gap:4px;}}
+
+  .brief{background:var(--accent-soft);border-radius:3px;padding:16px 19px;font-size:.95rem;display:flex;flex-direction:column;gap:9px;max-width:var(--read);}
+  .brief strong{font-weight:600;}
+  .plot{font-family:var(--f-mono);font-size:.86rem;background:var(--surface-2);border:1px solid var(--rule);border-left:3px solid var(--accent);border-radius:3px;padding:14px 17px;overflow-x:auto;white-space:pre;line-height:1.8;}
+  .data{font-family:var(--f-mono);font-size:.82rem;background:var(--surface-2);border:1px solid var(--rule);border-radius:3px;padding:14px 16px;overflow-x:auto;white-space:pre;line-height:1.85;}
+  .formula{font-family:var(--f-mono);font-size:.94rem;background:var(--accent-soft);border:1px solid var(--accent);border-radius:3px;padding:13px 17px;color:var(--ink);text-align:center;overflow-x:auto;}
+
+  .callout{border-radius:3px;padding:15px 18px;max-width:var(--read);display:flex;flex-direction:column;gap:6px;}
+  .callout .lbl{font-family:var(--f-mono);font-size:.63rem;letter-spacing:.13em;text-transform:uppercase;font-weight:600;}
+  .callout p{font-size:.92rem;color:var(--ink-2);}
+  .callout strong{color:var(--ink);}
+  .callout.amber{background:var(--amber-soft);border:1px solid var(--amber-rule);}
+  .callout.amber .lbl{color:var(--amber);}
+  .callout.red{background:var(--alarm-soft);border:1px solid var(--alarm-rule);}
+  .callout.red .lbl{color:var(--alarm);}
+  .callout.teal{background:var(--accent-soft);border:1px solid var(--accent);}
+  .callout.teal .lbl{color:var(--accent-deep);}
+
+  .hw-sec{background:var(--surface-2);border-block:1px solid var(--rule-strong);}
+  .hw-head{display:flex;flex-wrap:wrap;gap:10px 20px;align-items:baseline;border-bottom:2px solid var(--ink);padding-bottom:12px;margin-bottom:22px;}
+  .hw-head h2{font-size:clamp(1.5rem,3.2vw,2.1rem);font-weight:700;flex:1 1 240px;}
+  .hw-head .meta{font-family:var(--f-mono);font-size:.74rem;color:var(--ink-3);}
+  .part{background:var(--surface);border:1px solid var(--rule);border-radius:3px;padding:20px 22px;margin-bottom:14px;}
+  .part-h{display:flex;flex-wrap:wrap;align-items:baseline;gap:10px;margin-bottom:14px;}
+  .part-h h3{font-size:1.1rem;font-weight:600;}
+  .marks{font-family:var(--f-mono);font-size:.69rem;color:var(--accent);border:1px solid var(--accent);border-radius:2px;padding:2px 7px;font-weight:500;white-space:nowrap;}
+  .q{display:flex;flex-direction:column;gap:7px;margin-bottom:13px;}
+  .q:last-child{margin-bottom:0;}
+  .q p{font-size:.94rem;}
+  .q .qn{font-family:var(--f-mono);font-weight:600;color:var(--accent);}
+  .protocol{background:var(--surface);border:2px solid var(--accent);border-radius:3px;padding:19px 22px;margin-bottom:18px;max-width:var(--read);}
+  .protocol h3{font-size:1.05rem;font-weight:600;margin-bottom:11px;}
+  .protocol ol{margin:0;padding-left:1.2em;display:flex;flex-direction:column;gap:8px;font-size:.93rem;color:var(--ink-2);}
+  .protocol strong{color:var(--ink);font-weight:600;}
+  .protocol .kick{margin-top:12px;padding-top:11px;border-top:1px solid var(--rule);font-size:.89rem;font-style:italic;color:var(--ink-2);}
+
+  details.key{background:var(--surface);border:2px solid var(--rule-strong);border-radius:3px;margin-top:22px;}
+  details.key>summary{cursor:pointer;padding:16px 20px;font-family:var(--f-display);font-size:1.1rem;font-weight:600;list-style:none;display:flex;align-items:center;gap:10px;}
+  details.key>summary::-webkit-details-marker{display:none;}
+  details.key>summary::after{content:"▸";margin-left:auto;font-size:.9rem;transition:transform .15s;}
+  details.key[open]>summary::after{transform:rotate(90deg);}
+  .key-body{padding:0 20px 22px;display:flex;flex-direction:column;gap:17px;border-top:1px solid var(--rule);padding-top:17px;}
+  .key-body h4{font-size:1rem;font-weight:600;}
+  .key-body p,.key-body li{font-size:.9rem;color:var(--ink-2);}
+  .key-body ol,.key-body ul{margin:0;padding-left:1.2em;display:flex;flex-direction:column;gap:6px;}
+  .key-body strong{color:var(--ink);font-weight:600;}
+  .match{font-family:var(--f-mono);font-size:.94rem;letter-spacing:.04em;color:var(--ink);}
+  .flagbox{border-left:3px solid var(--amber);padding-left:13px;font-size:.89rem;color:var(--ink-2);}
+  .flagbox b{color:var(--ink);}
+
+  .ref-sec{background:var(--surface);border-block:1px solid var(--rule);}
+  .defs{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,310px),1fr));gap:11px;}
+  .def{background:var(--paper);border:1px solid var(--rule);border-left:3px solid var(--accent);border-radius:3px;padding:14px 16px;display:flex;flex-direction:column;gap:6px;}
+  .def dt{font-weight:600;font-size:.96rem;}
+  .def dt small{font-family:var(--f-mono);font-size:.68rem;color:var(--ink-3);font-weight:400;margin-left:6px;letter-spacing:.06em;}
+  .def dd{margin:0;font-size:.87rem;color:var(--ink-2);}
+  .def .ex{font-size:.84rem;color:var(--ink-2);border-top:1px solid var(--rule);padding-top:6px;}
+  .def .ex b{font-family:var(--f-mono);font-size:.62rem;letter-spacing:.11em;text-transform:uppercase;color:var(--accent);display:block;margin-bottom:2px;font-weight:600;}
+  .defgroup{margin-bottom:24px;}
+  .defgroup:last-child{margin-bottom:0;}
+  .defgroup h3{font-size:1.04rem;font-weight:600;margin-bottom:11px;padding-bottom:7px;border-bottom:1px solid var(--rule);}
+
+  .split{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:14px;}
+
+  /* figures */
+  figure{margin:0;background:var(--surface);border:1px solid var(--rule);border-radius:3px;padding:16px 18px 12px;display:flex;flex-direction:column;gap:10px;}
+  .figscroll{overflow-x:auto;}
+  .figscroll svg{display:block;width:100%;min-width:400px;height:auto;}
+  figcaption{font-size:.84rem;color:var(--ink-2);border-top:1px solid var(--rule);padding-top:9px;}
+  figcaption b{font-family:var(--f-mono);font-size:.62rem;letter-spacing:.11em;text-transform:uppercase;color:var(--accent);display:block;margin-bottom:3px;font-weight:600;}
+  .figrow{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,330px),1fr));gap:14px;}
+  .chip{display:inline-block;width:11px;height:11px;border-radius:2px;vertical-align:-1px;margin-right:7px;}
+  .flow{display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);padding-block:4px;}
+  .flow span.step{background:var(--accent-soft);color:var(--accent-deep);padding:5px 12px;border-radius:2px;font-weight:600;}
+
+  .checks{display:flex;flex-wrap:wrap;gap:8px;}
+  .chk{font-family:var(--f-mono);font-size:.78rem;background:var(--surface-2);border:1px solid var(--rule);border-radius:2px;padding:6px 11px;color:var(--ink);white-space:nowrap;}
+  footer{border-top:1px solid var(--rule);padding-block:28px 42px;font-size:.82rem;color:var(--ink-3);}
+  footer p{max-width:var(--read);}
+  :focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;}}
+</style>
+
+<header class="mast">
+  <div class="wrap mast-in">
+    <div class="eyebrow">AP Statistics &middot; Twenty-hour course &middot; One-to-one edition</div>
+    <h1>Session Two: <em>Shape of the Data</em></h1>
+    <p class="standfirst">Turning tables into pictures, and then learning the four things you must say about every picture. The second half is the half that earns marks in April.</p>
+    <dl class="facts">
+      <div class="fact"><dt>CED topics</dt><dd>1.4 &middot; 1.5 &middot; 1.6</dd></div>
+      <div class="fact"><dt>Skills</dt><dd>3.A 4.A 4.B</dd></div>
+      <div class="fact"><dt>Duration</dt><dd>60 minutes</dd></div>
+      <div class="fact"><dt>Homework</dt><dd>40 marks</dd></div>
+    </dl>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Orientation</div>
+      <h2>Where this session sits</h2>
+    </div>
+    <div class="prose">
+      <p>Session 1 gave the student the vocabulary and the tables. This session turns tables into <strong>pictures</strong>, then teaches the language for describing what the picture shows.</p>
+      <p>The second half is the more important half. Constructing a histogram is a five-minute skill. <strong>Describing a distribution in a way that earns marks</strong> is a skill students still get wrong in April, because it requires saying four specific things in context &mdash; and most students say two of them.</p>
+    </div>
+    <div style="margin-top:22px;" class="split">
+      <div>
+        <div class="eyebrow" style="margin-bottom:9px;">Learning objectives</div>
+        <div class="tbl">
+          <table>
+            <thead><tr><th>Code</th><th>Objective</th><th>Skill</th></tr></thead>
+            <tbody>
+              <tr><td class="num">1.4.A</td><td>Construct categorical graphical representations</td><td class="num">3.A</td></tr>
+              <tr><td class="num">1.4.B</td><td>Justify a claim using them</td><td class="num">4.B</td></tr>
+              <tr><td class="num">1.4.C</td><td>Compare multiple categorical representations</td><td class="num">4.A</td></tr>
+              <tr><td class="num">1.5.A</td><td>Construct quantitative graphical representations</td><td class="num">3.A</td></tr>
+              <tr><td class="num">1.6.A</td><td>Describe distributions of quantitative representations</td><td class="num">4.A</td></tr>
+              <tr><td class="num">1.6.B</td><td>Justify a claim using distributions</td><td class="num">4.B</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div>
+        <div class="eyebrow" style="margin-bottom:9px;">Timing</div>
+        <div class="tbl">
+          <table>
+            <thead><tr><th>Min</th><th>Segment</th></tr></thead>
+            <tbody>
+              <tr><td class="num">0&ndash;8</td><td>Homework debrief and diagnostic</td></tr>
+              <tr><td class="num">8&ndash;18</td><td><strong>Scenario A</strong> &mdash; bar charts, pie charts, comparison trap</td></tr>
+              <tr><td class="num">18&ndash;32</td><td><strong>Scenario B</strong> &mdash; three displays + Build &amp; Defend</td></tr>
+              <tr><td class="num">32&ndash;46</td><td>Describing the distribution &mdash; the four components</td></tr>
+              <tr><td class="num">46&ndash;54</td><td>Solo case</td></tr>
+              <tr><td class="num">54&ndash;60</td><td>Teach-it-back, set homework</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head"><div class="eyebrow">The hour</div><h2>Session script</h2></div>
+
+    <div class="seg">
+      <div class="seg-h"><span class="clock">0&ndash;8 min</span><h3>Homework debrief and diagnostic</h3><span class="who">Student talks</span></div>
+      <div class="seg-body">
+        <p>The student should arrive with Session 1&rsquo;s homework <strong>self-marked</strong>. Do not re-mark it. Ask for the two lists instead.</p>
+        <div class="script">
+          <div class="line ask"><span class="lbl">Ask</span><span class="txt">&ldquo;Which ones did you get wrong, and which ones did you put a question mark on?&rdquo;</span></div>
+        </div>
+        <p>Spend the time on those only. The question-marked items that turned out <em>right</em> are the most valuable &mdash; that is where confidence is missing but knowledge is not.</p>
+        <h4>The two errors to check for specifically</h4>
+        <ul>
+          <li><strong>B5 answered &ldquo;parameter&rdquo;.</strong> The denominator test has not landed. Two minutes: <em>&ldquo;how many did they actually ask?&rdquo;</em></li>
+          <li><strong>D4 answered &ldquo;yes, supported&rdquo;.</strong> Plurality versus majority. Two minutes, because it recurs in every unit.</li>
+        </ul>
+        <h4>Then three retrieval questions</h4>
+        <div class="script">
+          <div class="line ask"><span class="lbl">Q1</span><span class="txt">&ldquo;Give me a categorical variable and a quantitative variable, from anything.&rdquo;</span></div>
+          <div class="line ask"><span class="lbl">Q2</span><span class="txt">&ldquo;If I have a table of counts for six hospitals, what could I draw?&rdquo;</span></div>
+          <div class="line ask"><span class="lbl">Q3</span><span class="txt">&ldquo;What does a histogram show that a list of numbers doesn&rsquo;t?&rdquo;</span></div>
+          <div class="line listen"><span class="lbl">Listen for</span><span class="txt">Q3 is the one that matters. Anything about <strong>shape</strong> or <strong>pattern</strong>. If the answer is only &ldquo;it&rsquo;s easier to read&rdquo;, that is the gap this session fills.</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="seg">
+      <div class="seg-h"><span class="clock">8&ndash;18 min</span><h3>Scenario A &mdash; the hospital survey, now in pictures</h3><span class="who">Both</span></div>
+      <div class="seg-body">
+        <p>Deliberate continuity: this is <strong>the same data the student tabulated last session</strong>. Say so. Seeing a familiar table become a graph is the cheapest way to make the table&ndash;graph relationship obvious.</p>
+        <div class="brief">
+          <p>The same <strong>300 surveyed patients</strong>, by hospital:</p>
+          <p><strong>St Mary&rsquo;s 84 &middot; Riverside 71 &middot; Northgate 52 &middot; Parkview 45 &middot; Eastwood 30 &middot; Hillcrest 18</strong></p>
+        </div>
+
+        <h4>The two displays and what each axis means</h4>
+        <div class="script">
+          <div class="line ask"><span class="lbl">Ask</span><span class="txt">&ldquo;If you drew a bar chart of this, what would the height of the St Mary&rsquo;s bar be?&rdquo;</span></div>
+          <div class="line listen"><span class="lbl">Listen for</span><span class="txt">Either <strong>84</strong> or <strong>0.280</strong> &mdash; both correct, and that is the point. A bar chart can show frequency <em>or</em> relative frequency.</span></div>
+          <div class="line ask"><span class="lbl">Ask</span><span class="txt">&ldquo;So what changes if you plot relative frequency instead of frequency?&rdquo; &rarr; nothing about the picture, only the scale. Make them say it.</span></div>
+        </div>
+
+        <h4>The pie chart formula</h4>
+        <p>A pie chart shows each category&rsquo;s share of the whole, so the slice must be sized by relative frequency, not by count.</p>
+        <div class="formula">slice angle = (f &divide; n) &times; 360&deg; &nbsp;&nbsp;&middot;&nbsp;&nbsp; slice share of area = 100rf</div>
+        <div class="tbl">
+          <table>
+            <thead><tr><th>Hospital</th><th>f</th><th>rf = f &divide; 300</th><th>Angle = rf &times; 360&deg;</th></tr></thead>
+            <tbody>
+              <tr><td>St Mary&rsquo;s</td><td class="num">84</td><td class="num">0.280</td><td class="mono">0.280 &times; 360 = <strong>100.8&deg;</strong></td></tr>
+              <tr><td>Riverside</td><td class="num">71</td><td class="num">0.237</td><td class="mono">0.237 &times; 360 = <strong>85.2&deg;</strong></td></tr>
+              <tr><td>Northgate</td><td class="num">52</td><td class="num">0.173</td><td class="mono">0.173 &times; 360 = <strong>62.4&deg;</strong></td></tr>
+              <tr><td>Parkview</td><td class="num">45</td><td class="num">0.150</td><td class="mono">0.150 &times; 360 = <strong>54.0&deg;</strong></td></tr>
+              <tr><td>Eastwood</td><td class="num">30</td><td class="num">0.100</td><td class="mono">0.100 &times; 360 = <strong>36.0&deg;</strong></td></tr>
+              <tr><td>Hillcrest</td><td class="num">18</td><td class="num">0.060</td><td class="mono">0.060 &times; 360 = <strong>21.6&deg;</strong></td></tr>
+              <tr class="tot"><td>Total</td><td class="num">300</td><td class="num">1.000</td><td class="num">360.0&deg;</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="checks"><span class="chk">angles total 360&deg; &check;</span><span class="chk">same logic as &Sigma;rf = 1</span></div>
+
+        <h4>From table to graph</h4>
+        <p>Show the student all three side by side. <strong>The colour is the link</strong> &mdash; St Mary&rsquo;s is the same blue in the table, the bar chart and the pie chart, so the eye carries one hospital across all three representations. Nothing is added or lost between them; the same six numbers are simply re-encoded as height, then as area.</p>
+        <div class="flow"><span class="step">Table &mdash; the counts</span> &rarr; <span class="step">Bar chart &mdash; height</span> &rarr; <span class="step">Pie chart &mdash; area</span></div>
+
+        <figure>
+          <div class="tbl" style="border:0;">
+            <table>
+              <thead><tr><th>Hospital</th><th>f</th><th>rf</th><th>100rf</th><th>Angle</th></tr></thead>
+              <tbody>
+                <tr><td><span class="chip" style="background:#2a78d6"></span>St Mary&rsquo;s</td><td class="num">84</td><td class="num">0.280</td><td class="num">28.0%</td><td class="mono">100.8&deg;</td></tr>
+                <tr><td><span class="chip" style="background:#eb6834"></span>Riverside</td><td class="num">71</td><td class="num">0.237</td><td class="num">23.7%</td><td class="mono">85.2&deg;</td></tr>
+                <tr><td><span class="chip" style="background:#1baf7a"></span>Northgate</td><td class="num">52</td><td class="num">0.173</td><td class="num">17.3%</td><td class="mono">62.4&deg;</td></tr>
+                <tr><td><span class="chip" style="background:#eda100"></span>Parkview</td><td class="num">45</td><td class="num">0.150</td><td class="num">15.0%</td><td class="mono">54.0&deg;</td></tr>
+                <tr><td><span class="chip" style="background:#e87ba4"></span>Eastwood</td><td class="num">30</td><td class="num">0.100</td><td class="num">10.0%</td><td class="mono">36.0&deg;</td></tr>
+                <tr><td><span class="chip" style="background:#008300"></span>Hillcrest</td><td class="num">18</td><td class="num">0.060</td><td class="num">6.0%</td><td class="mono">21.6&deg;</td></tr>
+                <tr class="tot"><td>Total</td><td class="num">300</td><td class="num">1.000</td><td class="num">100%</td><td class="num">360.0&deg;</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <figcaption><b>Step 1 &middot; the table</b>The counts, with every derived column the two graphs will need. The colour chip is what ties each row to its bar and its slice.</figcaption>
+        </figure>
+
+        <div class="figrow" style="margin-top:14px;">
+          <figure>
+            <div class="figscroll"><svg viewBox="0 0 620 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bar chart of surveyed patients by hospital" font-family="Public Sans, system-ui, sans-serif">
+<style>
+  .ink   { fill: var(--ink,   #15201f); }
+  .ink2  { fill: var(--ink-2, #4a5654); }
+  .ink3  { fill: var(--ink-3, #6f7b79); }
+  .axis  { stroke: var(--rule-strong, #c3c9c6); }
+  .grid  { stroke: var(--rule, #dcdfdd); }
+  .gap   { stroke: var(--surface, #ffffff); }
+  .surf  { fill: var(--surface, #ffffff); }
+
+  .s0 { fill: var(--series-1, #2a78d6); }
+  .s1 { fill: var(--series-2, #eb6834); }
+  .s2 { fill: var(--series-3, #1baf7a); }
+  .s3 { fill: var(--series-4, #eda100); }
+  .s4 { fill: var(--series-5, #e87ba4); }
+  .s5 { fill: var(--series-6, #008300); }
+</style>
+<line class="grid" x1="52" y1="338.0" x2="602" y2="338.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="44" y="342.0" font-size="13" text-anchor="end" fill="#6f7b79">0</text>
+<line class="grid" x1="52" y1="286.0" x2="602" y2="286.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="44" y="290.0" font-size="13" text-anchor="end" fill="#6f7b79">15</text>
+<line class="grid" x1="52" y1="234.0" x2="602" y2="234.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="44" y="238.0" font-size="13" text-anchor="end" fill="#6f7b79">30</text>
+<line class="grid" x1="52" y1="182.0" x2="602" y2="182.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="44" y="186.0" font-size="13" text-anchor="end" fill="#6f7b79">45</text>
+<line class="grid" x1="52" y1="130.0" x2="602" y2="130.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="44" y="134.0" font-size="13" text-anchor="end" fill="#6f7b79">60</text>
+<line class="grid" x1="52" y1="78.0" x2="602" y2="78.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="44" y="82.0" font-size="13" text-anchor="end" fill="#6f7b79">75</text>
+<line class="grid" x1="52" y1="26.0" x2="602" y2="26.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="44" y="30.0" font-size="13" text-anchor="end" fill="#6f7b79">90</text>
+<rect class="s0" x="61.0" y="46.8" width="73.7" height="291.2" rx="4" fill="#2a78d6"/>
+<rect class="s0" x="61.0" y="332.0" width="73.7" height="6" fill="#2a78d6"/>
+<text class="ink" x="97.8" y="38.8" font-size="14" font-weight="600" text-anchor="middle" fill="#15201f">84</text>
+<text class="ink2" x="97.8" y="358.0" font-size="13" text-anchor="middle" fill="#4a5654">St Mary's</text>
+<rect class="s1" x="152.7" y="91.9" width="73.7" height="246.1" rx="4" fill="#eb6834"/>
+<rect class="s1" x="152.7" y="332.0" width="73.7" height="6" fill="#eb6834"/>
+<text class="ink" x="189.5" y="83.9" font-size="14" font-weight="600" text-anchor="middle" fill="#15201f">71</text>
+<text class="ink2" x="189.5" y="358.0" font-size="13" text-anchor="middle" fill="#4a5654">Riverside</text>
+<rect class="s2" x="244.3" y="157.7" width="73.7" height="180.3" rx="4" fill="#1baf7a"/>
+<rect class="s2" x="244.3" y="332.0" width="73.7" height="6" fill="#1baf7a"/>
+<text class="ink" x="281.2" y="149.7" font-size="14" font-weight="600" text-anchor="middle" fill="#15201f">52</text>
+<text class="ink2" x="281.2" y="358.0" font-size="13" text-anchor="middle" fill="#4a5654">Northgate</text>
+<rect class="s3" x="336.0" y="182.0" width="73.7" height="156.0" rx="4" fill="#eda100"/>
+<rect class="s3" x="336.0" y="332.0" width="73.7" height="6" fill="#eda100"/>
+<text class="ink" x="372.8" y="174.0" font-size="14" font-weight="600" text-anchor="middle" fill="#15201f">45</text>
+<text class="ink2" x="372.8" y="358.0" font-size="13" text-anchor="middle" fill="#4a5654">Parkview</text>
+<rect class="s4" x="427.7" y="234.0" width="73.7" height="104.0" rx="4" fill="#e87ba4"/>
+<rect class="s4" x="427.7" y="332.0" width="73.7" height="6" fill="#e87ba4"/>
+<text class="ink" x="464.5" y="226.0" font-size="14" font-weight="600" text-anchor="middle" fill="#15201f">30</text>
+<text class="ink2" x="464.5" y="358.0" font-size="13" text-anchor="middle" fill="#4a5654">Eastwood</text>
+<rect class="s5" x="519.3" y="275.6" width="73.7" height="62.4" rx="4" fill="#008300"/>
+<rect class="s5" x="519.3" y="332.0" width="73.7" height="6" fill="#008300"/>
+<text class="ink" x="556.2" y="267.6" font-size="14" font-weight="600" text-anchor="middle" fill="#15201f">18</text>
+<text class="ink2" x="556.2" y="358.0" font-size="13" text-anchor="middle" fill="#4a5654">Hillcrest</text>
+<line class="axis" x1="52" y1="338" x2="602" y2="338" stroke-width="1.5" stroke="#c3c9c6" fill="none"/>
+<text class="ink3" x="52" y="386" font-size="12" fill="#6f7b79">Hospital</text>
+<text class="ink3" x="44" y="16" font-size="12" text-anchor="end" fill="#6f7b79">Patients</text>
+</svg>
+</div>
+            <figcaption><b>Step 2 &middot; bar chart</b>Height encodes the count. Good for <em>comparing</em> categories &mdash; the eye judges length accurately, so it is obvious that St Mary&rsquo;s exceeds Riverside by roughly 13 patients.</figcaption>
+          </figure>
+          <figure>
+            <div class="figscroll"><svg viewBox="0 0 640 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Pie chart of surveyed patients by hospital with slice angles" font-family="Public Sans, system-ui, sans-serif">
+<style>
+  .ink   { fill: var(--ink,   #15201f); }
+  .ink2  { fill: var(--ink-2, #4a5654); }
+  .ink3  { fill: var(--ink-3, #6f7b79); }
+  .axis  { stroke: var(--rule-strong, #c3c9c6); }
+  .grid  { stroke: var(--rule, #dcdfdd); }
+  .gap   { stroke: var(--surface, #ffffff); }
+  .surf  { fill: var(--surface, #ffffff); }
+
+  .s0 { fill: var(--series-1, #2a78d6); }
+  .s1 { fill: var(--series-2, #eb6834); }
+  .s2 { fill: var(--series-3, #1baf7a); }
+  .s3 { fill: var(--series-4, #eda100); }
+  .s4 { fill: var(--series-5, #e87ba4); }
+  .s5 { fill: var(--series-6, #008300); }
+</style>
+<path class="s0 gap" d="M 172 196 L 172.00 48.00 A 148 148 0 0 1 317.38 223.73 Z" stroke-width="2" fill="#2a78d6" stroke="#ffffff"/>
+<text x="242.7" y="142.5" font-size="15" font-weight="700" text-anchor="middle" fill="#ffffff">28.0%</text>
+<path class="s1 gap" d="M 172 196 L 317.38 223.73 A 148 148 0 0 1 156.53 343.19 Z" stroke-width="2" fill="#eb6834" stroke="#ffffff"/>
+<text x="226.7" y="274.7" font-size="15" font-weight="700" text-anchor="middle" fill="#ffffff">23.7%</text>
+<path class="s2 gap" d="M 172 196 L 156.53 343.19 A 148 148 0 0 1 34.39 250.48 Z" stroke-width="2" fill="#1baf7a" stroke="#ffffff"/>
+<text x="116.5" y="274.1" font-size="15" font-weight="700" text-anchor="middle" fill="#ffffff">17.3%</text>
+<path class="s3 gap" d="M 172 196 L 34.39 250.48 A 148 148 0 0 1 47.04 116.70 Z" stroke-width="2" fill="#eda100" stroke="#ffffff"/>
+<text x="80.6" y="192.4" font-size="15" font-weight="700" text-anchor="middle" fill="#ffffff">15.0%</text>
+<path class="s4 gap" d="M 172 196 L 47.04 116.70 A 148 148 0 0 1 117.52 58.39 Z" stroke-width="2" fill="#e87ba4" stroke="#ffffff"/>
+<text x="113.5" y="130.3" font-size="15" font-weight="700" text-anchor="middle" fill="#ffffff">10.0%</text>
+<path class="s5 gap" d="M 172 196 L 117.52 58.39 A 148 148 0 0 1 172.00 48.00 Z" stroke-width="2" fill="#008300" stroke="#ffffff"/>
+<text class="ink3" x="372" y="40" font-size="12" letter-spacing="1.2" fill="#6f7b79">SECTION / SHARE / ANGLE</text>
+<rect class="s0" x="372" y="48" width="13" height="13" rx="2" fill="#2a78d6"/>
+<text class="ink" x="393" y="59" font-size="13.5" font-weight="600" fill="#15201f">St Mary's</text>
+<text class="ink2" x="393" y="75" font-size="12.5" font-family="IBM Plex Mono, monospace" fill="#4a5654">28.0%  &#183;  100.8&#176;</text>
+<rect class="s1" x="372" y="82" width="13" height="13" rx="2" fill="#eb6834"/>
+<text class="ink" x="393" y="93" font-size="13.5" font-weight="600" fill="#15201f">Riverside</text>
+<text class="ink2" x="393" y="109" font-size="12.5" font-family="IBM Plex Mono, monospace" fill="#4a5654">23.7%  &#183;  85.2&#176;</text>
+<rect class="s2" x="372" y="116" width="13" height="13" rx="2" fill="#1baf7a"/>
+<text class="ink" x="393" y="127" font-size="13.5" font-weight="600" fill="#15201f">Northgate</text>
+<text class="ink2" x="393" y="143" font-size="12.5" font-family="IBM Plex Mono, monospace" fill="#4a5654">17.3%  &#183;  62.4&#176;</text>
+<rect class="s3" x="372" y="150" width="13" height="13" rx="2" fill="#eda100"/>
+<text class="ink" x="393" y="161" font-size="13.5" font-weight="600" fill="#15201f">Parkview</text>
+<text class="ink2" x="393" y="177" font-size="12.5" font-family="IBM Plex Mono, monospace" fill="#4a5654">15.0%  &#183;  54.0&#176;</text>
+<rect class="s4" x="372" y="184" width="13" height="13" rx="2" fill="#e87ba4"/>
+<text class="ink" x="393" y="195" font-size="13.5" font-weight="600" fill="#15201f">Eastwood</text>
+<text class="ink2" x="393" y="211" font-size="12.5" font-family="IBM Plex Mono, monospace" fill="#4a5654">10.0%  &#183;  36.0&#176;</text>
+<rect class="s5" x="372" y="218" width="13" height="13" rx="2" fill="#008300"/>
+<text class="ink" x="393" y="229" font-size="13.5" font-weight="600" fill="#15201f">Hillcrest</text>
+<text class="ink2" x="393" y="245" font-size="12.5" font-family="IBM Plex Mono, monospace" fill="#4a5654">6.0%  &#183;  21.6&#176;</text>
+<line class="grid" x1="372" y1="252" x2="616" y2="252" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink" x="372" y="270" font-size="13" font-weight="600" fill="#15201f">Total</text>
+<text class="ink2" x="468" y="270" font-size="12.5" font-family="IBM Plex Mono, monospace" fill="#4a5654">100%  &#183;  360.0&#176;</text>
+</svg>
+</div>
+            <figcaption><b>Step 3 &middot; pie chart</b>Area encodes the share. Good for <em>part-to-whole</em> &mdash; you can see at a glance that St Mary&rsquo;s is a bit over a quarter of the circle. Poor for comparing Northgate with Parkview, whose slices are close.</figcaption>
+          </figure>
+        </div>
+
+        <div class="script">
+          <div class="line ask"><span class="lbl">Ask</span><span class="txt">&ldquo;Which of those two graphs would you use to answer &lsquo;did more than half our patients come from one hospital?&rsquo;&rdquo;</span></div>
+          <div class="line listen"><span class="lbl">Listen for</span><span class="txt">The pie &mdash; because the question is about a share of the whole, and half a circle is something you can see without arithmetic.</span></div>
+          <div class="line ask"><span class="lbl">Then</span><span class="txt">&ldquo;And which one to answer &lsquo;how many more patients did Northgate see than Parkview?&rsquo;&rdquo; &rarr; the bar chart. The slices are too close to judge.</span></div>
+        </div>
+
+        <h4>The comparison trap &mdash; topic 1.4.C</h4>
+        <p>This is the part of topic 1.4 that actually gets examined. Give the student last year&rsquo;s figures.</p>
+        <div class="brief">
+          <p>Last year the network surveyed <strong>200</strong> patients:</p>
+          <p><strong>St Mary&rsquo;s 70 &middot; Riverside 40 &middot; Northgate 30 &middot; Parkview 30 &middot; Eastwood 20 &middot; Hillcrest 10</strong></p>
+        </div>
+        <div class="script">
+          <div class="line ask"><span class="lbl">Ask</span><span class="txt">&ldquo;Did St Mary&rsquo;s handle more or fewer of the surveyed patients this year than last?&rdquo;</span></div>
+          <div class="line listen"><span class="lbl">Expect</span><span class="txt">&ldquo;More&rdquo; &mdash; 84 is bigger than 70. Let them commit.</span></div>
+          <div class="line ask"><span class="lbl">Then ask</span><span class="txt">&ldquo;How many patients were surveyed each year?&rdquo;</span></div>
+        </div>
+        <div class="tbl">
+          <table>
+            <thead><tr><th>Hospital</th><th>Last year f (n=200)</th><th>Last year %</th><th>This year f (n=300)</th><th>This year %</th></tr></thead>
+            <tbody>
+              <tr class="hl"><td>St Mary&rsquo;s</td><td class="num">70</td><td class="num">35.0%</td><td class="num">84</td><td class="num"><strong>28.0%</strong></td></tr>
+              <tr><td>Riverside</td><td class="num">40</td><td class="num">20.0%</td><td class="num">71</td><td class="num">23.7%</td></tr>
+              <tr><td>Northgate</td><td class="num">30</td><td class="num">15.0%</td><td class="num">52</td><td class="num">17.3%</td></tr>
+              <tr><td>Parkview</td><td class="num">30</td><td class="num">15.0%</td><td class="num">45</td><td class="num">15.0%</td></tr>
+              <tr><td>Eastwood</td><td class="num">20</td><td class="num">10.0%</td><td class="num">30</td><td class="num">10.0%</td></tr>
+              <tr><td>Hillcrest</td><td class="num">10</td><td class="num">5.0%</td><td class="num">18</td><td class="num">6.0%</td></tr>
+              <tr class="tot"><td>Total</td><td class="num">200</td><td class="num">100%</td><td class="num">300</td><td class="num">100%</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>St Mary&rsquo;s count went <strong>up</strong> (70 &rarr; 84) while its share went <strong>down</strong> (35.0% &rarr; 28.0%).</p>
+        <div class="callout red">
+          <span class="lbl">The rule the student writes down</span>
+          <p>When two data sets have different totals, compare <strong>relative frequencies</strong>, never raw counts. A bar chart of counts across two unequal groups is misleading &mdash; and saying so is worth marks.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="seg">
+      <div class="seg-h"><span class="clock">18&ndash;32 min</span><h3>Scenario B &mdash; the commute times, now in pictures</h3><span class="who">Student works</span></div>
+      <div class="seg-body">
+        <p>More continuity: Session 1&rsquo;s commute study measured journey time. Here are 25 of those journeys.</p>
+        <div class="brief">
+          <p>Journey times to school, in minutes, for 25 randomly chosen Lincoln High students:</p>
+        </div>
+        <div class="data"> 8   9  10  11  12  12  13  14  15  15
+16  17  18  18  20  21  22  24  25  27
+30  33  36  42  68</div>
+        <p>Already sorted, deliberately &mdash; sorting is not the skill being taught today.</p>
+
+        <h4>Build &amp; Defend</h4>
+        <p>This replaces the classroom Gallery Walk, where four groups each built one display. One-to-one, <strong>the student builds all three</strong>, and then you interrogate which is best for which question. Give roughly four minutes.</p>
+
+        <p><strong>A dotplot</strong> &mdash; one dot per value, stacked where values repeat.</p>
+        <p><strong>A stem-and-leaf plot</strong> &mdash; stems are the tens digit, leaves the units, both ordered:</p>
+        <div class="plot">0 | 8 9
+1 | 0 1 2 2 3 4 5 5 6 7 8 8
+2 | 0 1 2 4 5 7
+3 | 0 3 6
+4 | 2
+5 |
+6 | 8</div>
+        <div class="callout amber">
+          <span class="lbl">Do not let them omit the empty 5 row</span>
+          <p>That blank row <em>is</em> the gap. A stemplot that skips unused stems has destroyed the information it exists to show.</p>
+        </div>
+
+        <figure>
+          <div class="figscroll"><svg viewBox="0 0 720 168" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Dotplot of 25 journey times in minutes" font-family="Public Sans, system-ui, sans-serif">
+<style>
+  .ink   { fill: var(--ink,   #15201f); }
+  .ink2  { fill: var(--ink-2, #4a5654); }
+  .ink3  { fill: var(--ink-3, #6f7b79); }
+  .axis  { stroke: var(--rule-strong, #c3c9c6); }
+  .grid  { stroke: var(--rule, #dcdfdd); }
+  .gap   { stroke: var(--surface, #ffffff); }
+  .surf  { fill: var(--surface, #ffffff); }
+
+  .s0 { fill: var(--series-1, #2a78d6); }
+</style>
+<line class="grid" x1="34.0" y1="14" x2="34.0" y2="116" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="34.0" y="135" font-size="12.5" text-anchor="middle" fill="#6f7b79">0</text>
+<line class="grid" x1="128.9" y1="14" x2="128.9" y2="116" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="128.9" y="135" font-size="12.5" text-anchor="middle" fill="#6f7b79">10</text>
+<line class="grid" x1="223.7" y1="14" x2="223.7" y2="116" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="223.7" y="135" font-size="12.5" text-anchor="middle" fill="#6f7b79">20</text>
+<line class="grid" x1="318.6" y1="14" x2="318.6" y2="116" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="318.6" y="135" font-size="12.5" text-anchor="middle" fill="#6f7b79">30</text>
+<line class="grid" x1="413.4" y1="14" x2="413.4" y2="116" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="413.4" y="135" font-size="12.5" text-anchor="middle" fill="#6f7b79">40</text>
+<line class="grid" x1="508.3" y1="14" x2="508.3" y2="116" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="508.3" y="135" font-size="12.5" text-anchor="middle" fill="#6f7b79">50</text>
+<line class="grid" x1="603.1" y1="14" x2="603.1" y2="116" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="603.1" y="135" font-size="12.5" text-anchor="middle" fill="#6f7b79">60</text>
+<line class="grid" x1="698.0" y1="14" x2="698.0" y2="116" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="698.0" y="135" font-size="12.5" text-anchor="middle" fill="#6f7b79">70</text>
+<line class="axis" x1="34" y1="116" x2="698" y2="116" stroke-width="1.5" stroke="#c3c9c6" fill="none"/>
+<circle class="s0 gap" cx="109.9" cy="108.0" r="4.6" stroke-width="1.5" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="119.4" cy="108.0" r="4.6" stroke-width="1.5" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="128.9" cy="108.0" r="4.6" stroke-width="1.5" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="138.3" cy="108.0" r="4.6" stroke-width="1.5" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="147.8" cy="108.0" r="4.6" stroke-width="1.5" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="147.8" cy="96.5" r="4.6" stroke-width="1.5" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="157.3" cy="108.0" r="4.6" stroke-width="1.5" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="166.8" cy="108.0" r="4.6" stroke-width="1.5" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="176.3" cy="108.0" r="4.6" stroke-width="1.5" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="176.3" cy="96.5" r="4.6" stroke-width="1.5" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="185.8" cy="108.0" r="4.6" stroke-width="1.5" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="195.3" cy="108.0" r="4.6" stroke-width="1.5" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="204.7" cy="108.0" r="4.6" stroke-width="1.5" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="204.7" cy="96.5" r="4.6" stroke-width="1.5" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="223.7" cy="108.0" r="4.6" stroke-width="1.5" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="233.2" cy="108.0" r="4.6" stroke-width="1.5" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="242.7" cy="108.0" r="4.6" stroke-width="1.5" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="261.7" cy="108.0" r="4.6" stroke-width="1.5" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="271.1" cy="108.0" r="4.6" stroke-width="1.5" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="290.1" cy="108.0" r="4.6" stroke-width="1.5" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="318.6" cy="108.0" r="4.6" stroke-width="1.5" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="347.0" cy="108.0" r="4.6" stroke-width="1.5" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="375.5" cy="108.0" r="4.6" stroke-width="1.5" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="432.4" cy="108.0" r="4.6" stroke-width="1.5" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="679.0" cy="108.0" r="4.6" stroke-width="1.5" fill="#2a78d6" stroke="#ffffff"/>
+<line class="axis" x1="679.0" y1="101" x2="679.0" y2="28" stroke-width="1" stroke-dasharray="3 3" stroke="#c3c9c6" fill="none"/>
+<text class="ink" x="673.0" y="26" font-size="12.5" font-weight="600" text-anchor="end" fill="#15201f">outlier</text>
+<line class="axis" x1="432.4" y1="146" x2="679.0" y2="146" stroke-width="1.5" stroke="#c3c9c6" fill="none"/>
+<line class="axis" x1="432.4" y1="142" x2="432.4" y2="150" stroke-width="1.5" stroke="#c3c9c6" fill="none"/>
+<line class="axis" x1="679.0" y1="142" x2="679.0" y2="150" stroke-width="1.5" stroke="#c3c9c6" fill="none"/>
+<text class="ink2" x="555.7" y="162" font-size="12.5" text-anchor="middle" fill="#4a5654">gap</text>
+<text class="ink3" x="34" y="162" font-size="12" fill="#6f7b79">Journey time (minutes)</text>
+</svg>
+</div>
+          <figcaption><b>The dotplot</b>Every one of the 25 values is still visible as its own dot. This is the display that makes the outlier and the gap unmissable &mdash; the 68 sits alone, with nothing between 42 and 68.</figcaption>
+        </figure>
+
+        <p><strong>A histogram</strong>, bins of width 10:</p>
+        <div class="tbl" style="max-width:340px;">
+          <table style="min-width:0;">
+            <thead><tr><th>Interval</th><th>f</th></tr></thead>
+            <tbody>
+              <tr><td>0 &ndash; under 10</td><td class="num">2</td></tr>
+              <tr><td>10 &ndash; under 20</td><td class="num">12</td></tr>
+              <tr><td>20 &ndash; under 30</td><td class="num">6</td></tr>
+              <tr><td>30 &ndash; under 40</td><td class="num">3</td></tr>
+              <tr><td>40 &ndash; under 50</td><td class="num">1</td></tr>
+              <tr><td>50 &ndash; under 60</td><td class="num">0</td></tr>
+              <tr><td>60 &ndash; under 70</td><td class="num">1</td></tr>
+              <tr class="tot"><td>Total</td><td class="num">25</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="formula">bin width = (maximum &minus; minimum) &divide; number of bins &nbsp;&rarr;&nbsp; (68 &minus; 8) &divide; 6 = 10</div>
+
+        <h4>Then defend</h4>
+        <p>Ask these three, and make the student commit to one display each time.</p>
+        <div class="tbl">
+          <table>
+            <thead><tr><th>Question</th><th>Best display</th><th>Why</th></tr></thead>
+            <tbody>
+              <tr><td><em>&ldquo;What was the exact longest journey?&rdquo;</em></td><td>Stemplot or dotplot</td><td>Both keep every individual value; the histogram has thrown them away</td></tr>
+              <tr><td><em>&ldquo;Roughly what does the overall shape look like?&rdquo;</em></td><td>Histogram</td><td>Bins smooth out noise and make the single peak obvious</td></tr>
+              <tr><td><em>&ldquo;Is there a journey far from all the others?&rdquo;</em></td><td>Dotplot or stemplot</td><td>The isolated 68 and the empty row are visible as a gap</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p><strong>The principle, in the student&rsquo;s own words:</strong> histograms trade individual values for a clearer shape. Dotplots and stemplots keep every value but get unreadable with large <em>n</em>.</p>
+
+        <h4>Bin width changes the picture &mdash; 1.5.A.2</h4>
+        <p>The CED says this explicitly, so it is fair game. Rebuild the same data with bins of width 5:</p>
+        <div class="tbl">
+          <table>
+            <thead><tr><th>Interval</th><th>f</th><th>Interval</th><th>f</th></tr></thead>
+            <tbody>
+              <tr><td>5 &ndash; under 10</td><td class="num">2</td><td>30 &ndash; under 35</td><td class="num">2</td></tr>
+              <tr><td>10 &ndash; under 15</td><td class="num">6</td><td>35 &ndash; under 40</td><td class="num">1</td></tr>
+              <tr><td>15 &ndash; under 20</td><td class="num">6</td><td>40 &ndash; under 45</td><td class="num">1</td></tr>
+              <tr><td>20 &ndash; under 25</td><td class="num">4</td><td>45 &ndash; under 65</td><td class="num">0</td></tr>
+              <tr><td>25 &ndash; under 30</td><td class="num">2</td><td>65 &ndash; under 70</td><td class="num">1</td></tr>
+              <tr class="tot"><td colspan="3">Total</td><td class="num">25</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="figrow">
+          <figure>
+            <div class="figscroll"><svg viewBox="0 0 440 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Histogram of journey times, Bin width 10" font-family="Public Sans, system-ui, sans-serif">
+<style>
+  .ink   { fill: var(--ink,   #15201f); }
+  .ink2  { fill: var(--ink-2, #4a5654); }
+  .ink3  { fill: var(--ink-3, #6f7b79); }
+  .axis  { stroke: var(--rule-strong, #c3c9c6); }
+  .grid  { stroke: var(--rule, #dcdfdd); }
+  .gap   { stroke: var(--surface, #ffffff); }
+  .surf  { fill: var(--surface, #ffffff); }
+
+  .s0 { fill: var(--series-1, #2a78d6); }
+</style>
+<text class="ink" x="18" y="22" font-size="15" font-weight="700" fill="#15201f">Bin width 10</text>
+<line class="grid" x1="52" y1="282.0" x2="424" y2="282.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="44" y="286.0" font-size="12" text-anchor="end" fill="#6f7b79">0</text>
+<line class="grid" x1="52" y1="228.5" x2="424" y2="228.5" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="44" y="232.5" font-size="12" text-anchor="end" fill="#6f7b79">3</text>
+<line class="grid" x1="52" y1="174.9" x2="424" y2="174.9" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="44" y="178.9" font-size="12" text-anchor="end" fill="#6f7b79">6</text>
+<line class="grid" x1="52" y1="121.4" x2="424" y2="121.4" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="44" y="125.4" font-size="12" text-anchor="end" fill="#6f7b79">9</text>
+<line class="grid" x1="52" y1="67.8" x2="424" y2="67.8" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="44" y="71.8" font-size="12" text-anchor="end" fill="#6f7b79">12</text>
+<rect class="s0" x="52.8" y="246.3" width="51.6" height="35.7" rx="3" fill="#2a78d6"/>
+<rect class="s0" x="52.8" y="278.0" width="51.6" height="4" fill="#2a78d6"/>
+<text class="ink" x="78.6" y="239.3" font-size="12.5" font-weight="600" text-anchor="middle" fill="#15201f">2</text>
+<rect class="s0" x="105.9" y="67.8" width="51.6" height="214.2" rx="3" fill="#2a78d6"/>
+<rect class="s0" x="105.9" y="278.0" width="51.6" height="4" fill="#2a78d6"/>
+<text class="ink" x="131.7" y="60.8" font-size="12.5" font-weight="600" text-anchor="middle" fill="#15201f">12</text>
+<rect class="s0" x="159.0" y="174.9" width="51.6" height="107.1" rx="3" fill="#2a78d6"/>
+<rect class="s0" x="159.0" y="278.0" width="51.6" height="4" fill="#2a78d6"/>
+<text class="ink" x="184.9" y="167.9" font-size="12.5" font-weight="600" text-anchor="middle" fill="#15201f">6</text>
+<rect class="s0" x="212.2" y="228.5" width="51.6" height="53.5" rx="3" fill="#2a78d6"/>
+<rect class="s0" x="212.2" y="278.0" width="51.6" height="4" fill="#2a78d6"/>
+<text class="ink" x="238.0" y="221.5" font-size="12.5" font-weight="600" text-anchor="middle" fill="#15201f">3</text>
+<rect class="s0" x="265.3" y="264.2" width="51.6" height="17.8" rx="3" fill="#2a78d6"/>
+<rect class="s0" x="265.3" y="278.0" width="51.6" height="4" fill="#2a78d6"/>
+<rect class="s0" x="371.6" y="264.2" width="51.6" height="17.8" rx="3" fill="#2a78d6"/>
+<rect class="s0" x="371.6" y="278.0" width="51.6" height="4" fill="#2a78d6"/>
+<text class="ink3" x="52.0" y="301.0" font-size="12" text-anchor="middle" fill="#6f7b79">0</text>
+<text class="ink3" x="105.1" y="301.0" font-size="12" text-anchor="middle" fill="#6f7b79">10</text>
+<text class="ink3" x="158.3" y="301.0" font-size="12" text-anchor="middle" fill="#6f7b79">20</text>
+<text class="ink3" x="211.4" y="301.0" font-size="12" text-anchor="middle" fill="#6f7b79">30</text>
+<text class="ink3" x="264.6" y="301.0" font-size="12" text-anchor="middle" fill="#6f7b79">40</text>
+<text class="ink3" x="317.7" y="301.0" font-size="12" text-anchor="middle" fill="#6f7b79">50</text>
+<text class="ink3" x="370.9" y="301.0" font-size="12" text-anchor="middle" fill="#6f7b79">60</text>
+<text class="ink3" x="424.0" y="301.0" font-size="12" text-anchor="middle" fill="#6f7b79">70</text>
+<line class="axis" x1="52" y1="282" x2="424" y2="282" stroke-width="1.5" stroke="#c3c9c6" fill="none"/>
+<text class="ink3" x="16" y="166.0" font-size="12" text-anchor="middle" transform="rotate(-90 16 166.0)" fill="#6f7b79">Frequency</text>
+<text class="ink3" x="52" y="328" font-size="12" fill="#6f7b79">Journey time (minutes)</text>
+</svg>
+</div>
+            <figcaption><b>Bin width 10</b>One obvious peak between 10 and 20 minutes. The shape reads as clearly skewed right.</figcaption>
+          </figure>
+          <figure>
+            <div class="figscroll"><svg viewBox="0 0 440 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Histogram of journey times, Bin width 5" font-family="Public Sans, system-ui, sans-serif">
+<style>
+  .ink   { fill: var(--ink,   #15201f); }
+  .ink2  { fill: var(--ink-2, #4a5654); }
+  .ink3  { fill: var(--ink-3, #6f7b79); }
+  .axis  { stroke: var(--rule-strong, #c3c9c6); }
+  .grid  { stroke: var(--rule, #dcdfdd); }
+  .gap   { stroke: var(--surface, #ffffff); }
+  .surf  { fill: var(--surface, #ffffff); }
+
+  .s0 { fill: var(--series-1, #2a78d6); }
+</style>
+<text class="ink" x="18" y="22" font-size="15" font-weight="700" fill="#15201f">Bin width 5</text>
+<line class="grid" x1="52" y1="282.0" x2="424" y2="282.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="44" y="286.0" font-size="12" text-anchor="end" fill="#6f7b79">0</text>
+<line class="grid" x1="52" y1="228.5" x2="424" y2="228.5" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="44" y="232.5" font-size="12" text-anchor="end" fill="#6f7b79">3</text>
+<line class="grid" x1="52" y1="174.9" x2="424" y2="174.9" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="44" y="178.9" font-size="12" text-anchor="end" fill="#6f7b79">6</text>
+<line class="grid" x1="52" y1="121.4" x2="424" y2="121.4" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="44" y="125.4" font-size="12" text-anchor="end" fill="#6f7b79">9</text>
+<line class="grid" x1="52" y1="67.8" x2="424" y2="67.8" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="44" y="71.8" font-size="12" text-anchor="end" fill="#6f7b79">12</text>
+<rect class="s0" x="52.8" y="246.3" width="27.1" height="35.7" rx="3" fill="#2a78d6"/>
+<rect class="s0" x="52.8" y="278.0" width="27.1" height="4" fill="#2a78d6"/>
+<text class="ink" x="66.3" y="239.3" font-size="12.5" font-weight="600" text-anchor="middle" fill="#15201f">2</text>
+<rect class="s0" x="81.4" y="174.9" width="27.1" height="107.1" rx="3" fill="#2a78d6"/>
+<rect class="s0" x="81.4" y="278.0" width="27.1" height="4" fill="#2a78d6"/>
+<text class="ink" x="94.9" y="167.9" font-size="12.5" font-weight="600" text-anchor="middle" fill="#15201f">6</text>
+<rect class="s0" x="110.0" y="174.9" width="27.1" height="107.1" rx="3" fill="#2a78d6"/>
+<rect class="s0" x="110.0" y="278.0" width="27.1" height="4" fill="#2a78d6"/>
+<text class="ink" x="123.5" y="167.9" font-size="12.5" font-weight="600" text-anchor="middle" fill="#15201f">6</text>
+<rect class="s0" x="138.6" y="210.6" width="27.1" height="71.4" rx="3" fill="#2a78d6"/>
+<rect class="s0" x="138.6" y="278.0" width="27.1" height="4" fill="#2a78d6"/>
+<text class="ink" x="152.2" y="203.6" font-size="12.5" font-weight="600" text-anchor="middle" fill="#15201f">4</text>
+<rect class="s0" x="167.2" y="246.3" width="27.1" height="35.7" rx="3" fill="#2a78d6"/>
+<rect class="s0" x="167.2" y="278.0" width="27.1" height="4" fill="#2a78d6"/>
+<text class="ink" x="180.8" y="239.3" font-size="12.5" font-weight="600" text-anchor="middle" fill="#15201f">2</text>
+<rect class="s0" x="195.8" y="246.3" width="27.1" height="35.7" rx="3" fill="#2a78d6"/>
+<rect class="s0" x="195.8" y="278.0" width="27.1" height="4" fill="#2a78d6"/>
+<text class="ink" x="209.4" y="239.3" font-size="12.5" font-weight="600" text-anchor="middle" fill="#15201f">2</text>
+<rect class="s0" x="224.4" y="264.2" width="27.1" height="17.8" rx="3" fill="#2a78d6"/>
+<rect class="s0" x="224.4" y="278.0" width="27.1" height="4" fill="#2a78d6"/>
+<rect class="s0" x="253.1" y="264.2" width="27.1" height="17.8" rx="3" fill="#2a78d6"/>
+<rect class="s0" x="253.1" y="278.0" width="27.1" height="4" fill="#2a78d6"/>
+<rect class="s0" x="396.1" y="264.2" width="27.1" height="17.8" rx="3" fill="#2a78d6"/>
+<rect class="s0" x="396.1" y="278.0" width="27.1" height="4" fill="#2a78d6"/>
+<text class="ink3" x="52.0" y="301.0" font-size="12" text-anchor="middle" fill="#6f7b79">5</text>
+<text class="ink3" x="109.2" y="301.0" font-size="12" text-anchor="middle" fill="#6f7b79">15</text>
+<text class="ink3" x="166.5" y="301.0" font-size="12" text-anchor="middle" fill="#6f7b79">25</text>
+<text class="ink3" x="223.7" y="301.0" font-size="12" text-anchor="middle" fill="#6f7b79">35</text>
+<text class="ink3" x="280.9" y="301.0" font-size="12" text-anchor="middle" fill="#6f7b79">45</text>
+<text class="ink3" x="338.2" y="301.0" font-size="12" text-anchor="middle" fill="#6f7b79">55</text>
+<text class="ink3" x="395.4" y="301.0" font-size="12" text-anchor="middle" fill="#6f7b79">65</text>
+<line class="axis" x1="52" y1="282" x2="424" y2="282" stroke-width="1.5" stroke="#c3c9c6" fill="none"/>
+<text class="ink3" x="16" y="166.0" font-size="12" text-anchor="middle" transform="rotate(-90 16 166.0)" fill="#6f7b79">Frequency</text>
+<text class="ink3" x="52" y="328" font-size="12" fill="#6f7b79">Journey time (minutes)</text>
+</svg>
+</div>
+            <figcaption><b>Bin width 5</b>The same 25 journeys. The peak has split into two equal bars of 6 and the distribution looks flatter &mdash; almost as if it had two modes.</figcaption>
+          </figure>
+        </div>
+        <div class="script">
+          <div class="line ask"><span class="lbl">Ask</span><span class="txt">&ldquo;Same data. Does it look the same?&rdquo;</span></div>
+        </div>
+        <p><strong>Both histograms are drawn on the same vertical scale</strong>, so the comparison is honest &mdash; the width-5 bars really are shorter, because each bin now catches half as many journeys. <strong>Neither picture is wrong.</strong> A histogram is a choice, and the choice affects the story &mdash; which is why the exam asks you to describe <em>shape</em> rather than trust one picture.</p>
+      </div>
+    </div>
+
+    <div class="seg">
+      <div class="seg-h"><span class="clock">32&ndash;46 min</span><h3>Describing the distribution</h3><span class="who">Both</span></div>
+      <div class="seg-body">
+        <p>This is the heart of the session.</p>
+        <div class="callout teal">
+          <span class="lbl">The four components</span>
+          <p>The CED requires <strong>shape, center, and variability (spread)</strong>, plus <strong>any unusual features</strong> &mdash; outliers, gaps, or clusters &mdash; <strong>in context</strong>. Many textbooks compress this to <strong>SOCS</strong>; it is the same four things in a different order. <strong>Make the student write all four every single time.</strong></p>
+        </div>
+
+        <h4>The vocabulary, applied</h4>
+        <div class="script">
+          <div class="line ask"><span class="lbl">Ask</span><span class="txt">&ldquo;Which tail is longer?&rdquo;</span></div>
+          <div class="line intro"><span class="lbl">Answer</span><span class="txt">The right. So: skewed right, unimodal.</span></div>
+        </div>
+        <figure>
+          <div class="figscroll"><svg viewBox="0 0 700 270" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Skewed right versus skewed left, tails labelled" font-family="Public Sans, system-ui, sans-serif">
+<style>
+  .ink   { fill: var(--ink,   #15201f); }
+  .ink2  { fill: var(--ink-2, #4a5654); }
+  .ink3  { fill: var(--ink-3, #6f7b79); }
+  .axis  { stroke: var(--rule-strong, #c3c9c6); }
+  .grid  { stroke: var(--rule, #dcdfdd); }
+  .gap   { stroke: var(--surface, #ffffff); }
+  .surf  { fill: var(--surface, #ffffff); }
+
+  .s0 { fill: var(--series-1, #2a78d6); }
+</style>
+<rect class="s0" x="48.8" y="164.0" width="28.9" height="22.0" rx="3" fill="#2a78d6"/>
+<rect class="s0" x="79.2" y="87.0" width="28.9" height="99.0" rx="3" fill="#2a78d6"/>
+<rect class="s0" x="109.6" y="54.0" width="28.9" height="132.0" rx="3" fill="#2a78d6"/>
+<rect class="s0" x="140.1" y="98.0" width="28.9" height="88.0" rx="3" fill="#2a78d6"/>
+<rect class="s0" x="170.5" y="131.0" width="28.9" height="55.0" rx="3" fill="#2a78d6"/>
+<rect class="s0" x="201.0" y="153.0" width="28.9" height="33.0" rx="3" fill="#2a78d6"/>
+<rect class="s0" x="231.4" y="164.0" width="28.9" height="22.0" rx="3" fill="#2a78d6"/>
+<rect class="s0" x="261.9" y="175.0" width="28.9" height="11.0" rx="3" fill="#2a78d6"/>
+<rect class="s0" x="292.3" y="175.0" width="28.9" height="11.0" rx="3" fill="#2a78d6"/>
+<line class="axis" x1="48" y1="186" x2="322" y2="186" stroke-width="1.5" stroke="#c3c9c6" fill="none"/>
+<text class="ink" x="48" y="32" font-size="15" font-weight="700" fill="#15201f">Skewed right</text>
+<line class="axis" x1="174.0" y1="212" x2="318.0" y2="212" stroke-width="1.5" stroke="#c3c9c6" fill="none"/>
+<path class="ink2" d="M 318 212 l -9 -5 l 0 10 Z" fill="#4a5654"/>
+<text class="ink2" x="246.0" y="232" font-size="12.5" text-anchor="middle" fill="#4a5654">long tail points right</text>
+<text class="ink3" x="48" y="50" font-size="12" fill="#6f7b79">bulk on the left</text>
+<rect class="s0" x="398.8" y="175.0" width="28.9" height="11.0" rx="3" fill="#2a78d6"/>
+<rect class="s0" x="429.2" y="175.0" width="28.9" height="11.0" rx="3" fill="#2a78d6"/>
+<rect class="s0" x="459.6" y="164.0" width="28.9" height="22.0" rx="3" fill="#2a78d6"/>
+<rect class="s0" x="490.1" y="153.0" width="28.9" height="33.0" rx="3" fill="#2a78d6"/>
+<rect class="s0" x="520.5" y="131.0" width="28.9" height="55.0" rx="3" fill="#2a78d6"/>
+<rect class="s0" x="551.0" y="98.0" width="28.9" height="88.0" rx="3" fill="#2a78d6"/>
+<rect class="s0" x="581.4" y="54.0" width="28.9" height="132.0" rx="3" fill="#2a78d6"/>
+<rect class="s0" x="611.9" y="87.0" width="28.9" height="99.0" rx="3" fill="#2a78d6"/>
+<rect class="s0" x="642.3" y="164.0" width="28.9" height="22.0" rx="3" fill="#2a78d6"/>
+<line class="axis" x1="398" y1="186" x2="672" y2="186" stroke-width="1.5" stroke="#c3c9c6" fill="none"/>
+<text class="ink" x="398" y="32" font-size="15" font-weight="700" fill="#15201f">Skewed left</text>
+<line class="axis" x1="546.0" y1="212" x2="402.0" y2="212" stroke-width="1.5" stroke="#c3c9c6" fill="none"/>
+<path class="ink2" d="M 402 212 l 9 -5 l 0 10 Z" fill="#4a5654"/>
+<text class="ink2" x="474.0" y="232" font-size="12.5" text-anchor="middle" fill="#4a5654">long tail points left</text>
+<text class="ink3" x="398" y="50" font-size="12" fill="#6f7b79">bulk on the right</text>
+</svg>
+</div>
+          <figcaption><b>The single most common error in Unit 1</b>In both pictures the bulk sits opposite the tail. Skew is named for the <em>tail</em>, so the left picture &mdash; bulk on the left, tail stretching right &mdash; is skewed <em>right</em>.</figcaption>
+        </figure>
+        <div class="callout amber">
+          <span class="lbl">The reliable trick for direction</span>
+          <p>Skew is named for <strong>where the tail points</strong>, not where the bulk sits. Students reverse this constantly. Have them point at the tail with a finger and say the direction out loud.</p>
+        </div>
+        <ul>
+          <li><strong>Shape</strong> &mdash; skewed right, unimodal, one main peak between 10 and 20 minutes.</li>
+          <li><strong>Center</strong> &mdash; about 18 minutes, countable off the stemplot as the 13th of 25 values. <em>(Formal mean and median are topic 1.7, next session.)</em></li>
+          <li><strong>Variability</strong> &mdash; from 8 to 68 minutes.</li>
+          <li><strong>Unusual features</strong> &mdash; an outlier at 68, and a gap between 42 and 68 with nothing in it.</li>
+        </ul>
+        <p>Note the honest limit: the formal 1.5 &times; IQR outlier rule is topic 1.8, next session. Right now &ldquo;unusually large relative to the rest&rdquo; is the CED&rsquo;s own definition and is sufficient.</p>
+
+        <h4>The model answer</h4>
+        <p>Have the student write this out in full, then compare against yours.</p>
+        <div class="brief">
+          <p><em>&ldquo;The distribution of journey times for these 25 students is <strong>skewed right</strong> and <strong>unimodal</strong>, with one main peak between 10 and 20 minutes. The <strong>centre</strong> is about 18 minutes. Journey times <strong>range from 8 to 68 minutes</strong>. There is an <strong>outlier at 68 minutes</strong>, separated from the rest by a <strong>gap</strong> between 42 and 68 &mdash; this student&rsquo;s journey took far longer than anyone else&rsquo;s.&rdquo;</em></p>
+        </div>
+        <div class="tbl">
+          <table>
+            <thead><tr><th>Component</th><th>Present?</th><th>The words</th></tr></thead>
+            <tbody>
+              <tr><td>Shape</td><td>&check;</td><td>skewed right, unimodal</td></tr>
+              <tr><td>Center</td><td>&check;</td><td>about 18 minutes</td></tr>
+              <tr><td>Variability</td><td>&check;</td><td>8 to 68 minutes</td></tr>
+              <tr><td>Unusual features</td><td>&check;</td><td>outlier at 68, gap 42&ndash;68</td></tr>
+              <tr class="tot"><td>In context</td><td>&check;</td><td>&ldquo;journey times&rdquo;, &ldquo;minutes&rdquo;, &ldquo;students&rdquo;</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="callout red">
+          <span class="lbl">Context is not decoration</span>
+          <p>A description that says &ldquo;skewed right with an outlier&rdquo; and never mentions journeys, minutes or students will lose the interpretation mark even though every statistical word is correct.</p>
+        </div>
+
+        <h4>Justifying a claim &mdash; 1.6.B</h4>
+        <div class="script">
+          <div class="line ask"><span class="lbl">Ask</span><span class="txt">&ldquo;A parent says: a typical journey to this school takes about half an hour. Does this data support that?&rdquo;</span></div>
+          <div class="line intro"><span class="lbl">Answer</span><span class="txt">No. The centre is about 18 minutes, not 30.</span></div>
+        </div>
+        <p>The claim is probably driven by the long right tail &mdash; journeys of 30, 33, 36, 42 and 68 minutes &mdash; but those are the minority. A supportable version: <em>&ldquo;Most journeys take under 20 minutes, though a small number take considerably longer, up to 68 minutes.&rdquo;</em></p>
+      </div>
+    </div>
+
+    <div class="seg">
+      <div class="seg-h"><span class="clock">46&ndash;54 min</span><h3>Solo case</h3><span class="who">Student works</span></div>
+      <div class="seg-body">
+        <p>Unaided. Watch, say nothing, note where they hesitate.</p>
+        <div class="brief"><p>A caf&eacute; recorded the number of drinks sold per hour over 20 opening hours:</p></div>
+        <div class="data">14  16  17  19  20  21  21  22  23  24
+24  25  26  27  28  30  31  33  35  52</div>
+        <ol>
+          <li>Construct a stem-and-leaf plot using tens as stems.</li>
+          <li>Construct a frequency table with bins of width 10, starting at 10.</li>
+          <li>Describe the distribution. All four components, in context.</li>
+          <li>The manager claims: <em>&ldquo;We usually sell over 30 drinks an hour.&rdquo;</em> Is that supported? Justify.</li>
+        </ol>
+        <p><strong>Answers.</strong></p>
+        <div class="plot">1 | 4 6 7 9
+2 | 0 1 1 2 3 4 4 5 6 7 8
+3 | 0 1 3 5
+4 |
+5 | 2</div>
+        <p>Bins: 10&ndash;under 20 &rarr; 4; 20&ndash;under 30 &rarr; 11; 30&ndash;under 40 &rarr; 4; 40&ndash;under 50 &rarr; 0; 50&ndash;under 60 &rarr; 1. Total 20.</p>
+        <p><strong>Description:</strong> skewed right, unimodal, main peak in the 20s. Centre about 24 drinks per hour (median of 20 values = (24+24) &divide; 2 = 24). Ranges from 14 to 52 drinks per hour. Outlier at 52, separated by a gap between 35 and 52.</p>
+        <p><strong>Claim:</strong> not supported. The centre is about 24, and only <strong>4 of the 20 hours</strong> sold more than 30 (31, 33, 35, 52) &mdash; that is 20% of hours, not &ldquo;usually&rdquo;. A supportable version: <em>&ldquo;Sales are usually in the twenties per hour, with one unusually busy hour of 52.&rdquo;</em></p>
+        <div class="callout amber">
+          <span class="lbl">Watch for</span>
+          <p>Describing shape and centre and stopping. Calling it &ldquo;skewed left&rdquo; because the bulk sits on the left. Omitting the empty <span class="mono">4 |</span> stem.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="seg" style="margin-bottom:0;">
+      <div class="seg-h"><span class="clock">54&ndash;60 min</span><h3>Teach it back</h3><span class="who">Student talks</span></div>
+      <div class="seg-body">
+        <div class="script">
+          <div class="line ask"><span class="lbl">Ask</span><span class="txt">&ldquo;Describe the caf&eacute; distribution to me out loud, as if I can&rsquo;t see the graph. I&rsquo;ll stop you the moment you miss one of the four.&rdquo;</span></div>
+        </div>
+        <p>Doing it aloud rather than in writing is the point &mdash; it exposes whether the four components are a habit or a checklist they consult. Then set the homework.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOMEWORK -->
+<section class="hw-sec">
+  <div class="wrap">
+    <div class="hw-head">
+      <h2>Homework &mdash; Session 2</h2>
+      <span class="meta">40 marks &middot; bring to Session 3, self-marked</span>
+    </div>
+    <div class="protocol">
+      <h3>How to do this homework</h3>
+      <ol>
+        <li>Do every part <strong>with the answer key closed.</strong> Where you are unsure, answer anyway and put a <strong>?</strong> beside it.</li>
+        <li>Then open the key and <strong>mark your own work honestly.</strong> Write the correct answer beside anything wrong &mdash; do not erase what you originally wrote.</li>
+        <li><strong>Bring the marked sheet.</strong> Your wrong answers and your question marks are what Session 3 opens with.</li>
+      </ol>
+      <p class="kick">You will need a ruler and a protractor for Part B.</p>
+    </div>
+
+    <div class="part">
+      <div class="part-h"><h3>Part A &mdash; Vocabulary</h3><span class="marks">6 marks</span></div>
+      <div class="tbl">
+        <table>
+          <thead><tr><th></th><th>Term</th><th></th><th>Meaning</th></tr></thead>
+          <tbody>
+            <tr><td class="num">1</td><td>Skewed right</td><td class="num">A</td><td>Two prominent peaks</td></tr>
+            <tr><td class="num">2</td><td>Skewed left</td><td class="num">B</td><td>A region of the distribution containing no data</td></tr>
+            <tr><td class="num">3</td><td>Unimodal</td><td class="num">C</td><td>The tail toward larger values is longer</td></tr>
+            <tr><td class="num">4</td><td>Bimodal</td><td class="num">D</td><td>One main peak</td></tr>
+            <tr><td class="num">5</td><td>Gap</td><td class="num">E</td><td>All frequencies roughly equal, no prominent peak</td></tr>
+            <tr><td class="num">6</td><td>Approximately uniform</td><td class="num">F</td><td>The tail toward smaller values is longer</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="part">
+      <div class="part-h"><h3>Part B &mdash; Categorical displays</h3><span class="marks">10 marks</span></div>
+      <p style="font-size:.94rem;margin-bottom:11px;">A school library recorded which section each of <strong>250 borrowed books</strong> came from last term.</p>
+      <div class="tbl" style="max-width:300px;">
+        <table style="min-width:0;">
+          <thead><tr><th>Section</th><th>Frequency</th></tr></thead>
+          <tbody>
+            <tr><td>Fiction</td><td class="num">100</td></tr>
+            <tr><td>Non-fiction</td><td class="num">65</td></tr>
+            <tr><td>Reference</td><td class="num">40</td></tr>
+            <tr><td>Periodicals</td><td class="num">30</td></tr>
+            <tr><td>Other</td><td class="num">15</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="q" style="margin-top:14px;"><p><span class="qn">B1.</span> Add an <i>rf</i> column and a <i>100rf</i> column. State the formula for each before you use it. <span class="marks">3</span></p></div>
+      <div class="q"><p><span class="qn">B2.</span> Calculate the pie chart slice angle for every section. <strong>State the formula first.</strong> Give each to one decimal place. <span class="marks">4</span></p></div>
+      <div class="q"><p><span class="qn">B3.</span> Show that your angles total 360&deg;. <span class="marks">1</span></p></div>
+      <div class="q"><p><span class="qn">B4.</span> Draw a bar chart of the relative frequencies. Label both axes. <span class="marks">2</span></p></div>
+    </div>
+
+    <div class="part">
+      <div class="part-h"><h3>Part C &mdash; Comparing two data sets</h3><span class="marks">6 marks</span></div>
+      <p style="font-size:.94rem;margin-bottom:11px;">The <strong>previous</strong> term the library recorded <strong>200</strong> borrowed books:</p>
+      <div class="tbl" style="max-width:300px;">
+        <table style="min-width:0;">
+          <thead><tr><th>Section</th><th>Frequency</th></tr></thead>
+          <tbody>
+            <tr><td>Fiction</td><td class="num">96</td></tr>
+            <tr><td>Non-fiction</td><td class="num">44</td></tr>
+            <tr><td>Reference</td><td class="num">30</td></tr>
+            <tr><td>Periodicals</td><td class="num">20</td></tr>
+            <tr><td>Other</td><td class="num">10</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="q" style="margin-top:14px;"><p><span class="qn">C1.</span> A librarian says: <em>&ldquo;Fiction borrowing went up this term &mdash; it rose from 96 books to 100.&rdquo;</em> Calculate the percentage for Fiction in each term, and explain why the comparison is misleading. <span class="marks">4</span></p></div>
+      <div class="q"><p><span class="qn">C2.</span> State the general rule about comparing two data sets that have different totals. <span class="marks">2</span></p></div>
+    </div>
+
+    <div class="part">
+      <div class="part-h"><h3>Part D &mdash; Quantitative displays</h3><span class="marks">10 marks</span></div>
+      <p style="font-size:.94rem;margin-bottom:11px;">Twenty-four students sat a test marked out of 50. Their scores:</p>
+      <div class="data">12  24  29  31  33  35  36  37  38  38  39  40
+40  41  41  42  42  43  43  44  45  45  46  47</div>
+      <div class="q" style="margin-top:14px;"><p><span class="qn">D1.</span> Construct a stem-and-leaf plot using tens as stems. Order the leaves. <span class="marks">4</span></p></div>
+      <div class="q"><p><span class="qn">D2.</span> Construct a frequency table using bins of width 10, starting at 10. <span class="marks">3</span></p></div>
+      <div class="q"><p><span class="qn">D3.</span> If you wanted exactly 7 bins, what bin width would you use? <strong>State the formula and substitute.</strong> <span class="marks">2</span></p></div>
+      <div class="q"><p><span class="qn">D4.</span> A student says the <span class="mono">1 | 2</span> row should be deleted because it only has one value. Explain why they are wrong. <span class="marks">1</span></p></div>
+    </div>
+
+    <div class="part" style="margin-bottom:0;">
+      <div class="part-h"><h3>Part E &mdash; Describing a distribution</h3><span class="marks">8 marks</span></div>
+      <p style="font-size:.94rem;margin-bottom:11px;">Using the test-score data from Part D:</p>
+      <div class="q"><p><span class="qn">E1.</span> Describe the distribution. Your answer must cover <strong>all four components</strong> and be <strong>in context</strong>. <span class="marks">5</span></p></div>
+      <div class="q"><p><span class="qn">E2.</span> A teacher claims: <em>&ldquo;Most of the class scored below 40.&rdquo;</em> Using your displays, justify whether this claim is supported. <span class="marks">3</span></p></div>
+    </div>
+
+    <details class="key">
+      <summary>Answer key &mdash; open only after attempting everything</summary>
+      <div class="key-body">
+        <div>
+          <h4>Part A &mdash; 6 marks, 1 each</h4>
+          <p class="match">1&ndash;C &nbsp; 2&ndash;F &nbsp; 3&ndash;D &nbsp; 4&ndash;A &nbsp; 5&ndash;B &nbsp; 6&ndash;E</p>
+        </div>
+        <div>
+          <h4>Part B &mdash; 10 marks</h4>
+          <p><strong>B1.</strong> <i>(3)</i> rf = f &divide; n, 100rf = (f &divide; n) &times; 100, with n = 250.</p>
+          <div class="tbl">
+            <table>
+              <thead><tr><th>Section</th><th>f</th><th>rf</th><th>100rf</th><th>Angle</th></tr></thead>
+              <tbody>
+                <tr><td>Fiction</td><td class="num">100</td><td class="mono">100 &divide; 250 = 0.400</td><td class="num">40.0%</td><td class="mono">144.0&deg;</td></tr>
+                <tr><td>Non-fiction</td><td class="num">65</td><td class="mono">65 &divide; 250 = 0.260</td><td class="num">26.0%</td><td class="mono">93.6&deg;</td></tr>
+                <tr><td>Reference</td><td class="num">40</td><td class="mono">40 &divide; 250 = 0.160</td><td class="num">16.0%</td><td class="mono">57.6&deg;</td></tr>
+                <tr><td>Periodicals</td><td class="num">30</td><td class="mono">30 &divide; 250 = 0.120</td><td class="num">12.0%</td><td class="mono">43.2&deg;</td></tr>
+                <tr><td>Other</td><td class="num">15</td><td class="mono">15 &divide; 250 = 0.060</td><td class="num">6.0%</td><td class="mono">21.6&deg;</td></tr>
+                <tr class="tot"><td>Total</td><td class="num">250</td><td class="num">1.000</td><td class="num">100%</td><td class="num">360.0&deg;</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <ul style="margin-top:8px;">
+            <li><strong>B2.</strong> <i>(4)</i> Formula: angle = (f &divide; n) &times; 360&deg;. Values in the table above.</li>
+            <li><strong>B3.</strong> <i>(1)</i> 144.0 + 93.6 + 57.6 + 43.2 + 21.6 = <strong>360.0&deg;</strong> &check;</li>
+            <li><strong>B4.</strong> <i>(2)</i> Bars of height 0.400, 0.260, 0.160, 0.120, 0.060 with <strong>both axes labelled</strong> &mdash; one mark is for the labels. Bars must <strong>not touch</strong>: this is categorical data, not a histogram.</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Part C &mdash; 6 marks</h4>
+          <ul>
+            <li><strong>C1.</strong> <i>(4)</i> Fiction last term: 96 &divide; 200 = <strong>48.0%</strong> <i>(1)</i>. Fiction this term: 100 &divide; 250 = <strong>40.0%</strong> <i>(1)</i>. The comparison is misleading because the terms had different totals &mdash; 200 against 250 <i>(1)</i>. Fiction&rsquo;s raw count rose by 4, but its <strong>share fell from 48.0% to 40.0%</strong>: relative to everything else borrowed, fiction became less popular, not more <i>(1)</i>.</li>
+            <li><strong>C2.</strong> <i>(2)</i> When two data sets have different totals, compare <strong>relative frequencies or percentages</strong>, not raw counts <i>(1)</i>. Raw counts confound a change in the variable with a change in the overall total <i>(1)</i>.</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Part D &mdash; 10 marks</h4>
+          <p><strong>D1.</strong> <i>(4)</i></p>
+          <div class="plot">1 | 2
+2 | 4 9
+3 | 1 3 5 6 7 8 8 9
+4 | 0 0 1 1 2 2 3 3 4 5 5 6 7</div>
+          <p style="margin-top:6px;">Count check: 1 + 2 + 8 + 13 = 24 &check;</p>
+          <p style="margin-top:8px;"><strong>D2.</strong> <i>(3)</i></p>
+          <div class="tbl" style="max-width:300px;">
+            <table style="min-width:0;">
+              <thead><tr><th>Interval</th><th>f</th></tr></thead>
+              <tbody>
+                <tr><td>10 &ndash; under 20</td><td class="num">1</td></tr>
+                <tr><td>20 &ndash; under 30</td><td class="num">2</td></tr>
+                <tr><td>30 &ndash; under 40</td><td class="num">8</td></tr>
+                <tr><td>40 &ndash; under 50</td><td class="num">13</td></tr>
+                <tr class="tot"><td>Total</td><td class="num">24</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <ul style="margin-top:8px;">
+            <li><strong>D3.</strong> <i>(2)</i> bin width = (max &minus; min) &divide; number of bins = (47 &minus; 12) &divide; 7 = 35 &divide; 7 = <strong>5</strong></li>
+            <li><strong>D4.</strong> <i>(1)</i> The row must stay because it shows a value at 12 &mdash; an unusually low score, well separated from the rest. Skipping stems destroys the spacing that lets a stemplot show gaps and outliers.</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Part E &mdash; 8 marks</h4>
+          <p><strong>E1.</strong> <i>(5)</i> One mark each for shape, centre, variability, unusual features and context.</p>
+          <div class="brief" style="margin-top:7px;">
+            <p><em>&ldquo;The distribution of test scores for these 24 students is <strong>skewed left</strong> and <strong>unimodal</strong>, with one main peak in the 40s. The <strong>centre</strong> is about 40 marks. Scores <strong>range from 12 to 47</strong> out of 50. There is an <strong>outlier at 12</strong>, separated by a <strong>gap</strong> between 12 and 24 &mdash; one student scored far below everyone else.&rdquo;</em></p>
+          </div>
+          <p style="margin-top:7px;">Accept &ldquo;negatively skewed&rdquo; for skewed left.</p>
+          <p class="flagbox" style="margin-top:10px;"><b>The most common error here is &ldquo;skewed right&rdquo;.</b> The bulk sits on the right, in the 40s, but the <em>tail</em> stretches left toward 12. Skew is named for the tail. If you got this wrong, flag it &mdash; it costs a mark every time it appears, and it will appear again.</p>
+          <ul style="margin-top:10px;">
+            <li><strong>E2.</strong> <i>(3)</i> <strong>Not</strong> supported <i>(1)</i>. From the frequency table only 1 + 2 + 8 = <strong>11 of 24</strong> students scored below 40, which is 45.8% &mdash; fewer than half <i>(1)</i>. Supportable version: <em>&ldquo;Slightly fewer than half the class scored below 40, and the most common band was 40&ndash;49.&rdquo;</em> <i>(1)</i></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Marks summary</h4>
+          <div class="tbl"><table style="min-width:0;">
+            <thead><tr><th>Part</th><th>Marks</th></tr></thead>
+            <tbody>
+              <tr><td>A &mdash; Vocabulary</td><td class="num">6</td></tr>
+              <tr><td>B &mdash; Categorical displays</td><td class="num">10</td></tr>
+              <tr><td>C &mdash; Comparing data sets</td><td class="num">6</td></tr>
+              <tr><td>D &mdash; Quantitative displays</td><td class="num">10</td></tr>
+              <tr><td>E &mdash; Describing a distribution</td><td class="num">8</td></tr>
+              <tr class="tot"><td>Total</td><td class="num">40</td></tr>
+            </tbody>
+          </table></div>
+        </div>
+      </div>
+    </details>
+  </div>
+</section>
+
+<!-- REFERENCE -->
+<section class="ref-sec">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Hand this over at the end</div>
+      <h2>Reference sheet</h2>
+      <p>The student&rsquo;s to keep. Every term carries an example.</p>
+    </div>
+
+    <div class="defgroup">
+      <h3>Displays for one categorical variable</h3>
+      <dl class="defs">
+        <div class="def"><dt>Bar chart <small>bar graph</small></dt><dd>One bar per category; height or length shows frequency <strong>or</strong> relative frequency. Bars do not touch.</dd><div class="ex"><b>Example</b>Six bars, one per hospital; the St Mary&rsquo;s bar reaches 84, or 0.280 on a relative frequency scale.</div></div>
+        <div class="def"><dt>Pie chart</dt><dd>One slice per category; each slice&rsquo;s area as a fraction of the whole equals its relative frequency. Slices total 1, or 100% of the area.</dd><div class="ex"><b>Example</b>The St Mary&rsquo;s slice takes up 28.0% of the circle &mdash; an angle of 100.8&deg;.</div></div>
+      </dl>
+    </div>
+
+    <div class="defgroup">
+      <h3>Displays for one quantitative variable</h3>
+      <p style="font-size:.9rem;color:var(--ink-2);margin-bottom:11px;">All three keep the natural ordering of the values, smallest to largest.</p>
+      <dl class="defs">
+        <div class="def"><dt>Dotplot</dt><dd>One dot per value, placed above its position on the axis; near-identical values stack.</dd><div class="ex"><b>Example</b>Two dots stacked above 12, because two students had 12-minute journeys.</div></div>
+        <div class="def"><dt>Stem-and-leaf plot</dt><dd>Each value splits into a <strong>stem</strong> (leading digits) and a <strong>leaf</strong> (usually the final digit). Both ordered smallest to largest.</dd><div class="ex"><b>Example</b>18 becomes stem 1, leaf 8. Keep empty stems &mdash; a blank row is a gap in the data.</div></div>
+        <div class="def"><dt>Histogram</dt><dd>Values grouped into ordered intervals (<strong>bins</strong>); each bar&rsquo;s height is the frequency or relative frequency in that bin. Bars touch, because the scale is continuous.</dd><div class="ex"><b>Example</b>The bin &ldquo;10 &ndash; under 20&rdquo; has height 12, because 12 journeys fell in that range.</div></div>
+      </dl>
+      <div class="callout amber" style="margin-top:11px;">
+        <span class="lbl">Bin width changes the appearance</span>
+        <p>Narrow bins show detail and noise; wide bins show shape. Neither is wrong, but the picture is a <strong>choice</strong>.</p>
+      </div>
+    </div>
+
+    <div class="defgroup">
+      <h3>Formulas</h3>
+      <div class="tbl">
+        <table>
+          <thead><tr><th>Quantity</th><th>Formula</th><th>Example</th></tr></thead>
+          <tbody>
+            <tr><td>Bar height</td><td class="mono">f or rf</td><td class="mono">84, or 0.280</td></tr>
+            <tr><td>Pie slice angle</td><td class="mono">(f &divide; n) &times; 360&deg;</td><td class="mono">0.280 &times; 360 = 100.8&deg;</td></tr>
+            <tr><td>Pie slice share of area</td><td class="mono">100rf</td><td class="mono">28.0%</td></tr>
+            <tr><td>Histogram bar height</td><td class="mono">f or rf in that bin</td><td class="mono">12, or 12 &divide; 25 = 0.480</td></tr>
+            <tr><td>Bin width</td><td class="mono">(max &minus; min) &divide; number of bins</td><td class="mono">(68 &minus; 8) &divide; 6 = 10</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="checks" style="margin-top:10px;">
+        <span class="chk">&Sigma;f = n</span><span class="chk">&Sigma;rf = 1</span><span class="chk">angles total 360&deg;</span><span class="chk">bin frequencies total n</span>
+      </div>
+    </div>
+
+    <div class="defgroup">
+      <h3>Describing a distribution</h3>
+      <p style="font-size:.9rem;color:var(--ink-2);margin-bottom:11px;">A full description needs <strong>four</strong> things, <strong>in context</strong>. Miss one and you lose the mark.</p>
+      <dl class="defs">
+        <div class="def"><dt>Shape &mdash; skewed right <small>positive</small></dt><dd>The right tail, toward larger values, is longer.</dd><div class="ex"><b>Example</b>Journey times: most under 20 minutes, stretching out to 68.</div></div>
+        <div class="def"><dt>Shape &mdash; skewed left <small>negative</small></dt><dd>The left tail, toward smaller values, is longer.</dd><div class="ex"><b>Example</b>Test scores: most in the 40s, stretching down to 12.</div></div>
+        <div class="def"><dt>Shape &mdash; symmetric &amp; peaks</dt><dd>Approximately symmetric if the left half mirrors the right. <strong>Unimodal</strong> = one main peak; <strong>bimodal</strong> = two; <strong>approximately uniform</strong> = frequencies roughly equal.</dd><div class="ex"><b>Example</b>The commute data is unimodal, peaking between 10 and 20 minutes.</div></div>
+        <div class="def"><dt>Center</dt><dd>Roughly where the bulk sits.</dd><div class="ex"><b>Example</b>About 18 minutes.</div></div>
+        <div class="def"><dt>Variability <small>spread</small></dt><dd>How far the values reach.</dd><div class="ex"><b>Example</b>From 8 to 68 minutes.</div></div>
+        <div class="def"><dt>Unusual features</dt><dd><strong>Outlier</strong> &mdash; unusually small or large relative to the rest. <strong>Gap</strong> &mdash; a region with no observed data. <strong>Cluster</strong> &mdash; a concentration of values, usually separated by gaps.</dd><div class="ex"><b>Example</b>The 68-minute journey is an outlier; nothing lies between 42 and 68, so that is a gap.</div></div>
+      </dl>
+      <div class="callout red" style="margin-top:11px;">
+        <span class="lbl">Skew is named for the tail, not the bulk</span>
+        <p>Point at the long tail and say its direction out loud. This single error costs more marks in Unit 1 than anything else.</p>
+      </div>
+      <div class="callout teal" style="margin-top:11px;">
+        <span class="lbl">In context means</span>
+        <p>Naming the variable, its units, and the individuals &mdash; every time. Not &ldquo;skewed right with an outlier&rdquo;, but &ldquo;journey times for these 25 students are skewed right, with one student&rsquo;s journey of 68 minutes far longer than anyone else&rsquo;s.&rdquo;</p>
+      </div>
+      <p style="font-size:.88rem;color:var(--ink-2);margin-top:11px;max-width:var(--read);">Many textbooks use the mnemonic <strong>SOCS</strong> &mdash; shape, outliers, centre, spread. It is the same four components the CED lists as shape, centre, variability and unusual features.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p><strong>CED references:</strong> Topic 1.4 (1.4.A.1&ndash;2, 1.4.B.1, 1.4.C.1), Topic 1.5 (1.5.A.1&ndash;4), Topic 1.6 (1.6.A.1&ndash;6, 1.6.B.1). Course and Exam Description effective Fall 2026.</p>
+    <p style="margin-top:8px;"><strong>Supporting reading:</strong> Barron&rsquo;s pdf 83&ndash;96 &middot; Princeton Review 105&ndash;124 &middot; 5 Steps to a 5 60&ndash;65.</p>
+    <p style="margin-top:8px;"><strong>Next session:</strong> Topics 1.7&ndash;1.9 &mdash; mean, median, standard deviation, the 1.5 &times; IQR outlier rule, boxplots, and comparing two distributions. The formal outlier test promised above arrives there.</p>
+  </div>
+</footer>
+
+</main>
+<script>window.COURSE_NAV={"kicker": "CED 1.4–1.6", "title": "Session 2, Shape of the Data", "map": [{"label": "Course", "items": [{"href": "index.html", "label": "Home", "current": false}, {"href": "plan.html", "label": "The 20-hour plan", "current": false}]}, {"label": "Block A · Describing one variable", "items": [{"href": "s01-tutor.html", "label": "Session 1 · Tutor", "current": false}, {"href": "s01-student.html", "label": "Session 1 · Student", "current": false}, {"href": "s01-test.html", "label": "Session 1 · Test", "current": false}, {"href": "s02-tutor.html", "label": "Session 2 · Tutor", "current": true}, {"href": "s02-student.html", "label": "Session 2 · Student", "current": false}]}, {"label": "Interactive", "items": [{"href": "tools/unit1-explorer.html", "label": "Unit 1 Explorer", "current": false}]}], "prev": {"href": "s01-test.html", "label": "Session 1 · Test"}, "next": {"href": "s02-student.html", "label": "Session 2 · Student"}, "variants": [{"href": "s02-tutor.html", "label": "Tutor", "current": true}, {"href": "s02-student.html", "label": "Student", "current": false}]};</script>
+<script src="assets/course.js"></script>
+</body>
+</html>

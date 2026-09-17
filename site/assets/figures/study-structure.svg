@@ -1,0 +1,24 @@
+<svg viewBox="0 0 720 372" xmlns="http://www.w3.org/2000/svg" role="img" color="#15201f" aria-label="A statistical study: a sample sits inside a population; a statistic computed from the sample estimates an unknown population parameter" font-family="Public Sans, system-ui, sans-serif" fill="none" stroke="currentColor">
+<rect x="30" y="18" width="300" height="58" rx="4" stroke="currentColor" stroke-width="1.4" opacity="0.38" fill="none"/>
+<text x="46" y="40" font-size="11" font-weight="600" text-anchor="start" fill="#1a6b63" stroke="none" font-family="IBM Plex Mono, monospace">PARAMETER</text>
+<text x="46" y="60" font-size="13" font-weight="400" text-anchor="start" fill="currentColor" stroke="none" opacity="0.75">true proportion of all 1,842 &#8212; unknown</text>
+<line x1="180" y1="76" x2="177" y2="92" stroke="currentColor" stroke-width="1.4" opacity="0.38"/>
+<ellipse cx="177" cy="206" rx="147" ry="114" stroke="currentColor" stroke-width="1.6" opacity="0.45" fill="none"/>
+<text x="177" y="126" font-size="15" font-weight="700" text-anchor="middle" fill="currentColor" stroke="none">Population</text>
+<text x="177" y="148" font-size="12.5" font-weight="400" text-anchor="middle" fill="currentColor" stroke="none" opacity="0.72">all 1,842 students &#183; N = 1,842</text>
+<circle cx="200" cy="234" r="48" stroke="#1a6b63" stroke-width="2" fill="#1a6b63" fill-opacity="0.12"/>
+<text x="200" y="230" font-size="13.5" font-weight="700" text-anchor="middle" fill="#1a6b63" stroke="none">Sample</text>
+<text x="200" y="250" font-size="12.5" font-weight="400" text-anchor="middle" fill="#1a6b63" stroke="none" font-family="IBM Plex Mono, monospace">n = 120</text>
+<line x1="252" y1="234" x2="420" y2="234" stroke="#1a6b63" stroke-width="2" opacity="1.0"/>
+<polygon points="428.0,234.0 419.0,237.8 419.0,230.2" fill="#1a6b63" stroke="none"/>
+<text x="340" y="220" font-size="12" font-weight="500" text-anchor="middle" fill="#1a6b63" stroke="none">measure these 120</text>
+<rect x="432" y="192" width="258" height="86" rx="4" stroke="#1a6b63" stroke-width="2" opacity="1.0" fill="none"/>
+<text x="450" y="216" font-size="11" font-weight="600" text-anchor="start" fill="#1a6b63" stroke="none" font-family="IBM Plex Mono, monospace">STATISTIC</text>
+<text x="450" y="240" font-size="15" font-weight="600" text-anchor="start" fill="currentColor" stroke="none" font-family="IBM Plex Mono, monospace">43 &#247; 120 = 0.358</text>
+<text x="450" y="262" font-size="12" font-weight="400" text-anchor="start" fill="currentColor" stroke="none" opacity="0.7">you know this</text>
+<path d="M 470 192 C 466 124, 410 58, 348 49" stroke="currentColor" stroke-width="1.6" stroke-dasharray="5 4" opacity="0.6" fill="none"/>
+<polygon points="341.0,48.0 350.4,45.4 349.4,52.9" fill="currentColor" stroke="none"/>
+<text x="474" y="112" font-size="12.5" font-weight="600" text-anchor="start" fill="currentColor" stroke="none" opacity="0.75">estimates</text>
+<text x="474" y="130" font-size="11.5" font-weight="400" text-anchor="start" fill="currentColor" stroke="none" opacity="0.55">Units 3 and 4</text>
+<text x="30" y="356" font-size="12" font-weight="400" text-anchor="start" fill="currentColor" stroke="none" opacity="0.6">The sample sits inside the population &#8212; it is a subset, not a separate group.</text>
+</svg>

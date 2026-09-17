@@ -1,0 +1,9 @@
+# Whitelist: ignore everything at the top level, then re-include only what
+# belongs on the public site. Keeps the textbook PDFs (copyrighted, ~200 MB)
+# and generated .docx/.pdf/.zip out of the repository.
+/*
+!/site/
+!/build/
+!/.github/
+!/.gitignore
+!/*.md
