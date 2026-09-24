@@ -1,0 +1,687 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Session 4 Test · AP Statistics in Twenty Hours</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Spectral:ital,wght@0,600;0,700;1,600&display=swap">
+<link rel="stylesheet" href="assets/course.css">
+</head>
+<body>
+<main class="page">
+<h1>Session 4 — Multiple-Choice Test</h1>
+<p class="standfirst"><strong>AP Statistics · Twenty-Hour Course · CED Topics 5.1, 5.2</strong> <strong>20 questions · 35 minutes · calculator allowed</strong></p>
+<hr>
+<h2>Before you start</h2>
+<p>None of the scenarios here is one you worked in Session 4. Lincoln High, the St Mary's shifts, the café, the library and the coffee machine have all been left out on purpose. A familiar scatterplot lets you remember what it showed instead of reading it.</p>
+<p>Most questions need no arithmetic at all. They ask you to <strong>read</strong> a scatterplot the way an examiner does: direction, unusual features, form and strength, in context. They also ask you to say what a correlation does and does not tell you. One question asks you to calculate <em>r</em> from z-scores, using the formula-sheet form:</p>
+<div class="formula">r = (1 ÷ (n − 1)) × Σ [ (xᵢ − x̄) ÷ sₓ ] × [ (yᵢ − ȳ) ÷ s_y ]</div>
+<p>Where a question describes strength, it uses the course's rough guide: |<em>r</em>| about 0.8 or more is strong, about 0.5 to 0.8 moderate, and below about 0.5 weak. The course description gives no cut-offs, so the scatterplot always comes first.</p>
+<p>The CED has only four learning objectives for these two topics, so this test has 20 questions rather than 22.</p>
+<h3>What is being tested</h3>
+<div class="tbl"><table><thead><tr><th>Q</th><th>CED objective</th><th>Bloom level</th></tr></thead><tbody><tr><td>1</td><td>5.1.A Explanatory and response variables</td><td>Application</td></tr><tr><td>2</td><td>5.1.B Describe direction</td><td>Application</td></tr><tr><td>3</td><td>5.1.B Unusual features: off the pattern</td><td>Analysis</td></tr><tr><td>4</td><td>5.2.A Estimate <em>r</em> from a scatterplot</td><td>Analysis</td></tr><tr><td>5</td><td>5.1.B A full description, in context</td><td><strong>Synthesis</strong></td></tr><tr><td>6</td><td>5.1.C Justify a claim using a scatterplot</td><td>Analysis</td></tr><tr><td>7</td><td>5.2.A <em>r</em> is between −1 and 1</td><td>Application</td></tr><tr><td>8</td><td>5.2.A Strength from <em>r</em></td><td>Application</td></tr><tr><td>9</td><td>5.2.A <em>r</em> is unit-free</td><td>Analysis</td></tr><tr><td>10</td><td>5.1.B Strength is not steepness</td><td>Analysis</td></tr><tr><td>11</td><td>5.2.A Match scatterplots to correlations</td><td>Analysis</td></tr><tr><td>12</td><td>5.2.A <em>r</em> = 0 means no <strong>linear</strong> association</td><td><strong>Synthesis</strong></td></tr><tr><td>13</td><td>5.2.A <em>r</em> near 1 does not mean linear</td><td><strong>Synthesis</strong></td></tr><tr><td>14</td><td>5.2.A Calculate <em>r</em> from z-scores</td><td>Application</td></tr><tr><td>15</td><td>5.2.A The sign of <em>r</em> from z-score products</td><td>Analysis</td></tr><tr><td>16</td><td>5.2.A Correlation is not causation</td><td><strong>Synthesis</strong></td></tr><tr><td>17</td><td>5.2.A Interpret <em>r</em> in context</td><td>Analysis</td></tr><tr><td>18</td><td>5.1.A What makes bivariate quantitative data</td><td>Analysis</td></tr><tr><td>19</td><td>5.1.B + 5.1.C Clusters, and a claim</td><td><strong>Synthesis</strong></td></tr><tr><td>20</td><td>5.1.B + 5.2.A Find the single error</td><td><strong>Synthesis</strong></td></tr></tbody></table></div>
+<p>Six questions at synthesis, nine at analysis, five at application. All four learning objectives of Session 4 are tested at least twice.</p>
+<hr>
+<hr>
+<h1>The test</h1>
+<h2>Questions 1–6 · Used cars</h2>
+<blockquote>A used-car dealer recorded the <strong>age</strong>, in years, and the <strong>selling price</strong>, in thousands of pounds, of the <strong>15 cars</strong> it sold last month.</blockquote>
+<figure><div class="figscroll"><svg viewBox="0 0 640 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Scatterplot of price against age for 15 used cars" font-family="Public Sans, system-ui, sans-serif">
+<style>
+  .ink   { fill: #15201f; }
+  .ink2  { fill: #4a5654; }
+  .ink3  { fill: #6f7b79; }
+  .axis  { stroke: #c3c9c6; }
+  .grid  { stroke: #dcdfdd; }
+  .gap   { stroke: #ffffff; }
+  @media (prefers-color-scheme: dark) {
+    .ink  { fill: #e9edeb; }
+    .ink2 { fill: #a5b0ad; }
+    .ink3 { fill: #7e8a87; }
+    .axis { stroke: #3a4644; }
+    .grid { stroke: #2a3533; }
+    .gap  { stroke: #182120; }
+  }
+
+  .s0 { fill: #2a78d6; }
+  .s1 { fill: #eb6834; }
+  @media (prefers-color-scheme: dark) {
+    .s0 { fill: #3987e5; }
+    .s1 { fill: #d95926; }
+  }
+</style>
+<line class="grid" x1="80.0" y1="24.0" x2="80.0" y2="330.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="80.0" y="347.0" font-size="11.5" text-anchor="middle" fill="#6f7b79">0</text>
+<line class="grid" x1="115.3" y1="24.0" x2="115.3" y2="330.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="115.3" y="347.0" font-size="11.5" text-anchor="middle" fill="#6f7b79">1</text>
+<line class="grid" x1="150.7" y1="24.0" x2="150.7" y2="330.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="150.7" y="347.0" font-size="11.5" text-anchor="middle" fill="#6f7b79">2</text>
+<line class="grid" x1="186.0" y1="24.0" x2="186.0" y2="330.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="186.0" y="347.0" font-size="11.5" text-anchor="middle" fill="#6f7b79">3</text>
+<line class="grid" x1="221.3" y1="24.0" x2="221.3" y2="330.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="221.3" y="347.0" font-size="11.5" text-anchor="middle" fill="#6f7b79">4</text>
+<line class="grid" x1="256.7" y1="24.0" x2="256.7" y2="330.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="256.7" y="347.0" font-size="11.5" text-anchor="middle" fill="#6f7b79">5</text>
+<line class="grid" x1="292.0" y1="24.0" x2="292.0" y2="330.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="292.0" y="347.0" font-size="11.5" text-anchor="middle" fill="#6f7b79">6</text>
+<line class="grid" x1="327.3" y1="24.0" x2="327.3" y2="330.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="327.3" y="347.0" font-size="11.5" text-anchor="middle" fill="#6f7b79">7</text>
+<line class="grid" x1="362.7" y1="24.0" x2="362.7" y2="330.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="362.7" y="347.0" font-size="11.5" text-anchor="middle" fill="#6f7b79">8</text>
+<line class="grid" x1="398.0" y1="24.0" x2="398.0" y2="330.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="398.0" y="347.0" font-size="11.5" text-anchor="middle" fill="#6f7b79">9</text>
+<line class="grid" x1="433.3" y1="24.0" x2="433.3" y2="330.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="433.3" y="347.0" font-size="11.5" text-anchor="middle" fill="#6f7b79">10</text>
+<line class="grid" x1="468.7" y1="24.0" x2="468.7" y2="330.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="468.7" y="347.0" font-size="11.5" text-anchor="middle" fill="#6f7b79">11</text>
+<line class="grid" x1="504.0" y1="24.0" x2="504.0" y2="330.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="504.0" y="347.0" font-size="11.5" text-anchor="middle" fill="#6f7b79">12</text>
+<line class="grid" x1="539.3" y1="24.0" x2="539.3" y2="330.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="539.3" y="347.0" font-size="11.5" text-anchor="middle" fill="#6f7b79">13</text>
+<line class="grid" x1="574.7" y1="24.0" x2="574.7" y2="330.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="574.7" y="347.0" font-size="11.5" text-anchor="middle" fill="#6f7b79">14</text>
+<line class="grid" x1="610.0" y1="24.0" x2="610.0" y2="330.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="610.0" y="347.0" font-size="11.5" text-anchor="middle" fill="#6f7b79">15</text>
+<line class="grid" x1="80.0" y1="330.0" x2="610.0" y2="330.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="73.0" y="334.0" font-size="11.5" text-anchor="end" fill="#6f7b79">0</text>
+<line class="grid" x1="80.0" y1="279.0" x2="610.0" y2="279.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="73.0" y="283.0" font-size="11.5" text-anchor="end" fill="#6f7b79">4</text>
+<line class="grid" x1="80.0" y1="228.0" x2="610.0" y2="228.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="73.0" y="232.0" font-size="11.5" text-anchor="end" fill="#6f7b79">8</text>
+<line class="grid" x1="80.0" y1="177.0" x2="610.0" y2="177.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="73.0" y="181.0" font-size="11.5" text-anchor="end" fill="#6f7b79">12</text>
+<line class="grid" x1="80.0" y1="126.0" x2="610.0" y2="126.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="73.0" y="130.0" font-size="11.5" text-anchor="end" fill="#6f7b79">16</text>
+<line class="grid" x1="80.0" y1="75.0" x2="610.0" y2="75.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="73.0" y="79.0" font-size="11.5" text-anchor="end" fill="#6f7b79">20</text>
+<line class="grid" x1="80.0" y1="24.0" x2="610.0" y2="24.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="73.0" y="28.0" font-size="11.5" text-anchor="end" fill="#6f7b79">24</text>
+<line class="axis" x1="80.0" y1="330.0" x2="610.0" y2="330.0" stroke-width="1.5" stroke="#c3c9c6" fill="none"/>
+<line class="axis" x1="80.0" y1="24.0" x2="80.0" y2="330.0" stroke-width="1.5" stroke="#c3c9c6" fill="none"/>
+<circle class="s0 gap" cx="115.3" cy="55.9" r="5" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="150.7" cy="75.0" r="5" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="150.7" cy="85.2" r="5" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="186.0" cy="95.4" r="5" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="186.0" cy="253.5" r="5" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="221.3" cy="112.0" r="5" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="256.7" cy="138.8" r="5" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="256.7" cy="123.5" r="5" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="292.0" cy="154.0" r="5" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="327.3" cy="175.7" r="5" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="362.7" cy="189.8" r="5" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="398.0" cy="212.7" r="5" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="433.3" cy="226.7" r="5" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="468.7" cy="249.7" r="5" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="574.7" cy="299.4" r="5" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<text class="ink2" x="345.0" y="370.0" font-size="12.5" text-anchor="middle" fill="#4a5654">Age (years)</text>
+<text class="ink2" x="36.0" y="177.0" font-size="12.5" text-anchor="middle" transform="rotate(-90 36.0 177.0)" fill="#4a5654">Price (£ thousands)</text>
+</svg>
+</div><figcaption>Each point is one car. The correlation between age and price for these 15 cars is one of the options in question 4.</figcaption></figure>
+<p><strong>1.</strong> The dealer wants to know how a car's age relates to the price it sells for. Which choice of variables and axes is correct?</p>
+<ul><li><strong>(A)</strong> Price is the explanatory variable, on the x-axis; age is the response, on the y-axis.</li><li><strong>(B)</strong> Both are explanatory variables, so either may go on either axis.</li><li><strong>(C)</strong> Age is the explanatory variable, on the x-axis; price is the response variable, on the y-axis.</li><li><strong>(D)</strong> Price is the explanatory variable, because it is the number the dealer controls.</li><li><strong>(E)</strong> Whichever variable has the larger numbers goes on the y-axis.</li></ul>
+<p><strong>2.</strong> Which statement describes the <strong>direction</strong> of the association correctly?</p>
+<ul><li><strong>(A)</strong> Older cars tend to sell for lower prices: the association is negative.</li><li><strong>(B)</strong> Every older car sold for less than every newer car.</li><li><strong>(C)</strong> "Negative."</li><li><strong>(D)</strong> As price increases, age increases, so the association is positive.</li><li><strong>(E)</strong> The association is negative because the points go down to the right, which shows that price is the explanatory variable.</li></ul>
+<p><strong>3.</strong> Which car is the clearest <strong>unusual feature</strong> of this scatterplot?</p>
+<ul><li><strong>(A)</strong> The 14-year-old car that sold for £2,400, because it is much older than all the others</li><li><strong>(B)</strong> The 1-year-old car that sold for £21,500, because it is the most expensive</li><li><strong>(C)</strong> The two 2-year-old cars, because they share an age</li><li><strong>(D)</strong> The 3-year-old car that sold for £6,000, because it sold for far less than other cars of its age and does not fit the general pattern</li><li><strong>(E)</strong> None: every price lies between the lowest and the highest</li></ul>
+<p><strong>4.</strong> The correlation between age and price for these 15 cars is closest to</p>
+<ul><li><strong>(A)</strong> 0.84</li><li><strong>(B)</strong> −0.84</li><li><strong>(C)</strong> −0.25</li><li><strong>(D)</strong> −1.00</li><li><strong>(E)</strong> 0.25</li></ul>
+<p><strong>5.</strong> Which description of the scatterplot would earn <strong>full credit</strong>?</p>
+<ul><li><strong>(A)</strong> "Negative, linear and strong."</li><li><strong>(B)</strong> "Older cars are cheaper, with r = −0.84."</li><li><strong>(C)</strong> "There is a strong, negative, linear association between age and price, so a car's age causes its price to fall."</li><li><strong>(D)</strong> "Older cars in this sample tend to sell for lower prices. The pattern is linear and strong. The 14-year-old car is an unusual point, because it is far older than the rest."</li><li><strong>(E)</strong> "Older cars in this sample tend to sell for lower prices, a negative association. The pattern is linear: price falls at a roughly steady rate as age increases. It is strong, because apart from one car the points lie close to that pattern. The exception is a 3-year-old car that sold for only £6,000, far below other cars of its age."</li></ul>
+<p><strong>6.</strong> The dealer claims: <em>"Every car we sold that was more than 8 years old went for under £10,000."</em> Which is the best assessment?</p>
+<ul><li><strong>(A)</strong> Not supported, because one 3-year-old car sold for only £6,000.</li><li><strong>(B)</strong> Supported. The four cars more than 8 years old, aged 9, 10, 11 and 14, sold for about £9,200, £8,100, £6,300 and £2,400, all under £10,000.</li><li><strong>(C)</strong> Supported, because the correlation is negative, so older cars always sell for less.</li><li><strong>(D)</strong> Not supported, because the 8-year-old car sold for £11,000.</li><li><strong>(E)</strong> It cannot be assessed without a table of the individual prices.</li></ul>
+<hr>
+<h2>Questions 7–10 · What a correlation says</h2>
+<p><strong>7.</strong> A report lists five correlations from different studies. Which one <strong>must</strong> be an error?</p>
+<ul><li><strong>(A)</strong> <em>r</em> = 0</li><li><strong>(B)</strong> <em>r</em> = −1</li><li><strong>(C)</strong> <em>r</em> = 0.99</li><li><strong>(D)</strong> <em>r</em> = −1.20</li><li><strong>(E)</strong> <em>r</em> = 1</li></ul>
+<p><strong>8.</strong> Study X finds <em>r</em> = −0.85 and Study Y finds <em>r</em> = 0.62, each between two quantitative variables. Which study shows the <strong>stronger</strong> linear association?</p>
+<ul><li><strong>(A)</strong> Study X, because −0.85 is closer to −1 than 0.62 is to 1</li><li><strong>(B)</strong> Study Y, because a positive correlation is stronger than a negative one</li><li><strong>(C)</strong> They are equally strong, because both are fairly far from 0</li><li><strong>(D)</strong> They cannot be compared, because the associations go in different directions</li><li><strong>(E)</strong> Study Y, because −0.85 is less than 0.62</li></ul>
+<p><strong>9.</strong> For 60 adults, the correlation between height and arm span, both measured in centimetres, is <em>r</em> = 0.72. Both measurements are converted to inches (1 inch = 2.54 cm). The correlation is now</p>
+<ul><li><strong>(A)</strong> 0.72 × 2.54 = 1.83</li><li><strong>(B)</strong> 0.72 ÷ 2.54 = 0.28</li><li><strong>(C)</strong> 0.72, because <em>r</em> is unit-free</li><li><strong>(D)</strong> impossible to know without recalculating from the data</li><li><strong>(E)</strong> 0.72 only because both variables were converted; converting just one of them would change <em>r</em></li></ul>
+<p><strong>10.</strong> Plots P and Q show two different data sets on the same scales.</p>
+<figure><div class="figscroll"><svg viewBox="0 0 740 330" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Two scatterplots: P close to a shallow line, Q scattered about a steep line" font-family="Public Sans, system-ui, sans-serif">
+<style>
+  .ink   { fill: #15201f; }
+  .ink2  { fill: #4a5654; }
+  .ink3  { fill: #6f7b79; }
+  .axis  { stroke: #c3c9c6; }
+  .grid  { stroke: #dcdfdd; }
+  .gap   { stroke: #ffffff; }
+  @media (prefers-color-scheme: dark) {
+    .ink  { fill: #e9edeb; }
+    .ink2 { fill: #a5b0ad; }
+    .ink3 { fill: #7e8a87; }
+    .axis { stroke: #3a4644; }
+    .grid { stroke: #2a3533; }
+    .gap  { stroke: #182120; }
+  }
+
+  .s0 { fill: #2a78d6; }
+  .s1 { fill: #eb6834; }
+  @media (prefers-color-scheme: dark) {
+    .s0 { fill: #3987e5; }
+    .s1 { fill: #d95926; }
+  }
+</style>
+<text class="ink" x="70.0" y="26.0" font-size="13" text-anchor="start" font-weight="700" fill="#15201f">Plot P</text>
+<line class="grid" x1="70.0" y1="36.0" x2="70.0" y2="260.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="70.0" y="277.0" font-size="11.5" text-anchor="middle" fill="#6f7b79">0</text>
+<line class="grid" x1="140.0" y1="36.0" x2="140.0" y2="260.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="140.0" y="277.0" font-size="11.5" text-anchor="middle" fill="#6f7b79">6</text>
+<line class="grid" x1="210.0" y1="36.0" x2="210.0" y2="260.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="210.0" y="277.0" font-size="11.5" text-anchor="middle" fill="#6f7b79">12</text>
+<line class="grid" x1="280.0" y1="36.0" x2="280.0" y2="260.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="280.0" y="277.0" font-size="11.5" text-anchor="middle" fill="#6f7b79">18</text>
+<line class="grid" x1="350.0" y1="36.0" x2="350.0" y2="260.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="350.0" y="277.0" font-size="11.5" text-anchor="middle" fill="#6f7b79">24</text>
+<line class="grid" x1="70.0" y1="260.0" x2="350.0" y2="260.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="63.0" y="264.0" font-size="11.5" text-anchor="end" fill="#6f7b79">0</text>
+<line class="grid" x1="70.0" y1="204.0" x2="350.0" y2="204.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="63.0" y="208.0" font-size="11.5" text-anchor="end" fill="#6f7b79">20</text>
+<line class="grid" x1="70.0" y1="148.0" x2="350.0" y2="148.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="63.0" y="152.0" font-size="11.5" text-anchor="end" fill="#6f7b79">40</text>
+<line class="grid" x1="70.0" y1="92.0" x2="350.0" y2="92.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="63.0" y="96.0" font-size="11.5" text-anchor="end" fill="#6f7b79">60</text>
+<line class="grid" x1="70.0" y1="36.0" x2="350.0" y2="36.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="63.0" y="40.0" font-size="11.5" text-anchor="end" fill="#6f7b79">80</text>
+<line class="axis" x1="70.0" y1="260.0" x2="350.0" y2="260.0" stroke-width="1.5" stroke="#c3c9c6" fill="none"/>
+<line class="axis" x1="70.0" y1="36.0" x2="70.0" y2="260.0" stroke-width="1.5" stroke="#c3c9c6" fill="none"/>
+<circle class="s0 gap" cx="93.3" cy="202.0" r="4.2" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="105.0" cy="200.1" r="4.2" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="116.7" cy="199.7" r="4.2" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="128.3" cy="198.7" r="4.2" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="140.0" cy="198.2" r="4.2" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="151.7" cy="196.4" r="4.2" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="163.3" cy="194.0" r="4.2" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="175.0" cy="193.5" r="4.2" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="186.7" cy="191.8" r="4.2" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="198.3" cy="191.4" r="4.2" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="210.0" cy="190.2" r="4.2" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="221.7" cy="189.3" r="4.2" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="233.3" cy="190.0" r="4.2" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="245.0" cy="186.4" r="4.2" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="256.7" cy="185.6" r="4.2" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="268.3" cy="184.5" r="4.2" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="280.0" cy="185.5" r="4.2" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="291.7" cy="184.4" r="4.2" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="303.3" cy="182.5" r="4.2" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="315.0" cy="180.9" r="4.2" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<text class="ink2" x="210.0" y="300.0" font-size="12.5" text-anchor="middle" fill="#4a5654">x</text>
+<text class="ink2" x="26.0" y="148.0" font-size="12.5" text-anchor="middle" transform="rotate(-90 26.0 148.0)" fill="#4a5654">y</text>
+<text class="ink" x="440.0" y="26.0" font-size="13" text-anchor="start" font-weight="700" fill="#15201f">Plot Q</text>
+<line class="grid" x1="440.0" y1="36.0" x2="440.0" y2="260.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="440.0" y="277.0" font-size="11.5" text-anchor="middle" fill="#6f7b79">0</text>
+<line class="grid" x1="510.0" y1="36.0" x2="510.0" y2="260.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="510.0" y="277.0" font-size="11.5" text-anchor="middle" fill="#6f7b79">6</text>
+<line class="grid" x1="580.0" y1="36.0" x2="580.0" y2="260.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="580.0" y="277.0" font-size="11.5" text-anchor="middle" fill="#6f7b79">12</text>
+<line class="grid" x1="650.0" y1="36.0" x2="650.0" y2="260.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="650.0" y="277.0" font-size="11.5" text-anchor="middle" fill="#6f7b79">18</text>
+<line class="grid" x1="720.0" y1="36.0" x2="720.0" y2="260.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="720.0" y="277.0" font-size="11.5" text-anchor="middle" fill="#6f7b79">24</text>
+<line class="grid" x1="440.0" y1="260.0" x2="720.0" y2="260.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="433.0" y="264.0" font-size="11.5" text-anchor="end" fill="#6f7b79">0</text>
+<line class="grid" x1="440.0" y1="204.0" x2="720.0" y2="204.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="433.0" y="208.0" font-size="11.5" text-anchor="end" fill="#6f7b79">20</text>
+<line class="grid" x1="440.0" y1="148.0" x2="720.0" y2="148.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="433.0" y="152.0" font-size="11.5" text-anchor="end" fill="#6f7b79">40</text>
+<line class="grid" x1="440.0" y1="92.0" x2="720.0" y2="92.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="433.0" y="96.0" font-size="11.5" text-anchor="end" fill="#6f7b79">60</text>
+<line class="grid" x1="440.0" y1="36.0" x2="720.0" y2="36.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="433.0" y="40.0" font-size="11.5" text-anchor="end" fill="#6f7b79">80</text>
+<line class="axis" x1="440.0" y1="260.0" x2="720.0" y2="260.0" stroke-width="1.5" stroke="#c3c9c6" fill="none"/>
+<line class="axis" x1="440.0" y1="36.0" x2="440.0" y2="260.0" stroke-width="1.5" stroke="#c3c9c6" fill="none"/>
+<circle class="s0 gap" cx="463.3" cy="220.9" r="4.2" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="475.0" cy="229.4" r="4.2" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="486.7" cy="199.5" r="4.2" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="498.3" cy="242.2" r="4.2" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="510.0" cy="196.1" r="4.2" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="521.7" cy="186.3" r="4.2" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="533.3" cy="224.5" r="4.2" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="545.0" cy="118.4" r="4.2" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="556.7" cy="161.0" r="4.2" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="568.3" cy="128.0" r="4.2" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="580.0" cy="198.1" r="4.2" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="591.7" cy="197.0" r="4.2" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="603.3" cy="174.2" r="4.2" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="615.0" cy="158.1" r="4.2" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="626.7" cy="120.9" r="4.2" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="638.3" cy="130.8" r="4.2" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="650.0" cy="153.9" r="4.2" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="661.7" cy="169.2" r="4.2" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="673.3" cy="144.7" r="4.2" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="685.0" cy="65.4" r="4.2" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<text class="ink2" x="580.0" y="300.0" font-size="12.5" text-anchor="middle" fill="#4a5654">x</text>
+<text class="ink2" x="396.0" y="148.0" font-size="12.5" text-anchor="middle" transform="rotate(-90 396.0 148.0)" fill="#4a5654">y</text>
+</svg>
+</div></figure>
+<p>Which plot shows the <strong>stronger</strong> association?</p>
+<ul><li><strong>(A)</strong> Plot Q, because its pattern is much steeper</li><li><strong>(B)</strong> Plot Q, because its y-values reach higher</li><li><strong>(C)</strong> They are equally strong, because both are positive and linear</li><li><strong>(D)</strong> It cannot be decided without the values of <em>r</em></li><li><strong>(E)</strong> Plot P, because its points lie much closer to their pattern. Strength is how closely the points follow the pattern, not how steep it is.</li></ul>
+<hr>
+<h2>Questions 11–13 · Four scatterplots</h2>
+<blockquote>The four scatterplots below each show 30 points. Their correlations are, in some order, <strong>−0.97, 0.02, 0.34 and 0.96</strong>.</blockquote>
+<figure><div class="figscroll"><svg viewBox="0 0 740 560" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Four scatterplots labelled A to D" font-family="Public Sans, system-ui, sans-serif">
+<style>
+  .ink   { fill: #15201f; }
+  .ink2  { fill: #4a5654; }
+  .ink3  { fill: #6f7b79; }
+  .axis  { stroke: #c3c9c6; }
+  .grid  { stroke: #dcdfdd; }
+  .gap   { stroke: #ffffff; }
+  @media (prefers-color-scheme: dark) {
+    .ink  { fill: #e9edeb; }
+    .ink2 { fill: #a5b0ad; }
+    .ink3 { fill: #7e8a87; }
+    .axis { stroke: #3a4644; }
+    .grid { stroke: #2a3533; }
+    .gap  { stroke: #182120; }
+  }
+
+  .s0 { fill: #2a78d6; }
+  .s1 { fill: #eb6834; }
+  @media (prefers-color-scheme: dark) {
+    .s0 { fill: #3987e5; }
+    .s1 { fill: #d95926; }
+  }
+</style>
+<text class="ink" x="40.0" y="30.0" font-size="13" text-anchor="start" font-weight="700" fill="#15201f">Plot A</text>
+<line class="axis" x1="40.0" y1="250.0" x2="350.0" y2="250.0" stroke-width="1.5" stroke="#c3c9c6" fill="none"/>
+<line class="axis" x1="40.0" y1="40.0" x2="40.0" y2="250.0" stroke-width="1.5" stroke="#c3c9c6" fill="none"/>
+<circle class="s0 gap" cx="181.3" cy="157.2" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="213.1" cy="159.4" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="321.0" cy="235.5" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="185.2" cy="141.8" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="197.7" cy="158.4" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="221.3" cy="159.2" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="102.1" cy="54.8" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="198.9" cy="150.0" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="233.9" cy="158.4" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="282.1" cy="212.0" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="75.3" cy="84.2" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="137.2" cy="106.9" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="74.2" cy="81.2" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="287.1" cy="193.9" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="252.7" cy="178.0" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="59.8" cy="84.5" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="338.2" cy="219.9" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="333.0" cy="234.0" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="241.0" cy="149.7" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="229.6" cy="172.7" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="94.0" cy="82.6" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="51.8" cy="67.6" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="203.8" cy="140.4" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="65.0" cy="82.4" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="103.7" cy="84.1" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="119.0" cy="106.5" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="56.3" cy="54.5" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="184.7" cy="133.8" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="177.8" cy="135.9" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="296.8" cy="213.5" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<text class="ink" x="410.0" y="30.0" font-size="13" text-anchor="start" font-weight="700" fill="#15201f">Plot B</text>
+<line class="axis" x1="410.0" y1="250.0" x2="720.0" y2="250.0" stroke-width="1.5" stroke="#c3c9c6" fill="none"/>
+<line class="axis" x1="410.0" y1="40.0" x2="410.0" y2="250.0" stroke-width="1.5" stroke="#c3c9c6" fill="none"/>
+<circle class="s0 gap" cx="421.5" cy="61.6" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="431.4" cy="87.1" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="441.3" cy="100.5" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="451.2" cy="134.8" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="461.1" cy="146.6" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="471.0" cy="163.6" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="480.9" cy="180.2" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="490.8" cy="194.1" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="500.7" cy="206.0" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="510.6" cy="221.5" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="520.5" cy="232.8" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="530.4" cy="235.1" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="540.3" cy="233.2" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="550.2" cy="230.1" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="560.1" cy="235.5" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="569.9" cy="235.0" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="579.8" cy="235.3" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="589.7" cy="232.5" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="599.6" cy="231.1" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="609.5" cy="220.3" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="619.4" cy="204.9" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="629.3" cy="209.6" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="639.2" cy="200.5" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="649.1" cy="168.5" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="659.0" cy="165.5" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="668.9" cy="143.7" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="678.8" cy="126.0" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="688.7" cy="120.0" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="698.6" cy="73.3" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="708.5" cy="54.5" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<text class="ink" x="40.0" y="300.0" font-size="13" text-anchor="start" font-weight="700" fill="#15201f">Plot C</text>
+<line class="axis" x1="40.0" y1="520.0" x2="350.0" y2="520.0" stroke-width="1.5" stroke="#c3c9c6" fill="none"/>
+<line class="axis" x1="40.0" y1="310.0" x2="40.0" y2="520.0" stroke-width="1.5" stroke="#c3c9c6" fill="none"/>
+<circle class="s0 gap" cx="97.7" cy="324.5" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="112.2" cy="418.8" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="277.3" cy="391.0" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="134.9" cy="361.5" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="124.4" cy="451.8" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="52.8" cy="372.5" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="58.2" cy="505.5" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="216.3" cy="442.2" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="107.3" cy="414.9" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="222.3" cy="339.8" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="148.6" cy="404.8" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="174.8" cy="414.9" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="337.2" cy="473.7" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="184.6" cy="465.3" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="213.7" cy="450.3" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="307.4" cy="415.3" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="88.0" cy="428.4" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="78.8" cy="480.2" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="320.9" cy="340.9" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="291.8" cy="387.9" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="109.4" cy="470.0" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="90.2" cy="452.5" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="266.6" cy="377.8" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="331.1" cy="333.8" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="92.4" cy="483.3" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="334.3" cy="390.5" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="312.5" cy="457.6" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="223.0" cy="330.0" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="164.6" cy="357.3" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="62.6" cy="477.3" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<text class="ink" x="410.0" y="300.0" font-size="13" text-anchor="start" font-weight="700" fill="#15201f">Plot D</text>
+<line class="axis" x1="410.0" y1="520.0" x2="720.0" y2="520.0" stroke-width="1.5" stroke="#c3c9c6" fill="none"/>
+<line class="axis" x1="410.0" y1="310.0" x2="410.0" y2="520.0" stroke-width="1.5" stroke="#c3c9c6" fill="none"/>
+<circle class="s0 gap" cx="421.7" cy="503.9" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="422.7" cy="503.9" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="426.7" cy="505.5" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="438.4" cy="503.0" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="457.4" cy="493.7" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="509.6" cy="481.3" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="519.2" cy="472.7" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="538.3" cy="471.4" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="557.3" cy="461.3" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="575.9" cy="452.7" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="583.7" cy="444.5" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="587.1" cy="446.3" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="602.3" cy="436.9" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="616.6" cy="416.8" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="618.3" cy="412.8" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="621.2" cy="412.5" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="622.0" cy="410.1" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="629.8" cy="407.2" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="631.7" cy="408.9" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="631.7" cy="406.0" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="647.3" cy="393.3" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="648.1" cy="395.2" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="668.6" cy="376.8" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="670.9" cy="373.8" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="679.4" cy="359.6" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="679.5" cy="358.8" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="682.3" cy="358.0" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="683.7" cy="349.8" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="697.6" cy="338.5" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="708.3" cy="324.5" r="4" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+</svg>
+</div><figcaption>The axes are unlabelled on purpose: the question is about the pattern, not the values.</figcaption></figure>
+<p><strong>11.</strong> Which matching is correct?</p>
+<ul><li><strong>(A)</strong> A: −0.97 · B: 0.96 · C: 0.34 · D: 0.02</li><li><strong>(B)</strong> A: −0.97 · B: 0.02 · C: 0.34 · D: 0.96</li><li><strong>(C)</strong> A: 0.02 · B: −0.97 · C: 0.96 · D: 0.34</li><li><strong>(D)</strong> A: −0.97 · B: 0.34 · C: 0.02 · D: 0.96</li><li><strong>(E)</strong> A: 0.96 · B: 0.02 · C: 0.34 · D: −0.97</li></ul>
+<p><strong>12.</strong> Plot B has <em>r</em> = 0.02. Which statement about Plot B is true?</p>
+<ul><li><strong>(A)</strong> There is no relationship between the two variables.</li><li><strong>(B)</strong> There is a weak linear association, so the relationship between the variables is weak.</li><li><strong>(C)</strong> There is no linear association, but there is a strong non-linear relationship: y is high at both ends of the x-range and low in the middle.</li><li><strong>(D)</strong> The correlation must have been calculated wrongly. The points follow a clear pattern, so <em>r</em> should be close to 1.</li><li><strong>(E)</strong> About 2% of the points lie on a straight line.</li></ul>
+<p><strong>13.</strong> Plot D has <em>r</em> = 0.96. A student concludes: <em>"Since r is so close to 1, a straight line is the right model for these data."</em> Which is the best response?</p>
+<ul><li><strong>(A)</strong> Correct: any <em>r</em> above 0.9 shows the relationship is linear.</li><li><strong>(B)</strong> Correct, provided the association is positive.</li><li><strong>(C)</strong> Incorrect, because <em>r</em> should be exactly 1 before a line is used.</li><li><strong>(D)</strong> Incorrect. The points curve upwards, rising more steeply as x increases. A correlation close to 1 does not necessarily mean a linear model is appropriate; the scatterplot shows the form.</li><li><strong>(E)</strong> Incorrect, because a correlation this high must mean there is an error in the data.</li></ul>
+<hr>
+<h2>Questions 14–15 · Where <em>r</em> comes from</h2>
+<p><strong>14.</strong> For five students, x is the number of hours spent revising and y is the test score. Their z-scores are:</p>
+<div class="tbl"><table><thead><tr><th>Student</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th></tr></thead><tbody><tr><td>z-score for x</td><td>−1.13</td><td>−0.57</td><td>−0.28</td><td>0.57</td><td>1.41</td></tr><tr><td>z-score for y</td><td>−1.29</td><td>0.32</td><td>−0.81</td><td>0.97</td><td>0.81</td></tr></tbody></table></div>
+<p>The correlation <em>r</em> is</p>
+<ul><li><strong>(A)</strong> 0.80</li><li><strong>(B)</strong> 0.64</li><li><strong>(C)</strong> 3.20</li><li><strong>(D)</strong> −0.80</li><li><strong>(E)</strong> 1.07</li></ul>
+<p><strong>15.</strong> On a scatterplot, a vertical line is drawn at x̄ and a horizontal line at ȳ, dividing the plot into four sections. <strong>Most</strong> of the points fall in the <strong>top-left</strong> and <strong>bottom-right</strong> sections. What can you say about <em>r</em>?</p>
+<ul><li><strong>(A)</strong> It is positive, because most points lie in two of the four sections.</li><li><strong>(B)</strong> It is close to 0, because the points are spread over opposite corners.</li><li><strong>(C)</strong> Nothing, without the actual data values.</li><li><strong>(D)</strong> It is positive, because the top-left points have large y-values.</li><li><strong>(E)</strong> It is negative. In those two sections one z-score is positive and the other negative, so most of the products in the formula are negative.</li></ul>
+<hr>
+<h2>Questions 16–17 · Interpreting a correlation</h2>
+<p><strong>16.</strong> For 60 house fires in one city, the correlation between the <strong>number of firefighters sent</strong> and the <strong>cost of the damage</strong> is <em>r</em> = 0.81. A newspaper headline says: <em>"More firefighters cause more damage."</em> Which is the best assessment?</p>
+<ul><li><strong>(A)</strong> Justified, because 0.81 is a strong positive correlation.</li><li><strong>(B)</strong> Not justified. Correlation does not necessarily imply causation. Larger fires are likely both to have more firefighters sent and to cause more damage, so fire size offers another explanation for the association.</li><li><strong>(C)</strong> Not justified, because <em>r</em> would have to be exactly 1 to show causation.</li><li><strong>(D)</strong> Justified for these 60 fires, though not for fires in other cities.</li><li><strong>(E)</strong> Not justified, because the association is negative.</li></ul>
+<p><strong>17.</strong> For 50 teenagers, the correlation between <strong>daily screen time</strong> and <strong>hours of sleep</strong> is <em>r</em> = −0.64. Which is a correct interpretation?</p>
+<ul><li><strong>(A)</strong> Each extra hour of screen time reduces sleep by 0.64 hours.</li><li><strong>(B)</strong> 64% of teenagers with more screen time sleep less.</li><li><strong>(C)</strong> There is a moderate, negative linear association: teenagers in this group with more daily screen time tend to get less sleep.</li><li><strong>(D)</strong> There is a strong association, because the correlation is negative.</li><li><strong>(E)</strong> Screen time causes teenagers to sleep less.</li></ul>
+<hr>
+<h2>Questions 18–20 · Separate questions</h2>
+<p><strong>18.</strong> Which of these data sets could be displayed as a <strong>scatterplot</strong>?</p>
+<ul><li><strong>(A)</strong> For each of 30 flats in a town, its floor area in square metres and its monthly rent in pounds</li><li><strong>(B)</strong> The heights of 20 boys and, separately, the heights of 20 girls</li><li><strong>(C)</strong> For each of 40 students, their favourite sport and the hours of exercise they did last week</li><li><strong>(D)</strong> The weekly sales, in pounds, of five different products</li><li><strong>(E)</strong> A list of the ages of 40 members of a club</li></ul>
+<p><strong>19.</strong> A motoring magazine recorded the <strong>engine size</strong> and <strong>fuel use</strong> of 20 vehicles. The 12 vehicles with engines under 2 litres are cars; the 8 with larger engines are vans.</p>
+<figure><div class="figscroll"><svg viewBox="0 0 640 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Scatterplot of fuel use against engine size for 20 vehicles" font-family="Public Sans, system-ui, sans-serif">
+<style>
+  .ink   { fill: #15201f; }
+  .ink2  { fill: #4a5654; }
+  .ink3  { fill: #6f7b79; }
+  .axis  { stroke: #c3c9c6; }
+  .grid  { stroke: #dcdfdd; }
+  .gap   { stroke: #ffffff; }
+  @media (prefers-color-scheme: dark) {
+    .ink  { fill: #e9edeb; }
+    .ink2 { fill: #a5b0ad; }
+    .ink3 { fill: #7e8a87; }
+    .axis { stroke: #3a4644; }
+    .grid { stroke: #2a3533; }
+    .gap  { stroke: #182120; }
+  }
+
+  .s0 { fill: #2a78d6; }
+  .s1 { fill: #eb6834; }
+  @media (prefers-color-scheme: dark) {
+    .s0 { fill: #3987e5; }
+    .s1 { fill: #d95926; }
+  }
+</style>
+<line class="grid" x1="80.0" y1="24.0" x2="80.0" y2="330.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="80.0" y="347.0" font-size="11.5" text-anchor="middle" fill="#6f7b79">0.5</text>
+<line class="grid" x1="168.3" y1="24.0" x2="168.3" y2="330.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="168.3" y="347.0" font-size="11.5" text-anchor="middle" fill="#6f7b79">1.0</text>
+<line class="grid" x1="256.7" y1="24.0" x2="256.7" y2="330.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="256.7" y="347.0" font-size="11.5" text-anchor="middle" fill="#6f7b79">1.5</text>
+<line class="grid" x1="345.0" y1="24.0" x2="345.0" y2="330.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="345.0" y="347.0" font-size="11.5" text-anchor="middle" fill="#6f7b79">2.0</text>
+<line class="grid" x1="433.3" y1="24.0" x2="433.3" y2="330.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="433.3" y="347.0" font-size="11.5" text-anchor="middle" fill="#6f7b79">2.5</text>
+<line class="grid" x1="521.7" y1="24.0" x2="521.7" y2="330.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="521.7" y="347.0" font-size="11.5" text-anchor="middle" fill="#6f7b79">3.0</text>
+<line class="grid" x1="610.0" y1="24.0" x2="610.0" y2="330.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="610.0" y="347.0" font-size="11.5" text-anchor="middle" fill="#6f7b79">3.5</text>
+<line class="grid" x1="80.0" y1="330.0" x2="610.0" y2="330.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="73.0" y="334.0" font-size="11.5" text-anchor="end" fill="#6f7b79">4</text>
+<line class="grid" x1="80.0" y1="296.0" x2="610.0" y2="296.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="73.0" y="300.0" font-size="11.5" text-anchor="end" fill="#6f7b79">5</text>
+<line class="grid" x1="80.0" y1="262.0" x2="610.0" y2="262.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="73.0" y="266.0" font-size="11.5" text-anchor="end" fill="#6f7b79">6</text>
+<line class="grid" x1="80.0" y1="228.0" x2="610.0" y2="228.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="73.0" y="232.0" font-size="11.5" text-anchor="end" fill="#6f7b79">7</text>
+<line class="grid" x1="80.0" y1="194.0" x2="610.0" y2="194.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="73.0" y="198.0" font-size="11.5" text-anchor="end" fill="#6f7b79">8</text>
+<line class="grid" x1="80.0" y1="160.0" x2="610.0" y2="160.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="73.0" y="164.0" font-size="11.5" text-anchor="end" fill="#6f7b79">9</text>
+<line class="grid" x1="80.0" y1="126.0" x2="610.0" y2="126.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="73.0" y="130.0" font-size="11.5" text-anchor="end" fill="#6f7b79">10</text>
+<line class="grid" x1="80.0" y1="92.0" x2="610.0" y2="92.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="73.0" y="96.0" font-size="11.5" text-anchor="end" fill="#6f7b79">11</text>
+<line class="grid" x1="80.0" y1="58.0" x2="610.0" y2="58.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="73.0" y="62.0" font-size="11.5" text-anchor="end" fill="#6f7b79">12</text>
+<line class="grid" x1="80.0" y1="24.0" x2="610.0" y2="24.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="73.0" y="28.0" font-size="11.5" text-anchor="end" fill="#6f7b79">13</text>
+<line class="axis" x1="80.0" y1="330.0" x2="610.0" y2="330.0" stroke-width="1.5" stroke="#c3c9c6" fill="none"/>
+<line class="axis" x1="80.0" y1="24.0" x2="80.0" y2="330.0" stroke-width="1.5" stroke="#c3c9c6" fill="none"/>
+<circle class="s0 gap" cx="274.3" cy="224.6" r="5" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="309.7" cy="204.2" r="5" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="292.0" cy="207.6" r="5" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="168.3" cy="248.4" r="5" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="327.3" cy="231.4" r="5" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="327.3" cy="279.0" r="5" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="256.7" cy="268.8" r="5" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="256.7" cy="238.2" r="5" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="168.3" cy="268.8" r="5" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="221.3" cy="207.6" r="5" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="203.7" cy="255.2" r="5" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="309.7" cy="275.6" r="5" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="504.0" cy="146.4" r="5" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="433.3" cy="78.4" r="5" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="451.0" cy="139.6" r="5" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="557.0" cy="78.4" r="5" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="468.7" cy="68.2" r="5" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="504.0" cy="95.4" r="5" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="451.0" cy="71.6" r="5" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="521.7" cy="68.2" r="5" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<text class="ink2" x="345.0" y="370.0" font-size="12.5" text-anchor="middle" fill="#4a5654">Engine size (litres)</text>
+<text class="ink2" x="36.0" y="177.0" font-size="12.5" text-anchor="middle" transform="rotate(-90 36.0 177.0)" fill="#4a5654">Fuel use (litres per 100 km)</text>
+</svg>
+</div><figcaption>Fuel use is in litres per 100 km, so a higher value means the vehicle uses more fuel.</figcaption></figure>
+<p>Which statement is <strong>best</strong> supported by the scatterplot?</p>
+<ul><li><strong>(A)</strong> There is a strong positive linear association throughout: within each group, vehicles with bigger engines clearly use more fuel.</li><li><strong>(B)</strong> There is no association between engine size and fuel use, because the points form two separate groups.</li><li><strong>(C)</strong> The eight vans are outliers.</li><li><strong>(D)</strong> The points form two clusters: engines of 1.0 to 1.9 litres using about 5.5 to 7.7 litres per 100 km, and engines of 2.5 to 3.2 litres using about 9.4 to 11.7. Every vehicle in the large-engine cluster used more fuel than every vehicle in the small-engine cluster.</li><li><strong>(E)</strong> The correlation must be close to 0, because there are two clusters.</li></ul>
+<p><strong>20.</strong> A student writes this description of the used-car scatterplot from questions 1–6. <strong>Exactly one</strong> of the five statements is incorrect.</p>
+<blockquote><strong>I.</strong> Age is the explanatory variable and is plotted on the x-axis.<br><strong>II.</strong> As age increases, price tends to decrease.<br><strong>III.</strong> The 3-year-old car that sold for £6,000 does not fit the general pattern.<br><strong>IV.</strong> The 14-year-old car is far from the others in age, but it fits the pattern.<br><strong>V.</strong> Because <em>r</em> = −0.84 is negative, the association is weak.</blockquote>
+<p>Which statement is incorrect?</p>
+<ul><li><strong>(A)</strong> I</li><li><strong>(B)</strong> II</li><li><strong>(C)</strong> III</li><li><strong>(D)</strong> IV</li><li><strong>(E)</strong> V</li></ul>
+<hr>
+<hr>
+<h1>Answers and explanations</h1>
+<p>Each explanation says why the key is right <strong>and what misconception each wrong option represents.</strong> A wrong answer tells you which idea to reteach, and the diagnostic table at the end maps every distractor to a specific gap.</p>
+<blockquote><strong>Answers are collapsed.</strong> Click a question to open it, or press <strong><code>e</code></strong> to open every explanation at once. That keeps the key hidden while the test is on a shared screen.</blockquote>
+<h2>Questions 1–6 · Used cars</h2>
+<details>
+<summary><strong>Question 1</strong></summary>
+<p><strong>Answer: (C)</strong></p>
+<p>The dealer's question is how age relates to price, so age is used to <strong>explain or predict</strong> price. CED 5.1.A.2 puts the explanatory variable on the x-axis and the response variable on the y-axis.</p>
+<ul><li><strong>(A)</strong> reverses the roles. Price does not explain how old a car is.</li><li><strong>(B)</strong> is the "either way round" error. The roles come from the question being asked, and the axes follow the roles.</li><li><strong>(D)</strong> invents a rule about control. A variable is explanatory because of its role in the question, not because someone sets it.</li><li><strong>(E)</strong> chooses axes by the size of the numbers, which has nothing to do with the roles of the variables.</li></ul>
+</details>
+<details>
+<summary><strong>Question 2</strong></summary>
+<p><strong>Answer: (A)</strong></p>
+<p>CED 5.1.B.3: a negative association means that as the explanatory variable increases, the response variable <strong>tends to</strong> decrease. (A) says that, in context.</p>
+<ul><li><strong>(B)</strong> drops "tend to" and turns a pattern into a rule. Cars of the same age sold for different prices, and the 3-year-old car at £6,000 sold for less than several much older cars. An association describes a tendency, not a guarantee.</li><li><strong>(C)</strong> is correct and earns nothing. The Session 4 script is explicit that "positive" or "negative" on its own does not earn the direction mark: say what tends to happen to what.</li><li><strong>(D)</strong> reverses both the roles of the variables and the direction.</li><li><strong>(E)</strong> gets the direction right and then draws a wrong conclusion about the variables. The direction of a pattern says nothing about which variable is explanatory.</li></ul>
+</details>
+<details>
+<summary><strong>Question 3</strong></summary>
+<p><strong>Answer: (D)</strong></p>
+<p>CED 5.1.B.5: unusual features include <em>points that don't fit in the general pattern of association</em>. The 3-year-old car sold for £6,000. A line through the other 14 cars predicts about £18,300 for a car of that age, so it sits about £12,000 below the pattern.</p>
+<ul><li><strong>(A)</strong> is the trap this scenario was built around, and the one the Session 4 script opens with. The 14-year-old car is extreme <strong>in age</strong>, but it sits right on the pattern: the other cars predict about £2,100 for that age, and it sold for £2,400. In a scatterplot, <em>unusual</em> means <strong>off the pattern</strong>, not extreme on one axis.</li><li><strong>(B)</strong> confuses the largest value with an unusual one. The newest car being the most expensive is exactly what the pattern predicts.</li><li><strong>(C)</strong> treats a shared x-value as unusual. Several individuals often share a value.</li><li><strong>(E)</strong> checks each variable's range separately. The £6,000 car is inside both ranges, and that is why it has to be found by looking at the pattern, not at the axes.</li></ul>
+</details>
+<details>
+<summary><strong>Question 4</strong></summary>
+<p><strong>Answer: (B)</strong></p>
+<p>The association is negative, so <em>r</em> is negative. Fourteen of the points lie very close to a straight line, and one lies well off it, so the correlation is strong but not close to −1. Calculated from the 15 cars, <em>r</em> = <strong>−0.84</strong>.</p>
+<ul><li><strong>(A)</strong> has the right strength and the wrong sign.</li><li><strong>(C)</strong> and <strong>(E)</strong> describe a weak association. This scatterplot has a clear, tight pattern.</li><li><strong>(D)</strong> would mean every point lay exactly on a line. The £6,000 car rules that out. For interest: without that one car, the other 14 have <em>r</em> = −0.998.</li></ul>
+</details>
+<details>
+<summary><strong>Question 5</strong></summary>
+<p><strong>Answer: (E)</strong></p>
+<p>It covers all four features of CED 5.1.B.1, <strong>in context</strong>, with the evidence for each:</p>
+<div class="tbl"><table><thead><tr><th>Feature</th><th>The words in (E)</th></tr></thead><tbody><tr><td>Direction</td><td>older cars tend to sell for lower prices, negative</td></tr><tr><td>Form</td><td>linear: price falls at a roughly steady rate</td></tr><tr><td>Strength</td><td>strong: apart from one car, points lie close to the pattern</td></tr><tr><td>Unusual features</td><td>the 3-year-old car at £6,000</td></tr><tr class="tot"><td><strong>Context</strong></td><td>age, price, cars in this sample</td></tr></tbody></table></div>
+<ul><li><strong>(A)</strong> names three features with no context and no unusual features.</li><li><strong>(B)</strong> gives the direction and a correlation, and nothing about form, strength or the unusual car.</li><li><strong>(C)</strong> describes the association well and then claims <strong>causation</strong>, which a correlation cannot show (CED 5.2.A.4). Age may well be part of the reason, but the claim goes beyond what the data can establish. Mileage and condition change with age too.</li><li><strong>(D)</strong> names the wrong unusual point. This is question 3's trap inside a description that is otherwise good, and it costs the mark.</li></ul>
+</details>
+<details>
+<summary><strong>Question 6</strong></summary>
+<p><strong>Answer: (B)</strong></p>
+<p>The claim is about <strong>cars more than 8 years old</strong>, so check exactly those points. There are four, and all four are below the £10,000 gridline. CED 5.1.C.1: a scatterplot can reveal information that justifies a claim, and the justification quotes that information.</p>
+<ul><li><strong>(A)</strong> answers a different claim. The £6,000 car is 3 years old, so the claim says nothing about it.</li><li><strong>(C)</strong> reasons from the correlation. A negative <em>r</em> describes a tendency; it cannot show that <strong>every</strong> older car sold below a threshold. Only the individual points can.</li><li><strong>(D)</strong> includes the 8-year-old car. "More than 8 years old" excludes it. Read the boundary in the claim exactly.</li><li><strong>(E)</strong> is too cautious. The scatterplot shows every car's age and approximate price, which is enough here.</li></ul>
+</details>
+<h2>Questions 7–10 · What a correlation says</h2>
+<details>
+<summary><strong>Question 7</strong></summary>
+<p><strong>Answer: (D)</strong></p>
+<p>CED 5.2.A.1: <em>r</em> is always between −1 and 1, inclusive. A value of −1.20 is impossible, so it must be a mistake in the calculation or in the report.</p>
+<ul><li><strong>(A)</strong> is possible: no linear association.</li><li><strong>(B)</strong> and <strong>(E)</strong> are possible: a perfect linear association (5.2.A.2). "Inclusive" means the endpoints are allowed.</li><li><strong>(C)</strong> is possible, and very strong.</li></ul>
+</details>
+<details>
+<summary><strong>Question 8</strong></summary>
+<p><strong>Answer: (A)</strong></p>
+<p>CED 5.2.A.2: strength is <strong>how close r is to −1 or 1</strong>. The sign gives the direction and has nothing to do with strength. |−0.85| = 0.85 is larger than 0.62, so Study X's association is stronger.</p>
+<ul><li><strong>(B)</strong> and <strong>(E)</strong> treat the sign as strength. In (E), −0.85 is indeed less than 0.62 as a number, and that is irrelevant: strength compares distances from 0.</li><li><strong>(C)</strong> refuses to compare two values that are clearly different.</li><li><strong>(D)</strong> is wrong. Strength can be compared across directions, because it depends only on how close each <em>r</em> is to ±1.</li></ul>
+</details>
+<details>
+<summary><strong>Question 9</strong></summary>
+<p><strong>Answer: (C)</strong></p>
+<p>CED 5.2.A.1: the correlation coefficient is <strong>unit-free</strong>. The Session 4 script showed why using its formula: every value is turned into a z-score, and a z-score is the same whether distances are measured in centimetres or inches. Converting units changes the numbers but not their positions relative to the mean and SD, so <em>r</em> stays 0.72.</p>
+<ul><li><strong>(A)</strong> and <strong>(B)</strong> apply the conversion factor to <em>r</em>. (A) also gives a value above 1, which question 7 has just shown is impossible.</li><li><strong>(D)</strong> doesn't recognise that the unit-free property already answers the question.</li><li><strong>(E)</strong> invents a condition. Converting one variable, or both, or neither, leaves <em>r</em> the same.</li></ul>
+</details>
+<details>
+<summary><strong>Question 10</strong></summary>
+<p><strong>Answer: (E)</strong></p>
+<p>CED 5.1.B.4: strength is <strong>how closely the points follow the general pattern</strong>. Plot P's points sit almost exactly on a gentle line (<em>r</em> = 0.99). Plot Q's pattern climbs more steeply, but its points are widely scattered around it (<em>r</em> = 0.73).</p>
+<ul><li><strong>(A)</strong> is the designed trap: steepness is not strength. A shallow pattern can be very strong, and a steep one weak. Steepness is the <strong>slope</strong>, which Session 5 introduces as a separate idea.</li><li><strong>(B)</strong> judges strength by how large the y-values are.</li><li><strong>(C)</strong> notices that both are positive and linear and stops. Direction and form can match while strength differs.</li><li><strong>(D)</strong> is too cautious. Strength is read from the scatterplot first; <em>r</em> only puts a number on it.</li></ul>
+</details>
+<h2>Questions 11–13 · Four scatterplots</h2>
+<details>
+<summary><strong>Question 11</strong></summary>
+<p><strong>Answer: (B)</strong></p>
+<div class="tbl"><table><thead><tr><th>Plot</th><th>What it shows</th><th><em>r</em></th></tr></thead><tbody><tr><td>A</td><td>strong, negative, linear</td><td>−0.97</td></tr><tr><td>B</td><td>a U-shape: strong, but not linear</td><td>0.02</td></tr><tr><td>C</td><td>weak, positive</td><td>0.34</td></tr><tr><td>D</td><td>a curve rising more and more steeply</td><td>0.96</td></tr></tbody></table></div>
+<ul><li><strong>(A)</strong> gives B the high correlation because its pattern is so clear. <em>r</em> measures <strong>linear</strong> association only, and a U-shape has none: the falling left half and the rising right half cancel out.</li><li><strong>(C)</strong> swaps A and B and C and D. Most likely it came from reading the plots in the wrong order.</li><li><strong>(D)</strong> gives the scattered Plot C a correlation of 0.02 and the U-shape 0.34. Plot C has a visible upward drift, and B has no linear trend at all.</li><li><strong>(E)</strong> reverses the signs of A and D. Plot A falls from left to right, so its correlation is negative.</li></ul>
+</details>
+<details>
+<summary><strong>Question 12</strong></summary>
+<p><strong>Answer: (C)</strong></p>
+<p>CED 5.2.A.2: <em>r</em> = 0 indicates <strong>no linear association</strong>. It does not mean no association. Plot B's points follow a clear U-shaped pattern, so knowing x tells you a great deal about y, just not in a straight-line way. This is the café's total drinks from Session 4 (<em>r</em> = −0.01): busy on cold days and on hot days, quiet in between.</p>
+<ul><li><strong>(A)</strong> is the exact error the CED statement is worded to prevent. "No linear association" and "no relationship" are different claims.</li><li><strong>(B)</strong> treats a correlation near 0 as a weak linear association and then concludes the whole relationship is weak.</li><li><strong>(D)</strong> thinks any clear pattern should give an <em>r</em> close to 1. <em>r</em> only rewards straight-line patterns.</li><li><strong>(E)</strong> reads <em>r</em> as a percentage of points. It is not a percentage of anything.</li></ul>
+</details>
+<details>
+<summary><strong>Question 13</strong></summary>
+<p><strong>Answer: (D)</strong></p>
+<p>CED 5.2.A.3: <em>a correlation coefficient close to −1 or 1 does not necessarily mean that a linear model is appropriate.</em> Plot D's points lie close to a smooth curve, so <em>r</em> is high. But the curve bends: at small x it rises slowly and at large x steeply. A straight line would miss systematically at both ends and in the middle. This is the café's iced drinks from Session 4 (<em>r</em> = 0.96).</p>
+<ul><li><strong>(A)</strong> and <strong>(B)</strong> treat a high <em>r</em> as proof of linear form. Form is read from the <strong>scatterplot</strong>; <em>r</em> cannot tell you it.</li><li><strong>(C)</strong> sets an impossible standard. Real data never give exactly 1.</li><li><strong>(E)</strong> treats a high correlation as suspicious. Many genuine associations have correlations this high.</li></ul>
+</details>
+<h2>Questions 14–15 · Where <em>r</em> comes from</h2>
+<details>
+<summary><strong>Question 14</strong></summary>
+<p><strong>Answer: (A)</strong></p>
+<p>Multiply each student's two z-scores, add the products, and divide by <em>n</em> − 1 = 4:</p>
+<div class="tbl"><table><thead><tr><th>Student</th><th>z for x</th><th>z for y</th><th>Product</th></tr></thead><tbody><tr><td>1</td><td>−1.13</td><td>−1.29</td><td>1.46</td></tr><tr><td>2</td><td>−0.57</td><td>0.32</td><td>−0.18</td></tr><tr><td>3</td><td>−0.28</td><td>−0.81</td><td>0.23</td></tr><tr><td>4</td><td>0.57</td><td>0.97</td><td>0.55</td></tr><tr><td>5</td><td>1.41</td><td>0.81</td><td>1.14</td></tr><tr class="tot"><td><strong>Total</strong></td><td></td><td></td><td><strong>3.20</strong></td></tr></tbody></table></div>
+<p><em>r</em> = 3.20 ÷ 4 = <strong>0.80</strong>. (From the unrounded data, <em>r</em> = 0.7977, which also rounds to 0.80.)</p>
+<ul><li><strong>(B)</strong> 0.64 divides by <em>n</em> = 5 instead of <em>n</em> − 1 = 4. The formula uses <em>n</em> − 1, just like the sample standard deviation in Session 3.</li><li><strong>(C)</strong> 3.20 forgets to divide at all, which gives a "correlation" above 1.</li><li><strong>(D)</strong> gets the sign wrong. Student 2's product is negative, but the total is positive.</li><li><strong>(E)</strong> 1.07 divides by 3, and a correlation above 1 is impossible (question 7).</li></ul>
+</details>
+<details>
+<summary><strong>Question 15</strong></summary>
+<p><strong>Answer: (E)</strong></p>
+<p>A point in the <strong>top-left</strong> section has x below x̄ and y above ȳ: a negative z-score for x and a positive z-score for y, so their product is negative. A point in the <strong>bottom-right</strong> has the reverse, and its product is negative too. If most points lie in those two sections, most of the products are negative, so their sum is negative and so is <em>r</em>. This is how the Session 4 script builds <em>r</em> from Session 3's z-scores.</p>
+<ul><li><strong>(A)</strong> counts sections instead of looking at which sections they are. Top-right and bottom-left would give a positive <em>r</em>; top-left and bottom-right give a negative one.</li><li><strong>(B)</strong> thinks opposite corners cancel out. They would only cancel if points were spread across <strong>all four</strong> sections.</li><li><strong>(C)</strong> is too cautious. The signs of the products are enough to fix the sign of <em>r</em>.</li><li><strong>(D)</strong> looks at one section alone. A large y-value with a small x-value is exactly what makes a product negative.</li></ul>
+</details>
+<h2>Questions 16–17 · Interpreting a correlation</h2>
+<details>
+<summary><strong>Question 16</strong></summary>
+<p><strong>Answer: (B)</strong></p>
+<p>CED 5.2.A.4: correlation does not necessarily imply causation. Here the other explanation is easy to see. Bigger fires get more firefighters, and bigger fires do more damage. Fire size is associated with both variables, so it offers another explanation for the association. This is exactly the St Mary's shifts in Session 4, where busier evenings had both more doctors and longer waits.</p>
+<ul><li><strong>(A)</strong> reads causation into strength. A strong correlation is still a correlation.</li><li><strong>(C)</strong> sets a threshold that does not exist. Even <em>r</em> = 1 would not show causation, because causation is a question about how the data were produced, not about how closely points follow a line. That is the subject of Sessions 6 and 7.</li><li><strong>(D)</strong> limits the claim to these fires but keeps the causal conclusion. The problem is not the population; it is the causal claim.</li><li><strong>(E)</strong> is factually wrong: 0.81 is positive.</li></ul>
+</details>
+<details>
+<summary><strong>Question 17</strong></summary>
+<p><strong>Answer: (C)</strong></p>
+<p>It gives the strength (moderate, by the course guide: 0.64 is between about 0.5 and 0.8), the direction (negative), the form the correlation measures (linear) and the context (screen time and sleep, for these teenagers), using "tend to".</p>
+<ul><li><strong>(A)</strong> reads <em>r</em> as a <strong>slope</strong>, a change in y per unit of x. <em>r</em> has no units (question 9), so it cannot be "hours of sleep per hour of screen time". The slope of a regression line is Session 5.</li><li><strong>(B)</strong> reads <em>r</em> as a percentage of people. It is not a percentage of anything.</li><li><strong>(D)</strong> treats the negative sign as strength (question 8).</li><li><strong>(E)</strong> claims causation from an observational association (question 16).</li></ul>
+</details>
+<h2>Questions 18–20 · Separate questions</h2>
+<details>
+<summary><strong>Question 18</strong></summary>
+<p><strong>Answer: (A)</strong></p>
+<p>CED 5.1.A.1: a bivariate quantitative data set consists of <strong>ordered pairs</strong> from two <strong>quantitative</strong> variables, <strong>collected from the same individuals</strong>. Each flat gives one pair: floor area and rent, both quantitative. That is 30 points.</p>
+<ul><li><strong>(B)</strong> has one quantitative variable measured on two separate groups. There are no pairs: no boy is matched with a girl. This is a job for side-by-side boxplots or dotplots, as in Session 3.</li><li><strong>(C)</strong> pairs a categorical variable (favourite sport) with a quantitative one. A scatterplot needs two quantitative variables.</li><li><strong>(D)</strong> is one variable across five categories, which calls for a bar chart.</li><li><strong>(E)</strong> is a single quantitative variable, which calls for a dotplot, histogram or boxplot.</li></ul>
+</details>
+<details>
+<summary><strong>Question 19</strong></summary>
+<p><strong>Answer: (D)</strong></p>
+<p>CED 5.1.B.5 lists <strong>clusters</strong> as an unusual feature. The two groups are the most visible thing in this scatterplot, and (D) describes them with numbers read from the plot. The claim at the end is justified by those numbers: the lowest fuel use among the large-engine vehicles (9.4) is above the highest among the small-engine ones (7.7).</p>
+<ul><li><strong>(A)</strong> overreads the plot. The overall upward drift comes from the gap between the two clusters. Inside each cluster, the points show no clear pattern. (For interest: the correlation is 0.87 for all 20 vehicles, but only 0.13 among the cars and 0.06 among the vans.)</li><li><strong>(B)</strong> confuses clusters with no association. Moving from one cluster to the other, bigger engines clearly go with more fuel.</li><li><strong>(C)</strong> labels a whole group as outliers. Eight of twenty points are a cluster, not unusual individuals. This is the same error as calling half a data set outliers in Session 2.</li><li><strong>(E)</strong> is wrong in fact: the overall correlation is strongly positive. Clusters do not force <em>r</em> towards 0.</li></ul>
+</details>
+<details>
+<summary><strong>Question 20</strong></summary>
+<p><strong>Answer: (E)</strong></p>
+<p>Statement V treats the <strong>sign</strong> of <em>r</em> as its <strong>strength</strong>. <em>r</em> = −0.84 is a strong association, because it is close to −1. The negative sign gives only the direction (question 8).</p>
+<ul><li><strong>(A)</strong> I is correct (question 1).</li><li><strong>(B)</strong> II is correct, with "tends to" doing its job (question 2).</li><li><strong>(C)</strong> III is correct: this is the unusual point (question 3).</li><li><strong>(D)</strong> IV is correct: the 14-year-old car is extreme in age but on the pattern (question 3, option A).</li></ul>
+</details>
+<hr>
+<hr>
+<h1>Marking and diagnosis</h1>
+<h2>Score</h2>
+<p>One mark per question. <strong>Total 20.</strong></p>
+<div class="tbl"><table><thead><tr><th>Score</th><th>Reading</th></tr></thead><tbody><tr><td>17–20</td><td>Session 4 is secure. Move to Session 5 without revisiting.</td></tr><tr><td>13–16</td><td>Solid. Reteach only the specific items missed, using the table below.</td></tr><tr><td>9–12</td><td>The vocabulary is there, but what <em>r</em> does and does not say is not yet reliable. Re-run the Activity debrief and Scenario B before moving on.</td></tr><tr><td>0–8</td><td>Reteach Session 4. Do not move on to Session 5: the least-squares line, <em>r</em>², residuals and residual plots all assume that the form and strength of a scatterplot can be read confidently.</td></tr></tbody></table></div>
+<h2>What each miss points to</h2>
+<div class="tbl"><table><thead><tr><th>Missed</th><th>The gap</th><th>Where to reteach</th></tr></thead><tbody><tr><td>1, 18</td><td>Which variable goes where, and what makes bivariate quantitative data</td><td>Session 4, <em>Two variables, one student each (5.1.A)</em> and <em>Building the scatterplot (5.1.A)</em></td></tr><tr><td>2, 5, 20</td><td>A full description: direction with "tend to", form, strength and unusual features, in context</td><td>Session 4, <em>Describing the association (5.1.B)</em></td></tr><tr><td>3</td><td>Unusual means <strong>off the pattern</strong>, not extreme on one axis</td><td>Session 4, <em>Describing the association (5.1.B)</em>, the 33-minute and 68-minute journeys</td></tr><tr><td>6, 19</td><td>Justifying a claim from the points themselves, including clusters</td><td>Session 4, <em>Justify a claim (5.1.C)</em>, and the solo case, <em>Solo case — the library</em></td></tr><tr><td>10</td><td>Strength is closeness to the pattern, not steepness</td><td>Session 4, <em>Describing the association (5.1.B)</em>, and the Sketch and Switch activity</td></tr><tr><td>4, 7, 8, 11</td><td>Reading <em>r</em>: its range, and sign against strength</td><td>Session 4, <em>Correlation: one number for a linear association (5.2.A)</em>; the Guess the Correlation tool</td></tr><tr><td>9</td><td><em>r</em> is unit-free</td><td>Session 4, <em>What r does not change with: units (5.2.A.1)</em></td></tr><tr><td>14, 15</td><td><em>r</em> from z-scores: the products, their signs, and dividing by <em>n</em> − 1</td><td>Session 4, <em>Where r comes from: z-scores, from Session 3</em></td></tr><tr><td>12, 13</td><td><em>r</em> measures <strong>linear</strong> association only, in both directions</td><td>Session 4, <em>The debrief question that makes this topic 5.2</em> (the café's U-shape and curve)</td></tr><tr><td>16, 17</td><td>Correlation is not causation, and <em>r</em> is not a slope</td><td>Session 4, <em>What else changes from shift to shift</em> and <em>What the data can and cannot support</em></td></tr></tbody></table></div>
+<blockquote><strong>Three misses worth treating as urgent.</strong> <strong>Question 3, option (A)</strong>, the extreme-but-on-pattern point, comes straight back in Session 5, where the distinction between a point that fits the line and one that doesn't is what residuals measure. <strong>Question 12 or 13</strong>, reading <em>r</em> as if it described any pattern, leads to fitting straight lines to curves, which residual plots exist to catch. <strong>Question 16</strong>, causation from correlation, is marked on almost every free-response question about an observational study, and Sessions 6 and 7 build on it.</blockquote>
+<hr>
+<p><em>CED references: Topic 5.1 (5.1.A.1–2, 5.1.B.1–5, 5.1.C.1), Topic 5.2 (5.2.A.1–4). Course and Exam Description effective Fall 2026; exam reference information (formula sheet) 2026.</em></p>
+<p><em>All numbers in this test were computed and verified by script. That covers every correlation (the used cars, both strength plots, all four panels, the z-score table and the vehicle clusters), the prices of the cars more than 8 years old, the cluster boundaries, and each distractor's value recomputed from the error it represents.</em></p>
+</main>
+<script>window.COURSE_NAV={"kicker": "CED 5.1–5.2 · 20 questions", "title": "Session 4 Test", "map": [{"label": "Course", "items": [{"href": "index.html", "label": "Home", "current": false}, {"href": "plan.html", "label": "The 20-hour plan", "current": false}]}, {"label": "Block A · Describing one variable", "items": [{"href": "s01-tutor.html", "label": "Session 1 · Tutor", "current": false}, {"href": "s01-student.html", "label": "Session 1 · Student", "current": false}, {"href": "s01-test.html", "label": "Session 1 · Test", "current": false}, {"href": "s02-tutor.html", "label": "Session 2 · Tutor", "current": false}, {"href": "s02-student.html", "label": "Session 2 · Student", "current": false}, {"href": "s02-test.html", "label": "Session 2 · Test", "current": false}, {"href": "s03-tutor.html", "label": "Session 3 · Tutor", "current": false}, {"href": "s03-student.html", "label": "Session 3 · Student", "current": false}, {"href": "s03-test.html", "label": "Session 3 · Test", "current": false}]}, {"label": "Block B · Describing two variables", "items": [{"href": "s04-tutor.html", "label": "Session 4 · Tutor", "current": false}, {"href": "s04-student.html", "label": "Session 4 · Student", "current": false}, {"href": "s04-test.html", "label": "Session 4 · Test", "current": true}]}, {"label": "Interactive", "items": [{"href": "tools/unit1-explorer.html", "label": "Unit 1 Explorer", "current": false}, {"href": "tools/boxplot-builder.html", "label": "Boxplot Builder", "current": false}, {"href": "tools/guess-correlation.html", "label": "Guess the Correlation", "current": false}]}], "prev": {"href": "s04-student.html", "label": "Session 4 · Student"}, "next": {"href": "tools/unit1-explorer.html", "label": "Unit 1 Explorer"}, "variants": [{"href": "s04-tutor.html", "label": "Tutor", "current": false}, {"href": "s04-student.html", "label": "Student", "current": false}, {"href": "s04-test.html", "label": "Test", "current": true}]};</script>
+<script src="assets/course.js"></script>
+</body>
+</html>

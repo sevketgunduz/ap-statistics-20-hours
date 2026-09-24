@@ -76,7 +76,7 @@ The first half is **construction**: turning a table into a bar chart, a pie char
 
 The second half is **description**: saying what a distribution looks like in a way that earns marks. Students still get this wrong in April, because a full description requires **four** specific things, in context, and most people say two of them and stop.
 
-If you are short of time today, spend it on Part 5.
+Part 5 is where the marks are, so give it your full attention.
 
 ---
 

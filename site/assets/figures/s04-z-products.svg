@@ -1,0 +1,71 @@
+<svg viewBox="0 0 540 390" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The five students plotted as z-scores, with the product of z-scores for each" font-family="Public Sans, system-ui, sans-serif">
+<style>
+  .ink   { fill: #15201f; }
+  .ink2  { fill: #4a5654; }
+  .ink3  { fill: #6f7b79; }
+  .axis  { stroke: #c3c9c6; }
+  .grid  { stroke: #dcdfdd; }
+  .gap   { stroke: #ffffff; }
+  .surf  { fill: #ffffff; }
+  @media (prefers-color-scheme: dark) {
+    .ink  { fill: #e9edeb; }
+    .ink2 { fill: #a5b0ad; }
+    .ink3 { fill: #7e8a87; }
+    .axis { stroke: #3a4644; }
+    .grid { stroke: #2a3533; }
+    .gap  { stroke: #182120; }
+    .surf { fill: #182120; }
+  }
+
+  .s0 { fill: #2a78d6; }
+  .k0 { stroke: #2a78d6; }
+  .s1 { fill: #eb6834; }
+  .k1 { stroke: #eb6834; }
+  @media (prefers-color-scheme: dark) {
+    .s0 { fill: #3987e5; }
+    .k0 { stroke: #3987e5; }
+    .s1 { fill: #d95926; }
+    .k1 { stroke: #d95926; }
+  }
+</style>
+<line class="grid" x1="70.0" y1="26" x2="70.0" y2="346" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<line class="grid" x1="70" y1="346.0" x2="510" y2="346.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="70.0" y="362" font-size="11.5" text-anchor="middle" fill="#6f7b79">&#8722;2</text>
+<text class="ink3" x="63" y="350.0" font-size="11.5" text-anchor="end" fill="#6f7b79">&#8722;2</text>
+<line class="grid" x1="180.0" y1="26" x2="180.0" y2="346" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<line class="grid" x1="70" y1="266.0" x2="510" y2="266.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="180.0" y="362" font-size="11.5" text-anchor="middle" fill="#6f7b79">&#8722;1</text>
+<text class="ink3" x="63" y="270.0" font-size="11.5" text-anchor="end" fill="#6f7b79">&#8722;1</text>
+<line class="grid" x1="290.0" y1="26" x2="290.0" y2="346" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<line class="grid" x1="70" y1="186.0" x2="510" y2="186.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="290.0" y="362" font-size="11.5" text-anchor="middle" fill="#6f7b79">0</text>
+<text class="ink3" x="63" y="190.0" font-size="11.5" text-anchor="end" fill="#6f7b79">0</text>
+<line class="grid" x1="400.0" y1="26" x2="400.0" y2="346" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<line class="grid" x1="70" y1="106.0" x2="510" y2="106.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="400.0" y="362" font-size="11.5" text-anchor="middle" fill="#6f7b79">1</text>
+<text class="ink3" x="63" y="110.0" font-size="11.5" text-anchor="end" fill="#6f7b79">1</text>
+<line class="grid" x1="510.0" y1="26" x2="510.0" y2="346" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<line class="grid" x1="70" y1="26.0" x2="510" y2="26.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="510.0" y="362" font-size="11.5" text-anchor="middle" fill="#6f7b79">2</text>
+<text class="ink3" x="63" y="30.0" font-size="11.5" text-anchor="end" fill="#6f7b79">2</text>
+<line class="axis" x1="70" y1="346" x2="510" y2="346" stroke-width="1.5" stroke="#c3c9c6" fill="none"/>
+<line class="axis" x1="70" y1="26" x2="70" y2="346" stroke-width="1.5" stroke="#c3c9c6" fill="none"/>
+<line class="axis" x1="290.0" y1="26" x2="290.0" y2="346" stroke-width="2.4" stroke="#c3c9c6" fill="none"/>
+<line class="axis" x1="70" y1="186.0" x2="510" y2="186.0" stroke-width="2.4" stroke="#c3c9c6" fill="none"/>
+<text class="ink3" x="400.0" y="50.0" font-size="11.5" text-anchor="middle" fill="#6f7b79">both above the mean: product +</text>
+<text class="ink3" x="180.0" y="330.0" font-size="11.5" text-anchor="middle" fill="#6f7b79">both below the mean: product +</text>
+<text class="ink3" x="180.0" y="50.0" font-size="11.5" text-anchor="middle" fill="#6f7b79">product &#8722;</text>
+<text class="ink3" x="400.0" y="330.0" font-size="11.5" text-anchor="middle" fill="#6f7b79">product &#8722;</text>
+<circle class="s0 gap" cx="180.0" cy="266.0" r="5.5" stroke-width="1.5" fill="#2a78d6" stroke="#ffffff"/>
+<text class="ink" x="188.0" y="282.0" font-size="11.5" text-anchor="start" fill="#15201f">1 km, 10 min: +1.00</text>
+<circle class="s0 gap" cx="224.0" cy="234.0" r="5.5" stroke-width="1.5" fill="#2a78d6" stroke="#ffffff"/>
+<text class="ink" x="232.0" y="250.0" font-size="11.5" text-anchor="start" fill="#15201f">3 km, 14 min: +0.36</text>
+<circle class="s0 gap" cx="312.0" cy="202.0" r="5.5" stroke-width="1.5" fill="#2a78d6" stroke="#ffffff"/>
+<text class="ink" x="320.0" y="220.0" font-size="11.5" text-anchor="start" fill="#15201f">7 km, 18 min: &#8722;0.04</text>
+<circle class="s0 gap" cx="268.0" cy="170.0" r="5.5" stroke-width="1.5" fill="#2a78d6" stroke="#ffffff"/>
+<text class="ink" x="260.0" y="160.0" font-size="11.5" text-anchor="end" fill="#15201f">5 km, 22 min: &#8722;0.04</text>
+<circle class="s0 gap" cx="466.0" cy="58.0" r="5.5" stroke-width="1.5" fill="#2a78d6" stroke="#ffffff"/>
+<text class="ink" x="456.0" y="80.0" font-size="11.5" text-anchor="end" fill="#15201f">14 km, 36 min: +2.56</text>
+<text class="ink2" x="290.0" y="382" font-size="12" text-anchor="middle" fill="#4a5654">z-score for distance</text>
+<text class="ink2" x="36" y="186.0" font-size="12" text-anchor="middle" transform="rotate(-90 36 186.0)" fill="#4a5654">z-score for journey time</text>
+</svg>

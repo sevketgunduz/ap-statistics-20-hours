@@ -1,0 +1,86 @@
+<svg viewBox="0 0 390 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="St Mary's, 20 evening shifts: patients arriving against doctors on duty" font-family="Public Sans, system-ui, sans-serif">
+<style>
+  .ink   { fill: #15201f; }
+  .ink2  { fill: #4a5654; }
+  .ink3  { fill: #6f7b79; }
+  .axis  { stroke: #c3c9c6; }
+  .grid  { stroke: #dcdfdd; }
+  .gap   { stroke: #ffffff; }
+  .surf  { fill: #ffffff; }
+  @media (prefers-color-scheme: dark) {
+    .ink  { fill: #e9edeb; }
+    .ink2 { fill: #a5b0ad; }
+    .ink3 { fill: #7e8a87; }
+    .axis { stroke: #3a4644; }
+    .grid { stroke: #2a3533; }
+    .gap  { stroke: #182120; }
+    .surf { fill: #182120; }
+  }
+
+  .s0 { fill: #2a78d6; }
+  .k0 { stroke: #2a78d6; }
+  .s1 { fill: #eb6834; }
+  .k1 { stroke: #eb6834; }
+  @media (prefers-color-scheme: dark) {
+    .s0 { fill: #3987e5; }
+    .k0 { stroke: #3987e5; }
+    .s1 { fill: #d95926; }
+    .k1 { stroke: #d95926; }
+  }
+</style>
+<line class="grid" x1="70.0" y1="20" x2="70.0" y2="270" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="70.0" y="286" font-size="11.5" text-anchor="middle" fill="#6f7b79">20</text>
+<line class="grid" x1="120.0" y1="20" x2="120.0" y2="270" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="120.0" y="286" font-size="11.5" text-anchor="middle" fill="#6f7b79">30</text>
+<line class="grid" x1="170.0" y1="20" x2="170.0" y2="270" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="170.0" y="286" font-size="11.5" text-anchor="middle" fill="#6f7b79">40</text>
+<line class="grid" x1="220.0" y1="20" x2="220.0" y2="270" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="220.0" y="286" font-size="11.5" text-anchor="middle" fill="#6f7b79">50</text>
+<line class="grid" x1="270.0" y1="20" x2="270.0" y2="270" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="270.0" y="286" font-size="11.5" text-anchor="middle" fill="#6f7b79">60</text>
+<line class="grid" x1="320.0" y1="20" x2="320.0" y2="270" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="320.0" y="286" font-size="11.5" text-anchor="middle" fill="#6f7b79">70</text>
+<line class="grid" x1="370.0" y1="20" x2="370.0" y2="270" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="370.0" y="286" font-size="11.5" text-anchor="middle" fill="#6f7b79">80</text>
+<line class="grid" x1="70" y1="270.0" x2="370" y2="270.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="63" y="274.0" font-size="11.5" text-anchor="end" fill="#6f7b79">2</text>
+<line class="grid" x1="70" y1="234.3" x2="370" y2="234.3" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="63" y="238.3" font-size="11.5" text-anchor="end" fill="#6f7b79">3</text>
+<line class="grid" x1="70" y1="198.6" x2="370" y2="198.6" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="63" y="202.6" font-size="11.5" text-anchor="end" fill="#6f7b79">4</text>
+<line class="grid" x1="70" y1="162.9" x2="370" y2="162.9" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="63" y="166.9" font-size="11.5" text-anchor="end" fill="#6f7b79">5</text>
+<line class="grid" x1="70" y1="127.1" x2="370" y2="127.1" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="63" y="131.1" font-size="11.5" text-anchor="end" fill="#6f7b79">6</text>
+<line class="grid" x1="70" y1="91.4" x2="370" y2="91.4" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="63" y="95.4" font-size="11.5" text-anchor="end" fill="#6f7b79">7</text>
+<line class="grid" x1="70" y1="55.7" x2="370" y2="55.7" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="63" y="59.7" font-size="11.5" text-anchor="end" fill="#6f7b79">8</text>
+<line class="grid" x1="70" y1="20.0" x2="370" y2="20.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="63" y="24.0" font-size="11.5" text-anchor="end" fill="#6f7b79">9</text>
+<line class="axis" x1="70" y1="270" x2="370" y2="270" stroke-width="1.5" stroke="#c3c9c6" fill="none"/>
+<line class="axis" x1="70" y1="20" x2="70" y2="270" stroke-width="1.5" stroke="#c3c9c6" fill="none"/>
+<text class="ink2" x="220.0" y="304" font-size="12" text-anchor="middle" fill="#4a5654">Patients arriving during the shift</text>
+<text class="ink2" x="30" y="145.0" font-size="12" text-anchor="middle" transform="rotate(-90 30 145.0)" fill="#4a5654">Doctors on duty</text>
+<text class="ink2" x="364" y="260" font-size="12.5" font-weight="600" text-anchor="end" fill="#4a5654">r = 0.93</text>
+<circle class="s1 gap" cx="100.0" cy="234.3" r="4.8" stroke-width="1.2" fill="#eb6834" stroke="#ffffff"/>
+<circle class="s1 gap" cx="140.0" cy="198.6" r="4.8" stroke-width="1.2" fill="#eb6834" stroke="#ffffff"/>
+<circle class="s1 gap" cx="150.0" cy="234.3" r="4.8" stroke-width="1.2" fill="#eb6834" stroke="#ffffff"/>
+<circle class="s1 gap" cx="165.0" cy="234.3" r="4.8" stroke-width="1.2" fill="#eb6834" stroke="#ffffff"/>
+<circle class="s1 gap" cx="170.0" cy="198.6" r="4.8" stroke-width="1.2" fill="#eb6834" stroke="#ffffff"/>
+<circle class="s1 gap" cx="190.0" cy="162.9" r="4.8" stroke-width="1.2" fill="#eb6834" stroke="#ffffff"/>
+<circle class="s1 gap" cx="200.0" cy="162.9" r="4.8" stroke-width="1.2" fill="#eb6834" stroke="#ffffff"/>
+<circle class="s1 gap" cx="210.0" cy="162.9" r="4.8" stroke-width="1.2" fill="#eb6834" stroke="#ffffff"/>
+<circle class="s1 gap" cx="220.0" cy="162.9" r="4.8" stroke-width="1.2" fill="#eb6834" stroke="#ffffff"/>
+<circle class="s1 gap" cx="230.0" cy="198.6" r="4.8" stroke-width="1.2" fill="#eb6834" stroke="#ffffff"/>
+<circle class="s1 gap" cx="240.0" cy="162.9" r="4.8" stroke-width="1.2" fill="#eb6834" stroke="#ffffff"/>
+<circle class="s1 gap" cx="245.0" cy="162.9" r="4.8" stroke-width="1.2" fill="#eb6834" stroke="#ffffff"/>
+<circle class="s1 gap" cx="250.0" cy="162.9" r="4.8" stroke-width="1.2" fill="#eb6834" stroke="#ffffff"/>
+<circle class="s1 gap" cx="265.0" cy="91.4" r="4.8" stroke-width="1.2" fill="#eb6834" stroke="#ffffff"/>
+<circle class="s1 gap" cx="305.0" cy="127.1" r="4.8" stroke-width="1.2" fill="#eb6834" stroke="#ffffff"/>
+<circle class="s1 gap" cx="320.0" cy="91.4" r="4.8" stroke-width="1.2" fill="#eb6834" stroke="#ffffff"/>
+<circle class="s1 gap" cx="335.0" cy="91.4" r="4.8" stroke-width="1.2" fill="#eb6834" stroke="#ffffff"/>
+<circle class="s1 gap" cx="340.0" cy="55.7" r="4.8" stroke-width="1.2" fill="#eb6834" stroke="#ffffff"/>
+<circle class="s1 gap" cx="345.0" cy="55.7" r="4.8" stroke-width="1.2" fill="#eb6834" stroke="#ffffff"/>
+<circle class="s1 gap" cx="355.0" cy="55.7" r="4.8" stroke-width="1.2" fill="#eb6834" stroke="#ffffff"/>
+</svg>

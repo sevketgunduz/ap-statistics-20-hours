@@ -127,6 +127,44 @@
       ]
     },
     {
+      "label": "Block B · Describing two variables",
+      "items": [
+        {
+          "id": "s04t",
+          "label": "Session 4 · Tutor",
+          "out": "s04-tutor.html",
+          "src": "Session-04-Tutoring-Document.md",
+          "kind": "md",
+          "session": 4,
+          "variant": "tutor",
+          "title": "Session 4, Two Variables",
+          "topics": "CED 5.1–5.2"
+        },
+        {
+          "id": "s04s",
+          "label": "Session 4 · Student",
+          "out": "s04-student.html",
+          "src": "Session-04-Student-Workbook.md",
+          "kind": "md",
+          "session": 4,
+          "variant": "student",
+          "title": "Session 4 Workbook",
+          "topics": "CED 5.1–5.2"
+        },
+        {
+          "id": "s04x",
+          "label": "Session 4 · Test",
+          "out": "s04-test.html",
+          "src": "Session-04-MC-Test.md",
+          "kind": "md",
+          "session": 4,
+          "variant": "test",
+          "title": "Session 4 Test",
+          "topics": "CED 5.1–5.2 · 20 questions"
+        }
+      ]
+    },
+    {
       "label": "Interactive",
       "items": [
         {
@@ -146,6 +184,15 @@
           "kind": "tool",
           "title": "Boxplot & 1.5 × IQR Builder",
           "topics": "Session 3"
+        },
+        {
+          "id": "sim3",
+          "label": "Guess the Correlation",
+          "out": "tools/guess-correlation.html",
+          "src": "html-fragment:guess-correlation.html",
+          "kind": "tool",
+          "title": "Guess the Correlation",
+          "topics": "Session 4"
         }
       ]
     }

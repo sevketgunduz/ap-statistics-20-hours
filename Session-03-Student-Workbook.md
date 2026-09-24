@@ -76,7 +76,7 @@ Four questions. Answer all four on paper before revealing.
 
 Session 2 taught you to describe a distribution in words. This session gives those words numbers: a centre, a spread, a position, and an arithmetic test for "unusual". Then it asks you to **compare** two groups using them.
 
-Comparing is where the marks are lost. Students who can find every summary statistic still write one paragraph about each group and never say how the groups relate, and that earns nothing for "compare". If you are short of time today, protect Part 5.
+Comparing is where the marks are lost. Students who can find every summary statistic still write one paragraph about each group and never say how the groups relate, and that earns nothing for "compare". Give Part 5 your full attention.
 
 ---
 

@@ -1,0 +1,171 @@
+<svg viewBox="0 0 720 530" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Four scatterplots, A to D, for matching to correlation values" font-family="Public Sans, system-ui, sans-serif">
+<style>
+  .ink   { fill: #15201f; }
+  .ink2  { fill: #4a5654; }
+  .ink3  { fill: #6f7b79; }
+  .axis  { stroke: #c3c9c6; }
+  .grid  { stroke: #dcdfdd; }
+  .gap   { stroke: #ffffff; }
+  .surf  { fill: #ffffff; }
+  @media (prefers-color-scheme: dark) {
+    .ink  { fill: #e9edeb; }
+    .ink2 { fill: #a5b0ad; }
+    .ink3 { fill: #7e8a87; }
+    .axis { stroke: #3a4644; }
+    .grid { stroke: #2a3533; }
+    .gap  { stroke: #182120; }
+    .surf { fill: #182120; }
+  }
+
+  .s0 { fill: #2a78d6; }
+  .k0 { stroke: #2a78d6; }
+  .s1 { fill: #eb6834; }
+  .k1 { stroke: #eb6834; }
+  @media (prefers-color-scheme: dark) {
+    .s0 { fill: #3987e5; }
+    .k0 { stroke: #3987e5; }
+    .s1 { fill: #d95926; }
+    .k1 { stroke: #d95926; }
+  }
+</style>
+<line class="axis" x1="60" y1="228" x2="340" y2="228" stroke-width="1.5" stroke="#c3c9c6" fill="none"/>
+<line class="axis" x1="60" y1="58" x2="60" y2="228" stroke-width="1.5" stroke="#c3c9c6" fill="none"/>
+<text class="ink2" x="200.0" y="246" font-size="12" text-anchor="middle" fill="#4a5654">x</text>
+<text class="ink2" x="48" y="143.0" font-size="12" text-anchor="middle" transform="rotate(-90 48 143.0)" fill="#4a5654">y</text>
+<text class="ink" x="60" y="49" font-size="12.5" font-weight="700" fill="#15201f">Plot A</text>
+<circle class="s0 gap" cx="190.2" cy="158.5" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="295.8" cy="75.8" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="184.5" cy="107.9" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="270.9" cy="128.2" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="126.5" cy="146.8" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="160.5" cy="139.0" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="115.1" cy="127.5" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="257.4" cy="110.6" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="294.5" cy="98.1" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="245.6" cy="83.2" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="79.3" cy="197.2" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="134.7" cy="175.9" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="140.9" cy="136.5" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="199.3" cy="104.7" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="288.4" cy="95.2" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="166.2" cy="129.9" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="126.5" cy="161.7" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="250.0" cy="158.8" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="214.6" cy="89.3" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="133.4" cy="170.0" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="203.3" cy="151.0" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="236.4" cy="138.2" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="160.9" cy="187.4" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="92.8" cy="216.3" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="163.6" cy="148.3" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="209.8" cy="138.0" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="120.3" cy="174.4" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="192.8" cy="143.4" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="143.0" cy="170.5" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="320.7" cy="69.7" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<line class="axis" x1="420" y1="228" x2="700" y2="228" stroke-width="1.5" stroke="#c3c9c6" fill="none"/>
+<line class="axis" x1="420" y1="58" x2="420" y2="228" stroke-width="1.5" stroke="#c3c9c6" fill="none"/>
+<text class="ink2" x="560.0" y="246" font-size="12" text-anchor="middle" fill="#4a5654">x</text>
+<text class="ink2" x="408" y="143.0" font-size="12" text-anchor="middle" transform="rotate(-90 408 143.0)" fill="#4a5654">y</text>
+<text class="ink" x="420" y="49" font-size="12.5" font-weight="700" fill="#15201f">Plot B</text>
+<circle class="s0 gap" cx="629.8" cy="186.6" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="462.3" cy="83.3" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="615.3" cy="179.4" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="439.3" cy="78.1" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="505.2" cy="85.0" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="596.7" cy="199.9" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="518.9" cy="123.6" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="490.2" cy="76.1" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="559.6" cy="140.3" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="599.3" cy="143.4" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="535.2" cy="146.9" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="514.9" cy="131.6" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="567.5" cy="138.2" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="562.7" cy="106.6" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="469.4" cy="99.1" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="608.2" cy="176.8" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="457.4" cy="71.7" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="508.3" cy="105.7" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="575.0" cy="135.9" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="598.5" cy="152.6" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="680.7" cy="206.2" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="596.7" cy="148.6" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="602.9" cy="153.8" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="482.6" cy="85.0" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="542.8" cy="134.2" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="477.8" cy="88.7" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="594.9" cy="188.3" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="453.5" cy="69.7" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="680.2" cy="216.3" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="529.1" cy="140.3" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<line class="axis" x1="60" y1="488" x2="340" y2="488" stroke-width="1.5" stroke="#c3c9c6" fill="none"/>
+<line class="axis" x1="60" y1="318" x2="60" y2="488" stroke-width="1.5" stroke="#c3c9c6" fill="none"/>
+<text class="ink2" x="200.0" y="506" font-size="12" text-anchor="middle" fill="#4a5654">x</text>
+<text class="ink2" x="48" y="403.0" font-size="12" text-anchor="middle" transform="rotate(-90 48 403.0)" fill="#4a5654">y</text>
+<text class="ink" x="60" y="309" font-size="12.5" font-weight="700" fill="#15201f">Plot C</text>
+<circle class="s0 gap" cx="200.0" cy="379.0" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="196.4" cy="355.2" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="142.0" cy="382.3" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="184.1" cy="386.8" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="289.7" cy="431.0" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="136.1" cy="384.8" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="232.2" cy="431.0" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="226.2" cy="358.0" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="239.7" cy="377.0" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="141.2" cy="423.5" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="204.0" cy="411.1" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="110.3" cy="427.3" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="216.3" cy="476.3" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="226.2" cy="329.7" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="162.3" cy="443.9" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="153.9" cy="357.8" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="184.1" cy="392.4" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="109.5" cy="379.5" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="231.0" cy="370.7" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="274.6" cy="372.9" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="320.7" cy="353.2" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="79.3" cy="418.9" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="128.5" cy="447.0" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="194.4" cy="411.6" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="138.9" cy="365.1" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="259.9" cy="466.9" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="171.8" cy="329.7" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="271.9" cy="431.3" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="254.8" cy="396.9" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="141.6" cy="409.6" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<line class="axis" x1="420" y1="488" x2="700" y2="488" stroke-width="1.5" stroke="#c3c9c6" fill="none"/>
+<line class="axis" x1="420" y1="318" x2="420" y2="488" stroke-width="1.5" stroke="#c3c9c6" fill="none"/>
+<text class="ink2" x="560.0" y="506" font-size="12" text-anchor="middle" fill="#4a5654">x</text>
+<text class="ink2" x="408" y="403.0" font-size="12" text-anchor="middle" transform="rotate(-90 408 403.0)" fill="#4a5654">y</text>
+<text class="ink" x="420" y="309" font-size="12.5" font-weight="700" fill="#15201f">Plot D</text>
+<circle class="s0 gap" cx="488.7" cy="397.5" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="472.1" cy="370.9" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="579.7" cy="421.6" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="680.7" cy="425.4" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="526.4" cy="440.4" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="639.0" cy="433.7" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="600.4" cy="462.5" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="492.7" cy="385.2" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="621.5" cy="408.2" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="535.8" cy="433.5" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="674.0" cy="398.7" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="583.3" cy="414.2" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="612.0" cy="385.4" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="494.0" cy="393.7" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="520.5" cy="357.3" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="462.2" cy="348.0" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="621.0" cy="417.5" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="439.3" cy="329.7" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="621.5" cy="414.2" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="582.4" cy="408.5" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="464.0" cy="379.7" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="568.1" cy="356.6" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="514.7" cy="350.2" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="516.0" cy="402.5" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="589.2" cy="348.8" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="501.7" cy="368.3" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="494.5" cy="406.8" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="615.2" cy="389.0" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="640.8" cy="476.3" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="541.6" cy="444.9" r="3.8" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+</svg>
