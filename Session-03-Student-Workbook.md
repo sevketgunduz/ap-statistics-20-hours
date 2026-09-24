@@ -140,7 +140,20 @@ One more position question. What **percentile** is a journey of 30 minutes? (The
 :::
 
 :::reveal Reveal — percentile
-Count the journeys of 30 minutes or less: 21 of the 25. 21 ÷ 25 = 84%, so 30 minutes is the **84th percentile**.
+The question is: *what percentage of the journeys took 30 minutes or less?*
+
+1. **Order the data.** The 25 journeys above are already sorted.
+2. **Count the journeys of 30 minutes or less, including the 30 itself.** The first two rows are 20 journeys, all under 30, and the 30 is the 21st value. That is **21 journeys**.
+3. **Divide by the total.** 21 ÷ 25 = 0.84 = **84%**.
+4. **Answer in context.** 30 minutes is the **84th percentile**: 84% of these students' journeys took 30 minutes or less.
+
+**Check:** 4 journeys are longer than 30 minutes (33, 36, 42 and 68), and 4 ÷ 25 = 16%. 84% + 16% = 100%.
+
+| If you wrote | What went wrong |
+|---|---|
+| 80th | You counted only the journeys *less than* 30 (20 of 25) and left out the 30 itself. The definition says "less than **or equal to**". |
+| 21st | You gave the **position** of 30 in the ordered list, not the percentage. |
+| 44th | You divided the value by the maximum (30 ÷ 68). A percentile counts values; it does not compare their sizes. |
 
 Q1 is roughly the 25th percentile and Q3 roughly the 75th. "Roughly" is exact language: here 6 of the 25 values (24%) are at or below Q1 = 12.5.
 :::
