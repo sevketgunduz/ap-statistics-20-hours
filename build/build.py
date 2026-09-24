@@ -317,6 +317,31 @@ def build_home(nav):
     return body
 
 
+# ------------------------------------------------------------------ headings
+def heading_key(text):
+    """What a reader tells headings apart by: the words, ignoring formatting, case,
+    a leading time range such as '10-55 min ·', and bracketed codes such as '(1.7.C)'."""
+    t = H.unescape(re.sub(r"<[^>]+>", "", text))
+    t = re.sub(r"^\s*\d+\s*[–-]\s*\d+\s*min\s*·\s*", "", t)
+    t = re.sub(r"\([^)]*\)", "", t)
+    return re.sub(r"\s+", " ", t).strip().lower()
+
+
+def indistinct_headings(body):
+    """Headings on one page that a reader could not tell apart (STANDARDS.md §4)."""
+    seen, clashes = {}, []
+    for m in re.finditer(r"<h([1-4])[^>]*>(.*?)</h\1>", body, re.S):
+        k = heading_key(m.group(2))
+        if not k:
+            continue
+        shown = H.unescape(re.sub(r"<[^>]+>", "", m.group(2))).strip()
+        if k in seen:
+            clashes.append("%s  ==  %s" % (seen[k], shown))
+        else:
+            seen[k] = shown
+    return clashes
+
+
 # ------------------------------------------------------------------ main
 def main():
     if os.path.isdir(SITE):
@@ -326,7 +351,7 @@ def main():
     if os.path.isdir(FIGS_IN):
         shutil.copytree(FIGS_IN, os.path.join(SITE, "assets", "figures"), dirs_exist_ok=True)
 
-    built, missing = 0, []
+    built, missing, indistinct = 0, [], {}
     for idx, it in enumerate(FLAT):
         nav = nav_for(idx)
         d = depth_of(it["out"])
@@ -352,6 +377,10 @@ def main():
             frag = re.sub(r'<link rel="stylesheet" href="https://fonts\.googleapis[^>]*>\s*', "", frag)
             body = (COMPAT_TOOL if it["kind"] == "tool" else COMPAT) + frag
 
+        clashes = indistinct_headings(body)
+        if clashes:
+            indistinct[it["out"]] = clashes
+
         open(outp, "w", encoding="utf-8").write(
             page(body, nav, (it.get("title") or it["label"]) + " · " + MAN["course"], d,
                  main_cls="page" + (" page--wide" if it["kind"] == "tool" else "")))
@@ -359,9 +388,16 @@ def main():
         print("  built %-34s <- %s" % (it["out"], it["src"] or "(generated)"))
 
     print("\n%d pages -> %s" % (built, SITE))
+    status = 0
+    if indistinct:
+        print("INDISTINCT HEADINGS (STANDARDS.md §4): every heading on a page must be distinguishable")
+        for out, clashes in indistinct.items():
+            for c in clashes:
+                print("  %-22s %s" % (out, c))
+        status = 1
     if missing:
-        print("MISSING SOURCES:", missing); return 1
-    return 0
+        print("MISSING SOURCES:", missing); status = 1
+    return status
 
 
 if __name__ == "__main__":

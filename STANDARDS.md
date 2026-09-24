@@ -128,6 +128,14 @@ Plus standard markdown: headings, tables, blockquotes, lists, `- [ ]` checklists
 
 **Tone rules.** Colour carries meaning: **teal** = the idea to keep, **amber** = a trap or a caution, **red** = off-syllabus or a hard error. Never decorative.
 
+**Heading rules.** Every section and subsection heading on a page must be distinguishable from every other heading on that page, because the contents sidebar lists them all and students navigate and revise from it.
+
+- **No two headings may read the same.** They are compared ignoring formatting, case, a leading time range ("10–55 min ·") and bracketed codes ("(1.7.C)"). So *Changing units* and *Changing units (1.7.C)* clash, and so do a section and its own subsection with the same name.
+- **Parallel parts of a page say which part they belong to.** A test's question groups are *Questions 1–4 · The gym*, and the matching answer groups are *Answers 1–4 · The gym*. A reference-sheet entry that covers a topic taught earlier on the page gets its own wording, such as *Changing units: the rules (1.7.C)*.
+- **A heading names what is under it.** "Part 3", "Working through it" and "More practice" say nothing on their own; add the content: *Part 3 — The commute times, summarised*.
+
+`build.py` enforces the first rule and fails with **INDISTINCT HEADINGS** naming each clash. The other two are for the author to judge.
+
 ---
 
 ## 5. When a simulation earns its place
@@ -183,7 +191,7 @@ Before any page is published:
 2. **CED fidelity** — every objective code quoted verbatim from the CED PDF; any term absent from the CED flagged and marked as extension.
 3. **Simulation logic** — generators and statistics extracted from the built file and unit-tested in Node; empirical results compared against theory where theory exists.
 4. **Figures** — rendered and visually inspected for collisions, overflow and dead space.
-5. **Build** — `build.py` runs clean, nav JSON parses on every page, every relative asset path resolves.
+5. **Build** — `build.py` runs clean (no MISSING SOURCES, no INDISTINCT HEADINGS), nav JSON parses on every page, every relative asset path resolves.
 6. **Page** — renders at 400 px wide; both themes; keyboard-only navigation works.
 
 A session is not finished until all six pass.

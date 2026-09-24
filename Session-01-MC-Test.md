@@ -327,7 +327,7 @@ Each explanation says why the key is right **and what misconception each wrong o
 
 > **Answers are collapsed.** Click a question to open it, or press **`e`** to open every explanation at once. That keeps the key hidden while the test is on a shared screen.
 
-## Questions 1–4 · Municipal recycling
+## Answers 1–4 · Municipal recycling
 
 <details>
 <summary><strong>Question 1</strong></summary>
@@ -391,7 +391,7 @@ A parameter is a numerical summary of a variable **for the population**, and it 
 
 </details>
 
-## Questions 5–7 · The school library
+## Answers 5–7 · The school library
 
 <details>
 <summary><strong>Question 5</strong></summary>
@@ -437,7 +437,7 @@ Both halves work. The question names a measurable variable (visiting during even
 
 </details>
 
-## Questions 8–11 · The café
+## Answers 8–11 · The café
 
 <details>
 <summary><strong>Question 8</strong></summary>
@@ -498,7 +498,7 @@ True (37.0% is the largest share) and properly hedged — it states what the num
 
 </details>
 
-## Questions 12–14 · The football club
+## Answers 12–14 · The football club
 
 <details>
 <summary><strong>Question 12</strong></summary>
@@ -545,7 +545,7 @@ Discrete and continuous describe the values the **variable** can take, not the v
 
 </details>
 
-## Questions 15–17 · The school nurse
+## Answers 15–17 · The school nurse
 
 <details>
 <summary><strong>Question 15</strong></summary>
@@ -592,7 +592,7 @@ This is the generalisation the pair of questions was built to produce, and it is
 
 </details>
 
-## Questions 18–20 · The university bookshop
+## Answers 18–20 · The university bookshop
 
 <details>
 <summary><strong>Question 18</strong></summary>
@@ -645,7 +645,7 @@ Enrolment is the missing denominator. If Science enrolment grew by 60% while Art
 
 </details>
 
-## Questions 21–22 · Discrete items
+## Answers 21–22 · Discrete items
 
 <details>
 <summary><strong>Question 21</strong></summary>

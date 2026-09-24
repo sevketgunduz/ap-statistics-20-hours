@@ -356,7 +356,7 @@ Each explanation says why the key is right **and what misconception each wrong o
 
 > **Answers are collapsed.** Click a question to open it, or press **`e`** to open every explanation at once. That keeps the key hidden while the test is on a shared screen.
 
-## Questions 1–4 · The gym
+## Answers 1–4 · The gym
 
 <details>
 <summary><strong>Question 1</strong></summary>
@@ -433,7 +433,7 @@ No circle can hold 165%. A bar chart of the percentage of members using each fac
 
 </details>
 
-## Questions 5–7 · Two towns
+## Answers 5–7 · Two towns
 
 <details>
 <summary><strong>Question 5</strong></summary>
@@ -490,7 +490,7 @@ Bike differs by 8.0 percentage points, just ahead of Car at 7.0.
 
 </details>
 
-## Questions 8–10 · The quiz
+## Answers 8–10 · The quiz
 
 <details>
 <summary><strong>Question 8</strong></summary>
@@ -536,7 +536,7 @@ This question is about checking every claim against the display, not just the cl
 
 </details>
 
-## Questions 11–13 · Phone batteries
+## Answers 11–13 · Phone batteries
 
 <details>
 <summary><strong>Question 11</strong></summary>
@@ -578,7 +578,7 @@ The claim is about a **majority**. The bins that make up "at least 13 hours" are
 
 </details>
 
-## Questions 14–16 · The family science workshop
+## Answers 14–16 · The family science workshop
 
 <details>
 <summary><strong>Question 14</strong></summary>
@@ -624,7 +624,7 @@ Session 3 makes this precise with the mean and median. The lesson here comes fir
 
 </details>
 
-## Questions 17–22 · Separate questions
+## Answers 17–22 · Separate questions
 
 <details>
 <summary><strong>Question 17</strong></summary>

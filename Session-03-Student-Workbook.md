@@ -967,7 +967,7 @@ You can also compare the distances Q1 → median and median → Q3. *Example: 12
 
 > **Say the comparison, not only the verdict.** In the sample scoring guidelines printed in the course description, "The distribution is right-skewed" on its own is listed as an answer that does **not** earn the point. The answers that earn it quote the comparison: the median is smaller than the mean, or the distance from Q1 to the median is smaller than the distance from the median to Q3.
 
-### Changing units (1.7.C)
+### Changing units: the rules (1.7.C)
 
 | Change to every value | Mean, median, quartiles | SD, IQR, range |
 |---|---|---|

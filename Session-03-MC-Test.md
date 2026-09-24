@@ -301,7 +301,7 @@ Each explanation says why the key is right **and what misconception each wrong o
 
 > **Answers are collapsed.** Click a question to open it, or press **`e`** to open every explanation at once. That keeps the key hidden while the test is on a shared screen.
 
-## Questions 1–6 · The animal shelter
+## Answers 1–6 · The animal shelter
 
 <details>
 <summary><strong>Question 1</strong></summary>
@@ -405,7 +405,7 @@ The waits are skewed right, with a high outlier at 58, and the mean (17.5) sits 
 
 </details>
 
-## Questions 7–8 · Changing units
+## Answers 7–8 · Changing units
 
 <details>
 <summary><strong>Question 7</strong></summary>
@@ -439,7 +439,7 @@ Adding the same 2 seconds to every time slides the whole distribution 2 seconds 
 
 </details>
 
-## Questions 9–12 · Spread and shape from numbers
+## Answers 9–12 · Spread and shape from numbers
 
 <details>
 <summary><strong>Question 9</strong></summary>
@@ -500,7 +500,7 @@ A boxplot is a picture of the five-number summary and nothing more. Identical bo
 
 </details>
 
-## Questions 13–17 · Two pizza shops
+## Answers 13–17 · Two pizza shops
 
 <details>
 <summary><strong>Question 13</strong></summary>
@@ -571,7 +571,7 @@ It separates the two halves of the advert. **What** the data show is supportable
 
 </details>
 
-## Questions 18–20 · z-scores
+## Answers 18–20 · z-scores
 
 <details>
 <summary><strong>Question 18</strong></summary>
@@ -619,7 +619,7 @@ The sign says which side of the mean a value is on, not whether it is good. In t
 
 </details>
 
-## Questions 21–22 · Separate questions
+## Answers 21–22 · Separate questions
 
 <details>
 <summary><strong>Question 21</strong></summary>

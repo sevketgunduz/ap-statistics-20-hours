@@ -279,7 +279,7 @@ Each explanation says why the key is right **and what misconception each wrong o
 
 > **Answers are collapsed.** Click a question to open it, or press **`e`** to open every explanation at once. That keeps the key hidden while the test is on a shared screen.
 
-## Questions 1–6 · Used cars
+## Answers 1–6 · Used cars
 
 <details>
 <summary><strong>Question 1</strong></summary>
@@ -372,7 +372,7 @@ The claim is about **cars more than 8 years old**, so check exactly those points
 
 </details>
 
-## Questions 7–10 · What a correlation says
+## Answers 7–10 · What a correlation says
 
 <details>
 <summary><strong>Question 7</strong></summary>
@@ -427,7 +427,7 @@ CED 5.1.B.4: strength is **how closely the points follow the general pattern**. 
 
 </details>
 
-## Questions 11–13 · Four scatterplots
+## Answers 11–13 · Four scatterplots
 
 <details>
 <summary><strong>Question 11</strong></summary>
@@ -475,7 +475,7 @@ CED 5.2.A.3: *a correlation coefficient close to −1 or 1 does not necessarily 
 
 </details>
 
-## Questions 14–15 · Where *r* comes from
+## Answers 14–15 · Where *r* comes from
 
 <details>
 <summary><strong>Question 14</strong></summary>
@@ -516,7 +516,7 @@ A point in the **top-left** section has x below x̄ and y above ȳ: a negative z
 
 </details>
 
-## Questions 16–17 · Interpreting a correlation
+## Answers 16–17 · Interpreting a correlation
 
 <details>
 <summary><strong>Question 16</strong></summary>
@@ -546,7 +546,7 @@ It gives the strength (moderate, by the course guide: 0.64 is between about 0.5 
 
 </details>
 
-## Questions 18–20 · Separate questions
+## Answers 18–20 · Separate questions
 
 <details>
 <summary><strong>Question 18</strong></summary>
