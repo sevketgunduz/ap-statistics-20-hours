@@ -79,6 +79,17 @@
           "variant": "student",
           "title": "Session 2 Workbook",
           "topics": "CED 1.4–1.6"
+        },
+        {
+          "id": "s02x",
+          "label": "Session 2 · Test",
+          "out": "s02-test.html",
+          "src": "Session-02-MC-Test.md",
+          "kind": "md",
+          "session": 2,
+          "variant": "test",
+          "title": "Session 2 Test",
+          "topics": "CED 1.4–1.6 · 22 questions"
         }
       ]
     },
