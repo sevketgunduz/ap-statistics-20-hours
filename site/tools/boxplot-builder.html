@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Boxplot &amp; 1.5 × IQR Builder · AP Statistics in Twenty Hours</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Spectral:ital,wght@0,600;0,700;1,600&display=swap">
+<link rel="stylesheet" href="../assets/course.css">
+</head>
+<body>
+<main class="page page--wide">
+<style>.page{max-width:none;padding-inline:0}.page .wrap{max-width:62rem}</style><style>
+  /* Boxplot & 1.5 x IQR Builder. Scoped bb- classes; colours are course.css tokens only. */
+  .bb-wrap{max-width:62rem;margin-inline:auto;padding:30px 24px 48px}
+  @media(max-width:520px){.bb-wrap{padding-inline:14px}}
+  .bb-eyebrow{font-family:var(--f-mono);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);font-weight:500;margin:0 0 8px}
+  .bb-wrap h1{margin:0 0 10px}
+  .bb-lede{max-width:64ch;color:var(--ink-2);margin:0 0 20px}
+  .bb-tool{background:var(--surface);border:1px solid var(--rule);border-radius:4px;overflow:hidden}
+  .bb-controls{display:flex;flex-wrap:wrap;gap:14px 22px;align-items:flex-end;padding:16px 20px;background:var(--surface-2);border-bottom:1px solid var(--rule)}
+  .bb-ctl{display:flex;flex-direction:column;gap:6px;min-width:0}
+  .bb-ctl label,.bb-ctl .bb-lbl,.bb-own .bb-lbl{font-family:var(--f-mono);font-size:.64rem;letter-spacing:.11em;text-transform:uppercase;color:var(--ink-3);font-weight:600}
+  .bb-ctl select{font-family:var(--f-body);font-size:.88rem;padding:7px 9px;border:1px solid var(--rule-strong);border-radius:3px;background:var(--surface);color:var(--ink);max-width:62vw}
+  .bb-ctl input[type=range]{width:240px;max-width:62vw;accent-color:var(--accent)}
+  .bb-val{font-family:var(--f-mono);font-size:.95rem;font-weight:600;color:var(--ink);font-variant-numeric:tabular-nums}
+  .bb-seg{display:flex;border:1px solid var(--rule-strong);border-radius:3px;overflow:hidden}
+  .bb-seg button{appearance:none;border:0;background:var(--surface);color:var(--ink-2);cursor:pointer;font-family:var(--f-body);font-size:.82rem;font-weight:600;padding:8px 13px}
+  .bb-seg button+button{border-left:1px solid var(--rule-strong)}
+  .bb-seg button[aria-pressed="true"]{background:var(--accent);color:#fff}
+  .bb-btn{appearance:none;font-family:var(--f-body);font-size:.85rem;font-weight:600;cursor:pointer;padding:8px 14px;border-radius:3px;border:1px solid var(--accent);background:transparent;color:var(--accent)}
+  .bb-btn:hover{background:var(--accent-soft)}
+  .bb-own{display:none;padding:14px 20px;border-bottom:1px solid var(--rule);gap:10px;flex-direction:column}
+  .bb-own.on{display:flex}
+  .bb-own textarea{font-family:var(--f-mono);font-size:.88rem;padding:9px 11px;border:1px solid var(--rule-strong);border-radius:3px;background:var(--surface);color:var(--ink);min-height:64px;width:100%;box-sizing:border-box}
+  .bb-own .bb-row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+  .bb-err{color:var(--alarm);font-size:.86rem}
+  .bb-plot{padding:14px 16px 4px;overflow-x:auto}
+  .bb-plot svg{display:block;width:100%;min-width:520px;height:auto;touch-action:none}
+  .bb-say{margin:0;padding:12px 20px 16px;font-size:.95rem;color:var(--ink-2);max-width:72ch;min-height:3.2em}
+  .bb-say b{color:var(--ink)}
+  .bb-say .bb-hot{color:var(--alarm);font-weight:600}
+  .bb-read{display:grid;grid-template-columns:repeat(auto-fit,minmax(118px,1fr));margin:0;border-top:1px solid var(--rule)}
+  .bb-stat{padding:10px 16px;border-right:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+  .bb-stat dt{font-family:var(--f-mono);font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);margin-bottom:2px}
+  .bb-stat dd{margin:0;font-family:var(--f-mono);font-size:1.05rem;font-weight:600;font-variant-numeric:tabular-nums;color:var(--ink)}
+  .bb-stat dd.bb-mean{color:var(--s2)}
+  .bb-stat dd.bb-fence{color:var(--accent)}
+  .bb-notes{display:grid;gap:12px;margin-top:18px;max-width:70ch}
+  .bb-note{border-radius:3px;padding:13px 17px}
+  .bb-note .bb-nl{display:block;font-family:var(--f-mono);font-size:.62rem;letter-spacing:.13em;text-transform:uppercase;font-weight:600;margin-bottom:4px}
+  .bb-note p{margin:0;font-size:.92rem;color:var(--ink-2)}
+  .bb-note strong{color:var(--ink)}
+  .bb-note.teal{background:var(--accent-soft);border:1px solid var(--accent)} .bb-note.teal .bb-nl{color:var(--accent-deep)}
+  .bb-note.amber{background:var(--amber-soft);border:1px solid var(--amber-rule)} .bb-note.amber .bb-nl{color:var(--amber)}
+  /* svg marks */
+  .bb-t{fill:var(--ink-3);font-size:12px;font-family:var(--f-body)}
+  .bb-tb{fill:var(--ink);font-size:12.5px;font-weight:600;font-family:var(--f-body)}
+  .bb-grid{stroke:var(--rule)} .bb-axis{stroke:var(--rule-strong)}
+  .bb-dot{fill:var(--data);stroke:var(--surface);stroke-width:1.5;cursor:grab}
+  .bb-dot.bb-sel{stroke:var(--amber);stroke-width:3}
+  .bb-dot.bb-outl{fill:var(--alarm)}
+  .bb-boxf{fill:var(--data);fill-opacity:.16}
+  .bb-boxs{stroke:var(--data);fill:none}
+  .bb-fl{stroke:var(--accent)} .bb-ft{fill:var(--accent);font-size:12px;font-weight:600;font-family:var(--f-body)}
+  .bb-medl{stroke:var(--ink)} .bb-meanm{fill:var(--s2)} .bb-meant{fill:var(--s2);font-size:12px;font-weight:600;font-family:var(--f-body)}
+  .bb-ast{stroke:var(--alarm)}
+  :focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+</style>
+
+<div class="bb-wrap">
+  <p class="bb-eyebrow">AP Statistics &middot; Session 3 &middot; CED 1.7&ndash;1.8</p>
+  <h1>Boxplot &amp; 1.5 &times; IQR Builder</h1>
+  <p class="bb-lede">The Lincoln High journey times from Sessions 1&ndash;3. Drag any dot, or pick a value and move the slider. The boxplot, the fences and every statistic below are recalculated as you go.</p>
+
+  <div class="bb-tool">
+    <div class="bb-controls">
+      <div class="bb-ctl">
+        <span class="bb-lbl" id="bbDataLbl">Data</span>
+        <div class="bb-seg" role="group" aria-labelledby="bbDataLbl">
+          <button type="button" id="bbUseCommute" aria-pressed="true">Journey times (25)</button>
+          <button type="button" id="bbUseOwn" aria-pressed="false">Your own data</button>
+        </div>
+      </div>
+      <div class="bb-ctl">
+        <label for="bbPick">Value to move</label>
+        <select id="bbPick"></select>
+      </div>
+      <div class="bb-ctl">
+        <label for="bbVal">Its value</label>
+        <input type="range" id="bbVal" min="0" max="130" step="1" value="68">
+        <span class="bb-val" id="bbValOut" aria-hidden="true">68</span>
+      </div>
+      <div class="bb-ctl">
+        <span class="bb-lbl">&nbsp;</span>
+        <button type="button" class="bb-btn" id="bbReset">Reset</button>
+      </div>
+    </div>
+
+    <div class="bb-own" id="bbOwn">
+      <label class="bb-lbl" for="bbText">Type or paste 4 to 200 numbers, separated by spaces or commas</label>
+      <textarea id="bbText" spellcheck="false">5 7 8 8 9 10 11 11 12 13 14 30</textarea>
+      <div class="bb-row"><button type="button" class="bb-btn" id="bbApply">Use these values</button><span class="bb-err" id="bbErr" role="alert"></span></div>
+    </div>
+
+    <div class="bb-plot"><svg id="bbSvg" viewBox="0 0 760 290" role="img" aria-label="Dotplot and boxplot of the data"></svg></div>
+    <p class="bb-say" id="bbSay" aria-live="polite"></p>
+
+    <dl class="bb-read">
+      <div class="bb-stat"><dt>n</dt><dd id="bbN"></dd></div>
+      <div class="bb-stat"><dt>Mean x&#772;</dt><dd class="bb-mean" id="bbMean"></dd></div>
+      <div class="bb-stat"><dt>Median</dt><dd id="bbMed"></dd></div>
+      <div class="bb-stat"><dt>SD s</dt><dd id="bbSd"></dd></div>
+      <div class="bb-stat"><dt>Min</dt><dd id="bbMin"></dd></div>
+      <div class="bb-stat"><dt>Q1</dt><dd id="bbQ1"></dd></div>
+      <div class="bb-stat"><dt>Q3</dt><dd id="bbQ3"></dd></div>
+      <div class="bb-stat"><dt>Max</dt><dd id="bbMax"></dd></div>
+      <div class="bb-stat"><dt>IQR</dt><dd id="bbIqr"></dd></div>
+      <div class="bb-stat"><dt>Lower fence</dt><dd class="bb-fence" id="bbLf"></dd></div>
+      <div class="bb-stat"><dt>Upper fence</dt><dd class="bb-fence" id="bbUf"></dd></div>
+      <div class="bb-stat"><dt>Outliers, 1.5&times;IQR</dt><dd id="bbOut"></dd></div>
+      <div class="bb-stat"><dt>Outliers, 2 SD</dt><dd id="bbOut2"></dd></div>
+    </dl>
+  </div>
+
+  <div class="bb-notes">
+    <div class="bb-note teal"><span class="bb-nl">Try this first</span>
+      <p>Select <strong>journey 25 (68 min)</strong> and slide it <strong>down</strong>. Watch the dashed upper fence: it does not move. At the moment the value drops to 46 or below, it stops being an outlier and the whisker jumps out to reach it.</p></div>
+    <div class="bb-note teal"><span class="bb-nl">Then this</span>
+      <p>Slide the same journey <strong>up</strong> to 130. The orange mean triangle follows it; the median line, the box and both fences do not move at all. That is what <strong>resistant</strong> means. The SD grows too, so it is not resistant either.</p></div>
+    <div class="bb-note amber"><span class="bb-nl">And the catch</span>
+      <p>Reset, then pick a value in the <strong>middle</strong>: journey 20 (27 min). Slide it down to 14. The median drops to 17, Q3 to 24.5, and the upper fence moves in to 42.5. Resistant means the median and IQR ignore how extreme the extremes are, not that they never change.</p></div>
+    <div class="bb-note amber"><span class="bb-nl">The convention used here</span>
+      <p>Q1 and Q3 are the medians of the lower and upper halves. When n is odd the overall median is left out of both halves, which is what a TI-84 does. An outlier is a value more than 1.5 &times; IQR beyond a quartile, or more than 2 SD from the mean; a value exactly on a fence is not an outlier.</p></div>
+  </div>
+</div>
+
+<script>
+(function () {
+  "use strict";
+  /* STATS-BEGIN : pure functions, extracted and unit-tested in Node */
+  function sortNum(xs) { return xs.slice().sort(function (a, b) { return a - b; }); }
+  function median(xs) {
+    var s = sortNum(xs), n = s.length;
+    if (n === 0) return NaN;
+    return n % 2 ? s[(n - 1) / 2] : (s[n / 2 - 1] + s[n / 2]) / 2;
+  }
+  function halves(xs) {
+    var s = sortNum(xs), n = s.length, h = Math.floor(n / 2);
+    return { lower: s.slice(0, h), upper: s.slice(n - h) };   /* odd n: middle value in neither */
+  }
+  function mean(xs) { var t = 0; for (var i = 0; i < xs.length; i++) t += xs[i]; return t / xs.length; }
+  function sd(xs) {
+    var m = mean(xs), t = 0;
+    for (var i = 0; i < xs.length; i++) t += (xs[i] - m) * (xs[i] - m);
+    return Math.sqrt(t / (xs.length - 1));
+  }
+  function summary(xs) {
+    var s = sortNum(xs), h = halves(s);
+    var q1 = median(h.lower), q3 = median(h.upper), iqr = q3 - q1;
+    var lf = q1 - 1.5 * iqr, uf = q3 + 1.5 * iqr, m = mean(s), sdv = sd(s);
+    var out = [], inl = [], out2 = [];
+    for (var i = 0; i < s.length; i++) {
+      if (s[i] < lf || s[i] > uf) out.push(s[i]); else inl.push(s[i]);
+      if (s[i] < m - 2 * sdv || s[i] > m + 2 * sdv) out2.push(s[i]);
+    }
+    return { n: s.length, mean: m, sd: sdv, min: s[0], q1: q1, med: median(s), q3: q3, max: s[s.length - 1],
+             range: s[s.length - 1] - s[0], iqr: iqr, lf: lf, uf: uf, out: out, out2: out2,
+             wlo: inl[0], whi: inl[inl.length - 1], sd2lo: m - 2 * sdv, sd2hi: m + 2 * sdv };
+  }
+  function parseValues(text) {
+    var parts = String(text).split(/[\s,;]+/).filter(function (p) { return p.length; });
+    var xs = [];
+    for (var i = 0; i < parts.length; i++) {
+      if (!/^-?(\d+\.?\d*|\.\d+)$/.test(parts[i])) return { error: "“" + parts[i] + "” is not a number." };
+      xs.push(parseFloat(parts[i]));
+    }
+    if (xs.length < 4) return { error: "Enter at least 4 values." };
+    if (xs.length > 200) return { error: "Enter at most 200 values." };
+    return { values: xs };
+  }
+  function niceStep(span) {
+    var steps = [1, 2, 5, 10, 20, 25, 50, 100, 200, 250, 500, 1000, 2000, 5000];
+    for (var i = 0; i < steps.length; i++) if (span / steps[i] <= 14) return steps[i];
+    return Math.pow(10, Math.ceil(Math.log(span / 10) / Math.LN10));
+  }
+  function domainFor(xs) {
+    var s = sortNum(xs), r = (s[s.length - 1] - s[0]) || 1;
+    var lo = s[0] - 0.1 * r, hi = s[s.length - 1] + 0.9 * r;
+    var st = niceStep(hi - lo);
+    lo = Math.floor(lo / st) * st; hi = Math.ceil(hi / st) * st;
+    if (s[0] >= 0 && lo < 0) lo = 0;
+    return { lo: lo, hi: hi, step: st };
+  }
+  function fmt(v) {
+    if (v === undefined || v === null || isNaN(v)) return "—";
+    var r = Math.round(v * 100) / 100;
+    var t = String(r);
+    return t.charAt(0) === "-" ? "−" + t.slice(1) : t;
+  }
+  /* STATS-END */
+
+  var COMMUTE = [8, 9, 10, 11, 12, 12, 13, 14, 15, 15, 16, 17, 18, 18, 20, 21, 22, 24, 25, 27, 30, 33, 36, 42, 68];
+  var NS = "http://www.w3.org/2000/svg";
+  var svg = document.getElementById("bbSvg");
+  var pick = document.getElementById("bbPick"), slider = document.getElementById("bbVal"), sliderOut = document.getElementById("bbValOut");
+  var say = document.getElementById("bbSay");
+  var state = { base: COMMUTE.slice(), pts: [], sel: 24, dom: null, res: 1, label: "Journey", unit: " min" };
+
+  function el(n, a) { var e = document.createElementNS(NS, n); for (var k in a) e.setAttribute(k, a[k]); return e; }
+  function txt(x, y, s, cls, anchor) { var t = el("text", { x: x, y: y, "class": cls, "text-anchor": anchor || "middle" }); t.textContent = s; return t; }
+  function values() { return state.pts.map(function (p) { return p.v; }); }
+
+  function load(xs, label, unit) {
+    state.base = xs.slice();
+    var order = xs.map(function (v, i) { return { v: v, i: i }; }).sort(function (a, b) { return a.v - b.v || a.i - b.i; });
+    state.pts = order.map(function (o, k) { return { id: k, v: o.v }; });
+    state.label = label; state.unit = unit;
+    state.res = xs.every(function (v) { return Math.round(v) === v; }) ? 1 : 0.1;
+    state.dom = domainFor(xs);
+    state.sel = state.pts.length - 1;
+    slider.min = state.dom.lo; slider.max = state.dom.hi; slider.step = state.res;
+    buildPick(); render();
+  }
+  function buildPick() {
+    pick.innerHTML = "";
+    state.pts.forEach(function (p) {
+      var o = document.createElement("option");
+      o.value = p.id; o.textContent = state.label + " " + (p.id + 1) + " (" + fmt(p.v) + state.unit + ")";
+      pick.appendChild(o);
+    });
+    pick.value = state.sel;
+  }
+  function relabel() {
+    for (var i = 0; i < pick.options.length; i++) {
+      var p = state.pts[i];
+      pick.options[i].textContent = state.label + " " + (p.id + 1) + " (" + fmt(p.v) + state.unit + ")";
+    }
+  }
+  function setVal(id, v) {
+    v = Math.max(state.dom.lo, Math.min(state.dom.hi, v));
+    v = Math.round(v / state.res) * state.res;
+    v = Math.round(v * 10) / 10;
+    state.pts[id].v = v; render();
+  }
+
+  function render() {
+    var xs = values(), S = summary(xs), d = state.dom;
+    var W = 760, L = 30, R = 24, pw = W - L - R, base = 150, yc = 222;
+    function sx(v) { return L + (v - d.lo) / (d.hi - d.lo) * pw; }
+    state.sx = sx; state.inv = function (x) { return d.lo + (x - L) / pw * (d.hi - d.lo); };
+    while (svg.firstChild) svg.removeChild(svg.firstChild);
+    for (var v = d.lo; v <= d.hi + 1e-9; v += d.step) {
+      svg.appendChild(el("line", { x1: sx(v), y1: 30, x2: sx(v), y2: base, "class": "bb-grid", "stroke-width": 1 }));
+      svg.appendChild(txt(sx(v), base + 18, fmt(v), "bb-t"));
+    }
+    svg.appendChild(el("line", { x1: L, y1: base, x2: W - R, y2: base, "class": "bb-axis", "stroke-width": 1.5 }));
+    /* fences */
+    [["lower", S.lf], ["upper", S.uf]].forEach(function (f) {
+      if (f[1] < d.lo || f[1] > d.hi) return;
+      var x = sx(f[1]);
+      svg.appendChild(el("line", { x1: x, y1: 18, x2: x, y2: yc + 26, "class": "bb-fl", "stroke-width": 1.5, "stroke-dasharray": "5 4" }));
+      var right = f[0] === "upper";
+      svg.appendChild(txt(x + (right ? 6 : -6), 16, f[0] + " fence " + fmt(f[1]), "bb-ft", right ? "start" : "end"));
+    });
+    /* median line + mean triangle on the dotplot */
+    var mx = sx(S.med);
+    svg.appendChild(el("line", { x1: mx, y1: 34, x2: mx, y2: base, "class": "bb-medl", "stroke-width": 2 }));
+    svg.appendChild(txt(mx - 6, 44, "median " + fmt(S.med), "bb-tb", "end"));
+    var ax = sx(S.mean);
+    svg.appendChild(el("polygon", { points: (ax - 6) + "," + (base + 36) + " " + (ax + 6) + "," + (base + 36) + " " + ax + "," + (base + 25), "class": "bb-meanm" }));
+    svg.appendChild(txt(ax + 10, base + 36, "mean " + fmt(S.mean), "bb-meant", "start"));
+    /* dots, stacked */
+    var stacks = {}, sorted = state.pts.slice().sort(function (a, b) { return a.v - b.v || a.id - b.id; });
+    sorted.forEach(function (p) {
+      var key = p.v.toFixed(2), k = stacks[key] || 0; stacks[key] = k + 1;
+      var isOut = p.v < S.lf || p.v > S.uf;
+      var c = el("circle", { cx: sx(p.v), cy: base - 8 - Math.min(k, 8) * 11, r: 5, "class": "bb-dot" + (isOut ? " bb-outl" : "") + (p.id === state.sel ? " bb-sel" : ""), "data-id": p.id });
+      svg.appendChild(c);
+    });
+    /* boxplot */
+    var h = 30, y0 = yc - h / 2;
+    [[S.wlo, S.q1], [S.q3, S.whi]].forEach(function (w) {
+      svg.appendChild(el("line", { x1: sx(w[0]), y1: yc, x2: sx(w[1]), y2: yc, "class": "bb-boxs", "stroke-width": 2 }));
+    });
+    [S.wlo, S.whi].forEach(function (w) {
+      svg.appendChild(el("line", { x1: sx(w), y1: yc - 9, x2: sx(w), y2: yc + 9, "class": "bb-boxs", "stroke-width": 2 }));
+    });
+    svg.appendChild(el("rect", { x: sx(S.q1), y: y0, width: Math.max(0.5, sx(S.q3) - sx(S.q1)), height: h, rx: 2, "class": "bb-boxf" }));
+    svg.appendChild(el("rect", { x: sx(S.q1), y: y0, width: Math.max(0.5, sx(S.q3) - sx(S.q1)), height: h, rx: 2, "class": "bb-boxs", "stroke-width": 2 }));
+    svg.appendChild(el("line", { x1: sx(S.med), y1: y0, x2: sx(S.med), y2: y0 + h, "class": "bb-boxs", "stroke-width": 3 }));
+    S.out.forEach(function (o) {
+      var x = sx(o);
+      [90, 30, -30].forEach(function (a) {
+        var dx = 6 * Math.cos(a * Math.PI / 180), dy = 6 * Math.sin(a * Math.PI / 180);
+        svg.appendChild(el("line", { x1: x - dx, y1: yc - dy, x2: x + dx, y2: yc + dy, "class": "bb-ast", "stroke-width": 2, "stroke-linecap": "round" }));
+      });
+    });
+    svg.appendChild(txt(L, 282, "Dots above the axis: every value (red = outlier). Below: the boxplot, whiskers to the most extreme values that are not outliers.", "bb-t", "start"));
+    svg.setAttribute("aria-label", "Dotplot and boxplot. Five-number summary " + [S.min, S.q1, S.med, S.q3, S.max].map(fmt).join(", ") + ". Outliers: " + (S.out.length ? S.out.map(fmt).join(", ") : "none") + ".");
+
+    /* readout */
+    function put(id, v) { document.getElementById(id).textContent = v; }
+    put("bbN", S.n); put("bbMean", fmt(S.mean)); put("bbMed", fmt(S.med)); put("bbSd", fmt(S.sd));
+    put("bbMin", fmt(S.min)); put("bbQ1", fmt(S.q1)); put("bbQ3", fmt(S.q3)); put("bbMax", fmt(S.max));
+    put("bbIqr", fmt(S.iqr)); put("bbLf", fmt(S.lf)); put("bbUf", fmt(S.uf));
+    put("bbOut", S.out.length ? S.out.map(fmt).join(", ") : "none");
+    put("bbOut2", S.out2.length ? S.out2.map(fmt).join(", ") : "none");
+
+    /* sentence about the selected value */
+    var sv = state.pts[state.sel].v, s;
+    if (sv > S.uf) s = "<b>" + fmt(sv) + "</b> is above the upper fence, Q3 + 1.5 &times; IQR = " + fmt(S.q3) + " + " + fmt(1.5 * S.iqr) + " = " + fmt(S.uf) + ", so it is <span class=\"bb-hot\">an outlier</span>. The upper whisker stops at " + fmt(S.whi) + ", the largest value that is not an outlier.";
+    else if (sv < S.lf) s = "<b>" + fmt(sv) + "</b> is below the lower fence, Q1 &minus; 1.5 &times; IQR = " + fmt(S.q1) + " &minus; " + fmt(1.5 * S.iqr) + " = " + fmt(S.lf) + ", so it is <span class=\"bb-hot\">an outlier</span>. The lower whisker stops at " + fmt(S.wlo) + ", the smallest value that is not an outlier.";
+    else s = "<b>" + fmt(sv) + "</b> lies between the fences (" + fmt(S.lf) + " to " + fmt(S.uf) + "), so it is <b>not an outlier</b> by the 1.5 &times; IQR rule.";
+    if (S.mean > S.med + 1e-9) s += " The mean (" + fmt(S.mean) + ") is above the median (" + fmt(S.med) + ").";
+    else if (S.mean < S.med - 1e-9) s += " The mean (" + fmt(S.mean) + ") is below the median (" + fmt(S.med) + ").";
+    else s += " The mean equals the median (" + fmt(S.med) + ").";
+    say.innerHTML = s;
+
+    slider.value = sv; sliderOut.textContent = fmt(sv);
+    slider.setAttribute("aria-valuetext", fmt(sv) + state.unit);
+    relabel(); pick.value = state.sel;
+  }
+
+  /* ---- interaction: pointer ---- */
+  var drag = null;
+  svg.addEventListener("pointerdown", function (e) {
+    var id = e.target.getAttribute && e.target.getAttribute("data-id");
+    if (id === null || id === undefined) return;
+    state.sel = +id; drag = { pid: e.pointerId };
+    svg.setPointerCapture(e.pointerId); e.preventDefault(); render();
+  });
+  svg.addEventListener("pointermove", function (e) {
+    if (!drag) return;
+    var pt = svg.createSVGPoint(); pt.x = e.clientX; pt.y = e.clientY;
+    var p = pt.matrixTransform(svg.getScreenCTM().inverse());
+    setVal(state.sel, state.inv(p.x));
+  });
+  function endDrag() { drag = null; }
+  svg.addEventListener("pointerup", endDrag); svg.addEventListener("pointercancel", endDrag);
+
+  /* ---- interaction: keyboard (native controls; course.js ignores keys in INPUT/SELECT) ---- */
+  pick.addEventListener("change", function () { state.sel = +pick.value; render(); });
+  slider.addEventListener("input", function () { setVal(state.sel, parseFloat(slider.value)); });
+  document.getElementById("bbReset").addEventListener("click", function () {
+    if (state.label === "Journey") load(COMMUTE, "Journey", " min"); else load(state.base, "Value", "");
+  });
+  var bC = document.getElementById("bbUseCommute"), bO = document.getElementById("bbUseOwn"), own = document.getElementById("bbOwn");
+  bC.addEventListener("click", function () { bC.setAttribute("aria-pressed", "true"); bO.setAttribute("aria-pressed", "false"); own.classList.remove("on"); load(COMMUTE, "Journey", " min"); });
+  bO.addEventListener("click", function () { bO.setAttribute("aria-pressed", "true"); bC.setAttribute("aria-pressed", "false"); own.classList.add("on"); document.getElementById("bbText").focus(); });
+  document.getElementById("bbApply").addEventListener("click", function () {
+    var r = parseValues(document.getElementById("bbText").value), err = document.getElementById("bbErr");
+    if (r.error) { err.textContent = r.error; return; }
+    err.textContent = ""; load(r.values, "Value", "");
+  });
+
+  load(COMMUTE, "Journey", " min");
+})();
+</script>
+
+</main>
+<script>window.COURSE_NAV={"kicker": "Session 3", "title": "Boxplot & 1.5 × IQR Builder", "map": [{"label": "Course", "items": [{"href": "../index.html", "label": "Home", "current": false}, {"href": "../plan.html", "label": "The 20-hour plan", "current": false}]}, {"label": "Block A · Describing one variable", "items": [{"href": "../s01-tutor.html", "label": "Session 1 · Tutor", "current": false}, {"href": "../s01-student.html", "label": "Session 1 · Student", "current": false}, {"href": "../s01-test.html", "label": "Session 1 · Test", "current": false}, {"href": "../s02-tutor.html", "label": "Session 2 · Tutor", "current": false}, {"href": "../s02-student.html", "label": "Session 2 · Student", "current": false}, {"href": "../s02-test.html", "label": "Session 2 · Test", "current": false}, {"href": "../s03-tutor.html", "label": "Session 3 · Tutor", "current": false}, {"href": "../s03-student.html", "label": "Session 3 · Student", "current": false}, {"href": "../s03-test.html", "label": "Session 3 · Test", "current": false}]}, {"label": "Interactive", "items": [{"href": "../tools/unit1-explorer.html", "label": "Unit 1 Explorer", "current": false}, {"href": "../tools/boxplot-builder.html", "label": "Boxplot Builder", "current": true}]}], "prev": {"href": "../tools/unit1-explorer.html", "label": "Unit 1 Explorer"}};</script>
+<script src="../assets/course.js"></script>
+</body>
+</html>

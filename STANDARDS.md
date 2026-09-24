@@ -13,6 +13,7 @@ This is the contract every session must satisfy. Agree it once; then sessions 3�
 3. **Every number is computed, never asserted.** Each table, statistic, angle, bin count and mark total is produced and checked by a script before it reaches a page. See §7.
 4. **Two documents per session, from one set of scenarios.** Tutor script and student workbook share the same data, the same order and the same worked examples.
 5. **A simulation must earn its place.** See §5.
+6. **Every required concept is taught in the session, never deferred to homework to save time.** Assume the tutor and student have as long as the content needs. If a session's CED topics need more than the plan's 60 minutes, the session gets longer; its timing table states the honest length, and nothing is cut, compressed or moved out. Homework practises and extends what the session taught; it never carries the first teaching of anything the CED requires.
 
 ---
 
@@ -80,7 +81,7 @@ Same seven parts, same scenarios, same order, plus a mapping table to the tutor'
 - **Write-first rule** stated at the top, and honoured: every `:::yourturn` is followed by a `:::reveal`, never by the answer in plain text.
 - **Anything the student must construct is hidden.** A finished graph visible on the page destroys the exercise.
 - Diagnostic becomes **self-scoring**: a table saying what each possible answer means.
-- Timing is **~75 min**, not 60 — working alone with a pen is slower, and promising 60 makes students skip the writing.
+- Timing is **longer than the tutor's** — about a quarter longer for the same content, because working alone with a pen is slower, and promising the tutor's time makes students skip the writing. Neither document is capped at 60 minutes (§0.6).
 - Homework and reference sheet are **identical to the tutor copy**. One version of the marking, one version of the revision page.
 
 ---

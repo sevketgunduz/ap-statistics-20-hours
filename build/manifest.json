@@ -90,6 +90,39 @@
           "variant": "test",
           "title": "Session 2 Test",
           "topics": "CED 1.4–1.6 · 22 questions"
+        },
+        {
+          "id": "s03t",
+          "label": "Session 3 · Tutor",
+          "out": "s03-tutor.html",
+          "src": "Session-03-Tutoring-Document.md",
+          "kind": "md",
+          "session": 3,
+          "variant": "tutor",
+          "title": "Session 3, Summarising and Comparing",
+          "topics": "CED 1.7–1.9"
+        },
+        {
+          "id": "s03s",
+          "label": "Session 3 · Student",
+          "out": "s03-student.html",
+          "src": "Session-03-Student-Workbook.md",
+          "kind": "md",
+          "session": 3,
+          "variant": "student",
+          "title": "Session 3 Workbook",
+          "topics": "CED 1.7–1.9"
+        },
+        {
+          "id": "s03x",
+          "label": "Session 3 · Test",
+          "out": "s03-test.html",
+          "src": "Session-03-MC-Test.md",
+          "kind": "md",
+          "session": 3,
+          "variant": "test",
+          "title": "Session 3 Test",
+          "topics": "CED 1.7–1.9 · 22 questions"
         }
       ]
     },
@@ -104,6 +137,15 @@
           "kind": "tool",
           "title": "Unit One Explorer",
           "topics": "Sessions 1–2"
+        },
+        {
+          "id": "sim2",
+          "label": "Boxplot Builder",
+          "out": "tools/boxplot-builder.html",
+          "src": "html-fragment:boxplot-builder.html",
+          "kind": "tool",
+          "title": "Boxplot & 1.5 × IQR Builder",
+          "topics": "Session 3"
         }
       ]
     }
