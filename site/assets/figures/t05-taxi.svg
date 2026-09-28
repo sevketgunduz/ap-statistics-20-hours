@@ -1,0 +1,84 @@
+<svg viewBox="0 0 640 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Scatterplot of fare against distance for 14 taxi trips, with the least-squares line" font-family="Public Sans, system-ui, sans-serif">
+<style>
+  .ink   { fill: #15201f; }
+  .ink2  { fill: #4a5654; }
+  .ink3  { fill: #6f7b79; }
+  .axis  { stroke: #c3c9c6; }
+  .grid  { stroke: #dcdfdd; }
+  .gap   { stroke: #ffffff; }
+  @media (prefers-color-scheme: dark) {
+    .ink  { fill: #e9edeb; }
+    .ink2 { fill: #a5b0ad; }
+    .ink3 { fill: #7e8a87; }
+    .axis { stroke: #3a4644; }
+    .grid { stroke: #2a3533; }
+    .gap  { stroke: #182120; }
+  }
+
+  .s0 { fill: #2a78d6; }
+  .s1 { fill: #eb6834; }
+  @media (prefers-color-scheme: dark) {
+    .s0 { fill: #3987e5; }
+    .s1 { fill: #d95926; }
+  }
+  .k1 { stroke: #eb6834; }
+  @media (prefers-color-scheme: dark) { .k1 { stroke: #d95926; } }
+</style>
+<line class="grid" x1="80.0" y1="24.0" x2="80.0" y2="330.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="80.0" y="347.0" font-size="11.5" text-anchor="middle" fill="#6f7b79">0</text>
+<line class="grid" x1="133.0" y1="24.0" x2="133.0" y2="330.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="133.0" y="347.0" font-size="11.5" text-anchor="middle" fill="#6f7b79">2</text>
+<line class="grid" x1="186.0" y1="24.0" x2="186.0" y2="330.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="186.0" y="347.0" font-size="11.5" text-anchor="middle" fill="#6f7b79">4</text>
+<line class="grid" x1="239.0" y1="24.0" x2="239.0" y2="330.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="239.0" y="347.0" font-size="11.5" text-anchor="middle" fill="#6f7b79">6</text>
+<line class="grid" x1="292.0" y1="24.0" x2="292.0" y2="330.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="292.0" y="347.0" font-size="11.5" text-anchor="middle" fill="#6f7b79">8</text>
+<line class="grid" x1="345.0" y1="24.0" x2="345.0" y2="330.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="345.0" y="347.0" font-size="11.5" text-anchor="middle" fill="#6f7b79">10</text>
+<line class="grid" x1="398.0" y1="24.0" x2="398.0" y2="330.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="398.0" y="347.0" font-size="11.5" text-anchor="middle" fill="#6f7b79">12</text>
+<line class="grid" x1="451.0" y1="24.0" x2="451.0" y2="330.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="451.0" y="347.0" font-size="11.5" text-anchor="middle" fill="#6f7b79">14</text>
+<line class="grid" x1="504.0" y1="24.0" x2="504.0" y2="330.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="504.0" y="347.0" font-size="11.5" text-anchor="middle" fill="#6f7b79">16</text>
+<line class="grid" x1="557.0" y1="24.0" x2="557.0" y2="330.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="557.0" y="347.0" font-size="11.5" text-anchor="middle" fill="#6f7b79">18</text>
+<line class="grid" x1="610.0" y1="24.0" x2="610.0" y2="330.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="610.0" y="347.0" font-size="11.5" text-anchor="middle" fill="#6f7b79">20</text>
+<line class="grid" x1="80.0" y1="330.0" x2="610.0" y2="330.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="73.0" y="334.0" font-size="11.5" text-anchor="end" fill="#6f7b79">0</text>
+<line class="grid" x1="80.0" y1="286.3" x2="610.0" y2="286.3" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="73.0" y="290.3" font-size="11.5" text-anchor="end" fill="#6f7b79">4</text>
+<line class="grid" x1="80.0" y1="242.6" x2="610.0" y2="242.6" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="73.0" y="246.6" font-size="11.5" text-anchor="end" fill="#6f7b79">8</text>
+<line class="grid" x1="80.0" y1="198.9" x2="610.0" y2="198.9" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="73.0" y="202.9" font-size="11.5" text-anchor="end" fill="#6f7b79">12</text>
+<line class="grid" x1="80.0" y1="155.1" x2="610.0" y2="155.1" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="73.0" y="159.1" font-size="11.5" text-anchor="end" fill="#6f7b79">16</text>
+<line class="grid" x1="80.0" y1="111.4" x2="610.0" y2="111.4" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="73.0" y="115.4" font-size="11.5" text-anchor="end" fill="#6f7b79">20</text>
+<line class="grid" x1="80.0" y1="67.7" x2="610.0" y2="67.7" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="73.0" y="71.7" font-size="11.5" text-anchor="end" fill="#6f7b79">24</text>
+<line class="grid" x1="80.0" y1="24.0" x2="610.0" y2="24.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="73.0" y="28.0" font-size="11.5" text-anchor="end" fill="#6f7b79">28</text>
+<line class="axis" x1="80.0" y1="330.0" x2="610.0" y2="330.0" stroke-width="1.5" stroke="#c3c9c6" fill="none"/>
+<line class="axis" x1="80.0" y1="24.0" x2="80.0" y2="330.0" stroke-width="1.5" stroke="#c3c9c6" fill="none"/>
+<circle class="s0 gap" cx="111.8" cy="284.9" r="5" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="133.0" cy="263.0" r="5" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="154.2" cy="274.0" r="5" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="172.8" cy="246.0" r="5" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="188.7" cy="250.3" r="5" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="212.5" cy="238.6" r="5" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="228.4" cy="209.5" r="5" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="249.6" cy="216.1" r="5" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="273.4" cy="206.3" r="5" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="292.0" cy="189.5" r="5" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="456.3" cy="104.3" r="5" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="490.8" cy="98.6" r="5" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="525.2" cy="75.5" r="5" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="557.0" cy="75.1" r="5" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<text class="ink2" x="345.0" y="370.0" font-size="12.5" text-anchor="middle" fill="#4a5654">Distance (km)</text>
+<text class="ink2" x="36.0" y="177.0" font-size="12.5" text-anchor="middle" transform="rotate(-90 36.0 177.0)" fill="#4a5654">Fare (£)</text>
+<line class="k1" x1="111.8" y1="281.6" x2="557.0" y2="64.4" stroke-width="2" stroke="#eb6834" fill="none"/>
+</svg>

@@ -1,0 +1,101 @@
+<svg viewBox="0 0 760 380" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Left: midday temperature against iced drinks sold on 10 days, with the least-squares line, which predicts −14.4 iced drinks at 12 °C. Right: the residual plot, positive at both ends and negative in the middle" font-family="Public Sans, system-ui, sans-serif">
+<style>
+  .ink { fill: var(--ink, #15201f); }
+  .ink2 { fill: var(--ink-2, #4a5654); }
+  .ink3 { fill: var(--ink-3, #6f7b79); }
+  .axis { stroke: var(--rule-strong, #c3c9c6); }
+  .grid { stroke: var(--rule, #dcdfdd); }
+  .gap { stroke: var(--surface, #ffffff); }
+  .surf { fill: var(--surface, #ffffff); }
+  .band { fill: var(--surface-2, #eef1ef); }
+  .s0 { fill: var(--s1, #2a78d6); }
+  .k0 { stroke: var(--s1, #2a78d6); }
+  .s1 { fill: var(--s2, #eb6834); }
+  .k1 { stroke: var(--s2, #eb6834); }
+  .s2 { fill: var(--s3, #1baf7a); }
+  .k2 { stroke: var(--s3, #1baf7a); }
+  .s3 { fill: var(--s4, #eda100); }
+  .k3 { stroke: var(--s4, #eda100); }
+  .kink3 { stroke: var(--ink-3, #6f7b79); }
+  .kink { stroke: var(--ink, #15201f); }
+</style>
+<line class="grid" x1="72.0" y1="24.0" x2="72.0" y2="304.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="72.0" y="320.0" font-size="11.5" text-anchor="middle" fill="#6f7b79">10</text>
+<line class="grid" x1="142.0" y1="24.0" x2="142.0" y2="304.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="142.0" y="320.0" font-size="11.5" text-anchor="middle" fill="#6f7b79">15</text>
+<line class="grid" x1="212.0" y1="24.0" x2="212.0" y2="304.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="212.0" y="320.0" font-size="11.5" text-anchor="middle" fill="#6f7b79">20</text>
+<line class="grid" x1="282.0" y1="24.0" x2="282.0" y2="304.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="282.0" y="320.0" font-size="11.5" text-anchor="middle" fill="#6f7b79">25</text>
+<line class="grid" x1="352.0" y1="24.0" x2="352.0" y2="304.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="352.0" y="320.0" font-size="11.5" text-anchor="middle" fill="#6f7b79">30</text>
+<line class="grid" x1="72.0" y1="304.0" x2="352.0" y2="304.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="65.0" y="308.0" font-size="11.5" text-anchor="end" fill="#6f7b79">−40</text>
+<line class="grid" x1="72.0" y1="253.1" x2="352.0" y2="253.1" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="65.0" y="257.1" font-size="11.5" text-anchor="end" fill="#6f7b79">0</text>
+<line class="grid" x1="72.0" y1="202.2" x2="352.0" y2="202.2" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="65.0" y="206.2" font-size="11.5" text-anchor="end" fill="#6f7b79">40</text>
+<line class="grid" x1="72.0" y1="151.3" x2="352.0" y2="151.3" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="65.0" y="155.3" font-size="11.5" text-anchor="end" fill="#6f7b79">80</text>
+<line class="grid" x1="72.0" y1="100.4" x2="352.0" y2="100.4" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="65.0" y="104.4" font-size="11.5" text-anchor="end" fill="#6f7b79">120</text>
+<line class="grid" x1="72.0" y1="49.5" x2="352.0" y2="49.5" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="65.0" y="53.5" font-size="11.5" text-anchor="end" fill="#6f7b79">160</text>
+<line class="axis" x1="72.0" y1="304.0" x2="352.0" y2="304.0" stroke-width="1.5" stroke="#c3c9c6" fill="none"/>
+<line class="axis" x1="72.0" y1="24.0" x2="72.0" y2="304.0" stroke-width="1.5" stroke="#c3c9c6" fill="none"/>
+<text class="ink2" x="212.0" y="340.0" font-size="12" text-anchor="middle" fill="#4a5654">Midday temperature (°C)</text>
+<text class="ink2" x="30.0" y="164.0" font-size="12" text-anchor="middle" fill="#4a5654" transform="rotate(-90 30.0 164.0)">Iced drinks sold</text>
+<line class="kink3" x1="72.0" y1="253.1" x2="352.0" y2="253.1" stroke-width="1.2" stroke="#6f7b79" fill="none" stroke-dasharray="3 3"/>
+<line class="k2" x1="79.0" y1="290.3" x2="345.0" y2="51.3" stroke-width="2.2" stroke="#1baf7a" fill="none"/>
+<circle class="s0 gap" cx="100.0" cy="241.6" r="4.2" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="128.0" cy="239.1" r="4.2" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="142.0" cy="236.5" r="4.2" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="142.0" cy="232.7" r="4.2" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="156.0" cy="227.6" r="4.2" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="184.0" cy="213.6" r="4.2" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="198.0" cy="197.1" r="4.2" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="226.0" cy="171.6" r="4.2" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="240.0" cy="158.9" r="4.2" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="324.0" cy="40.5" r="4.2" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="k1 surf" cx="100.0" cy="271.4" r="5.5" stroke-width="2" stroke="#eb6834" fill="#ffffff"/>
+<text class="ink" x="110.0" y="289.4" font-size="12" text-anchor="start" fill="#15201f">ŷ = −14.4 at 12 °C</text>
+<text class="ink" x="79.0" y="14.0" font-size="12.5" text-anchor="start" fill="#15201f" font-weight="600">ŷ = −133.03 + 9.885x</text>
+<line class="grid" x1="452.0" y1="24.0" x2="452.0" y2="304.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="452.0" y="320.0" font-size="11.5" text-anchor="middle" fill="#6f7b79">10</text>
+<line class="grid" x1="522.0" y1="24.0" x2="522.0" y2="304.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="522.0" y="320.0" font-size="11.5" text-anchor="middle" fill="#6f7b79">15</text>
+<line class="grid" x1="592.0" y1="24.0" x2="592.0" y2="304.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="592.0" y="320.0" font-size="11.5" text-anchor="middle" fill="#6f7b79">20</text>
+<line class="grid" x1="662.0" y1="24.0" x2="662.0" y2="304.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="662.0" y="320.0" font-size="11.5" text-anchor="middle" fill="#6f7b79">25</text>
+<line class="grid" x1="732.0" y1="24.0" x2="732.0" y2="304.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="732.0" y="320.0" font-size="11.5" text-anchor="middle" fill="#6f7b79">30</text>
+<line class="grid" x1="452.0" y1="304.0" x2="732.0" y2="304.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="445.0" y="308.0" font-size="11.5" text-anchor="end" fill="#6f7b79">−20</text>
+<line class="grid" x1="452.0" y1="248.0" x2="732.0" y2="248.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="445.0" y="252.0" font-size="11.5" text-anchor="end" fill="#6f7b79">−10</text>
+<line class="grid" x1="452.0" y1="192.0" x2="732.0" y2="192.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="445.0" y="196.0" font-size="11.5" text-anchor="end" fill="#6f7b79">0</text>
+<line class="grid" x1="452.0" y1="136.0" x2="732.0" y2="136.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="445.0" y="140.0" font-size="11.5" text-anchor="end" fill="#6f7b79">10</text>
+<line class="grid" x1="452.0" y1="80.0" x2="732.0" y2="80.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="445.0" y="84.0" font-size="11.5" text-anchor="end" fill="#6f7b79">20</text>
+<line class="grid" x1="452.0" y1="24.0" x2="732.0" y2="24.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="445.0" y="28.0" font-size="11.5" text-anchor="end" fill="#6f7b79">30</text>
+<line class="axis" x1="452.0" y1="304.0" x2="732.0" y2="304.0" stroke-width="1.5" stroke="#c3c9c6" fill="none"/>
+<line class="axis" x1="452.0" y1="24.0" x2="452.0" y2="304.0" stroke-width="1.5" stroke="#c3c9c6" fill="none"/>
+<line class="kink3" x1="452.0" y1="192.0" x2="732.0" y2="192.0" stroke-width="1.4" stroke="#6f7b79" fill="none"/>
+<text class="ink2" x="592.0" y="340.0" font-size="12" text-anchor="middle" fill="#4a5654">Midday temperature (°C)</text>
+<text class="ink2" x="410.0" y="164.0" font-size="12" text-anchor="middle" fill="#4a5654" transform="rotate(-90 410.0 164.0)">Residual (iced drinks)</text>
+<circle class="s1 gap" cx="480.0" cy="60.9" r="4.2" stroke-width="1.2" fill="#eb6834" stroke="#ffffff"/>
+<circle class="s1 gap" cx="508.0" cy="160.4" r="4.2" stroke-width="1.2" fill="#eb6834" stroke="#ffffff"/>
+<circle class="s1 gap" cx="522.0" cy="204.6" r="4.2" stroke-width="1.2" fill="#eb6834" stroke="#ffffff"/>
+<circle class="s1 gap" cx="522.0" cy="187.8" r="4.2" stroke-width="1.2" fill="#eb6834" stroke="#ffffff"/>
+<circle class="s1 gap" cx="536.0" cy="220.7" r="4.2" stroke-width="1.2" fill="#eb6834" stroke="#ffffff"/>
+<circle class="s1 gap" cx="564.0" cy="269.8" r="4.2" stroke-width="1.2" fill="#eb6834" stroke="#ffffff"/>
+<circle class="s1 gap" cx="578.0" cy="252.4" r="4.2" stroke-width="1.2" fill="#eb6834" stroke="#ffffff"/>
+<circle class="s1 gap" cx="606.0" cy="251.1" r="4.2" stroke-width="1.2" fill="#eb6834" stroke="#ffffff"/>
+<circle class="s1 gap" cx="620.0" cy="250.5" r="4.2" stroke-width="1.2" fill="#eb6834" stroke="#ffffff"/>
+<circle class="s1 gap" cx="704.0" cy="61.8" r="4.2" stroke-width="1.2" fill="#eb6834" stroke="#ffffff"/>
+<text class="ink" x="592.0" y="14.0" font-size="12.5" text-anchor="middle" fill="#15201f" font-weight="600">residuals: + + − + − − − − − +</text>
+</svg>

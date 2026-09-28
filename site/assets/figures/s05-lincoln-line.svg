@@ -1,0 +1,109 @@
+<svg viewBox="0 0 700 410" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Scatterplot of distance from school against journey time for 25 Lincoln High students, with the least-squares line, the point of means, and the residual of the student at 2.5 km who took 33 minutes" font-family="Public Sans, system-ui, sans-serif">
+<style>
+  .ink { fill: #15201f; }
+  .ink2 { fill: #4a5654; }
+  .ink3 { fill: #6f7b79; }
+  .axis { stroke: #c3c9c6; }
+  .grid { stroke: #dcdfdd; }
+  .gap { stroke: #ffffff; }
+  .surf { fill: #ffffff; }
+  .band { fill: #eef1ef; }
+  .s0 { fill: #2a78d6; }
+  .k0 { stroke: #2a78d6; }
+  .s1 { fill: #eb6834; }
+  .k1 { stroke: #eb6834; }
+  .s2 { fill: #1baf7a; }
+  .k2 { stroke: #1baf7a; }
+  .s3 { fill: #eda100; }
+  .k3 { stroke: #eda100; }
+  .kink3 { stroke: #6f7b79; }
+  .kink { stroke: #15201f; }
+  @media (prefers-color-scheme: dark) {
+    .ink { fill: #e9edeb; }
+    .ink2 { fill: #a5b0ad; }
+    .ink3 { fill: #7e8a87; }
+    .axis { stroke: #3a4644; }
+    .grid { stroke: #2a3533; }
+    .gap { stroke: #182120; }
+    .surf { fill: #182120; }
+    .band { fill: #1e2827; }
+    .s0 { fill: #3987e5; }
+    .k0 { stroke: #3987e5; }
+    .s1 { fill: #d95926; }
+    .k1 { stroke: #d95926; }
+    .s2 { fill: #199e70; }
+    .k2 { stroke: #199e70; }
+    .s3 { fill: #c98500; }
+    .k3 { stroke: #c98500; }
+    .kink3 { stroke: #7e8a87; }
+    .kink { stroke: #e9edeb; }
+  }
+</style>
+<line class="grid" x1="70.0" y1="20.0" x2="70.0" y2="350.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="70.0" y="366.0" font-size="11.5" text-anchor="middle" fill="#6f7b79">0</text>
+<line class="grid" x1="170.0" y1="20.0" x2="170.0" y2="350.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="170.0" y="366.0" font-size="11.5" text-anchor="middle" fill="#6f7b79">5</text>
+<line class="grid" x1="270.0" y1="20.0" x2="270.0" y2="350.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="270.0" y="366.0" font-size="11.5" text-anchor="middle" fill="#6f7b79">10</text>
+<line class="grid" x1="370.0" y1="20.0" x2="370.0" y2="350.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="370.0" y="366.0" font-size="11.5" text-anchor="middle" fill="#6f7b79">15</text>
+<line class="grid" x1="470.0" y1="20.0" x2="470.0" y2="350.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="470.0" y="366.0" font-size="11.5" text-anchor="middle" fill="#6f7b79">20</text>
+<line class="grid" x1="570.0" y1="20.0" x2="570.0" y2="350.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="570.0" y="366.0" font-size="11.5" text-anchor="middle" fill="#6f7b79">25</text>
+<line class="grid" x1="670.0" y1="20.0" x2="670.0" y2="350.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="670.0" y="366.0" font-size="11.5" text-anchor="middle" fill="#6f7b79">30</text>
+<line class="grid" x1="70.0" y1="350.0" x2="670.0" y2="350.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="63.0" y="354.0" font-size="11.5" text-anchor="end" fill="#6f7b79">0</text>
+<line class="grid" x1="70.0" y1="302.9" x2="670.0" y2="302.9" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="63.0" y="306.9" font-size="11.5" text-anchor="end" fill="#6f7b79">10</text>
+<line class="grid" x1="70.0" y1="255.7" x2="670.0" y2="255.7" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="63.0" y="259.7" font-size="11.5" text-anchor="end" fill="#6f7b79">20</text>
+<line class="grid" x1="70.0" y1="208.6" x2="670.0" y2="208.6" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="63.0" y="212.6" font-size="11.5" text-anchor="end" fill="#6f7b79">30</text>
+<line class="grid" x1="70.0" y1="161.4" x2="670.0" y2="161.4" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="63.0" y="165.4" font-size="11.5" text-anchor="end" fill="#6f7b79">40</text>
+<line class="grid" x1="70.0" y1="114.3" x2="670.0" y2="114.3" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="63.0" y="118.3" font-size="11.5" text-anchor="end" fill="#6f7b79">50</text>
+<line class="grid" x1="70.0" y1="67.1" x2="670.0" y2="67.1" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="63.0" y="71.1" font-size="11.5" text-anchor="end" fill="#6f7b79">60</text>
+<line class="grid" x1="70.0" y1="20.0" x2="670.0" y2="20.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="63.0" y="24.0" font-size="11.5" text-anchor="end" fill="#6f7b79">70</text>
+<line class="axis" x1="70.0" y1="350.0" x2="670.0" y2="350.0" stroke-width="1.5" stroke="#c3c9c6" fill="none"/>
+<line class="axis" x1="70.0" y1="20.0" x2="70.0" y2="350.0" stroke-width="1.5" stroke="#c3c9c6" fill="none"/>
+<text class="ink2" x="370.0" y="386.0" font-size="12" text-anchor="middle" fill="#4a5654">Distance from school (km)</text>
+<text class="ink2" x="28.0" y="185.0" font-size="12" text-anchor="middle" fill="#4a5654" transform="rotate(-90 28.0 185.0)">Journey time (minutes)</text>
+<line class="k2" x1="70.0" y1="308.7" x2="670.0" y2="23.2" stroke-width="2.2" stroke="#1baf7a" fill="none"/>
+<line class="k1" x1="120.0" y1="194.4" x2="120.0" y2="284.9" stroke-width="2" stroke="#eb6834" fill="none"/>
+<circle class="s0 gap" cx="80.0" cy="312.3" r="4.2" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="90.0" cy="307.6" r="4.2" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="90.0" cy="302.9" r="4.2" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="100.0" cy="298.1" r="4.2" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="110.0" cy="293.4" r="4.2" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="100.0" cy="293.4" r="4.2" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="120.0" cy="288.7" r="4.2" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="130.0" cy="284.0" r="4.2" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="160.0" cy="279.3" r="4.2" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="140.0" cy="279.3" r="4.2" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="150.0" cy="274.6" r="4.2" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="160.0" cy="269.9" r="4.2" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="210.0" cy="265.1" r="4.2" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="180.0" cy="265.1" r="4.2" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="190.0" cy="255.7" r="4.2" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="200.0" cy="251.0" r="4.2" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="170.0" cy="246.3" r="4.2" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="220.0" cy="236.9" r="4.2" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="230.0" cy="232.1" r="4.2" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="260.0" cy="222.7" r="4.2" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="290.0" cy="208.6" r="4.2" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s1 gap" cx="120.0" cy="194.4" r="4.2" stroke-width="1.2" fill="#eb6834" stroke="#ffffff"/>
+<circle class="s0 gap" cx="350.0" cy="180.3" r="4.2" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="410.0" cy="152.0" r="4.2" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="630.0" cy="29.4" r="4.2" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<text class="ink" x="130.0" y="170.9" font-size="12" text-anchor="start" fill="#15201f">residual = 33 − 13.8 = 19.2</text>
+<circle class="k2 surf" cx="195.6" cy="248.9" r="6" stroke-width="2" stroke="#1baf7a" fill="#ffffff"/>
+<line class="kink3" x1="200.6" y1="253.9" x2="254.0" y2="305.2" stroke-width="1" stroke="#6f7b79" fill="none"/>
+<text class="ink2" x="258.0" y="312.3" font-size="12" text-anchor="start" fill="#4a5654">the point of means (x̄, ȳ) = (6.28, 21.44)</text>
+<text class="ink" x="470.0" y="180.3" font-size="13" text-anchor="start" fill="#15201f" font-weight="600">ŷ = 8.762 + 2.019x</text>
+<text class="ink2" x="620.0" y="33.4" font-size="11.5" text-anchor="end" fill="#4a5654">28 km, 68 min: residual 2.7</text>
+</svg>

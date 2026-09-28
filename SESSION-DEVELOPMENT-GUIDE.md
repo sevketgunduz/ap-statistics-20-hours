@@ -71,6 +71,7 @@ A later session and its test must use these exactly as earlier sessions did.
 | Scatterplot description | direction ("tend to"), unusual features, form, strength, in context | Session 4 |
 | Variable names | explanatory / response, never independent / dependent | Session 4 |
 | Calculator | TI-84; LinReg(a+bx) with Stat Diagnostics on | Session 4 |
+| Regression | ŷ = a + bx with ŷ and x named in context; residual = y − ŷ (positive underpredicts); a and b to 4 significant figures keeping at least 2 dp; predictions and residuals to 1 dp from the equation as written; *r*² read from the calculator | Session 5 |
 | Session tests | Session 1's test opens Session 3 (as Session 1's document says); Session 4's builder placed Session 2's at the start of Session 4. **Not yet confirmed** as the general rule | Sessions 3–4 |
 
 ### Data
@@ -87,6 +88,7 @@ Every data set is registered once in `build/datasets.json`, with the sessions th
 | Session 2 | gym bookings, two towns' transport, 10-point quiz, phone batteries, family workshop ages, bus delays, basketball heights, ice cream, die rolls |
 | Session 3 | animal shelter, weather °C/°F, swimming gala, pizza shops, maths/history exams, athletics, tomato plants |
 | Session 4 | used cars, house fires, screen time and sleep, height and arm span, engine size and fuel use, flats and rent, revision hours |
+| Session 5 | taxi fares, car braking distances, rainfall and wheat yield, candle burning, school heating and outdoor temperature |
 
 Add the new session's contexts to both lists as part of step 3.
 

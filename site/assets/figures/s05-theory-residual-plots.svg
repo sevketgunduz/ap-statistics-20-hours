@@ -1,0 +1,181 @@
+<svg viewBox="0 0 760 560" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Two made-up data sets, each with its least-squares line above and its residual plot below. Left: the residuals scatter with no pattern. Right: the residuals are positive, negative, then positive again." font-family="Public Sans, system-ui, sans-serif">
+<style>
+  .ink { fill: #15201f; }
+  .ink2 { fill: #4a5654; }
+  .ink3 { fill: #6f7b79; }
+  .axis { stroke: #c3c9c6; }
+  .grid { stroke: #dcdfdd; }
+  .gap { stroke: #ffffff; }
+  .surf { fill: #ffffff; }
+  .band { fill: #eef1ef; }
+  .s0 { fill: #2a78d6; }
+  .k0 { stroke: #2a78d6; }
+  .s1 { fill: #eb6834; }
+  .k1 { stroke: #eb6834; }
+  .s2 { fill: #1baf7a; }
+  .k2 { stroke: #1baf7a; }
+  .s3 { fill: #eda100; }
+  .k3 { stroke: #eda100; }
+  .kink3 { stroke: #6f7b79; }
+  .kink { stroke: #15201f; }
+  @media (prefers-color-scheme: dark) {
+    .ink { fill: #e9edeb; }
+    .ink2 { fill: #a5b0ad; }
+    .ink3 { fill: #7e8a87; }
+    .axis { stroke: #3a4644; }
+    .grid { stroke: #2a3533; }
+    .gap { stroke: #182120; }
+    .surf { fill: #182120; }
+    .band { fill: #1e2827; }
+    .s0 { fill: #3987e5; }
+    .k0 { stroke: #3987e5; }
+    .s1 { fill: #d95926; }
+    .k1 { stroke: #d95926; }
+    .s2 { fill: #199e70; }
+    .k2 { stroke: #199e70; }
+    .s3 { fill: #c98500; }
+    .k3 { stroke: #c98500; }
+    .kink3 { stroke: #7e8a87; }
+    .kink { stroke: #e9edeb; }
+  }
+</style>
+<text class="ink" x="213.0" y="22.0" font-size="13" text-anchor="middle" fill="#15201f" font-weight="600">A: residuals with no pattern</text>
+<line class="grid" x1="78.0" y1="38.0" x2="78.0" y2="228.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="78.0" y="244.0" font-size="11.5" text-anchor="middle" fill="#6f7b79">0</text>
+<line class="grid" x1="138.0" y1="38.0" x2="138.0" y2="228.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="138.0" y="244.0" font-size="11.5" text-anchor="middle" fill="#6f7b79">2</text>
+<line class="grid" x1="198.0" y1="38.0" x2="198.0" y2="228.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="198.0" y="244.0" font-size="11.5" text-anchor="middle" fill="#6f7b79">4</text>
+<line class="grid" x1="258.0" y1="38.0" x2="258.0" y2="228.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="258.0" y="244.0" font-size="11.5" text-anchor="middle" fill="#6f7b79">6</text>
+<line class="grid" x1="318.0" y1="38.0" x2="318.0" y2="228.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="318.0" y="244.0" font-size="11.5" text-anchor="middle" fill="#6f7b79">8</text>
+<line class="grid" x1="78.0" y1="228.0" x2="348.0" y2="228.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="71.0" y="232.0" font-size="11.5" text-anchor="end" fill="#6f7b79">0</text>
+<line class="grid" x1="78.0" y1="180.5" x2="348.0" y2="180.5" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="71.0" y="184.5" font-size="11.5" text-anchor="end" fill="#6f7b79">4</text>
+<line class="grid" x1="78.0" y1="133.0" x2="348.0" y2="133.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="71.0" y="137.0" font-size="11.5" text-anchor="end" fill="#6f7b79">8</text>
+<line class="grid" x1="78.0" y1="85.5" x2="348.0" y2="85.5" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="71.0" y="89.5" font-size="11.5" text-anchor="end" fill="#6f7b79">12</text>
+<line class="grid" x1="78.0" y1="38.0" x2="348.0" y2="38.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="71.0" y="42.0" font-size="11.5" text-anchor="end" fill="#6f7b79">16</text>
+<line class="axis" x1="78.0" y1="228.0" x2="348.0" y2="228.0" stroke-width="1.5" stroke="#c3c9c6" fill="none"/>
+<line class="axis" x1="78.0" y1="38.0" x2="78.0" y2="228.0" stroke-width="1.5" stroke="#c3c9c6" fill="none"/>
+<text class="ink2" x="213.0" y="264.0" font-size="12" text-anchor="middle" fill="#4a5654">x</text>
+<text class="ink2" x="36.0" y="133.0" font-size="12" text-anchor="middle" fill="#4a5654" transform="rotate(-90 36.0 133.0)">y</text>
+<line class="k2" x1="87.0" y1="199.8" x2="339.0" y2="46.9" stroke-width="2.2" stroke="#1baf7a" fill="none"/>
+<circle class="s0 gap" cx="108.0" cy="176.9" r="4.2" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="138.0" cy="175.8" r="4.2" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="168.0" cy="161.5" r="4.2" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="198.0" cy="124.7" r="4.2" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="228.0" cy="110.4" r="4.2" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="258.0" cy="109.2" r="4.2" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="288.0" cy="68.9" r="4.2" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="318.0" cy="59.4" r="4.2" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<line class="grid" x1="78.0" y1="318.0" x2="78.0" y2="488.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="78.0" y="504.0" font-size="11.5" text-anchor="middle" fill="#6f7b79">0</text>
+<line class="grid" x1="138.0" y1="318.0" x2="138.0" y2="488.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="138.0" y="504.0" font-size="11.5" text-anchor="middle" fill="#6f7b79">2</text>
+<line class="grid" x1="198.0" y1="318.0" x2="198.0" y2="488.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="198.0" y="504.0" font-size="11.5" text-anchor="middle" fill="#6f7b79">4</text>
+<line class="grid" x1="258.0" y1="318.0" x2="258.0" y2="488.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="258.0" y="504.0" font-size="11.5" text-anchor="middle" fill="#6f7b79">6</text>
+<line class="grid" x1="318.0" y1="318.0" x2="318.0" y2="488.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="318.0" y="504.0" font-size="11.5" text-anchor="middle" fill="#6f7b79">8</text>
+<line class="grid" x1="78.0" y1="459.7" x2="348.0" y2="459.7" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="71.0" y="463.7" font-size="11.5" text-anchor="end" fill="#6f7b79">−1</text>
+<line class="grid" x1="78.0" y1="403.0" x2="348.0" y2="403.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="71.0" y="407.0" font-size="11.5" text-anchor="end" fill="#6f7b79">0</text>
+<line class="grid" x1="78.0" y1="346.3" x2="348.0" y2="346.3" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="71.0" y="350.3" font-size="11.5" text-anchor="end" fill="#6f7b79">1</text>
+<line class="axis" x1="78.0" y1="488.0" x2="348.0" y2="488.0" stroke-width="1.5" stroke="#c3c9c6" fill="none"/>
+<line class="axis" x1="78.0" y1="318.0" x2="78.0" y2="488.0" stroke-width="1.5" stroke="#c3c9c6" fill="none"/>
+<line class="kink3" x1="78.0" y1="403.0" x2="348.0" y2="403.0" stroke-width="1.4" stroke="#6f7b79" fill="none"/>
+<text class="ink2" x="213.0" y="524.0" font-size="12" text-anchor="middle" fill="#4a5654">x</text>
+<text class="ink2" x="36.0" y="403.0" font-size="12" text-anchor="middle" fill="#4a5654" transform="rotate(-90 36.0 403.0)">residual</text>
+<line class="kink3" x1="108.0" y1="403.0" x2="108.0" y2="354.8" stroke-width="1" stroke="#6f7b79" fill="none"/>
+<circle class="s0 gap" cx="108.0" cy="354.8" r="4.2" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<line class="kink3" x1="138.0" y1="403.0" x2="138.0" y2="436.0" stroke-width="1" stroke="#6f7b79" fill="none"/>
+<circle class="s0 gap" cx="138.0" cy="436.0" r="4.2" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<line class="kink3" x1="168.0" y1="403.0" x2="168.0" y2="454.8" stroke-width="1" stroke="#6f7b79" fill="none"/>
+<circle class="s0 gap" cx="168.0" cy="454.8" r="4.2" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<line class="kink3" x1="198.0" y1="403.0" x2="198.0" y2="366.0" stroke-width="1" stroke="#6f7b79" fill="none"/>
+<circle class="s0 gap" cx="198.0" cy="366.0" r="4.2" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<line class="kink3" x1="228.0" y1="403.0" x2="228.0" y2="384.8" stroke-width="1" stroke="#6f7b79" fill="none"/>
+<circle class="s0 gap" cx="228.0" cy="384.8" r="4.2" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<line class="kink3" x1="258.0" y1="403.0" x2="258.0" y2="465.9" stroke-width="1" stroke="#6f7b79" fill="none"/>
+<circle class="s0 gap" cx="258.0" cy="465.9" r="4.2" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<line class="kink3" x1="288.0" y1="403.0" x2="288.0" y2="360.1" stroke-width="1" stroke="#6f7b79" fill="none"/>
+<circle class="s0 gap" cx="288.0" cy="360.1" r="4.2" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<line class="kink3" x1="318.0" y1="403.0" x2="318.0" y2="401.6" stroke-width="1" stroke="#6f7b79" fill="none"/>
+<circle class="s0 gap" cx="318.0" cy="401.6" r="4.2" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<text class="ink3" x="213.0" y="544.0" font-size="12" text-anchor="middle" fill="#6f7b79">signs: + − − + + − + +</text>
+<text class="ink" x="583.0" y="22.0" font-size="13" text-anchor="middle" fill="#15201f" font-weight="600">B: residuals that curve</text>
+<line class="grid" x1="448.0" y1="38.0" x2="448.0" y2="228.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="448.0" y="244.0" font-size="11.5" text-anchor="middle" fill="#6f7b79">0</text>
+<line class="grid" x1="493.0" y1="38.0" x2="493.0" y2="228.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="493.0" y="244.0" font-size="11.5" text-anchor="middle" fill="#6f7b79">1</text>
+<line class="grid" x1="538.0" y1="38.0" x2="538.0" y2="228.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="538.0" y="244.0" font-size="11.5" text-anchor="middle" fill="#6f7b79">2</text>
+<line class="grid" x1="583.0" y1="38.0" x2="583.0" y2="228.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="583.0" y="244.0" font-size="11.5" text-anchor="middle" fill="#6f7b79">3</text>
+<line class="grid" x1="628.0" y1="38.0" x2="628.0" y2="228.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="628.0" y="244.0" font-size="11.5" text-anchor="middle" fill="#6f7b79">4</text>
+<line class="grid" x1="673.0" y1="38.0" x2="673.0" y2="228.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="673.0" y="244.0" font-size="11.5" text-anchor="middle" fill="#6f7b79">5</text>
+<line class="grid" x1="718.0" y1="38.0" x2="718.0" y2="228.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="718.0" y="244.0" font-size="11.5" text-anchor="middle" fill="#6f7b79">6</text>
+<line class="grid" x1="448.0" y1="185.8" x2="718.0" y2="185.8" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="441.0" y="189.8" font-size="11.5" text-anchor="end" fill="#6f7b79">0</text>
+<line class="grid" x1="448.0" y1="133.0" x2="718.0" y2="133.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="441.0" y="137.0" font-size="11.5" text-anchor="end" fill="#6f7b79">10</text>
+<line class="grid" x1="448.0" y1="80.2" x2="718.0" y2="80.2" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="441.0" y="84.2" font-size="11.5" text-anchor="end" fill="#6f7b79">20</text>
+<line class="axis" x1="448.0" y1="228.0" x2="718.0" y2="228.0" stroke-width="1.5" stroke="#c3c9c6" fill="none"/>
+<line class="axis" x1="448.0" y1="38.0" x2="448.0" y2="228.0" stroke-width="1.5" stroke="#c3c9c6" fill="none"/>
+<text class="ink2" x="583.0" y="264.0" font-size="12" text-anchor="middle" fill="#4a5654">x</text>
+<text class="ink2" x="406.0" y="133.0" font-size="12" text-anchor="middle" fill="#4a5654" transform="rotate(-90 406.0 133.0)">y</text>
+<line class="k2" x1="461.5" y1="213.2" x2="704.5" y2="42.2" stroke-width="2.2" stroke="#1baf7a" fill="none"/>
+<circle class="s0 gap" cx="493.0" cy="180.5" r="4.2" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="538.0" cy="164.7" r="4.2" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="583.0" cy="138.3" r="4.2" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="628.0" cy="101.3" r="4.2" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="673.0" cy="53.8" r="4.2" stroke-width="1.2" fill="#2a78d6" stroke="#ffffff"/>
+<line class="grid" x1="448.0" y1="318.0" x2="448.0" y2="488.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="448.0" y="504.0" font-size="11.5" text-anchor="middle" fill="#6f7b79">0</text>
+<line class="grid" x1="493.0" y1="318.0" x2="493.0" y2="488.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="493.0" y="504.0" font-size="11.5" text-anchor="middle" fill="#6f7b79">1</text>
+<line class="grid" x1="538.0" y1="318.0" x2="538.0" y2="488.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="538.0" y="504.0" font-size="11.5" text-anchor="middle" fill="#6f7b79">2</text>
+<line class="grid" x1="583.0" y1="318.0" x2="583.0" y2="488.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="583.0" y="504.0" font-size="11.5" text-anchor="middle" fill="#6f7b79">3</text>
+<line class="grid" x1="628.0" y1="318.0" x2="628.0" y2="488.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="628.0" y="504.0" font-size="11.5" text-anchor="middle" fill="#6f7b79">4</text>
+<line class="grid" x1="673.0" y1="318.0" x2="673.0" y2="488.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="673.0" y="504.0" font-size="11.5" text-anchor="middle" fill="#6f7b79">5</text>
+<line class="grid" x1="718.0" y1="318.0" x2="718.0" y2="488.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="718.0" y="504.0" font-size="11.5" text-anchor="middle" fill="#6f7b79">6</text>
+<line class="grid" x1="448.0" y1="459.7" x2="718.0" y2="459.7" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="441.0" y="463.7" font-size="11.5" text-anchor="end" fill="#6f7b79">−2</text>
+<line class="grid" x1="448.0" y1="403.0" x2="718.0" y2="403.0" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="441.0" y="407.0" font-size="11.5" text-anchor="end" fill="#6f7b79">0</text>
+<line class="grid" x1="448.0" y1="346.3" x2="718.0" y2="346.3" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<text class="ink3" x="441.0" y="350.3" font-size="11.5" text-anchor="end" fill="#6f7b79">2</text>
+<line class="axis" x1="448.0" y1="488.0" x2="718.0" y2="488.0" stroke-width="1.5" stroke="#c3c9c6" fill="none"/>
+<line class="axis" x1="448.0" y1="318.0" x2="448.0" y2="488.0" stroke-width="1.5" stroke="#c3c9c6" fill="none"/>
+<line class="kink3" x1="448.0" y1="403.0" x2="718.0" y2="403.0" stroke-width="1.4" stroke="#6f7b79" fill="none"/>
+<text class="ink2" x="583.0" y="524.0" font-size="12" text-anchor="middle" fill="#4a5654">x</text>
+<text class="ink2" x="406.0" y="403.0" font-size="12" text-anchor="middle" fill="#4a5654" transform="rotate(-90 406.0 403.0)">residual</text>
+<line class="kink3" x1="493.0" y1="403.0" x2="493.0" y2="346.3" stroke-width="1" stroke="#6f7b79" fill="none"/>
+<circle class="s1 gap" cx="493.0" cy="346.3" r="4.2" stroke-width="1.2" fill="#eb6834" stroke="#ffffff"/>
+<line class="kink3" x1="538.0" y1="403.0" x2="538.0" y2="431.3" stroke-width="1" stroke="#6f7b79" fill="none"/>
+<circle class="s1 gap" cx="538.0" cy="431.3" r="4.2" stroke-width="1.2" fill="#eb6834" stroke="#ffffff"/>
+<line class="kink3" x1="583.0" y1="403.0" x2="583.0" y2="459.7" stroke-width="1" stroke="#6f7b79" fill="none"/>
+<circle class="s1 gap" cx="583.0" cy="459.7" r="4.2" stroke-width="1.2" fill="#eb6834" stroke="#ffffff"/>
+<line class="kink3" x1="628.0" y1="403.0" x2="628.0" y2="431.3" stroke-width="1" stroke="#6f7b79" fill="none"/>
+<circle class="s1 gap" cx="628.0" cy="431.3" r="4.2" stroke-width="1.2" fill="#eb6834" stroke="#ffffff"/>
+<line class="kink3" x1="673.0" y1="403.0" x2="673.0" y2="346.3" stroke-width="1" stroke="#6f7b79" fill="none"/>
+<circle class="s1 gap" cx="673.0" cy="346.3" r="4.2" stroke-width="1.2" fill="#eb6834" stroke="#ffffff"/>
+<text class="ink3" x="583.0" y="544.0" font-size="12" text-anchor="middle" fill="#6f7b79">signs: + − − − +</text>
+</svg>

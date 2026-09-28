@@ -161,6 +161,39 @@
           "variant": "test",
           "title": "Session 4 Test",
           "topics": "CED 5.1–5.2 · 20 questions"
+        },
+        {
+          "id": "s05t",
+          "label": "Session 5 · Tutor",
+          "out": "s05-tutor.html",
+          "src": "Session-05-Tutoring-Document.md",
+          "kind": "md",
+          "session": 5,
+          "variant": "tutor",
+          "title": "Session 5, The Regression Line",
+          "topics": "CED 5.3–5.5"
+        },
+        {
+          "id": "s05s",
+          "label": "Session 5 · Student",
+          "out": "s05-student.html",
+          "src": "Session-05-Student-Workbook.md",
+          "kind": "md",
+          "session": 5,
+          "variant": "student",
+          "title": "Session 5 Workbook",
+          "topics": "CED 5.3–5.5"
+        },
+        {
+          "id": "s05x",
+          "label": "Session 5 · Test",
+          "out": "s05-test.html",
+          "src": "Session-05-MC-Test.md",
+          "kind": "md",
+          "session": 5,
+          "variant": "test",
+          "title": "Session 5 Test",
+          "topics": "CED 5.3–5.5 · 20 questions"
         }
       ]
     },
@@ -193,6 +226,15 @@
           "kind": "tool",
           "title": "Guess the Correlation",
           "topics": "Session 4"
+        },
+        {
+          "id": "sim4",
+          "label": "Least-squares Fitter",
+          "out": "tools/least-squares-fitter.html",
+          "src": "html-fragment:least-squares-fitter.html",
+          "kind": "tool",
+          "title": "Least-squares Fitter",
+          "topics": "Session 5"
         }
       ]
     }

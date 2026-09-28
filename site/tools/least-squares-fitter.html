@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Least-squares Fitter · AP Statistics in Twenty Hours</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Spectral:ital,wght@0,600;0,700;1,600&display=swap">
+<link rel="stylesheet" href="../assets/course.css">
+</head>
+<body>
+<main class="page page--wide">
+<style>.page{max-width:none;padding-inline:0}.page .wrap{max-width:62rem}</style><style>
+  /* Least-squares Fitter. Scoped ls- classes; colours are course.css tokens only. */
+  .ls-wrap{max-width:62rem;margin-inline:auto;padding:30px 24px 48px}
+  @media(max-width:520px){.ls-wrap{padding-inline:14px}}
+  .ls-eyebrow{font-family:var(--f-mono);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);font-weight:500;margin:0 0 8px}
+  .ls-wrap h1{margin:0 0 10px}
+  .ls-lede{max-width:66ch;color:var(--ink-2);margin:0 0 20px}
+  .ls-tool{background:var(--surface);border:1px solid var(--rule);border-radius:4px;overflow:hidden}
+  .ls-controls{display:flex;flex-wrap:wrap;gap:14px 22px;align-items:flex-end;padding:16px 20px;background:var(--surface-2);border-bottom:1px solid var(--rule)}
+  .ls-ctl{display:flex;flex-direction:column;gap:6px;min-width:0}
+  .ls-lbl{font-family:var(--f-mono);font-size:.64rem;letter-spacing:.11em;text-transform:uppercase;color:var(--ink-3);font-weight:600}
+  .ls-seg{display:flex;border:1px solid var(--rule-strong);border-radius:3px;overflow:hidden;flex-wrap:wrap}
+  .ls-seg button{appearance:none;border:0;background:var(--surface);color:var(--ink-2);cursor:pointer;font-family:var(--f-body);font-size:.82rem;font-weight:600;padding:8px 13px}
+  .ls-seg button+button{border-left:1px solid var(--rule-strong)}
+  .ls-seg button[aria-pressed="true"]{background:var(--accent);color:#fff}
+  .ls-checks{display:flex;gap:16px;flex-wrap:wrap;font-size:.86rem;color:var(--ink-2)}
+  .ls-checks label{display:flex;align-items:center;gap:6px;cursor:pointer}
+  .ls-checks input{accent-color:var(--accent)}
+  .ls-main{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(0,1fr);gap:0}
+  @media(max-width:780px){.ls-main{grid-template-columns:minmax(0,1fr)}}
+  .ls-plots{padding:12px 14px 8px;border-right:1px solid var(--rule)}
+  @media(max-width:780px){.ls-plots{border-right:0;border-bottom:1px solid var(--rule)}}
+  .ls-plots svg{display:block;width:100%;height:auto;touch-action:none}
+  .ls-cap{font-family:var(--f-mono);font-size:.62rem;letter-spacing:.11em;text-transform:uppercase;color:var(--ink-3);margin:6px 4px 2px}
+  .ls-side{padding:16px 20px;display:flex;flex-direction:column;gap:14px}
+  .ls-eq{font-family:var(--f-mono);font-size:1.05rem;font-weight:600;color:var(--ink);font-variant-numeric:tabular-nums}
+  .ls-big{font-family:var(--f-mono);font-size:1.8rem;font-weight:600;color:var(--ink);font-variant-numeric:tabular-nums;line-height:1.05}
+  .ls-btns{display:flex;gap:10px;flex-wrap:wrap}
+  .ls-btn{appearance:none;font-family:var(--f-body);font-size:.86rem;font-weight:600;cursor:pointer;padding:8px 13px;border-radius:3px;border:1px solid var(--accent);background:transparent;color:var(--accent)}
+  .ls-btn:hover{background:var(--accent-soft)}
+  .ls-btn.ls-primary{background:var(--accent);color:#fff}
+  .ls-btn[disabled]{opacity:.45;cursor:default}
+  .ls-say{margin:0;font-size:.93rem;color:var(--ink-2);min-height:3.2em}
+  .ls-say b{color:var(--ink)}
+  .ls-best{border-top:1px solid var(--rule);padding-top:12px;display:grid;gap:6px;font-size:.9rem;color:var(--ink-2)}
+  .ls-best[hidden]{display:none}
+  .ls-best b{color:var(--ink);font-family:var(--f-mono);font-variant-numeric:tabular-nums}
+  .ls-help{font-size:.8rem;color:var(--ink-3);margin:0}
+  .ls-notes{display:grid;gap:12px;margin-top:18px;max-width:70ch}
+  .ls-note{border-radius:3px;padding:13px 17px}
+  .ls-note .ls-nl{display:block;font-family:var(--f-mono);font-size:.62rem;letter-spacing:.13em;text-transform:uppercase;font-weight:600;margin-bottom:4px}
+  .ls-note p{margin:0;font-size:.92rem;color:var(--ink-2)}
+  .ls-note strong{color:var(--ink)}
+  .ls-note.teal{background:var(--accent-soft);border:1px solid var(--accent)} .ls-note.teal .ls-nl{color:var(--accent-deep)}
+  .ls-note.amber{background:var(--amber-soft);border:1px solid var(--amber-rule)} .ls-note.amber .ls-nl{color:var(--amber)}
+  .ls-note.red{background:var(--alarm-soft);border:1px solid var(--alarm-rule)} .ls-note.red .ls-nl{color:var(--alarm)}
+  /* svg marks */
+  .ls-t{fill:var(--ink-3);font-size:12px;font-family:var(--f-body)}
+  .ls-grid{stroke:var(--rule)} .ls-axis{stroke:var(--rule-strong)} .ls-zero{stroke:var(--ink-3)}
+  .ls-dot{fill:var(--data);stroke:var(--surface);stroke-width:1.2}
+  .ls-rdot{fill:var(--s2);stroke:var(--surface);stroke-width:1.2}
+  .ls-mine{stroke:var(--s2);stroke-width:2.6}
+  .ls-lsrl{stroke:var(--s3);stroke-width:2.2;stroke-dasharray:8 5}
+  .ls-res{stroke:var(--s2);stroke-width:1.3}
+  .ls-sq{fill:var(--s2);fill-opacity:.16;stroke:var(--s2);stroke-opacity:.55;stroke-width:1}
+  .ls-handle circle{fill:var(--surface);stroke:var(--s2);stroke-width:3;cursor:ns-resize}
+  .ls-handle:focus{outline:none}
+  .ls-handle:focus circle,.ls-handle:hover circle{stroke-width:4.5}
+  .ls-handle:focus .ls-ring{stroke:var(--accent);stroke-width:2;fill:none}
+  .ls-ring{fill:none;stroke:none}
+  :focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+</style>
+
+<div class="ls-wrap">
+  <p class="ls-eyebrow">AP Statistics &middot; Session 5 &middot; CED 5.4&ndash;5.5</p>
+  <h1>Least-squares Fitter</h1>
+  <p class="ls-lede">Drag the two orange handles, or focus one with Tab and use the arrow keys, to move your line. Every residual, and the sum of their squares, updates as you go, and so does the residual plot underneath. The least-squares line is the one line that makes that sum as small as it can be. Try to find it before you ask to see it.</p>
+
+  <div class="ls-tool">
+    <div class="ls-controls">
+      <div class="ls-ctl">
+        <span class="ls-lbl" id="lsDataLbl">Data</span>
+        <div class="ls-seg" role="group" aria-labelledby="lsDataLbl">
+          <button type="button" data-set="three" aria-pressed="false">Three points (theory)</button>
+          <button type="button" data-set="lincoln" aria-pressed="true">Lincoln High, 25 students</button>
+          <button type="button" data-set="cafe" aria-pressed="false">Caf&eacute; iced drinks, 10 days</button>
+        </div>
+      </div>
+      <div class="ls-ctl">
+        <span class="ls-lbl">Show</span>
+        <div class="ls-checks">
+          <label><input type="checkbox" id="lsShowRes" checked> residuals</label>
+          <label><input type="checkbox" id="lsShowSq"> squares of the residuals</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="ls-main">
+      <div class="ls-plots">
+        <svg id="lsSvg" viewBox="0 0 560 360" role="group" aria-label="Scatterplot with your line"></svg>
+        <p class="ls-cap" id="lsResCap">Residual plot for your line</p>
+        <svg id="lsRes" viewBox="0 0 560 170" role="img" aria-label="Residual plot for your line"></svg>
+      </div>
+      <div class="ls-side">
+        <div>
+          <span class="ls-lbl">Your line</span>
+          <div class="ls-eq" id="lsEq">ŷ = &hellip;</div>
+        </div>
+        <div>
+          <span class="ls-lbl">Σ(residual²) for your line</span>
+          <div class="ls-big" id="lsSse" aria-live="polite">&hellip;</div>
+        </div>
+        <p class="ls-say" id="lsSay"></p>
+        <div class="ls-btns">
+          <button type="button" class="ls-btn ls-primary" id="lsShow" aria-pressed="false">Show the least-squares line</button>
+          <button type="button" class="ls-btn" id="lsFlat">Flat line at ȳ</button>
+          <button type="button" class="ls-btn" id="lsReset">Reset my line</button>
+        </div>
+        <div class="ls-best" id="lsBest" hidden>
+          <span class="ls-lbl">Least-squares line</span>
+          <div class="ls-eq" id="lsBestEq"></div>
+          <div>Σ(residual²) = <b id="lsBestSse"></b>, the smallest of any line</div>
+          <div><i>r</i> = <b id="lsBestR"></b> &middot; <i>r</i>² = <b id="lsBestR2"></b></div>
+          <div class="ls-btns"><button type="button" class="ls-btn" id="lsSnap">Move my line onto it</button></div>
+        </div>
+        <p class="ls-help">Keys on a focused handle: &uarr; &darr; move it a little, Shift + &uarr; &darr; or Page Up / Page Down move it further.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="ls-notes">
+    <div class="ls-note teal"><span class="ls-nl">Try this first</span>
+      <p>On <strong>Lincoln High</strong>, turn on <strong>squares of the residuals</strong> and move the handles until Σ(residual²) is as small as you can make it. Write your best value down. Then press <strong>Show the least-squares line</strong>. Nobody beats it: the least-squares line is defined as the line with the smallest possible sum. Notice how much of the total one square contributes: the student at 2.5 km who took 33 minutes.</p></div>
+    <div class="ls-note teal"><span class="ls-nl">Then this</span>
+      <p>Press <strong>Flat line at ȳ</strong>. That line predicts the mean for everyone and ignores <i>x</i> completely. Its Σ(residual²) is far bigger. Tilt it and watch the sum fall. Then try <strong>Three points</strong>: the least-squares line is ŷ = 1 + 0.5<i>x</i> with Σ(residual²) = 1.5, and the lines <i>y</i> = <i>x</i> and <i>y</i> = 2 both give 2.</p></div>
+    <div class="ls-note amber"><span class="ls-nl">And the catch</span>
+      <p>Switch to the <strong>caf&eacute;'s iced drinks</strong>, show the least-squares line and move your line onto it. It is the best straight line there is, <i>r</i>² = 0.92, and its residual plot still curves: positive at both ends, negative in the middle. <strong>Least squares finds the best line; it does not tell you whether a line is the right model.</strong> The residual plot does.</p></div>
+    <div class="ls-note red"><span class="ls-nl">Beyond the course description</span>
+      <p>Why <i>r</i>² is a proportion: for Lincoln High the flat line at ȳ leaves Σ(residual²) = 4098.2 and the least-squares line leaves 438.3, and 1 &minus; 438.3 &divide; 4098.2 = 0.893 = <i>r</i>². The course description states what <i>r</i>² means, not this calculation, so it is not examinable.</p></div>
+  </div>
+</div>
+
+<script>
+(function () {
+  "use strict";
+  /* STATS-BEGIN : pure functions, extracted and unit-tested in Node */
+  function mean(v) { var t = 0; for (var i = 0; i < v.length; i++) t += v[i]; return t / v.length; }
+  function sd(v) {
+    var m = mean(v), t = 0;
+    for (var i = 0; i < v.length; i++) t += (v[i] - m) * (v[i] - m);
+    return Math.sqrt(t / (v.length - 1));
+  }
+  /* r = (1/(n-1)) * sum of z_x * z_y : the form on the AP formula sheet */
+  function corr(x, y) {
+    var mx = mean(x), my = mean(y), sx = sd(x), sy = sd(y), t = 0;
+    for (var i = 0; i < x.length; i++) t += ((x[i] - mx) / sx) * ((y[i] - my) / sy);
+    return t / (x.length - 1);
+  }
+  /* least squares via the formula sheet: b = r * sy / sx, and ybar = a + b * xbar */
+  function lsrl(x, y) {
+    var r = corr(x, y), b = r * sd(y) / sd(x), a = mean(y) - b * mean(x);
+    return { a: a, b: b, r: r, r2: r * r };
+  }
+  function predict(a, b, xv) { return a + b * xv; }
+  /* residual = observed y - predicted y (CED 5.4.A.1) */
+  function residuals(x, y, a, b) { return x.map(function (xv, i) { return y[i] - predict(a, b, xv); }); }
+  function sse(x, y, a, b) { return residuals(x, y, a, b).reduce(function (t, e) { return t + e * e; }, 0); }
+  function lineThrough(x1, y1, x2, y2) { var b = (y2 - y1) / (x2 - x1); return { a: y1 - b * x1, b: b }; }
+  /* course rounding for coefficients: 4 significant figures, at least 2 decimal places,
+     no trailing zeros beyond the second (b = -3.75, not -3.750) */
+  function coef(v) {
+    if (v === 0) return "0.00";
+    var mag = Math.floor(Math.log10(Math.abs(v))), dp = Math.max(2, 3 - mag);
+    var s = (Math.round(v * Math.pow(10, dp) + (v > 0 ? 1e-9 : -1e-9)) / Math.pow(10, dp)).toFixed(dp);
+    while (dp > 2 && s.charAt(s.length - 1) === "0") { s = s.slice(0, -1); dp--; }  /* 3.750 -> 3.75 */
+    return s === "-0.00" ? "0.00" : s;
+  }
+  function minus(s) { return String(s).replace("-", "−"); }
+  function eqText(a, b) {
+    var bs = coef(b);
+    return "ŷ = " + minus(coef(a)) + (b < 0 ? " − " + bs.replace("-", "") : " + " + bs) + "x";
+  }
+  /* STATS-END */
+
+  var SETS = {
+    three: { name: "three points", x: [1, 2, 3], y: [1, 3, 2], xr: [0, 4], yr: [0, 4], rr: [-2, 2],
+             xt: [0, 1, 2, 3, 4], yt: [0, 1, 2, 3, 4], rt: [-2, -1, 0, 1, 2], xl: "x", yl: "y", start: [0.6, 1.2, 3.4, 2.8], step: 0.02 },
+    lincoln: { name: "Lincoln High", x: [0.5, 1.0, 1.0, 1.5, 2.0, 1.5, 2.5, 3.0, 4.5, 3.5, 4.0, 4.5, 7.0, 5.5, 6.0, 6.5, 5.0, 7.5, 8.0, 9.5, 11.0, 2.5, 14.0, 17.0, 28.0],
+             y: [8, 9, 10, 11, 12, 12, 13, 14, 15, 15, 16, 17, 18, 18, 20, 21, 22, 24, 25, 27, 30, 33, 36, 42, 68],
+             xr: [0, 30], yr: [0, 75], rr: [-25, 25], xt: [0, 5, 10, 15, 20, 25, 30], yt: [0, 15, 30, 45, 60, 75], rt: [-20, -10, 0, 10, 20],
+             xl: "Distance from school (km)", yl: "Journey time (min)", start: [3, 20, 27, 58], step: 0.25 },
+    cafe: { name: "the café's iced drinks", x: [12, 14, 15, 15, 16, 18, 19, 21, 22, 28], y: [9, 11, 13, 16, 20, 31, 44, 64, 74, 167],
+            xr: [10, 30], yr: [-40, 180], rr: [-40, 40], xt: [10, 15, 20, 25, 30], yt: [-40, 0, 40, 80, 120, 160], rt: [-40, -20, 0, 20, 40],
+            xl: "Midday temperature (°C)", yl: "Iced drinks sold", start: [12, 0, 27, 140], step: 1 }
+  };
+  var NS = "http://www.w3.org/2000/svg";
+  var svg = document.getElementById("lsSvg"), rsvg = document.getElementById("lsRes");
+  var G = { W: 560, H: 360, L: 58, R: 16, T: 14, B: 46 }, RG = { W: 560, H: 170, L: 58, R: 16, T: 10, B: 34 };
+  var st = { key: "lincoln", hx: [0, 0], hy: [0, 0], showLs: false };
+
+  function el(n, a) { var e = document.createElementNS(NS, n); for (var k in a) e.setAttribute(k, a[k]); return e; }
+  function txt(parent, x, y, s, anchor, rot) {
+    var t = el("text", { x: x, y: y, "class": "ls-t", "text-anchor": anchor || "middle" });
+    if (rot) t.setAttribute("transform", "rotate(-90 " + x + " " + y + ")");
+    t.textContent = s; parent.appendChild(t); return t;
+  }
+  function D() { return SETS[st.key]; }
+  function sx(v) { var d = D(); return G.L + (v - d.xr[0]) / (d.xr[1] - d.xr[0]) * (G.W - G.L - G.R); }
+  function sy(v) { var d = D(); return G.H - G.B - (v - d.yr[0]) / (d.yr[1] - d.yr[0]) * (G.H - G.T - G.B); }
+  function iy(py) { var d = D(); return d.yr[0] + (G.H - G.B - py) / (G.H - G.T - G.B) * (d.yr[1] - d.yr[0]); }
+  function rx(v) { var d = D(); return RG.L + (v - d.xr[0]) / (d.xr[1] - d.xr[0]) * (RG.W - RG.L - RG.R); }
+  function ry(v) { var d = D(); return RG.H - RG.B - (v - d.rr[0]) / (d.rr[1] - d.rr[0]) * (RG.H - RG.T - RG.B); }
+  function clampY(v) { var d = D(), pad = (d.yr[1] - d.yr[0]) * 0.02; return Math.max(d.yr[0] + pad, Math.min(d.yr[1] - pad, v)); }
+  function mine() { return lineThrough(st.hx[0], st.hy[0], st.hx[1], st.hy[1]); }
+
+  function frame(g, sxf, syf, box, xt, yt, xl, yl, zero) {
+    xt.forEach(function (v) {
+      g.appendChild(el("line", { x1: sxf(v), y1: box.T, x2: sxf(v), y2: box.H - box.B, "class": "ls-grid", "stroke-width": 1 }));
+      txt(g, sxf(v), box.H - box.B + 15, minus(v));
+    });
+    yt.forEach(function (v) {
+      g.appendChild(el("line", { x1: box.L, y1: syf(v), x2: box.W - box.R, y2: syf(v), "class": "ls-grid", "stroke-width": 1 }));
+      txt(g, box.L - 6, syf(v) + 4, minus(v), "end");
+    });
+    g.appendChild(el("line", { x1: box.L, y1: box.H - box.B, x2: box.W - box.R, y2: box.H - box.B, "class": "ls-axis", "stroke-width": 1.5 }));
+    g.appendChild(el("line", { x1: box.L, y1: box.T, x2: box.L, y2: box.H - box.B, "class": "ls-axis", "stroke-width": 1.5 }));
+    if (zero) g.appendChild(el("line", { x1: box.L, y1: syf(0), x2: box.W - box.R, y2: syf(0), "class": "ls-zero", "stroke-width": 1.4 }));
+    txt(g, (box.L + box.W - box.R) / 2, box.H - 6, xl);
+    txt(g, 15, (box.T + box.H - box.B) / 2, yl, "middle", true);
+  }
+
+  function draw() {
+    var d = D(), m = mine(), ls = lsrl(d.x, d.y);
+    while (svg.firstChild) svg.removeChild(svg.firstChild);
+    while (rsvg.firstChild) rsvg.removeChild(rsvg.firstChild);
+    var clip = el("clipPath", { id: "lsClip" });
+    clip.appendChild(el("rect", { x: G.L, y: G.T, width: G.W - G.L - G.R, height: G.H - G.T - G.B }));
+    svg.appendChild(clip);
+    frame(svg, sx, sy, G, d.xt, d.yt, d.xl, d.yl, false);
+    var inner = el("g", { "clip-path": "url(#lsClip)" }); svg.appendChild(inner);
+    var res = residuals(d.x, d.y, m.a, m.b);
+    var showSq = document.getElementById("lsShowSq").checked, showRes = document.getElementById("lsShowRes").checked;
+    d.x.forEach(function (xv, i) {
+      var py = sy(d.y[i]), ph = sy(predict(m.a, m.b, xv)), side = Math.abs(py - ph);
+      if (showSq && side > 0.5) inner.appendChild(el("rect", { x: sx(xv), y: Math.min(py, ph), width: side, height: side, "class": "ls-sq" }));
+      if (showRes) inner.appendChild(el("line", { x1: sx(xv), y1: py, x2: sx(xv), y2: ph, "class": "ls-res" }));
+    });
+    function seg(a, b, cls) {
+      inner.appendChild(el("line", { x1: sx(d.xr[0]), y1: sy(predict(a, b, d.xr[0])), x2: sx(d.xr[1]), y2: sy(predict(a, b, d.xr[1])), "class": cls }));
+    }
+    if (st.showLs) seg(ls.a, ls.b, "ls-lsrl");
+    seg(m.a, m.b, "ls-mine");
+    d.x.forEach(function (xv, i) { svg.appendChild(el("circle", { cx: sx(xv), cy: sy(d.y[i]), r: d.x.length > 12 ? 4.3 : 5.5, "class": "ls-dot" })); });
+    [0, 1].forEach(function (k) {
+      var g = el("g", { "class": "ls-handle", tabindex: 0, role: "slider", "aria-orientation": "vertical",
+                         "aria-label": (k === 0 ? "Left" : "Right") + " handle of your line, at x = " + st.hx[k],
+                         "aria-valuemin": d.yr[0], "aria-valuemax": d.yr[1], "aria-valuenow": st.hy[k].toFixed(2),
+                         "aria-valuetext": "y = " + st.hy[k].toFixed(1) });
+      g.appendChild(el("circle", { "class": "ls-ring", cx: sx(st.hx[k]), cy: sy(st.hy[k]), r: 14 }));
+      g.appendChild(el("circle", { cx: sx(st.hx[k]), cy: sy(st.hy[k]), r: 8 }));
+      g.dataset.k = k;
+      svg.appendChild(g);
+    });
+    frame(rsvg, rx, ry, RG, d.xt, d.rt, d.xl, "Residual", true);
+    d.x.forEach(function (xv, i) {
+      var e = Math.max(d.rr[0], Math.min(d.rr[1], res[i]));
+      rsvg.appendChild(el("circle", { cx: rx(xv), cy: ry(e), r: 4.3, "class": "ls-rdot" }));
+    });
+    var total = sse(d.x, d.y, m.a, m.b), best = sse(d.x, d.y, ls.a, ls.b);
+    document.getElementById("lsEq").textContent = eqText(m.a, m.b);
+    document.getElementById("lsSse").textContent = total.toFixed(1);
+    var pos = res.filter(function (e) { return e > 0; }).length;
+    var say = pos + " of " + d.x.length + " residuals are positive (points above your line) and " + (d.x.length - pos) + " negative.";
+    if (st.showLs) {
+      var over = total - best;
+      say += over < 0.05 ? " <b>Your line is the least-squares line.</b>" : " Yours is <b>" + over.toFixed(1) + "</b> above the smallest possible sum.";
+    }
+    document.getElementById("lsSay").innerHTML = say;
+    var bx = document.getElementById("lsBest");
+    bx.hidden = !st.showLs;
+    if (st.showLs) {
+      document.getElementById("lsBestEq").textContent = eqText(ls.a, ls.b);
+      document.getElementById("lsBestSse").textContent = best.toFixed(1);
+      document.getElementById("lsBestR").textContent = minus(ls.r.toFixed(2));
+      document.getElementById("lsBestR2").textContent = ls.r2.toFixed(2);
+    }
+    rsvg.setAttribute("aria-label", "Residual plot for your line: " + say.replace(/<[^>]+>/g, ""));
+  }
+
+  function setLineAB(a, b) { st.hy = [clampY(predict(a, b, st.hx[0])), clampY(predict(a, b, st.hx[1]))]; }
+  function load(key) {
+    st.key = key; var d = D();
+    st.hx = [d.start[0], d.start[2]]; st.hy = [d.start[1], d.start[3]];
+    document.querySelectorAll(".ls-seg button").forEach(function (b) { b.setAttribute("aria-pressed", b.dataset.set === key ? "true" : "false"); });
+    draw();
+  }
+
+  /* pointer drag */
+  var drag = null;
+  function toSvgY(ev) { var p = svg.createSVGPoint(); p.x = ev.clientX; p.y = ev.clientY; return p.matrixTransform(svg.getScreenCTM().inverse()).y; }
+  svg.addEventListener("pointerdown", function (ev) {
+    var g = ev.target.closest ? ev.target.closest(".ls-handle") : null;
+    if (!g) return;
+    drag = +g.dataset.k; svg.setPointerCapture(ev.pointerId); ev.preventDefault();
+  });
+  svg.addEventListener("pointermove", function (ev) {
+    if (drag === null) return;
+    st.hy[drag] = clampY(iy(toSvgY(ev))); draw();
+  });
+  function endDrag() { if (drag !== null) { var k = drag; drag = null; var h = svg.querySelectorAll(".ls-handle")[k]; if (h) h.focus(); } }
+  svg.addEventListener("pointerup", endDrag); svg.addEventListener("pointercancel", endDrag);
+
+  /* keyboard on the handles */
+  svg.addEventListener("keydown", function (ev) {
+    var g = ev.target.closest ? ev.target.closest(".ls-handle") : null;
+    if (!g) return;
+    var k = +g.dataset.k, d = D(), step = d.step, big = step * 10, dy = 0;
+    if (ev.key === "ArrowUp" || ev.key === "ArrowRight") dy = ev.shiftKey ? big : step;
+    else if (ev.key === "ArrowDown" || ev.key === "ArrowLeft") dy = ev.shiftKey ? -big : -step;
+    else if (ev.key === "PageUp") dy = big;
+    else if (ev.key === "PageDown") dy = -big;
+    else return;
+    ev.preventDefault();
+    st.hy[k] = clampY(st.hy[k] + dy); draw();
+    svg.querySelectorAll(".ls-handle")[k].focus();
+  });
+
+  document.querySelectorAll(".ls-seg button").forEach(function (b) { b.addEventListener("click", function () { load(b.dataset.set); }); });
+  document.getElementById("lsShowRes").addEventListener("change", draw);
+  document.getElementById("lsShowSq").addEventListener("change", draw);
+  var bShow = document.getElementById("lsShow");
+  bShow.addEventListener("click", function () {
+    st.showLs = !st.showLs; bShow.setAttribute("aria-pressed", st.showLs ? "true" : "false");
+    bShow.textContent = st.showLs ? "Hide the least-squares line" : "Show the least-squares line"; draw();
+  });
+  document.getElementById("lsFlat").addEventListener("click", function () { setLineAB(mean(D().y), 0); draw(); });
+  document.getElementById("lsReset").addEventListener("click", function () { load(st.key); });
+  document.getElementById("lsSnap").addEventListener("click", function () { var l = lsrl(D().x, D().y); setLineAB(l.a, l.b); draw(); });
+
+  load("lincoln");
+})();
+</script>
+
+</main>
+<script>window.COURSE_NAV={"kicker": "Session 5", "title": "Least-squares Fitter", "map": [{"label": "Course", "items": [{"href": "../index.html", "label": "Home", "current": false}, {"href": "../plan.html", "label": "The 20-hour plan", "current": false}]}, {"label": "Block A · Describing one variable", "items": [{"href": "../s01-tutor.html", "label": "Session 1 · Tutor", "current": false}, {"href": "../s01-student.html", "label": "Session 1 · Student", "current": false}, {"href": "../s01-test.html", "label": "Session 1 · Test", "current": false}, {"href": "../s02-tutor.html", "label": "Session 2 · Tutor", "current": false}, {"href": "../s02-student.html", "label": "Session 2 · Student", "current": false}, {"href": "../s02-test.html", "label": "Session 2 · Test", "current": false}, {"href": "../s03-tutor.html", "label": "Session 3 · Tutor", "current": false}, {"href": "../s03-student.html", "label": "Session 3 · Student", "current": false}, {"href": "../s03-test.html", "label": "Session 3 · Test", "current": false}]}, {"label": "Block B · Describing two variables", "items": [{"href": "../s04-tutor.html", "label": "Session 4 · Tutor", "current": false}, {"href": "../s04-student.html", "label": "Session 4 · Student", "current": false}, {"href": "../s04-test.html", "label": "Session 4 · Test", "current": false}, {"href": "../s05-tutor.html", "label": "Session 5 · Tutor", "current": false}, {"href": "../s05-student.html", "label": "Session 5 · Student", "current": false}, {"href": "../s05-test.html", "label": "Session 5 · Test", "current": false}]}, {"label": "Interactive", "items": [{"href": "../tools/unit1-explorer.html", "label": "Unit 1 Explorer", "current": false}, {"href": "../tools/boxplot-builder.html", "label": "Boxplot Builder", "current": false}, {"href": "../tools/guess-correlation.html", "label": "Guess the Correlation", "current": false}, {"href": "../tools/least-squares-fitter.html", "label": "Least-squares Fitter", "current": true}]}], "prev": {"href": "../tools/guess-correlation.html", "label": "Guess the Correlation"}};</script>
+<script src="../assets/course.js"></script>
+</body>
+</html>

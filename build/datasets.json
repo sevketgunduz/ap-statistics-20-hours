@@ -589,7 +589,8 @@
   },
   "lincoln-distance-time": {
    "sessions": [
-    4
+    4,
+    5
    ],
    "desc": "Distance from school and journey time for the same 25 Lincoln High students (Scenario A). y is the registered lincoln-commute list, in the same order.",
    "x": {
@@ -655,7 +656,19 @@
     ]
    },
    "r": 0.945,
-   "notes": "Point (2.5, 33) does not fit the pattern; point (28, 68) is Session 3's outlier and fits it."
+   "notes": "Point (2.5, 33) does not fit the pattern; point (28, 68) is Session 3's outlier and fits it.",
+   "lsrl": {
+    "x": "distance (km)",
+    "y": "journey time (min)",
+    "a": 8.7622378,
+    "b": 2.0187519,
+    "r": 0.9450099,
+    "r2": 0.8930437,
+    "written": "yhat = 8.762 + 2.019x",
+    "sse": 438.324,
+    "sse_flat": 4098.16,
+    "notes": "Session 5 Scenario A. xbar 6.28, sx 6.117, ybar 21.44, sy 13.07. Predictions: 12 km 33.0 (interpolation), 45 km 99.6 (extrapolation). Residuals: (2.5,33) +19.2, (28,68) +2.7, (7,18) -4.9, (5,22) +3.1, (7.5,24) +0.1."
+   }
   },
   "lincoln-distance-time-five": {
    "sessions": [
@@ -688,7 +701,8 @@
   },
   "cafe-temp-drinks": {
    "sessions": [
-    4
+    4,
+    5
    ],
    "desc": "Cafe, the 10 days of cafe-midday-temp-c: all drinks, iced drinks and hot drinks sold that day (Activity debrief). hot = total - iced.",
    "x": {
@@ -747,11 +761,47 @@
     "total": -0.0122,
     "iced": 0.9596,
     "hot": -0.9498
+   },
+   "lsrl": {
+    "x": "midday temperature (C)",
+    "y": "iced drinks",
+    "a": -133.03,
+    "b": 9.885,
+    "r": 0.9595527,
+    "r2": 0.9207414,
+    "written": "yhat = -133.03 + 9.885x",
+    "sse": 1682.255,
+    "residuals_exact": [
+     23.41,
+     5.64,
+     -2.245,
+     0.755,
+     -5.13,
+     -13.9,
+     -10.785,
+     -10.555,
+     -10.44,
+     23.25
+    ],
+    "residuals_nearest_drink": [
+     23,
+     6,
+     -2,
+     1,
+     -5,
+     -14,
+     -11,
+     -11,
+     -10,
+     23
+    ],
+    "notes": "Session 5 Scenario B (iced only). Residual plot curved: + at both ends, - in the middle. Prediction at 12 C is -14.4 (impossible); intercept -133.03."
    }
   },
   "st-marys-shifts": {
    "sessions": [
-    4
+    4,
+    5
    ],
    "desc": "St Mary's, 20 evening shifts: patients arriving, doctors on duty, mean wait of the patients seen that shift (Scenario B). The individuals are shifts.",
    "arrivals": [
@@ -824,6 +874,16 @@
     "doctors_wait": 0.6765,
     "arrivals_doctors": 0.932,
     "arrivals_wait": 0.8771
+   },
+   "lsrl": {
+    "x": "patients arriving",
+    "y": "mean wait (min)",
+    "a": 14.513989,
+    "b": 0.4183444,
+    "r": 0.8770562,
+    "r2": 0.7692276,
+    "written": "yhat = 14.51 + 0.4183x",
+    "notes": "Session 5 solo case (arrivals -> mean wait). Shift 10 (52, 41): predicted 36.3, residual +4.7. Shift 7 (46, 28): predicted 33.8, residual -5.8. 60 arrivals 39.6; 110 arrivals 60.5 (extrapolation). Residual plot: no pattern."
    }
   },
   "library-hours-items-central": {
@@ -925,7 +985,8 @@
   },
   "oakfield-distance-time-12": {
    "sessions": [
-    4
+    4,
+    5
    ],
    "desc": "12 of the 20 Oakfield students (times from oakfield-commute-20) with distance from school (Homework B).",
    "x": {
@@ -965,11 +1026,20 @@
     ]
    },
    "r": 0.883,
-   "notes": "(6.8, 38) does not fit the pattern."
+   "notes": "(6.8, 38) does not fit the pattern.",
+   "lsrl": {
+    "a": 0.1929406,
+    "b": 3.8957787,
+    "r": 0.8829683,
+    "r2": 0.779633,
+    "written": "yhat = 0.1929 + 3.896x",
+    "notes": "Session 5 homework B. (6.8,38): predicted 26.7, residual +11.3. (4.2,14): predicted 16.6, residual -2.6. 5 km 19.7; 20 km 78.1 (extrapolation)."
+   }
   },
   "cafe-spring-mornings-5": {
    "sessions": [
-    4
+    4,
+    5
    ],
    "desc": "Five spring mornings: temperature at 8 am and hot drinks sold 7-10 am (Homework D, r by hand). x mean 15, s 5; y mean 150, s 20; sum of z-products -3.75; r = -0.9375.",
    "x": {
@@ -994,11 +1064,20 @@
      135
     ]
    },
-   "r": -0.9375
+   "r": -0.9375,
+   "lsrl": {
+    "a": 206.25,
+    "b": -3.75,
+    "r": -0.9375,
+    "r2": 0.87890625,
+    "written": "yhat = 206.25 - 3.75x",
+    "notes": "Session 5 homework C, formula-sheet route: b = r*sy/sx = -0.9375*20/5 = -3.75; a = 150 - (-3.75)(15) = 206.25. 10 C: 168.8. (19,125): predicted 135.0, residual -10.0."
+   }
   },
   "library-branches-18": {
    "sessions": [
-    4
+    4,
+    5
    ],
    "desc": "18 library branches: public computers, weekly visits, residents served in thousands (Homework E, the confounding variable).",
    "computers": [
@@ -1065,6 +1144,16 @@
     "computers_visits": 0.8318,
     "residents_computers": 0.875,
     "residents_visits": 0.9525
+   },
+   "lsrl": {
+    "x": "residents served (thousands)",
+    "y": "weekly visits",
+    "a": -9.8244572,
+    "b": 38.1010329,
+    "r": 0.9525002,
+    "r2": 0.9072565,
+    "written": "yhat = -9.824 + 38.10x",
+    "notes": "Session 5 homework E (residents -> visits). Branch (24, 1090): predicted 904.6, residual +185.4. Branch (37, 1160): predicted 1399.9, residual -239.9."
    }
   },
   "library-age-items-20": {
@@ -1128,7 +1217,8 @@
   },
   "cafe-machine-warmup": {
    "sessions": [
-    4
+    4,
+    5
    ],
    "desc": "Cafe coffee machine warming up: minutes since switched on and water temperature (Homework F2).",
    "x": {
@@ -1171,7 +1261,31 @@
      93
     ]
    },
-   "r": 0.8821
+   "r": 0.8821,
+   "lsrl": {
+    "a": 41.9112689,
+    "b": 3.2289264,
+    "r": 0.8820571,
+    "r2": 0.7780247,
+    "written": "yhat = 41.91 + 3.229x",
+    "residuals_1dp": [
+     -24.9,
+     -11.1,
+     -4.4,
+     3.4,
+     6.2,
+     9.9,
+     13.7,
+     11.3,
+     10.8,
+     7.3,
+     2.9,
+     -2.6,
+     -9.0,
+     -13.5
+    ],
+    "notes": "Session 5 homework D. Residual signs: 3 negative, 8 positive, 3 negative (curved)."
+   }
   },
   "s04-synthetic-panels": {
    "sessions": [
@@ -2579,6 +2693,115 @@
      }
     ]
    }
+  },
+  "s05-theory-abstract": {
+   "sessions": [
+    5
+   ],
+   "desc": "Made-up illustrations in the Session 5 theory section and figure s05-theory-residual-plots. No context.",
+   "three_points": {
+    "x": [
+     1,
+     2,
+     3
+    ],
+    "y": [
+     1,
+     3,
+     2
+    ],
+    "lsrl": "yhat = 1 + 0.5x",
+    "residuals": [
+     -0.5,
+     1,
+     -0.5
+    ],
+    "sse": 1.5,
+    "sse_y_equals_x": 2,
+    "sse_flat_y_2": 2,
+    "r": 0.5,
+    "r2": 0.25
+   },
+   "x_squared": {
+    "x": [
+     1,
+     2,
+     3,
+     4,
+     5
+    ],
+    "y": [
+     1,
+     4,
+     9,
+     16,
+     25
+    ],
+    "lsrl": "yhat = -7 + 6x",
+    "residuals": [
+     2,
+     -1,
+     -2,
+     -1,
+     2
+    ],
+    "r": 0.9811
+   },
+   "linear_panel": {
+    "x": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8
+    ],
+    "y": [
+     4.3,
+     4.4,
+     5.6,
+     8.7,
+     9.9,
+     10.0,
+     13.4,
+     14.2
+    ],
+    "note": "residual plot with no pattern (figure only)"
+   }
+  },
+  "s05-reversing-cards": {
+   "sessions": [
+    5
+   ],
+   "desc": "Reversing Interpretations activity: Lincoln High students given by distance and residual, using yhat = 8.762 + 2.019x. Observed = predicted + residual.",
+   "cards": [
+    {
+     "x": 7.0,
+     "residual": -4.9,
+     "predicted": 22.9,
+     "observed": 18.0
+    },
+    {
+     "x": 5.0,
+     "residual": 3.1,
+     "predicted": 18.9,
+     "observed": 22.0
+    },
+    {
+     "x": 2.5,
+     "residual": 19.2,
+     "predicted": 13.8,
+     "observed": 33.0
+    },
+    {
+     "x": 7.5,
+     "residual": 0.1,
+     "predicted": 23.9,
+     "observed": 24.0
+    }
+   ]
   }
  }
 }
