@@ -119,7 +119,7 @@ Before the test is written, check the session against this list. Every item is a
 4. **Distractors.** Each wrong option is a named misconception, preferably one the session itself warns about. The explanation for each question says why the key is right **and** what each wrong option reveals.
 5. **Conventions.** Use exactly the session's formulas, notation, rounding and quartile method.
 6. **Headings.** *Questions N–M · Context* over the questions, *Answers N–M · Context* over the explanations. Answers are inside `<details>`.
-7. **Diagnosis.** A score table, then a table mapping each missed question to the **exact section heading** of the session where it is retaught. Check every heading exists, by script.
+7. **Diagnosis.** A score table, then a table mapping each missed question to two **exact section headings** of the session: the *theory to reread* (a subsection of *Theory — …*) and *where it is applied* (the scenario or activity section). That is the order the session teaches in. Check every heading exists, by script.
 8. **Verification.** A script computes every number, recomputes each distractor from the error it represents, and checks that the answer letters are spread roughly evenly across A–E. Figures are rendered to PNG and inspected.
 9. **Manifest.** Entry `sNNx`, out `sNN-test.html`, variant `test`, topics `CED … · N questions`, placed after the session's student workbook.
 
@@ -147,7 +147,7 @@ Publishing is one commit to `main` and a push, which redeploys GitHub Pages. Com
 |---|---|
 | Code blocks inside `>` quotes render as literal ``` | Put data in a code block outside the quote |
 | `figures/` is excluded by `.gitignore` | The committed copies are `site/assets/figures/`, produced by the build; always rebuild before committing |
-| Sessions 1–2 tutor pages and the Unit 1 Explorer are HTML fragments in another session's scratchpad | `build.py` still finds them at that path; do not delete it, and move them into `build/fragments/` when convenient |
+| The Unit 1 Explorer is an HTML fragment | It is kept in `build/fragments/unit1-explorer.html`; the original Session 1–2 tutor fragments are kept there too, for reference only (the tutor pages now build from markdown) |
 | Most of `.claude/` is local | `.claude/agents/` and `.claude/skills/` are committed, so the agent and `/build-session` travel with the repository; local settings and `launch.json` stay out of git |
 | The site's own Dark toggle makes figure labels hard to read when the operating system is in light mode | Known and site-wide; do not make it worse; the fix is for `build.py` to inline the page-token figure versions |
 | The 2026 formula sheet prints geometric distributions and the slope sampling distribution, but the CED omits both | Treat them as off-syllabus until the register (§8) is rechecked |
@@ -182,10 +182,6 @@ Block labels for `manifest.json`: Sessions 1–3 *Block A · Describing one vari
 
 ---
 
-## Retrofits outstanding
+## Retrofits done
 
-Sessions 1–4 were built before these rules, so they do not yet meet them. Each needs a pass before the course is complete.
-
-- **Theory before examples (§3.1).** Sessions 1–4 introduce terms inside the scenarios. Each needs a *Theory — …* section added before Scenario A, with the scenarios' `intro` lines turned into references back to it.
-- **Headings that name their content.** Session 1's workbook has *Study 1* to *Study 6*.
-- **Sessions 1–2 tutor scripts** are HTML fragments, not markdown, so they need converting before either retrofit can be made to them.
+Sessions 1–4 were brought up to these rules on 2026-09-29. Each has a *Theory — …* section before its first scenario, and scenario `intro` lines recall it. Sessions 1–2's tutor scripts were converted from their original HTML pages to markdown, checked piece by piece against the originals, which are kept in `build/fragments/`. Every test's reteach table now names both the theory to reread and where it is applied. The Unit 1 Explorer is embedded in Sessions 1 and 2.

@@ -1,7 +1,7 @@
 # Session 4 — Two Variables: Scatterplots and Correlation
 
 **AP Statistics · Twenty-Hour Course · Student edition, to work through on your own**
-**CED Topics 5.1, 5.2 · About 140 minutes, plus homework**
+**CED Topics 5.1, 5.2 · About 155 minutes, plus homework**
 
 ---
 
@@ -21,14 +21,14 @@ Working alone with a pen is slower than working with a tutor, so each part is gi
 
 | Your section | Tutor's section | Minutes |
 |---|---|---|
-| Part 1 — Your Session 3 homework, and a warm-up | 0–10 Homework debrief and diagnostic | 12 |
-| Part 2 — Why this matters | (the framing) | 3 |
-| Part 3 — Lincoln High: distance and journey time | 10–55 Scenario A | 56 |
-| Part 4 — Sketch and Switch, on your own | 55–72 Activity | 21 |
-| Part 5 — St Mary's evening shifts | 72–92 Scenario B | 25 |
-| Part 6 — On your own: the library | 92–102 Solo case | 13 |
-| Part 7 — Explain it back | 102–110 Teach it back | 8 |
-| **Total** | **110 minutes** | **138** |
+| Part 1 — Your Session 3 homework, and a warm-up | 0–10 Homework debrief and diagnostic | 13 |
+| Part 2 — Theory: two variables, association and correlation | 10–30 Theory — two quantitative variables, association and correlation | 25 |
+| Part 3 — Lincoln High: distance and journey time | 30–70 Scenario A | 50 |
+| Part 4 — Sketch and Switch, on your own | 70–87 Activity | 21 |
+| Part 5 — St Mary's evening shifts | 87–107 Scenario B | 25 |
+| Part 6 — On your own: the library | 107–117 Solo case | 13 |
+| Part 7 — Explain it back | 117–125 Teach it back | 8 |
+| **Total** | **125 minutes** | **155** |
 
 If your tutor has not yet set the **Session 2 test**, take it before Part 1: 40 minutes, timed, answer key closed.
 
@@ -58,24 +58,184 @@ Four questions. Answer all four on paper before revealing.
 | If you said | It means | Do this |
 |---|---|---|
 | **1:** negative | Correct: as temperature rises, the bill tends to fall | Carry on |
-| **1:** positive, "because they're related" | You are using *positive* to mean *there is a relationship* | Positive means as one increases the other **tends to increase**; negative means it **tends to decrease**. Part 3 practises it |
-| **2:** revision, because it affects the score | Correct idea: revision is the **explanatory** variable | Part 3 gives it its name and its axis |
-| **2:** "it doesn't matter" or the score | No convention yet | Expected. Part 3's first question is exactly this |
-| **3:** no, hot weather drives both | You already see a third variable at work | Part 5 builds on it and names it |
+| **1:** positive, "because they're related" | You are using *positive* to mean *there is a relationship* | Read Part 2's *Direction: positive or negative* slowly, especially what it does not say. Part 3 practises it |
+| **2:** revision, because it affects the score | Correct idea: revision is the **explanatory** variable | Part 2 gives it its name and its axis |
+| **2:** "it doesn't matter" or the score | No convention yet | Expected. Part 2 fixes the convention, and Part 3's first question applies it |
+| **3:** no, hot weather drives both | You already see a third variable at work | Part 2 names it, and Part 5 builds on it |
 | **3:** yes, they go up together | You are treating "go together" as "cause" | That is the whole of Part 5. Read it slowly |
 | **4:** 1.5 standard deviations below the mean | Session 3 has held | Carry on |
-| **4:** 1.5 minutes below average, or blank | z-scores have not landed | Redo Session 3's homework F1 before Part 3's correlation section |
+| **4:** 1.5 minutes below average, or blank | z-scores have not landed | Redo Session 3's homework F1 before Part 2's correlation subsections |
 
 Question 3 is the course description's own: it is one of the essential questions for this unit.
 :::
 
 ---
 
-## Part 2 — Why this matters
+## Part 2 — Theory: two variables, association and correlation
 
 Until now you have looked at one variable at a time. Today every individual gives you **two** numbers, and the question is whether they move together.
 
 That question produces the most common reasoning error in statistics: seeing two things move together and concluding that one causes the other. It also produces a quieter error, trusting a single number, the correlation *r*, without looking at the picture it came from. Parts 4 and 5 are built to break both habits.
+
+**Read this part in full before Part 3.** It states every idea the session uses, each with its code from the course description, the rule, the formula where there is one, and what the rule does **not** say, which is where most marks are lost. The illustrations use bare, made-up numbers on purpose; Parts 3 to 7 apply the same rules to real data. There is nothing to write until the self-check at the end. When a later part says "from Part 2", this is where to look.
+
+### Bivariate quantitative data (5.1.A.1)
+
+A **bivariate quantitative data set** is made of **ordered pairs**: the values of two quantitative variables, both recorded on the **same individuals** in a sample or a population. Each individual gives one pair, and the pairs are what a scatterplot is built from.
+
+What it does not say. The two values in a pair must belong to the same individual. Two lists of numbers taken from different individuals are not bivariate data, even if the lists are the same length, because there is nothing to pair them by. And both variables must be quantitative; a categorical variable against a quantitative one is a comparison of distributions, as in Session 3.
+
+*Illustration:* the pair (3, 7) says that one individual has the value 3 for the first variable and 7 for the second. Ten such pairs from ten individuals are a bivariate data set with *n* = 10.
+
+### Explanatory and response variables (5.1.A.2)
+
+The **explanatory variable** is the one whose values are used to **explain or predict** the values of the other. The **response variable** is the one being explained or predicted. The explanatory variable goes on the **x-axis** and the response on the **y-axis**.
+
+What it does not say. Calling a variable explanatory describes the question being asked; it does not claim that it *causes* the response (see *Correlation does not imply causation*, below). Sometimes either choice can be defended; the answer must say which variable is which, and why. Every description that follows depends on the choice: "as *x* increases, *y* tends to…" is a sentence about a particular pair of roles.
+
+*Illustration:* if *x* is used to predict *y*, then *x* is explanatory and goes across. Ask the reverse question, predicting *x* from *y*, and the roles and the axes swap.
+
+### The scatterplot: one point per individual (5.1.A)
+
+A **scatterplot** shows the relationship between two quantitative variables with **one point for each individual**: its value of the explanatory variable across, its value of the response variable up. To construct one, label each axis with the variable **and its units**, choose scales that cover all the data, and plot every pair.
+
+What it does not say. A point is an individual, not a value; and the individuals need not be people. An axis that does not start at 0 is not an error, but it should be a choice made on purpose, because a squashed axis makes it harder to judge how close points are to a pattern. A scatterplot shows how two variables go together; on its own it never shows why.
+
+### Describing an association: the four features (5.1.B.1)
+
+A description of the association shown in a scatterplot includes **form, direction, strength and unusual features**. The course description lists them in that order. This course takes them in the order the eye finds them, **direction, unusual features, form, strength**, which makes no difference to the marks. The next three subsections define each one.
+
+| Feature | The question it answers |
+|---|---|
+| **Direction** | As *x* increases, does *y* **tend to** increase (positive) or decrease (negative)? |
+| **Unusual features** | Are there points that don't fit the general pattern, or clusters? |
+| **Form** | Is the pattern linear (straight) or non-linear (it bends)? |
+| **Strength** | How closely do the points follow the pattern: strong, moderate or weak? |
+
+What it does not say. A description that lists the four words without the variables earns little. The course description says it is "typically insufficient to write generally about the direction of a relationship": every feature is stated **in context**, about the two variables and the individuals.
+
+### Direction: positive or negative (5.1.B.3)
+
+A **positive association** means that as values of the explanatory variable increase, values of the response variable **tend to increase**. A **negative association** means they **tend to decrease**. The course description adds "if any": some associations have no single direction.
+
+What it does not say. "Tends to" is a statement about the trend, not a promise about every individual: in a positive association some points still sit lower than points to their left. *Positive* does not mean "there is a relationship", and it does not mean "good". Direction belongs to the trend of the whole plot, not to one group of points within it.
+
+*Illustration:* for the pairs (1, 5), (2, 4), (3, 4), (4, 2), *y* stays at 4 from *x* = 2 to *x* = 3, but across the whole range it tends to fall: a negative association.
+
+### Unusual features: clusters and points off the pattern (5.1.B.5)
+
+**Unusual features** of a scatterplot are **clusters** of individual points, or **points that don't fit the general pattern** of association between the two variables.
+
+What it does not say. Unusual is judged against the **pattern**, not against either variable on its own. Session 3's 1.5 × IQR rule looks at one variable at a time, and it answers a different question: a point can be an outlier in both variables and still fit the pattern exactly, and a point can be ordinary in both variables and be the one that does not fit. A cluster is a group, and a description should say so rather than calling its members outliers.
+
+*Illustration:* the points (1, 2), (2, 4), (3, 6), (4, 8) and (10, 20) all lie on the pattern *y* = 2*x*; (10, 20) is far from the rest and has the largest value of both variables, but it **fits**. Add (3, 15): its *x* and its *y* are both inside the range of the others, yet it is the one point that **does not fit**.
+
+### Form and strength (5.1.B.2, 5.1.B.4)
+
+The **form** of an association can be described as **linear** or **non-linear**. The **strength** is **how closely the points follow the general pattern**, and can be described as **strong, moderate or weak**.
+
+What it does not say. The evidence for linear form is that the response changes at a **roughly steady rate** across the whole range of *x*. "It is linear because it is a line" is named in the course description as a common error; the difference between describing a *rate* of change and merely a change is, in its words, "the difference between right and wrong". Form and strength are separate questions: points tight around a curve are strong and non-linear, points loosely scattered about a straight band are weak and linear. And **strength is not steepness**: how steep a pattern is belongs to the slope, Session 5's idea.
+
+*Illustration:* pattern A rises 1 unit of *y* per unit of *x*, with every point within 0.1 of it; pattern B rises 10 units per unit of *x*, with points scattered up to 20 units from it. A is the stronger association, although B is much steeper.
+
+### Scatterplots as evidence for a claim (5.1.C.1)
+
+A scatterplot of two quantitative variables may reveal information that can be used to **justify claims** about the variables in context. The template is the one from Sessions 1 to 3: **state the claim · quote what the plot shows, with numbers · say what that does and does not establish · keep it in context.**
+
+What it does not say. The evidence covers the individuals plotted. Extending it to a wider group needs those individuals to have been chosen at random, and enough of them. A scatterplot can support a claim that two variables are associated; it cannot support a claim that one causes the other.
+
+*Illustration:* to check "every individual with *x* above 5 has *y* above 10", count the points to the right of *x* = 5, then count how many of those sit above *y* = 10. The claim holds for these individuals only if the two counts are equal.
+
+### Correlation coefficient r: what it summarises (5.2.A.1)
+
+The **correlation coefficient**, *r*, summarises the **strength and direction of the linear association** between two quantitative variables. In this course *r* is **found with technology** (5.5.A.4). The exam formula sheet prints it in this form:
+
+:::formula
+r = (1 ÷ (n − 1)) × Σ [ (xᵢ − x̄) ÷ sₓ ] × [ (yᵢ − ȳ) ÷ s_y ]
+:::
+
+Here *n* is the number of individuals (pairs); *xᵢ* and *yᵢ* are the *i*-th individual's two values; *x̄* and *ȳ* are the two means; *sₓ* and *s_y* are the two sample standard deviations, with divisor *n* − 1 as in Session 3; and Σ adds over all *n* individuals. **Each bracket is a z-score**, so *r* = (1 ÷ (*n* − 1)) Σ *zₓ z_y*: near enough, the average product of the z-scores. An individual above the mean on both variables, or below on both, adds a positive product; one above on one and below on the other adds a negative product. That is where the sign of *r* comes from.
+
+What it does not say. *r* is not a percentage or a proportion of anything; *r*² is a different number with its own meaning, and it belongs to Session 5. *r* is not a slope. And it measures **linear** association only; the last three subsections of this section are about what that leaves out.
+
+*Illustration:* for the three pairs (1, 1), (2, 3), (3, 2), *x̄* = 2, *sₓ* = 1, *ȳ* = 2 and *s_y* = 1, so the z-scores are *zₓ* = −1, 0, 1 and *z_y* = −1, 1, 0. The products are 1, 0, 0, total 1, and *r* = 1 ÷ (3 − 1) = **0.5**.
+
+### Properties of r, and the course's strength guide (5.2.A.1–2)
+
+| Property | What it means |
+|---|---|
+| −1 ≤ *r* ≤ 1, inclusive, always | no data set can give *r* = 1.2 or −1.5 |
+| The sign gives the direction | negative *r*: negative association; positive *r*: positive association |
+| Strength is how close *r* is to −1 or 1 | −0.93 shows a stronger linear association than 0.78; the minus sign is direction only |
+| *r* = 0 | **no linear** association |
+| *r* = −1 or 1 | a **perfect** linear association: every point exactly on a line |
+| *r* is **unit-free** | changing units leaves *r* exactly as it was |
+
+Why *r* is unit-free: converting units adds a constant or multiplies by a positive constant, which moves the mean and stretches the standard deviation by exactly the same amount, so every z-score is unchanged (Session 3's changing-units rules). The formula uses only z-scores.
+
+*Illustration:* replace each *x* in the three pairs above by 10*x* + 5, giving 15, 25, 35. The mean becomes 25 and *sₓ* becomes 10, every z-score is still −1, 0, 1, and *r* is still **0.5**.
+
+:::note amber A rough guide to the words, not a rule
+The course description gives no cut-offs; it says only that strength "can be described as strong, moderate, or weak" and depends on how close *r* is to −1 or 1. This course uses: **|r| of about 0.8 or more, strong; about 0.5 to 0.8, moderate; below about 0.5, weak**. The course description's own sample question describes r = −0.591 as "moderate and negative", which fits. But strength belongs to the scatterplot first: always look at the plot, and never let the guide overrule what the points show.
+:::
+
+### A high r does not prove linear form (5.2.A.3)
+
+A correlation coefficient close to −1 or 1 does **not necessarily mean that a linear model is appropriate**.
+
+What it does not say. It does not say a high *r* is wrong or useless: it still reports a strong tendency in one direction. It says *r* cannot tell you the form; only the scatterplot can. A curve that bends steadily in one direction can have *r* very close to 1.
+
+*Illustration:* the pairs (1, 1), (2, 4), (3, 9), (4, 16), (5, 25) lie exactly on the curve *y* = *x*². Their correlation is *r* = **0.98**, yet *y* rises by 3, then 5, then 7, then 9: not a steady rate, so not linear.
+
+### r = 0 means no linear association, not no association (5.2.A.2)
+
+A value of *r* = 0 indicates that there is **no linear association**. It does not indicate that there is no association.
+
+What it does not say. It does not say the variables are unrelated. A strong curve that falls and then rises puts individuals in all four corners around the two means, so the positive and negative z-score products cancel. An *r* near 0 is a reason to look at the scatterplot, never a conclusion on its own.
+
+*Illustration:* the pairs (−2, 4), (−1, 1), (0, 0), (1, 1), (2, 4) lie exactly on *y* = *x*², so *y* is completely determined by *x*. The means are 0 and 2; the products of the deviations from the means are −4, 1, 0, −1, 4, total 0, so *r* = **0** exactly.
+
+### Correlation does not imply causation (5.2.A.4)
+
+A perceived or real relationship between two variables does **not** mean that changes in one variable **cause** changes in the other. That is, **correlation does not necessarily imply causation.**
+
+What it does not say. It does not say the association is false or unimportant; the association can be perfectly real. It says the data cannot tell you *why* the variables move together. One common reason is a **confounding variable** (topic 1.10, taught properly in Session 6): a variable that provides an alternative explanation for the observed relationship between the explanatory and response variables, and which must be **associated with both** of them (1.10.D.5). Records of what happened, an observational study in Session 1's terms, can show an association but not what a change would do; finding that out needs the change to be made deliberately and compared, which is Session 7's experiments.
+
+*Illustration:* suppose a third quantity *w* is large for some individuals and small for others, and both *x* and *y* tend to rise with *w*. Then *x* and *y* rise together, with a high *r*, even if changing *x* would do nothing at all to *y*.
+
+### Self-check on the theory
+
+Answer each on paper, then open its reveal. If one goes wrong, reread that subsection's "what it does not say" paragraph before Part 3: the rest of the session leans on every one of them.
+
+**Check 1.** You have ten individuals' values of *x*, and ten *other* individuals' values of *y*. Can you draw a scatterplot of *y* against *x*?
+
+:::reveal Reveal — check 1
+**No.** That is not bivariate data: each point needs both values from the **same** individual, and there is nothing to pair these lists by.
+:::
+
+**Check 2.** One point in a scatterplot has the largest *x* and the largest *y* of all the points. Must it be an unusual feature?
+
+:::reveal Reveal — check 2
+**No.** Unusual means **off the pattern**. If the point continues the pattern of the others, it fits, however far out it is.
+:::
+
+**Check 3.** One data set has *r* = −0.85, another *r* = 0.60. Which shows the stronger linear association? And what happens to the −0.85 if the *x* values are converted from kilometres to miles?
+
+:::reveal Reveal — check 3
+**−0.85**, because it is closer to −1 than 0.60 is to 1; the sign gives direction only. Converting units leaves it at **−0.85**: *r* is unit-free.
+:::
+
+**Check 4.** *r* = 0.02. Are the two variables unrelated? And if *r* were 0.98, would a straight line be the right model?
+
+:::reveal Reveal — check 4
+**No to both.** *r* = 0.02 means no **linear** association; a strong curve can give it. *r* = 0.98 does not show that the form is linear. In both cases, look at the scatterplot.
+:::
+
+**Check 5.** Two variables have *r* = 0.9. Does that show the explanatory variable causes the response?
+
+:::reveal Reveal — check 5
+**No.** Correlation does not imply causation. A third variable associated with both, a confounding variable, could explain the association.
+:::
 
 ---
 
@@ -101,19 +261,19 @@ Each student gave two numbers. Which one do you think helps explain the other? W
 :::
 
 :::reveal Reveal — explanatory and response
-**Distance** helps explain **journey time**: living further away is a reason a journey might take longer.
+**Distance** helps explain **journey time**: living further away is a reason a journey might take longer. So, in Part 2's terms:
 
-- The **explanatory variable** explains or predicts the other. It goes on the **x-axis**: distance.
-- The **response variable** is the one being explained or predicted. It goes on the **y-axis**: journey time.
+- **Distance** is the **explanatory variable**, and goes on the **x-axis**.
+- **Journey time** is the **response variable**, and goes on the **y-axis**.
 
-Data like these, two quantitative variables measured on the **same individuals**, are called **bivariate quantitative data**. Each student gives one ordered pair, such as (2.5, 33).
+Each student gives one ordered pair, such as (2.5, 33), so the 25 pairs are **bivariate quantitative data**.
 
 The convention matters because every description you write depends on it: *as distance increases, journey time tends to*…. Swap the axes and that sentence is about something else.
 :::
 
 ### Build the scatterplot
 
-A **scatterplot** shows one point for each individual, with the explanatory variable across and the response variable up.
+Part 2's scatterplot: one point for each student, distance across and journey time up.
 
 :::yourturn
 Draw the scatterplot by hand. Use an x-axis from 0 to 30 km and a y-axis from 0 to 70 minutes, and label both with the variable **and its units**. Plot all 25 students.
@@ -131,14 +291,7 @@ Check your plot against this one point by point. Two to look at closely: (1.5, 1
 
 ### Describe the association
 
-A description of a scatterplot covers four things: **direction, unusual features, form and strength**.
-
-| Feature | What it asks |
-|---|---|
-| **Direction** | As x increases, does y **tend to** increase (positive) or decrease (negative)? |
-| **Unusual features** | Are there points that don't fit the general pattern, or clusters? |
-| **Form** | Is the pattern linear (straight) or non-linear (it bends)? |
-| **Strength** | How closely do the points follow the pattern: strong, moderate or weak? |
+Use the four features from Part 2, *Describing an association: the four features*: **direction, unusual features, form and strength**. Keep that table open beside you.
 
 :::yourturn
 Two questions before the full description.
@@ -152,7 +305,7 @@ Two questions before the full description.
 
 **2. The student at 2.5 km who took 33 minutes.** The other three students who live 2 to 3 km away took 12 to 14 minutes. She is about 20 minutes off the pattern.
 
-This is the trap of the session. In a scatterplot, **unusual features** are clusters or points that **don't fit the general pattern**. That is judged against the pattern, not against one axis. The numbers prove it:
+This is the trap of the session, and Part 2's rule on **unusual features** settles it: they are clusters or points that **don't fit the general pattern**, judged against the pattern, not against one axis. The numbers prove it:
 
 - For distance, Q1 = 2.25, Q3 = 7.75 and IQR = 5.5, so the 1.5 × IQR fences are −6.0 and 16.0 km. **17 and 28 km are outliers** for distance.
 - For time, Session 3's fences were −7.75 and 46.25 minutes, so **68 is an outlier** for time.
@@ -185,12 +338,12 @@ The head of year says: *"Every student who lives more than 10 km away takes at l
 :::reveal Reveal — the claim
 **Supported, for these 25 students.** All **4** students living more than 10 km away (11, 14, 17 and 28 km) took at least 30 minutes (30, 36, 42 and 68). Of the **21** living within 10 km, only **1** took 30 minutes or more: the 33-minute student at 2.5 km.
 
-What it does not establish: that the same holds for every Lincoln High student. The 25 were chosen at random, which helps, but 4 students is a small group to generalise from. The template is the same as in every session: **state the claim · quote the numbers · say what they do and do not establish · keep it in context.**
+What it does not establish: that the same holds for every Lincoln High student. The 25 were chosen at random, which helps, but 4 students is a small group to generalise from. The template is Part 2's *Scatterplots as evidence for a claim*, the same as in every session: **state the claim · quote the numbers · say what they do and do not establish · keep it in context.**
 :::
 
 ### Correlation: one number for a linear association
 
-The **correlation coefficient, r**, summarises the **strength and direction of the linear association** between two quantitative variables. The course expects you to find it with **technology**.
+Part 2 defined the **correlation coefficient, r**: one number for the **strength and direction of the linear association** between two quantitative variables. The course expects you to find it with **technology**.
 
 On a TI-84: enter the distances in L1 and the times in L2, then STAT → CALC → LinReg(a+bx). If *r* does not appear, turn on Stat Diagnostics (on the MODE screen on newer models, or DiagnosticOn from the catalogue on older ones). Ignore *a* and *b* until Session 5.
 
@@ -206,7 +359,7 @@ Find *r* for the 25 students with your calculator. Then put it into one sentence
 If you wrote "95% of the journey time is explained by distance", that is a different number, *r*², and it belongs to Session 5. If you wrote "distance causes the journey time", *r* cannot tell you that: it measures how closely the points follow a line, not why. Part 5 is about exactly this.
 :::
 
-What the course states about *r*:
+Part 2's properties of *r*, applied to the journeys:
 
 | Fact | What it means here |
 |---|---|
@@ -217,13 +370,11 @@ What the course states about *r*:
 | *r* = 1 or −1 means a **perfect** linear association | every point exactly on a line |
 | *r* is unit-free | it does not care about kilometres or minutes |
 
-:::note amber A rough guide to the words, not a rule
-The course description gives no cut-offs. This course uses: **|r| of about 0.8 or more, strong; about 0.5 to 0.8, moderate; below about 0.5, weak**. The course description's own sample question describes r = −0.591 as "moderate and negative", which fits. But strength belongs to the scatterplot first: always look at the plot.
-:::
+On the course's rough strength guide from Part 2, 0.95 is strong, and the scatterplot agrees. Plot first, guide second, every time.
 
 ### Where r comes from: z-scores
 
-The exam's formula sheet gives *r* in this form. Look at the two brackets: **each one is a z-score**, as in Session 3.
+The formula from Part 2, as the exam's formula sheet prints it. Look at the two brackets again: **each one is a z-score**, as in Session 3.
 
 :::formula
 r = (1 ÷ (n − 1)) × Σ [ (xᵢ − x̄) ÷ sₓ ] × [ (yᵢ − ȳ) ÷ s_y ]
@@ -275,7 +426,7 @@ The principal wants distances in **miles** and times in **hours**. What happens 
 
 Changing units divides every value, the mean and the standard deviation by the same number, so every z-score is unchanged (Session 3's changing-units rule). The formula uses only z-scores, so *r* is unchanged. The same happens if every time is corrected for a clock that ran 3 minutes fast: subtracting 3 moves the mean by 3 and leaves the standard deviation and the z-scores alone.
 
-That is what the course means by *r* is **unit-free**.
+That is Part 2's property at work: *r* is **unit-free**.
 :::
 
 ### Guess the correlation
@@ -347,7 +498,7 @@ Sketch a **strong** association whose correlation *r* is **close to 0**. If you 
 :::
 
 :::reveal Reveal — the café
-It can be done: a strong curve that goes down and then up, a U-shape.
+It can be done: a strong curve that goes down and then up, a U-shape, like Part 2's five points on *y* = *x*².
 
 The café from Sessions 2 and 3 recorded the midday temperature outside on the same 10 days as in Session 3, and the number of drinks it sold each day, all drinks together and iced drinks alone.
 
@@ -369,11 +520,11 @@ Two claims about the café. Respond to each, using the scatterplots.
 :::
 
 :::reveal Reveal — what r measures
-**1. The manager is wrong.** Temperature matters a lot: cold days and hot days are busy, mild days are quiet. The association is **strong and non-linear**. *r* measures only **linear** association, and *r* = 0 means **no linear association**, not no association.
+**1. The manager is wrong.** Temperature matters a lot: cold days and hot days are busy, mild days are quiet. The association is **strong and non-linear**. As Part 2 said, *r* measures only **linear** association, and *r* = 0 means **no linear association**, not no association.
 
 Why is it near 0? The cold, busy days are below the mean temperature and above the mean sales, so their z-score products are negative. The hot, busy day is above on both, a positive product. They cancel.
 
-**2. The colleague is wrong.** The points bend upwards: iced sales rise slowly at first and then fast. A correlation close to −1 or 1 **does not necessarily mean a linear model is appropriate**.
+**2. The colleague is wrong.** The points bend upwards: iced sales rise slowly at first and then fast. This is Part 2's *A high r does not prove linear form*: a correlation close to −1 or 1 **does not necessarily mean a linear model is appropriate**.
 
 *r measures the strength and direction of a linear association only. An r near 0 can hide a strong curve, and an r near 1 can belong to a curve. Look at the scatterplot before you trust r.*
 :::
@@ -400,7 +551,7 @@ Shift  Doctors  Mean wait    Shift  Doctors  Mean wait
  10       4        41          20      8        47
 ```
 
-**One new point: the individuals are shifts, not patients.** Each dot on the scatterplot is one evening, and its mean wait summarises dozens of patients.
+**As Part 2 said, the individuals need not be people: here they are shifts, not patients.** Each dot on the scatterplot is one evening, and its mean wait summarises dozens of patients.
 
 ![St Mary's, 20 evening shifts: doctors on duty against mean wait](figures/s04-hospital-doctors.svg)
 
@@ -428,7 +579,7 @@ The department manager has seen the same plot:
 :::
 
 :::reveal Reveal — what else changes from shift to shift
-**1. No.** The plot shows that more doctors and longer waits **go together** on these shifts. It does not show that one causes the other. The course states it as a rule: a perceived or real relationship between two variables does not mean that changes in one cause changes in the other. **Correlation does not necessarily imply causation.**
+**1. No.** The plot shows that more doctors and longer waits **go together** on these shifts. It does not show that one causes the other. This is Part 2's rule: a perceived or real relationship between two variables does not mean that changes in one cause changes in the other. **Correlation does not necessarily imply causation.**
 
 **2. How busy they are.** The rota puts more doctors on the evenings it expects to be busy, and busy evenings have longer waits. The records have it: the number of **patients arriving** during each shift. The shifts in the table are numbered in order of it:
 
@@ -446,7 +597,7 @@ The department manager has seen the same plot:
 
 Patients arriving is strongly associated with doctors on duty (**r = 0.93**) and with mean wait (**r = 0.88**). That one variable explains the whole pattern: busy evenings get more doctors **and** longer waits.
 
-A variable like this is a **confounding variable**: it provides another explanation for the association, and it is associated with **both** variables. You will study it properly in Session 6.
+This is the **confounding variable** from Part 2: it provides another explanation for the association, and it is associated with **both** variables. You will study it properly in Session 6.
 :::
 
 :::yourturn
@@ -769,7 +920,9 @@ One mark for the z-scores, one for the products and their total.
 **Scatterplot** — a graph of bivariate quantitative data with one point per individual, explanatory on the x-axis and response on the y-axis.
 *Example: 25 points, one per student. At St Mary's, 20 points, one per evening shift: the individuals need not be people.*
 
-> Prep books sometimes say *independent* and *dependent* variable. The course description does not; use **explanatory** and **response**.
+:::note red Not in the course description
+Prep books sometimes say *independent* and *dependent* variable. The course description does not; use **explanatory** and **response**.
+:::
 
 ### Describing a scatterplot (5.1.B)
 
@@ -793,7 +946,7 @@ State the claim, quote what the scatterplot shows with numbers, say what it does
 
 ### The correlation coefficient r (5.2.A)
 
-**Correlation coefficient, *r*** — a number that summarises the strength and direction of the **linear** association between two quantitative variables. Found with technology.
+**Correlation coefficient**, *r* — a number that summarises the strength and direction of the **linear** association between two quantitative variables. Found with technology.
 *Example: for the 25 students, r = 0.95: a strong, positive linear association between distance and journey time.*
 
 **The formula**, from the exam formula sheet. Each bracket is a z-score:

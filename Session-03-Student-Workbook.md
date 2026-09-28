@@ -1,7 +1,7 @@
 # Session 3 — Summarising and Comparing Distributions
 
 **AP Statistics · Twenty-Hour Course · Student edition, to work through on your own**
-**CED Topics 1.7, 1.8, 1.9 · About 140 minutes, plus homework**
+**CED Topics 1.7, 1.8, 1.9 · About 170 minutes, plus homework**
 
 ---
 
@@ -11,11 +11,13 @@ The same rule as the last two sessions, and today there is more to calculate.
 
 :::note amber Write first, then reveal
 Every **Your turn** box asks you to do something before the text shows you the answer. **Do it on paper first.** The five-number summaries, fences, boxplots and comparisons are all hidden behind reveals so that you cannot copy them. Copying a boxplot teaches you nothing. Drawing one and finding the whisker in the wrong place teaches you where the whisker goes.
+
+The one exception is **Part 3, the theory**. It is there to be read in full before you start, so nothing in it is hidden until its self-check questions at the end.
 :::
 
 **What you need:** paper, a pen, a ruler and a calculator. A TI-84 or any calculator with a one-variable statistics mode will save time on the standard deviation.
 
-**One convention, used all the way through.** To find the quartiles, split the ordered data at the median. **When n is odd, the median itself goes in neither half.** Q1 is the median of the lower half and Q3 is the median of the upper half. This is what a TI-84 does. Other methods exist and give slightly different answers; if your school uses one of them, that is fine, but use one method every time.
+**One convention, used all the way through.** When *n* is odd, the median goes in neither half when you find the quartiles. Part 3 states it in full, under *One quartile convention, used everywhere*, and explains why a method has to be chosen.
 
 ### How this maps to your tutor's document
 
@@ -25,12 +27,13 @@ Working alone with a pen is slower than working with a tutor, so each part is gi
 |---|---|---|
 | Part 1 — Your Session 2 homework, and a warm-up | 0–10 Homework debrief and diagnostic | 12 |
 | Part 2 — Why this matters | (the framing) | 3 |
-| Part 3 — The commute times, summarised | 10–55 Scenario A | 56 |
-| Part 4 — Match Mine, on your own | 55–67 Activity | 15 |
-| Part 5 — Comparing: two hospitals, then two library branches | 67–97 Scenario B | 38 |
-| Part 6 — On your own: the café | 97–105 Solo case | 10 |
-| Part 7 — Explain it back | 105–110 Teach it back | 6 |
-| **Total** | **110 minutes** | **140** |
+| Part 3 · Theory — summarising, displaying and comparing one quantitative variable | 10–35 Theory | 31 |
+| Part 4 — The commute times, summarised | 35–80 Scenario A | 56 |
+| Part 5 — Match Mine, on your own | 80–92 Activity | 15 |
+| Part 6 — Comparing: two hospitals, then two library branches | 92–122 Scenario B | 38 |
+| Part 7 — On your own: the café | 122–130 Solo case | 10 |
+| Part 8 — Explain it back | 130–135 Teach it back | 6 |
+| **Total** | **135 minutes** | **171** |
 
 If your tutor has not yet set the **Session 1 test**, take it before Part 1: 40 minutes, timed, answer key closed.
 
@@ -43,7 +46,7 @@ Get out your marked Session 2 homework and make two lists: the questions you got
 **Two specific things to check.** They are the two most common errors on that sheet, and both come back today.
 
 - **E1: did you call the test scores "skewed right"?** Most scores are in the 40s and the tail stretches down to 12, so the distribution is skewed **left**. Skew is named after the tail, not the bulk. Today gives you a second check that does not depend on your eyes: for these scores the mean is **below** the median, which is what usually happens when the tail is on the left. You will calculate both in the homework.
-- **C1: did you agree that fiction borrowing "went up"?** Its count rose from 96 to 100, but its share fell from 48.0% to 40.0%, because the totals were 200 and 250. The general lesson is that **a raw number means nothing until you know what it is measured against.** It comes back in Part 5, in a different form.
+- **C1: did you agree that fiction borrowing "went up"?** Its count rose from 96 to 100, but its share fell from 48.0% to 40.0%, because the totals were 200 and 250. The general lesson is that **a raw number means nothing until you know what it is measured against.** It comes back in Part 6, in a different form.
 
 ### Warm-up
 
@@ -60,14 +63,14 @@ Four questions. Answer all four on paper before revealing.
 | If you said | It means | Do this |
 |---|---|---|
 | **1:** 5.5 | You sorted first and averaged the middle two, 4 and 7. Correct. | Carry on |
-| **1:** 4 | You averaged 1 and 7, the middle pair of the **unsorted** list | Always order the data first. Watch for it in Part 3 |
+| **1:** 4 | You averaged 1 and 7, the middle pair of the **unsorted** list | Always order the data first. Watch for it in Part 4 |
 | **1:** "there's no middle" | You have not met the rule for an even number of values | The median is then the mean of the two middle values |
 | **2:** below | Correct: the low tail pulls the mean down | Carry on |
-| **2:** above | The skew direction or the pull of the tail is reversed | Re-read the E1 note above, then Part 3 explains the pull |
+| **2:** above | The skew direction or the pull of the tail is reversed | Re-read the E1 note above; Part 3, *How the mean and median reveal shape*, explains the pull |
 | **3:** anything about spread, range or consistency | You already have the idea of variability | Part 3 gives it three numbers |
-| **3:** "nothing, they're the same" | Centre is the only summary you are using | Read Part 3's spread section slowly |
+| **3:** "nothing, they're the same" | Centre is the only summary you are using | Read Part 3's two spread subsections slowly |
 | **4:** "how spread out the data are" | Right idea, too vague to earn a mark | The precise version: **a typical distance of the values from their mean** |
-| **4:** blank | Not met yet | Expected. Part 3 teaches it |
+| **4:** blank | Not met yet | Expected. Part 3 defines it; Part 4 uses it |
 :::
 
 ---
@@ -76,13 +79,247 @@ Four questions. Answer all four on paper before revealing.
 
 Session 2 taught you to describe a distribution in words. This session gives those words numbers: a centre, a spread, a position, and an arithmetic test for "unusual". Then it asks you to **compare** two groups using them.
 
-Comparing is where the marks are lost. Students who can find every summary statistic still write one paragraph about each group and never say how the groups relate, and that earns nothing for "compare". Give Part 5 your full attention.
+Comparing is where the marks are lost. Students who can find every summary statistic still write one paragraph about each group and never say how the groups relate, and that earns nothing for "compare". Give Part 6 your full attention.
 
 ---
 
-## Part 3 — The commute times, summarised
+## Part 3 · Theory — summarising, displaying and comparing one quantitative variable
 
-The same 25 journeys you drew three ways in Session 2. Nothing new has been collected.
+Every rule this session uses is stated here, before any data appear. **Read this part in full; nothing in it is hidden.** Copy each formula by hand as you meet it, and work each small example in the margin before reading its answer. The parts that follow apply these rules to real data, and whenever they say *recall*, they name the subsection to turn back to.
+
+Session 2's shape vocabulary (symmetric, skewed left and right, unimodal, bimodal, uniform, clusters, gaps, outliers judged by eye) is assumed, not restated.
+
+### Mean and median defined (1.7.A)
+
+The **mean** and the **median** are the two commonly used measures of centre (1.7.A.1). The mean is the sum of all the values divided by the number of values (1.7.A.2). The median is the middle value when the data are ordered from smallest to largest: with an odd number of values, the value in the middle; with an even number, the mean of the two middle values (1.7.A.3). Both can be found with and without technology. In an ordered data set the smallest value is the **minimum** and the largest the **maximum** (1.7.A.4).
+
+:::formula
+x̄ = Σ xᵢ ÷ n     (xᵢ is the ith value in the sample, n the number of values)
+:::
+
+Neither number is "the typical value" by definition. The mean uses the size of every value, so one far-away value moves it; the median uses only the order, so it does not care how far out the extremes are. Which of the two describes a typical value depends on the shape, and that is settled in *Resistant and nonresistant statistics* below. The slip to avoid is finding the middle of the list before sorting it.
+
+*For 2, 3, 4, 11: mean = 20 ÷ 4 = 5; median = (3 + 4) ÷ 2 = 3.5. Three of the four values are below the mean.*
+
+### Quartiles and percentiles (1.7.A)
+
+The **first quartile, Q1**, is the median of the lower half of the ordered data, and the **third quartile, Q3**, is the median of the upper half. Approximately 25% of the values are less than or equal to Q1 and approximately 75% are less than or equal to Q3. The median is also the second quartile, Q2, and Q1 and Q3 bound the middle 50% of the data (1.7.A.5). The **pth percentile** is the value that has p% of the data less than or equal to it, when the data are ordered from smallest to largest; Q1 and Q3 are the 25th and 75th percentiles (1.7.A.6).
+
+:::formula
+a value is the pth percentile when p = (number of values ≤ it) ÷ n × 100
+:::
+
+A percentile is a position, not a size: the 84th percentile says that 84% of the values are at or below it, and nothing about how large it is compared with the maximum. "Less than **or equal to**" includes the value itself, and leaving it out is the commonest counting error. The CED's "approximately" is exact language: in a small data set Q1 can sit at 24% or 30% rather than 25%.
+
+*For 2, 4, 5, 7, 8, 10, 12, 15 (n = 8): median (7 + 8) ÷ 2 = 7.5; lower half 2, 4, 5, 7 gives Q1 = 4.5; upper half 8, 10, 12, 15 gives Q3 = 11. Six of the eight values are ≤ 10, so 10 is the 75th percentile.*
+
+### One quartile convention, used everywhere
+
+:::note teal The convention for this course
+**Q1 is the median of the lower half and Q3 the median of the upper half. When n is odd, the overall median is left out of both halves.** This is what a TI-84's 1-Var Stats does, and it is what the workbook, the homework, the answer key and the Boxplot Builder all use.
+:::
+
+The course description (1.7.A.5) defines Q1 as "the median value of the lower half of the ordered data set from the minimum value to the position of the median", which does not settle whether the median belongs to the halves when *n* is odd. Some books include it. When *n* is even there is nothing to decide. When it is odd, the two methods give different quartiles; the outlier verdicts usually survive, but the numbers do not, so pick one method and hold it. If your school uses the other method, that is fine, provided you use it every time and show your working.
+
+*For 1, 3, 5, 7, 9, 11, 13 (n = 7): the median, 7, is left out; the halves 1, 3, 5 and 9, 11, 13 give Q1 = 3 and Q3 = 11. Including the median in both halves would give 1, 3, 5, 7 and 7, 9, 11, 13, and so Q1 = 4 and Q3 = 10.*
+
+### The range and the interquartile range (1.7.B)
+
+The range, the interquartile range and the standard deviation are the three commonly used measures of variability, or spread (1.7.B.1). The **range** is the maximum minus the minimum (1.7.B.2). The **interquartile range (IQR)** is the third quartile minus the first (1.7.B.3): the width of the middle half of the data.
+
+:::formula
+range = maximum − minimum     IQR = Q3 − Q1
+:::
+
+Both are single distances, in the units of the data. The range depends on only the two most extreme values, so one unusual value can make it large; the IQR ignores the top and bottom quarters altogether. Neither is a position: an IQR of 8 says the middle half spans 8 units, not where on the scale it sits. Neither says anything about shape.
+
+*For 1, 3, 5, 7, 9, 11, 13: range = 13 − 1 = 12; IQR = 11 − 3 = 8.*
+
+### The standard deviation and the variance (1.7.B)
+
+The **standard deviation** is a typical deviation of the data values from their mean, and it can be found with and without technology. The sample standard deviation is written *s*. Its square, *s*², is the **sample variance** (1.7.B.4). Both are on the exam formula sheet.
+
+:::formula
+s = √[ Σ(xᵢ − x̄)² ÷ (n − 1) ]     (xᵢ each value, x̄ the sample mean, n the number of values)
+:::
+
+Four properties, each of which you will use later in this session:
+
+- **The deviations *x*ᵢ − *x̄* always total 0.** That checks the arithmetic, and it is why they are squared before being added: unsquared, they would always cancel.
+- **Squaring makes far-away values count heavily**, so one distant value can dominate the sum and inflate *s*.
+- ***s* is measured from the mean**, not between neighbouring values, and it is in the units of the data. *s*² is in squared units, which is why *s* is the number reported. *s* is never negative, and is 0 only when every value is the same.
+- **Divide by *n* − 1 for a sample.** A TI-84's 1-Var Stats shows *Sx* (divisor *n* − 1, which is the course's *s*) and *σx* (divisor *n*). Use *Sx*.
+
+*For 2, 4, 6: x̄ = 4; deviations −2, 0, 2 (total 0); squares 4, 0, 4 (total 8); s² = 8 ÷ 2 = 4; s = 2.*
+
+### The two outlier rules (1.7.D)
+
+The course description says there are many methods for determining potential outliers, and gives two that are frequently used (1.7.D.1). Both are examinable.
+
+- **The 1.5 × IQR rule:** an outlier is a value more than 1.5 × IQR above the third quartile or more than 1.5 × IQR below the first quartile (1.7.D.1.i).
+- **The 2 SD rule:** an outlier is a value more than 2 standard deviations above or below the mean (1.7.D.1.ii).
+
+:::formula
+1.5 × IQR rule: cut-offs Q1 − 1.5 × IQR and Q3 + 1.5 × IQR
+:::
+
+:::formula
+2 SD rule: cut-offs x̄ − 2s and x̄ + 2s
+:::
+
+This course calls the two 1.5 × IQR cut-offs the **fences**. The course description does not use the word, so in an exam write the calculation out rather than relying on it.
+
+"More than" means a value exactly on a cut-off is **not** an outlier. The two rules can disagree about the same value, because one is built from the quartiles and the other from the mean and *s*; neither is "the right one", so name the rule you used and show its cut-offs. The rule overrides the eye: a value can look isolated and not be an outlier, or look ordinary and be one. And an outlier is a value to report, not an error to delete.
+
+*If Q1 = 10 and Q3 = 20, then IQR = 10 and 1.5 × IQR = 15, so the fences are −5 and 35: a value of 35 is not an outlier, and 35.5 is.*
+
+### What a boxplot draws: the five-number summary (1.8.A)
+
+The **five-number summary** is the minimum, the first quartile, the median, the third quartile and the maximum (1.8.A.1). A **boxplot** is a graph of it. The box represents the middle 50% of the data, with its ends at the quartiles and a line at the median. Lines called whiskers, each representing about 25% of the data, run from Q1 to the minimum and from Q3 to the maximum. If there are outliers, the whiskers extend only to the most extreme data values that are **not** outliers, and each outlier is marked separately, usually with an asterisk or another symbol (1.8.A.2).
+
+Each of the four sections, two whiskers and two halves of the box, holds about a quarter of the data, so **a longer section means more spread, not more values**. A whisker ends at a data value, never at a fence: the fence is a cut-off you calculate, not part of the drawing. A boxplot shows centre, spread, skew and outliers, and hides peaks, clusters and gaps (see *What a comparison must contain*). Prep books call this form a *modified* boxplot; the course description calls it a boxplot.
+
+*For 1, 3, 5, 7, 9, 11, 13, 40: five-number summary 1, 4, 8, 12, 40; IQR = 8; fences −8 and 24, so 40 is an outlier. The box runs from 4 to 12 with a line at 8, the whiskers reach 1 and 13, and 40 is plotted on its own.*
+
+### Resistant and nonresistant statistics (1.7.F)
+
+A statistic is **resistant** (or robust) when outliers do not greatly affect its value, if at all. The median and the IQR are a resistant measure of centre and a resistant measure of variability. Because outliers can affect them greatly, the mean is a **nonresistant** measure of centre, and the range and the standard deviation are nonresistant measures of variability (1.7.F.1).
+
+This is the justification objective 1.7.F asks for, and it gives the rule for choosing. **With strong skew or outliers, report the median and IQR. With a roughly symmetric distribution and no outliers, the mean and standard deviation are fine**, and they use every value. When comparing groups, use the same pair for both, and use the resistant pair if either group has an outlier or strong skew.
+
+"Resistant" does not mean "cannot change": alter a middle value, or enough values, and the median moves. What an exam tests is the mechanism. The median depends on which value is in the middle, so making an extreme value more extreme leaves it alone; the mean depends on the total, so every minute added to any value moves it.
+
+*For 2, 4, 6, change the 6 to 60: the median stays 4, the mean rises from 4 to 22, and s rises from 2 to 32.92.*
+
+### What a change of units does to each summary (1.7.C)
+
+The course description states that changing units of measurement affects the values of the calculated statistics (1.7.C.1), and its sample question tests exactly how. The rules follow from sorting the summaries into two groups. **Centre and position** (mean, median, quartiles, percentiles, minimum, maximum) behave like data values. **Spread** (range, IQR, standard deviation) measures a distance between values.
+
+| Change applied to every value | Centre and position | Spread |
+|---|---|---|
+| Add or subtract a constant *a* | shift by *a* | unchanged |
+| Multiply or divide by a positive constant *b* | multiplied or divided by *b* | multiplied or divided by *b* |
+
+:::formula
+new = a + b × old  →  centre and position: a + b × (old value);  spread: b × (old value)
+:::
+
+Adding a constant slides every value along the axis and moves no two values closer together or further apart. Multiplying stretches the axis, so distances stretch with it. Neither change alters the shape, and neither changes which values are outliers, because the fences move with the data. The misreading to avoid is applying the added constant to a measure of spread.
+
+*For 2, 4, 6 (mean 4, s = 2): multiply every value by 10 and the mean is 40 and s = 20; add 5 instead and the mean is 9 while s stays 2.*
+
+### How the mean and median reveal shape (1.8.B)
+
+If a distribution is relatively symmetric, the mean and median are relatively close to each other. If it is skewed right, the mean is usually larger than the median; if it is skewed left, the mean is usually smaller (1.8.B.1). The reason is the one in the resistance subsection: the mean is pulled towards the tail and the median is not.
+
+A second piece of evidence comes from the quartiles. If the distance from the median to Q3 is larger than the distance from Q1 to the median, the upper part of the middle half is more spread out, which also suggests right skew; the reverse suggests left skew.
+
+"Usually" is the course description's word: the rule can fail, so use it as evidence alongside a graph, not as proof. And the sample scoring guidelines in the course description give no credit for "the distribution is right-skewed" on its own; the credit is for quoting the comparison that shows it.
+
+*For 1, 2, 3, 4, 20: the mean is 6 and the median 3. The mean is above the median, pulled towards the long tail at 20.*
+
+### What a comparison must contain (1.7.E, 1.9.A–B)
+
+Summary statistics can be used to compare features of two or more independent samples, including centre, variability, shape and outliers (1.7.E.1). Graphs of the same quantitative variable can be compared too (1.9.A.1), and a comparison of graphs can include any of the numerical summaries, such as the mean or the standard deviation (1.9.B.1). Different displays show different features:
+
+| Display | Can compare |
+|---|---|
+| Dotplots, histograms, back-to-back stemplots | centre, variability, shape, outliers, **clusters and gaps** |
+| Boxplots | centre, variability, outliers, skewness or symmetry, but **not** clusters or gaps |
+
+The verb is *compare*, and it has a precise demand: every sentence states the **relationship** between the groups with a comparative word (*greater than, less than, more variable than, similar to*), quotes the numbers, and stays in context. Two separate descriptions placed side by side are not a comparison, even when every statement in them is true. Put the groups on a common scale before comparing their pictures.
+
+*"Group P's median (12) is less than group Q's (15), and P is less variable (IQR 4 against 9)" is a comparison. "P has median 12 and IQR 4. Q has median 15 and IQR 9" is two descriptions.*
+
+### What summaries and graphs can justify (1.7.F.2, 1.9.C)
+
+Summary statistics, and several graphs of the same variable, may reveal information that can be used to justify claims about the variable in context (1.7.F.2, 1.9.C.1). The template is the one from Sessions 1 and 2: **state the claim · quote the numbers · say what they do and do not establish · keep it in context.**
+
+From summaries alone, the strongest evidence is positional. If one group's Q3 is below another group's median, then about three quarters of the first group lie at or below a value that at least half of the second group reach or exceed. What such evidence does not establish is *why*: data that were only observed show what happened, not what caused it.
+
+*If group P has Q3 = 20 and group Q has median 25, then about 75% of P's values are at or below 20, while at least half of Q's are at or above 25.*
+
+### The standardised score, z (1.9.D–E)
+
+A standardised score measures the number of standard deviations a data value falls above or below the mean (1.9.D.1). The **z-score** is calculated with the population mean μ and the population standard deviation σ; a positive z-score is above the mean and a negative one below. When the population mean and standard deviation are unknown, the sample mean and standard deviation may be used (1.9.D.2). z-scores compare the relative positions of individual values within a distribution or **between** distributions (1.9.E.1).
+
+:::formula
+z = (x − μ) ÷ σ     (x the data value, μ the population mean, σ the population standard deviation)
+:::
+
+:::formula
+x = μ + zσ     (the same formula, solved for the value)
+:::
+
+A z-score has no units, which is what lets it compare values from distributions with different centres and spreads. A larger raw value is not necessarily the more unusual one: z answers "how unusual is this *for its own group*?" A z-score of 0 is at the mean.
+
+*If μ = 50 and σ = 10, a value of 65 has z = 1.5 and a value of 35 has z = −1.5; the value with z = −2 is 50 + (−2)(10) = 30.*
+
+### Check the theory: seven quick questions
+
+These use tiny made-up data sets, not the session's. Answer each on paper, then open its reveal. If one goes wrong, reread the subsection named in the reveal before starting Part 4.
+
+:::yourturn
+**1.** Find the mean and the median of 3, 8, 1, 6, 2.
+:::
+
+:::reveal Reveal — check 1
+Ordered: 1, 2, 3, 6, 8. **Median 3** (the middle of five). **Mean** 20 ÷ 5 = **4**. If you said the median was 1, you took the middle of the unsorted list. (*Mean and median defined*)
+:::
+
+:::yourturn
+**2.** For 1, 2, 4, 5, 7, 9, 10, use this course's convention to find Q1, Q3 and the IQR. What percentile is 7?
+:::
+
+:::reveal Reveal — check 2
+n = 7 is odd, so the median, 5, goes in neither half. Lower half 1, 2, 4 gives **Q1 = 2**; upper half 7, 9, 10 gives **Q3 = 9**; **IQR = 7**. Five of the seven values are less than or equal to 7, and 5 ÷ 7 = 71.4%, so 7 is about the **71st percentile**. (*Quartiles and percentiles*; *One quartile convention, used everywhere*)
+:::
+
+:::yourturn
+**3.** A data set has Q1 = 20 and Q3 = 30. Is a value of 45 an outlier by the 1.5 × IQR rule?
+:::
+
+:::reveal Reveal — check 3
+IQR = 10, so 1.5 × IQR = 15 and the upper fence is 30 + 15 = 45. The value is exactly on the fence, so it is **not** an outlier: the rule says *more than*. (*The two outlier rules*)
+:::
+
+:::yourturn
+**4.** Find the sample variance and standard deviation of 1, 5, 9 by hand.
+:::
+
+:::reveal Reveal — check 4
+x̄ = 15 ÷ 3 = 5. Deviations −4, 0, 4, total 0. Squares 16, 0, 16, total 32. **s² = 32 ÷ 2 = 16** and **s = 4**. If you got 3.27, you divided by n = 3 instead of n − 1 = 2. (*The standard deviation and the variance*)
+:::
+
+:::yourturn
+**5.** A data set has mean 10 and standard deviation 2. Every value is multiplied by 3 and then 4 is added. What are the new mean and standard deviation?
+:::
+
+:::reveal Reveal — check 5
+**Mean** 3(10) + 4 = **34**. **Standard deviation** 3(2) = **6**. The + 4 slides every value along and moves none of them further apart, so it does not touch spread. (*What a change of units does to each summary*)
+:::
+
+:::yourturn
+**6.** In 1, 2, 4, 5, 7, 9, 10, the 10 is changed to 20. Which of the mean, median, IQR, standard deviation and range change?
+:::
+
+:::reveal Reveal — check 6
+The **median (5) and IQR (7) stay the same**: they depend on positions, and 20 is still the largest value. The **mean** (from 5.43 to 6.86), the **standard deviation** and the **range** (from 9 to 19) all change: they use the size of the extreme value. (*Resistant and nonresistant statistics*)
+:::
+
+:::yourturn
+**7.** A population has μ = 80 and σ = 4. Find the z-score of 74, and the value whose z-score is 2.
+:::
+
+:::reveal Reveal — check 7
+z = (74 − 80) ÷ 4 = **−1.5**: 1.5 standard deviations **below** the mean. The value with z = 2 is x = μ + zσ = 80 + 2(4) = **88**. (*The standardised score, z*)
+:::
+
+---
+
+## Part 4 — The commute times, summarised
+
+The same 25 journeys you drew three ways in Session 2. Nothing new has been collected. Every rule you need is in Part 3; where a step uses one, the text names the subsection to turn back to.
 
 Journey times to school, in minutes, for 25 randomly chosen Lincoln High students:
 
@@ -105,21 +342,13 @@ Calculate the **mean** and the **median**. Then answer: last session a parent cl
 
 **Which is typical?** The **median**. The mean is higher because a few long journeys, above all the 68, pull it upwards: every minute of every journey goes into the total. The median only cares which value is in the middle.
 
-This is a general pattern, and the course states it directly:
-
-| Shape | Usually |
-|---|---|
-| Roughly symmetric | mean ≈ median |
-| Skewed right | mean > median |
-| Skewed left | mean < median |
-
-These journeys are skewed right, and 21.44 > 18. The Session 2 test scores are skewed left, and there the mean is below the median.
+This is the pattern from Part 3, *How the mean and median reveal shape*: in a right-skewed distribution the mean is usually larger than the median. These journeys are skewed right, and 21.44 > 18. The Session 2 test scores are skewed left, and there the mean is below the median.
 :::
 
 ### Position: the quartiles
 
 :::yourturn
-The median splits the 25 journeys into two halves. Using this course's convention, how many values are in each half? Find **Q1** (the median of the lower half) and **Q3** (the median of the upper half). Then write the **five-number summary**: minimum, Q1, median, Q3, maximum.
+The median splits the 25 journeys into two halves. Using this course's convention (Part 3, *One quartile convention, used everywhere*), how many values are in each half? Find **Q1** (the median of the lower half) and **Q3** (the median of the upper half). Then write the **five-number summary**: minimum, Q1, median, Q3, maximum.
 :::
 
 :::reveal Reveal — the quartiles and the five-number summary
@@ -136,7 +365,7 @@ If you got **Q1 = 13 and Q3 = 25**, you included the median in both halves. That
 :::
 
 :::yourturn
-One more position question. What **percentile** is a journey of 30 minutes? (The pth percentile is the value with p% of the data less than or equal to it.)
+One more position question. What **percentile** is a journey of 30 minutes? (Recall the definition in Part 3, *Quartiles and percentiles*.)
 :::
 
 :::reveal Reveal — percentile
@@ -166,7 +395,7 @@ Q1 is roughly the 25th percentile and Q3 roughly the 75th. "Roughly" is exact la
 | Interquartile range (IQR) | Q3 − Q1 | 26 − 12.5 = **13.5 minutes** |
 | Standard deviation | *s* = √[Σ(*x*ᵢ − *x̄*)² ÷ (*n* − 1)] | **13.07 minutes** (calculator, below) |
 
-Range and IQR need only subtraction. The standard deviation takes more work, and the course expects you to find it both by hand and with technology. The formula is on the exam formula sheet.
+These are the three measures from Part 3, *The range and the interquartile range* and *The standard deviation and the variance*. Range and IQR need only subtraction. The standard deviation takes more work, and the course expects you to find it both by hand and with technology. The formula is on the exam formula sheet.
 
 ### The standard deviation, by hand
 
@@ -225,18 +454,18 @@ Put *s* = 13.07 minutes into one sentence about these journeys.
 :::reveal Reveal — what s means
 *"A typical journey differs from the mean of 21.44 minutes by about 13 minutes."*
 
-The standard deviation is **a typical distance of the values from their mean**. It is not the distance between neighbouring values, and it is not the range. Its square, *s*² = 170.76, is the **variance**, in minutes squared, which is why *s* is the number people report.
+As Part 3 put it, the standard deviation is **a typical distance of the values from their mean**. It is not the distance between neighbouring values, and it is not the range. Its square, *s*² = 170.76, is the **variance**, in minutes squared, which is why *s* is the number people report.
 :::
 
 ### The outlier test that Session 2 promised
 
-In Session 2 you called the 68-minute journey an outlier because it looked far from everything else. Here is the arithmetic test.
+In Session 2 you called the 68-minute journey an outlier because it looked far from everything else. Now apply the arithmetic test from Part 3, *The two outlier rules*.
 
 :::formula
 lower fence = Q1 − 1.5 × IQR     upper fence = Q3 + 1.5 × IQR
 :::
 
-An outlier is any value **more than** 1.5 × IQR above Q3 or below Q1: beyond a fence.
+Recall: an outlier is any value **more than** 1.5 × IQR above Q3 or below Q1, that is, beyond a fence.
 
 :::yourturn
 Calculate both fences. Is 68 an outlier? Is 42? It sits a fair way from 36.
@@ -253,11 +482,11 @@ Calculate both fences. Is 68 an outlier? Is 42? It sits a fair way from 36.
 **42 is not an outlier**, however isolated it looks: it is below 46.25. When a question says *use the 1.5 × IQR rule*, the rule decides, not the picture. A value exactly on a fence is not an outlier either, because the rule says *more than*.
 :::
 
-**A second rule.** The course description lists another method, and some prep books skip it: an outlier is a value more than **2 standard deviations** from the mean. Here 21.44 ± 2(13.07) runs from −4.70 to 47.58, so 68 is an outlier by this rule too. The two rules do not always agree: the homework has a data set where they disagree. Say which one you are using.
+**The second rule.** Now the other rule from Part 3, the one some prep books skip: an outlier is a value more than **2 standard deviations** from the mean. Here 21.44 ± 2(13.07) runs from −4.70 to 47.58, so 68 is an outlier by this rule too. The two rules do not always agree: the homework has a data set where they disagree. Say which one you are using.
 
 ### Build the boxplot
 
-A **boxplot** draws the five-number summary. The box runs from Q1 to Q3 with a line at the median. The whiskers run out to the most extreme values that are **not** outliers, and any outlier is marked on its own with a symbol such as an asterisk.
+Recall from Part 3, *What a boxplot draws: the five-number summary*: the box runs from Q1 to Q3 with a line at the median, the whiskers run out to the most extreme values that are **not** outliers, and any outlier is marked on its own with a symbol such as an asterisk.
 
 :::yourturn
 Draw the boxplot of the journey times on a scale from 0 to 70, by hand. Before you draw the right-hand whisker, decide exactly where it ends.
@@ -299,7 +528,7 @@ Predict before you touch the tool. Suppose that student's journey had been **118
 
 **Why the mean does:** it adds up every value. An extra 50 minutes shared among 25 students raises it by 50 ÷ 25 = 2.
 
-That is what **resistant** means: outliers do not greatly affect the value. The **median and IQR** are resistant. The **mean, standard deviation and range** are not.
+That is the rule from Part 3, *Resistant and nonresistant statistics*, seen happening: the **median and IQR** are resistant, and the **mean, standard deviation and range** are not.
 :::
 
 :::note teal The sentence to keep
@@ -308,7 +537,7 @@ With strong skew or outliers, report the **median and IQR**. The mean and standa
 
 ### Changing units
 
-There are two kinds of change, and they behave differently.
+Part 3, *What a change of units does to each summary*, gave the rules. Here you check them on the journeys, one kind of change at a time.
 
 :::yourturn
 **Multiplying or dividing.** The principal wants the report in hours. Convert each of these to hours: mean 21.44, median 18, Q1 12.5, Q3 26, the 84th percentile 30, range 60, IQR 13.5, standard deviation 13.07 (all in minutes). Which of them change?
@@ -348,7 +577,7 @@ There are two kinds of change, and they behave differently.
 Every value slides 3 minutes to the left and no two values move closer together, so no measure of spread changes. The fences slide too, to −10.75 and 43.25, so **65 is still the one outlier**. Changing units never changes which values are outliers.
 :::
 
-:::note teal The two groups, and the rule for each
+:::note teal The rule from Part 3, now checked on the journeys
 **Centre and position** (mean, median, quartiles, percentiles, minimum, maximum) behave like data values. **Spread** (range, IQR, standard deviation) measures distances between values.
 
 | Change to every value | Centre and position | Spread |
@@ -390,7 +619,7 @@ If you got a standard deviation of 40.49, you added 32. Adding 32 to every tempe
 
 ---
 
-## Part 4 — Match Mine, on your own
+## Part 5 — Match Mine, on your own
 
 In the classroom version of this activity, two students sit either side of a folder with the same nine cards. One arranges them on a 3×3 grid and describes the arrangement; the other rebuilds it from the words alone. Precise language is the whole game.
 
@@ -458,12 +687,12 @@ If every card were redrawn as a **boxplot**, which two cards would be hardest to
 
 Card E's five-number summary is 5, 24.45, 50, 75.55, 95; card F's is 1.2, 25, 50, 75, 98.8. And E's median sits exactly where almost no data are.
 
-**The rule this illustrates:** histograms, dotplots and stemplots can compare centre, variability, shape, outliers, **clusters and gaps**. Boxplots can compare centre, variability, outliers and skewness or symmetry, but **not clusters or gaps**.
+**The rule from Part 3 this illustrates** (*What a comparison must contain*): histograms, dotplots and stemplots can compare centre, variability, shape, outliers, **clusters and gaps**. Boxplots can compare centre, variability, outliers and skewness or symmetry, but **not clusters or gaps**.
 :::
 
 ---
 
-## Part 5 — Comparing: two hospitals, then two library branches
+## Part 6 — Comparing: two hospitals, then two library branches
 
 Session 1's hospital survey recorded, for each of its 300 patients, the minutes from arrival to being seen by a doctor. You never used that variable. Here it is for the two largest hospitals.
 
@@ -514,7 +743,7 @@ Mark your own:
 ### Shape from the table alone
 
 :::yourturn
-Suppose you had only the table and no boxplots. Give **two** separate pieces of evidence from the numbers that St Mary's is skewed right.
+Suppose you had only the table and no boxplots. Give **two** separate pieces of evidence from the numbers that St Mary's is skewed right. (Both are in Part 3, *How the mean and median reveal shape*.)
 :::
 
 :::reveal Reveal — shape from summary statistics
@@ -538,7 +767,7 @@ Use z = (*x* − mean) ÷ standard deviation.
 
 The **Riverside** wait is the more unusual one: about 2 standard deviations above its hospital's mean, against 1.5 for the St Mary's wait, even though it is 21 minutes shorter.
 
-A **z-score** is the number of standard deviations a value lies above (positive) or below (negative) the mean. The course defines it with the population mean μ and standard deviation σ; when those are unknown, as here, you use the sample's *x̄* and *s*.
+Recall from Part 3, *The standardised score, z*: a z-score is the number of standard deviations a value lies above (positive) or below (negative) the mean. The course defines it with the population mean μ and standard deviation σ; when those are unknown, as here, you use the sample's *x̄* and *s*.
 
 If your instinct was the 62-minute wait, that is the C1 mistake from your Session 2 homework in a new form: a raw number compared without asking what it is measured against. Each hospital has its own centre and spread.
 :::
@@ -554,7 +783,7 @@ The hospital network says: *"Patients are seen faster at Riverside."* Is this su
 
 **What it does not show:** *why*. These are survey data, not an experiment. St Mary's may see more seriously ill patients, or be busier at different times; nothing here says that Riverside's methods cause the shorter waits.
 
-The same template as Sessions 1 and 2: **state the claim · quote the numbers · say what they do and do not establish · keep it in context.**
+This is the positional argument from Part 3, *What summaries and graphs can justify*, with the same template as Sessions 1 and 2: **state the claim · quote the numbers · say what they do and do not establish · keep it in context.**
 :::
 
 ### A second comparison, from a summary table alone
@@ -574,7 +803,7 @@ This time there is no picture, only the kind of table a free-response question p
 :::reveal Reveal — outliers, and which spread to compare
 **1.** Central: IQR = 48 − 32 = 16; fences 32 − 24 = **8** and 48 + 24 = **72**. The minimum (16) and maximum (64) are inside, so **no outliers**. Westside: IQR = 34 − 17 = 17; fences 17 − 25.5 = **−8.5** and 34 + 25.5 = **59.5**. The maximum, 96, is above 59.5, so Westside has **at least one high outlier**. The table cannot say whether any other Westside value is above 59.5, only that the maximum is.
 
-**2.** Not really. The **IQRs are 16 and 17, almost equal**. Westside's standard deviation and range are inflated by the 96-hour member, and both are nonresistant. With an outlier or strong skew in either group, compare **medians and IQRs**. That is the resistance lesson from Part 3, applied to a comparison.
+**2.** Not really. The **IQRs are 16 and 17, almost equal**. Westside's standard deviation and range are inflated by the 96-hour member, and both are nonresistant. With an outlier or strong skew in either group, compare **medians and IQRs**. That is the choosing rule from Part 3, *Resistant and nonresistant statistics*, which you saw at work in Part 4, now applied to a comparison.
 :::
 
 :::yourturn
@@ -603,7 +832,7 @@ The library service says: *"Central's members spend more time in the library."* 
 
 ---
 
-## Part 6 — On your own: the café
+## Part 7 — On your own: the café
 
 No hints and no reveals until all four are done. It is the same café as Session 2's solo case.
 
@@ -643,7 +872,7 @@ Box from 20.5 to 29, median at 24, whiskers to 14 and to **35**, and 52 marked s
 
 ---
 
-## Part 7 — Explain it back
+## Part 8 — Explain it back
 
 :::yourturn
 Close the booklet. Explain out loud, or in writing, as if to someone who missed the session: **why did the median not move when the 68-minute journey became 118, and why did the fence not move either?**

@@ -740,18 +740,18 @@ One mark per question. **Total 22.**
 
 ## What each miss points to
 
-| Missed | The gap | Where to reteach |
-|---|---|---|
-| 1, 2, 18 | Formula work: angle = rf × 360°, run forwards and backwards; bin width = (max − min) ÷ number of bins | Session 2, Scenario A pie formula; the bin-width formula in Build & Defend |
-| 3 | Shares of one total are **added**, not averaged | Session 1, Part 5 formulas; Session 1 test, question 9 |
-| 4 | A pie chart needs parts of **one whole** that sum to 100% | Session 2 reference sheet, *Pie chart* |
-| 5, 6, 7 | Comparing data sets with **different totals**: use relative frequencies, not counts | Session 2, *The comparison trap* |
-| 8, 19 | Skew is named for the **tail**, and it needs an ordered, quantitative scale | Session 2, the skew-compare figure; *"point at the tail"* |
-| 9, 11 | Reading counts from a display; "at least" and "under" at the boundaries | Session 2, the histogram frequency tables |
-| 10, 22 | All four components, every claim checked, **in context** | Session 2, the model answer and its checklist |
-| 12, 17, 21 | What each display keeps and gives up; the stemplot rules | Session 2, Build & Defend, and *"do not omit the empty row"* |
-| 13, 16 | Using the graph to test a claim, including a single centre that describes nobody | Session 2, *Justifying a claim (1.6.B)* |
-| 14, 15, 20 | Shape vocabulary beyond skew: bimodal, clusters, gaps, uniform; bin width changes the picture | Session 2, *Bin width changes the picture*; the Unit 1 Explorer's Bin Width and Name That Shape tools |
+| Missed | The gap | Theory to reread | Where it is applied |
+|---|---|---|---|
+| 1, 2, 18 | Formula work: angle = rf × 360°, run forwards and backwards; bin width = (max − min) ÷ number of bins | *Pie charts and the slice angle (1.4.A)* and *Histograms and bins (1.5.A.2)* | *Slice angles for the six hospitals* and *Build: dotplot, stem-and-leaf plot and histogram* |
+| 3 | Shares of one total are **added**, not averaged | Session 1, *Proportions, percentages and ratios in a claim (1.3.B.1–2)* | Session 1, *Applying the formulas · part 1, the categorical table*; Session 1 test, question 9 |
+| 4 | A pie chart needs parts of **one whole** that sum to 100% | *Pie charts and the slice angle (1.4.A)* | the reference sheet, *Displays for one categorical variable* |
+| 5, 6, 7 | Comparing data sets with **different totals**: use relative frequencies, not counts | *Comparing data sets with different totals (1.4.C)* | *The comparison trap: last year against this year (1.4.C)* |
+| 8, 19 | Skew is named for the **tail**, and it needs an ordered, quantitative scale | *Shape: skew and symmetry (1.6.A.2)*, with the skew-compare figure | *Shape of the journeys: which tail is longer* |
+| 9, 11 | Reading counts from a display; "at least" and "under" at the boundaries | *Dotplots (1.5.A.4)* and *Histograms and bins (1.5.A.2)* | *Build: dotplot, stem-and-leaf plot and histogram* |
+| 10, 22 | All four components, every claim checked, **in context** | *The four components of a description (1.6.A.1)* | *The model answer and its checklist* |
+| 12, 17, 21 | What each display keeps and gives up; the stemplot rules | *What every quantitative display shows (1.5.A.1)* and *Stem-and-leaf plots (1.5.A.3)* | *Defend: which display answers which question* |
+| 13, 16 | Using the graph to test a claim, including a single centre that describes nobody | *Justifying a claim from a quantitative distribution (1.6.B)* | *Justifying a claim: the half-hour journey (1.6.B)* |
+| 14, 15, 20 | Shape vocabulary beyond skew: bimodal, clusters, gaps, uniform; bin width changes the picture | *Shape: counting the peaks (1.6.A.3)*, *Unusual features: outliers, gaps and clusters (1.6.A.4–6)* and *Bin width changes the appearance (1.5.A.2)* | *Rebuilding the histogram with width-5 bins (1.5.A.2)*; the Unit 1 Explorer's Bin Width and Name That Shape tools |
 
 > **Three misses worth treating as urgent**, because each one recurs in every later unit. **Question 8** (skew named for the bulk) will return in every description of a sampling distribution. **Question 5 or 7** (counts across unequal totals) is the idea behind every two-proportion comparison in Unit 3. **Question 22, option (B)** (a correct description without context) is the most expensive habit on the free-response section, because it costs a mark on every question it touches.
 

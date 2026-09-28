@@ -709,17 +709,17 @@ One mark per question, questions 1–22. **Total 22.** Question 23 is not counte
 
 ## What each miss points to
 
-| Missed | The gap | Where to reteach |
-|---|---|---|
-| 1, 15, 16, 17 | Population is set by the **question**, not by the data | Session 1, Part 4 cards 5 and 6 |
-| 2 | Observational unit confused with a value or a counted object | Session 1, *"what would one row be?"* |
-| 3, 12 | The **digits test** has not transferred | Session 1, Part 5, plus the variable-type decision tree |
-| 4, 21, 22 | Parameter/statistic — **check the denominator** | Session 1, Part 3, and the Sample & Estimate tool |
-| 5, 6, 7 | What makes an investigative question valid; after-the-fact questions | Session 1, the investigative-question trap |
-| 8, 9 | Relative frequency arithmetic; **adding versus averaging** percentages | Session 1, Part 5 formulas |
-| 10, 11 | **Plurality versus majority**; hedging a claim | Session 1, the hospital claim |
-| 13, 14 | Discrete/continuous applies to the **variable**, not to its summaries | Session 2 warm-up, then the reference sheet |
-| 18, 19, 20 | Comparing groups with **different totals** | Session 2, Part 3 comparison trap |
+| Missed | The gap | Theory to reread | Where it is applied |
+|---|---|---|---|
+| 1, 15, 16, 17 | Population is set by the **question**, not by the data | *Population and sample: N and n (1.1.A.4–5)* and *Parameters and statistics (1.2.A.4–5)* | *The two cards that carry the learning: the lightbulbs and the teacher* |
+| 2 | Observational unit confused with a value or a counted object | *Observational units and variables (1.2.A.1–3)* | *Population, sample, unit and variables of the commute study* |
+| 3, 12 | The **digits test** has not transferred | *Categorical and quantitative variables (1.2.B.1–2)* | *The digits trap: room numbers* |
+| 4, 21, 22 | Parameter/statistic — **check the denominator** | *Parameters and statistics (1.2.A.4–5)* | *The centre of the session — parameter vs statistic*, and the Sample & Estimate tool |
+| 5, 6, 7 | What makes an investigative question valid; after-the-fact questions | *The investigative question (1.1.B.1–2)* | *The investigative-question trap: the cyclists* |
+| 8, 9 | Relative frequency arithmetic; **adding versus averaging** percentages | *Frequency and relative frequency tables (1.3.A.1–2)* | *Applying the formulas · part 1, the categorical table* |
+| 10, 11 | **Plurality versus majority**; hedging a claim | *Proportions, percentages and ratios in a claim (1.3.B.1–2)* | *The claim — and the habit that earns marks all year* |
+| 13, 14 | Discrete/continuous applies to the **variable**, not to its summaries | *Discrete and continuous quantitative variables (1.2.C.1–2)* | the reference sheet, *Types of variable* |
+| 18, 19, 20 | Comparing groups with **different totals** | Session 2, *Comparing data sets with different totals (1.4.C)* | Session 2, *The comparison trap: last year against this year (1.4.C)* |
 
 > **Two misses worth treating as urgent**, because both recur in every later unit: **question 4 or 22** (parameter versus statistic) and **question 18 option E** (counts rising while shares fall). Neither gets easier later; both get more expensive.
 

@@ -608,18 +608,18 @@ One mark per question. **Total 20.**
 
 ## What each miss points to
 
-| Missed | The gap | Where to reteach |
-|---|---|---|
-| 1, 18 | Which variable goes where, and what makes bivariate quantitative data | Session 4, *Two variables, one student each (5.1.A)* and *Building the scatterplot (5.1.A)* |
-| 2, 5, 20 | A full description: direction with "tend to", form, strength and unusual features, in context | Session 4, *Describing the association (5.1.B)* |
-| 3 | Unusual means **off the pattern**, not extreme on one axis | Session 4, *Describing the association (5.1.B)*, the 33-minute and 68-minute journeys |
-| 6, 19 | Justifying a claim from the points themselves, including clusters | Session 4, *Justify a claim (5.1.C)*, and the solo case, *Solo case — the library* |
-| 10 | Strength is closeness to the pattern, not steepness | Session 4, *Describing the association (5.1.B)*, and the Sketch and Switch activity |
-| 4, 7, 8, 11 | Reading *r*: its range, and sign against strength | Session 4, *Correlation: one number for a linear association (5.2.A)*; the Guess the Correlation tool |
-| 9 | *r* is unit-free | Session 4, *What r does not change with: units (5.2.A.1)* |
-| 14, 15 | *r* from z-scores: the products, their signs, and dividing by *n* − 1 | Session 4, *Where r comes from: z-scores, from Session 3* |
-| 12, 13 | *r* measures **linear** association only, in both directions | Session 4, *The debrief question that makes this topic 5.2* (the café's U-shape and curve) |
-| 16, 17 | Correlation is not causation, and *r* is not a slope | Session 4, *What else changes from shift to shift* and *What the data can and cannot support* |
+| Missed | The gap | Theory to reread | Where it is applied |
+|---|---|---|---|
+| 1, 18 | Which variable goes where, and what makes bivariate quantitative data | *Bivariate quantitative data (5.1.A.1)* and *Explanatory and response variables (5.1.A.2)* | *Two variables, one student each (5.1.A)* and *Building the scatterplot (5.1.A)* |
+| 2, 5, 20 | A full description: direction with "tend to", form, strength and unusual features, in context | *Describing an association: the four features (5.1.B.1)* | *Describing the association (5.1.B)* |
+| 3 | Unusual means **off the pattern**, not extreme on one axis | *Unusual features: clusters and points off the pattern (5.1.B.5)* | *Describing the association (5.1.B)*, the 33-minute and 68-minute journeys |
+| 6, 19 | Justifying a claim from the points themselves, including clusters | *Scatterplots as evidence for a claim (5.1.C.1)* | *Justify a claim (5.1.C)*, and the solo case, *Solo case — the library* |
+| 10 | Strength is closeness to the pattern, not steepness | *Form and strength (5.1.B.2, 5.1.B.4)* | *Describing the association (5.1.B)*, and the Sketch and Switch activity |
+| 4, 7, 8, 11 | Reading *r*: its range, and sign against strength | *Properties of r, and the course's strength guide (5.2.A.1–2)* | *Correlation: one number for a linear association (5.2.A)*; the Guess the Correlation tool |
+| 9 | *r* is unit-free | *Properties of r, and the course's strength guide (5.2.A.1–2)* | *What r does not change with: units (5.2.A.1)* |
+| 14, 15 | *r* from z-scores: the products, their signs, and dividing by *n* − 1 | *Correlation coefficient r: what it summarises (5.2.A.1)* | *Where r comes from: z-scores, from Session 3* |
+| 12, 13 | *r* measures **linear** association only, in both directions | *A high r does not prove linear form (5.2.A.3)* and *r = 0 means no linear association, not no association (5.2.A.2)* | *The debrief question that makes this topic 5.2* (the café's U-shape and curve) |
+| 16, 17 | Correlation is not causation, and *r* is not a slope | *Correlation does not imply causation (5.2.A.4)* | *What else changes from shift to shift* and *What the data can and cannot support* |
 
 > **Three misses worth treating as urgent.** **Question 3, option (A)**, the extreme-but-on-pattern point, comes straight back in Session 5, where the distinction between a point that fits the line and one that doesn't is what residuals measure. **Question 12 or 13**, reading *r* as if it described any pattern, leads to fitting straight lines to curves, which residual plots exist to catch. **Question 16**, causation from correlation, is marked on almost every free-response question about an observational study, and Sessions 6 and 7 build on it.
 

@@ -1,0 +1,89 @@
+<svg viewBox="0 0 620 306" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Table of surveyed patients by hospital with f, rf, 100rf and slice angle, each hospital marked with its chart colour" font-family="Public Sans, system-ui, sans-serif">
+<style>
+  .ink   { fill: #15201f; }
+  .ink2  { fill: #4a5654; }
+  .ink3  { fill: #6f7b79; }
+  .axis  { stroke: #c3c9c6; }
+  .grid  { stroke: #dcdfdd; }
+  .gap   { stroke: #ffffff; }
+  .surf  { fill: #ffffff; }
+  @media (prefers-color-scheme: dark) {
+    .ink  { fill: #e9edeb; }
+    .ink2 { fill: #a5b0ad; }
+    .ink3 { fill: #7e8a87; }
+    .axis { stroke: #3a4644; }
+    .grid { stroke: #2a3533; }
+    .gap  { stroke: #182120; }
+    .surf { fill: #182120; }
+  }
+
+  .s0 { fill: #2a78d6; }
+  .s1 { fill: #eb6834; }
+  .s2 { fill: #1baf7a; }
+  .s3 { fill: #eda100; }
+  .s4 { fill: #e87ba4; }
+  .s5 { fill: #008300; }
+  @media (prefers-color-scheme: dark) {
+    .s0 { fill: #3987e5; }
+    .s1 { fill: #d95926; }
+    .s2 { fill: #199e70; }
+    .s3 { fill: #c98500; }
+    .s4 { fill: #d55181; }
+    .s5 { fill: #008300; }
+  }
+</style>
+<text class="ink2" x="28" y="42" font-size="14" font-weight="600" text-anchor="start" fill="#4a5654">Hospital</text>
+<text class="ink2" x="300" y="42" font-size="14" font-weight="600" font-style="italic" text-anchor="end" fill="#4a5654">f</text>
+<text class="ink2" x="385" y="42" font-size="14" font-weight="600" font-style="italic" text-anchor="end" fill="#4a5654">rf</text>
+<text class="ink2" x="480" y="42" font-size="14" font-weight="600" font-style="italic" text-anchor="end" fill="#4a5654">100rf</text>
+<text class="ink2" x="592" y="42" font-size="14" font-weight="600" text-anchor="end" fill="#4a5654">Angle</text>
+<line class="axis" x1="16" y1="52" x2="604" y2="52" stroke-width="1.5" stroke="#c3c9c6" fill="none"/>
+<rect class="s0" x="28" y="63" width="14" height="14" rx="3" fill="#2a78d6"/>
+<text class="ink" x="50" y="75" font-size="14" text-anchor="start" fill="#15201f">St Mary's</text>
+<text class="ink" x="300" y="75" font-size="14" text-anchor="end" fill="#15201f">84</text>
+<text class="ink" x="385" y="75" font-size="14" text-anchor="end" fill="#15201f">0.280</text>
+<text class="ink" x="480" y="75" font-size="14" text-anchor="end" fill="#15201f">28.0%</text>
+<text class="ink" x="592" y="75" font-size="14" text-anchor="end" fill="#15201f">100.8°</text>
+<line class="grid" x1="16" y1="86" x2="604" y2="86" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<rect class="s1" x="28" y="97" width="14" height="14" rx="3" fill="#eb6834"/>
+<text class="ink" x="50" y="109" font-size="14" text-anchor="start" fill="#15201f">Riverside</text>
+<text class="ink" x="300" y="109" font-size="14" text-anchor="end" fill="#15201f">71</text>
+<text class="ink" x="385" y="109" font-size="14" text-anchor="end" fill="#15201f">0.237</text>
+<text class="ink" x="480" y="109" font-size="14" text-anchor="end" fill="#15201f">23.7%</text>
+<text class="ink" x="592" y="109" font-size="14" text-anchor="end" fill="#15201f">85.2°</text>
+<line class="grid" x1="16" y1="120" x2="604" y2="120" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<rect class="s2" x="28" y="131" width="14" height="14" rx="3" fill="#1baf7a"/>
+<text class="ink" x="50" y="143" font-size="14" text-anchor="start" fill="#15201f">Northgate</text>
+<text class="ink" x="300" y="143" font-size="14" text-anchor="end" fill="#15201f">52</text>
+<text class="ink" x="385" y="143" font-size="14" text-anchor="end" fill="#15201f">0.173</text>
+<text class="ink" x="480" y="143" font-size="14" text-anchor="end" fill="#15201f">17.3%</text>
+<text class="ink" x="592" y="143" font-size="14" text-anchor="end" fill="#15201f">62.4°</text>
+<line class="grid" x1="16" y1="154" x2="604" y2="154" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<rect class="s3" x="28" y="165" width="14" height="14" rx="3" fill="#eda100"/>
+<text class="ink" x="50" y="177" font-size="14" text-anchor="start" fill="#15201f">Parkview</text>
+<text class="ink" x="300" y="177" font-size="14" text-anchor="end" fill="#15201f">45</text>
+<text class="ink" x="385" y="177" font-size="14" text-anchor="end" fill="#15201f">0.150</text>
+<text class="ink" x="480" y="177" font-size="14" text-anchor="end" fill="#15201f">15.0%</text>
+<text class="ink" x="592" y="177" font-size="14" text-anchor="end" fill="#15201f">54.0°</text>
+<line class="grid" x1="16" y1="188" x2="604" y2="188" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<rect class="s4" x="28" y="199" width="14" height="14" rx="3" fill="#e87ba4"/>
+<text class="ink" x="50" y="211" font-size="14" text-anchor="start" fill="#15201f">Eastwood</text>
+<text class="ink" x="300" y="211" font-size="14" text-anchor="end" fill="#15201f">30</text>
+<text class="ink" x="385" y="211" font-size="14" text-anchor="end" fill="#15201f">0.100</text>
+<text class="ink" x="480" y="211" font-size="14" text-anchor="end" fill="#15201f">10.0%</text>
+<text class="ink" x="592" y="211" font-size="14" text-anchor="end" fill="#15201f">36.0°</text>
+<line class="grid" x1="16" y1="222" x2="604" y2="222" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<rect class="s5" x="28" y="233" width="14" height="14" rx="3" fill="#008300"/>
+<text class="ink" x="50" y="245" font-size="14" text-anchor="start" fill="#15201f">Hillcrest</text>
+<text class="ink" x="300" y="245" font-size="14" text-anchor="end" fill="#15201f">18</text>
+<text class="ink" x="385" y="245" font-size="14" text-anchor="end" fill="#15201f">0.060</text>
+<text class="ink" x="480" y="245" font-size="14" text-anchor="end" fill="#15201f">6.0%</text>
+<text class="ink" x="592" y="245" font-size="14" text-anchor="end" fill="#15201f">21.6°</text>
+<line class="grid" x1="16" y1="256" x2="604" y2="256" stroke-width="1" stroke="#dcdfdd" fill="none"/>
+<line class="axis" x1="16" y1="256" x2="604" y2="256" stroke-width="1.5" stroke="#c3c9c6" fill="none"/>
+<text class="ink" x="28" y="279" font-size="14" font-weight="700" text-anchor="start" fill="#15201f">Total</text>
+<text class="ink" x="300" y="279" font-size="14" font-weight="700" text-anchor="end" fill="#15201f">300</text>
+<text class="ink" x="385" y="279" font-size="14" font-weight="700" text-anchor="end" fill="#15201f">1.000</text>
+<text class="ink" x="480" y="279" font-size="14" font-weight="700" text-anchor="end" fill="#15201f">100%</text>
+<text class="ink" x="592" y="279" font-size="14" font-weight="700" text-anchor="end" fill="#15201f">360.0°</text>
+</svg>

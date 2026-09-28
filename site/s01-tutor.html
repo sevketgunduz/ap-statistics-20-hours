@@ -11,943 +11,381 @@
 </head>
 <body>
 <main class="page">
-<style>/* legacy fragment: .page already supplies the column */.page > .wrap, .page section > .wrap, .page .wrap{max-width:none;padding-inline:0}.page > section, .page > header.mast{padding-block:26px}.page > header.mast{background:none;border:0}</style><style>
-  :root{
-    --paper:#f5f6f4; --surface:#ffffff; --surface-2:#eef1ef;
-    --ink:#15201f; --ink-2:#4a5654; --ink-3:#6f7b79;
-    --rule:#dcdfdd; --rule-strong:#c3c9c6;
-    --accent:#1a6b63; --accent-deep:#0f4c46; --accent-soft:#e2eeec;
-    --alarm:#9a2e28; --alarm-soft:#f8eae8; --alarm-rule:#e0bcb7;
-    --amber:#7d5a11; --amber-soft:#f6efdb; --amber-rule:#ddcb9c;
-    --f-display:"Spectral",Georgia,"Times New Roman",serif;
-    --f-body:"Public Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
-    --f-mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
-    --wrap:70rem; --read:64ch;
-  }
-  @media (prefers-color-scheme:dark){
-    :root:not([data-theme="light"]){
-      --paper:#101615; --surface:#182120; --surface-2:#1e2827;
-      --ink:#e9edeb; --ink-2:#a5b0ad; --ink-3:#7e8a87;
-      --rule:#2a3533; --rule-strong:#3a4644;
-      --accent:#54b8ab; --accent-deep:#7fd0c4; --accent-soft:#16302d;
-      --alarm:#e58479; --alarm-soft:#2d1917; --alarm-rule:#5d312c;
-      --amber:#d9ab52; --amber-soft:#2b2312; --amber-rule:#4d3f1c;
-    }
-  }
-  :root[data-theme="dark"]{
-    --paper:#101615; --surface:#182120; --surface-2:#1e2827;
-    --ink:#e9edeb; --ink-2:#a5b0ad; --ink-3:#7e8a87;
-    --rule:#2a3533; --rule-strong:#3a4644;
-    --accent:#54b8ab; --accent-deep:#7fd0c4; --accent-soft:#16302d;
-    --alarm:#e58479; --alarm-soft:#2d1917; --alarm-rule:#5d312c;
-    --amber:#d9ab52; --amber-soft:#2b2312; --amber-rule:#4d3f1c;
-  }
-  *{box-sizing:border-box;}
-  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.62;-webkit-font-smoothing:antialiased;}
-  .wrap{max-width:var(--wrap);margin-inline:auto;padding-inline:24px;}
-  @media (max-width:520px){.wrap{padding-inline:16px;}}
-  h1,h2,h3,h4{font-family:var(--f-display);text-wrap:balance;margin:0;line-height:1.2;}
-  p{margin:0;}
-  .eyebrow{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);font-weight:500;}
-
-  .mast{border-bottom:1px solid var(--rule);background:var(--surface);}
-  .mast-in{padding-block:52px 38px;display:flex;flex-direction:column;gap:22px;}
-  .mast h1{font-size:clamp(2rem,5vw,3.15rem);font-weight:700;letter-spacing:-.015em;}
-  .mast h1 em{font-style:italic;color:var(--accent);}
-  .standfirst{max-width:var(--read);font-size:1.06rem;color:var(--ink-2);}
-  .rev{font-family:var(--f-mono);font-size:.7rem;color:var(--ink-3);letter-spacing:.04em;}
-  .facts{display:flex;flex-wrap:wrap;border:1px solid var(--rule);border-radius:3px;overflow:hidden;}
-  .fact{flex:1 1 140px;padding:13px 17px;border-right:1px solid var(--rule);background:var(--surface);}
-  .fact:last-child{border-right:0;}
-  .fact dt{font-family:var(--f-mono);font-size:.64rem;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-3);margin-bottom:4px;}
-  .fact dd{margin:0;font-family:var(--f-display);font-size:1.12rem;font-weight:600;font-variant-numeric:tabular-nums;}
-
-  section{padding-block:46px;}
-  section+section{border-top:1px solid var(--rule);}
-  .sec-head{display:flex;flex-direction:column;gap:11px;margin-bottom:24px;max-width:var(--read);}
-  .sec-head h2{font-size:clamp(1.4rem,3vw,1.9rem);font-weight:600;}
-  .sec-head p{color:var(--ink-2);}
-  .prose{max-width:var(--read);display:flex;flex-direction:column;gap:14px;color:var(--ink-2);}
-  .prose strong{color:var(--ink);font-weight:600;}
-
-  .tbl{overflow-x:auto;border:1px solid var(--rule);border-radius:3px;background:var(--surface);margin-block:6px;}
-  table{border-collapse:collapse;width:100%;min-width:430px;font-size:.89rem;}
-  th,td{padding:10px 14px;text-align:left;border-bottom:1px solid var(--rule);vertical-align:top;}
-  thead th{font-family:var(--f-mono);font-size:.64rem;letter-spacing:.11em;text-transform:uppercase;color:var(--ink-3);font-weight:500;background:var(--surface-2);white-space:nowrap;}
-  tbody tr:last-child td{border-bottom:0;}
-  tbody tr.tot td{background:var(--surface-2);font-weight:600;}
-  .num{font-variant-numeric:tabular-nums;}
-  .mono{font-family:var(--f-mono);font-size:.84rem;font-variant-numeric:tabular-nums;}
-  .cum{background:var(--accent-soft);}
-
-  .seg{background:var(--surface);border:1px solid var(--rule);border-radius:3px;padding:22px 24px;margin-bottom:16px;}
-  .seg-h{display:flex;flex-wrap:wrap;align-items:baseline;gap:10px 15px;padding-bottom:11px;border-bottom:2px solid var(--accent);margin-bottom:16px;}
-  .clock{font-family:var(--f-mono);font-size:.74rem;font-weight:600;color:var(--accent);letter-spacing:.06em;white-space:nowrap;}
-  .seg-h h3{font-size:1.24rem;font-weight:600;flex:1 1 220px;}
-  .who{font-family:var(--f-mono);font-size:.64rem;letter-spacing:.11em;text-transform:uppercase;padding:3px 8px;border-radius:2px;background:var(--accent-soft);color:var(--accent-deep);font-weight:500;white-space:nowrap;}
-  .who.tutor{background:var(--surface-2);color:var(--ink-3);}
-  .seg-body{display:flex;flex-direction:column;gap:14px;}
-  .seg-body p{font-size:.94rem;color:var(--ink-2);max-width:var(--read);}
-  .seg-body h4{font-size:1.02rem;font-weight:600;margin-top:5px;}
-  .seg-body ul,.seg-body ol{margin:0;padding-left:1.15em;display:flex;flex-direction:column;gap:7px;font-size:.94rem;color:var(--ink-2);max-width:var(--read);}
-  .seg-body strong{color:var(--ink);font-weight:600;}
-
-  .script{display:flex;flex-direction:column;border:1px solid var(--rule);border-radius:3px;overflow:hidden;max-width:var(--read);}
-  .line{display:grid;grid-template-columns:82px 1fr;gap:0 14px;padding:11px 15px;border-bottom:1px solid var(--rule);font-size:.92rem;}
-  .line:last-child{border-bottom:0;}
-  .line .lbl{font-family:var(--f-mono);font-size:.62rem;letter-spacing:.11em;text-transform:uppercase;font-weight:600;padding-top:3px;}
-  .line.ask{background:var(--accent-soft);}
-  .line.ask .lbl{color:var(--accent-deep);}
-  .line.ask .txt{font-style:italic;color:var(--ink);}
-  .line.listen{background:var(--surface);}
-  .line.listen .lbl{color:var(--ink-3);}
-  .line.listen .txt{color:var(--ink-2);}
-  .line.ifsay{background:var(--amber-soft);}
-  .line.ifsay .lbl{color:var(--amber);}
-  .line.ifsay .txt{color:var(--ink-2);}
-  .line.intro{background:var(--surface-2);}
-  .line.intro .lbl{color:var(--ink-3);}
-  .line.intro .txt{color:var(--ink);font-weight:600;}
-  @media (max-width:520px){.line{grid-template-columns:1fr;gap:4px;}}
-
-  .brief{background:var(--accent-soft);border-radius:3px;padding:16px 19px;font-size:.95rem;display:flex;flex-direction:column;gap:9px;max-width:var(--read);}
-  .brief strong{font-weight:600;}
-
-  .callout{border-radius:3px;padding:15px 18px;max-width:var(--read);display:flex;flex-direction:column;gap:6px;}
-  .callout .lbl{font-family:var(--f-mono);font-size:.63rem;letter-spacing:.13em;text-transform:uppercase;font-weight:600;}
-  .callout p{font-size:.92rem;color:var(--ink-2);}
-  .callout strong{color:var(--ink);}
-  .callout.amber{background:var(--amber-soft);border:1px solid var(--amber-rule);}
-  .callout.amber .lbl{color:var(--amber);}
-  .callout.red{background:var(--alarm-soft);border:1px solid var(--alarm-rule);}
-  .callout.red .lbl{color:var(--alarm);}
-  .callout.teal{background:var(--accent-soft);border:1px solid var(--accent);}
-  .callout.teal .lbl{color:var(--accent-deep);}
-
-  /* formula strip */
-  .checks{display:flex;flex-wrap:wrap;gap:8px;}
-  .chk{font-family:var(--f-mono);font-size:.78rem;background:var(--surface-2);border:1px solid var(--rule);border-radius:2px;padding:6px 11px;color:var(--ink);white-space:nowrap;}
-  .runsum{font-family:var(--f-mono);font-size:.84rem;background:var(--surface-2);border-left:3px solid var(--accent);padding:11px 14px;border-radius:2px;overflow-x:auto;white-space:nowrap;}
-
-  .hw-sec{background:var(--surface-2);border-block:1px solid var(--rule-strong);}
-  .hw-head{display:flex;flex-wrap:wrap;gap:10px 20px;align-items:baseline;border-bottom:2px solid var(--ink);padding-bottom:12px;margin-bottom:22px;}
-  .hw-head h2{font-size:clamp(1.5rem,3.2vw,2.1rem);font-weight:700;flex:1 1 240px;}
-  .hw-head .meta{font-family:var(--f-mono);font-size:.74rem;color:var(--ink-3);}
-  .part{background:var(--surface);border:1px solid var(--rule);border-radius:3px;padding:20px 22px;margin-bottom:14px;}
-  .part.ext{border:1px dashed var(--amber-rule);background:var(--amber-soft);}
-  .part-h{display:flex;flex-wrap:wrap;align-items:baseline;gap:10px;margin-bottom:14px;}
-  .part-h h3{font-size:1.1rem;font-weight:600;}
-  .marks{font-family:var(--f-mono);font-size:.69rem;color:var(--accent);border:1px solid var(--accent);border-radius:2px;padding:2px 7px;font-weight:500;white-space:nowrap;}
-  .marks.ext{color:var(--amber);border-color:var(--amber);}
-  .q{display:flex;flex-direction:column;gap:7px;margin-bottom:13px;}
-  .q:last-child{margin-bottom:0;}
-  .q p{font-size:.94rem;}
-  .q .qn{font-family:var(--f-mono);font-weight:600;color:var(--accent);}
-  .data{font-family:var(--f-mono);font-size:.8rem;background:var(--surface-2);border:1px solid var(--rule);border-radius:3px;padding:14px 16px;overflow-x:auto;white-space:pre;line-height:1.85;}
-  .protocol{background:var(--surface);border:2px solid var(--accent);border-radius:3px;padding:19px 22px;margin-bottom:18px;max-width:var(--read);}
-  .protocol h3{font-size:1.05rem;font-weight:600;margin-bottom:11px;}
-  .protocol ol{margin:0;padding-left:1.2em;display:flex;flex-direction:column;gap:8px;font-size:.93rem;color:var(--ink-2);}
-  .protocol strong{color:var(--ink);font-weight:600;}
-  .protocol .kick{margin-top:12px;padding-top:11px;border-top:1px solid var(--rule);font-size:.89rem;font-style:italic;color:var(--ink-2);}
-
-  details.key{background:var(--surface);border:2px solid var(--rule-strong);border-radius:3px;margin-top:22px;}
-  details.key>summary{cursor:pointer;padding:16px 20px;font-family:var(--f-display);font-size:1.1rem;font-weight:600;list-style:none;display:flex;align-items:center;gap:10px;}
-  details.key>summary::-webkit-details-marker{display:none;}
-  details.key>summary::after{content:"▸";margin-left:auto;font-size:.9rem;transition:transform .15s;}
-  details.key[open]>summary::after{transform:rotate(90deg);}
-  .key-body{padding:0 20px 22px;display:flex;flex-direction:column;gap:17px;border-top:1px solid var(--rule);padding-top:17px;}
-  .key-body h4{font-size:1rem;font-weight:600;}
-  .key-body p,.key-body li{font-size:.9rem;color:var(--ink-2);}
-  .key-body ol,.key-body ul{margin:0;padding-left:1.2em;display:flex;flex-direction:column;gap:6px;}
-  .key-body strong{color:var(--ink);font-weight:600;}
-  .match{font-family:var(--f-mono);font-size:.94rem;letter-spacing:.04em;color:var(--ink);}
-  .flagbox{border-left:3px solid var(--amber);padding-left:13px;font-size:.89rem;color:var(--ink-2);}
-  .flagbox b{color:var(--ink);}
-
-  .ref-sec{background:var(--surface);border-block:1px solid var(--rule);}
-  .defs{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,310px),1fr));gap:11px;}
-  .def{background:var(--paper);border:1px solid var(--rule);border-left:3px solid var(--accent);border-radius:3px;padding:14px 16px;display:flex;flex-direction:column;gap:6px;}
-  .def dt{font-weight:600;font-size:.96rem;}
-  .def dt small{font-family:var(--f-mono);font-size:.68rem;color:var(--ink-3);font-weight:400;margin-left:6px;letter-spacing:.06em;}
-  .def dd{margin:0;font-size:.87rem;color:var(--ink-2);}
-  .def .ex{font-size:.84rem;color:var(--ink-2);border-top:1px solid var(--rule);padding-top:6px;}
-  .def .ex b{font-family:var(--f-mono);font-size:.62rem;letter-spacing:.11em;text-transform:uppercase;color:var(--accent);display:block;margin-bottom:2px;font-weight:600;}
-  .defgroup{margin-bottom:24px;}
-  .defgroup:last-child{margin-bottom:0;}
-  .defgroup h3{font-size:1.04rem;font-weight:600;margin-bottom:11px;padding-bottom:7px;border-bottom:1px solid var(--rule);}
-
-  .split{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:14px;}
-  footer{border-top:1px solid var(--rule);padding-block:28px 42px;font-size:.82rem;color:var(--ink-3);}
-  footer p{max-width:var(--read);}
-  :focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
-  @media (prefers-reduced-motion:reduce){*{transition:none!important;}}
-</style>
-
-<header class="mast">
-  <div class="wrap mast-in">
-    <div class="eyebrow">AP Statistics &middot; Twenty-hour course &middot; One-to-one edition</div>
-    <h1>Session One, <em>One to One</em></h1>
-    <p class="standfirst">A tutoring script for the first hour: what to ask, what to listen for, and where to branch. Every term carries a worked example; every frequency calculation is given as a formula and applied.</p>
-    <p class="rev">Revision 2</p>
-    <dl class="facts">
-      <div class="fact"><dt>CED topics</dt><dd>1.1 &middot; 1.2 &middot; 1.3</dd></div>
-      <div class="fact"><dt>Skills</dt><dd>1.A 2.A 3.A 4.A</dd></div>
-      <div class="fact"><dt>Duration</dt><dd>60 minutes</dd></div>
-      <div class="fact"><dt>Student talks</dt><dd>&ge; 50%</dd></div>
-    </dl>
-  </div>
-</header>
-
-<section>
-  <div class="wrap">
-    <div class="sec-head">
-      <div class="eyebrow">Orientation</div>
-      <h2>What changes when it is one student</h2>
-    </div>
-    <div class="split">
-      <div class="callout teal">
-        <span class="lbl">1 &middot; Diagnose before you teach</span>
-        <p>In a class you must cover 1.1 to 1.3 because thirty students need all of it. With one student you can find out in six minutes what they already have, and spend the hour on what they do not.</p>
-      </div>
-      <div class="callout teal">
-        <span class="lbl">2 &middot; Definitions stop being a block</span>
-        <p>One-to-one, a definition dump is the fastest way to lose a student. Terms arrive <strong>inside a scenario</strong>; the reference sheet at the end is something you hand over, not read aloud.</p>
-      </div>
-      <div class="callout teal">
-        <span class="lbl">3 &middot; You are the only other voice</span>
-        <p>Two moves cover almost every replaced peer structure: <strong>you argue the opposing position</strong>, or <strong>you produce deliberately flawed work and the student marks it</strong>.</p>
-      </div>
-      <div class="callout amber">
-        <span class="lbl">4 &middot; The failure mode is you talking</span>
-        <p>Target: <strong>the student talks at least half the hour.</strong> Four minutes of unbroken explanation is the signal to stop and ask something.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <div class="sec-head"><div class="eyebrow">The hour</div><h2>Session script</h2></div>
-
-    <div class="seg">
-      <div class="seg-h"><span class="clock">0&ndash;6 min</span><h3>The diagnostic</h3><span class="who">Student talks</span></div>
-      <div class="seg-body">
-        <p>Do not teach yet. Ask these four, in order, and write down what you hear.</p>
-        <div class="script">
-          <div class="line ask"><span class="lbl">Q1</span><span class="txt">&ldquo;A school wants to know the average height of its students. It measures 50 of them. What would you call the 50, and what would you call all the students?&rdquo;</span></div>
-          <div class="line ask"><span class="lbl">Q2</span><span class="txt">&ldquo;If I told you the average height of those 50 was 168&nbsp;cm &mdash; is that the answer to the school&rsquo;s question?&rdquo;</span></div>
-          <div class="line ask"><span class="lbl">Q3</span><span class="txt">&ldquo;Give me two things you could measure about a person where one is a number and one is not.&rdquo;</span></div>
-          <div class="line ask"><span class="lbl">Q4</span><span class="txt">&ldquo;Is a phone number a number?&rdquo;</span></div>
-        </div>
-        <h4>How to branch</h4>
-        <div class="tbl">
-          <table>
-            <thead><tr><th>What you hear</th><th>What it means</th><th>Where to start</th></tr></thead>
-            <tbody>
-              <tr><td>Q1 confident, Q2 says &ldquo;not exactly, it&rsquo;s an estimate&rdquo;</td><td>Population/sample and the inference idea are already there</td><td>Move fast to parameter vs statistic; bank the time for the formulas in Scenario B</td></tr>
-              <tr><td>Q1 confident, Q2 says &ldquo;yes&rdquo;</td><td>Vocabulary present, concept absent. <strong>The most common profile</strong></td><td>Spend the extra time on the parameter/statistic table. Do not rush it</td></tr>
-              <tr><td>Q1 hesitant or reversed</td><td>Foundation missing</td><td>Teach Scenario A slowly and in full. Reaching only the start of Scenario B is fine</td></tr>
-              <tr><td>Q4 says &ldquo;yes, it&rsquo;s digits&rdquo;</td><td>The digits trap is live</td><td>Note it, but <strong>do not correct it yet</strong>. Let Scenario B do the work</td></tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="callout amber">
-          <span class="lbl">If all four come back clean</span>
-          <p>Do not spend the hour confirming what they know. Go straight to the investigative-question trap and the formulas, and use the recovered time on the Part D homework dataset in the session, with you marking live.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="seg">
-      <div class="seg-h"><span class="clock">6&ndash;8 min</span><h3>Frame the hour</h3><span class="who tutor">Tutor talks</span></div>
-      <div class="seg-body">
-        <p>Everything in this course is one of four moves: <strong>pose a question, collect data, analyse data, interpret the result.</strong> Those are the College Board&rsquo;s four Statistical Practices, and every topic between now and the exam is a tool used at one of the four stages.</p>
-        <div class="script">
-          <div class="line ask"><span class="lbl">Say</span><span class="txt">&ldquo;Today is entirely the first two. Almost no calculation. If you can&rsquo;t say precisely what your population is, everything in Unit 3 falls apart &mdash; and that&rsquo;s the biggest part of the exam.&rdquo;</span></div>
-        </div>
-      </div>
-    </div>
-
-    <div class="seg">
-      <div class="seg-h"><span class="clock">8&ndash;22 min</span><h3>Scenario A &mdash; the commute study</h3><span class="who">Both</span></div>
-      <div class="seg-body">
-        <div class="brief">
-          <p>Lincoln High School has <strong>1,842 students</strong>. The principal wants to reorganise the morning bus timetable but does not know how students currently get to school. She asks a randomly chosen <strong>120 students</strong> to record, on one Tuesday: how they primarily travelled to school, how many minutes the journey took, and how many separate vehicles they had to change between.</p>
-          <p>Of the 120 surveyed, <strong>43 came by bus</strong>, and their journeys averaged <strong>24.6 minutes</strong>.</p>
-        </div>
-        <p>Hand this over on paper. Thirty seconds to read. Then work it through by asking, not telling.</p>
-
-        <div class="script">
-          <div class="line ask"><span class="lbl">Ask</span><span class="txt">&ldquo;Who is this study actually about?&rdquo;</span></div>
-          <div class="line listen"><span class="lbl">Listen for</span><span class="txt">All 1,842 students.</span></div>
-          <div class="line ifsay"><span class="lbl">If &ldquo;the 120&rdquo;</span><span class="txt">&ldquo;Would the principal be happy knowing about only those 120?&rdquo;</span></div>
-          <div class="line intro"><span class="lbl">Introduce</span><span class="txt">Population, N = 1,842. Then sample, n = 120.</span></div>
-        </div>
-        <div class="script">
-          <div class="line ask"><span class="lbl">Ask</span><span class="txt">&ldquo;If I gave you the spreadsheet, what would one row be?&rdquo;</span></div>
-          <div class="line listen"><span class="lbl">Listen for</span><span class="txt">One student. The best question in the session for surfacing confusion &mdash; anyone answering &ldquo;a journey&rdquo; or &ldquo;a bus&rdquo; has not got it.</span></div>
-          <div class="line intro"><span class="lbl">Introduce</span><span class="txt">Observational unit.</span></div>
-        </div>
-        <div class="script">
-          <div class="line ask"><span class="lbl">Ask</span><span class="txt">&ldquo;Three things were measured. Sort them into numbers and not-numbers.&rdquo;</span></div>
-          <div class="line ask"><span class="lbl">Push</span><span class="txt">&ldquo;Journey time and vehicle changes are both numbers. Is there any difference between them?&rdquo;</span></div>
-          <div class="line ifsay"><span class="lbl">If stuck</span><span class="txt">&ldquo;Could someone change 1.4 vehicles? Could a journey take 24.61 minutes?&rdquo;</span></div>
-          <div class="line intro"><span class="lbl">Introduce</span><span class="txt">Categorical, quantitative, discrete, continuous.</span></div>
-        </div>
-        <div class="tbl">
-          <table>
-            <thead><tr><th>Variable</th><th>Type</th><th>The test</th></tr></thead>
-            <tbody>
-              <tr><td>Mode of travel</td><td>Categorical</td><td>Values are group labels</td></tr>
-              <tr><td>Journey time</td><td>Quantitative, continuous</td><td>Measured; 24.61 minutes is possible</td></tr>
-              <tr><td>Vehicle changes</td><td>Quantitative, discrete</td><td>Counted; never 1.4</td></tr>
-            </tbody>
-          </table>
-        </div>
-
-        <h4>The centre of the session &mdash; parameter vs statistic</h4>
-        <p>Do not define these first. Build the table with the student, one row at a time.</p>
-        <div class="script">
-          <div class="line ask"><span class="lbl">Ask</span><span class="txt">&ldquo;What proportion of all 1,842 students come by bus?&rdquo;</span></div>
-          <div class="line listen"><span class="lbl">Listen for</span><span class="txt">&ldquo;We don&rsquo;t know.&rdquo; Wait for it.</span></div>
-          <div class="line ifsay"><span class="lbl">If 0.358</span><span class="txt">&ldquo;How many of the 1,842 did we actually ask?&rdquo;</span></div>
-          <div class="line ask"><span class="lbl">Ask</span><span class="txt">&ldquo;What proportion of the 120 came by bus?&rdquo; &rarr; 43 &divide; 120 = 0.358. Known.</span></div>
-        </div>
-        <div class="tbl">
-          <table>
-            <thead><tr><th>Quantity</th><th>Which</th><th>Known?</th></tr></thead>
-            <tbody>
-              <tr><td>Proportion of <strong>all 1,842</strong> who come by bus</td><td>Parameter</td><td>No</td></tr>
-              <tr><td class="num">43 &divide; 120 = 0.358, proportion of the <strong>sampled</strong></td><td>Statistic</td><td>Yes</td></tr>
-              <tr><td>Mean journey time of <strong>all 1,842</strong></td><td>Parameter</td><td>No</td></tr>
-              <tr><td class="num">24.6 minutes, mean of the <strong>120</strong></td><td>Statistic</td><td>Yes</td></tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="callout teal">
-          <span class="lbl">Say this once the table is built</span>
-          <p>&ldquo;Every single thing we do from Session 13 onwards is about the gap between those two columns. That&rsquo;s it. That&rsquo;s the subject.&rdquo;</p>
-        </div>
-        <p>Offer the memory hook only <em>after</em> they have built the table: <strong>P</strong>opulation goes with <strong>P</strong>arameter, <strong>S</strong>ample goes with <strong>S</strong>tatistic.</p>
-
-        <h4>The investigative-question trap</h4>
-        <div class="script">
-          <div class="line ask"><span class="lbl">Ask</span><span class="txt">&ldquo;What question is this study trying to answer?&rdquo;</span></div>
-          <div class="line ask"><span class="lbl">Spring it</span><span class="txt">&ldquo;The principal notices cyclists have much longer journeys than she expected. She rewrites her report to answer: why do cyclists take so long? Is that allowed?&rdquo;</span></div>
-          <div class="line listen"><span class="lbl">Expect</span><span class="txt">&ldquo;Yes&rdquo; &mdash; it sounds like good curiosity. Let them commit before you push.</span></div>
-          <div class="line ask"><span class="lbl">Then ask</span><span class="txt">&ldquo;How many of the 120 were cyclists &mdash; what if it was four? And she only asked because she spotted the pattern. Could she have found a pattern in any variable if she&rsquo;d gone looking?&rdquo;</span></div>
-        </div>
-        <div class="callout red">
-          <span class="lbl">CED 1.1.B.1</span>
-          <p>An investigative question should not be changed based on the data analysis or results. The cyclist pattern might be real, or four unusual students. It is a legitimate question for a <strong>new</strong> study with <strong>new</strong> data.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="seg">
-      <div class="seg-h"><span class="clock">22&ndash;30 min</span><h3>Challenge Sort</h3><span class="who">Student talks</span></div>
-      <div class="seg-body">
-        <p><strong>You argue the opposite of whatever the student says</strong>, including when they are right. Six short study descriptions; the student identifies population, sample, observational unit, one variable and its type &mdash; out loud, one card at a time. After every answer, push back once: <em>&ldquo;Are you sure? I&rsquo;d have said the population was&hellip;&rdquo;</em></p>
-        <p>The point is to separate <strong>secure reasoning</strong> from <strong>correct guessing</strong>. A student who knows why will hold their ground. A student who guessed will fold immediately.</p>
-        <div class="callout amber">
-          <span class="lbl">Say this before you start</span>
-          <p>&ldquo;I&rsquo;m going to disagree with you sometimes even when you&rsquo;re right. Your job is to hold your position if you can justify it.&rdquo; Without the warning it becomes demoralising rather than useful.</p>
-        </div>
-        <div class="split">
-          <div class="def" style="border-left-color:var(--amber);">
-            <dt>Card 5 &mdash; the lightbulbs</dt>
-            <dd><em>A researcher tests every lightbulb coming off one production line during one shift, to judge the quality of the factory&rsquo;s output.</em> Census of that shift, or sample of ongoing production? <strong>It depends on the investigative question</strong> &mdash; the population is a property of what you are asking, not of the data.</dd>
-          </div>
-          <div class="def" style="border-left-color:var(--amber);">
-            <dt>Card 6 &mdash; the teacher</dt>
-            <dd><em>A teacher records the marks of all 28 students in her class to decide whether to re-teach a topic to that class.</em> No sampling at all. The population is the 28 and she measured all of them, so her mean is a <strong>parameter</strong>. &ldquo;The mean&rdquo; is a parameter or a statistic depending entirely on whether you measured everybody.</dd>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="seg">
-      <div class="seg-h"><span class="clock">30&ndash;46 min</span><h3>Scenario B &mdash; the hospital survey</h3><span class="who">Both</span></div>
-      <div class="seg-body">
-        <div class="brief">
-          <p>A regional hospital network discharged <strong>12,400 patients</strong> last year across six hospitals. To review its care, the network surveys <strong>300</strong> of those patients, recording for each: which hospital treated them, their room number, the number of nights they stayed, and the time in minutes from arrival to being seen by a doctor.</p>
-          <p>Results by hospital: <strong>St Mary&rsquo;s 84, Riverside 71, Northgate 52, Parkview 45, Eastwood 30, Hillcrest 18.</strong></p>
-        </div>
-        <p>Run population, sample and observational unit fast &mdash; the student should do these unprompted now. <strong>N = 12,400, n = 300</strong>, one discharged patient.</p>
-
-        <h4>The digits trap</h4>
-        <div class="script">
-          <div class="line ask"><span class="lbl">Ask</span><span class="txt">&ldquo;Classify all four variables.&rdquo;</span></div>
-          <div class="line listen"><span class="lbl">Expect</span><span class="txt">Room number called quantitative. <strong>Do not correct it.</strong></span></div>
-          <div class="line ask"><span class="lbl">Ask</span><span class="txt">&ldquo;What&rsquo;s the average room number in this hospital?&rdquo;</span></div>
-          <div class="line ask"><span class="lbl">Then</span><span class="txt">&ldquo;If the answer is 247.6, is there a room 247.6? What would that number tell a manager?&rdquo;</span></div>
-          <div class="line intro"><span class="lbl">They state</span><span class="txt">Does it have units of measure, and does arithmetic on it mean anything?</span></div>
-        </div>
-        <div class="tbl">
-          <table>
-            <thead><tr><th>Variable</th><th>Type</th><th>Why</th></tr></thead>
-            <tbody>
-              <tr><td>Hospital</td><td>Categorical</td><td>Six group labels</td></tr>
-              <tr><td>Room number</td><td><strong>Categorical</strong></td><td>Digits, but a label. No units. The mean means nothing</td></tr>
-              <tr><td>Nights stayed</td><td>Quantitative, discrete</td><td>A count, with units. 5 nights is two more than 3</td></tr>
-              <tr><td>Minutes until seen</td><td>Quantitative, continuous</td><td>Measured; 47.3 is possible</td></tr>
-            </tbody>
-          </table>
-        </div>
-        <p>If diagnostic Q4 caught them out, close the loop: <em>&ldquo;Same thing as the phone number, isn&rsquo;t it?&rdquo;</em></p>
-
-        <h4>The frequency formulas</h4>
-        <p>Write these out with the student before building anything. Every one is a division; the difficulty is knowing which number goes underneath. Let <strong>n</strong> be the sample size and <strong>f</strong> the frequency in one category.</p>
-        <div class="tbl">
-          <table>
-            <thead><tr><th>Quantity</th><th>Symbol</th><th>Formula</th><th>In words</th></tr></thead>
-            <tbody>
-              <tr><td>Frequency</td><td class="mono">f</td><td class="mono">the count itself</td><td>How many are in this category</td></tr>
-              <tr><td>Relative frequency</td><td class="mono">rf</td><td class="mono">rf = f &divide; n</td><td>What fraction of the whole are in this category</td></tr>
-              <tr><td>Percentage</td><td class="mono">100rf</td><td class="mono">100rf = (f &divide; n) &times; 100</td><td>The same thing, out of 100</td></tr>
-              <tr class="cum"><td>Cumulative frequency</td><td class="mono">cf</td><td class="mono">cf = running total of f</td><td>How many are in this category <strong>or below</strong></td></tr>
-              <tr class="cum"><td>Cumulative relative frequency</td><td class="mono">crf</td><td class="mono">crf = cf &divide; n</td><td>What fraction are in this category or below</td></tr>
-              <tr class="cum"><td>Cumulative percentage</td><td class="mono">100crf</td><td class="mono">100crf = (cf &divide; n) &times; 100</td><td>The same thing, out of 100</td></tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="callout amber">
-          <span class="lbl">A note on notation</span>
-          <p>Some textbooks write the last two as <strong>100cf</strong>. That is shorthand for &ldquo;the cumulative figure as a percentage&rdquo; &mdash; it does <strong>not</strong> mean 100 &times; cf. The denominator is always <em>n</em>.</p>
-        </div>
-        <p><strong>The four self-checks.</strong> Get the student to state these &mdash; they catch nearly every arithmetic slip.</p>
-        <div class="checks">
-          <span class="chk">&Sigma;f = n</span>
-          <span class="chk">&Sigma;rf = 1</span>
-          <span class="chk">&Sigma;100rf = 100%</span>
-          <span class="chk">last cf = n</span>
-          <span class="chk">last crf = 1</span>
-        </div>
-
-        <h4>Applying the formulas &middot; part 1, the categorical table</h4>
-        <p>Have the student build this. Do not build it yourself &mdash; this is Skill 3.A and they need the pen.</p>
-        <div class="tbl">
-          <table>
-            <thead><tr><th>Hospital</th><th>f</th><th>rf = f &divide; 300</th><th>100rf</th></tr></thead>
-            <tbody>
-              <tr><td>St Mary&rsquo;s</td><td class="num">84</td><td class="mono">84 &divide; 300 = 0.280</td><td class="num">28.0%</td></tr>
-              <tr><td>Riverside</td><td class="num">71</td><td class="mono">71 &divide; 300 = 0.237</td><td class="num">23.7%</td></tr>
-              <tr><td>Northgate</td><td class="num">52</td><td class="mono">52 &divide; 300 = 0.173</td><td class="num">17.3%</td></tr>
-              <tr><td>Parkview</td><td class="num">45</td><td class="mono">45 &divide; 300 = 0.150</td><td class="num">15.0%</td></tr>
-              <tr><td>Eastwood</td><td class="num">30</td><td class="mono">30 &divide; 300 = 0.100</td><td class="num">10.0%</td></tr>
-              <tr><td>Hillcrest</td><td class="num">18</td><td class="mono">18 &divide; 300 = 0.060</td><td class="num">6.0%</td></tr>
-              <tr class="tot"><td>Total</td><td class="num">300</td><td class="num">1.000</td><td class="num">100%</td></tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="checks">
-          <span class="chk">&Sigma;f = 300 = n &check;</span>
-          <span class="chk">&Sigma;rf = 1.000 &check;</span>
-          <span class="chk">&Sigma;100rf = 100% &check;</span>
-        </div>
-        <div class="script">
-          <div class="line ask"><span class="lbl">Ask</span><span class="txt">&ldquo;Could we add a cumulative frequency column to this table?&rdquo;</span></div>
-          <div class="line intro"><span class="lbl">Answer</span><span class="txt">No &mdash; and the reason is the point.</span></div>
-        </div>
-        <p>Cumulative means &ldquo;this category <strong>or below</strong>&rdquo;, which requires the categories to have an <strong>order</strong>. Hospital names have none. <em>&ldquo;Riverside or fewer&rdquo;</em> is not a sentence. Cumulative columns belong to variables you can line up &mdash; which is why the next table works and this one does not.</p>
-
-        <h4>Applying the formulas &middot; part 2, the ordered table</h4>
-        <p>The same 300 patients, now by <strong>number of nights stayed</strong>. This variable <em>is</em> ordered, so all six quantities apply.</p>
-        <div class="tbl">
-          <table>
-            <thead><tr><th>Nights</th><th>f</th><th>rf</th><th>100rf</th><th>cf</th><th>crf = cf &divide; 300</th><th>100crf</th></tr></thead>
-            <tbody>
-              <tr><td class="num">1</td><td class="num">96</td><td class="num">0.320</td><td class="num">32.0%</td><td class="num cum">96</td><td class="mono cum">96 &divide; 300 = 0.320</td><td class="num cum">32.0%</td></tr>
-              <tr><td class="num">2</td><td class="num">84</td><td class="num">0.280</td><td class="num">28.0%</td><td class="num cum">180</td><td class="mono cum">180 &divide; 300 = 0.600</td><td class="num cum">60.0%</td></tr>
-              <tr><td class="num">3</td><td class="num">60</td><td class="num">0.200</td><td class="num">20.0%</td><td class="num cum">240</td><td class="mono cum">240 &divide; 300 = 0.800</td><td class="num cum">80.0%</td></tr>
-              <tr><td class="num">4</td><td class="num">36</td><td class="num">0.120</td><td class="num">12.0%</td><td class="num cum">276</td><td class="mono cum">276 &divide; 300 = 0.920</td><td class="num cum">92.0%</td></tr>
-              <tr><td class="num">5 or more</td><td class="num">24</td><td class="num">0.080</td><td class="num">8.0%</td><td class="num cum">300</td><td class="mono cum">300 &divide; 300 = 1.000</td><td class="num cum">100%</td></tr>
-              <tr class="tot"><td>Total</td><td class="num">300</td><td class="num">1.000</td><td class="num">100%</td><td colspan="3"></td></tr>
-            </tbody>
-          </table>
-        </div>
-        <p><strong>Show the running total explicitly</strong>, one row at a time:</p>
-        <div class="runsum">96 &rarr; 96 + 84 = 180 &rarr; 180 + 60 = 240 &rarr; 240 + 36 = 276 &rarr; 276 + 24 = 300 &check;</div>
-        <div class="checks">
-          <span class="chk">last cf = 300 = n &check;</span>
-          <span class="chk">last crf = 1.000 &check;</span>
-        </div>
-        <div class="script">
-          <div class="line ask"><span class="lbl">Ask</span><span class="txt">&ldquo;What percentage of these patients stayed three nights or fewer?&rdquo;</span></div>
-          <div class="line intro"><span class="lbl">Read off</span><span class="txt">80.0%, straight from the 100crf column.</span></div>
-          <div class="line ask"><span class="lbl">Follow up</span><span class="txt">&ldquo;And what percentage stayed more than three nights?&rdquo; &rarr; 100% &minus; 80.0% = 20.0%</span></div>
-        </div>
-        <p>Without that column the student has to add 96 + 84 + 60 and then divide &mdash; exactly the work the column has already done. The complement is the other reason it is worth having.</p>
-        <div class="callout red">
-          <span class="lbl">Tell the student this honestly</span>
-          <p>Cumulative frequency does <strong>not</strong> appear anywhere in the current CED&rsquo;s descriptive statistics. It is worth knowing because Barron&rsquo;s uses it heavily and it makes &ldquo;or fewer&rdquo; questions trivial &mdash; but it will not be examined as a technique. See the note further down.</p>
-        </div>
-
-        <h4>The claim &mdash; and the habit that earns marks all year</h4>
-        <div class="script">
-          <div class="line ask"><span class="lbl">Ask</span><span class="txt">&ldquo;An administrator says: most of our discharged patients came from St Mary&rsquo;s. Is she right?&rdquo;</span></div>
-          <div class="line listen"><span class="lbl">Expect</span><span class="txt">&ldquo;Yes&rdquo; &mdash; because 28.0% is the biggest number in the column. Wait.</span></div>
-          <div class="line ask"><span class="lbl">Ask</span><span class="txt">&ldquo;What does &lsquo;most&rsquo; mean?&rdquo; &rarr; more than half. 28.0% is not.</span></div>
-          <div class="line intro"><span class="lbl">They write</span><span class="txt">&ldquo;St Mary&rsquo;s accounted for more discharged patients than any other single hospital in the sample, at 28.0%, though it still treated fewer than three in ten.&rdquo;</span></div>
-        </div>
-        <div class="callout teal">
-          <span class="lbl">The template for the whole course</span>
-          <p>State the claim &middot; quote the number &middot; say what it does and does not establish &middot; keep it in context.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="seg">
-      <div class="seg-h"><span class="clock">46&ndash;54 min</span><h3>Solo case</h3><span class="who">Student works</span></div>
-      <div class="seg-body">
-        <p>The student works this <strong>unaided</strong> while you watch and say nothing. Resist helping. Where they hesitate tells you what to open Session 2 with.</p>
-        <div class="brief">
-          <p>A gym has <strong>2,300 members</strong>. It surveys <strong>180</strong> of them, recording: membership type (basic/premium/student), locker number, number of visits last month, and minutes spent per visit.</p>
-          <p>Of the 180 surveyed, <strong>54 had premium membership</strong>.</p>
-        </div>
-        <ol>
-          <li>Population and <strong>N</strong>? Sample and <strong>n</strong>?</li>
-          <li>Observational unit?</li>
-          <li>Classify all four variables.</li>
-          <li>Calculate the relative frequency and percentage for premium membership. Show the formula.</li>
-          <li>Is that figure a parameter or a statistic? How do you know?</li>
-          <li>Name one parameter here whose value you do not know.</li>
-        </ol>
-        <p><strong>Answers.</strong> 2,300 gym members / 180 surveyed / one member / membership type categorical, <strong>locker number categorical</strong>, visits quantitative-discrete, minutes quantitative-continuous / rf = 54 &divide; 180 = 0.300, so 100rf = 30.0% / statistic, because it came from the 180 sampled not all 2,300 / e.g. the true proportion of all 2,300 members with premium membership.</p>
-        <div class="callout amber">
-          <span class="lbl">Watch for</span>
-          <p>Locker number classified as quantitative. If that happens <em>after</em> Scenario B, the digits test has not transferred &mdash; reteach it at the start of Session 2 rather than patching it now.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="seg" style="margin-bottom:0;">
-      <div class="seg-h"><span class="clock">54&ndash;60 min</span><h3>Teach it back</h3><span class="who">Student talks</span></div>
-      <div class="seg-body">
-        <div class="script">
-          <div class="line ask"><span class="lbl">Ask</span><span class="txt">&ldquo;Explain to me, as if I&rsquo;ve never taken this course, the difference between a parameter and a statistic. Use the gym example.&rdquo;</span></div>
-          <div class="line listen"><span class="lbl">Listen for</span><span class="txt">Both named, which is known and which is not, and stays in context.</span></div>
-        </div>
-        <p>If it comes out fluently, the session landed. If not, that is what Session 2 opens with &mdash; and no amount of recapping in the last four minutes will fix it, so do not try.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- ASSESSMENT -->
-<section class="wrap">
-  <div class="sec-head">
-    <div class="eyebrow">Assessment</div>
-    <h2>The Session 1 test</h2>
-    <p>A 22-question multiple-choice test covers this session. Every question is scenario-based; none can be answered by recalling a definition.</p>
-  </div>
-  <div class="prose">
-    <p><strong>When to use it.</strong> Not at the end of this hour &mdash; the student has just been told everything and will score well for the wrong reason. Set it <strong>at the start of Session 3</strong>, once the Session 1 homework is marked and Session 2 is taught. A high score a week later means the material survived, which is what you actually want to know.</p>
-    <p>Allow <strong>40 minutes</strong>. On a shared screen the answer key stays collapsed &mdash; click a question to open its explanation, or press <strong>e</strong> to open all of them at once.</p>
-  </div>
-  <div class="tbl" style="margin-top:18px;max-width:46rem;">
-    <table>
-      <thead><tr><th>Score / 22</th><th>What to do</th></tr></thead>
-      <tbody>
-        <tr><td class="num">19&ndash;22</td><td>Secure. Do not revisit.</td></tr>
-        <tr><td class="num">15&ndash;18</td><td>Reteach only the items missed, using the diagnostic table in the test.</td></tr>
-        <tr><td class="num">11&ndash;14</td><td>Vocabulary present, concepts not yet working. Re-run Scenario A before going further.</td></tr>
-        <tr><td class="num">0&ndash;10</td><td>Reteach Session 1. Units 3 and 4 depend entirely on this material.</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <div class="callout red" style="margin-top:18px;">
-    <span class="lbl">The two misses to treat as urgent</span>
-    <p><strong>Question 4 or 22</strong> &mdash; parameter versus statistic; everything from Session 13 onward is built on it. <strong>Question 18, especially option (E)</strong> &mdash; counts rising while shares fall, which recurs in every unit and never gets cheaper to fix.</p>
-  </div>
-  <div class="callout teal" style="margin-top:14px;">
-    <span class="lbl">Why the key explains every option</span>
-    <p>Each wrong answer names the misconception it represents, so a marked script tells you <strong>what</strong> to reteach rather than only how much.</p>
-  </div>
-</section>
-
-<!-- HOMEWORK -->
-<section class="hw-sec">
-  <div class="wrap">
-    <div class="hw-head">
-      <h2>Homework &mdash; Session 1</h2>
-      <span class="meta">40 marks assessed + 6-mark extension &middot; bring to Session 2</span>
-    </div>
-
-    <div class="protocol">
-      <h3>How to do this homework</h3>
-      <ol>
-        <li>Do every part <strong>with the answer key closed.</strong> Where you are unsure, write your answer anyway and put a <strong>?</strong> beside it.</li>
-        <li>Then open the key and <strong>mark your own work honestly.</strong> Write the correct answer beside anything wrong &mdash; do not erase what you originally wrote.</li>
-        <li><strong>Bring the marked sheet.</strong> The questions you got wrong, and the ones you marked <strong>?</strong> even though they turned out right, are what Session 2 opens with.</li>
-      </ol>
-      <p class="kick">A question you guessed correctly is worth flagging. A <strong>?</strong> beside a right answer is more useful to your tutor than a silent tick.</p>
-    </div>
-
-    <div class="part">
-      <div class="part-h"><h3>Part A &mdash; Vocabulary</h3><span class="marks">8 marks</span></div>
-      <div class="tbl">
-        <table>
-          <thead><tr><th></th><th>Term</th><th></th><th>Definition</th></tr></thead>
-          <tbody>
-            <tr><td class="num">1</td><td>Observational unit</td><td class="num">A</td><td>A numerical summary of a variable for a sample</td></tr>
-            <tr><td class="num">2</td><td>Population</td><td class="num">B</td><td>A characteristic that may change from one unit to another</td></tr>
-            <tr><td class="num">3</td><td>Sample</td><td class="num">C</td><td>All the items or individuals of interest</td></tr>
-            <tr><td class="num">4</td><td>Variable</td><td class="num">D</td><td>A table showing the proportion in each category</td></tr>
-            <tr><td class="num">5</td><td>Parameter</td><td class="num">E</td><td>The item or individual a datum is collected from</td></tr>
-            <tr><td class="num">6</td><td>Statistic</td><td class="num">F</td><td>A numerical summary of a variable for a population</td></tr>
-            <tr><td class="num">7</td><td>Frequency table</td><td class="num">G</td><td>The subset actually measured</td></tr>
-            <tr><td class="num">8</td><td>Relative frequency table</td><td class="num">H</td><td>A table showing the count in each category</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-
-    <div class="part">
-      <div class="part-h"><h3>Part B &mdash; A new study</h3><span class="marks">12 marks</span></div>
-      <div class="brief" style="margin-bottom:16px;">
-        <p>A city has <strong>34,000 registered library members</strong>. The library service contacts a random <strong>450</strong> of them and records, for each: the branch they use most often, the number of items they borrowed last year, whether they have ever used the e-book service (yes/no), and the total time in hours they spent in library buildings last year.</p>
-        <p>Of the 450 contacted, <strong>171 said they had used the e-book service</strong>, and members borrowed an average of <strong>22.4 items</strong>.</p>
-      </div>
-      <div class="q"><p><span class="qn">B1.</span> State the population and give <i>N</i>. <span class="marks">1</span></p></div>
-      <div class="q"><p><span class="qn">B2.</span> State the sample and give <i>n</i>. <span class="marks">1</span></p></div>
-      <div class="q"><p><span class="qn">B3.</span> What is the observational unit? <span class="marks">1</span></p></div>
-      <div class="q">
-        <p><span class="qn">B4.</span> Copy and complete this table for all four variables measured. <span class="marks">6</span></p>
-        <div class="tbl">
-          <table>
-            <thead><tr><th>Variable</th><th>Categorical or quantitative?</th><th>If quantitative: discrete or continuous?</th></tr></thead>
-            <tbody>
-              <tr><td>Branch used most often</td><td></td><td></td></tr>
-              <tr><td>Number of items borrowed</td><td></td><td></td></tr>
-              <tr><td>Ever used e-book service</td><td></td><td></td></tr>
-              <tr><td>Hours spent in buildings</td><td></td><td></td></tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-      <div class="q"><p><span class="qn">B5.</span> Calculate the relative frequency and the percentage of surveyed members who have used the e-book service. <strong>Write the formula you used</strong>, then substitute. Is the result a parameter or a statistic? Explain how you know. <span class="marks">2</span></p></div>
-      <div class="q"><p><span class="qn">B6.</span> Write down one quantity here that is a <strong>parameter</strong>. Describe it in words. <span class="marks">1</span></p></div>
-    </div>
-
-    <div class="part">
-      <div class="part-h"><h3>Part C &mdash; Investigative questions</h3><span class="marks">6 marks</span></div>
-      <p style="font-size:.94rem;margin-bottom:12px;">For each, state whether it is a good investigative question. If not, explain what is wrong and rewrite it so that it is.</p>
-      <div class="q"><p><span class="qn">C1.</span> &ldquo;Is our library any good?&rdquo; <span class="marks">2</span></p></div>
-      <div class="q"><p><span class="qn">C2.</span> &ldquo;What proportion of registered members used the e-book service in the last year?&rdquo; <span class="marks">2</span></p></div>
-      <div class="q"><p><span class="qn">C3.</span> After seeing the data, a manager proposes: &ldquo;Why do members at the Eastside branch borrow so many more items than everyone else?&rdquo; <span class="marks">2</span></p></div>
-    </div>
-
-    <div class="part">
-      <div class="part-h"><h3>Part D &mdash; Building tables</h3><span class="marks">10 marks</span></div>
-      <p style="font-size:.94rem;margin-bottom:12px;">A class of 40 students recorded how each one primarily travelled to school today:</p>
-      <div class="data">Bus   Car   Walk  Bus   Bus   Train Car   Walk  Bus   Bike
+<h1>Session 1 — What Is a Statistical Study?</h1>
+<p class="standfirst"><strong>AP Statistics · Twenty-Hour Course · One-to-one tutoring edition</strong><br><strong>CED Topics 1.1, 1.2, 1.3 · Skills 1.A, 2.A, 3.A, 4.A · about 78 minutes · student talks at least half of it</strong></p>
+<p>A tutoring script for the first session: what to state, what to ask, what to listen for, and where to branch. Every concept is stated in the theory section before any scenario uses it; every term carries a worked example; every frequency calculation is given as a formula and applied.</p>
+<p><em>Revision 3 — theory before examples (STANDARDS.md §3.1), honest timing, and headings that name their content.</em></p>
+<hr>
+<h2>Where Session 1 sits</h2>
+<p>This is the first session of the course. It is about the first two statistical practices, asking a question and identifying what was collected to answer it, and it ends with a first step into the other two: building a one-variable table and checking a claim against it. Every later session assumes the student can say, for any study, what the population is, what was measured on whom, and whether a number describes the sample or the population.</p>
+<h3>Learning objectives for topics 1.1–1.3</h3>
+<p>Verbatim from the course description.</p>
+<div class="tbl"><table><thead><tr><th>Code</th><th>Objective</th><th>Skill</th></tr></thead><tbody><tr><td>1.1.A</td><td>Identify components within a statistical study.</td><td>2.A</td></tr><tr><td>1.1.B</td><td>Determine an investigative question within a statistical study.</td><td>1.A</td></tr><tr><td>1.2.A</td><td>Identify observational units, variables, parameters, and statistics from a statistical study or data set.</td><td>2.A</td></tr><tr><td>1.2.B</td><td>Identify types of variables.</td><td>2.A</td></tr><tr><td>1.2.C</td><td>Identify types of quantitative variables.</td><td>2.A</td></tr><tr><td>1.3.A</td><td>Construct categorical one-variable tabular representations.</td><td>3.A</td></tr><tr><td>1.3.B</td><td>Describe categorical one-variable tabular representations with summary statistics.</td><td>4.A</td></tr></tbody></table></div>
+<p>Skills: <strong>1.A</strong> determine a valid investigative question that requires a statistical investigation · <strong>2.A</strong> identify information to answer a question or solve a problem · <strong>3.A</strong> construct tabular and graphical representations of data and distributions · <strong>4.A</strong> describe and compare tabular and graphical representations of data, as well as summary statistics.</p>
+<h3>What changes when it is one student</h3>
+<div class="note teal"><span class="lbl">1 · Diagnose before you teach</span><p>In a class you must cover 1.1 to 1.3 because thirty students need all of it. With one student you can find out in six minutes what they already have, and spend the session on what they do not.</p></div>
+<div class="note teal"><span class="lbl">2 · Theory first, but never a lecture</span><p>Every concept is stated in the theory section before any scenario uses it, and the scenarios then make the student apply it. State each theory subsection in two or three sentences, have the student say the rule back in their own words, and move on. A definition dump is still the fastest way to lose a student; a short statement followed by immediate use is not a dump. The reference sheet at the end is something you hand over, not something you read aloud.</p></div>
+<div class="note teal"><span class="lbl">3 · You are the only other voice</span><p>Two moves cover almost every replaced peer structure: <strong>you argue the opposing position</strong>, or <strong>you produce deliberately flawed work and the student marks it</strong>.</p></div>
+<div class="note amber"><span class="lbl">4 · The failure mode is you talking</span><p>Target: <strong>the student talks at least half the session.</strong> Four minutes of unbroken explanation is the signal to stop and ask something. That applies inside the theory section too: no subsection should take you more than two minutes before the student speaks.</p></div>
+<h3>Timing and who talks</h3>
+<div class="tbl"><table><thead><tr><th>Minutes</th><th>Segment</th><th>Who talks</th></tr></thead><tbody><tr><td>0–6</td><td>Diagnostic: find out what they already have</td><td>Student</td></tr><tr><td>6–26</td><td><strong>Theory</strong>: the four practices, then every concept of 1.1–1.3 stated, each restated by the student, ending with a six-question check</td><td>Tutor, with the student restating</td></tr><tr><td>26–40</td><td><strong>Scenario A</strong>: the commute study, applying population, sample, unit, variable types and parameter versus statistic; the investigative-question trap</td><td>Both</td></tr><tr><td>40–48</td><td><strong>Activity</strong>: Challenge Sort, you argue the other side</td><td>Student</td></tr><tr><td>48–64</td><td><strong>Scenario B</strong>: the hospital survey, the digits trap, then the frequency tables and a claim</td><td>Both</td></tr><tr><td>64–72</td><td>Solo case: the gym, student works unaided while you watch</td><td>Student</td></tr><tr><td>72–78</td><td>Teach it back, set homework</td><td>Student</td></tr><tr class="tot"><td><strong>Total</strong></td><td><strong>78 minutes</strong></td><td></td></tr></tbody></table></div>
+<p>The plan gives this session 60 minutes. Stating the theory first adds about eighteen minutes (the old two-minute framing is now part of it), and nothing has been cut or moved to homework to make room. The course description allots five class periods to topics 1.1–1.3 (two, one and two).</p>
+<hr>
+<h2>0–6 min · The diagnostic</h2>
+<p>Do not teach yet. Ask these four, in order, and write down what you hear.</p>
+<div class="script"><div class="line ask"><span class="lbl">Q1</span><span class="txt">"A school wants to know the average height of its students. It measures 50 of them. What would you call the 50, and what would you call all the students?"</span></div><div class="line ask"><span class="lbl">Q2</span><span class="txt">"If I told you the average height of those 50 was 168 cm — is that the answer to the school's question?"</span></div><div class="line ask"><span class="lbl">Q3</span><span class="txt">"Give me two things you could measure about a person where one is a number and one is not."</span></div><div class="line ask"><span class="lbl">Q4</span><span class="txt">"Is a phone number a number?"</span></div></div>
+<h3>How to branch on the diagnostic answers</h3>
+<div class="tbl"><table><thead><tr><th>What you hear</th><th>What it means</th><th>Where to start</th></tr></thead><tbody><tr><td>Q1 confident, Q2 says "not exactly, it's an estimate"</td><td>Population/sample and the inference idea are already there</td><td>Take the theory at pace; the student can state most of it back to you. Spend the time saved on the formulas in Scenario B</td></tr><tr><td>Q1 confident, Q2 says "yes"</td><td>Vocabulary present, concept absent. <strong>The most common profile</strong></td><td>Slow down at <em>Parameters and statistics</em> in the theory, then spend the extra time on the parameter/statistic table in Scenario A. Do not rush it</td></tr><tr><td>Q1 hesitant or reversed</td><td>Foundation missing</td><td>Teach the theory slowly and Scenario A in full. The session runs longer; nothing moves to homework</td></tr><tr><td>Q4 says "yes, it's digits"</td><td>The digits trap is live</td><td>Note it, but <strong>do not correct it yet</strong>. State the digits test in the theory without pointing at their answer, and let Scenario B's room numbers make it bite</td></tr></tbody></table></div>
+<div class="note amber"><span class="lbl">If all four come back clean</span><p>Do not spend the session confirming what they know. Run the theory as a rapid check, with the student stating each rule and you only correcting, then go straight to the investigative-question trap and the formulas, and use the recovered time on the Part D homework dataset in the session, with you marking live.</p></div>
+<hr>
+<h2>6–26 min · Theory — statistical studies, variables and one-variable tables</h2>
+<p>Every concept the session uses is stated here, before any data appear. Run it as eleven short statements, not a lecture: say each subsection in two or three sentences, let the student restate the rule, and move on. The student has the same text as Part 2 of the workbook, to keep. The scenarios that follow never introduce a term; they make the student use these.</p>
+<h3>The four statistical practices: where today sits</h3>
+<p>The course framework organises everything into four statistical practices: <strong>Formulate Questions, Collect Data, Analyze Data, Interpret Results.</strong> Every topic between now and the exam is a tool used at one of the four stages, and each skill code names its practice by its first digit: 1.A formulates a question, 2.A identifies information, 3.A constructs a table or graph, 4.A describes and compares.</p>
+<p>Today is mostly Practices 1 and 2, with a first step into 3 and 4 when the tables are built and a claim is checked. Free-response Question 1 on the exam is a multi-focus question on Practices 1 and 2.</p>
+<div class="script"><div class="line ask"><span class="lbl">Say</span><span class="txt">"Today is mostly the first two. Very little calculation. If you can't say precisely what your population is, all the inference in Units 3 and 4 falls apart, and those two units are between a quarter and nearly half of the multiple-choice section."</span></div></div>
+<h3>Statistical study, datum and data set (1.1.A.1–3)</h3>
+<p><strong>A statistical study collects data from a sample to answer an investigative question about a larger population</strong> (1.1.A.1). Studies are needed because the population is too large, or too difficult to reach, for data to be collected from every item or individual in it (1.1.A.2).</p>
+<p>A <strong>datum</strong> is one piece of information about one item or individual; <em>data</em> is the plural, and a collection of data is a <strong>data set</strong> (1.1.A.3).</p>
+<p>What it does not say: a study is not defined by its calculations. A study with no arithmetic at all is still a statistical study if it uses a sample to answer a question about a population.</p>
+<p><em>Illustration.</em> "Box 7 weighs 1.2 kg" is one datum. The weights of all the boxes checked, together, are the data set.</p>
+<h3>Population and sample: N and n (1.1.A.4–5)</h3>
+<p>The <strong>population</strong> is all the items or individuals of interest; its size is written <strong>N</strong> (1.1.A.4). The <strong>sample</strong> is the subset of the population from which data are actually obtained; the number in it is the <strong>sample size</strong>, written <strong>n</strong> (1.1.A.5).</p>
+<p>Two things students get wrong. First, the population is fixed by the <strong>question</strong>, not by the data: it is whoever the question is about, whether or not anyone measured them. Second, the sample sits <strong>inside</strong> the population; it is a subset, not a separate group. When data are recorded from every member of the population there is no sample, and the study is a <strong>census</strong> (1.10.B.1; Session 6 returns to it).</p>
+<p>N and n are sizes, not summaries of a variable, so neither is a parameter or a statistic.</p>
+<p><em>Illustration.</em> A factory wants to know about a delivery of 500 screws and tests 20 of them: N = 500 and n = 20. Had it tested all 500, that would be a census.</p>
+<h3>Results in context (1.1.A.6)</h3>
+<p>Every component of a study, and every number calculated from it, corresponds to something in the real situation it came from. Naming that correspondence is what the course means by <strong>in context</strong> (1.1.A.6).</p>
+<p>What it does not say: context is not decoration added at the end. On the exam a correct number without context usually earns nothing, because the number alone does not say what was measured, on whom, or in what units.</p>
+<p><em>Illustration.</em> If 3 of the 20 screws tested are faulty, the answer is not "0.15" but "15% of the 20 screws tested were faulty."</p>
+<h3>The investigative question (1.1.B.1–2)</h3>
+<p>An <strong>investigative question</strong> is the question a study exists to answer. It must have a <strong>defined purpose</strong> and must <strong>not be changed based on the data analysis or results</strong> (1.1.B.1). It must be posed so that <strong>the required data can be collected and analysed</strong> (1.1.B.2).</p>
+<p>Why the second half of 1.1.B.1 matters: in any data set some pattern looks interesting by chance. A question chosen after seeing that pattern would be answered by the very data that suggested it, so those data cannot fairly answer it. The new question is legitimate, for a <strong>new</strong> study with <strong>new</strong> data.</p>
+<p>What it does not say: a question that data could inform is not automatically investigative. "Should we buy more?" is a <strong>decision</strong> and "How can we increase it?" is an <strong>action</strong>; a study can inform both but answers neither. A question that presupposes its own conclusion ("Why is it so bad?") assumes a fact nobody has established.</p>
+<p><em>Illustration.</em> "Is this bread good?" names nothing measurable. "What proportion of this bakery's loaves weigh less than 400 g?" names a population, a variable, and data that can be collected.</p>
+<h3>Observational units and variables (1.2.A.1–3)</h3>
+<p>An <strong>observational unit</strong> is the item or individual from which a datum is collected (1.2.A.1). A <strong>variable</strong> is a characteristic that may change from one observational unit to another (1.2.A.2). Picture the data set as a spreadsheet: one row per observational unit, one column per variable.</p>
+<p>What it does not say: the unit is not whatever a variable happens to describe. If each person reports how long their journey took, the unit is the person, not the journey. Something that is the same for every unit in a study, such as the name of the one school involved, is not a variable in that study. And data need not be numbers or words: photographs, sounds, videos and text recorded on units can all carry meaningful information (1.2.A.3).</p>
+<p><em>Illustration.</em> In the screw check, one row is one screw; its length, its mass and whether it is faulty are three variables.</p>
+<h3>Parameters and statistics (1.2.A.4–5)</h3>
+<p>A <strong>parameter</strong> is a numerical summary of the variable of interest for a <strong>population</strong> (1.2.A.4). A <strong>statistic</strong> is a numerical summary of the variable of interest for a <strong>sample</strong> (1.2.A.5). The value of a statistic from a particular sample is often <strong>not equal</strong> to the unknown value of the parameter, but it can be the <strong>basis for inferences</strong> about it (1.2.A.5).</p>
+<p>The numerical summaries this session uses are a <strong>proportion</strong>, a count divided by the total it is out of, and a <strong>mean</strong>, the ordinary average (Session 3 defines it formally).</p>
+<p>How to tell which is which: ask <strong>of whom</strong> the summary was computed, which is the same as asking what the denominator counts. Computed from the units actually measured, and they are a subset: a statistic, and known. Describing everyone of interest: a parameter, and usually unknown, because nobody measured everyone.</p>
+<p>What it does not say: "the mean" and "the proportion" are neither until you know whose they are. A mean computed from a census is a parameter.</p>
+<p><em>Illustration.</em> A jar holds 1,000 beads and nobody has counted the red ones. The proportion of red among all 1,000 is a parameter. Draw 50 and find 13 red: 13 ÷ 50 = 0.26 is a statistic. A second draw of 50 would probably give a different statistic; the parameter would not have changed.</p>
+<h3>Categorical and quantitative variables (1.2.B.1–2)</h3>
+<p>A <strong>categorical</strong> variable, also called <strong>qualitative</strong>, takes values that are <strong>category names or group labels</strong> (1.2.B.1). A <strong>quantitative</strong> variable, also called <strong>numerical</strong>, takes <strong>numerical values for a measured or counted quantity</strong> and generally has <strong>units of measure</strong> (1.2.B.2).</p>
+<p>The misreading: "it is written in digits, so it is quantitative." Digits can be a label. Two questions settle it, and together they are the <strong>digits test</strong>: does the value have <strong>units of measure</strong>, and does <strong>arithmetic on it mean anything</strong>? If not, the variable is categorical however it is written. Coding yes and no as 1 and 0 does not make a variable quantitative either.</p>
+<p><em>Illustration.</em> Bus route 42 has no units, and route 42 is not twice route 21: categorical. A journey of 42 km has units, and it is twice 21 km: quantitative.</p>
+<h3>Discrete and continuous quantitative variables (1.2.C.1–2)</h3>
+<p>A <strong>discrete</strong> quantitative variable can take a <strong>countable</strong> number of values, which may be finite or countably infinite, like the whole numbers (1.2.C.1). A <strong>continuous</strong> quantitative variable can take <strong>infinitely many values within an interval</strong>, including every value between any two of them, so its values are measurable but not countable (1.2.C.2). Rule of thumb: you <strong>count</strong> discrete things and <strong>measure</strong> continuous ones.</p>
+<p>What it does not say: discrete or continuous describes the values the variable can take, not the values of its summaries. A discrete variable can have a mean of 1.4 even though no unit has 1.4 of anything. And a continuous variable recorded to the nearest minute is still continuous: the rounding is in the recording, not in the quantity.</p>
+<p><em>Illustration.</em> The number of pets in a home is 0, 1, 2, …, never 1.5: discrete. A pet's mass can be 3.2 kg, 3.25 kg, or anything between: continuous.</p>
+<h3>Frequency and relative frequency tables (1.3.A.1–2)</h3>
+<p>A <strong>frequency table</strong> shows the number of observational units in each category of a categorical variable (1.3.A.1). A <strong>relative frequency table</strong> shows the <strong>proportion</strong> of observational units in each category (1.3.A.2).</p>
+<div class="formula">rf = f ÷ n  ·  100rf = (f ÷ n) × 100</div>
+<p><em>f</em> is the frequency, the count in one category; <em>n</em> is the total number of observational units in the table, which for a survey is the sample size; <em>rf</em> is the relative frequency; <em>100rf</em> is the same proportion written as a percentage. Every one is a division, and the difficulty is knowing which number goes underneath: it is always <em>n</em>, the total of the whole table, never another category's count.</p>
+<p>Three self-checks catch nearly every arithmetic slip:</p>
+<div class="checks"><span class="chk">Σf = n</span><span class="chk">Σrf = 1</span><span class="chk">Σ100rf = 100%</span></div>
+<p>What it does not say: a relative frequency is a share of <strong>this</strong> total. Change the total, for example by dropping a category, and every remaining relative frequency changes, so no category is "too small to matter". Rounded values may add to 0.999 or 1.001; a larger gap is an error, not rounding.</p>
+<p><em>Illustration.</em> Ten answers: A, B, A, C, A, B, A, C, A, B. Frequencies A 5, B 3, C 2, and Σf = 10. Relative frequencies 0.5, 0.3, 0.2, and Σrf = 1. Percentages 50%, 30%, 20%.</p>
+<h3>Proportions, percentages and ratios in a claim (1.3.B.1–2)</h3>
+<p>Percentages, relative frequencies and ratios all give <strong>the same information as proportions</strong> (1.3.B.1). Counts and relative frequencies reveal information that can be used to <strong>justify claims</strong> about the variable <strong>in context</strong> (1.3.B.2).</p>
+<p>A justified claim has four parts, and they are the template for the whole course: <strong>state the claim · quote the number · say what the number does and does not establish · keep it in context.</strong></p>
+<p>Two misreadings cost marks all year. <strong>"Most" means more than half</strong>: the largest category is the most common one, but "most units are in it" is true only if its share is above 50%, and exactly 50% is half, not most. And <strong>percentages of the same total are added, never averaged</strong>: the share in "either of two categories" is the sum of their two shares.</p>
+<p><em>Illustration.</em> 3 out of 12 is a proportion of 0.25, a relative frequency of 0.25, 25%, "1 in 4", or a ratio of 1 : 3 of yes to no: one fact, five forms. In a table with shares of 40%, 35% and 25%, the 40% category is the most common, but "most are in it" is false; the other two together are 35% + 25% = 60%.</p>
+<h3>Theory check: six questions before the scenarios</h3>
+<p>Ask these aloud; the same six end Part 2 of the workbook. Any hesitation tells you which subsection to restate before Scenario A.</p>
+<div class="script"><div class="line ask"><span class="lbl">Q1</span><span class="txt">"A company surveys 80 of its 600 employees. What are N and n, and is 600 a parameter?"</span></div><div class="line listen"><span class="lbl">Listen for</span><span class="txt">N = 600, n = 80. Neither is a parameter; both are sizes.</span></div><div class="line ask"><span class="lbl">Q2</span><span class="txt">"The proportion of those 80 who work from home on Fridays: parameter or statistic?"</span></div><div class="line listen"><span class="lbl">Listen for</span><span class="txt">Statistic, because it was computed from the sample of 80.</span></div><div class="line ask"><span class="lbl">Q3</span><span class="txt">"An employee ID number: categorical or quantitative?"</span></div><div class="line listen"><span class="lbl">Listen for</span><span class="txt">Categorical. No units, and averaging ID numbers means nothing.</span></div><div class="line ask"><span class="lbl">Q4</span><span class="txt">"Number of meetings attended last week; time spent in meetings. Discrete or continuous?"</span></div><div class="line listen"><span class="lbl">Listen for</span><span class="txt">Meetings: discrete, counted. Time: continuous, measured.</span></div><div class="line ask"><span class="lbl">Q5</span><span class="txt">"One category of a relative frequency table is 45%. Can you say most units are in it?"</span></div><div class="line listen"><span class="lbl">Listen for</span><span class="txt">No. 45% is less than half.</span></div><div class="line ask"><span class="lbl">Q6</span><span class="txt">"After seeing the results, the manager changes the survey's question to fit a pattern she spotted. What rule has she broken?"</span></div><div class="line listen"><span class="lbl">Listen for</span><span class="txt">An investigative question should not be changed based on the data analysis or results (1.1.B.1).</span></div></div>
+<hr>
+<h2>26–40 min · Scenario A — the commute study</h2>
+<blockquote>Lincoln High School has <strong>1,842 students</strong>. The principal wants to reorganise the morning bus timetable but does not know how students currently get to school. She asks a randomly chosen <strong>120 students</strong> to record, on one Tuesday: how they primarily travelled to school, how many minutes the journey took, and how many separate vehicles they had to change between.<br>Of the 120 surveyed, <strong>43 came by bus</strong>, and their journeys averaged <strong>24.6 minutes</strong>.</blockquote>
+<p>Hand this over on paper. Thirty seconds to read. Then work it through by asking, not telling. Every idea below was stated in the theory; here the student applies it.</p>
+<h3>Population, sample, unit and variables of the commute study</h3>
+<div class="script"><div class="line ask"><span class="lbl">Ask</span><span class="txt">"Who is this study actually about?"</span></div><div class="line listen"><span class="lbl">Listen for</span><span class="txt">All 1,842 students.</span></div><div class="line ifsay"><span class="lbl">If "the 120"</span><span class="txt">"Would the principal be happy knowing about only those 120?"</span></div><div class="line intro"><span class="lbl">Recall</span><span class="txt"><em>Population and sample</em>: the population is all 1,842 students, N = 1,842; the sample is the 120 surveyed, n = 120.</span></div></div>
+<div class="script"><div class="line ask"><span class="lbl">Ask</span><span class="txt">"If I gave you the spreadsheet, what would one row be?"</span></div><div class="line listen"><span class="lbl">Listen for</span><span class="txt">One student. The best question in the session for surfacing confusion; anyone answering "a journey" or "a bus" has not got it.</span></div><div class="line intro"><span class="lbl">Recall</span><span class="txt"><em>Observational units and variables</em>: the unit is the individual a datum is collected from, so one row is one student.</span></div></div>
+<div class="script"><div class="line ask"><span class="lbl">Ask</span><span class="txt">"Three things were measured. Sort them into numbers and not-numbers."</span></div><div class="line ask"><span class="lbl">Push</span><span class="txt">"Journey time and vehicle changes are both numbers. Is there any difference between them?"</span></div><div class="line ifsay"><span class="lbl">If stuck</span><span class="txt">"Could someone change 1.4 vehicles? Could a journey take 24.61 minutes?"</span></div><div class="line intro"><span class="lbl">Recall</span><span class="txt">The two tests from the theory: labels or quantities (1.2.B), then counted or measured (1.2.C).</span></div></div>
+<div class="tbl"><table><thead><tr><th>Variable</th><th>Type</th><th>The test</th></tr></thead><tbody><tr><td>Mode of travel</td><td>Categorical</td><td>Values are group labels</td></tr><tr><td>Journey time</td><td>Quantitative, continuous</td><td>Measured; 24.61 minutes is possible</td></tr><tr><td>Vehicle changes</td><td>Quantitative, discrete</td><td>Counted; never 1.4</td></tr></tbody></table></div>
+<figure><div class="figscroll"><svg viewBox="0 0 720 396" xmlns="http://www.w3.org/2000/svg" role="img" color="#15201f" aria-label="Decision tree: a variable is categorical if its values name a group, otherwise quantitative, and then discrete if counted or continuous if measured" font-family="Public Sans, system-ui, sans-serif" fill="none" stroke="currentColor">
+<rect x="300" y="16" width="120" height="38" rx="4" stroke="currentColor" stroke-width="1.4" opacity="0.5" fill="none"/>
+<text x="360" y="40" font-size="14" font-weight="600" text-anchor="middle" fill="currentColor" stroke="none">A variable</text>
+<line x1="360" y1="54" x2="360" y2="70" stroke="currentColor" stroke-width="1.4" opacity="0.5"/>
+<line x1="160" y1="70" x2="556" y2="70" stroke="currentColor" stroke-width="1.4" opacity="0.5"/>
+<line x1="160" y1="70" x2="160" y2="106" stroke="currentColor" stroke-width="1.4" opacity="0.5"/>
+<polygon points="160.0,113.0 156.2,104.0 163.8,104.0" fill="currentColor" stroke="none"/>
+<line x1="556" y1="70" x2="556" y2="106" stroke="currentColor" stroke-width="1.4" opacity="0.5"/>
+<polygon points="556.0,113.0 552.2,104.0 559.8,104.0" fill="currentColor" stroke="none"/>
+<text x="160" y="90" font-size="12" font-weight="500" text-anchor="middle" fill="currentColor" stroke="none" opacity="0.75">names a group</text>
+<text x="556" y="90" font-size="12" font-weight="500" text-anchor="middle" fill="currentColor" stroke="none" opacity="0.75">has units of measure</text>
+<rect x="48" y="120" width="224" height="66" rx="4" stroke="currentColor" stroke-width="1.4" opacity="0.5" fill="none"/>
+<text x="60" y="144" font-size="11.5" font-weight="600" text-anchor="start" fill="#1a6b63" stroke="none" font-family="IBM Plex Mono, monospace">CATEGORICAL</text>
+<text x="60" y="166" font-size="13" font-weight="400" text-anchor="start" fill="currentColor" stroke="none" opacity="0.78">values are group labels</text>
+<text x="60" y="206" font-size="12.5" font-weight="400" text-anchor="start" fill="currentColor" stroke="none" opacity="0.62">travel mode &#183; hospital &#183; yes / no</text>
+<rect x="48" y="222" width="224" height="98" rx="4" stroke="#1a6b63" stroke-width="1.4" opacity="0.45" fill="none"/>
+<text x="62" y="246" font-size="11" font-weight="600" text-anchor="start" fill="#1a6b63" stroke="none" font-family="IBM Plex Mono, monospace">THE DIGITS TEST</text>
+<text x="62" y="269" font-size="12.5" font-weight="400" text-anchor="start" fill="currentColor" stroke="none" opacity="0.78">Written with digits but has</text>
+<text x="62" y="287" font-size="12.5" font-weight="400" text-anchor="start" fill="currentColor" stroke="none" opacity="0.78">no units? Still categorical:</text>
+<text x="62" y="308" font-size="12" font-weight="400" text-anchor="start" fill="currentColor" stroke="none" opacity="0.62">ZIP code &#183; room no. &#183; shirt no.</text>
+<rect x="444" y="120" width="224" height="66" rx="4" stroke="currentColor" stroke-width="1.4" opacity="0.5" fill="none"/>
+<text x="456" y="144" font-size="11.5" font-weight="600" text-anchor="start" fill="#1a6b63" stroke="none" font-family="IBM Plex Mono, monospace">QUANTITATIVE</text>
+<text x="456" y="166" font-size="13" font-weight="400" text-anchor="start" fill="currentColor" stroke="none" opacity="0.78">numbers with units</text>
+<line x1="556" y1="186" x2="556" y2="212" stroke="currentColor" stroke-width="1.4" opacity="0.5"/>
+<text x="556" y="230" font-size="12.5" font-weight="500" text-anchor="middle" fill="currentColor" stroke="none" opacity="0.75">counted, or measured?</text>
+<line x1="556" y1="240" x2="556" y2="258" stroke="currentColor" stroke-width="1.4" opacity="0.5"/>
+<line x1="452" y1="258" x2="640" y2="258" stroke="currentColor" stroke-width="1.4" opacity="0.5"/>
+<line x1="452" y1="258" x2="452" y2="280" stroke="currentColor" stroke-width="1.4" opacity="0.5"/>
+<polygon points="452.0,287.0 448.2,278.0 455.8,278.0" fill="currentColor" stroke="none"/>
+<line x1="640" y1="258" x2="640" y2="280" stroke="currentColor" stroke-width="1.4" opacity="0.5"/>
+<polygon points="640.0,287.0 636.2,278.0 643.8,278.0" fill="currentColor" stroke="none"/>
+<rect x="366" y="294" width="172" height="60" rx="4" stroke="currentColor" stroke-width="1.4" opacity="0.5" fill="none"/>
+<text x="378" y="317" font-size="11.5" font-weight="600" text-anchor="start" fill="#1a6b63" stroke="none" font-family="IBM Plex Mono, monospace">DISCRETE</text>
+<text x="378" y="338" font-size="12.5" font-weight="400" text-anchor="start" fill="currentColor" stroke="none" opacity="0.78">you count it</text>
+<text x="378" y="375" font-size="12" font-weight="400" text-anchor="start" fill="currentColor" stroke="none" opacity="0.62">0, 1, 2 vehicles</text>
+<rect x="556" y="294" width="150" height="60" rx="4" stroke="currentColor" stroke-width="1.4" opacity="0.5" fill="none"/>
+<text x="568" y="317" font-size="11.5" font-weight="600" text-anchor="start" fill="#1a6b63" stroke="none" font-family="IBM Plex Mono, monospace">CONTINUOUS</text>
+<text x="568" y="338" font-size="12.5" font-weight="400" text-anchor="start" fill="currentColor" stroke="none" opacity="0.78">you measure it</text>
+<text x="568" y="375" font-size="12" font-weight="400" text-anchor="start" fill="currentColor" stroke="none" opacity="0.62">24.6 minutes</text>
+</svg>
+</div><figcaption>The same two tests as a decision tree, for the shared screen. The box on the left is the trap that Scenario B is built around.</figcaption></figure>
+<h3>The centre of the session — parameter vs statistic</h3>
+<p>The definitions are already stated. Do not restate them; make the student apply them, building the table one row at a time.</p>
+<div class="script"><div class="line ask"><span class="lbl">Ask</span><span class="txt">"What proportion of all 1,842 students come by bus?"</span></div><div class="line listen"><span class="lbl">Listen for</span><span class="txt">"We don't know." Wait for it.</span></div><div class="line ifsay"><span class="lbl">If 0.358</span><span class="txt">"How many of the 1,842 did we actually ask?"</span></div><div class="line ask"><span class="lbl">Ask</span><span class="txt">"What proportion of the 120 came by bus?" → 43 ÷ 120 = 0.358. Known.</span></div><div class="line intro"><span class="lbl">Recall</span><span class="txt"><em>Parameters and statistics</em>: ask of whom each number was computed.</span></div></div>
+<div class="tbl"><table><thead><tr><th>Quantity</th><th>Which</th><th>Known?</th></tr></thead><tbody><tr><td>Proportion of <strong>all 1,842</strong> who come by bus</td><td>Parameter</td><td>No</td></tr><tr><td>43 ÷ 120 = 0.358, proportion of the <strong>sampled</strong></td><td>Statistic</td><td>Yes</td></tr><tr><td>Mean journey time of <strong>all 1,842</strong></td><td>Parameter</td><td>No</td></tr><tr><td>24.6 minutes, mean of the <strong>120</strong></td><td>Statistic</td><td>Yes</td></tr></tbody></table></div>
+<div class="note teal"><span class="lbl">Say this once the table is built</span><p>"Every single thing we do from Session 13 onwards is about the gap between those two columns. That's it. That's the subject."</p></div>
+<p>Offer the memory hook only <em>after</em> they have built the table: <strong>P</strong>opulation goes with <strong>P</strong>arameter, <strong>S</strong>ample goes with <strong>S</strong>tatistic.</p>
+<figure><div class="figscroll"><svg viewBox="0 0 720 372" xmlns="http://www.w3.org/2000/svg" role="img" color="#15201f" aria-label="A statistical study: a sample sits inside a population; a statistic computed from the sample estimates an unknown population parameter" font-family="Public Sans, system-ui, sans-serif" fill="none" stroke="currentColor">
+<rect x="30" y="18" width="300" height="58" rx="4" stroke="currentColor" stroke-width="1.4" opacity="0.38" fill="none"/>
+<text x="46" y="40" font-size="11" font-weight="600" text-anchor="start" fill="#1a6b63" stroke="none" font-family="IBM Plex Mono, monospace">PARAMETER</text>
+<text x="46" y="60" font-size="13" font-weight="400" text-anchor="start" fill="currentColor" stroke="none" opacity="0.75">true proportion of all 1,842 &#8212; unknown</text>
+<line x1="180" y1="76" x2="177" y2="92" stroke="currentColor" stroke-width="1.4" opacity="0.38"/>
+<ellipse cx="177" cy="206" rx="147" ry="114" stroke="currentColor" stroke-width="1.6" opacity="0.45" fill="none"/>
+<text x="177" y="126" font-size="15" font-weight="700" text-anchor="middle" fill="currentColor" stroke="none">Population</text>
+<text x="177" y="148" font-size="12.5" font-weight="400" text-anchor="middle" fill="currentColor" stroke="none" opacity="0.72">all 1,842 students &#183; N = 1,842</text>
+<circle cx="200" cy="234" r="48" stroke="#1a6b63" stroke-width="2" fill="#1a6b63" fill-opacity="0.12"/>
+<text x="200" y="230" font-size="13.5" font-weight="700" text-anchor="middle" fill="#1a6b63" stroke="none">Sample</text>
+<text x="200" y="250" font-size="12.5" font-weight="400" text-anchor="middle" fill="#1a6b63" stroke="none" font-family="IBM Plex Mono, monospace">n = 120</text>
+<line x1="252" y1="234" x2="420" y2="234" stroke="#1a6b63" stroke-width="2" opacity="1.0"/>
+<polygon points="428.0,234.0 419.0,237.8 419.0,230.2" fill="#1a6b63" stroke="none"/>
+<text x="340" y="220" font-size="12" font-weight="500" text-anchor="middle" fill="#1a6b63" stroke="none">measure these 120</text>
+<rect x="432" y="192" width="258" height="86" rx="4" stroke="#1a6b63" stroke-width="2" opacity="1.0" fill="none"/>
+<text x="450" y="216" font-size="11" font-weight="600" text-anchor="start" fill="#1a6b63" stroke="none" font-family="IBM Plex Mono, monospace">STATISTIC</text>
+<text x="450" y="240" font-size="15" font-weight="600" text-anchor="start" fill="currentColor" stroke="none" font-family="IBM Plex Mono, monospace">43 &#247; 120 = 0.358</text>
+<text x="450" y="262" font-size="12" font-weight="400" text-anchor="start" fill="currentColor" stroke="none" opacity="0.7">you know this</text>
+<path d="M 470 192 C 466 124, 410 58, 348 49" stroke="currentColor" stroke-width="1.6" stroke-dasharray="5 4" opacity="0.6" fill="none"/>
+<polygon points="341.0,48.0 350.4,45.4 349.4,52.9" fill="currentColor" stroke="none"/>
+<text x="474" y="112" font-size="12.5" font-weight="600" text-anchor="start" fill="currentColor" stroke="none" opacity="0.75">estimates</text>
+<text x="474" y="130" font-size="11.5" font-weight="400" text-anchor="start" fill="currentColor" stroke="none" opacity="0.55">Units 3 and 4</text>
+<text x="30" y="356" font-size="12" font-weight="400" text-anchor="start" fill="currentColor" stroke="none" opacity="0.6">The sample sits inside the population &#8212; it is a subset, not a separate group.</text>
+</svg>
+</div><figcaption>This one picture is most of AP Statistics. The sample sits inside the population. You measure the sample, compute a statistic, and use it to estimate a parameter you will never actually see.</figcaption></figure>
+<div class="sim"><div class="sim-head"><span class="lbl">Interactive</span><span class="ttl">Unit 1 Explorer: Sample &amp; Estimate</span><a href="tools/unit1-explorer.html" target="_blank" rel="noopener">Open full screen &#8599;</a></div><div class="sim-body"><iframe src="tools/unit1-explorer.html" height="760" loading="lazy" title="Unit 1 Explorer: Sample &amp; Estimate"></iframe></div><div class="sim-why"><p>Hand the student the controls. The parameter is fixed; every new sample gives a different statistic. Ask them to predict before each draw whether the sample proportion will land on the true value, then draw ten samples and count how often it does. The point to land: a statistic varies from sample to sample, and a parameter does not.</p></div></div>
+<h3>The investigative-question trap: the cyclists</h3>
+<div class="script"><div class="line ask"><span class="lbl">Ask</span><span class="txt">"What question is this study trying to answer?"</span></div><div class="line ask"><span class="lbl">Spring it</span><span class="txt">"The principal notices cyclists have much longer journeys than she expected. She rewrites her report to answer: why do cyclists take so long? Is that allowed?"</span></div><div class="line listen"><span class="lbl">Expect</span><span class="txt">"Yes" — it sounds like good curiosity. Let them commit before you push.</span></div><div class="line ask"><span class="lbl">Then ask</span><span class="txt">"How many of the 120 were cyclists — what if it was four? And she only asked because she spotted the pattern. Could she have found a pattern in any variable if she'd gone looking?"</span></div><div class="line intro"><span class="lbl">Recall</span><span class="txt"><em>The investigative question</em>: the rule the student stated twenty minutes ago.</span></div></div>
+<div class="note red"><span class="lbl">CED 1.1.B.1</span><p>An investigative question should not be changed based on the data analysis or results. The cyclist pattern might be real, or four unusual students. It is a legitimate question for a <strong>new</strong> study with <strong>new</strong> data.</p></div>
+<hr>
+<h2>40–48 min · Activity — Challenge Sort</h2>
+<p>The course description gives no sample instructional activity for topics 1.1–1.3. This is the one-to-one conversion of the master plan's own classroom card sort, <em>Population or Sample?</em>, which assumes groups of four.</p>
+<p><strong>You argue the opposite of whatever the student says</strong>, including when they are right. Six short study descriptions; the student identifies population, sample, observational unit, one variable and its type, out loud, one card at a time. After every answer, push back once: <em>"Are you sure? I'd have said the population was…"</em> Take the wrong position with a straight face.</p>
+<p>The point is to separate <strong>secure reasoning</strong> from <strong>correct guessing</strong>. A student who knows why will hold their ground. A student who guessed will fold immediately.</p>
+<div class="note amber"><span class="lbl">Say this before you start</span><p>"I'm going to disagree with you sometimes even when you're right. Your job is to hold your position if you can justify it." Without the warning it becomes demoralising rather than useful.</p></div>
+<h3>The six cards, with the push-back for each</h3>
+<p>The same six studies are printed, with the push-back, in Part 4 of the student workbook.</p>
+<div class="tbl"><table><thead><tr><th>Card</th><th>Study</th><th>Push back with</th><th>What the student should hold</th></tr></thead><tbody><tr><td>1</td><td>A supermarket chain times 200 randomly chosen customers at the checkout one Saturday</td><td>"The population is the 200 they timed."</td><td>Population: all the chain's customers. Sample: the 200. Unit: one customer. Waiting time: quantitative, continuous</td></tr><tr><td>2</td><td>A phone maker tests 500 random batteries from a run of 80,000, to estimate how long the run's batteries last</td><td>"The unit is the production run."</td><td>N = 80,000, n = 500. Unit: <strong>one battery</strong>; the run is the population. Lifetime in hours: quantitative, continuous</td></tr><tr><td>3</td><td>A researcher studies the 23 tortoises at one zoo to learn the average lifespan of the species</td><td>"The population is the 23 she studied."</td><td>Population: all tortoises of the species. Sample: the 23. Lifespan in years: quantitative, continuous. A zoo sample may be a poor one; Session 6</td></tr><tr><td>4</td><td>A city surveys 600 of its 140,000 residents on a bus route, coding support 1 for yes and 0 for no</td><td>"It's recorded as 1 and 0, so it's quantitative."</td><td>Categorical: the digits are labels with no units (the digits test)</td></tr><tr><td>5</td><td>Every lightbulb from one production line in one shift is tested, to judge the factory's output</td><td>"This isn't a sample at all; she tested every one."</td><td>It depends on the investigative question</td></tr><tr><td>6</td><td>A teacher records the marks of all 28 students in her class to decide whether to re-teach a topic to that class</td><td>"Her mean mark is a statistic."</td><td>A <strong>parameter</strong>: there is no sample</td></tr></tbody></table></div>
+<h3>The two cards that carry the learning: the lightbulbs and the teacher</h3>
+<div class="note amber"><span class="lbl">Card 5 — the lightbulbs</span><p><em>A researcher tests every lightbulb coming off one production line during one shift, to judge the quality of the factory's output.</em> Census of that shift, or sample of ongoing production? <strong>It depends on the investigative question</strong>: the population is a property of what you are asking, not of the data. If the question is about this shift, she measured everything of interest, a census, and her figures are parameters. If it is about the factory's output in general, the shift is a sample and her figures are statistics.</p></div>
+<div class="note amber"><span class="lbl">Card 6 — the teacher</span><p><em>A teacher records the marks of all 28 students in her class to decide whether to re-teach a topic to that class.</em> No sampling at all. The population is the 28 and she measured all of them, so her mean is a <strong>parameter</strong>. "The mean" is a parameter or a statistic depending entirely on whether you measured everybody.</p></div>
+<hr>
+<h2>48–64 min · Scenario B — the hospital survey</h2>
+<blockquote>A regional hospital network discharged <strong>12,400 patients</strong> last year across six hospitals. To review its care, the network surveys <strong>300</strong> of those patients, recording for each: which hospital treated them, their room number, the number of nights they stayed, and the time in minutes from arrival to being seen by a doctor.<br>Results by hospital: <strong>St Mary's 84, Riverside 71, Northgate 52, Parkview 45, Eastwood 30, Hillcrest 18.</strong></blockquote>
+<p>Run population, sample and observational unit fast; the student should do these unprompted now. <strong>N = 12,400, n = 300</strong>, one discharged patient. If they still need prompting, slow down: Scenario A has not landed.</p>
+<h3>The digits trap: room numbers</h3>
+<div class="script"><div class="line ask"><span class="lbl">Ask</span><span class="txt">"Classify all four variables."</span></div><div class="line listen"><span class="lbl">Expect</span><span class="txt">Room number called quantitative. <strong>Do not correct it.</strong></span></div><div class="line ask"><span class="lbl">Ask</span><span class="txt">"What's the average room number in this hospital?"</span></div><div class="line ask"><span class="lbl">Then</span><span class="txt">"If the answer is 247.6, is there a room 247.6? What would that number tell a manager?"</span></div><div class="line intro"><span class="lbl">They state</span><span class="txt">The digits test from <em>Categorical and quantitative variables</em>: does it have units of measure, and does arithmetic on it mean anything?</span></div></div>
+<div class="tbl"><table><thead><tr><th>Variable</th><th>Type</th><th>Why</th></tr></thead><tbody><tr><td>Hospital</td><td>Categorical</td><td>Six group labels</td></tr><tr><td>Room number</td><td><strong>Categorical</strong></td><td>Digits, but a label. No units. The mean means nothing</td></tr><tr><td>Nights stayed</td><td>Quantitative, discrete</td><td>A count, with units. 5 nights is two more than 3</td></tr><tr><td>Minutes until seen</td><td>Quantitative, continuous</td><td>Measured; 47.3 is possible</td></tr></tbody></table></div>
+<p>If diagnostic Q4 caught them out, close the loop: <em>"Same thing as the phone number, isn't it?"</em></p>
+<h3>The frequency formulas, recalled for the hospital data</h3>
+<p>The formulas are in the theory, under <em>Frequency and relative frequency tables</em>. Have the student write them out from memory, with this study's numbers, before building anything. Every one is a division; the difficulty is knowing which number goes underneath.</p>
+<div class="script"><div class="line ask"><span class="lbl">Ask</span><span class="txt">"Write the formulas for rf and 100rf. What goes underneath, and what is it here?"</span></div><div class="line listen"><span class="lbl">Listen for</span><span class="txt">n, the total of the table: 300, the patients surveyed. Not 12,400, and not another hospital's count.</span></div><div class="line intro"><span class="lbl">Recall</span><span class="txt">rf = f ÷ n, 100rf = (f ÷ n) × 100, and the three self-checks: Σf = n, Σrf = 1, Σ100rf = 100%.</span></div></div>
+<div class="note red"><span class="lbl">Extension — not in the CED: the cumulative columns</span><p>Cumulative frequency is not examined (see the note after the reference sheet). It is here because Barron's uses it heavily and it makes "or fewer" questions immediate.</p>
+<div class="tbl"><table><thead><tr><th>Quantity</th><th>Symbol</th><th>Formula</th><th>In words</th></tr></thead><tbody><tr><td>Cumulative frequency</td><td><em>cf</em></td><td>cf = running total of f</td><td>How many are in this category <strong>or below</strong></td></tr><tr><td>Cumulative relative frequency</td><td><em>crf</em></td><td>crf = cf ÷ n</td><td>What fraction are in this category or below</td></tr><tr><td>Cumulative percentage</td><td><em>100crf</em></td><td>100crf = (cf ÷ n) × 100</td><td>The same thing, out of 100</td></tr></tbody></table></div>
+<p><strong>A note on notation.</strong> Some textbooks write the last two as <em>100cf</em>. That is shorthand for "the cumulative figure as a percentage"; it does <strong>not</strong> mean 100 × cf. The denominator is always <em>n</em>.</p>
+<p><strong>Two more self-checks for cumulative columns:</strong> last <em>cf</em> = <em>n</em> · last <em>crf</em> = 1.</p></div>
+<h3>Applying the formulas · part 1, the categorical table</h3>
+<p>Have the student build this. Do not build it yourself: this is Skill 3.A and they need the pen.</p>
+<div class="tbl"><table><thead><tr><th>Hospital</th><th><em>f</em></th><th><em>rf</em> = f ÷ 300</th><th><em>100rf</em></th></tr></thead><tbody><tr><td>St Mary's</td><td>84</td><td>84 ÷ 300 = 0.280</td><td>28.0%</td></tr><tr><td>Riverside</td><td>71</td><td>71 ÷ 300 = 0.237</td><td>23.7%</td></tr><tr><td>Northgate</td><td>52</td><td>52 ÷ 300 = 0.173</td><td>17.3%</td></tr><tr><td>Parkview</td><td>45</td><td>45 ÷ 300 = 0.150</td><td>15.0%</td></tr><tr><td>Eastwood</td><td>30</td><td>30 ÷ 300 = 0.100</td><td>10.0%</td></tr><tr><td>Hillcrest</td><td>18</td><td>18 ÷ 300 = 0.060</td><td>6.0%</td></tr><tr class="tot"><td><strong>Total</strong></td><td><strong>300</strong></td><td><strong>1.000</strong></td><td><strong>100%</strong></td></tr></tbody></table></div>
+<div class="checks"><span class="chk">Σf = 300 = n ✓</span><span class="chk">Σrf = 1.000 ✓</span><span class="chk">Σ100rf = 100% ✓</span></div>
+<div class="note red"><span class="lbl">Extension — why the hospital table cannot be cumulated</span><p><strong>Ask:</strong> <em>"Could we add a cumulative frequency column to this table?"</em> <strong>Answer:</strong> no, and the reason is the point.</p>
+<p>Cumulative means "this category <strong>or below</strong>", which requires the categories to have an <strong>order</strong>. Hospital names have none. <em>"Riverside or fewer"</em> is not a sentence. Cumulative columns belong to variables you can line up, which is why the next table works and this one does not.</p></div>
+<h3>Applying the formulas · part 2, the ordered table (extension, not examined)</h3>
+<div class="note red"><span class="lbl">Extension — the cumulative table for nights stayed</span><p><strong>Tell the student this honestly.</strong> Cumulative frequency does <strong>not</strong> appear anywhere in the current CED's descriptive statistics. It is worth knowing because Barron's uses it heavily and it makes "or fewer" questions trivial, but it will not be examined as a technique.</p>
+<p>The same 300 patients, now by <strong>number of nights stayed</strong>. This variable <em>is</em> ordered, so all six quantities apply.</p>
+<div class="tbl"><table><thead><tr><th>Nights</th><th><em>f</em></th><th><em>rf</em></th><th><em>100rf</em></th><th><em>cf</em></th><th><em>crf</em> = cf ÷ 300</th><th><em>100crf</em></th></tr></thead><tbody><tr><td>1</td><td>96</td><td>0.320</td><td>32.0%</td><td>96</td><td>96 ÷ 300 = 0.320</td><td>32.0%</td></tr><tr><td>2</td><td>84</td><td>0.280</td><td>28.0%</td><td>180</td><td>180 ÷ 300 = 0.600</td><td>60.0%</td></tr><tr><td>3</td><td>60</td><td>0.200</td><td>20.0%</td><td>240</td><td>240 ÷ 300 = 0.800</td><td>80.0%</td></tr><tr><td>4</td><td>36</td><td>0.120</td><td>12.0%</td><td>276</td><td>276 ÷ 300 = 0.920</td><td>92.0%</td></tr><tr><td>5 or more</td><td>24</td><td>0.080</td><td>8.0%</td><td>300</td><td>300 ÷ 300 = 1.000</td><td>100%</td></tr><tr class="tot"><td><strong>Total</strong></td><td><strong>300</strong></td><td><strong>1.000</strong></td><td><strong>100%</strong></td><td></td><td></td><td></td></tr></tbody></table></div>
+<p><strong>Show the running total explicitly</strong>, one row at a time: 96 → 96 + 84 = 180 → 180 + 60 = 240 → 240 + 36 = 276 → 276 + 24 = 300 ✓</p>
+<p>Checks: last <em>cf</em> = 300 = <em>n</em> ✓ · last <em>crf</em> = 1.000 ✓</p>
+<p><strong>Ask:</strong> <em>"What percentage of these patients stayed three nights or fewer?"</em> <strong>Read off:</strong> 80.0%, straight from the <em>100crf</em> column.</p>
+<p><strong>Follow up:</strong> <em>"And what percentage stayed more than three nights?"</em> → 100% − 80.0% = 20.0%.</p>
+<p>Without that column the student has to add 96 + 84 + 60 and then divide, exactly the work the column has already done. The complement is the other reason it is worth having.</p></div>
+<h3>The claim — and the habit that earns marks all year</h3>
+<div class="script"><div class="line ask"><span class="lbl">Ask</span><span class="txt">"An administrator says: most of our discharged patients came from St Mary's. Is she right?"</span></div><div class="line listen"><span class="lbl">Expect</span><span class="txt">"Yes" — because 28.0% is the biggest number in the column. Wait.</span></div><div class="line ask"><span class="lbl">Ask</span><span class="txt">"What does 'most' mean?" → more than half. 28.0% is not.</span></div><div class="line intro"><span class="lbl">They write</span><span class="txt">"St Mary's accounted for more discharged patients than any other single hospital in the sample, at 28.0%, though it still treated fewer than three in ten."</span></div></div>
+<div class="note teal"><span class="lbl">The template for the whole course, from the theory</span><p>State the claim · quote the number · say what it does and does not establish · keep it in context.</p></div>
+<hr>
+<h2>64–72 min · Solo case — the gym</h2>
+<p>The student works this <strong>unaided</strong> while you watch and say nothing. Resist helping. Where they hesitate tells you what to open Session 2 with.</p>
+<blockquote>A gym has <strong>2,300 members</strong>. It surveys <strong>180</strong> of them, recording: membership type (basic/premium/student), locker number, number of visits last month, and minutes spent per visit.<br>Of the 180 surveyed, <strong>54 had premium membership</strong>.</blockquote>
+<ol><li>Population and <strong>N</strong>? Sample and <strong>n</strong>?</li><li>Observational unit?</li><li>Classify all four variables.</li><li>Calculate the relative frequency and percentage for premium membership. Show the formula.</li><li>Is that figure a parameter or a statistic? How do you know?</li><li>Name one parameter here whose value you do not know.</li></ol>
+<p><strong>Answers.</strong> 2,300 gym members / 180 surveyed / one member / membership type categorical, <strong>locker number categorical</strong>, visits quantitative-discrete, minutes quantitative-continuous / rf = 54 ÷ 180 = 0.300, so 100rf = 30.0% / statistic, because it came from the 180 sampled not all 2,300 / e.g. the true proportion of all 2,300 members with premium membership.</p>
+<div class="note amber"><span class="lbl">Watch for</span><p>Locker number classified as quantitative. If that happens <em>after</em> Scenario B, the digits test has not transferred: reteach it at the start of Session 2 rather than patching it now.</p></div>
+<hr>
+<h2>72–78 min · Teach it back</h2>
+<div class="script"><div class="line ask"><span class="lbl">Ask</span><span class="txt">"Explain to me, as if I've never taken this course, the difference between a parameter and a statistic. Use the gym example."</span></div><div class="line listen"><span class="lbl">Listen for</span><span class="txt">Both named, which is known and which is not, and stays in context.</span></div></div>
+<p>If it comes out fluently, the session landed. If not, that is what Session 2 opens with, and no amount of recapping in the last few minutes will fix it, so do not try. Set the homework.</p>
+<hr>
+<h2>Assessment — the Session 1 test</h2>
+<p>A 22-question multiple-choice test covers this session: <code>Session-01-MC-Test.md</code>, or <strong>Session 1 · Test</strong> in the site navigation. Every question is scenario-based; none can be answered by recalling a definition.</p>
+<p><strong>When to use it.</strong> Not at the end of this session: the student has just been told everything and will score well for the wrong reason. Set it <strong>at the start of Session 3</strong>, once the Session 1 homework is marked and Session 2 is taught. A high score a week later means the material survived, which is what you actually want to know.</p>
+<p>Allow <strong>40 minutes</strong>. On a shared screen the answer key stays collapsed: click a question to open its explanation, or press <strong>e</strong> to open all of them at once.</p>
+<h3>Reading the Session 1 test score</h3>
+<div class="tbl"><table><thead><tr><th>Score / 22</th><th>What to do</th></tr></thead><tbody><tr><td>19–22</td><td>Secure. Do not revisit.</td></tr><tr><td>15–18</td><td>Reteach only the items missed, using the diagnostic table in the test.</td></tr><tr><td>11–14</td><td>Vocabulary present, concepts not yet working. Re-run Scenario A before going further.</td></tr><tr><td>0–10</td><td>Reteach Session 1. Units 3 and 4 depend entirely on this material.</td></tr></tbody></table></div>
+<div class="note red"><span class="lbl">The two misses to treat as urgent</span><p><strong>Question 4 or 22</strong>: parameter versus statistic; everything from Session 13 onward is built on it. <strong>Question 18, especially option (E)</strong>: counts rising while shares fall, which recurs in every unit and never gets cheaper to fix.</p></div>
+<div class="note teal"><span class="lbl">Why the key explains every option</span><p>Each wrong answer names the misconception it represents, so a marked script tells you <strong>what</strong> to reteach rather than only how much.</p></div>
+<hr>
+<hr>
+<h1>Homework — Session 1</h1>
+<p><strong>40 marks assessed, plus a 6-mark extension · bring to Session 2</strong></p>
+<h2>How to do this homework</h2>
+<ol><li>Do every part <strong>with the answer key closed.</strong> Where you are unsure, write your answer anyway and put a <strong>?</strong> beside it.</li><li>Then open the key and <strong>mark your own work honestly.</strong> Write the correct answer beside anything wrong — do not erase what you originally wrote. Your tutor needs to see the wrong answer to know what to fix.</li><li><strong>Bring the marked sheet.</strong> The questions you got wrong, and the ones you marked <strong>?</strong> even though they turned out right, are what Session 2 opens with.</li></ol>
+<p>A question you guessed correctly is worth flagging. A <code>?</code> beside a right answer is more useful to your tutor than a silent tick.</p>
+<hr>
+<h2>Part A — Vocabulary (8 marks)</h2>
+<p>Match each term to its definition.</p>
+<div class="tbl"><table><thead><tr><th></th><th>Term</th><th></th><th>Definition</th></tr></thead><tbody><tr><td>1</td><td>Observational unit</td><td>A</td><td>A numerical summary of a variable for a sample</td></tr><tr><td>2</td><td>Population</td><td>B</td><td>A characteristic that may change from one unit to another</td></tr><tr><td>3</td><td>Sample</td><td>C</td><td>All the items or individuals of interest</td></tr><tr><td>4</td><td>Variable</td><td>D</td><td>A table showing the proportion in each category</td></tr><tr><td>5</td><td>Parameter</td><td>E</td><td>The item or individual a datum is collected from</td></tr><tr><td>6</td><td>Statistic</td><td>F</td><td>A numerical summary of a variable for a population</td></tr><tr><td>7</td><td>Frequency table</td><td>G</td><td>The subset actually measured</td></tr><tr><td>8</td><td>Relative frequency table</td><td>H</td><td>A table showing the count in each category</td></tr></tbody></table></div>
+<h2>Part B — A new study (12 marks)</h2>
+<blockquote>A city has <strong>34,000 registered library members</strong>. The library service wants to know how members use its branches, so it contacts a random <strong>450</strong> of them and records, for each: the branch they use most often, the number of items they borrowed last year, whether they have ever used the e-book service (yes/no), and the total time in hours they spent in library buildings last year.<br>Of the 450 contacted, <strong>171 said they had used the e-book service</strong>, and members borrowed an average of <strong>22.4 items</strong>.</blockquote>
+<p><strong>B1.</strong> State the population and give <strong>N</strong>. (1)</p>
+<p><strong>B2.</strong> State the sample and give <strong>n</strong>. (1)</p>
+<p><strong>B3.</strong> What is the observational unit? (1)</p>
+<p><strong>B4.</strong> Copy and complete this table for all four variables measured. (6)</p>
+<div class="tbl"><table><thead><tr><th>Variable</th><th>Categorical or quantitative?</th><th>If quantitative: discrete or continuous?</th></tr></thead><tbody><tr><td>Branch used most often</td><td></td><td></td></tr><tr><td>Number of items borrowed</td><td></td><td></td></tr><tr><td>Ever used e-book service</td><td></td><td></td></tr><tr><td>Hours spent in buildings</td><td></td><td></td></tr></tbody></table></div>
+<p><strong>B5.</strong> Calculate the relative frequency and the percentage of surveyed members who have used the e-book service. <strong>Write the formula you used</strong>, then substitute. Is the result a parameter or a statistic? Explain how you know. (2)</p>
+<p><strong>B6.</strong> Write down one quantity in this situation that is a <strong>parameter</strong>. You do not know its value — describe it in words. (1)</p>
+<h2>Part C — Investigative questions (6 marks)</h2>
+<p>For each proposed question, state whether it is a <strong>good investigative question</strong>. If not, explain what is wrong and rewrite it so that it is.</p>
+<p><strong>C1.</strong> "Is our library any good?" (2)</p>
+<p><strong>C2.</strong> "What proportion of registered members used the e-book service in the last year?" (2)</p>
+<p><strong>C3.</strong> After seeing the data, a manager proposes: "Why do members at the Eastside branch borrow so many more items than everyone else?" (2)</p>
+<h2>Part D — Building tables (10 marks)</h2>
+<p>A class of 40 students recorded how each one primarily travelled to school today:</p>
+<pre class="data">Bus   Car   Walk  Bus   Bus   Train Car   Walk  Bus   Bike
 Car   Bus   Walk  Bus   Car   Bus   Walk  Bus   Train Car
 Bus   Bike  Walk  Bus   Car   Bus   Walk  Car   Bus   Bus
-Walk  Car   Bike  Bus   Car   Bus   Walk  Bus   Car   Bus</div>
-      <div class="q" style="margin-top:14px;"><p><span class="qn">D1.</span> Construct a frequency table for mode of travel. <span class="marks">3</span></p></div>
-      <div class="q"><p><span class="qn">D2.</span> Add an <i>rf</i> column and a <i>100rf</i> column. <strong>State the formula for each before you use it.</strong> Proportions to three decimal places, percentages to one. <span class="marks">4</span></p></div>
-      <div class="q"><p><span class="qn">D3.</span> Apply two self-checks: show that &Sigma;<i>f</i> = <i>n</i> and &Sigma;<i>rf</i> = 1. <span class="marks">1</span></p></div>
-      <div class="q"><p><span class="qn">D4.</span> A student claims: <i>&ldquo;Most students in this class come to school by bus.&rdquo;</i> Using your table, justify whether this claim is supported. <span class="marks">2</span></p></div>
-    </div>
-
-    <div class="part">
-      <div class="part-h"><h3>Part E &mdash; Challenge</h3><span class="marks">4 marks</span></div>
-      <p style="font-size:.94rem;margin-bottom:12px;">A hospital records the <strong>room number</strong> of every patient and the <strong>number of nights</strong> each patient stayed.</p>
-      <div class="q"><p><span class="qn">E1.</span> Both are recorded using digits. Explain why one is categorical and the other quantitative. Your explanation must refer to units of measure. <span class="marks">2</span></p></div>
-      <div class="q"><p><span class="qn">E2.</span> The hospital calculates the mean of each. One mean is meaningful and one is not. Say which, and explain why. <span class="marks">2</span></p></div>
-    </div>
-
-    <div class="part ext" style="margin-bottom:0;">
-      <div class="part-h"><h3>Part F &mdash; Extension: cumulative frequency</h3><span class="marks ext">6 marks &middot; not AP-assessed</span></div>
-      <p style="font-size:.9rem;margin-bottom:13px;color:var(--ink-2);"><strong>Not assessed on the AP exam.</strong> Cumulative frequency does not appear in the current CED. It is here because Barron&rsquo;s uses it heavily and it makes &ldquo;or fewer&rdquo; questions immediate. These 6 marks are separate from the 40 above.</p>
-      <p style="font-size:.94rem;margin-bottom:11px;">A sports club surveyed <strong>250</strong> members on how many times they visited in the past week.</p>
-      <div class="tbl" style="max-width:280px;">
-        <table style="min-width:0;">
-          <thead><tr><th>Visits</th><th>f</th></tr></thead>
-          <tbody>
-            <tr><td class="num">0</td><td class="num">40</td></tr>
-            <tr><td class="num">1</td><td class="num">65</td></tr>
-            <tr><td class="num">2</td><td class="num">70</td></tr>
-            <tr><td class="num">3</td><td class="num">45</td></tr>
-            <tr><td class="num">4 or more</td><td class="num">30</td></tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="q" style="margin-top:14px;"><p><span class="qn">F1.</span> Add columns for <i>rf</i>, <i>100rf</i>, <i>cf</i>, <i>crf</i> and <i>100crf</i>. <span class="marks ext">3</span></p></div>
-      <div class="q"><p><span class="qn">F2.</span> Apply the two cumulative self-checks: show the final <i>cf</i> equals <i>n</i>, and the final <i>crf</i> equals 1. <span class="marks ext">1</span></p></div>
-      <div class="q"><p><span class="qn">F3.</span> What percentage visited <strong>2 times or fewer</strong>? Read it from your table. <span class="marks ext">1</span></p></div>
-      <div class="q"><p><span class="qn">F4.</span> What percentage visited <strong>more than 2 times</strong>? Get this from F3 rather than by adding rows. <span class="marks ext">1</span></p></div>
-    </div>
-
-    <details class="key">
-      <summary>Answer key &mdash; open only after attempting everything</summary>
-      <div class="key-body">
-        <div>
-          <h4>Part A &mdash; 8 marks, 1 each</h4>
-          <p class="match">1&ndash;E &nbsp; 2&ndash;C &nbsp; 3&ndash;G &nbsp; 4&ndash;B &nbsp; 5&ndash;F &nbsp; 6&ndash;A &nbsp; 7&ndash;H &nbsp; 8&ndash;D</p>
-        </div>
-        <div>
-          <h4>Part B &mdash; 12 marks</h4>
-          <ul>
-            <li><strong>B1.</strong> All 34,000 registered library members; N = 34,000. <i>(1)</i></li>
-            <li><strong>B2.</strong> The 450 members contacted; n = 450. <i>(1)</i></li>
-            <li><strong>B3.</strong> One registered library member. <i>(1)</i></li>
-          </ul>
-          <div class="tbl" style="margin-top:8px;">
-            <table>
-              <thead><tr><th>Variable</th><th>Type</th><th>Discrete/continuous</th></tr></thead>
-              <tbody>
-                <tr><td>Branch used most often</td><td>Categorical</td><td>&mdash;</td></tr>
-                <tr><td>Number of items borrowed</td><td>Quantitative</td><td>Discrete</td></tr>
-                <tr><td>Ever used e-book service</td><td>Categorical</td><td>&mdash;</td></tr>
-                <tr><td>Hours spent in buildings</td><td>Quantitative</td><td>Continuous</td></tr>
-              </tbody>
-            </table>
-          </div>
-          <ul style="margin-top:8px;">
-            <li><strong>B5.</strong> rf = f &divide; n = 171 &divide; 450 = <strong>0.380</strong>; 100rf = 0.380 &times; 100 = <strong>38.0%</strong> <i>(1)</i>. A <strong>statistic</strong>, because it was computed from the 450 in the sample, not all 34,000 in the population. <i>(1)</i></li>
-            <li><strong>B6.</strong> Any population quantity, e.g. &ldquo;the true proportion of all 34,000 members who have used the e-book service&rdquo;. <i>(1)</i></li>
-          </ul>
-          <p class="flagbox" style="margin-top:10px;"><b>If you answered &ldquo;parameter&rdquo; to B5:</b> check the denominator. 450 is the number actually asked, so this describes the sample. Flag it &mdash; the most common error on the sheet.</p>
-        </div>
-        <div>
-          <h4>Part C &mdash; 6 marks</h4>
-          <ul>
-            <li><strong>C1.</strong> Not a good question <i>(1)</i>. &ldquo;Any good&rdquo; is not defined and cannot be measured. A rewrite must name a measurable variable, e.g. <i>&ldquo;What proportion of registered members visited a branch at least once in the last year?&rdquo;</i> <i>(1)</i></li>
-            <li><strong>C2.</strong> Good question <i>(1)</i>. Defined purpose, specific measurable variable, data can be collected. <i>(1)</i></li>
-            <li><strong>C3.</strong> Not acceptable <strong>for this study</strong> <i>(1)</i>. The question was chosen after seeing the results, violating the principle that an investigative question should not be changed based on the data analysis. Legitimate for a <strong>new</strong> study with <strong>new</strong> data. <i>(1)</i></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Part D &mdash; 10 marks</h4>
-          <p style="margin-bottom:6px;"><strong>D1&ndash;D2.</strong> <i>(7)</i> Formulas: rf = f &divide; n, 100rf = (f &divide; n) &times; 100, with n = 40.</p>
-          <div class="tbl">
-            <table>
-              <thead><tr><th>Mode</th><th>f</th><th>rf</th><th>100rf</th></tr></thead>
-              <tbody>
-                <tr><td>Bus</td><td class="num">17</td><td class="mono">17 &divide; 40 = 0.425</td><td class="num">42.5%</td></tr>
-                <tr><td>Car</td><td class="num">10</td><td class="mono">10 &divide; 40 = 0.250</td><td class="num">25.0%</td></tr>
-                <tr><td>Walk</td><td class="num">8</td><td class="mono">8 &divide; 40 = 0.200</td><td class="num">20.0%</td></tr>
-                <tr><td>Bike</td><td class="num">3</td><td class="mono">3 &divide; 40 = 0.075</td><td class="num">7.5%</td></tr>
-                <tr><td>Train</td><td class="num">2</td><td class="mono">2 &divide; 40 = 0.050</td><td class="num">5.0%</td></tr>
-                <tr class="tot"><td>Total</td><td class="num">40</td><td class="num">1.000</td><td class="num">100%</td></tr>
-              </tbody>
-            </table>
-          </div>
-          <ul style="margin-top:9px;">
-            <li><strong>D3.</strong> <i>(1)</i> &Sigma;f = 17+10+8+3+2 = 40 = n &check; &nbsp;&middot;&nbsp; &Sigma;rf = 0.425+0.250+0.200+0.075+0.050 = 1.000 &check;</li>
-            <li><strong>D4.</strong> <i>(2)</i> <strong>Not</strong> supported. Bus is the most common mode at 42.5%, but &ldquo;most&rdquo; means more than half, and 42.5% is below 50%. Supportable: <i>&ldquo;More students travel by bus than by any other single mode, at 42.5%, but fewer than half the class travels by bus.&rdquo;</i></li>
-          </ul>
-          <p class="flagbox" style="margin-top:10px;"><b>If you answered &ldquo;yes, supported&rdquo;:</b> same plurality-vs-majority distinction as the hospital example. Largest share is not the same as most. Flag it.</p>
-        </div>
-        <div>
-          <h4>Part E &mdash; 4 marks</h4>
-          <ul>
-            <li><strong>E1.</strong> <i>(2)</i> Nights stayed is quantitative &mdash; a counted quantity with a unit of measure (nights), and differences are meaningful: 5 nights is two more than 3. Room number has no unit of measure; it is a label identifying a location, so it is categorical even though written with digits.</li>
-            <li><strong>E2.</strong> <i>(2)</i> The mean number of nights is meaningful &mdash; average length of stay, which could inform staffing. The mean room number is meaningless: room numbers are labels, so averaging them produces a number corresponding to nothing, possibly not even a real room.</li>
-          </ul>
-        </div>
-        <div>
-          <h4>Part F &mdash; Extension, 6 marks</h4>
-          <p style="margin-bottom:6px;"><strong>F1.</strong> <i>(3)</i> With n = 250:</p>
-          <div class="tbl">
-            <table>
-              <thead><tr><th>Visits</th><th>f</th><th>rf</th><th>100rf</th><th>cf</th><th>crf</th><th>100crf</th></tr></thead>
-              <tbody>
-                <tr><td class="num">0</td><td class="num">40</td><td class="num">0.160</td><td class="num">16.0%</td><td class="num cum">40</td><td class="num cum">0.160</td><td class="num cum">16.0%</td></tr>
-                <tr><td class="num">1</td><td class="num">65</td><td class="num">0.260</td><td class="num">26.0%</td><td class="num cum">105</td><td class="num cum">0.420</td><td class="num cum">42.0%</td></tr>
-                <tr><td class="num">2</td><td class="num">70</td><td class="num">0.280</td><td class="num">28.0%</td><td class="num cum">175</td><td class="num cum">0.700</td><td class="num cum">70.0%</td></tr>
-                <tr><td class="num">3</td><td class="num">45</td><td class="num">0.180</td><td class="num">18.0%</td><td class="num cum">220</td><td class="num cum">0.880</td><td class="num cum">88.0%</td></tr>
-                <tr><td class="num">4 or more</td><td class="num">30</td><td class="num">0.120</td><td class="num">12.0%</td><td class="num cum">250</td><td class="num cum">1.000</td><td class="num cum">100%</td></tr>
-                <tr class="tot"><td>Total</td><td class="num">250</td><td class="num">1.000</td><td class="num">100%</td><td colspan="3"></td></tr>
-              </tbody>
-            </table>
-          </div>
-          <div class="runsum" style="margin-top:9px;">Running total: 40 &rarr; 105 &rarr; 175 &rarr; 220 &rarr; 250</div>
-          <ul style="margin-top:9px;">
-            <li><strong>F2.</strong> <i>(1)</i> Final cf = 250 = n &check; &nbsp;&middot;&nbsp; final crf = 250 &divide; 250 = 1.000 &check;</li>
-            <li><strong>F3.</strong> <i>(1)</i> <strong>70.0%</strong> &mdash; read directly from the 100crf row for 2 visits.</li>
-            <li><strong>F4.</strong> <i>(1)</i> 100% &minus; 70.0% = <strong>30.0%</strong></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Marks summary</h4>
-          <div class="tbl"><table style="min-width:0;">
-            <thead><tr><th>Part</th><th>Marks</th></tr></thead>
-            <tbody>
-              <tr><td>A &mdash; Vocabulary</td><td class="num">8</td></tr>
-              <tr><td>B &mdash; New study</td><td class="num">12</td></tr>
-              <tr><td>C &mdash; Investigative questions</td><td class="num">6</td></tr>
-              <tr><td>D &mdash; Building tables</td><td class="num">10</td></tr>
-              <tr><td>E &mdash; Challenge</td><td class="num">4</td></tr>
-              <tr class="tot"><td>Assessed total</td><td class="num">40</td></tr>
-              <tr><td>F &mdash; Extension (not AP-assessed)</td><td class="num">6</td></tr>
-            </tbody>
-          </table></div>
-        </div>
-      </div>
-    </details>
-  </div>
-</section>
-
-<!-- REFERENCE SHEET -->
-<section class="ref-sec">
-  <div class="wrap">
-    <div class="sec-head">
-      <div class="eyebrow">Hand this over at the end</div>
-      <h2>Reference sheet</h2>
-      <p>Do not read this aloud during the session. It is the student&rsquo;s to keep &mdash; every term carries an example.</p>
-    </div>
-
-    <div class="defgroup">
-      <h3>Components of a study</h3>
-      <dl class="defs">
-        <div class="def"><dt>Statistical study</dt><dd>Data are collected from a sample to answer an investigative question about a larger population.</dd><div class="ex"><b>Example</b>Asking 120 of a school&rsquo;s 1,842 students how they travel, to learn how the whole school travels.</div></div>
-        <div class="def"><dt>Datum &middot; data &middot; data set</dt><dd>One piece of information about an individual; the plural; a collection of them.</dd><div class="ex"><b>Example</b>&ldquo;Maria walks to school&rdquo; is one datum. All 120 completed survey forms together are the data set.</div></div>
-        <div class="def"><dt>Population <small>N</small></dt><dd>All the items or individuals of interest.</dd><div class="ex"><b>Example</b>All 1,842 students at Lincoln High, so N = 1,842.</div></div>
-        <div class="def"><dt>Sample <small>n</small></dt><dd>The subset from which data are actually obtained.</dd><div class="ex"><b>Example</b>The 120 students who filled in the survey, so n = 120.</div></div>
-        <div class="def"><dt>In context</dt><dd>Connecting a result back to the real situation it came from. Every interpretation on the exam must be in context &mdash; a number alone never earns the point.</dd><div class="ex"><b>Example</b>Not &ldquo;0.358&rdquo;, but &ldquo;35.8% of the students surveyed travelled to school by bus.&rdquo;</div></div>
-        <div class="def"><dt>Investigative question</dt><dd>Has a defined purpose, can be answered with data you can collect, and is not changed after you see the results.</dd><div class="ex"><b>Example</b>Good: &ldquo;What proportion of Lincoln High students travel by bus?&rdquo; Bad: &ldquo;Is our school any good?&rdquo; &mdash; nothing measurable would settle it.</div></div>
-      </dl>
-    </div>
-
-    <div class="defgroup">
-      <h3>Describing what was measured</h3>
-      <dl class="defs">
-        <div class="def"><dt>Observational unit</dt><dd>The individual a datum is collected <i>from</i>. One row of your spreadsheet.</dd><div class="ex"><b>Example</b>One student. Not one journey, and not one bus.</div></div>
-        <div class="def"><dt>Variable</dt><dd>A characteristic that may change from one unit to another.</dd><div class="ex"><b>Example</b>Travel mode changes from student to student, so it is a variable. &ldquo;School name&rdquo; is the same in every row, so it is not.</div></div>
-        <div class="def"><dt>Parameter</dt><dd>A numerical summary for the <strong>population</strong>. Usually unknown.</dd><div class="ex"><b>Example</b>The true proportion of all 1,842 students who take the bus. Nobody has measured it.</div></div>
-        <div class="def"><dt>Statistic</dt><dd>A numerical summary for the <strong>sample</strong>. Known, because you computed it.</dd><div class="ex"><b>Example</b>43 &divide; 120 = 0.358, the proportion of surveyed students who took the bus.</div></div>
-      </dl>
-      <div class="callout teal" style="margin-top:11px;">
-        <span class="lbl">Memory hook</span>
-        <p><strong>P</strong>opulation &rarr; <strong>P</strong>arameter. &nbsp; <strong>S</strong>ample &rarr; <strong>S</strong>tatistic.</p>
-      </div>
-    </div>
-
-    <div class="defgroup">
-      <h3>Types of variable</h3>
-      <dl class="defs">
-        <div class="def"><dt>Categorical <small>qualitative</small></dt><dd>Values are category names or group labels.</dd><div class="ex"><b>Example</b>Travel mode (bus, car, walk, bike); eye colour; a yes/no answer.</div></div>
-        <div class="def"><dt>Quantitative <small>numerical</small></dt><dd>Numerical values for a measured or counted quantity, generally with <strong>units of measure</strong>.</dd><div class="ex"><b>Example</b>Journey time in minutes; number of siblings; height in centimetres.</div></div>
-        <div class="def"><dt>Discrete</dt><dd>Countable. Things you <i>count</i>.</dd><div class="ex"><b>Example</b>Number of vehicle changes &mdash; 0, 1, 2. Never 1.4.</div></div>
-        <div class="def"><dt>Continuous</dt><dd>Any value in an interval. Things you <i>measure</i>.</dd><div class="ex"><b>Example</b>Journey time &mdash; 24 minutes, or 24.6, or 24.61.</div></div>
-      </dl>
-      <div class="callout amber" style="margin-top:11px;">
-        <span class="lbl">The digits test</span>
-        <p>A variable written with digits is not automatically quantitative. Does it have <strong>units</strong>? Does <strong>arithmetic on it mean anything</strong>? If not &mdash; ZIP code, room number, shirt number, phone number &mdash; it is categorical.</p>
-      </div>
-    </div>
-
-    <div class="defgroup">
-      <h3>Frequency calculations</h3>
-      <p style="font-size:.93rem;color:var(--ink-2);margin-bottom:11px;max-width:var(--read);">Let <strong>n</strong> be the sample size and <strong>f</strong> the count in one category.</p>
-      <div class="tbl">
-        <table>
-          <thead><tr><th>Quantity</th><th>Symbol</th><th>Formula</th><th>Example (f = 84, n = 300)</th></tr></thead>
-          <tbody>
-            <tr><td>Frequency</td><td class="mono">f</td><td class="mono">the count itself</td><td class="num">84</td></tr>
-            <tr><td>Relative frequency</td><td class="mono">rf</td><td class="mono">f &divide; n</td><td class="mono">84 &divide; 300 = 0.280</td></tr>
-            <tr><td>Percentage</td><td class="mono">100rf</td><td class="mono">(f &divide; n) &times; 100</td><td class="mono">0.280 &times; 100 = 28.0%</td></tr>
-            <tr class="cum"><td>Cumulative frequency</td><td class="mono">cf</td><td class="mono">running total of f</td><td class="mono">96, then 96 + 84 = 180, &hellip;</td></tr>
-            <tr class="cum"><td>Cumulative relative freq.</td><td class="mono">crf</td><td class="mono">cf &divide; n</td><td class="mono">180 &divide; 300 = 0.600</td></tr>
-            <tr class="cum"><td>Cumulative percentage</td><td class="mono">100crf</td><td class="mono">(cf &divide; n) &times; 100</td><td class="mono">0.600 &times; 100 = 60.0%</td></tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="checks" style="margin-top:10px;">
-        <span class="chk">&Sigma;f = n</span>
-        <span class="chk">&Sigma;rf = 1</span>
-        <span class="chk">&Sigma;100rf = 100%</span>
-        <span class="chk">last cf = n</span>
-        <span class="chk">last crf = 1</span>
-      </div>
-      <dl class="defs" style="margin-top:12px;">
-        <div class="def"><dt>Frequency table</dt><dd>The <strong>count</strong> in each category.</dd><div class="ex"><b>Example</b>St Mary&rsquo;s 84, Riverside 71, &hellip; totalling 300.</div></div>
-        <div class="def"><dt>Relative frequency table</dt><dd>The <strong>proportion</strong> in each category. Must total 1.</dd><div class="ex"><b>Example</b>St Mary&rsquo;s 0.280, Riverside 0.237, &hellip; totalling 1.000.</div></div>
-      </dl>
-      <div class="callout amber" style="margin-top:11px;">
-        <span class="lbl">Cumulative columns need ordered categories</span>
-        <p>&ldquo;This category or below&rdquo; only means something if the categories line up. Nights stayed (1, 2, 3, 4, 5+) can be cumulated. Hospital names cannot &mdash; <em>&ldquo;Riverside or fewer&rdquo;</em> is not a sentence.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <div class="sec-head">
-      <div class="eyebrow">Syllabus check</div>
-      <h2>Cumulative frequency and the exam</h2>
-    </div>
-    <div class="prose">
-      <p>Cumulative frequency, cumulative relative frequency and <strong>cumulative relative frequency plots (ogives)</strong> do <strong>not</strong> appear anywhere in the descriptive statistics of the CED effective Fall 2026. The only occurrence of &ldquo;cumulative&rdquo; in all 244 pages is <em>cumulative probability distribution</em>, in topic 2.8 &mdash; a probability topic, not a data-display one.</p>
-      <p>Barron&rsquo;s teaches ogives across roughly a dozen pages, including as a Unit 1 display. 5 Steps mentions cumulative frequency only in passing.</p>
-      <p><strong>What this means practically.</strong> Teach the cumulative formulas if the student finds them useful &mdash; they make &ldquo;or fewer&rdquo; questions immediate and they are needed to read Barron&rsquo;s without confusion. But do not spend session time on constructing or interpreting ogives, and tell the student plainly that it will not be examined.</p>
-    </div>
-    <div class="callout red" style="margin-top:18px;">
-      <span class="lbl">Add to the removed-topics list</span>
-      <p>This belongs on the master plan&rsquo;s removed-topics list as a <strong>seventh entry</strong>, alongside inference for slopes, chi-square goodness-of-fit, geometric distributions, transformations to achieve linearity, influential points and leverage, and the Investigative Task.</p>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <div class="sec-head">
-      <div class="eyebrow">Beyond session one</div>
-      <h2>Converting the remaining nineteen sessions</h2>
-      <p>Every activity in the master plan came from the CED&rsquo;s Sample Instructional Activities, which assume a class. Ten work one-to-one essentially unchanged. The rest need substitution.</p>
-    </div>
-    <div class="tbl">
-      <table>
-        <thead><tr><th>#</th><th>Classroom activity</th><th>One-to-one version</th></tr></thead>
-        <tbody>
-          <tr><td class="num">1</td><td>Population or Sample? <i>(groups of 4)</i></td><td><strong>Challenge Sort</strong> &mdash; student sorts aloud, you argue the opposite side each time</td></tr>
-          <tr><td class="num">2</td><td>Gallery Walk <i>(4 groups, 4 displays)</i></td><td><strong>Build &amp; Defend</strong> &mdash; student builds all four displays, then you ask which best answers each of three questions</td></tr>
-          <tr><td class="num">3</td><td>Match Mine <i>(pairs, screen between)</i></td><td>Works as-is. You describe, student sketches unseen; then swap</td></tr>
-          <tr><td class="num">4</td><td>Sketch and Switch <i>(pairs swap)</i></td><td><strong>Sketch and Critique</strong> &mdash; you sketch one with a deliberate error and they find it</td></tr>
-          <tr><td class="num">5</td><td>Reversing Interpretations <i>(pairs)</i></td><td>Works as-is. You supply the residual and equation</td></tr>
-          <tr><td class="num">6</td><td>Odd One Out <i>(groups of 4)</i></td><td>Student sorts four studies aloud and justifies; you add a fifth card mid-task</td></tr>
-          <tr><td class="num">7</td><td>Password-Style Game <i>(pairs)</i></td><td>Works as-is. Alternate who gives clues</td></tr>
-          <tr><td class="num">8</td><td>Quiz-Quiz-Trade <i>(class circulation)</i></td><td><strong>Card Author</strong> &mdash; student <i>writes</i> the question cards; you answer some wrong on purpose and they mark you</td></tr>
-          <tr><td class="num">9</td><td>Think-Pair-Share <i>(pairs)</i></td><td><strong>Think-Aloud</strong> &mdash; student names the formula for each of the five, narrating the reasoning</td></tr>
-          <tr><td class="num">10</td><td>Independent or Mutually Exclusive? sort</td><td>Works as-is. Probe every answer, including the right ones</td></tr>
-          <tr><td class="num">11</td><td>Predict and Confirm <i>(neighbour talk)</i></td><td>Student writes the prediction down <strong>before</strong> running the simulation</td></tr>
-          <tr><td class="num">12</td><td>Reversing Interpretations <i>(pairs, 4 curves)</i></td><td>Works as-is</td></tr>
-          <tr><td class="num">13</td><td>The Scribe and the Calculator <i>(pairs)</i></td><td>Works as-is, and is excellent one-to-one. Take the two roles, then swap</td></tr>
-          <tr><td class="num">14</td><td>Sentence Starters</td><td>Works as-is. You supply flawed conclusion sentences to repair</td></tr>
-          <tr><td class="num">15</td><td>Consequences Sort <i>(groups)</i></td><td>Student ranks the six scenarios; you take the opposing view on two</td></tr>
-          <tr><td class="num">16</td><td>Error Analysis <i>(pairs, 20 sets)</i></td><td>Works as-is. Time it &mdash; twenty in eight minutes builds exam pace</td></tr>
-          <tr><td class="num">17</td><td>Homogeneity or Independence? sort</td><td>Works as-is</td></tr>
-          <tr><td class="num">18</td><td>Quick Write <i>(whole class)</i></td><td>Works as-is. Two minutes, no notes, pen down at time</td></tr>
-          <tr><td class="num">19</td><td>Round Table <i>(groups of 4)</i></td><td><strong>Mark My Work</strong> &mdash; student does problem 1; you do problem 2 with a planted error; they mark yours</td></tr>
-          <tr><td class="num">20</td><td>Graphic Organizer <i>(teams)</i></td><td>Student builds the flowchart alone; you stress-test it with edge cases</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="split" style="margin-top:20px;">
-      <div class="callout teal">
-        <span class="lbl">Carry through every session &middot; 1</span>
-        <p><strong>Diagnose before you teach.</strong> Open every session with two or three questions establishing what is already there. The plan&rsquo;s per-session content is a menu, not a script.</p>
-      </div>
-      <div class="callout amber">
-        <span class="lbl">Carry through every session &middot; 2</span>
-        <p><strong>Protect the talk ratio.</strong> The student should be talking at least half of every hour. Four minutes of unbroken explanation from you is the signal to stop and ask something.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<footer>
-  <div class="wrap">
-    <p><strong>CED references:</strong> Topic 1.1 (1.1.A.1&ndash;6, 1.1.B.1&ndash;2), Topic 1.2 (1.2.A.1&ndash;5, 1.2.B.1&ndash;2, 1.2.C.1&ndash;2), Topic 1.3 (1.3.A.1&ndash;2, 1.3.B.1&ndash;2). Course and Exam Description effective Fall 2026.</p>
-    <p style="margin-top:8px;"><strong>Supporting reading:</strong> Barron&rsquo;s pdf 79&ndash;83 &middot; Princeton Review 99&ndash;104 &middot; 5 Steps to a 5 53&ndash;58.</p>
-  </div>
-</footer>
-
+Walk  Car   Bike  Bus   Car   Bus   Walk  Bus   Car   Bus</pre>
+<p><strong>D1.</strong> Construct a frequency table for mode of travel. (3)</p>
+<p><strong>D2.</strong> Add an <em>rf</em> column and a <em>100rf</em> column. <strong>State the formula for each before you use it.</strong> Proportions to three decimal places, percentages to one. (4)</p>
+<p><strong>D3.</strong> Apply two of the self-checks: show that Σ*f* = <em>n</em> and Σ*rf* = 1. (1)</p>
+<p><strong>D4.</strong> A student claims: <em>"Most students in this class come to school by bus."</em> Using your table, justify whether this claim is supported. (2)</p>
+<h2>Part E — Challenge: room numbers and nights stayed (4 marks)</h2>
+<p>A hospital records the <strong>room number</strong> of every patient and the <strong>number of nights</strong> each patient stayed.</p>
+<p><strong>E1.</strong> Both variables are recorded using digits. Explain clearly why one is categorical and the other is quantitative. Your explanation must refer to units of measure. (2)</p>
+<p><strong>E2.</strong> The hospital calculates the mean of each variable. One of these means is meaningful and one is not. Say which is which, and explain why. (2)</p>
+<h2>Part F — Extension: cumulative frequency, not AP-assessed (6 marks)</h2>
+<div class="note red"><span class="lbl">Not assessed on the AP exam</span><p>Cumulative frequency does not appear in the current CED. It is here because Barron's uses it heavily and it makes "or fewer" questions immediate. These 6 marks are separate from the 40 above.</p></div>
+<p>A sports club surveyed <strong>250</strong> members on how many times they visited in the past week.</p>
+<div class="tbl"><table><thead><tr><th>Visits</th><th><em>f</em></th></tr></thead><tbody><tr><td>0</td><td>40</td></tr><tr><td>1</td><td>65</td></tr><tr><td>2</td><td>70</td></tr><tr><td>3</td><td>45</td></tr><tr><td>4 or more</td><td>30</td></tr></tbody></table></div>
+<p><strong>F1.</strong> Add columns for <em>rf</em>, <em>100rf</em>, <em>cf</em>, <em>crf</em> and <em>100crf</em>. (3)</p>
+<p><strong>F2.</strong> Apply the two cumulative self-checks: show that the final <em>cf</em> equals <em>n</em>, and the final <em>crf</em> equals 1. (1)</p>
+<p><strong>F3.</strong> What percentage of surveyed members visited <strong>2 times or fewer</strong>? Read it from your table. (1)</p>
+<p><strong>F4.</strong> What percentage visited <strong>more than 2 times</strong>? Get this from your answer to F3 rather than by adding rows. (1)</p>
+<hr>
+<hr>
+<h1>Answer key</h1>
+<p><em>Open only after attempting everything.</em></p>
+<h3>Part A answers · Vocabulary (8 marks, 1 each)</h3>
+<p>1–E · 2–C · 3–G · 4–B · 5–F · 6–A · 7–H · 8–D</p>
+<h3>Part B answers · A new study (12 marks)</h3>
+<p><strong>B1.</strong> All 34,000 registered library members; N = 34,000. (1) <strong>B2.</strong> The 450 members contacted; n = 450. (1) <strong>B3.</strong> One registered library member. (1)</p>
+<p><strong>B4.</strong> (6 — one per correct cell)</p>
+<div class="tbl"><table><thead><tr><th>Variable</th><th>Type</th><th>Discrete/continuous</th></tr></thead><tbody><tr><td>Branch used most often</td><td>Categorical</td><td>—</td></tr><tr><td>Number of items borrowed</td><td>Quantitative</td><td>Discrete</td></tr><tr><td>Ever used e-book service</td><td>Categorical</td><td>—</td></tr><tr><td>Hours spent in buildings</td><td>Quantitative</td><td>Continuous</td></tr></tbody></table></div>
+<p><strong>B5.</strong> rf = f ÷ n = 171 ÷ 450 = <strong>0.380</strong>; 100rf = 0.380 × 100 = <strong>38.0%</strong>. (1) It is a <strong>statistic</strong>, because it was computed from the 450 members in the sample, not from all 34,000 in the population. (1)</p>
+<p><strong>B6.</strong> Any population quantity, e.g. "the true proportion of all 34,000 registered members who have used the e-book service". (1)</p>
+<div class="note amber"><span class="lbl">If you answered "parameter" to B5</span><p>Check the denominator. 450 is the number actually asked, so this number describes the sample. Flag this one for your tutor — it is the most common error on this sheet.</p></div>
+<h3>Part C answers · Investigative questions (6 marks)</h3>
+<p><strong>C1.</strong> Not a good question. (1) "Any good" is not defined and cannot be measured — no data collection would settle it. A rewrite must name a measurable variable, e.g. <em>"What proportion of registered members visited a branch at least once in the last year?"</em> (1)</p>
+<p><strong>C2.</strong> Good question. (1) Defined purpose, specific measurable variable, and the required data can be collected. (1)</p>
+<p><strong>C3.</strong> Not acceptable <strong>for this study</strong>. (1) The question was chosen after seeing the results, which violates the principle that an investigative question should not be changed based on the data analysis. The Eastside pattern may be real or may be chance variation. It is a legitimate question for a <strong>new</strong> study collecting <strong>new</strong> data. (1)</p>
+<h3>Part D answers · Building tables (10 marks)</h3>
+<p><strong>D1–D2.</strong> (7) Formulas: rf = f ÷ n, 100rf = (f ÷ n) × 100, with n = 40.</p>
+<div class="tbl"><table><thead><tr><th>Mode</th><th><em>f</em></th><th><em>rf</em></th><th><em>100rf</em></th></tr></thead><tbody><tr><td>Bus</td><td>17</td><td>17 ÷ 40 = 0.425</td><td>42.5%</td></tr><tr><td>Car</td><td>10</td><td>10 ÷ 40 = 0.250</td><td>25.0%</td></tr><tr><td>Walk</td><td>8</td><td>8 ÷ 40 = 0.200</td><td>20.0%</td></tr><tr><td>Bike</td><td>3</td><td>3 ÷ 40 = 0.075</td><td>7.5%</td></tr><tr><td>Train</td><td>2</td><td>2 ÷ 40 = 0.050</td><td>5.0%</td></tr><tr class="tot"><td><strong>Total</strong></td><td><strong>40</strong></td><td><strong>1.000</strong></td><td><strong>100%</strong></td></tr></tbody></table></div>
+<p><strong>D3.</strong> (1) Σf = 17 + 10 + 8 + 3 + 2 = 40 = n ✓ · Σrf = 0.425 + 0.250 + 0.200 + 0.075 + 0.050 = 1.000 ✓</p>
+<p><strong>D4.</strong> (2) The claim is <strong>not</strong> supported. Bus is the most common mode at 42.5%, but "most" means more than half, and 42.5% is below 50%. A supportable version: <em>"More students travel by bus than by any other single mode, at 42.5%, but fewer than half the class travels by bus."</em></p>
+<div class="note amber"><span class="lbl">If you answered "yes, supported"</span><p>This is the same plurality-versus-majority distinction as the St Mary's claim in the hospital survey. The largest share is not the same as "most". Flag it.</p></div>
+<h3>Part E answers · Room numbers and nights stayed (4 marks)</h3>
+<p><strong>E1.</strong> (2) Number of nights is quantitative because it is a counted quantity with a unit of measure (nights), and differences are meaningful — 5 nights is two more than 3. Room number has no unit of measure; it is a label identifying a location, so it is categorical even though it is written with digits.</p>
+<p><strong>E2.</strong> (2) The mean number of nights is meaningful — it is the average length of stay and could inform staffing. The mean room number is meaningless, because room numbers are labels; averaging them produces a number corresponding to nothing, and possibly not even a real room.</p>
+<h3>Part F answers · Cumulative frequency extension (6 marks)</h3>
+<p><strong>F1.</strong> (3) With n = 250:</p>
+<div class="tbl"><table><thead><tr><th>Visits</th><th><em>f</em></th><th><em>rf</em></th><th><em>100rf</em></th><th><em>cf</em></th><th><em>crf</em></th><th><em>100crf</em></th></tr></thead><tbody><tr><td>0</td><td>40</td><td>0.160</td><td>16.0%</td><td>40</td><td>0.160</td><td>16.0%</td></tr><tr><td>1</td><td>65</td><td>0.260</td><td>26.0%</td><td>105</td><td>0.420</td><td>42.0%</td></tr><tr><td>2</td><td>70</td><td>0.280</td><td>28.0%</td><td>175</td><td>0.700</td><td>70.0%</td></tr><tr><td>3</td><td>45</td><td>0.180</td><td>18.0%</td><td>220</td><td>0.880</td><td>88.0%</td></tr><tr><td>4 or more</td><td>30</td><td>0.120</td><td>12.0%</td><td>250</td><td>1.000</td><td>100%</td></tr><tr class="tot"><td><strong>Total</strong></td><td><strong>250</strong></td><td><strong>1.000</strong></td><td><strong>100%</strong></td><td></td><td></td><td></td></tr></tbody></table></div>
+<p>Running total: 40 → 105 → 175 → 220 → 250.</p>
+<p><strong>F2.</strong> (1) Final cf = 250 = n ✓ · Final crf = 250 ÷ 250 = 1.000 ✓</p>
+<p><strong>F3.</strong> (1) <strong>70.0%</strong> — read directly from the <em>100crf</em> row for 2 visits.</p>
+<p><strong>F4.</strong> (1) 100% − 70.0% = <strong>30.0%</strong>.</p>
+<h3>Marks summary for the homework</h3>
+<div class="tbl"><table><thead><tr><th>Part</th><th>Marks</th></tr></thead><tbody><tr><td>A — Vocabulary</td><td>8</td></tr><tr><td>B — New study</td><td>12</td></tr><tr><td>C — Investigative questions</td><td>6</td></tr><tr><td>D — Building tables</td><td>10</td></tr><tr><td>E — Challenge</td><td>4</td></tr><tr class="tot"><td><strong>Assessed total</strong></td><td><strong>40</strong></td></tr><tr><td>F — Extension (not AP-assessed)</td><td>6</td></tr></tbody></table></div>
+<hr>
+<hr>
+<h1>Reference sheet — keep this</h1>
+<p>Every term carries an example from this session. This is the page to revise from; in the session it is handed over at the end, not read aloud.</p>
+<h3>Components of a study</h3>
+<p><strong>Statistical study</strong> — data are collected from a sample to answer an investigative question about a larger population. <em>Example: asking 120 of a school's 1,842 students how they travel, to learn how the whole school travels.</em></p>
+<p><strong>Datum · data · data set</strong> — one piece of information about an individual; the plural; a collection of them. <em>Example: "Maria walks to school" is one datum. All 120 completed survey forms together are the data set.</em></p>
+<p><strong>Population (N)</strong> — all the items or individuals of interest. <em>Example: all 1,842 students at Lincoln High, so N = 1,842.</em></p>
+<p><strong>Sample (n)</strong> — the subset from which data are actually obtained. <em>Example: the 120 students who filled in the survey, so n = 120.</em></p>
+<p><strong>In context</strong> — connecting a result back to the real situation it came from. Every interpretation on the exam must be in context; a number alone never earns the point. <em>Example: not "0.358", but "35.8% of the students surveyed travelled to school by bus."</em></p>
+<p><strong>Investigative question</strong> — has a defined purpose, can be answered with data you can collect, and is not changed after you see the results. <em>Example: good — "What proportion of Lincoln High students travel by bus?" Bad — "Is our school any good?", because nothing measurable would settle it.</em></p>
+<div class="note amber"><span class="lbl">An investigative question is not an action question</span><p><em>"What proportion of members used the e-book service last year?"</em> is investigative — it names a measurable variable and data can settle it. <em>"Should we buy more e-books?"</em> is a <strong>decision</strong>, and <em>"How can we increase usage?"</em> is an <strong>action</strong>. A study can inform both, but it cannot answer either. Watch too for questions that <strong>presuppose their own conclusion</strong>: <em>"Why don't students read any more?"</em> assumes a fact that has not been established.</p></div>
+<h3>Describing what was measured</h3>
+<p><strong>Observational unit</strong> — the individual a datum is collected <em>from</em>. One row of your spreadsheet. <em>Example: one student. Not one journey, and not one bus.</em></p>
+<p><strong>Variable</strong> — a characteristic that may change from one unit to another. <em>Example: travel mode changes from student to student, so it is a variable. "School name" is the same in every row, so it is not.</em></p>
+<p><strong>Parameter</strong> — a numerical summary for the <strong>population</strong>. Usually unknown. <em>Example: the true proportion of all 1,842 students who take the bus. Nobody has measured it.</em></p>
+<p><strong>Statistic</strong> — a numerical summary for the <strong>sample</strong>. Known, because you computed it. <em>Example: 43 ÷ 120 = 0.358, the proportion of surveyed students who took the bus.</em></p>
+<p><strong>Sample size (n) and population size (N)</strong> — facts about the study's design and the population's extent. <strong>Neither is a parameter or a statistic</strong>, because neither is a numerical summary of a variable. <em>Example: in the commute study n = 120 and N = 1,842. Neither number tells you what proportion take the bus — that is the parameter, and it is still unknown.</em></p>
+<div class="note teal"><span class="lbl">Memory hook</span><p><strong>P</strong>opulation → <strong>P</strong>arameter.  <strong>S</strong>ample → <strong>S</strong>tatistic.</p></div>
+<h3>Types of variable</h3>
+<p><strong>Categorical (qualitative)</strong> — values are category names or group labels. <em>Example: travel mode (bus, car, walk, bike); eye colour; a yes/no answer.</em></p>
+<p><strong>Quantitative (numerical)</strong> — numerical values for a measured or counted quantity, generally with <strong>units of measure</strong>. <em>Example: journey time in minutes; number of siblings; height in centimetres.</em></p>
+<p><strong>Discrete</strong> — countable. Things you <em>count</em>. <em>Example: number of vehicle changes — 0, 1, 2. Never 1.4.</em></p>
+<p><strong>Continuous</strong> — any value in an interval. Things you <em>measure</em>. <em>Example: journey time — 24 minutes, or 24.6, or 24.61.</em></p>
+<div class="note amber"><span class="lbl">The digits test</span><p>A variable written with digits is not automatically quantitative. Does it have <strong>units</strong>? Does <strong>arithmetic on it mean anything</strong>? If not — ZIP code, room number, shirt number, phone number, a 1/0 code for yes/no — it is categorical.</p></div>
+<div class="note amber"><span class="lbl">Discrete or continuous describes the variable, not its summaries</span><p>Number of vehicle changes is discrete, yet the mean number of changes could be 1.4. No student changed 1.4 vehicles — 1.4 is a property of the data set, not a value the variable can take. The same point returns in Unit 2, where a discrete random variable routinely has a non-whole expected value.</p></div>
+<h3>Frequency calculations</h3>
+<p>Let <strong>n</strong> be the sample size and <strong>f</strong> the count in one category.</p>
+<div class="tbl"><table><thead><tr><th>Quantity</th><th>Symbol</th><th>Formula</th><th>Example (f = 84, n = 300)</th></tr></thead><tbody><tr><td>Frequency</td><td><em>f</em></td><td>the count itself</td><td>84</td></tr><tr><td>Relative frequency</td><td><em>rf</em></td><td>f ÷ n</td><td>84 ÷ 300 = 0.280</td></tr><tr><td>Percentage</td><td><em>100rf</em></td><td>(f ÷ n) × 100</td><td>0.280 × 100 = 28.0%</td></tr></tbody></table></div>
+<p><strong>Self-checks:</strong> Σ*f* = <em>n</em> · Σ*rf* = 1 · Σ*100rf* = 100%</p>
+<p><strong>Frequency table</strong> — the <strong>count</strong> in each category. <em>Example: St Mary's 84, Riverside 71, … totalling 300.</em></p>
+<p><strong>Relative frequency table</strong> — the <strong>proportion</strong> in each category. Must total 1. <em>Example: St Mary's 0.280, Riverside 0.237, … totalling 1.000.</em></p>
+<div class="note amber"><span class="lbl">Percentages of the same total are added, never averaged</span><p>If espresso is 23.0% of orders and tea is 19.0%, together they are <strong>42.0%</strong> — not 21.0%. Averaging percentages is the commonest arithmetic error with these tables.</p></div>
+<div class="note amber"><span class="lbl">Relative frequency always depends on n</span><p>Drop a category and the total falls, so every remaining percentage rises. A 6% category is not "too small to matter" — removing it changes every other figure in the column.</p></div>
+<div class="note red"><span class="lbl">Extension, not examined — cumulative columns</span><div class="tbl"><table><thead><tr><th>Quantity</th><th>Symbol</th><th>Formula</th><th>Example (nights stayed, n = 300)</th></tr></thead><tbody><tr><td>Cumulative frequency</td><td><em>cf</em></td><td>running total of f</td><td>96, then 96 + 84 = 180, …</td></tr><tr><td>Cumulative relative frequency</td><td><em>crf</em></td><td>cf ÷ n</td><td>180 ÷ 300 = 0.600</td></tr><tr><td>Cumulative percentage</td><td><em>100crf</em></td><td>(cf ÷ n) × 100</td><td>0.600 × 100 = 60.0%</td></tr></tbody></table></div>
+<p><strong>Self-checks:</strong> last <em>cf</em> = <em>n</em> · last <em>crf</em> = 1.</p>
+<p><strong>Cumulative columns need ordered categories.</strong> "This category or below" only means something if the categories line up. Nights stayed (1, 2, 3, 4, 5+) can be cumulated. Hospital names cannot — <em>"Riverside or fewer"</em> is not a sentence.</p></div>
+<hr>
+<hr>
+<h1>A note on cumulative frequency and the exam</h1>
+<p>Cumulative frequency, cumulative relative frequency and <strong>cumulative relative frequency plots (ogives)</strong> do <strong>not</strong> appear anywhere in the descriptive statistics of the CED effective Fall 2026. The only occurrence of "cumulative" in all 244 pages is <em>cumulative probability distribution</em>, in topic 2.8 — a probability topic, not a data-display one.</p>
+<p>Barron's teaches ogives across roughly a dozen pages, including as a Unit 1 display. 5 Steps mentions cumulative frequency only in passing.</p>
+<p><strong>What this means practically.</strong> Teach the cumulative formulas if the student finds them useful — they make "or fewer" questions immediate and they are needed to read Barron's without confusion. But do not spend session time on constructing or interpreting ogives, and tell the student plainly that it will not be examined.</p>
+<div class="note red"><span class="lbl">On the removed-topics register</span><p>Ogives and cumulative frequency are the seventh entry on the removed-topics register (STANDARDS.md §8), alongside inference for slopes, chi-square goodness-of-fit, geometric distributions, transformations to achieve linearity, influential points and leverage, and the Investigative Task.</p></div>
+<hr>
+<hr>
+<h1>Converting the remaining nineteen sessions</h1>
+<p>The activities in the master plan come from the CED's Sample Instructional Activities, which assume a class. The one exception is the first, <em>Population or Sample?</em>, which the plan adapted itself because the CED gives no activity for topics 1.1–1.3. Ten work one-to-one essentially unchanged — they were already pair activities. The rest need substitution.</p>
+<p>Two moves cover almost all of it: <strong>you take the opposing position</strong>, or <strong>you produce deliberately flawed work and the student marks it</strong>.</p>
+<div class="tbl"><table><thead><tr><th>#</th><th>Classroom activity</th><th>One-to-one version</th></tr></thead><tbody><tr><td>1</td><td>Population or Sample? <em>(groups of 4)</em></td><td><strong>Challenge Sort</strong> — student sorts aloud, you argue the opposite side each time</td></tr><tr><td>2</td><td>Gallery Walk <em>(4 groups, 4 displays)</em></td><td><strong>Build &amp; Defend</strong> — student builds all four displays, then you ask which best answers each of three questions</td></tr><tr><td>3</td><td>Match Mine <em>(pairs, screen between)</em></td><td>Works as-is. You describe, student sketches unseen; then swap</td></tr><tr><td>4</td><td>Sketch and Switch <em>(pairs swap)</em></td><td><strong>Sketch and Critique</strong> — you sketch one with a deliberate error and they find it</td></tr><tr><td>5</td><td>Reversing Interpretations <em>(pairs)</em></td><td>Works as-is. You supply the residual and equation</td></tr><tr><td>6</td><td>Odd One Out <em>(groups of 4)</em></td><td>Student sorts four studies aloud and justifies; you add a fifth card mid-task</td></tr><tr><td>7</td><td>Password-Style Game <em>(pairs)</em></td><td>Works as-is. Alternate who gives clues</td></tr><tr><td>8</td><td>Quiz-Quiz-Trade <em>(class circulation)</em></td><td><strong>Card Author</strong> — student <em>writes</em> the question cards; you answer some wrong on purpose and they mark you</td></tr><tr><td>9</td><td>Think-Pair-Share <em>(pairs)</em></td><td><strong>Think-Aloud</strong> — student names the formula for each of the five, narrating the reasoning</td></tr><tr><td>10</td><td>Independent or Mutually Exclusive? sort</td><td>Works as-is. Probe every answer, including the right ones</td></tr><tr><td>11</td><td>Predict and Confirm <em>(neighbour talk)</em></td><td>Student writes the prediction down <strong>before</strong> running the simulation</td></tr><tr><td>12</td><td>Reversing Interpretations <em>(pairs, 4 curves)</em></td><td>Works as-is</td></tr><tr><td>13</td><td>The Scribe and the Calculator <em>(pairs)</em></td><td>Works as-is, and is excellent one-to-one. Take the two roles, then swap</td></tr><tr><td>14</td><td>Sentence Starters</td><td>Works as-is. You supply flawed conclusion sentences to repair</td></tr><tr><td>15</td><td>Consequences Sort <em>(groups)</em></td><td>Student ranks the six scenarios; you take the opposing view on two</td></tr><tr><td>16</td><td>Error Analysis <em>(pairs, 20 sets)</em></td><td>Works as-is. Time it — twenty in eight minutes builds exam pace</td></tr><tr><td>17</td><td>Homogeneity or Independence? sort</td><td>Works as-is</td></tr><tr><td>18</td><td>Quick Write <em>(whole class)</em></td><td>Works as-is. Two minutes, no notes, pen down at time</td></tr><tr><td>19</td><td>Round Table <em>(groups of 4)</em></td><td><strong>Mark My Work</strong> — student does problem 1; you do problem 2 with a planted error; they mark yours</td></tr><tr><td>20</td><td>Graphic Organizer <em>(teams)</em></td><td>Student builds the flowchart alone; you stress-test it with edge cases</td></tr></tbody></table></div>
+<p><strong>Work unchanged:</strong> 3, 5, 7, 10, 12, 13, 14, 16, 17, 18. <strong>Need substitution:</strong> 1, 2, 4, 6, 8, 9, 11, 15, 19, 20.</p>
+<h3>Two things to carry through every session</h3>
+<div class="note teal"><span class="lbl">Carry through every session · 1</span><p><strong>Diagnose before you teach.</strong> Open every session with two or three questions establishing what is already there. The plan's per-session content is a menu, not a script.</p></div>
+<div class="note amber"><span class="lbl">Carry through every session · 2</span><p><strong>Protect the talk ratio.</strong> The student should be talking at least half of every session. Four minutes of unbroken explanation from you is the signal to stop and ask something.</p></div>
+<hr>
+<p><em>CED references: Topic 1.1 (1.1.A.1–6, 1.1.B.1–2), Topic 1.2 (1.2.A.1–5, 1.2.B.1–2, 1.2.C.1–2), Topic 1.3 (1.3.A.1–2, 1.3.B.1–2); census from 1.10.B.1. Course and Exam Description effective Fall 2026.</em></p>
+<p><em>Supporting reading: Barron's pdf 79–83 · Princeton Review 99–104 · 5 Steps to a 5 53–58.</em></p>
 </main>
 <script>window.COURSE_NAV={"kicker": "CED 1.1–1.3", "title": "Session 1, One to One", "map": [{"label": "Course", "items": [{"href": "index.html", "label": "Home", "current": false}, {"href": "plan.html", "label": "The 20-hour plan", "current": false}]}, {"label": "Block A · Describing one variable", "items": [{"href": "s01-tutor.html", "label": "Session 1 · Tutor", "current": true}, {"href": "s01-student.html", "label": "Session 1 · Student", "current": false}, {"href": "s01-test.html", "label": "Session 1 · Test", "current": false}, {"href": "s02-tutor.html", "label": "Session 2 · Tutor", "current": false}, {"href": "s02-student.html", "label": "Session 2 · Student", "current": false}, {"href": "s02-test.html", "label": "Session 2 · Test", "current": false}, {"href": "s03-tutor.html", "label": "Session 3 · Tutor", "current": false}, {"href": "s03-student.html", "label": "Session 3 · Student", "current": false}, {"href": "s03-test.html", "label": "Session 3 · Test", "current": false}]}, {"label": "Block B · Describing two variables", "items": [{"href": "s04-tutor.html", "label": "Session 4 · Tutor", "current": false}, {"href": "s04-student.html", "label": "Session 4 · Student", "current": false}, {"href": "s04-test.html", "label": "Session 4 · Test", "current": false}]}, {"label": "Interactive", "items": [{"href": "tools/unit1-explorer.html", "label": "Unit 1 Explorer", "current": false}, {"href": "tools/boxplot-builder.html", "label": "Boxplot Builder", "current": false}, {"href": "tools/guess-correlation.html", "label": "Guess the Correlation", "current": false}]}], "prev": {"href": "plan.html", "label": "The 20-hour plan"}, "next": {"href": "s01-student.html", "label": "Session 1 · Student"}, "variants": [{"href": "s01-tutor.html", "label": "Tutor", "current": true}, {"href": "s01-student.html", "label": "Student", "current": false}, {"href": "s01-test.html", "label": "Test", "current": false}]};</script>
 <script src="assets/course.js"></script>

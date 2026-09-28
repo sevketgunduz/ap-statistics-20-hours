@@ -672,20 +672,20 @@ One mark per question. **Total 22.**
 
 ## What each miss points to
 
-| Missed | The gap | Where to reteach |
-|---|---|---|
-| 1 | The quartile convention, or the five-number summary confused with the boxplot | Session 3, *Position: the quartiles, and the convention* and *One quartile convention, used everywhere* |
-| 2, 3, 21 | The fence as a cut-off, the whisker as a data value, and the two outlier rules | Session 3, *The outlier test, as promised* and *Building the boxplot*; the Boxplot Builder |
-| 4 | Percentiles are "less than **or equal to**", and Q3 is only approximately the 75th | Session 3, the percentile question in Scenario A |
-| 5, 6 | Resistance: which summaries move, and which to report for skewed data | Session 3, *Resistance: move the outlier*; the Boxplot Builder with journey 25 |
-| 7, 8 | Changing units: multiplying changes centre and spread, adding changes only the centre | Session 3, *Changing units (1.7.C)*, including the °C to °F example |
-| 9, 10 | The SD is a typical distance **from the mean**, which the range cannot see | Session 3, *Spread: three measures* and *The standard deviation, by hand (1.7.B)* |
-| 11, 16 | Mean and median follow the tail; outliers pull the mean too | Session 3, *Centre: two numbers, one question* and *Shape from numbers alone* |
-| 12 | Boxplots hide clusters, gaps and peaks | Session 3, the Match Mine debrief and the E–F lookalike figure |
-| 13, 22 | Two descriptions are not a comparison; outliers are not variability | Session 3, *Write the comparison* and *A second comparison, from a summary table alone* |
-| 14, 17 | Justifying a claim with positions, and what observational data cannot show | Session 3, *Justify a claim (1.9.C)* |
-| 15 | Whisker and box length show spread, not count | Session 3, *Building the boxplot*, "one misreading to prevent now" |
-| 18, 19, 20 | z-scores: scaling by σ, working backwards, and reading the sign in context | Session 3, *Relative position: z-scores (1.9.D–E)* |
+| Missed | The gap | Theory to reread | Where it is applied |
+|---|---|---|---|
+| 1 | The quartile convention, or the five-number summary confused with the boxplot | *Quartiles and percentiles (1.7.A)* | *Position: the quartiles, and the convention* and *One quartile convention, used everywhere* |
+| 2, 3, 21 | The fence as a cut-off, the whisker as a data value, and the two outlier rules | *The two outlier rules (1.7.D)* | *The outlier test, as promised* and *Building the boxplot*; the Boxplot Builder |
+| 4 | Percentiles are "less than **or equal to**", and Q3 is only approximately the 75th | *Quartiles and percentiles (1.7.A)* | the percentile question in Scenario A |
+| 5, 6 | Resistance: which summaries move, and which to report for skewed data | *Resistant and nonresistant statistics (1.7.F)* | *Resistance: move the outlier*; the Boxplot Builder with journey 25 |
+| 7, 8 | Changing units: multiplying changes centre and spread, adding changes only the centre | *What a change of units does to each summary (1.7.C)* | *Changing units (1.7.C)*, including the °C to °F example |
+| 9, 10 | The SD is a typical distance **from the mean**, which the range cannot see | *The standard deviation and the variance (1.7.B)* | *Spread: three measures* and *The standard deviation, by hand (1.7.B)* |
+| 11, 16 | Mean and median follow the tail; outliers pull the mean too | *How the mean and median reveal shape (1.8.B)* | *Centre: two numbers, one question* and *Shape from numbers alone* |
+| 12 | Boxplots hide clusters, gaps and peaks | *What a boxplot draws: the five-number summary (1.8.A)* | the Match Mine debrief and the E–F lookalike figure |
+| 13, 22 | Two descriptions are not a comparison; outliers are not variability | *What a comparison must contain (1.7.E, 1.9.A–B)* | *Write the comparison* and *A second comparison, from a summary table alone* |
+| 14, 17 | Justifying a claim with positions, and what observational data cannot show | *What summaries and graphs can justify (1.7.F.2, 1.9.C)* | *Justify a claim (1.9.C)* |
+| 15 | Whisker and box length show spread, not count | *What a boxplot draws: the five-number summary (1.8.A)* | *Building the boxplot*, "one misreading to prevent now" |
+| 18, 19, 20 | z-scores: scaling by σ, working backwards, and reading the sign in context | *The standardised score, z (1.9.D–E)* | *Relative position: z-scores (1.9.D–E)* |
 
 > **Three misses worth treating as urgent.** **Question 13, option (A)**, two correct descriptions offered as a comparison, is the most common way to lose the comparison mark on free-response question 1. **Question 6 or 5** shows whether resistance is understood as a mechanism or only as a word, and choosing between the mean and the median comes back in every later unit. **Question 18, option (B)**, is the raw-distance error. Every test statistic in Units 3 and 4 is a z-score or a *t*-score, so a student who does not yet divide by the standard deviation will find inference opaque.
 
