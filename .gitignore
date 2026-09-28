@@ -7,3 +7,9 @@
 !/.github/
 !/.gitignore
 !/*.md
+# The session-builder agent and the /build-session command travel with the
+# repository; everything else under .claude/ (local settings, launch config) stays local.
+!/.claude/
+/.claude/*
+!/.claude/agents/
+!/.claude/skills/

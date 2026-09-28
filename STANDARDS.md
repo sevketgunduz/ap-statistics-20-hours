@@ -30,7 +30,8 @@ This is the contract every session must satisfy. Agree it once; then sessions 3�
     build.py                   markdown + directives -> site/
     assets/course.css          the only stylesheet
     assets/course.js           the only script (sidebar, nav, theme, keys)
-    tools/*.html               simulation sources
+    fragments/*.html           simulation sources (tools), wrapped by build.py
+    datasets.json              every registered data set
   site/                        GENERATED — never edit by hand
 ```
 
@@ -65,22 +66,38 @@ Authors must not re-implement any of these, and must not add a second stylesheet
 
 1. **Orientation** — where the session sits, learning objectives table (code · objective · skill), timing table with who talks.
 2. **Homework debrief** (sessions 2+) — the two lists, plus the two named errors most likely from the previous sheet.
-3. **Diagnostic** — 3–4 questions with a branch table: *what you hear → what it means → where to start.*
-4. **Scenario A** — worked via `:::script` ask/listen/if-say lines. Terms introduced as they arise, never front-loaded.
-5. **Activity** — the one-to-one conversion of the CED's Sample Instructional Activity for that topic.
-6. **Scenario B** — second worked context, carrying a different trap from A.
-7. **Solo case** — student works unaided while the tutor stays silent; answers given, plus "watch for".
-8. **Teach it back** — student explains aloud; what a good answer contains.
-9. **Homework + answer key** with mark allocations and teacher notes on likely wrong answers.
-10. **Reference sheet** — every term with an example.
+3. **Diagnostic** — 3–4 questions with a branch table: *what you hear → what it means → where to start.* These test what the student already knows, so they may come before the theory.
+4. **Theory** — every concept the session teaches, stated **before any example or activity** (§3.1).
+5. **Scenario A** — worked via `:::script` ask/listen/if-say lines, applying the theory to data. `intro` lines point back to the theory subsection they use; they never introduce a concept for the first time.
+6. **Activity** — the one-to-one conversion of the CED's Sample Instructional Activity for that topic.
+7. **Scenario B** — second worked context, carrying a different trap from A.
+8. **Solo case** — student works unaided while the tutor stays silent; answers given, plus "watch for".
+9. **Teach it back** — student explains aloud; what a good answer contains.
+10. **Homework + answer key** with mark allocations and teacher notes on likely wrong answers.
+11. **Reference sheet** — every term with an example.
+
+### 3.1 The theory section
+
+Theory comes first; examples and activities apply it. The section is one H2, *Theory — …* naming the session's content, with one H3 per concept or tight group of concepts. Each subsection gives, in this order:
+
+1. **The CED code and the concept's name**, in the heading, e.g. *The interquartile range (1.7.B)*.
+2. **The definition or rule**, faithful to the CED's essential knowledge. Paraphrase is fine; changing the meaning is not.
+3. **The formula**, in a `:::formula` block, where one exists, with every symbol defined.
+4. **Why it matters and what it does not say**: its properties, its limits, and the misreading students make, in a sentence or two each.
+5. **At most one abstract illustration** — a tiny made-up case such as "for 2, 4, 9 …" that shows the rule working. No context, no scenario data, no activity: those belong to the scenarios.
+
+Nothing in the scenarios, activity, solo case or homework may rely on a concept the theory section has not stated. The one exception is a named retrieval check from an earlier session's theory. Off-syllabus content stays out of the theory section; it goes in a red extension block where it is relevant.
+
+The reference sheet at the end is not a second theory section. It is the revision page: every term with a **concrete example from the session's scenarios**, headed in its own words (§4, heading rules).
 
 ### Student workbook
 
-Same seven parts, same scenarios, same order, plus a mapping table to the tutor's clock sections. Differences:
+The same parts, same scenarios and same order, plus a mapping table to the tutor's clock sections. The theory part comes before the first scenario, exactly as in the tutor script. Differences:
 
 - **Write-first rule** stated at the top, and honoured: every `:::yourturn` is followed by a `:::reveal`, never by the answer in plain text.
 - **Anything the student must construct is hidden.** A finished graph visible on the page destroys the exercise.
 - Diagnostic becomes **self-scoring**: a table saying what each possible answer means.
+- The theory part is **read, not revealed**: it is the one part with no `:::yourturn`, because the student needs it in full before the first task. It may end with short self-check questions, each followed by a `:::reveal`.
 - Timing is **longer than the tutor's** — about a quarter longer for the same content, because working alone with a pen is slower, and promising the tutor's time makes students skip the writing. Neither document is capped at 60 minutes (§0.6).
 - Homework and reference sheet are **identical to the tutor copy**. One version of the marking, one version of the revision page.
 
@@ -135,6 +152,8 @@ Plus standard markdown: headings, tables, blockquotes, lists, `- [ ]` checklists
 - **A heading names what is under it.** "Part 3", "Working through it" and "More practice" say nothing on their own; add the content: *Part 3 — The commute times, summarised*.
 
 `build.py` enforces the first rule and fails with **INDISTINCT HEADINGS** naming each clash. The other two are for the author to judge.
+
+**Heading colours.** Each heading level has its own colour, set once in `course.css` as `--h1` to `--h4`, with separate light and dark values: H1 navy, H2 violet, H3 blue, H4 plum. The colours show **level only**. They are chosen away from teal, amber and red so they never compete with the tone rules above. Every value meets 4.5:1 contrast on every surface it can sit on, in both themes. Authors never colour a heading by hand; they pick the right level.
 
 ---
 

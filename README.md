@@ -15,6 +15,7 @@ Course and Exam Description effective Fall 2026.
 | `build/assets/` | Source stylesheet and script, copied into `site/assets/` |
 | `Session-*.md` | Course documents: tutor notes, student workbooks, tests |
 | `STANDARDS.md` | House style and authoring conventions |
+| `SESSION-DEVELOPMENT-GUIDE.md` | How the next session is built, reviewed, tested and published; conventions carried between sessions |
 
 ## Rebuilding after an edit
 
