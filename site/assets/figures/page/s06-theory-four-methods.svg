@@ -1,0 +1,257 @@
+<svg viewBox="0 0 760 482" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The same 40 individuals, in 5 rows of 8, sampled four ways with n = 10. Simple random sample: any 10. Stratified: the rows are strata, 2 chosen at random from every row. Cluster: the columns are clusters, every individual in 2 randomly chosen columns. Systematic: numbered 1 to 40, random start 3, then every 4th." font-family="Public Sans, system-ui, sans-serif">
+<style>
+  .ink { fill: var(--ink, #15201f); }
+  .ink2 { fill: var(--ink-2, #4a5654); }
+  .ink3 { fill: var(--ink-3, #6f7b79); }
+  .kink { stroke: var(--ink, #15201f); }
+  .kink2 { stroke: var(--ink-2, #4a5654); }
+  .kink3 { stroke: var(--ink-3, #6f7b79); }
+  .axis { stroke: var(--rule-strong, #c3c9c6); }
+  .grid { stroke: var(--rule, #dcdfdd); }
+  .surf { fill: var(--surface, #ffffff); }
+  .band { fill: var(--surface-2, #eef1ef); }
+  .acc { fill: var(--accent, #1a6b63); }
+  .kacc { stroke: var(--accent, #1a6b63); }
+  .amb { fill: var(--amber, #7d5a11); }
+  .kamb { stroke: var(--amber, #7d5a11); }
+  .s0 { fill: var(--s1, #2a78d6); }
+  .k0 { stroke: var(--s1, #2a78d6); }
+  .s1 { fill: var(--s2, #eb6834); }
+  .k1 { stroke: var(--s2, #eb6834); }
+  .s2 { fill: var(--s3, #1baf7a); }
+  .k2 { stroke: var(--s3, #1baf7a); }
+  .s3 { fill: var(--s4, #eda100); }
+  .k3 { stroke: var(--s4, #eda100); }
+  .s4 { fill: var(--s5, #e87ba4); }
+  .k4 { stroke: var(--s5, #e87ba4); }
+  .s5 { fill: var(--s6, #008300); }
+  .k5 { stroke: var(--s6, #008300); }
+</style>
+<rect class="band" x="8.0" y="6.0" width="370.0" height="231.0" rx="4" fill="#eef1ef" stroke="none" stroke-width="1.2"/>
+<text class="ink" x="22.0" y="28.0" font-size="13.5" font-weight="600" text-anchor="start" fill="#15201f">Simple random sample</text>
+<text class="ink2" x="22.0" y="46.0" font-size="11.5" font-weight="400" text-anchor="start" fill="#4a5654">any 10 of the 40; every set of 10 equally likely</text>
+<circle class="k0" cx="84.0" cy="80.0" r="10.5" fill="none" stroke="#2a78d6" stroke-width="1.4" opacity="0.55"/>
+<circle class="s0" cx="118.0" cy="80.0" r="11.5" fill="#2a78d6" stroke="none" stroke-width="1.4"/>
+<circle class="k0" cx="152.0" cy="80.0" r="10.5" fill="none" stroke="#2a78d6" stroke-width="1.4" opacity="0.55"/>
+<circle class="k0" cx="186.0" cy="80.0" r="10.5" fill="none" stroke="#2a78d6" stroke-width="1.4" opacity="0.55"/>
+<circle class="k0" cx="220.0" cy="80.0" r="10.5" fill="none" stroke="#2a78d6" stroke-width="1.4" opacity="0.55"/>
+<circle class="s0" cx="254.0" cy="80.0" r="11.5" fill="#2a78d6" stroke="none" stroke-width="1.4"/>
+<circle class="s0" cx="288.0" cy="80.0" r="11.5" fill="#2a78d6" stroke="none" stroke-width="1.4"/>
+<circle class="k0" cx="322.0" cy="80.0" r="10.5" fill="none" stroke="#2a78d6" stroke-width="1.4" opacity="0.55"/>
+<circle class="k1" cx="84.0" cy="114.0" r="10.5" fill="none" stroke="#eb6834" stroke-width="1.4" opacity="0.55"/>
+<circle class="k1" cx="118.0" cy="114.0" r="10.5" fill="none" stroke="#eb6834" stroke-width="1.4" opacity="0.55"/>
+<circle class="k1" cx="152.0" cy="114.0" r="10.5" fill="none" stroke="#eb6834" stroke-width="1.4" opacity="0.55"/>
+<circle class="s1" cx="186.0" cy="114.0" r="11.5" fill="#eb6834" stroke="none" stroke-width="1.4"/>
+<circle class="k1" cx="220.0" cy="114.0" r="10.5" fill="none" stroke="#eb6834" stroke-width="1.4" opacity="0.55"/>
+<circle class="k1" cx="254.0" cy="114.0" r="10.5" fill="none" stroke="#eb6834" stroke-width="1.4" opacity="0.55"/>
+<circle class="k1" cx="288.0" cy="114.0" r="10.5" fill="none" stroke="#eb6834" stroke-width="1.4" opacity="0.55"/>
+<circle class="k1" cx="322.0" cy="114.0" r="10.5" fill="none" stroke="#eb6834" stroke-width="1.4" opacity="0.55"/>
+<circle class="s2" cx="84.0" cy="148.0" r="11.5" fill="#1baf7a" stroke="none" stroke-width="1.4"/>
+<circle class="k2" cx="118.0" cy="148.0" r="10.5" fill="none" stroke="#1baf7a" stroke-width="1.4" opacity="0.55"/>
+<circle class="k2" cx="152.0" cy="148.0" r="10.5" fill="none" stroke="#1baf7a" stroke-width="1.4" opacity="0.55"/>
+<circle class="k2" cx="186.0" cy="148.0" r="10.5" fill="none" stroke="#1baf7a" stroke-width="1.4" opacity="0.55"/>
+<circle class="k2" cx="220.0" cy="148.0" r="10.5" fill="none" stroke="#1baf7a" stroke-width="1.4" opacity="0.55"/>
+<circle class="k2" cx="254.0" cy="148.0" r="10.5" fill="none" stroke="#1baf7a" stroke-width="1.4" opacity="0.55"/>
+<circle class="k2" cx="288.0" cy="148.0" r="10.5" fill="none" stroke="#1baf7a" stroke-width="1.4" opacity="0.55"/>
+<circle class="s2" cx="322.0" cy="148.0" r="11.5" fill="#1baf7a" stroke="none" stroke-width="1.4"/>
+<circle class="k3" cx="84.0" cy="182.0" r="10.5" fill="none" stroke="#eda100" stroke-width="1.4" opacity="0.55"/>
+<circle class="k3" cx="118.0" cy="182.0" r="10.5" fill="none" stroke="#eda100" stroke-width="1.4" opacity="0.55"/>
+<circle class="s3" cx="152.0" cy="182.0" r="11.5" fill="#eda100" stroke="none" stroke-width="1.4"/>
+<circle class="k3" cx="186.0" cy="182.0" r="10.5" fill="none" stroke="#eda100" stroke-width="1.4" opacity="0.55"/>
+<circle class="s3" cx="220.0" cy="182.0" r="11.5" fill="#eda100" stroke="none" stroke-width="1.4"/>
+<circle class="k3" cx="254.0" cy="182.0" r="10.5" fill="none" stroke="#eda100" stroke-width="1.4" opacity="0.55"/>
+<circle class="s3" cx="288.0" cy="182.0" r="11.5" fill="#eda100" stroke="none" stroke-width="1.4"/>
+<circle class="k3" cx="322.0" cy="182.0" r="10.5" fill="none" stroke="#eda100" stroke-width="1.4" opacity="0.55"/>
+<circle class="k4" cx="84.0" cy="216.0" r="10.5" fill="none" stroke="#e87ba4" stroke-width="1.4" opacity="0.55"/>
+<circle class="s4" cx="118.0" cy="216.0" r="11.5" fill="#e87ba4" stroke="none" stroke-width="1.4"/>
+<circle class="k4" cx="152.0" cy="216.0" r="10.5" fill="none" stroke="#e87ba4" stroke-width="1.4" opacity="0.55"/>
+<circle class="k4" cx="186.0" cy="216.0" r="10.5" fill="none" stroke="#e87ba4" stroke-width="1.4" opacity="0.55"/>
+<circle class="k4" cx="220.0" cy="216.0" r="10.5" fill="none" stroke="#e87ba4" stroke-width="1.4" opacity="0.55"/>
+<circle class="k4" cx="254.0" cy="216.0" r="10.5" fill="none" stroke="#e87ba4" stroke-width="1.4" opacity="0.55"/>
+<circle class="k4" cx="288.0" cy="216.0" r="10.5" fill="none" stroke="#e87ba4" stroke-width="1.4" opacity="0.55"/>
+<circle class="k4" cx="322.0" cy="216.0" r="10.5" fill="none" stroke="#e87ba4" stroke-width="1.4" opacity="0.55"/>
+<rect class="band" x="390.0" y="6.0" width="370.0" height="231.0" rx="4" fill="#eef1ef" stroke="none" stroke-width="1.2"/>
+<text class="ink" x="404.0" y="28.0" font-size="13.5" font-weight="600" text-anchor="start" fill="#15201f">Stratified random sample</text>
+<text class="ink2" x="404.0" y="46.0" font-size="11.5" font-weight="400" text-anchor="start" fill="#4a5654">rows are strata: an SRS of 2 inside every row</text>
+<text class="ink3" x="446.0" y="84.0" font-size="10" font-weight="400" text-anchor="end" fill="#6f7b79" font-family="IBM Plex Mono, monospace">stratum 1</text>
+<circle class="k0" cx="466.0" cy="80.0" r="10.5" fill="none" stroke="#2a78d6" stroke-width="1.4" opacity="0.55"/>
+<circle class="k0" cx="500.0" cy="80.0" r="10.5" fill="none" stroke="#2a78d6" stroke-width="1.4" opacity="0.55"/>
+<circle class="s0" cx="534.0" cy="80.0" r="11.5" fill="#2a78d6" stroke="none" stroke-width="1.4"/>
+<circle class="k0" cx="568.0" cy="80.0" r="10.5" fill="none" stroke="#2a78d6" stroke-width="1.4" opacity="0.55"/>
+<circle class="k0" cx="602.0" cy="80.0" r="10.5" fill="none" stroke="#2a78d6" stroke-width="1.4" opacity="0.55"/>
+<circle class="k0" cx="636.0" cy="80.0" r="10.5" fill="none" stroke="#2a78d6" stroke-width="1.4" opacity="0.55"/>
+<circle class="s0" cx="670.0" cy="80.0" r="11.5" fill="#2a78d6" stroke="none" stroke-width="1.4"/>
+<circle class="k0" cx="704.0" cy="80.0" r="10.5" fill="none" stroke="#2a78d6" stroke-width="1.4" opacity="0.55"/>
+<text class="ink3" x="446.0" y="118.0" font-size="10" font-weight="400" text-anchor="end" fill="#6f7b79" font-family="IBM Plex Mono, monospace">stratum 2</text>
+<circle class="s1" cx="466.0" cy="114.0" r="11.5" fill="#eb6834" stroke="none" stroke-width="1.4"/>
+<circle class="k1" cx="500.0" cy="114.0" r="10.5" fill="none" stroke="#eb6834" stroke-width="1.4" opacity="0.55"/>
+<circle class="k1" cx="534.0" cy="114.0" r="10.5" fill="none" stroke="#eb6834" stroke-width="1.4" opacity="0.55"/>
+<circle class="k1" cx="568.0" cy="114.0" r="10.5" fill="none" stroke="#eb6834" stroke-width="1.4" opacity="0.55"/>
+<circle class="k1" cx="602.0" cy="114.0" r="10.5" fill="none" stroke="#eb6834" stroke-width="1.4" opacity="0.55"/>
+<circle class="s1" cx="636.0" cy="114.0" r="11.5" fill="#eb6834" stroke="none" stroke-width="1.4"/>
+<circle class="k1" cx="670.0" cy="114.0" r="10.5" fill="none" stroke="#eb6834" stroke-width="1.4" opacity="0.55"/>
+<circle class="k1" cx="704.0" cy="114.0" r="10.5" fill="none" stroke="#eb6834" stroke-width="1.4" opacity="0.55"/>
+<text class="ink3" x="446.0" y="152.0" font-size="10" font-weight="400" text-anchor="end" fill="#6f7b79" font-family="IBM Plex Mono, monospace">stratum 3</text>
+<circle class="k2" cx="466.0" cy="148.0" r="10.5" fill="none" stroke="#1baf7a" stroke-width="1.4" opacity="0.55"/>
+<circle class="k2" cx="500.0" cy="148.0" r="10.5" fill="none" stroke="#1baf7a" stroke-width="1.4" opacity="0.55"/>
+<circle class="k2" cx="534.0" cy="148.0" r="10.5" fill="none" stroke="#1baf7a" stroke-width="1.4" opacity="0.55"/>
+<circle class="s2" cx="568.0" cy="148.0" r="11.5" fill="#1baf7a" stroke="none" stroke-width="1.4"/>
+<circle class="s2" cx="602.0" cy="148.0" r="11.5" fill="#1baf7a" stroke="none" stroke-width="1.4"/>
+<circle class="k2" cx="636.0" cy="148.0" r="10.5" fill="none" stroke="#1baf7a" stroke-width="1.4" opacity="0.55"/>
+<circle class="k2" cx="670.0" cy="148.0" r="10.5" fill="none" stroke="#1baf7a" stroke-width="1.4" opacity="0.55"/>
+<circle class="k2" cx="704.0" cy="148.0" r="10.5" fill="none" stroke="#1baf7a" stroke-width="1.4" opacity="0.55"/>
+<text class="ink3" x="446.0" y="186.0" font-size="10" font-weight="400" text-anchor="end" fill="#6f7b79" font-family="IBM Plex Mono, monospace">stratum 4</text>
+<circle class="k3" cx="466.0" cy="182.0" r="10.5" fill="none" stroke="#eda100" stroke-width="1.4" opacity="0.55"/>
+<circle class="s3" cx="500.0" cy="182.0" r="11.5" fill="#eda100" stroke="none" stroke-width="1.4"/>
+<circle class="k3" cx="534.0" cy="182.0" r="10.5" fill="none" stroke="#eda100" stroke-width="1.4" opacity="0.55"/>
+<circle class="k3" cx="568.0" cy="182.0" r="10.5" fill="none" stroke="#eda100" stroke-width="1.4" opacity="0.55"/>
+<circle class="k3" cx="602.0" cy="182.0" r="10.5" fill="none" stroke="#eda100" stroke-width="1.4" opacity="0.55"/>
+<circle class="k3" cx="636.0" cy="182.0" r="10.5" fill="none" stroke="#eda100" stroke-width="1.4" opacity="0.55"/>
+<circle class="k3" cx="670.0" cy="182.0" r="10.5" fill="none" stroke="#eda100" stroke-width="1.4" opacity="0.55"/>
+<circle class="s3" cx="704.0" cy="182.0" r="11.5" fill="#eda100" stroke="none" stroke-width="1.4"/>
+<text class="ink3" x="446.0" y="220.0" font-size="10" font-weight="400" text-anchor="end" fill="#6f7b79" font-family="IBM Plex Mono, monospace">stratum 5</text>
+<circle class="k4" cx="466.0" cy="216.0" r="10.5" fill="none" stroke="#e87ba4" stroke-width="1.4" opacity="0.55"/>
+<circle class="k4" cx="500.0" cy="216.0" r="10.5" fill="none" stroke="#e87ba4" stroke-width="1.4" opacity="0.55"/>
+<circle class="s4" cx="534.0" cy="216.0" r="11.5" fill="#e87ba4" stroke="none" stroke-width="1.4"/>
+<circle class="k4" cx="568.0" cy="216.0" r="10.5" fill="none" stroke="#e87ba4" stroke-width="1.4" opacity="0.55"/>
+<circle class="k4" cx="602.0" cy="216.0" r="10.5" fill="none" stroke="#e87ba4" stroke-width="1.4" opacity="0.55"/>
+<circle class="s4" cx="636.0" cy="216.0" r="11.5" fill="#e87ba4" stroke="none" stroke-width="1.4"/>
+<circle class="k4" cx="670.0" cy="216.0" r="10.5" fill="none" stroke="#e87ba4" stroke-width="1.4" opacity="0.55"/>
+<circle class="k4" cx="704.0" cy="216.0" r="10.5" fill="none" stroke="#e87ba4" stroke-width="1.4" opacity="0.55"/>
+<rect class="band" x="8.0" y="247.0" width="370.0" height="231.0" rx="4" fill="#eef1ef" stroke="none" stroke-width="1.2"/>
+<text class="ink" x="22.0" y="269.0" font-size="13.5" font-weight="600" text-anchor="start" fill="#15201f">Cluster random sample</text>
+<text class="ink2" x="22.0" y="287.0" font-size="11.5" font-weight="400" text-anchor="start" fill="#4a5654">columns are clusters: all of 2 random columns</text>
+<text class="ink3" x="84.0" y="302.0" font-size="10" font-weight="400" text-anchor="middle" fill="#6f7b79" font-family="IBM Plex Mono, monospace">C1</text>
+<text class="ink3" x="118.0" y="302.0" font-size="10" font-weight="400" text-anchor="middle" fill="#6f7b79" font-family="IBM Plex Mono, monospace">C2</text>
+<text class="ink3" x="152.0" y="302.0" font-size="10" font-weight="400" text-anchor="middle" fill="#6f7b79" font-family="IBM Plex Mono, monospace">C3</text>
+<text class="ink3" x="186.0" y="302.0" font-size="10" font-weight="400" text-anchor="middle" fill="#6f7b79" font-family="IBM Plex Mono, monospace">C4</text>
+<text class="ink3" x="220.0" y="302.0" font-size="10" font-weight="400" text-anchor="middle" fill="#6f7b79" font-family="IBM Plex Mono, monospace">C5</text>
+<text class="ink3" x="254.0" y="302.0" font-size="10" font-weight="400" text-anchor="middle" fill="#6f7b79" font-family="IBM Plex Mono, monospace">C6</text>
+<text class="ink3" x="288.0" y="302.0" font-size="10" font-weight="400" text-anchor="middle" fill="#6f7b79" font-family="IBM Plex Mono, monospace">C7</text>
+<text class="ink3" x="322.0" y="302.0" font-size="10" font-weight="400" text-anchor="middle" fill="#6f7b79" font-family="IBM Plex Mono, monospace">C8</text>
+<rect class="kink" x="137.0" y="307.0" width="30.0" height="164.0" rx="6" fill="none" stroke="#15201f" stroke-width="1.6"/>
+<rect class="kink" x="239.0" y="307.0" width="30.0" height="164.0" rx="6" fill="none" stroke="#15201f" stroke-width="1.6"/>
+<circle class="k0" cx="84.0" cy="321.0" r="10.5" fill="none" stroke="#2a78d6" stroke-width="1.4" opacity="0.55"/>
+<circle class="k0" cx="118.0" cy="321.0" r="10.5" fill="none" stroke="#2a78d6" stroke-width="1.4" opacity="0.55"/>
+<circle class="s0" cx="152.0" cy="321.0" r="11.5" fill="#2a78d6" stroke="none" stroke-width="1.4"/>
+<circle class="k0" cx="186.0" cy="321.0" r="10.5" fill="none" stroke="#2a78d6" stroke-width="1.4" opacity="0.55"/>
+<circle class="k0" cx="220.0" cy="321.0" r="10.5" fill="none" stroke="#2a78d6" stroke-width="1.4" opacity="0.55"/>
+<circle class="s0" cx="254.0" cy="321.0" r="11.5" fill="#2a78d6" stroke="none" stroke-width="1.4"/>
+<circle class="k0" cx="288.0" cy="321.0" r="10.5" fill="none" stroke="#2a78d6" stroke-width="1.4" opacity="0.55"/>
+<circle class="k0" cx="322.0" cy="321.0" r="10.5" fill="none" stroke="#2a78d6" stroke-width="1.4" opacity="0.55"/>
+<circle class="k1" cx="84.0" cy="355.0" r="10.5" fill="none" stroke="#eb6834" stroke-width="1.4" opacity="0.55"/>
+<circle class="k1" cx="118.0" cy="355.0" r="10.5" fill="none" stroke="#eb6834" stroke-width="1.4" opacity="0.55"/>
+<circle class="s1" cx="152.0" cy="355.0" r="11.5" fill="#eb6834" stroke="none" stroke-width="1.4"/>
+<circle class="k1" cx="186.0" cy="355.0" r="10.5" fill="none" stroke="#eb6834" stroke-width="1.4" opacity="0.55"/>
+<circle class="k1" cx="220.0" cy="355.0" r="10.5" fill="none" stroke="#eb6834" stroke-width="1.4" opacity="0.55"/>
+<circle class="s1" cx="254.0" cy="355.0" r="11.5" fill="#eb6834" stroke="none" stroke-width="1.4"/>
+<circle class="k1" cx="288.0" cy="355.0" r="10.5" fill="none" stroke="#eb6834" stroke-width="1.4" opacity="0.55"/>
+<circle class="k1" cx="322.0" cy="355.0" r="10.5" fill="none" stroke="#eb6834" stroke-width="1.4" opacity="0.55"/>
+<circle class="k2" cx="84.0" cy="389.0" r="10.5" fill="none" stroke="#1baf7a" stroke-width="1.4" opacity="0.55"/>
+<circle class="k2" cx="118.0" cy="389.0" r="10.5" fill="none" stroke="#1baf7a" stroke-width="1.4" opacity="0.55"/>
+<circle class="s2" cx="152.0" cy="389.0" r="11.5" fill="#1baf7a" stroke="none" stroke-width="1.4"/>
+<circle class="k2" cx="186.0" cy="389.0" r="10.5" fill="none" stroke="#1baf7a" stroke-width="1.4" opacity="0.55"/>
+<circle class="k2" cx="220.0" cy="389.0" r="10.5" fill="none" stroke="#1baf7a" stroke-width="1.4" opacity="0.55"/>
+<circle class="s2" cx="254.0" cy="389.0" r="11.5" fill="#1baf7a" stroke="none" stroke-width="1.4"/>
+<circle class="k2" cx="288.0" cy="389.0" r="10.5" fill="none" stroke="#1baf7a" stroke-width="1.4" opacity="0.55"/>
+<circle class="k2" cx="322.0" cy="389.0" r="10.5" fill="none" stroke="#1baf7a" stroke-width="1.4" opacity="0.55"/>
+<circle class="k3" cx="84.0" cy="423.0" r="10.5" fill="none" stroke="#eda100" stroke-width="1.4" opacity="0.55"/>
+<circle class="k3" cx="118.0" cy="423.0" r="10.5" fill="none" stroke="#eda100" stroke-width="1.4" opacity="0.55"/>
+<circle class="s3" cx="152.0" cy="423.0" r="11.5" fill="#eda100" stroke="none" stroke-width="1.4"/>
+<circle class="k3" cx="186.0" cy="423.0" r="10.5" fill="none" stroke="#eda100" stroke-width="1.4" opacity="0.55"/>
+<circle class="k3" cx="220.0" cy="423.0" r="10.5" fill="none" stroke="#eda100" stroke-width="1.4" opacity="0.55"/>
+<circle class="s3" cx="254.0" cy="423.0" r="11.5" fill="#eda100" stroke="none" stroke-width="1.4"/>
+<circle class="k3" cx="288.0" cy="423.0" r="10.5" fill="none" stroke="#eda100" stroke-width="1.4" opacity="0.55"/>
+<circle class="k3" cx="322.0" cy="423.0" r="10.5" fill="none" stroke="#eda100" stroke-width="1.4" opacity="0.55"/>
+<circle class="k4" cx="84.0" cy="457.0" r="10.5" fill="none" stroke="#e87ba4" stroke-width="1.4" opacity="0.55"/>
+<circle class="k4" cx="118.0" cy="457.0" r="10.5" fill="none" stroke="#e87ba4" stroke-width="1.4" opacity="0.55"/>
+<circle class="s4" cx="152.0" cy="457.0" r="11.5" fill="#e87ba4" stroke="none" stroke-width="1.4"/>
+<circle class="k4" cx="186.0" cy="457.0" r="10.5" fill="none" stroke="#e87ba4" stroke-width="1.4" opacity="0.55"/>
+<circle class="k4" cx="220.0" cy="457.0" r="10.5" fill="none" stroke="#e87ba4" stroke-width="1.4" opacity="0.55"/>
+<circle class="s4" cx="254.0" cy="457.0" r="11.5" fill="#e87ba4" stroke="none" stroke-width="1.4"/>
+<circle class="k4" cx="288.0" cy="457.0" r="10.5" fill="none" stroke="#e87ba4" stroke-width="1.4" opacity="0.55"/>
+<circle class="k4" cx="322.0" cy="457.0" r="10.5" fill="none" stroke="#e87ba4" stroke-width="1.4" opacity="0.55"/>
+<rect class="band" x="390.0" y="247.0" width="370.0" height="231.0" rx="4" fill="#eef1ef" stroke="none" stroke-width="1.2"/>
+<text class="ink" x="404.0" y="269.0" font-size="13.5" font-weight="600" text-anchor="start" fill="#15201f">Systematic random sample</text>
+<text class="ink2" x="404.0" y="287.0" font-size="11.5" font-weight="400" text-anchor="start" fill="#4a5654">numbered 1 to 40: random start 3, then every 4th</text>
+<circle class="k0" cx="466.0" cy="321.0" r="10.5" fill="none" stroke="#2a78d6" stroke-width="1.4" opacity="0.55"/>
+<text class="ink3" x="466.0" y="324.6" font-size="9.5" font-weight="400" text-anchor="middle" fill="#6f7b79">1</text>
+<circle class="k0" cx="500.0" cy="321.0" r="10.5" fill="none" stroke="#2a78d6" stroke-width="1.4" opacity="0.55"/>
+<text class="ink3" x="500.0" y="324.6" font-size="9.5" font-weight="400" text-anchor="middle" fill="#6f7b79">2</text>
+<circle class="s0" cx="534.0" cy="321.0" r="11.5" fill="#2a78d6" stroke="none" stroke-width="1.4"/>
+<text class="surf" x="534.0" y="324.6" font-size="9.5" font-weight="600" text-anchor="middle" fill="#ffffff">3</text>
+<circle class="k0" cx="568.0" cy="321.0" r="10.5" fill="none" stroke="#2a78d6" stroke-width="1.4" opacity="0.55"/>
+<text class="ink3" x="568.0" y="324.6" font-size="9.5" font-weight="400" text-anchor="middle" fill="#6f7b79">4</text>
+<circle class="k0" cx="602.0" cy="321.0" r="10.5" fill="none" stroke="#2a78d6" stroke-width="1.4" opacity="0.55"/>
+<text class="ink3" x="602.0" y="324.6" font-size="9.5" font-weight="400" text-anchor="middle" fill="#6f7b79">5</text>
+<circle class="k0" cx="636.0" cy="321.0" r="10.5" fill="none" stroke="#2a78d6" stroke-width="1.4" opacity="0.55"/>
+<text class="ink3" x="636.0" y="324.6" font-size="9.5" font-weight="400" text-anchor="middle" fill="#6f7b79">6</text>
+<circle class="s0" cx="670.0" cy="321.0" r="11.5" fill="#2a78d6" stroke="none" stroke-width="1.4"/>
+<text class="surf" x="670.0" y="324.6" font-size="9.5" font-weight="600" text-anchor="middle" fill="#ffffff">7</text>
+<circle class="k0" cx="704.0" cy="321.0" r="10.5" fill="none" stroke="#2a78d6" stroke-width="1.4" opacity="0.55"/>
+<text class="ink3" x="704.0" y="324.6" font-size="9.5" font-weight="400" text-anchor="middle" fill="#6f7b79">8</text>
+<circle class="k1" cx="466.0" cy="355.0" r="10.5" fill="none" stroke="#eb6834" stroke-width="1.4" opacity="0.55"/>
+<text class="ink3" x="466.0" y="358.6" font-size="9.5" font-weight="400" text-anchor="middle" fill="#6f7b79">9</text>
+<circle class="k1" cx="500.0" cy="355.0" r="10.5" fill="none" stroke="#eb6834" stroke-width="1.4" opacity="0.55"/>
+<text class="ink3" x="500.0" y="358.6" font-size="9.5" font-weight="400" text-anchor="middle" fill="#6f7b79">10</text>
+<circle class="s1" cx="534.0" cy="355.0" r="11.5" fill="#eb6834" stroke="none" stroke-width="1.4"/>
+<text class="surf" x="534.0" y="358.6" font-size="9.5" font-weight="600" text-anchor="middle" fill="#ffffff">11</text>
+<circle class="k1" cx="568.0" cy="355.0" r="10.5" fill="none" stroke="#eb6834" stroke-width="1.4" opacity="0.55"/>
+<text class="ink3" x="568.0" y="358.6" font-size="9.5" font-weight="400" text-anchor="middle" fill="#6f7b79">12</text>
+<circle class="k1" cx="602.0" cy="355.0" r="10.5" fill="none" stroke="#eb6834" stroke-width="1.4" opacity="0.55"/>
+<text class="ink3" x="602.0" y="358.6" font-size="9.5" font-weight="400" text-anchor="middle" fill="#6f7b79">13</text>
+<circle class="k1" cx="636.0" cy="355.0" r="10.5" fill="none" stroke="#eb6834" stroke-width="1.4" opacity="0.55"/>
+<text class="ink3" x="636.0" y="358.6" font-size="9.5" font-weight="400" text-anchor="middle" fill="#6f7b79">14</text>
+<circle class="s1" cx="670.0" cy="355.0" r="11.5" fill="#eb6834" stroke="none" stroke-width="1.4"/>
+<text class="surf" x="670.0" y="358.6" font-size="9.5" font-weight="600" text-anchor="middle" fill="#ffffff">15</text>
+<circle class="k1" cx="704.0" cy="355.0" r="10.5" fill="none" stroke="#eb6834" stroke-width="1.4" opacity="0.55"/>
+<text class="ink3" x="704.0" y="358.6" font-size="9.5" font-weight="400" text-anchor="middle" fill="#6f7b79">16</text>
+<circle class="k2" cx="466.0" cy="389.0" r="10.5" fill="none" stroke="#1baf7a" stroke-width="1.4" opacity="0.55"/>
+<text class="ink3" x="466.0" y="392.6" font-size="9.5" font-weight="400" text-anchor="middle" fill="#6f7b79">17</text>
+<circle class="k2" cx="500.0" cy="389.0" r="10.5" fill="none" stroke="#1baf7a" stroke-width="1.4" opacity="0.55"/>
+<text class="ink3" x="500.0" y="392.6" font-size="9.5" font-weight="400" text-anchor="middle" fill="#6f7b79">18</text>
+<circle class="s2" cx="534.0" cy="389.0" r="11.5" fill="#1baf7a" stroke="none" stroke-width="1.4"/>
+<text class="surf" x="534.0" y="392.6" font-size="9.5" font-weight="600" text-anchor="middle" fill="#ffffff">19</text>
+<circle class="k2" cx="568.0" cy="389.0" r="10.5" fill="none" stroke="#1baf7a" stroke-width="1.4" opacity="0.55"/>
+<text class="ink3" x="568.0" y="392.6" font-size="9.5" font-weight="400" text-anchor="middle" fill="#6f7b79">20</text>
+<circle class="k2" cx="602.0" cy="389.0" r="10.5" fill="none" stroke="#1baf7a" stroke-width="1.4" opacity="0.55"/>
+<text class="ink3" x="602.0" y="392.6" font-size="9.5" font-weight="400" text-anchor="middle" fill="#6f7b79">21</text>
+<circle class="k2" cx="636.0" cy="389.0" r="10.5" fill="none" stroke="#1baf7a" stroke-width="1.4" opacity="0.55"/>
+<text class="ink3" x="636.0" y="392.6" font-size="9.5" font-weight="400" text-anchor="middle" fill="#6f7b79">22</text>
+<circle class="s2" cx="670.0" cy="389.0" r="11.5" fill="#1baf7a" stroke="none" stroke-width="1.4"/>
+<text class="surf" x="670.0" y="392.6" font-size="9.5" font-weight="600" text-anchor="middle" fill="#ffffff">23</text>
+<circle class="k2" cx="704.0" cy="389.0" r="10.5" fill="none" stroke="#1baf7a" stroke-width="1.4" opacity="0.55"/>
+<text class="ink3" x="704.0" y="392.6" font-size="9.5" font-weight="400" text-anchor="middle" fill="#6f7b79">24</text>
+<circle class="k3" cx="466.0" cy="423.0" r="10.5" fill="none" stroke="#eda100" stroke-width="1.4" opacity="0.55"/>
+<text class="ink3" x="466.0" y="426.6" font-size="9.5" font-weight="400" text-anchor="middle" fill="#6f7b79">25</text>
+<circle class="k3" cx="500.0" cy="423.0" r="10.5" fill="none" stroke="#eda100" stroke-width="1.4" opacity="0.55"/>
+<text class="ink3" x="500.0" y="426.6" font-size="9.5" font-weight="400" text-anchor="middle" fill="#6f7b79">26</text>
+<circle class="s3" cx="534.0" cy="423.0" r="11.5" fill="#eda100" stroke="none" stroke-width="1.4"/>
+<text class="surf" x="534.0" y="426.6" font-size="9.5" font-weight="600" text-anchor="middle" fill="#ffffff">27</text>
+<circle class="k3" cx="568.0" cy="423.0" r="10.5" fill="none" stroke="#eda100" stroke-width="1.4" opacity="0.55"/>
+<text class="ink3" x="568.0" y="426.6" font-size="9.5" font-weight="400" text-anchor="middle" fill="#6f7b79">28</text>
+<circle class="k3" cx="602.0" cy="423.0" r="10.5" fill="none" stroke="#eda100" stroke-width="1.4" opacity="0.55"/>
+<text class="ink3" x="602.0" y="426.6" font-size="9.5" font-weight="400" text-anchor="middle" fill="#6f7b79">29</text>
+<circle class="k3" cx="636.0" cy="423.0" r="10.5" fill="none" stroke="#eda100" stroke-width="1.4" opacity="0.55"/>
+<text class="ink3" x="636.0" y="426.6" font-size="9.5" font-weight="400" text-anchor="middle" fill="#6f7b79">30</text>
+<circle class="s3" cx="670.0" cy="423.0" r="11.5" fill="#eda100" stroke="none" stroke-width="1.4"/>
+<text class="surf" x="670.0" y="426.6" font-size="9.5" font-weight="600" text-anchor="middle" fill="#ffffff">31</text>
+<circle class="k3" cx="704.0" cy="423.0" r="10.5" fill="none" stroke="#eda100" stroke-width="1.4" opacity="0.55"/>
+<text class="ink3" x="704.0" y="426.6" font-size="9.5" font-weight="400" text-anchor="middle" fill="#6f7b79">32</text>
+<circle class="k4" cx="466.0" cy="457.0" r="10.5" fill="none" stroke="#e87ba4" stroke-width="1.4" opacity="0.55"/>
+<text class="ink3" x="466.0" y="460.6" font-size="9.5" font-weight="400" text-anchor="middle" fill="#6f7b79">33</text>
+<circle class="k4" cx="500.0" cy="457.0" r="10.5" fill="none" stroke="#e87ba4" stroke-width="1.4" opacity="0.55"/>
+<text class="ink3" x="500.0" y="460.6" font-size="9.5" font-weight="400" text-anchor="middle" fill="#6f7b79">34</text>
+<circle class="s4" cx="534.0" cy="457.0" r="11.5" fill="#e87ba4" stroke="none" stroke-width="1.4"/>
+<text class="surf" x="534.0" y="460.6" font-size="9.5" font-weight="600" text-anchor="middle" fill="#ffffff">35</text>
+<circle class="k4" cx="568.0" cy="457.0" r="10.5" fill="none" stroke="#e87ba4" stroke-width="1.4" opacity="0.55"/>
+<text class="ink3" x="568.0" y="460.6" font-size="9.5" font-weight="400" text-anchor="middle" fill="#6f7b79">36</text>
+<circle class="k4" cx="602.0" cy="457.0" r="10.5" fill="none" stroke="#e87ba4" stroke-width="1.4" opacity="0.55"/>
+<text class="ink3" x="602.0" y="460.6" font-size="9.5" font-weight="400" text-anchor="middle" fill="#6f7b79">37</text>
+<circle class="k4" cx="636.0" cy="457.0" r="10.5" fill="none" stroke="#e87ba4" stroke-width="1.4" opacity="0.55"/>
+<text class="ink3" x="636.0" y="460.6" font-size="9.5" font-weight="400" text-anchor="middle" fill="#6f7b79">38</text>
+<circle class="s4" cx="670.0" cy="457.0" r="11.5" fill="#e87ba4" stroke="none" stroke-width="1.4"/>
+<text class="surf" x="670.0" y="460.6" font-size="9.5" font-weight="600" text-anchor="middle" fill="#ffffff">39</text>
+<circle class="k4" cx="704.0" cy="457.0" r="10.5" fill="none" stroke="#e87ba4" stroke-width="1.4" opacity="0.55"/>
+<text class="ink3" x="704.0" y="460.6" font-size="9.5" font-weight="400" text-anchor="middle" fill="#6f7b79">40</text>
+</svg>

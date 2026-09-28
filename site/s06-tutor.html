@@ -1,0 +1,1227 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Session 6, Collecting Data · AP Statistics in Twenty Hours</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Spectral:ital,wght@0,600;0,700;1,600&display=swap">
+<link rel="stylesheet" href="assets/course.css">
+</head>
+<body>
+<main class="page">
+<h1>Session 6 — Collecting Data: Study Types and Random Sampling</h1>
+<p class="standfirst"><strong>AP Statistics · Twenty-Hour Course · One-to-one tutoring edition</strong><br><strong>CED Topics 1.10, 1.11 · Skills 1.A, 2.A, 2.B · about 150 minutes, plus the 40-minute Session 4 test</strong></p>
+<hr>
+<h2>Where this session sits</h2>
+<p>Five sessions have analysed data: tables, graphs, summaries, scatterplots, a regression line. Every one of them started from "a randomly chosen 120 students" or "25 randomly chosen students" and never asked how the choosing was done, or what it allowed anyone to conclude. This session asks. It opens <strong>Block C · Collecting data</strong>, and it is where the course's claims about "these students" become claims about "all students", or fail to.</p>
+<p>Two ideas carry the rest of the course. <strong>Random selection</strong> of a sample is what allows a result to be generalised to the population it was drawn from. <strong>An experiment</strong>, with treatments assigned at random, is what allows a cause-and-effect conclusion. A study can have one without the other, and this session's second scenario is built on a random sample that supports a generalisation and still cannot support a cause.</p>
+<p>Three things come back from earlier sessions. Session 1's <strong>investigative question</strong> (1.1.B) gets its three components. Session 1's forward reference to a <strong>census</strong> (1.10.B.1) is completed. And Session 4's <strong>confounding variable</strong>, named at St Mary's and "taught in Session 6", is taught here, where the course description puts it (1.10.D.5).</p>
+<h3>Learning objectives for topics 1.10–1.11</h3>
+<p>Verbatim from the course description.</p>
+<div class="tbl"><table><thead><tr><th>Code</th><th>Objective</th><th>Skill</th></tr></thead><tbody><tr><td>1.10.A</td><td>Determine the components of an investigative question within a statistical study.</td><td>1.A</td></tr><tr><td>1.10.B</td><td>Identify a census.</td><td>2.A</td></tr><tr><td>1.10.C</td><td>Identify an experiment.</td><td>2.A</td></tr><tr><td>1.10.D</td><td>Identify an observational study.</td><td>2.A</td></tr><tr><td>1.10.E</td><td>Justify the appropriateness of generalizations for a statistical study.</td><td>2.B</td></tr><tr><td>1.11.A</td><td>Identify a sampling method given a description of a study.</td><td>2.A</td></tr><tr><td>1.11.B</td><td>Justify the appropriateness of a sampling method.</td><td>2.B</td></tr></tbody></table></div>
+<p>Skills: <strong>1.A</strong> Determine a valid investigative question that requires a statistical investigation · <strong>2.A</strong> Identify information to answer a question or solve a problem · <strong>2.B</strong> Justify an appropriate method for ethically gathering and representing data.</p>
+<h3>What the course description does and does not ask for</h3>
+<p>Read this before teaching; several prep-book habits do not match the 2026 framework.</p>
+<ul><li><strong>An investigative question has three components</strong> (1.10.A.1–3): the variables, which guide the data collection; the parameter and the goal of the analysis, which guide the analysis; and the population and the type of conclusion. The second component names two procedures the student has not met, a hypothesis test and a confidence interval. Today they learn to identify the parameter and whether the question asks to <em>estimate</em> it or to <em>test a claim about it in a direction</em>. Sessions 13 to 15 teach the procedures. The course description's own sample free-response question gives one point for each component, and its scoring notes reject "areas" and "times" for the first: the variables must be named in full.</li><li><strong>Identifying experiments and observational studies is topic 1.10, and it is taught here in full</strong>: treatments, experimental units, factors and levels, the response, prospective and retrospective studies, surveys, and the confounding variable in an observational study (1.10.C–D). The <strong>design</strong> of an experiment, meaning control groups, random assignment's purpose, replication, blinding, blocking and the named designs, is topic 1.13 and Session 7. Mention them only as forward references.</li><li><strong>Sampling with and without replacement</strong> is required (1.11.A.1–2). The plan for this session does not mention it; the course description does.</li><li><strong>Name the method in full.</strong> The course description says <em>simple random sample</em>, <em>stratified random sample</em>, <em>cluster random sample</em> and <em>systematic random sample</em>. Its sample free-response scoring rejects "random sample" on its own, and rejects "stratified random sample" for a cluster design.</li><li><strong>Generalising needs random selection</strong> (1.10.E.1–4); a sample that was deliberately chosen, or whose members volunteered, supports conclusions only about individuals similar to those in it. The course description's unit guide warns that students "write about random selection when the question refers to random assignment, or vice versa". Scenario B is built on that confusion.</li><li><strong>The words for sampling bias are Session 7's</strong> (topic 1.12: voluntary response, undercoverage, nonresponse, response bias, convenience). Today a sample that is not random is described as the course description describes it in 1.10.E.3: deliberately chosen, or made of volunteers. It never uses the phrase <em>representative sample</em>; its scoring language is that a sample does or does not "represent the population".</li></ul>
+<div class="note red"><span class="lbl">Off-syllabus terms, not taught as examinable</span><p>The course description never uses <strong>multistage sampling</strong>, <strong>sampling frame</strong>, <strong>table of random digits</strong> (it names a random number generator and numbered slips of paper), <strong>quota sampling</strong>, <strong>lurking variable</strong>, or <strong>scope of inference</strong>. Barron's and 5 Steps use most of these. If the student has met them: a sampling frame is the list a sample is drawn from, and the course description says "the population" or a list of it; random digit tables are replaced by a random number generator; <em>scope of inference</em> is the prep books' name for the two questions this session asks of every study, which the course description asks in its own words (1.10.E, 1.10.A.3).</p></div>
+<h3>Timing and who talks</h3>
+<p><strong>The Session 4 test comes first.</strong> Following the pattern of the earlier sessions (Session 1's test opened Session 3, Session 2's opened Session 4, Session 3's opened Session 5), give Session 4's 40-minute multiple-choice test at the start of this session, before the homework debrief. The clock below starts when the test is finished.</p>
+<div class="tbl"><table><thead><tr><th>Minutes</th><th>Segment</th><th>Who talks</th></tr></thead><tbody><tr><td>0–12</td><td>Homework debrief and diagnostic</td><td>Student</td></tr><tr><td>12–47</td><td><strong>Theory</strong>: the three components of an investigative question; census; experiment and its vocabulary; observational study, prospective, retrospective and survey; the confounding variable; random selection and how far a generalisation reaches; sampling without and with replacement; the four random sampling methods; choosing a method; seven check questions (1.10.A–E, 1.11.A–B)</td><td>Both</td></tr><tr><td>47–87</td><td><strong>Scenario A</strong>: Lincoln High, how to choose 120 of 1,842: the principal's question in components, a census and a sample, five plans named, the stratified-or-cluster trap, the gate sample, justifying a plan, and the Sampling Methods tool</td><td>Both</td></tr><tr><td>87–105</td><td><strong>Activity</strong>: Odd One Out, a modelled round, two rounds for the student, and a fifth card</td><td>Student</td></tr><tr><td>105–130</td><td><strong>Scenario B</strong>: St Mary's text reminders: a random sample is not an experiment</td><td>Both</td></tr><tr><td>130–142</td><td>Solo case: the café's loyalty members</td><td>Student</td></tr><tr><td>142–150</td><td>Teach it back, set homework</td><td>Student</td></tr><tr class="tot"><td><strong>Total</strong></td><td><strong>150 minutes of teaching, after the 40-minute Session 4 test</strong></td><td></td></tr></tbody></table></div>
+<p>The course description allots four class periods to topics 1.10–1.11 (two and two). Everything they require is taught in the session, first stated in the theory section and then applied; the homework practises it. The theory section is the longest yet, at 35 minutes, because the two topics need sixteen subsections, and nearly every term in them is examined by name.</p>
+<hr>
+<h2>0–12 min · Homework debrief and diagnostic</h2>
+<h3>The Session 5 homework: two lists and two errors</h3>
+<p>The student arrives with the Session 5 homework self-marked. Ask for the two lists: <em>"Which did you get wrong, and which did you put a question mark on?"</em> Spend the time on those only.</p>
+<p><strong>The two errors to check for specifically:</strong></p>
+<ul><li><strong>B2 left out "predicted".</strong> "Each kilometre adds 3.9 minutes to the journey" earns one mark of two. Without <em>predicted</em>, it claims every Oakfield student's journey grows by exactly 3.9 minutes per kilometre, and the 38-minute student at 6.8 km shows it does not. Two minutes here, because the same sentence has a second fault that today's session names: <em>adds</em> is the language of cause. The Oakfield data came from asking students, and nobody moved anyone's house. A slope from an observational study describes how journey time and distance go together; it does not say what moving 1 km further away would do. By the end of today the student can say which kind of study licenses which kind of sentence.</li><li><strong>F6 called 20 km an extrapolation.</strong> No Lincoln High student lives between 17 and 28 km, so a student at 20 km felt like new territory. But 20 km is inside the interval of distances used to fit the line, 0.5 to 28 km, so it is interpolation by the course description's definition. Fix it now, because today's version of the same question is about populations instead of x-values: <em>how far does a result reach?</em> A line is evidence across the x-values it was fitted on; a random sample is evidence about the population it was drawn from, and no further. The student who can say exactly where a line's evidence stops is ready to say exactly where a sample's does.</li></ul>
+<p>Then the diagnostic.</p>
+<h3>Four diagnostic questions on how data were collected</h3>
+<p>Four quick questions, answers out loud.</p>
+<p><strong>Q1.</strong> <em>"In Session 1, Lincoln High asked 120 of its 1,842 students how they travel. If it had asked all 1,842, what would that be called?"</em></p>
+<p><strong>Q2.</strong> <em>"In Session 4, shifts with more doctors at St Mary's had longer waits. Why couldn't the hospital's records show that doctors cause the waits?"</em></p>
+<p><strong>Q3.</strong> <em>"You need a random sample of 50 students from a school of 900. How exactly would you choose them?"</em></p>
+<p><strong>Q4.</strong> <em>"What makes a question a good investigative question?"</em></p>
+<div class="tbl"><table><thead><tr><th>What you hear</th><th>What it means</th><th>Where to start</th></tr></thead><tbody><tr><td>Q1: "a census"</td><td>Session 1's forward reference held</td><td>Move on; the theory's <em>Census: data from every individual in the population (1.10.B.1)</em> completes it</td></tr><tr><td>Q1: "the population", or blank</td><td>Knows the idea, not the word</td><td>The theory's census subsection, with the reminder that measuring everyone is a way of collecting data, and the population is what the question is about</td></tr><tr><td>Q2: "busier shifts had more doctors and longer waits"</td><td>Session 4's confounding variable held</td><td>The theory names why: those were records, an <strong>observational study</strong>, and gives the definition in full</td></tr><tr><td>Q2: "because r was only 0.68"</td><td>Thinks a stronger correlation would have shown cause</td><td>Spend an extra minute on the theory's <em>Confounding variable in an observational study (1.10.D.5)</em>: no correlation, however strong, removes a confounding variable</td></tr><tr><td>Q3: "number them and use a random number generator"</td><td>Has the mechanism</td><td>Move on at pace; the theory gives it its name, the simple random sample</td></tr><tr><td>Q3: "ask whoever is in the canteen", "pick people from different groups", or "choose ones that look typical"</td><td>Treats <em>random</em> as <em>haphazard</em>, or as <em>chosen to look fair</em></td><td>The heart of Scenario A's gate sample. State <em>Random selection and how far a generalization reaches (1.10.E.1–4)</em> slowly: random means a <strong>random mechanism</strong> chose the units</td></tr><tr><td>Q4: "a defined purpose, data you can collect, and not changed after the results"</td><td>Session 1's 1.1.B held</td><td>Today adds its three components</td></tr><tr><td>Q4: "one you can answer"</td><td>Partial</td><td>Recall Session 1's rule before the theory's investigative-question subsections</td></tr></tbody></table></div>
+<hr>
+<h2>12–47 min · Theory — how data are collected, and what each design lets you conclude</h2>
+<p>Every concept the session uses is stated here, before any data. Put each subsection on the shared screen, read the rule with the student, and have them say in their own words what it does <strong>not</strong> say; that is where the marks go. The illustrations are deliberately bare. Lincoln High, the activity cards, St Mary's and the café come afterwards and apply these rules; when a question there needs a definition, point back to the subsection here rather than restating it. The section ends with seven check questions.</p>
+<p>This is the longest theory section so far. Keep each subsection to two minutes and make the student speak in each one.</p>
+<h3>Investigative question, first component: the variables (1.10.A.1)</h3>
+<p>Session 1 established that an investigative question has a defined purpose, is not changed after seeing the results, and can be answered with data that can be collected (1.1.B). Topic 1.10 breaks it into <strong>three components</strong>. The <strong>first component guides the data collection</strong>, and is phrased in terms of the <strong>variable or variables of interest</strong> in the study.</p>
+<p>What it does not say. "Time" or "areas" is not a variable of interest; the course description's scoring notes reject both. The first component names each variable completely enough that someone could go and collect it: <em>daily commute time to work, in minutes</em>, and <em>which of the two areas the person lives in</em>. It says what is measured, not yet what will be done with it.</p>
+<p><em>Illustration:</em> in "What proportion of this bakery's loaves weigh less than 400 g?", from Session 1's theory, the variable of interest is <strong>the weight of a loaf</strong>, or equivalently whether each loaf is under 400 g.</p>
+<h3>Investigative question, second component: the parameter and the analysis (1.10.A.2)</h3>
+<p>The <strong>second component guides the choice of analysis</strong>. It makes clear the <strong>parameter</strong> the study is about, and what the study will do with it:</p>
+<ul><li>for a <strong>hypothesis test</strong> (a significance test, Sessions 14 and 15), the question makes clear the parameter <strong>and the direction of the alternative hypothesis</strong>: <em>not equal to</em>, <em>greater than</em>, <em>less than</em>, or, for two categorical variables, <em>associated</em> or <em>not independent</em>;</li><li>for a <strong>confidence interval</strong> (Session 13), the question makes clear the parameter <strong>and that the goal is to estimate it within a range of potential values</strong>.</li></ul>
+<p>What it does not say. Neither procedure is carried out today; the skill is reading which one the question calls for. The parameter is always a <strong>population</strong> value (Session 1: a parameter summarises a population), so "the mean of the 120 students" is never the second component. And the direction is a word in the question: <em>greater than</em> and <em>different from</em> are different questions, and the course description's scoring rejects "less than" where the question asked "different".</p>
+<p><em>Illustration:</em> "Is the proportion of all the bakery's loaves that weigh less than 400 g <strong>greater than</strong> 0.05?" is a test: parameter, the proportion of all the bakery's loaves under 400 g; direction, greater than. "<strong>Between what values</strong> does the proportion of all the bakery's loaves under 400 g lie?" is an interval: the same parameter, and the goal of estimating it within a range.</p>
+<h3>Investigative question, third component: the population and the conclusion (1.10.A.3)</h3>
+<p>The <strong>third component indicates the type of conclusion</strong> the study can reach. It gives the <strong>population</strong> to which the conclusions will apply, and, <strong>in the case of an experiment that uses random assignment, a cause-and-effect conclusion</strong>.</p>
+<p>What it does not say. The population must be stated as exactly as the question allows: "all adults in Areas Three and Six of Region Y" earns the point in the course description's sample question, and "everyone in Region Y" does not. And a cause-and-effect conclusion belongs only to an experiment that assigns its treatments at random; every other study can reach at most a conclusion about association. The subsections that follow say what an experiment is, and when a conclusion can reach a population.</p>
+<p><em>Illustration:</em> for the bakery's question, the population is <strong>all the loaves the bakery makes</strong>, and the conclusion is a generalisation about them, if the loaves weighed were chosen at random; there is no cause-and-effect conclusion, because nothing was done to the loaves.</p>
+<h3>Census: data from every individual in the population (1.10.B.1)</h3>
+<p>A <strong>census</strong> records information from <strong>all</strong> items or individuals in a population.</p>
+<p>What it does not say. A census is not a sample, so a numerical summary from a census is a <strong>parameter</strong>, not a statistic (Session 1). It is not the same as a <em>large</em> sample: 9,000 of 10,000 is still a sample. And it does not settle every question: a census of what happened still cannot show what caused it.</p>
+<p><em>Illustration:</em> a factory receives 500 screws. Testing all 500 is a census, and the proportion faulty is a parameter; testing 20 of them is a sample, and the proportion faulty among the 20 is a statistic.</p>
+<h3>Experiment: the researcher imposes treatments (1.10.C.1)</h3>
+<p>An <strong>experiment</strong> is a study in which a researcher <strong>assigns conditions, or treatments, to experimental units</strong> to explore an investigative question about the population.</p>
+<p>What it does not say. Comparing two groups does not make a study an experiment; many observational studies compare groups. What makes it an experiment is that the <strong>researcher decided</strong> which unit gets which condition. It does not have to be well designed: an experiment with one treatment and no comparison is still an experiment, a poor one. When the treatments are allocated to the units by a random mechanism, such as a random number generator, the experiment uses <strong>random assignment</strong>. That is what the third component of an investigative question requires before a cause-and-effect conclusion. Why random assignment has that power, and what else makes an experiment well designed, is Session 7 (topic 1.13).</p>
+<p><em>Illustration:</em> 30 units; the researcher gives 15 of them condition A and 15 condition B, then measures each. The researcher chose who got what: an experiment.</p>
+<h3>Experimental units, factors, levels, treatments and the response (1.10.C.2–4)</h3>
+<div class="tbl"><table><thead><tr><th>Term</th><th>Meaning (1.10.C.2–4)</th></tr></thead><tbody><tr class="tot"><td><strong>Experimental unit</strong></td><td>the observational unit to which a treatment is assigned; when the units are people they are sometimes called <strong>subjects</strong> or <strong>participants</strong></td></tr><tr class="tot"><td><strong>Explanatory variable</strong>, or <strong>factor</strong></td><td>a variable whose categories, or <strong>levels</strong>, are imposed on the experimental units</td></tr><tr class="tot"><td><strong>Treatments</strong></td><td>the levels of the explanatory variable; with more than one explanatory variable, the <strong>combinations</strong> of their levels</td></tr><tr class="tot"><td><strong>Response variable</strong></td><td>an outcome measured on each experimental unit <strong>after</strong> the treatment has been given</td></tr></tbody></table></div>
+<p>What it does not say. The experimental unit is whatever receives the treatment, and it need not be a person: it can be a day, a field or a machine. <em>Explanatory</em> and <em>response</em> are the same words as Session 4's, now with a stronger meaning, because here the explanatory variable is set by the researcher rather than observed. And treatments multiply: two factors do not give two treatments.</p>
+<p><em>Illustration:</em> factor 1 has two levels (low, high) and factor 2 has three levels (1, 2, 3 hours). The treatments are the combinations: 2 × 3 = <strong>6 treatments</strong>, from (low, 1 hour) to (high, 3 hours).</p>
+<h3>Observational study: nothing is imposed (1.10.D.1)</h3>
+<p>An <strong>observational study</strong> is a study where <strong>treatments are not imposed</strong>. The researcher <strong>records the values</strong> of the variables of interest to explore an investigative question.</p>
+<p>What it does not say. It is not a lesser kind of study: most of what is known about people comes from observational studies, and for many questions an experiment would be impossible or unethical. What it cannot do is decide who has which value of the explanatory variable, and the confounding-variable subsection below says why that matters.</p>
+<p><em>Illustration:</em> 30 units, of which 15 already have condition A and 15 already have condition B; the researcher measures each. The comparison is identical to the experiment above, but nobody assigned the conditions: an observational study.</p>
+<h3>Prospective, retrospective and survey (1.10.D.2–4)</h3>
+<p>Three kinds of observational study, defined by the course description:</p>
+<ul><li>A <strong>prospective study</strong> selects its observational units at a point in time, and gathers data <strong>both at that time and into the future</strong>.</li><li>A <strong>retrospective study</strong> selects its observational units at a point in time, and gathers data <strong>from the past</strong>.</li><li>A <strong>survey</strong> is an observational study in which data are collected <strong>from humans using a standard set of questions</strong>.</li></ul>
+<p>What it does not say. Following people forward in time does not make a study an experiment: a prospective study still imposes nothing. And a survey is an observational study, never an experiment, however carefully its sample is chosen. The course description's own scoring accepts both "observational study" and "retrospective observational study" for a study of past records; the type is what earns the mark, the kind adds precision.</p>
+<figure><div class="figscroll"><svg viewBox="0 0 760 350" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Decision tree for the type of a study. Were treatments imposed on the units? Yes: an experiment, with treatments assigned to experimental units. No: an observational study, where values are recorded. Observational studies include surveys, prospective studies and retrospective studies." font-family="Public Sans, system-ui, sans-serif">
+<style>
+  .ink { fill: #15201f; }
+  .ink2 { fill: #4a5654; }
+  .ink3 { fill: #6f7b79; }
+  .kink { stroke: #15201f; }
+  .kink2 { stroke: #4a5654; }
+  .kink3 { stroke: #6f7b79; }
+  .axis { stroke: #c3c9c6; }
+  .grid { stroke: #dcdfdd; }
+  .surf { fill: #ffffff; }
+  .band { fill: #eef1ef; }
+  .acc { fill: #1a6b63; }
+  .kacc { stroke: #1a6b63; }
+  .amb { fill: #7d5a11; }
+  .kamb { stroke: #7d5a11; }
+  .s0 { fill: #2a78d6; }
+  .k0 { stroke: #2a78d6; }
+  .s1 { fill: #eb6834; }
+  .k1 { stroke: #eb6834; }
+  .s2 { fill: #1baf7a; }
+  .k2 { stroke: #1baf7a; }
+  .s3 { fill: #eda100; }
+  .k3 { stroke: #eda100; }
+  .s4 { fill: #e87ba4; }
+  .k4 { stroke: #e87ba4; }
+  .s5 { fill: #008300; }
+  .k5 { stroke: #008300; }
+  @media (prefers-color-scheme: dark) {
+    .ink { fill: #e9edeb; }
+    .ink2 { fill: #a5b0ad; }
+    .ink3 { fill: #7e8a87; }
+    .kink { stroke: #e9edeb; }
+    .kink2 { stroke: #a5b0ad; }
+    .kink3 { stroke: #7e8a87; }
+    .axis { stroke: #3a4644; }
+    .grid { stroke: #2a3533; }
+    .surf { fill: #182120; }
+    .band { fill: #1e2827; }
+    .acc { fill: #54b8ab; }
+    .kacc { stroke: #54b8ab; }
+    .amb { fill: #d9ab52; }
+    .kamb { stroke: #d9ab52; }
+    .s0 { fill: #3987e5; }
+    .k0 { stroke: #3987e5; }
+    .s1 { fill: #d95926; }
+    .k1 { stroke: #d95926; }
+    .s2 { fill: #199e70; }
+    .k2 { stroke: #199e70; }
+    .s3 { fill: #c98500; }
+    .k3 { stroke: #c98500; }
+    .s4 { fill: #d55181; }
+    .k4 { stroke: #d55181; }
+    .s5 { fill: #008300; }
+    .k5 { stroke: #008300; }
+  }
+</style>
+<rect class="band kink3" x="250.0" y="10.0" width="260.0" height="50.0" rx="4" fill="#eef1ef" stroke="#6f7b79" stroke-width="1.4"/>
+<text class="ink" x="380.0" y="31.0" font-size="13.5" font-weight="600" text-anchor="middle" fill="#15201f">A statistical study</text>
+<text class="ink2" x="380.0" y="50.0" font-size="12" font-weight="400" text-anchor="middle" fill="#4a5654">Did the researcher impose treatments?</text>
+<line class="kink3" x1="380.0" y1="60.0" x2="380.0" y2="78.0" stroke="#6f7b79" stroke-width="1.4" fill="none"/>
+<line class="kink3" x1="150.0" y1="78.0" x2="610.0" y2="78.0" stroke="#6f7b79" stroke-width="1.4" fill="none"/>
+<line class="kink2" x1="150.0" y1="78.0" x2="150.0" y2="103.0" stroke="#4a5654" stroke-width="1.5" fill="none"/>
+<polygon class="ink2" points="150.0,112.0 145.9,103.0 154.1,103.0" fill="#4a5654" stroke="none"/>
+<line class="kink2" x1="610.0" y1="78.0" x2="610.0" y2="103.0" stroke="#4a5654" stroke-width="1.5" fill="none"/>
+<polygon class="ink2" points="610.0,112.0 606.0,103.0 614.0,103.0" fill="#4a5654" stroke="none"/>
+<rect class="surf" x="106.0" y="84.0" width="38.0" height="20.0" rx="3" fill="#ffffff" stroke="none" stroke-width="1.2"/>
+<rect class="surf" x="616.0" y="84.0" width="30.0" height="20.0" rx="3" fill="#ffffff" stroke="none" stroke-width="1.2"/>
+<text class="ink2" x="140.0" y="98.0" font-size="12" font-weight="600" text-anchor="end" fill="#4a5654">yes</text>
+<text class="ink2" x="620.0" y="98.0" font-size="12" font-weight="600" text-anchor="start" fill="#4a5654">no</text>
+<rect class="surf kink3" x="20.0" y="114.0" width="260.0" height="88.0" rx="4" fill="#ffffff" stroke="#6f7b79" stroke-width="1.4"/>
+<text class="acc" x="32.0" y="135.0" font-size="11.5" font-weight="600" text-anchor="start" fill="#1a6b63" font-family="IBM Plex Mono, monospace">EXPERIMENT</text>
+<text class="ink2" x="32.0" y="155.0" font-size="12" font-weight="400" text-anchor="start" fill="#4a5654">treatments are assigned to</text>
+<text class="ink2" x="32.0" y="172.0" font-size="12" font-weight="400" text-anchor="start" fill="#4a5654">experimental units, then a</text>
+<text class="ink2" x="32.0" y="189.0" font-size="12" font-weight="400" text-anchor="start" fill="#4a5654">response is measured</text>
+<rect class="surf kink3" x="480.0" y="114.0" width="260.0" height="88.0" rx="4" fill="#ffffff" stroke="#6f7b79" stroke-width="1.4"/>
+<text class="acc" x="492.0" y="135.0" font-size="11.5" font-weight="600" text-anchor="start" fill="#1a6b63" font-family="IBM Plex Mono, monospace">OBSERVATIONAL STUDY</text>
+<text class="ink2" x="492.0" y="155.0" font-size="12" font-weight="400" text-anchor="start" fill="#4a5654">nothing is imposed: the</text>
+<text class="ink2" x="492.0" y="172.0" font-size="12" font-weight="400" text-anchor="start" fill="#4a5654">values of the variables</text>
+<text class="ink2" x="492.0" y="189.0" font-size="12" font-weight="400" text-anchor="start" fill="#4a5654">are recorded</text>
+<line class="kink3" x1="610.0" y1="202.0" x2="610.0" y2="222.0" stroke="#6f7b79" stroke-width="1.4" fill="none"/>
+<line class="kink3" x1="375.0" y1="222.0" x2="686.0" y2="222.0" stroke="#6f7b79" stroke-width="1.4" fill="none"/>
+<line class="kink2" x1="375.0" y1="222.0" x2="375.0" y2="236.0" stroke="#4a5654" stroke-width="1.5" fill="none"/>
+<polygon class="ink2" points="375.0,245.0 370.9,236.0 379.1,236.0" fill="#4a5654" stroke="none"/>
+<line class="kink2" x1="535.0" y1="222.0" x2="535.0" y2="236.0" stroke="#4a5654" stroke-width="1.5" fill="none"/>
+<polygon class="ink2" points="535.0,245.0 531.0,236.0 539.0,236.0" fill="#4a5654" stroke="none"/>
+<line class="kink2" x1="686.0" y1="222.0" x2="686.0" y2="236.0" stroke="#4a5654" stroke-width="1.5" fill="none"/>
+<polygon class="ink2" points="686.0,245.0 682.0,236.0 690.0,236.0" fill="#4a5654" stroke="none"/>
+<rect class="surf kink3" x="300.0" y="246.0" width="150.0" height="92.0" rx="4" fill="#ffffff" stroke="#6f7b79" stroke-width="1.4"/>
+<text class="acc" x="312.0" y="267.0" font-size="11.5" font-weight="600" text-anchor="start" fill="#1a6b63" font-family="IBM Plex Mono, monospace">SURVEY</text>
+<text class="ink2" x="312.0" y="287.0" font-size="12" font-weight="400" text-anchor="start" fill="#4a5654">standard questions</text>
+<text class="ink2" x="312.0" y="304.0" font-size="12" font-weight="400" text-anchor="start" fill="#4a5654">to people</text>
+<rect class="surf kink3" x="460.0" y="246.0" width="150.0" height="92.0" rx="4" fill="#ffffff" stroke="#6f7b79" stroke-width="1.4"/>
+<text class="acc" x="472.0" y="267.0" font-size="11.5" font-weight="600" text-anchor="start" fill="#1a6b63" font-family="IBM Plex Mono, monospace">PROSPECTIVE</text>
+<text class="ink2" x="472.0" y="287.0" font-size="12" font-weight="400" text-anchor="start" fill="#4a5654">select units now;</text>
+<text class="ink2" x="472.0" y="304.0" font-size="12" font-weight="400" text-anchor="start" fill="#4a5654">gather data now</text>
+<text class="ink2" x="472.0" y="321.0" font-size="12" font-weight="400" text-anchor="start" fill="#4a5654">and into the future</text>
+<rect class="surf kink3" x="620.0" y="246.0" width="132.0" height="92.0" rx="4" fill="#ffffff" stroke="#6f7b79" stroke-width="1.4"/>
+<text class="acc" x="632.0" y="267.0" font-size="11.5" font-weight="600" text-anchor="start" fill="#1a6b63" font-family="IBM Plex Mono, monospace">RETROSPECTIVE</text>
+<text class="ink2" x="632.0" y="287.0" font-size="12" font-weight="400" text-anchor="start" fill="#4a5654">select units now;</text>
+<text class="ink2" x="632.0" y="304.0" font-size="12" font-weight="400" text-anchor="start" fill="#4a5654">gather data from</text>
+<text class="ink2" x="632.0" y="321.0" font-size="12" font-weight="400" text-anchor="start" fill="#4a5654">the past</text>
+<rect class="band" x="20.0" y="214.0" width="260.0" height="104.0" rx="4" fill="#eef1ef" stroke="none" stroke-width="1.2"/>
+<text class="ink2" x="32.0" y="236.0" font-size="12" font-weight="400" text-anchor="start" fill="#4a5654">With random assignment of treatments, an</text>
+<text class="ink2" x="32.0" y="254.0" font-size="12" font-weight="400" text-anchor="start" fill="#4a5654">experiment can support a cause-and-effect</text>
+<text class="ink2" x="32.0" y="272.0" font-size="12" font-weight="400" text-anchor="start" fill="#4a5654">conclusion (1.10.A.3). An observational</text>
+<text class="ink2" x="32.0" y="290.0" font-size="12" font-weight="400" text-anchor="start" fill="#4a5654">study cannot rule out a confounding</text>
+<text class="ink2" x="32.0" y="308.0" font-size="12" font-weight="400" text-anchor="start" fill="#4a5654">variable (1.10.D.5).</text>
+</svg>
+</div><figcaption>One question decides the type: did the researcher impose treatments? The three kinds of observational study are told apart by when the data come from, and a survey by its standard questions to people.</figcaption></figure>
+<h3>Confounding variable in an observational study (1.10.D.5)</h3>
+<p>A <strong>confounding variable</strong> in an observational study <strong>provides an alternative explanation</strong> for the observed relationship between the explanatory and response variables, which <strong>reduces the possibility of concluding a causal relationship</strong> between them. To be a confounding variable, a variable <strong>must be associated with both the explanatory variable and the response variable</strong>.</p>
+<p>What it does not say. Any variable that affects the response is not automatically a confounding variable: it must also be associated with the explanatory variable, and an answer that explains only one link earns half the credit. It does not say the association is false; the association is real, and the confounding variable is another way it could have arisen. And a confounding variable is not removed by a bigger sample, a random sample, or a census. It is a problem of <strong>who has which value of the explanatory variable</strong>, which only imposing the treatments can address. How random assignment addresses it is Session 7 (1.13.A.7–8).</p>
+<p><em>Illustration:</em> of 10 units that chose condition A, 8 are high on a third variable <em>w</em>; of 10 that chose B, 2 are. If high <em>w</em> raises the response, group A will score higher even if condition A does nothing: <em>w</em> is associated with the condition and with the response.</p>
+<h3>Random selection and how far a generalization reaches (1.10.E.1–4)</h3>
+<p>A sample is <strong>random</strong> when all its observational units are <strong>selected from the population using a random mechanism</strong>, such as a random number generator (1.10.E.1). A sample is <strong>not random</strong> when its units are <strong>deliberately chosen</strong>, or <strong>volunteer themselves</strong> (1.10.E.3).</p>
+<div class="tbl"><table><thead><tr><th>How the units were selected</th><th>How far the results may be generalised</th></tr></thead><tbody><tr><td>Randomly, from a population</td><td>to the <strong>entire population</strong> from which the sample was selected (1.10.E.2)</td></tr><tr><td>Not randomly: chosen deliberately, or volunteers</td><td><strong>only</strong> to a population of individuals <strong>similar</strong> to those used in the study (1.10.E.4)</td></tr></tbody></table></div>
+<p>The same rule applies to the experimental units of an experiment.</p>
+<p>What it does not say. <em>Random</em> does not mean <em>haphazard</em>, <em>typical-looking</em> or <em>nobody in particular</em>: the test is whether a random mechanism made the choice. A random sample generalises to the population it was <strong>drawn from</strong>, not to a larger one: a random sample of one school's students says nothing reliable about another school. And random selection supports <strong>generalisation</strong>, not cause: a random sample of an observational study still cannot show that one variable causes another. The course description names the confusion of random selection with random assignment as a common error.</p>
+<p><em>Illustration:</em> 50 names drawn by a random number generator from a list of 2,000 people support conclusions about the 2,000. The first 50 of those 2,000 to reply to an email support conclusions only about people similar to those who replied.</p>
+<h3>Sampling without replacement and with replacement (1.11.A.1–2)</h3>
+<p>In <strong>sampling without replacement</strong>, an observational unit can be selected <strong>only once</strong>: it is not returned to the population before the next selection. In <strong>sampling with replacement</strong>, a unit is returned before the next selection, so it <strong>can be selected more than once</strong>.</p>
+<p>What it does not say. Surveys and the four methods below sample <strong>without</strong> replacement: nobody is interviewed twice, and a repeated random number is ignored. Sampling with replacement matters later, when drawing from a population is modelled as repeated independent draws (the 10% condition in Sessions 13 and 18 is about when the difference can be ignored).</p>
+<p><em>Illustration:</em> drawing 2 of 5 numbered slips. Without replacement, (3, 3) is impossible. With replacement, slip 3 goes back into the hat, and (3, 3) can happen.</p>
+<h3>Simple random sample: every sample of size n equally likely (1.11.A.3)</h3>
+<p>In a <strong>simple random sample (SRS)</strong> of size <em>n</em>, <strong>every sample of size <em>n</em> has the same chance of being selected</strong>. It is the basis of many other sampling mechanisms. It can be obtained, for example, with a <strong>random number generator</strong> or by <strong>randomly selecting numbered slips of paper</strong>.</p>
+<p>What it does not say. "Every individual has the same chance" is <strong>not</strong> the definition. It is true of an SRS, but it is also true of samples that are not simple random samples, including some stratified and systematic ones. The definition is about <strong>samples</strong>, not individuals. An SRS needs a list of every individual in the population to number.</p>
+<p><em>Illustration:</em> from A, B, C and D, choose 2. There are 6 possible samples, AB, AC, AD, BC, BD and CD, and an SRS gives each a chance of 1 in 6. Tossing a coin, heads AB and tails CD, gives every individual a 1 in 2 chance too, but only 2 of the 6 samples can happen: <strong>not</strong> an SRS.</p>
+<h3>Stratified random sample: an SRS inside every stratum (1.11.A.4)</h3>
+<p>A <strong>stratified random sample</strong> divides <strong>all</strong> individuals in the population into <strong>non-overlapping groups, called strata</strong>, based on one or more <strong>shared attributes or characteristics</strong> (homogeneous grouping). A <strong>simple random sample is selected within each stratum</strong>, and the selected individuals are <strong>combined</strong> to form one sample.</p>
+<p>What it does not say. The strata are formed <strong>before</strong> sampling, from an attribute known for everyone, and <strong>every</strong> stratum contributes. The individuals within a stratum should be alike (homogeneous), ideally in a way related to the variable being studied. The strata need not contribute equal numbers.</p>
+<p><em>Illustration:</em> 40 individuals in 5 rows of 8, where each row shares an attribute. Choosing 2 at random from <strong>every</strong> row gives a stratified random sample of 10, with the rows as strata.</p>
+<h3>Cluster random sample: every unit in randomly chosen clusters (1.11.A.5)</h3>
+<p>A <strong>cluster random sample</strong> divides the population into smaller groups, called <strong>clusters</strong>. <strong>Ideally, each cluster mirrors the heterogeneity of the population</strong>, with clusters similar to one another. A <strong>simple random sample of clusters</strong> is selected, and data are collected from <strong>all</strong> observational units in each selected cluster.</p>
+<p>What it does not say. The ideal is the <strong>opposite</strong> of stratifying: a stratum should be internally alike, a cluster should be internally as varied as the population. Most clusters contribute <strong>nobody</strong>; the chosen ones contribute <strong>everybody</strong>. When the clusters differ from one another, a few clusters can miss whole parts of the population.</p>
+<p><em>Illustration:</em> the same 40 individuals, now seen as 8 columns of 5, each column containing one individual from every row. Choosing 2 columns at random and taking all 10 individuals in them is a cluster random sample, with the columns as clusters.</p>
+<h3>Systematic random sample: a random start and a fixed interval (1.11.A.6)</h3>
+<p>A <strong>systematic random sample</strong> selects its members from the population according to a <strong>random starting point</strong> and a <strong>fixed, periodic interval</strong> between successive sampling units.</p>
+<p>What it does not say. The start must be random; "every 4th, starting with the first" is not a random sample. It is <strong>not</strong> an SRS: with an interval of <em>k</em>, only <em>k</em> different samples are possible. And it depends on the order of the list: if the list has a pattern that repeats with the same interval, every sample can hit the same point of the pattern.</p>
+<p><em>Illustration:</em> number the 40 individuals 1 to 40, choose a random start from 1 to 4, say 3, and take every 4th: 3, 7, 11, …, 39. That is 10 individuals, and only 4 samples were possible.</p>
+<h3>Choosing a sampling method to suit the question (1.11.B.1)</h3>
+<p>Each random sampling method has <strong>different characteristics that make it more appropriate</strong> for sampling a population <strong>depending on the question being investigated</strong> (1.11.B.1). The characteristics to cite:</p>
+<div class="tbl"><table><thead><tr><th>Method</th><th>What it needs</th><th>A characteristic that can make it appropriate</th><th>What to watch for</th></tr></thead><tbody><tr><td>Simple random</td><td>a list of every individual</td><td>the simplest; no grouping needed; the basis of the others</td><td>by chance, a small group can be under-sampled or missed</td></tr><tr><td>Stratified</td><td>a list, and each individual's stratum</td><td>every stratum is guaranteed a place; when the variable differs <strong>between</strong> strata and is similar <strong>within</strong> them, the estimates vary less from sample to sample; separate estimates for each stratum are possible</td><td>the strata must be known for everyone before sampling</td></tr><tr><td>Cluster</td><td>a list of clusters, not of individuals</td><td>practical: cheaper and quicker when individuals come in natural groups</td><td>only as good as the clusters: they should each mirror the population</td></tr><tr><td>Systematic</td><td>an ordered list, or a stream such as customers at a door</td><td>easy to carry out, and spreads the sample through the list</td><td>a pattern in the list that repeats with the interval</td></tr></tbody></table></div>
+<p>What it does not say. All four are <strong>random</strong> sampling methods, so each supports generalising to the population sampled (1.10.E.2); choosing between them is about practicality and about how much the results will vary, not about which one is "the random one". A justification names the characteristic <strong>and</strong> connects it to the question: "stratified is better" earns nothing; "stratifying by area guarantees students from every area, and journey time differs a lot between areas" does.</p>
+<figure><div class="figscroll"><svg viewBox="0 0 760 482" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The same 40 individuals, in 5 rows of 8, sampled four ways with n = 10. Simple random sample: any 10. Stratified: the rows are strata, 2 chosen at random from every row. Cluster: the columns are clusters, every individual in 2 randomly chosen columns. Systematic: numbered 1 to 40, random start 3, then every 4th." font-family="Public Sans, system-ui, sans-serif">
+<style>
+  .ink { fill: #15201f; }
+  .ink2 { fill: #4a5654; }
+  .ink3 { fill: #6f7b79; }
+  .kink { stroke: #15201f; }
+  .kink2 { stroke: #4a5654; }
+  .kink3 { stroke: #6f7b79; }
+  .axis { stroke: #c3c9c6; }
+  .grid { stroke: #dcdfdd; }
+  .surf { fill: #ffffff; }
+  .band { fill: #eef1ef; }
+  .acc { fill: #1a6b63; }
+  .kacc { stroke: #1a6b63; }
+  .amb { fill: #7d5a11; }
+  .kamb { stroke: #7d5a11; }
+  .s0 { fill: #2a78d6; }
+  .k0 { stroke: #2a78d6; }
+  .s1 { fill: #eb6834; }
+  .k1 { stroke: #eb6834; }
+  .s2 { fill: #1baf7a; }
+  .k2 { stroke: #1baf7a; }
+  .s3 { fill: #eda100; }
+  .k3 { stroke: #eda100; }
+  .s4 { fill: #e87ba4; }
+  .k4 { stroke: #e87ba4; }
+  .s5 { fill: #008300; }
+  .k5 { stroke: #008300; }
+  @media (prefers-color-scheme: dark) {
+    .ink { fill: #e9edeb; }
+    .ink2 { fill: #a5b0ad; }
+    .ink3 { fill: #7e8a87; }
+    .kink { stroke: #e9edeb; }
+    .kink2 { stroke: #a5b0ad; }
+    .kink3 { stroke: #7e8a87; }
+    .axis { stroke: #3a4644; }
+    .grid { stroke: #2a3533; }
+    .surf { fill: #182120; }
+    .band { fill: #1e2827; }
+    .acc { fill: #54b8ab; }
+    .kacc { stroke: #54b8ab; }
+    .amb { fill: #d9ab52; }
+    .kamb { stroke: #d9ab52; }
+    .s0 { fill: #3987e5; }
+    .k0 { stroke: #3987e5; }
+    .s1 { fill: #d95926; }
+    .k1 { stroke: #d95926; }
+    .s2 { fill: #199e70; }
+    .k2 { stroke: #199e70; }
+    .s3 { fill: #c98500; }
+    .k3 { stroke: #c98500; }
+    .s4 { fill: #d55181; }
+    .k4 { stroke: #d55181; }
+    .s5 { fill: #008300; }
+    .k5 { stroke: #008300; }
+  }
+</style>
+<rect class="band" x="8.0" y="6.0" width="370.0" height="231.0" rx="4" fill="#eef1ef" stroke="none" stroke-width="1.2"/>
+<text class="ink" x="22.0" y="28.0" font-size="13.5" font-weight="600" text-anchor="start" fill="#15201f">Simple random sample</text>
+<text class="ink2" x="22.0" y="46.0" font-size="11.5" font-weight="400" text-anchor="start" fill="#4a5654">any 10 of the 40; every set of 10 equally likely</text>
+<circle class="k0" cx="84.0" cy="80.0" r="10.5" fill="none" stroke="#2a78d6" stroke-width="1.4" opacity="0.55"/>
+<circle class="s0" cx="118.0" cy="80.0" r="11.5" fill="#2a78d6" stroke="none" stroke-width="1.4"/>
+<circle class="k0" cx="152.0" cy="80.0" r="10.5" fill="none" stroke="#2a78d6" stroke-width="1.4" opacity="0.55"/>
+<circle class="k0" cx="186.0" cy="80.0" r="10.5" fill="none" stroke="#2a78d6" stroke-width="1.4" opacity="0.55"/>
+<circle class="k0" cx="220.0" cy="80.0" r="10.5" fill="none" stroke="#2a78d6" stroke-width="1.4" opacity="0.55"/>
+<circle class="s0" cx="254.0" cy="80.0" r="11.5" fill="#2a78d6" stroke="none" stroke-width="1.4"/>
+<circle class="s0" cx="288.0" cy="80.0" r="11.5" fill="#2a78d6" stroke="none" stroke-width="1.4"/>
+<circle class="k0" cx="322.0" cy="80.0" r="10.5" fill="none" stroke="#2a78d6" stroke-width="1.4" opacity="0.55"/>
+<circle class="k1" cx="84.0" cy="114.0" r="10.5" fill="none" stroke="#eb6834" stroke-width="1.4" opacity="0.55"/>
+<circle class="k1" cx="118.0" cy="114.0" r="10.5" fill="none" stroke="#eb6834" stroke-width="1.4" opacity="0.55"/>
+<circle class="k1" cx="152.0" cy="114.0" r="10.5" fill="none" stroke="#eb6834" stroke-width="1.4" opacity="0.55"/>
+<circle class="s1" cx="186.0" cy="114.0" r="11.5" fill="#eb6834" stroke="none" stroke-width="1.4"/>
+<circle class="k1" cx="220.0" cy="114.0" r="10.5" fill="none" stroke="#eb6834" stroke-width="1.4" opacity="0.55"/>
+<circle class="k1" cx="254.0" cy="114.0" r="10.5" fill="none" stroke="#eb6834" stroke-width="1.4" opacity="0.55"/>
+<circle class="k1" cx="288.0" cy="114.0" r="10.5" fill="none" stroke="#eb6834" stroke-width="1.4" opacity="0.55"/>
+<circle class="k1" cx="322.0" cy="114.0" r="10.5" fill="none" stroke="#eb6834" stroke-width="1.4" opacity="0.55"/>
+<circle class="s2" cx="84.0" cy="148.0" r="11.5" fill="#1baf7a" stroke="none" stroke-width="1.4"/>
+<circle class="k2" cx="118.0" cy="148.0" r="10.5" fill="none" stroke="#1baf7a" stroke-width="1.4" opacity="0.55"/>
+<circle class="k2" cx="152.0" cy="148.0" r="10.5" fill="none" stroke="#1baf7a" stroke-width="1.4" opacity="0.55"/>
+<circle class="k2" cx="186.0" cy="148.0" r="10.5" fill="none" stroke="#1baf7a" stroke-width="1.4" opacity="0.55"/>
+<circle class="k2" cx="220.0" cy="148.0" r="10.5" fill="none" stroke="#1baf7a" stroke-width="1.4" opacity="0.55"/>
+<circle class="k2" cx="254.0" cy="148.0" r="10.5" fill="none" stroke="#1baf7a" stroke-width="1.4" opacity="0.55"/>
+<circle class="k2" cx="288.0" cy="148.0" r="10.5" fill="none" stroke="#1baf7a" stroke-width="1.4" opacity="0.55"/>
+<circle class="s2" cx="322.0" cy="148.0" r="11.5" fill="#1baf7a" stroke="none" stroke-width="1.4"/>
+<circle class="k3" cx="84.0" cy="182.0" r="10.5" fill="none" stroke="#eda100" stroke-width="1.4" opacity="0.55"/>
+<circle class="k3" cx="118.0" cy="182.0" r="10.5" fill="none" stroke="#eda100" stroke-width="1.4" opacity="0.55"/>
+<circle class="s3" cx="152.0" cy="182.0" r="11.5" fill="#eda100" stroke="none" stroke-width="1.4"/>
+<circle class="k3" cx="186.0" cy="182.0" r="10.5" fill="none" stroke="#eda100" stroke-width="1.4" opacity="0.55"/>
+<circle class="s3" cx="220.0" cy="182.0" r="11.5" fill="#eda100" stroke="none" stroke-width="1.4"/>
+<circle class="k3" cx="254.0" cy="182.0" r="10.5" fill="none" stroke="#eda100" stroke-width="1.4" opacity="0.55"/>
+<circle class="s3" cx="288.0" cy="182.0" r="11.5" fill="#eda100" stroke="none" stroke-width="1.4"/>
+<circle class="k3" cx="322.0" cy="182.0" r="10.5" fill="none" stroke="#eda100" stroke-width="1.4" opacity="0.55"/>
+<circle class="k4" cx="84.0" cy="216.0" r="10.5" fill="none" stroke="#e87ba4" stroke-width="1.4" opacity="0.55"/>
+<circle class="s4" cx="118.0" cy="216.0" r="11.5" fill="#e87ba4" stroke="none" stroke-width="1.4"/>
+<circle class="k4" cx="152.0" cy="216.0" r="10.5" fill="none" stroke="#e87ba4" stroke-width="1.4" opacity="0.55"/>
+<circle class="k4" cx="186.0" cy="216.0" r="10.5" fill="none" stroke="#e87ba4" stroke-width="1.4" opacity="0.55"/>
+<circle class="k4" cx="220.0" cy="216.0" r="10.5" fill="none" stroke="#e87ba4" stroke-width="1.4" opacity="0.55"/>
+<circle class="k4" cx="254.0" cy="216.0" r="10.5" fill="none" stroke="#e87ba4" stroke-width="1.4" opacity="0.55"/>
+<circle class="k4" cx="288.0" cy="216.0" r="10.5" fill="none" stroke="#e87ba4" stroke-width="1.4" opacity="0.55"/>
+<circle class="k4" cx="322.0" cy="216.0" r="10.5" fill="none" stroke="#e87ba4" stroke-width="1.4" opacity="0.55"/>
+<rect class="band" x="390.0" y="6.0" width="370.0" height="231.0" rx="4" fill="#eef1ef" stroke="none" stroke-width="1.2"/>
+<text class="ink" x="404.0" y="28.0" font-size="13.5" font-weight="600" text-anchor="start" fill="#15201f">Stratified random sample</text>
+<text class="ink2" x="404.0" y="46.0" font-size="11.5" font-weight="400" text-anchor="start" fill="#4a5654">rows are strata: an SRS of 2 inside every row</text>
+<text class="ink3" x="446.0" y="84.0" font-size="10" font-weight="400" text-anchor="end" fill="#6f7b79" font-family="IBM Plex Mono, monospace">stratum 1</text>
+<circle class="k0" cx="466.0" cy="80.0" r="10.5" fill="none" stroke="#2a78d6" stroke-width="1.4" opacity="0.55"/>
+<circle class="k0" cx="500.0" cy="80.0" r="10.5" fill="none" stroke="#2a78d6" stroke-width="1.4" opacity="0.55"/>
+<circle class="s0" cx="534.0" cy="80.0" r="11.5" fill="#2a78d6" stroke="none" stroke-width="1.4"/>
+<circle class="k0" cx="568.0" cy="80.0" r="10.5" fill="none" stroke="#2a78d6" stroke-width="1.4" opacity="0.55"/>
+<circle class="k0" cx="602.0" cy="80.0" r="10.5" fill="none" stroke="#2a78d6" stroke-width="1.4" opacity="0.55"/>
+<circle class="k0" cx="636.0" cy="80.0" r="10.5" fill="none" stroke="#2a78d6" stroke-width="1.4" opacity="0.55"/>
+<circle class="s0" cx="670.0" cy="80.0" r="11.5" fill="#2a78d6" stroke="none" stroke-width="1.4"/>
+<circle class="k0" cx="704.0" cy="80.0" r="10.5" fill="none" stroke="#2a78d6" stroke-width="1.4" opacity="0.55"/>
+<text class="ink3" x="446.0" y="118.0" font-size="10" font-weight="400" text-anchor="end" fill="#6f7b79" font-family="IBM Plex Mono, monospace">stratum 2</text>
+<circle class="s1" cx="466.0" cy="114.0" r="11.5" fill="#eb6834" stroke="none" stroke-width="1.4"/>
+<circle class="k1" cx="500.0" cy="114.0" r="10.5" fill="none" stroke="#eb6834" stroke-width="1.4" opacity="0.55"/>
+<circle class="k1" cx="534.0" cy="114.0" r="10.5" fill="none" stroke="#eb6834" stroke-width="1.4" opacity="0.55"/>
+<circle class="k1" cx="568.0" cy="114.0" r="10.5" fill="none" stroke="#eb6834" stroke-width="1.4" opacity="0.55"/>
+<circle class="k1" cx="602.0" cy="114.0" r="10.5" fill="none" stroke="#eb6834" stroke-width="1.4" opacity="0.55"/>
+<circle class="s1" cx="636.0" cy="114.0" r="11.5" fill="#eb6834" stroke="none" stroke-width="1.4"/>
+<circle class="k1" cx="670.0" cy="114.0" r="10.5" fill="none" stroke="#eb6834" stroke-width="1.4" opacity="0.55"/>
+<circle class="k1" cx="704.0" cy="114.0" r="10.5" fill="none" stroke="#eb6834" stroke-width="1.4" opacity="0.55"/>
+<text class="ink3" x="446.0" y="152.0" font-size="10" font-weight="400" text-anchor="end" fill="#6f7b79" font-family="IBM Plex Mono, monospace">stratum 3</text>
+<circle class="k2" cx="466.0" cy="148.0" r="10.5" fill="none" stroke="#1baf7a" stroke-width="1.4" opacity="0.55"/>
+<circle class="k2" cx="500.0" cy="148.0" r="10.5" fill="none" stroke="#1baf7a" stroke-width="1.4" opacity="0.55"/>
+<circle class="k2" cx="534.0" cy="148.0" r="10.5" fill="none" stroke="#1baf7a" stroke-width="1.4" opacity="0.55"/>
+<circle class="s2" cx="568.0" cy="148.0" r="11.5" fill="#1baf7a" stroke="none" stroke-width="1.4"/>
+<circle class="s2" cx="602.0" cy="148.0" r="11.5" fill="#1baf7a" stroke="none" stroke-width="1.4"/>
+<circle class="k2" cx="636.0" cy="148.0" r="10.5" fill="none" stroke="#1baf7a" stroke-width="1.4" opacity="0.55"/>
+<circle class="k2" cx="670.0" cy="148.0" r="10.5" fill="none" stroke="#1baf7a" stroke-width="1.4" opacity="0.55"/>
+<circle class="k2" cx="704.0" cy="148.0" r="10.5" fill="none" stroke="#1baf7a" stroke-width="1.4" opacity="0.55"/>
+<text class="ink3" x="446.0" y="186.0" font-size="10" font-weight="400" text-anchor="end" fill="#6f7b79" font-family="IBM Plex Mono, monospace">stratum 4</text>
+<circle class="k3" cx="466.0" cy="182.0" r="10.5" fill="none" stroke="#eda100" stroke-width="1.4" opacity="0.55"/>
+<circle class="s3" cx="500.0" cy="182.0" r="11.5" fill="#eda100" stroke="none" stroke-width="1.4"/>
+<circle class="k3" cx="534.0" cy="182.0" r="10.5" fill="none" stroke="#eda100" stroke-width="1.4" opacity="0.55"/>
+<circle class="k3" cx="568.0" cy="182.0" r="10.5" fill="none" stroke="#eda100" stroke-width="1.4" opacity="0.55"/>
+<circle class="k3" cx="602.0" cy="182.0" r="10.5" fill="none" stroke="#eda100" stroke-width="1.4" opacity="0.55"/>
+<circle class="k3" cx="636.0" cy="182.0" r="10.5" fill="none" stroke="#eda100" stroke-width="1.4" opacity="0.55"/>
+<circle class="k3" cx="670.0" cy="182.0" r="10.5" fill="none" stroke="#eda100" stroke-width="1.4" opacity="0.55"/>
+<circle class="s3" cx="704.0" cy="182.0" r="11.5" fill="#eda100" stroke="none" stroke-width="1.4"/>
+<text class="ink3" x="446.0" y="220.0" font-size="10" font-weight="400" text-anchor="end" fill="#6f7b79" font-family="IBM Plex Mono, monospace">stratum 5</text>
+<circle class="k4" cx="466.0" cy="216.0" r="10.5" fill="none" stroke="#e87ba4" stroke-width="1.4" opacity="0.55"/>
+<circle class="k4" cx="500.0" cy="216.0" r="10.5" fill="none" stroke="#e87ba4" stroke-width="1.4" opacity="0.55"/>
+<circle class="s4" cx="534.0" cy="216.0" r="11.5" fill="#e87ba4" stroke="none" stroke-width="1.4"/>
+<circle class="k4" cx="568.0" cy="216.0" r="10.5" fill="none" stroke="#e87ba4" stroke-width="1.4" opacity="0.55"/>
+<circle class="k4" cx="602.0" cy="216.0" r="10.5" fill="none" stroke="#e87ba4" stroke-width="1.4" opacity="0.55"/>
+<circle class="s4" cx="636.0" cy="216.0" r="11.5" fill="#e87ba4" stroke="none" stroke-width="1.4"/>
+<circle class="k4" cx="670.0" cy="216.0" r="10.5" fill="none" stroke="#e87ba4" stroke-width="1.4" opacity="0.55"/>
+<circle class="k4" cx="704.0" cy="216.0" r="10.5" fill="none" stroke="#e87ba4" stroke-width="1.4" opacity="0.55"/>
+<rect class="band" x="8.0" y="247.0" width="370.0" height="231.0" rx="4" fill="#eef1ef" stroke="none" stroke-width="1.2"/>
+<text class="ink" x="22.0" y="269.0" font-size="13.5" font-weight="600" text-anchor="start" fill="#15201f">Cluster random sample</text>
+<text class="ink2" x="22.0" y="287.0" font-size="11.5" font-weight="400" text-anchor="start" fill="#4a5654">columns are clusters: all of 2 random columns</text>
+<text class="ink3" x="84.0" y="302.0" font-size="10" font-weight="400" text-anchor="middle" fill="#6f7b79" font-family="IBM Plex Mono, monospace">C1</text>
+<text class="ink3" x="118.0" y="302.0" font-size="10" font-weight="400" text-anchor="middle" fill="#6f7b79" font-family="IBM Plex Mono, monospace">C2</text>
+<text class="ink3" x="152.0" y="302.0" font-size="10" font-weight="400" text-anchor="middle" fill="#6f7b79" font-family="IBM Plex Mono, monospace">C3</text>
+<text class="ink3" x="186.0" y="302.0" font-size="10" font-weight="400" text-anchor="middle" fill="#6f7b79" font-family="IBM Plex Mono, monospace">C4</text>
+<text class="ink3" x="220.0" y="302.0" font-size="10" font-weight="400" text-anchor="middle" fill="#6f7b79" font-family="IBM Plex Mono, monospace">C5</text>
+<text class="ink3" x="254.0" y="302.0" font-size="10" font-weight="400" text-anchor="middle" fill="#6f7b79" font-family="IBM Plex Mono, monospace">C6</text>
+<text class="ink3" x="288.0" y="302.0" font-size="10" font-weight="400" text-anchor="middle" fill="#6f7b79" font-family="IBM Plex Mono, monospace">C7</text>
+<text class="ink3" x="322.0" y="302.0" font-size="10" font-weight="400" text-anchor="middle" fill="#6f7b79" font-family="IBM Plex Mono, monospace">C8</text>
+<rect class="kink" x="137.0" y="307.0" width="30.0" height="164.0" rx="6" fill="none" stroke="#15201f" stroke-width="1.6"/>
+<rect class="kink" x="239.0" y="307.0" width="30.0" height="164.0" rx="6" fill="none" stroke="#15201f" stroke-width="1.6"/>
+<circle class="k0" cx="84.0" cy="321.0" r="10.5" fill="none" stroke="#2a78d6" stroke-width="1.4" opacity="0.55"/>
+<circle class="k0" cx="118.0" cy="321.0" r="10.5" fill="none" stroke="#2a78d6" stroke-width="1.4" opacity="0.55"/>
+<circle class="s0" cx="152.0" cy="321.0" r="11.5" fill="#2a78d6" stroke="none" stroke-width="1.4"/>
+<circle class="k0" cx="186.0" cy="321.0" r="10.5" fill="none" stroke="#2a78d6" stroke-width="1.4" opacity="0.55"/>
+<circle class="k0" cx="220.0" cy="321.0" r="10.5" fill="none" stroke="#2a78d6" stroke-width="1.4" opacity="0.55"/>
+<circle class="s0" cx="254.0" cy="321.0" r="11.5" fill="#2a78d6" stroke="none" stroke-width="1.4"/>
+<circle class="k0" cx="288.0" cy="321.0" r="10.5" fill="none" stroke="#2a78d6" stroke-width="1.4" opacity="0.55"/>
+<circle class="k0" cx="322.0" cy="321.0" r="10.5" fill="none" stroke="#2a78d6" stroke-width="1.4" opacity="0.55"/>
+<circle class="k1" cx="84.0" cy="355.0" r="10.5" fill="none" stroke="#eb6834" stroke-width="1.4" opacity="0.55"/>
+<circle class="k1" cx="118.0" cy="355.0" r="10.5" fill="none" stroke="#eb6834" stroke-width="1.4" opacity="0.55"/>
+<circle class="s1" cx="152.0" cy="355.0" r="11.5" fill="#eb6834" stroke="none" stroke-width="1.4"/>
+<circle class="k1" cx="186.0" cy="355.0" r="10.5" fill="none" stroke="#eb6834" stroke-width="1.4" opacity="0.55"/>
+<circle class="k1" cx="220.0" cy="355.0" r="10.5" fill="none" stroke="#eb6834" stroke-width="1.4" opacity="0.55"/>
+<circle class="s1" cx="254.0" cy="355.0" r="11.5" fill="#eb6834" stroke="none" stroke-width="1.4"/>
+<circle class="k1" cx="288.0" cy="355.0" r="10.5" fill="none" stroke="#eb6834" stroke-width="1.4" opacity="0.55"/>
+<circle class="k1" cx="322.0" cy="355.0" r="10.5" fill="none" stroke="#eb6834" stroke-width="1.4" opacity="0.55"/>
+<circle class="k2" cx="84.0" cy="389.0" r="10.5" fill="none" stroke="#1baf7a" stroke-width="1.4" opacity="0.55"/>
+<circle class="k2" cx="118.0" cy="389.0" r="10.5" fill="none" stroke="#1baf7a" stroke-width="1.4" opacity="0.55"/>
+<circle class="s2" cx="152.0" cy="389.0" r="11.5" fill="#1baf7a" stroke="none" stroke-width="1.4"/>
+<circle class="k2" cx="186.0" cy="389.0" r="10.5" fill="none" stroke="#1baf7a" stroke-width="1.4" opacity="0.55"/>
+<circle class="k2" cx="220.0" cy="389.0" r="10.5" fill="none" stroke="#1baf7a" stroke-width="1.4" opacity="0.55"/>
+<circle class="s2" cx="254.0" cy="389.0" r="11.5" fill="#1baf7a" stroke="none" stroke-width="1.4"/>
+<circle class="k2" cx="288.0" cy="389.0" r="10.5" fill="none" stroke="#1baf7a" stroke-width="1.4" opacity="0.55"/>
+<circle class="k2" cx="322.0" cy="389.0" r="10.5" fill="none" stroke="#1baf7a" stroke-width="1.4" opacity="0.55"/>
+<circle class="k3" cx="84.0" cy="423.0" r="10.5" fill="none" stroke="#eda100" stroke-width="1.4" opacity="0.55"/>
+<circle class="k3" cx="118.0" cy="423.0" r="10.5" fill="none" stroke="#eda100" stroke-width="1.4" opacity="0.55"/>
+<circle class="s3" cx="152.0" cy="423.0" r="11.5" fill="#eda100" stroke="none" stroke-width="1.4"/>
+<circle class="k3" cx="186.0" cy="423.0" r="10.5" fill="none" stroke="#eda100" stroke-width="1.4" opacity="0.55"/>
+<circle class="k3" cx="220.0" cy="423.0" r="10.5" fill="none" stroke="#eda100" stroke-width="1.4" opacity="0.55"/>
+<circle class="s3" cx="254.0" cy="423.0" r="11.5" fill="#eda100" stroke="none" stroke-width="1.4"/>
+<circle class="k3" cx="288.0" cy="423.0" r="10.5" fill="none" stroke="#eda100" stroke-width="1.4" opacity="0.55"/>
+<circle class="k3" cx="322.0" cy="423.0" r="10.5" fill="none" stroke="#eda100" stroke-width="1.4" opacity="0.55"/>
+<circle class="k4" cx="84.0" cy="457.0" r="10.5" fill="none" stroke="#e87ba4" stroke-width="1.4" opacity="0.55"/>
+<circle class="k4" cx="118.0" cy="457.0" r="10.5" fill="none" stroke="#e87ba4" stroke-width="1.4" opacity="0.55"/>
+<circle class="s4" cx="152.0" cy="457.0" r="11.5" fill="#e87ba4" stroke="none" stroke-width="1.4"/>
+<circle class="k4" cx="186.0" cy="457.0" r="10.5" fill="none" stroke="#e87ba4" stroke-width="1.4" opacity="0.55"/>
+<circle class="k4" cx="220.0" cy="457.0" r="10.5" fill="none" stroke="#e87ba4" stroke-width="1.4" opacity="0.55"/>
+<circle class="s4" cx="254.0" cy="457.0" r="11.5" fill="#e87ba4" stroke="none" stroke-width="1.4"/>
+<circle class="k4" cx="288.0" cy="457.0" r="10.5" fill="none" stroke="#e87ba4" stroke-width="1.4" opacity="0.55"/>
+<circle class="k4" cx="322.0" cy="457.0" r="10.5" fill="none" stroke="#e87ba4" stroke-width="1.4" opacity="0.55"/>
+<rect class="band" x="390.0" y="247.0" width="370.0" height="231.0" rx="4" fill="#eef1ef" stroke="none" stroke-width="1.2"/>
+<text class="ink" x="404.0" y="269.0" font-size="13.5" font-weight="600" text-anchor="start" fill="#15201f">Systematic random sample</text>
+<text class="ink2" x="404.0" y="287.0" font-size="11.5" font-weight="400" text-anchor="start" fill="#4a5654">numbered 1 to 40: random start 3, then every 4th</text>
+<circle class="k0" cx="466.0" cy="321.0" r="10.5" fill="none" stroke="#2a78d6" stroke-width="1.4" opacity="0.55"/>
+<text class="ink3" x="466.0" y="324.6" font-size="9.5" font-weight="400" text-anchor="middle" fill="#6f7b79">1</text>
+<circle class="k0" cx="500.0" cy="321.0" r="10.5" fill="none" stroke="#2a78d6" stroke-width="1.4" opacity="0.55"/>
+<text class="ink3" x="500.0" y="324.6" font-size="9.5" font-weight="400" text-anchor="middle" fill="#6f7b79">2</text>
+<circle class="s0" cx="534.0" cy="321.0" r="11.5" fill="#2a78d6" stroke="none" stroke-width="1.4"/>
+<text class="surf" x="534.0" y="324.6" font-size="9.5" font-weight="600" text-anchor="middle" fill="#ffffff">3</text>
+<circle class="k0" cx="568.0" cy="321.0" r="10.5" fill="none" stroke="#2a78d6" stroke-width="1.4" opacity="0.55"/>
+<text class="ink3" x="568.0" y="324.6" font-size="9.5" font-weight="400" text-anchor="middle" fill="#6f7b79">4</text>
+<circle class="k0" cx="602.0" cy="321.0" r="10.5" fill="none" stroke="#2a78d6" stroke-width="1.4" opacity="0.55"/>
+<text class="ink3" x="602.0" y="324.6" font-size="9.5" font-weight="400" text-anchor="middle" fill="#6f7b79">5</text>
+<circle class="k0" cx="636.0" cy="321.0" r="10.5" fill="none" stroke="#2a78d6" stroke-width="1.4" opacity="0.55"/>
+<text class="ink3" x="636.0" y="324.6" font-size="9.5" font-weight="400" text-anchor="middle" fill="#6f7b79">6</text>
+<circle class="s0" cx="670.0" cy="321.0" r="11.5" fill="#2a78d6" stroke="none" stroke-width="1.4"/>
+<text class="surf" x="670.0" y="324.6" font-size="9.5" font-weight="600" text-anchor="middle" fill="#ffffff">7</text>
+<circle class="k0" cx="704.0" cy="321.0" r="10.5" fill="none" stroke="#2a78d6" stroke-width="1.4" opacity="0.55"/>
+<text class="ink3" x="704.0" y="324.6" font-size="9.5" font-weight="400" text-anchor="middle" fill="#6f7b79">8</text>
+<circle class="k1" cx="466.0" cy="355.0" r="10.5" fill="none" stroke="#eb6834" stroke-width="1.4" opacity="0.55"/>
+<text class="ink3" x="466.0" y="358.6" font-size="9.5" font-weight="400" text-anchor="middle" fill="#6f7b79">9</text>
+<circle class="k1" cx="500.0" cy="355.0" r="10.5" fill="none" stroke="#eb6834" stroke-width="1.4" opacity="0.55"/>
+<text class="ink3" x="500.0" y="358.6" font-size="9.5" font-weight="400" text-anchor="middle" fill="#6f7b79">10</text>
+<circle class="s1" cx="534.0" cy="355.0" r="11.5" fill="#eb6834" stroke="none" stroke-width="1.4"/>
+<text class="surf" x="534.0" y="358.6" font-size="9.5" font-weight="600" text-anchor="middle" fill="#ffffff">11</text>
+<circle class="k1" cx="568.0" cy="355.0" r="10.5" fill="none" stroke="#eb6834" stroke-width="1.4" opacity="0.55"/>
+<text class="ink3" x="568.0" y="358.6" font-size="9.5" font-weight="400" text-anchor="middle" fill="#6f7b79">12</text>
+<circle class="k1" cx="602.0" cy="355.0" r="10.5" fill="none" stroke="#eb6834" stroke-width="1.4" opacity="0.55"/>
+<text class="ink3" x="602.0" y="358.6" font-size="9.5" font-weight="400" text-anchor="middle" fill="#6f7b79">13</text>
+<circle class="k1" cx="636.0" cy="355.0" r="10.5" fill="none" stroke="#eb6834" stroke-width="1.4" opacity="0.55"/>
+<text class="ink3" x="636.0" y="358.6" font-size="9.5" font-weight="400" text-anchor="middle" fill="#6f7b79">14</text>
+<circle class="s1" cx="670.0" cy="355.0" r="11.5" fill="#eb6834" stroke="none" stroke-width="1.4"/>
+<text class="surf" x="670.0" y="358.6" font-size="9.5" font-weight="600" text-anchor="middle" fill="#ffffff">15</text>
+<circle class="k1" cx="704.0" cy="355.0" r="10.5" fill="none" stroke="#eb6834" stroke-width="1.4" opacity="0.55"/>
+<text class="ink3" x="704.0" y="358.6" font-size="9.5" font-weight="400" text-anchor="middle" fill="#6f7b79">16</text>
+<circle class="k2" cx="466.0" cy="389.0" r="10.5" fill="none" stroke="#1baf7a" stroke-width="1.4" opacity="0.55"/>
+<text class="ink3" x="466.0" y="392.6" font-size="9.5" font-weight="400" text-anchor="middle" fill="#6f7b79">17</text>
+<circle class="k2" cx="500.0" cy="389.0" r="10.5" fill="none" stroke="#1baf7a" stroke-width="1.4" opacity="0.55"/>
+<text class="ink3" x="500.0" y="392.6" font-size="9.5" font-weight="400" text-anchor="middle" fill="#6f7b79">18</text>
+<circle class="s2" cx="534.0" cy="389.0" r="11.5" fill="#1baf7a" stroke="none" stroke-width="1.4"/>
+<text class="surf" x="534.0" y="392.6" font-size="9.5" font-weight="600" text-anchor="middle" fill="#ffffff">19</text>
+<circle class="k2" cx="568.0" cy="389.0" r="10.5" fill="none" stroke="#1baf7a" stroke-width="1.4" opacity="0.55"/>
+<text class="ink3" x="568.0" y="392.6" font-size="9.5" font-weight="400" text-anchor="middle" fill="#6f7b79">20</text>
+<circle class="k2" cx="602.0" cy="389.0" r="10.5" fill="none" stroke="#1baf7a" stroke-width="1.4" opacity="0.55"/>
+<text class="ink3" x="602.0" y="392.6" font-size="9.5" font-weight="400" text-anchor="middle" fill="#6f7b79">21</text>
+<circle class="k2" cx="636.0" cy="389.0" r="10.5" fill="none" stroke="#1baf7a" stroke-width="1.4" opacity="0.55"/>
+<text class="ink3" x="636.0" y="392.6" font-size="9.5" font-weight="400" text-anchor="middle" fill="#6f7b79">22</text>
+<circle class="s2" cx="670.0" cy="389.0" r="11.5" fill="#1baf7a" stroke="none" stroke-width="1.4"/>
+<text class="surf" x="670.0" y="392.6" font-size="9.5" font-weight="600" text-anchor="middle" fill="#ffffff">23</text>
+<circle class="k2" cx="704.0" cy="389.0" r="10.5" fill="none" stroke="#1baf7a" stroke-width="1.4" opacity="0.55"/>
+<text class="ink3" x="704.0" y="392.6" font-size="9.5" font-weight="400" text-anchor="middle" fill="#6f7b79">24</text>
+<circle class="k3" cx="466.0" cy="423.0" r="10.5" fill="none" stroke="#eda100" stroke-width="1.4" opacity="0.55"/>
+<text class="ink3" x="466.0" y="426.6" font-size="9.5" font-weight="400" text-anchor="middle" fill="#6f7b79">25</text>
+<circle class="k3" cx="500.0" cy="423.0" r="10.5" fill="none" stroke="#eda100" stroke-width="1.4" opacity="0.55"/>
+<text class="ink3" x="500.0" y="426.6" font-size="9.5" font-weight="400" text-anchor="middle" fill="#6f7b79">26</text>
+<circle class="s3" cx="534.0" cy="423.0" r="11.5" fill="#eda100" stroke="none" stroke-width="1.4"/>
+<text class="surf" x="534.0" y="426.6" font-size="9.5" font-weight="600" text-anchor="middle" fill="#ffffff">27</text>
+<circle class="k3" cx="568.0" cy="423.0" r="10.5" fill="none" stroke="#eda100" stroke-width="1.4" opacity="0.55"/>
+<text class="ink3" x="568.0" y="426.6" font-size="9.5" font-weight="400" text-anchor="middle" fill="#6f7b79">28</text>
+<circle class="k3" cx="602.0" cy="423.0" r="10.5" fill="none" stroke="#eda100" stroke-width="1.4" opacity="0.55"/>
+<text class="ink3" x="602.0" y="426.6" font-size="9.5" font-weight="400" text-anchor="middle" fill="#6f7b79">29</text>
+<circle class="k3" cx="636.0" cy="423.0" r="10.5" fill="none" stroke="#eda100" stroke-width="1.4" opacity="0.55"/>
+<text class="ink3" x="636.0" y="426.6" font-size="9.5" font-weight="400" text-anchor="middle" fill="#6f7b79">30</text>
+<circle class="s3" cx="670.0" cy="423.0" r="11.5" fill="#eda100" stroke="none" stroke-width="1.4"/>
+<text class="surf" x="670.0" y="426.6" font-size="9.5" font-weight="600" text-anchor="middle" fill="#ffffff">31</text>
+<circle class="k3" cx="704.0" cy="423.0" r="10.5" fill="none" stroke="#eda100" stroke-width="1.4" opacity="0.55"/>
+<text class="ink3" x="704.0" y="426.6" font-size="9.5" font-weight="400" text-anchor="middle" fill="#6f7b79">32</text>
+<circle class="k4" cx="466.0" cy="457.0" r="10.5" fill="none" stroke="#e87ba4" stroke-width="1.4" opacity="0.55"/>
+<text class="ink3" x="466.0" y="460.6" font-size="9.5" font-weight="400" text-anchor="middle" fill="#6f7b79">33</text>
+<circle class="k4" cx="500.0" cy="457.0" r="10.5" fill="none" stroke="#e87ba4" stroke-width="1.4" opacity="0.55"/>
+<text class="ink3" x="500.0" y="460.6" font-size="9.5" font-weight="400" text-anchor="middle" fill="#6f7b79">34</text>
+<circle class="s4" cx="534.0" cy="457.0" r="11.5" fill="#e87ba4" stroke="none" stroke-width="1.4"/>
+<text class="surf" x="534.0" y="460.6" font-size="9.5" font-weight="600" text-anchor="middle" fill="#ffffff">35</text>
+<circle class="k4" cx="568.0" cy="457.0" r="10.5" fill="none" stroke="#e87ba4" stroke-width="1.4" opacity="0.55"/>
+<text class="ink3" x="568.0" y="460.6" font-size="9.5" font-weight="400" text-anchor="middle" fill="#6f7b79">36</text>
+<circle class="k4" cx="602.0" cy="457.0" r="10.5" fill="none" stroke="#e87ba4" stroke-width="1.4" opacity="0.55"/>
+<text class="ink3" x="602.0" y="460.6" font-size="9.5" font-weight="400" text-anchor="middle" fill="#6f7b79">37</text>
+<circle class="k4" cx="636.0" cy="457.0" r="10.5" fill="none" stroke="#e87ba4" stroke-width="1.4" opacity="0.55"/>
+<text class="ink3" x="636.0" y="460.6" font-size="9.5" font-weight="400" text-anchor="middle" fill="#6f7b79">38</text>
+<circle class="s4" cx="670.0" cy="457.0" r="11.5" fill="#e87ba4" stroke="none" stroke-width="1.4"/>
+<text class="surf" x="670.0" y="460.6" font-size="9.5" font-weight="600" text-anchor="middle" fill="#ffffff">39</text>
+<circle class="k4" cx="704.0" cy="457.0" r="10.5" fill="none" stroke="#e87ba4" stroke-width="1.4" opacity="0.55"/>
+<text class="ink3" x="704.0" y="460.6" font-size="9.5" font-weight="400" text-anchor="middle" fill="#6f7b79">40</text>
+</svg>
+</div><figcaption>The same 40 individuals, four ways, n = 10 each time. The rows are strata and the columns are clusters, so each column mirrors the whole grid. There are 847,660,528 possible simple random samples of 10; stratifying by row allows 17,210,368 of them, choosing 2 of 8 columns allows 28, and the systematic plan allows 4. Every individual has a 1 in 4 chance in all four panels.</figcaption></figure>
+<h3>Seven check questions before the scenarios</h3>
+<div class="script"><div class="line ask"><span class="lbl">Ask</span><span class="txt">"A club records the age of every one of its 60 members. What is that, and is the mean age a statistic?"</span></div><div class="line listen"><span class="lbl">Listen for</span><span class="txt">A census, so the mean age is a parameter, not a statistic.</span></div><div class="line ask"><span class="lbl">Ask</span><span class="txt">"Forty volunteers; a coin decides who follows diet A and who follows diet B. Experiment or observational? And if instead the researcher compares 20 people already on diet A with 20 already on diet B?"</span></div><div class="line listen"><span class="lbl">Listen for</span><span class="txt">The coin toss imposes the diets: an experiment, even with volunteers. The second imposes nothing: an observational study, even though it compares two groups.</span></div><div class="line ask"><span class="lbl">Ask</span><span class="txt">"What must a variable be associated with to be a confounding variable?"</span></div><div class="line listen"><span class="lbl">Listen for</span><span class="txt">Both the explanatory variable and the response variable.</span></div><div class="line ask"><span class="lbl">Ask</span><span class="txt">"A researcher picks 30 people who 'looked typical'. Is that a random sample, and how far do the results reach?"</span></div><div class="line listen"><span class="lbl">Listen for</span><span class="txt">No random mechanism, so not random; only to people similar to those 30.</span></div><div class="line ask"><span class="lbl">Ask</span><span class="txt">"Split a population into groups. Take some individuals from every group: which method? Take every individual from some groups: which method?"</span></div><div class="line listen"><span class="lbl">Listen for</span><span class="txt">Some from every group: stratified. All from some groups: cluster.</span></div><div class="line ask"><span class="lbl">Ask</span><span class="txt">"In a sampling plan, every individual has a 1 in 10 chance of being picked. Must it be a simple random sample?"</span></div><div class="line listen"><span class="lbl">Listen for</span><span class="txt">No. An SRS is defined by every <strong>sample</strong> of size <em>n</em> being equally likely; a systematic sample gives every individual 1 in 10 and allows only 10 samples.</span></div><div class="line ask"><span class="lbl">Ask</span><span class="txt">"The question is: is the mean waiting time of all the clinic's patients greater than 20 minutes? Which component tells you the analysis, and what does it say?"</span></div><div class="line listen"><span class="lbl">Listen for</span><span class="txt">The second: parameter, the mean waiting time of all the clinic's patients; a test, with the direction <em>greater than</em>.</span></div><div class="line ifsay"><span class="lbl">If any answer goes wrong</span><span class="txt">Go back to that subsection and reread its "what it does not say" paragraph together before Scenario A. The scenarios lean on every one of them.</span></div></div>
+<hr>
+<h2>47–87 min · Scenario A — Lincoln High: how to choose 120 of 1,842</h2>
+<p>Lincoln High from Sessions 1 to 5, with its <strong>1,842 students</strong> on an alphabetical school roll. Until now the course has used "a randomly chosen 120" and "25 randomly chosen" students without asking how. The principal is about to run the full travel survey for the new bus timetable, and five members of staff have each proposed a way to choose about 120 students. The school office has two things for every student: a home address, from which it has sorted everyone into three <strong>home areas</strong>, and a <strong>tutor group</strong>. There are <strong>72 tutor groups</strong>, 42 of 26 students and 30 of 25, and each is a mix of students from all three areas.</p>
+<div class="tbl"><table><thead><tr><th>Home area</th><th>Students</th></tr></thead><tbody><tr><td>Town, within 3 km</td><td>846</td></tr><tr><td>Suburbs, 3 to 10 km</td><td>702</td></tr><tr><td>Villages, beyond 10 km</td><td>294</td></tr><tr class="tot"><td><strong>Total</strong></td><td><strong>1,842</strong></td></tr></tbody></table></div>
+<p><strong>The trap this scenario carries: stratified and cluster sampling both divide the population into groups, and students name them the wrong way round.</strong> The difference is which way round the groups are used: a stratified sample takes some individuals from <strong>every</strong> group; a cluster sample takes <strong>every</strong> individual from <strong>some</strong> groups. The course description's own multiple-choice question 7 and free-response question 1 both test it, and the free-response scoring rejects "stratified" for a cluster design.</p>
+<h3>The principal's question, component by component</h3>
+<div class="script"><div class="line ask"><span class="lbl">Ask</span><span class="txt">"The principal asks: <em>What proportion of all Lincoln High students travel to school mainly by bus?</em> Give me its three components."</span></div><div class="line listen"><span class="lbl">Listen for</span><span class="txt">The variable: each student's main mode of travel. The parameter: the proportion of all 1,842 Lincoln High students who travel mainly by bus, and the goal of estimating it within a range of values. The population: all 1,842 Lincoln High students; the conclusion, a generalisation to them.</span></div><div class="line intro"><span class="lbl">Recall</span><span class="txt">The theory's three investigative-question subsections (1.10.A.1–3): the variables guide the collection, the parameter and goal guide the analysis, and the population and type of conclusion come third.</span></div><div class="line ifsay"><span class="lbl">If "the variable is the bus"</span><span class="txt">"What would you write down for each student?" Their main mode of travel. <em>Bus</em> is one of its values.</span></div><div class="line ifsay"><span class="lbl">If "the parameter is 43 out of 120"</span><span class="txt">"Whose proportion is that?" The sample's, from Session 1: a statistic. The parameter belongs to all 1,842.</span></div><div class="line ask"><span class="lbl">Ask</span><span class="txt">"The bus company says it needs more than 40% of students on the bus to keep the village route. How does the question change, and which component changes?"</span></div><div class="line listen"><span class="lbl">Listen for</span><span class="txt"><em>Is the proportion of all Lincoln High students who travel mainly by bus greater than 0.40?</em> The second component changes: same parameter, but now a test, with the direction <em>greater than</em>.</span></div></div>
+<p>The deputy head has a second question, in the form the course description's sample free-response question uses:</p>
+<blockquote><em>"Is there a difference between the mean journey time of all Lincoln High students who live in the Suburbs and the mean journey time of all Lincoln High students who live in the Villages?"</em></blockquote>
+<div class="tbl"><table><thead><tr><th>Component</th><th>For the deputy's question</th></tr></thead><tbody><tr><td>First: the variables</td><td>home area (Suburbs or Villages) and journey time to school, in minutes</td></tr><tr><td>Second: the parameters and the analysis</td><td>the mean journey time of all Suburbs students and of all Villages students; a test, direction <em>different</em> (not equal)</td></tr><tr><td>Third: the population and the conclusion</td><td>all Lincoln High students who live in the Suburbs or the Villages; a generalisation to them if the sample is random; no cause-and-effect, because nothing is imposed</td></tr></tbody></table></div>
+<p>The course description's scoring for its own version rejects "areas" and "times" as the first component, and rejects "everyone in the region" as the population. Say so: the precision is the mark.</p>
+<h3>A census of home areas, a sample of journeys</h3>
+<div class="script"><div class="line ask"><span class="lbl">Ask</span><span class="txt">"The office knows every student's home area. Is 846 Town students a statistic or a parameter? And what is that way of collecting data called?"</span></div><div class="line listen"><span class="lbl">Listen for</span><span class="txt">A parameter: it describes all 1,842. It came from a census, because every student is recorded.</span></div><div class="line intro"><span class="lbl">Recall</span><span class="txt"><em>Census: data from every individual in the population (1.10.B.1)</em>, and Session 1's rule that a summary from everyone is a parameter.</span></div><div class="line ask"><span class="lbl">Ask</span><span class="txt">"Why not a census of journey times too?"</span></div><div class="line listen"><span class="lbl">Listen for</span><span class="txt">The office does not have them; asking 1,842 students is slow, and many would not answer. A sample of 120 is quicker and, if chosen at random, supports conclusions about all 1,842.</span></div><div class="line ask"><span class="lbl">Ask</span><span class="txt">"Is the travel survey an experiment or an observational study?"</span></div><div class="line listen"><span class="lbl">Listen for</span><span class="txt">An observational study, and specifically a survey: standard questions to people, nothing imposed.</span></div><div class="line intro"><span class="lbl">Recall</span><span class="txt"><em>Prospective, retrospective and survey (1.10.D.2–4)</em>: a survey is an observational study.</span></div></div>
+<h3>Five plans from the staff room</h3>
+<p>Put the five plans on the screen. The student names the method of each before anything is said about which is best.</p>
+<div class="tbl"><table><thead><tr><th>Plan</th><th>Proposed by</th><th>How the students are chosen</th></tr></thead><tbody><tr class="tot"><td><strong>A</strong></td><td>Maths department</td><td>Number the roll 0001 to 1842. A random number generator gives numbers until there are 120 different ones; a number that comes up again is ignored</td></tr><tr class="tot"><td><strong>B</strong></td><td>Head of year</td><td>For each home area separately, a random number generator chooses students from that area's list: 55 from Town, 46 from Suburbs, 19 from Villages</td></tr><tr class="tot"><td><strong>C</strong></td><td>Pastoral lead</td><td>A random number generator chooses 5 of the 72 tutor groups, and every student in those 5 groups completes the survey in tutor time</td></tr><tr class="tot"><td><strong>D</strong></td><td>Office manager</td><td>A random number generator chooses a start from 1 to 15 on the alphabetical roll; then every 15th student after it</td></tr><tr class="tot"><td><strong>E</strong></td><td>Deputy head</td><td>Stand at the main gate on Monday morning and give the survey to the first 120 students who arrive</td></tr></tbody></table></div>
+<div class="script"><div class="line ask"><span class="lbl">Ask</span><span class="txt">"Name the sampling method of each plan, in full."</span></div><div class="line listen"><span class="lbl">Listen for</span><span class="txt">A simple random sample. B stratified random sample, with home areas as strata. C cluster random sample, with tutor groups as clusters. D systematic random sample. E is not a random sample.</span></div><div class="line intro"><span class="lbl">Recall</span><span class="txt">The four method subsections, <em>Simple random sample (1.11.A.3)</em> to <em>Systematic random sample (1.11.A.6)</em>, and <em>Sampling without replacement and with replacement (1.11.A.1–2)</em> for Plan A's ignored repeats.</span></div><div class="line ifsay"><span class="lbl">If "A is random sampling"</span><span class="txt">"The course description's scoring rejects 'random sample' on its own. Which random method?" Simple random.</span></div><div class="line ask"><span class="lbl">Ask</span><span class="txt">"In Plan A, why ignore a number that comes up twice?"</span></div><div class="line listen"><span class="lbl">Listen for</span><span class="txt">So that no student is chosen twice: sampling without replacement.</span></div><div class="line ask"><span class="lbl">Ask</span><span class="txt">"How many students does Plan D give?"</span></div><div class="line listen"><span class="lbl">Listen for</span><span class="txt">1,842 ÷ 15 = 122.8, so 122 or 123: 123 for starts 1 to 12, 122 for starts 13 to 15. For start 7: 7, 22, 37, …, 1837, which is 123 students.</span></div></div>
+<p>Plan B's numbers are in proportion to the areas: 846 ÷ 1,842 × 120 = 55.1, 702 ÷ 1,842 × 120 = 45.7 and 294 ÷ 1,842 × 120 = 19.2, rounded to 55, 46 and 19, which total 120. Proportional numbers are a choice the head of year made; the definition of a stratified sample does not require them.</p>
+<h3>Stratified or cluster: which way round the groups are used</h3>
+<div class="script"><div class="line ask"><span class="lbl">Ask</span><span class="txt">"Plans B and C both split the school into groups. What is the difference?"</span></div><div class="line listen"><span class="lbl">Listen for</span><span class="txt">B takes some students from every home area. C takes every student from some tutor groups.</span></div><div class="line ifsay"><span class="lbl">If "C is stratified by tutor group"</span><span class="txt">"Did every tutor group get a student into the sample?" No: 67 of the 72 contribute nobody. A stratified sample samples inside every group.</span></div><div class="line ifsay"><span class="lbl">If "B is cluster sampling by area"</span><span class="txt">"Did the head of year take every student in any area?" No: 55 of 846. A cluster sample takes whole groups.</span></div><div class="line intro"><span class="lbl">Recall</span><span class="txt"><em>Stratified random sample: an SRS inside every stratum (1.11.A.4)</em> and <em>Cluster random sample: every unit in randomly chosen clusters (1.11.A.5)</em>.</span></div><div class="line ask"><span class="lbl">Ask</span><span class="txt">"What should a good stratum look like, and what should a good cluster look like?"</span></div><div class="line listen"><span class="lbl">Listen for</span><span class="txt">Students in a stratum should be alike: similar journeys within a home area. A cluster should be like a small copy of the school: every tutor group a mix of all three areas.</span></div></div>
+<figure><div class="figscroll"><svg viewBox="0 0 760 330" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Lincoln High. Plan B, stratified: a simple random sample inside each home area, 55 of the 846 Town students, 46 of the 702 Suburbs students and 19 of the 294 Villages students. Plan C, cluster: 5 of the 72 mixed tutor groups chosen at random, and every student in them." font-family="Public Sans, system-ui, sans-serif">
+<style>
+  .ink { fill: #15201f; }
+  .ink2 { fill: #4a5654; }
+  .ink3 { fill: #6f7b79; }
+  .kink { stroke: #15201f; }
+  .kink2 { stroke: #4a5654; }
+  .kink3 { stroke: #6f7b79; }
+  .axis { stroke: #c3c9c6; }
+  .grid { stroke: #dcdfdd; }
+  .surf { fill: #ffffff; }
+  .band { fill: #eef1ef; }
+  .acc { fill: #1a6b63; }
+  .kacc { stroke: #1a6b63; }
+  .amb { fill: #7d5a11; }
+  .kamb { stroke: #7d5a11; }
+  .s0 { fill: #2a78d6; }
+  .k0 { stroke: #2a78d6; }
+  .s1 { fill: #eb6834; }
+  .k1 { stroke: #eb6834; }
+  .s2 { fill: #1baf7a; }
+  .k2 { stroke: #1baf7a; }
+  .s3 { fill: #eda100; }
+  .k3 { stroke: #eda100; }
+  .s4 { fill: #e87ba4; }
+  .k4 { stroke: #e87ba4; }
+  .s5 { fill: #008300; }
+  .k5 { stroke: #008300; }
+  @media (prefers-color-scheme: dark) {
+    .ink { fill: #e9edeb; }
+    .ink2 { fill: #a5b0ad; }
+    .ink3 { fill: #7e8a87; }
+    .kink { stroke: #e9edeb; }
+    .kink2 { stroke: #a5b0ad; }
+    .kink3 { stroke: #7e8a87; }
+    .axis { stroke: #3a4644; }
+    .grid { stroke: #2a3533; }
+    .surf { fill: #182120; }
+    .band { fill: #1e2827; }
+    .acc { fill: #54b8ab; }
+    .kacc { stroke: #54b8ab; }
+    .amb { fill: #d9ab52; }
+    .kamb { stroke: #d9ab52; }
+    .s0 { fill: #3987e5; }
+    .k0 { stroke: #3987e5; }
+    .s1 { fill: #d95926; }
+    .k1 { stroke: #d95926; }
+    .s2 { fill: #199e70; }
+    .k2 { stroke: #199e70; }
+    .s3 { fill: #c98500; }
+    .k3 { stroke: #c98500; }
+    .s4 { fill: #d55181; }
+    .k4 { stroke: #d55181; }
+    .s5 { fill: #008300; }
+    .k5 { stroke: #008300; }
+  }
+</style>
+<rect class="band" x="8.0" y="8.0" width="360.0" height="314.0" rx="4" fill="#eef1ef" stroke="none" stroke-width="1.2"/>
+<text class="ink" x="22.0" y="32.0" font-size="13.5" font-weight="600" text-anchor="start" fill="#15201f">Plan B · stratified random sample</text>
+<text class="ink2" x="22.0" y="50.0" font-size="11.5" font-weight="400" text-anchor="start" fill="#4a5654">an SRS inside every home area (stratum)</text>
+<text class="ink2" x="22.0" y="78.0" font-size="11.5" font-weight="600" text-anchor="start" fill="#4a5654">Town, within 3 km  ·  N = 846</text>
+<rect class="s0" x="22.0" y="85.0" width="300.0" height="30.0" rx="2" fill="#2a78d6" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<line class="k0" x1="27.0" y1="88.0" x2="27.0" y2="112.0" stroke="#2a78d6" stroke-width="1.6" fill="none"/>
+<line class="k0" x1="30.0" y1="88.0" x2="30.0" y2="112.0" stroke="#2a78d6" stroke-width="1.6" fill="none"/>
+<line class="k0" x1="33.0" y1="88.0" x2="33.0" y2="112.0" stroke="#2a78d6" stroke-width="1.6" fill="none"/>
+<line class="k0" x1="43.0" y1="88.0" x2="43.0" y2="112.0" stroke="#2a78d6" stroke-width="1.6" fill="none"/>
+<line class="k0" x1="50.0" y1="88.0" x2="50.0" y2="112.0" stroke="#2a78d6" stroke-width="1.6" fill="none"/>
+<line class="k0" x1="51.0" y1="88.0" x2="51.0" y2="112.0" stroke="#2a78d6" stroke-width="1.6" fill="none"/>
+<line class="k0" x1="69.0" y1="88.0" x2="69.0" y2="112.0" stroke="#2a78d6" stroke-width="1.6" fill="none"/>
+<line class="k0" x1="72.0" y1="88.0" x2="72.0" y2="112.0" stroke="#2a78d6" stroke-width="1.6" fill="none"/>
+<line class="k0" x1="76.0" y1="88.0" x2="76.0" y2="112.0" stroke="#2a78d6" stroke-width="1.6" fill="none"/>
+<line class="k0" x1="78.0" y1="88.0" x2="78.0" y2="112.0" stroke="#2a78d6" stroke-width="1.6" fill="none"/>
+<line class="k0" x1="81.0" y1="88.0" x2="81.0" y2="112.0" stroke="#2a78d6" stroke-width="1.6" fill="none"/>
+<line class="k0" x1="83.0" y1="88.0" x2="83.0" y2="112.0" stroke="#2a78d6" stroke-width="1.6" fill="none"/>
+<line class="k0" x1="84.0" y1="88.0" x2="84.0" y2="112.0" stroke="#2a78d6" stroke-width="1.6" fill="none"/>
+<line class="k0" x1="86.0" y1="88.0" x2="86.0" y2="112.0" stroke="#2a78d6" stroke-width="1.6" fill="none"/>
+<line class="k0" x1="89.0" y1="88.0" x2="89.0" y2="112.0" stroke="#2a78d6" stroke-width="1.6" fill="none"/>
+<line class="k0" x1="90.0" y1="88.0" x2="90.0" y2="112.0" stroke="#2a78d6" stroke-width="1.6" fill="none"/>
+<line class="k0" x1="97.0" y1="88.0" x2="97.0" y2="112.0" stroke="#2a78d6" stroke-width="1.6" fill="none"/>
+<line class="k0" x1="102.0" y1="88.0" x2="102.0" y2="112.0" stroke="#2a78d6" stroke-width="1.6" fill="none"/>
+<line class="k0" x1="106.0" y1="88.0" x2="106.0" y2="112.0" stroke="#2a78d6" stroke-width="1.6" fill="none"/>
+<line class="k0" x1="113.0" y1="88.0" x2="113.0" y2="112.0" stroke="#2a78d6" stroke-width="1.6" fill="none"/>
+<line class="k0" x1="116.0" y1="88.0" x2="116.0" y2="112.0" stroke="#2a78d6" stroke-width="1.6" fill="none"/>
+<line class="k0" x1="128.0" y1="88.0" x2="128.0" y2="112.0" stroke="#2a78d6" stroke-width="1.6" fill="none"/>
+<line class="k0" x1="130.0" y1="88.0" x2="130.0" y2="112.0" stroke="#2a78d6" stroke-width="1.6" fill="none"/>
+<line class="k0" x1="132.0" y1="88.0" x2="132.0" y2="112.0" stroke="#2a78d6" stroke-width="1.6" fill="none"/>
+<line class="k0" x1="136.0" y1="88.0" x2="136.0" y2="112.0" stroke="#2a78d6" stroke-width="1.6" fill="none"/>
+<line class="k0" x1="150.0" y1="88.0" x2="150.0" y2="112.0" stroke="#2a78d6" stroke-width="1.6" fill="none"/>
+<line class="k0" x1="151.0" y1="88.0" x2="151.0" y2="112.0" stroke="#2a78d6" stroke-width="1.6" fill="none"/>
+<line class="k0" x1="152.0" y1="88.0" x2="152.0" y2="112.0" stroke="#2a78d6" stroke-width="1.6" fill="none"/>
+<line class="k0" x1="158.0" y1="88.0" x2="158.0" y2="112.0" stroke="#2a78d6" stroke-width="1.6" fill="none"/>
+<line class="k0" x1="166.0" y1="88.0" x2="166.0" y2="112.0" stroke="#2a78d6" stroke-width="1.6" fill="none"/>
+<line class="k0" x1="175.0" y1="88.0" x2="175.0" y2="112.0" stroke="#2a78d6" stroke-width="1.6" fill="none"/>
+<line class="k0" x1="184.0" y1="88.0" x2="184.0" y2="112.0" stroke="#2a78d6" stroke-width="1.6" fill="none"/>
+<line class="k0" x1="186.0" y1="88.0" x2="186.0" y2="112.0" stroke="#2a78d6" stroke-width="1.6" fill="none"/>
+<line class="k0" x1="188.0" y1="88.0" x2="188.0" y2="112.0" stroke="#2a78d6" stroke-width="1.6" fill="none"/>
+<line class="k0" x1="190.0" y1="88.0" x2="190.0" y2="112.0" stroke="#2a78d6" stroke-width="1.6" fill="none"/>
+<line class="k0" x1="191.0" y1="88.0" x2="191.0" y2="112.0" stroke="#2a78d6" stroke-width="1.6" fill="none"/>
+<line class="k0" x1="198.0" y1="88.0" x2="198.0" y2="112.0" stroke="#2a78d6" stroke-width="1.6" fill="none"/>
+<line class="k0" x1="199.0" y1="88.0" x2="199.0" y2="112.0" stroke="#2a78d6" stroke-width="1.6" fill="none"/>
+<line class="k0" x1="213.0" y1="88.0" x2="213.0" y2="112.0" stroke="#2a78d6" stroke-width="1.6" fill="none"/>
+<line class="k0" x1="214.0" y1="88.0" x2="214.0" y2="112.0" stroke="#2a78d6" stroke-width="1.6" fill="none"/>
+<line class="k0" x1="215.0" y1="88.0" x2="215.0" y2="112.0" stroke="#2a78d6" stroke-width="1.6" fill="none"/>
+<line class="k0" x1="217.0" y1="88.0" x2="217.0" y2="112.0" stroke="#2a78d6" stroke-width="1.6" fill="none"/>
+<line class="k0" x1="221.0" y1="88.0" x2="221.0" y2="112.0" stroke="#2a78d6" stroke-width="1.6" fill="none"/>
+<line class="k0" x1="234.0" y1="88.0" x2="234.0" y2="112.0" stroke="#2a78d6" stroke-width="1.6" fill="none"/>
+<line class="k0" x1="246.0" y1="88.0" x2="246.0" y2="112.0" stroke="#2a78d6" stroke-width="1.6" fill="none"/>
+<line class="k0" x1="264.0" y1="88.0" x2="264.0" y2="112.0" stroke="#2a78d6" stroke-width="1.6" fill="none"/>
+<line class="k0" x1="268.0" y1="88.0" x2="268.0" y2="112.0" stroke="#2a78d6" stroke-width="1.6" fill="none"/>
+<line class="k0" x1="272.0" y1="88.0" x2="272.0" y2="112.0" stroke="#2a78d6" stroke-width="1.6" fill="none"/>
+<line class="k0" x1="273.0" y1="88.0" x2="273.0" y2="112.0" stroke="#2a78d6" stroke-width="1.6" fill="none"/>
+<line class="k0" x1="274.0" y1="88.0" x2="274.0" y2="112.0" stroke="#2a78d6" stroke-width="1.6" fill="none"/>
+<line class="k0" x1="278.0" y1="88.0" x2="278.0" y2="112.0" stroke="#2a78d6" stroke-width="1.6" fill="none"/>
+<line class="k0" x1="286.0" y1="88.0" x2="286.0" y2="112.0" stroke="#2a78d6" stroke-width="1.6" fill="none"/>
+<line class="k0" x1="301.0" y1="88.0" x2="301.0" y2="112.0" stroke="#2a78d6" stroke-width="1.6" fill="none"/>
+<line class="k0" x1="317.0" y1="88.0" x2="317.0" y2="112.0" stroke="#2a78d6" stroke-width="1.6" fill="none"/>
+<line class="k0" x1="319.0" y1="88.0" x2="319.0" y2="112.0" stroke="#2a78d6" stroke-width="1.6" fill="none"/>
+<text class="ink" x="22.0" y="132.0" font-size="11.5" font-weight="400" text-anchor="start" fill="#15201f">55 chosen at random</text>
+<text class="ink2" x="22.0" y="160.0" font-size="11.5" font-weight="600" text-anchor="start" fill="#4a5654">Suburbs, 3 to 10 km  ·  N = 702</text>
+<rect class="s1" x="22.0" y="167.0" width="248.9" height="30.0" rx="2" fill="#eb6834" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<line class="k1" x1="24.0" y1="170.0" x2="24.0" y2="194.0" stroke="#eb6834" stroke-width="1.6" fill="none"/>
+<line class="k1" x1="31.0" y1="170.0" x2="31.0" y2="194.0" stroke="#eb6834" stroke-width="1.6" fill="none"/>
+<line class="k1" x1="43.0" y1="170.0" x2="43.0" y2="194.0" stroke="#eb6834" stroke-width="1.6" fill="none"/>
+<line class="k1" x1="44.0" y1="170.0" x2="44.0" y2="194.0" stroke="#eb6834" stroke-width="1.6" fill="none"/>
+<line class="k1" x1="51.0" y1="170.0" x2="51.0" y2="194.0" stroke="#eb6834" stroke-width="1.6" fill="none"/>
+<line class="k1" x1="58.0" y1="170.0" x2="58.0" y2="194.0" stroke="#eb6834" stroke-width="1.6" fill="none"/>
+<line class="k1" x1="61.0" y1="170.0" x2="61.0" y2="194.0" stroke="#eb6834" stroke-width="1.6" fill="none"/>
+<line class="k1" x1="69.0" y1="170.0" x2="69.0" y2="194.0" stroke="#eb6834" stroke-width="1.6" fill="none"/>
+<line class="k1" x1="74.0" y1="170.0" x2="74.0" y2="194.0" stroke="#eb6834" stroke-width="1.6" fill="none"/>
+<line class="k1" x1="79.0" y1="170.0" x2="79.0" y2="194.0" stroke="#eb6834" stroke-width="1.6" fill="none"/>
+<line class="k1" x1="84.0" y1="170.0" x2="84.0" y2="194.0" stroke="#eb6834" stroke-width="1.6" fill="none"/>
+<line class="k1" x1="86.0" y1="170.0" x2="86.0" y2="194.0" stroke="#eb6834" stroke-width="1.6" fill="none"/>
+<line class="k1" x1="92.0" y1="170.0" x2="92.0" y2="194.0" stroke="#eb6834" stroke-width="1.6" fill="none"/>
+<line class="k1" x1="93.0" y1="170.0" x2="93.0" y2="194.0" stroke="#eb6834" stroke-width="1.6" fill="none"/>
+<line class="k1" x1="98.0" y1="170.0" x2="98.0" y2="194.0" stroke="#eb6834" stroke-width="1.6" fill="none"/>
+<line class="k1" x1="116.0" y1="170.0" x2="116.0" y2="194.0" stroke="#eb6834" stroke-width="1.6" fill="none"/>
+<line class="k1" x1="120.0" y1="170.0" x2="120.0" y2="194.0" stroke="#eb6834" stroke-width="1.6" fill="none"/>
+<line class="k1" x1="131.0" y1="170.0" x2="131.0" y2="194.0" stroke="#eb6834" stroke-width="1.6" fill="none"/>
+<line class="k1" x1="132.0" y1="170.0" x2="132.0" y2="194.0" stroke="#eb6834" stroke-width="1.6" fill="none"/>
+<line class="k1" x1="134.0" y1="170.0" x2="134.0" y2="194.0" stroke="#eb6834" stroke-width="1.6" fill="none"/>
+<line class="k1" x1="143.0" y1="170.0" x2="143.0" y2="194.0" stroke="#eb6834" stroke-width="1.6" fill="none"/>
+<line class="k1" x1="147.0" y1="170.0" x2="147.0" y2="194.0" stroke="#eb6834" stroke-width="1.6" fill="none"/>
+<line class="k1" x1="168.0" y1="170.0" x2="168.0" y2="194.0" stroke="#eb6834" stroke-width="1.6" fill="none"/>
+<line class="k1" x1="169.0" y1="170.0" x2="169.0" y2="194.0" stroke="#eb6834" stroke-width="1.6" fill="none"/>
+<line class="k1" x1="171.0" y1="170.0" x2="171.0" y2="194.0" stroke="#eb6834" stroke-width="1.6" fill="none"/>
+<line class="k1" x1="183.0" y1="170.0" x2="183.0" y2="194.0" stroke="#eb6834" stroke-width="1.6" fill="none"/>
+<line class="k1" x1="188.0" y1="170.0" x2="188.0" y2="194.0" stroke="#eb6834" stroke-width="1.6" fill="none"/>
+<line class="k1" x1="194.0" y1="170.0" x2="194.0" y2="194.0" stroke="#eb6834" stroke-width="1.6" fill="none"/>
+<line class="k1" x1="205.0" y1="170.0" x2="205.0" y2="194.0" stroke="#eb6834" stroke-width="1.6" fill="none"/>
+<line class="k1" x1="207.0" y1="170.0" x2="207.0" y2="194.0" stroke="#eb6834" stroke-width="1.6" fill="none"/>
+<line class="k1" x1="211.0" y1="170.0" x2="211.0" y2="194.0" stroke="#eb6834" stroke-width="1.6" fill="none"/>
+<line class="k1" x1="213.0" y1="170.0" x2="213.0" y2="194.0" stroke="#eb6834" stroke-width="1.6" fill="none"/>
+<line class="k1" x1="214.0" y1="170.0" x2="214.0" y2="194.0" stroke="#eb6834" stroke-width="1.6" fill="none"/>
+<line class="k1" x1="217.0" y1="170.0" x2="217.0" y2="194.0" stroke="#eb6834" stroke-width="1.6" fill="none"/>
+<line class="k1" x1="219.0" y1="170.0" x2="219.0" y2="194.0" stroke="#eb6834" stroke-width="1.6" fill="none"/>
+<line class="k1" x1="221.0" y1="170.0" x2="221.0" y2="194.0" stroke="#eb6834" stroke-width="1.6" fill="none"/>
+<line class="k1" x1="225.0" y1="170.0" x2="225.0" y2="194.0" stroke="#eb6834" stroke-width="1.6" fill="none"/>
+<line class="k1" x1="226.0" y1="170.0" x2="226.0" y2="194.0" stroke="#eb6834" stroke-width="1.6" fill="none"/>
+<line class="k1" x1="230.0" y1="170.0" x2="230.0" y2="194.0" stroke="#eb6834" stroke-width="1.6" fill="none"/>
+<line class="k1" x1="233.0" y1="170.0" x2="233.0" y2="194.0" stroke="#eb6834" stroke-width="1.6" fill="none"/>
+<line class="k1" x1="234.0" y1="170.0" x2="234.0" y2="194.0" stroke="#eb6834" stroke-width="1.6" fill="none"/>
+<line class="k1" x1="236.0" y1="170.0" x2="236.0" y2="194.0" stroke="#eb6834" stroke-width="1.6" fill="none"/>
+<line class="k1" x1="237.0" y1="170.0" x2="237.0" y2="194.0" stroke="#eb6834" stroke-width="1.6" fill="none"/>
+<line class="k1" x1="250.0" y1="170.0" x2="250.0" y2="194.0" stroke="#eb6834" stroke-width="1.6" fill="none"/>
+<line class="k1" x1="252.0" y1="170.0" x2="252.0" y2="194.0" stroke="#eb6834" stroke-width="1.6" fill="none"/>
+<line class="k1" x1="259.0" y1="170.0" x2="259.0" y2="194.0" stroke="#eb6834" stroke-width="1.6" fill="none"/>
+<text class="ink" x="22.0" y="214.0" font-size="11.5" font-weight="400" text-anchor="start" fill="#15201f">46 chosen at random</text>
+<text class="ink2" x="22.0" y="242.0" font-size="11.5" font-weight="600" text-anchor="start" fill="#4a5654">Villages, beyond 10 km  ·  N = 294</text>
+<rect class="s2" x="22.0" y="249.0" width="104.3" height="30.0" rx="2" fill="#1baf7a" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<line class="k2" x1="28.0" y1="252.0" x2="28.0" y2="276.0" stroke="#1baf7a" stroke-width="1.6" fill="none"/>
+<line class="k2" x1="35.0" y1="252.0" x2="35.0" y2="276.0" stroke="#1baf7a" stroke-width="1.6" fill="none"/>
+<line class="k2" x1="46.0" y1="252.0" x2="46.0" y2="276.0" stroke="#1baf7a" stroke-width="1.6" fill="none"/>
+<line class="k2" x1="49.0" y1="252.0" x2="49.0" y2="276.0" stroke="#1baf7a" stroke-width="1.6" fill="none"/>
+<line class="k2" x1="53.0" y1="252.0" x2="53.0" y2="276.0" stroke="#1baf7a" stroke-width="1.6" fill="none"/>
+<line class="k2" x1="54.0" y1="252.0" x2="54.0" y2="276.0" stroke="#1baf7a" stroke-width="1.6" fill="none"/>
+<line class="k2" x1="63.0" y1="252.0" x2="63.0" y2="276.0" stroke="#1baf7a" stroke-width="1.6" fill="none"/>
+<line class="k2" x1="74.0" y1="252.0" x2="74.0" y2="276.0" stroke="#1baf7a" stroke-width="1.6" fill="none"/>
+<line class="k2" x1="75.0" y1="252.0" x2="75.0" y2="276.0" stroke="#1baf7a" stroke-width="1.6" fill="none"/>
+<line class="k2" x1="79.0" y1="252.0" x2="79.0" y2="276.0" stroke="#1baf7a" stroke-width="1.6" fill="none"/>
+<line class="k2" x1="81.0" y1="252.0" x2="81.0" y2="276.0" stroke="#1baf7a" stroke-width="1.6" fill="none"/>
+<line class="k2" x1="85.0" y1="252.0" x2="85.0" y2="276.0" stroke="#1baf7a" stroke-width="1.6" fill="none"/>
+<line class="k2" x1="96.0" y1="252.0" x2="96.0" y2="276.0" stroke="#1baf7a" stroke-width="1.6" fill="none"/>
+<line class="k2" x1="100.0" y1="252.0" x2="100.0" y2="276.0" stroke="#1baf7a" stroke-width="1.6" fill="none"/>
+<line class="k2" x1="101.0" y1="252.0" x2="101.0" y2="276.0" stroke="#1baf7a" stroke-width="1.6" fill="none"/>
+<line class="k2" x1="107.0" y1="252.0" x2="107.0" y2="276.0" stroke="#1baf7a" stroke-width="1.6" fill="none"/>
+<line class="k2" x1="115.0" y1="252.0" x2="115.0" y2="276.0" stroke="#1baf7a" stroke-width="1.6" fill="none"/>
+<line class="k2" x1="118.0" y1="252.0" x2="118.0" y2="276.0" stroke="#1baf7a" stroke-width="1.6" fill="none"/>
+<line class="k2" x1="122.0" y1="252.0" x2="122.0" y2="276.0" stroke="#1baf7a" stroke-width="1.6" fill="none"/>
+<text class="ink" x="22.0" y="296.0" font-size="11.5" font-weight="400" text-anchor="start" fill="#15201f">19 chosen at random</text>
+<rect class="band" x="380.0" y="8.0" width="372.0" height="314.0" rx="4" fill="#eef1ef" stroke="none" stroke-width="1.2"/>
+<text class="ink" x="394.0" y="32.0" font-size="13.5" font-weight="600" text-anchor="start" fill="#15201f">Plan C · cluster random sample</text>
+<text class="ink2" x="394.0" y="50.0" font-size="11.5" font-weight="400" text-anchor="start" fill="#4a5654">every student in 5 randomly chosen tutor groups</text>
+<rect class="s0" x="402.0" y="70.0" width="22.0" height="13.8" rx="0" fill="#2a78d6" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s1" x="402.0" y="83.8" width="22.0" height="11.4" rx="0" fill="#eb6834" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s2" x="402.0" y="95.2" width="22.0" height="4.8" rx="0" fill="#1baf7a" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s0" x="429.0" y="70.0" width="22.0" height="13.8" rx="0" fill="#2a78d6" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s1" x="429.0" y="83.8" width="22.0" height="11.4" rx="0" fill="#eb6834" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s2" x="429.0" y="95.2" width="22.0" height="4.8" rx="0" fill="#1baf7a" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s0" x="456.0" y="70.0" width="22.0" height="13.8" rx="0" fill="#2a78d6" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s1" x="456.0" y="83.8" width="22.0" height="11.4" rx="0" fill="#eb6834" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s2" x="456.0" y="95.2" width="22.0" height="4.8" rx="0" fill="#1baf7a" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s0" x="483.0" y="70.0" width="22.0" height="13.8" rx="0" fill="#2a78d6" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s1" x="483.0" y="83.8" width="22.0" height="11.4" rx="0" fill="#eb6834" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s2" x="483.0" y="95.2" width="22.0" height="4.8" rx="0" fill="#1baf7a" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s0" x="510.0" y="70.0" width="22.0" height="13.8" rx="0" fill="#2a78d6" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s1" x="510.0" y="83.8" width="22.0" height="11.4" rx="0" fill="#eb6834" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s2" x="510.0" y="95.2" width="22.0" height="4.8" rx="0" fill="#1baf7a" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s0" x="537.0" y="70.0" width="22.0" height="13.8" rx="0" fill="#2a78d6" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s1" x="537.0" y="83.8" width="22.0" height="11.4" rx="0" fill="#eb6834" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s2" x="537.0" y="95.2" width="22.0" height="4.8" rx="0" fill="#1baf7a" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s0" x="564.0" y="70.0" width="22.0" height="13.8" rx="0" fill="#2a78d6" stroke="none" stroke-width="1.2" opacity="1"/>
+<rect class="s1" x="564.0" y="83.8" width="22.0" height="11.4" rx="0" fill="#eb6834" stroke="none" stroke-width="1.2" opacity="1"/>
+<rect class="s2" x="564.0" y="95.2" width="22.0" height="4.8" rx="0" fill="#1baf7a" stroke="none" stroke-width="1.2" opacity="1"/>
+<rect class="kink" x="562.0" y="68.0" width="26.0" height="34.0" rx="2" fill="none" stroke="#15201f" stroke-width="1.8"/>
+<rect class="s0" x="591.0" y="70.0" width="22.0" height="13.8" rx="0" fill="#2a78d6" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s1" x="591.0" y="83.8" width="22.0" height="11.4" rx="0" fill="#eb6834" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s2" x="591.0" y="95.2" width="22.0" height="4.8" rx="0" fill="#1baf7a" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s0" x="618.0" y="70.0" width="22.0" height="13.8" rx="0" fill="#2a78d6" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s1" x="618.0" y="83.8" width="22.0" height="11.4" rx="0" fill="#eb6834" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s2" x="618.0" y="95.2" width="22.0" height="4.8" rx="0" fill="#1baf7a" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s0" x="645.0" y="70.0" width="22.0" height="13.8" rx="0" fill="#2a78d6" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s1" x="645.0" y="83.8" width="22.0" height="11.4" rx="0" fill="#eb6834" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s2" x="645.0" y="95.2" width="22.0" height="4.8" rx="0" fill="#1baf7a" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s0" x="672.0" y="70.0" width="22.0" height="13.8" rx="0" fill="#2a78d6" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s1" x="672.0" y="83.8" width="22.0" height="11.4" rx="0" fill="#eb6834" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s2" x="672.0" y="95.2" width="22.0" height="4.8" rx="0" fill="#1baf7a" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s0" x="699.0" y="70.0" width="22.0" height="13.8" rx="0" fill="#2a78d6" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s1" x="699.0" y="83.8" width="22.0" height="11.4" rx="0" fill="#eb6834" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s2" x="699.0" y="95.2" width="22.0" height="4.8" rx="0" fill="#1baf7a" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s0" x="402.0" y="106.0" width="22.0" height="13.8" rx="0" fill="#2a78d6" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s1" x="402.0" y="119.8" width="22.0" height="11.4" rx="0" fill="#eb6834" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s2" x="402.0" y="131.2" width="22.0" height="4.8" rx="0" fill="#1baf7a" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s0" x="429.0" y="106.0" width="22.0" height="13.8" rx="0" fill="#2a78d6" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s1" x="429.0" y="119.8" width="22.0" height="11.4" rx="0" fill="#eb6834" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s2" x="429.0" y="131.2" width="22.0" height="4.8" rx="0" fill="#1baf7a" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s0" x="456.0" y="106.0" width="22.0" height="13.8" rx="0" fill="#2a78d6" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s1" x="456.0" y="119.8" width="22.0" height="11.4" rx="0" fill="#eb6834" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s2" x="456.0" y="131.2" width="22.0" height="4.8" rx="0" fill="#1baf7a" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s0" x="483.0" y="106.0" width="22.0" height="13.8" rx="0" fill="#2a78d6" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s1" x="483.0" y="119.8" width="22.0" height="11.4" rx="0" fill="#eb6834" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s2" x="483.0" y="131.2" width="22.0" height="4.8" rx="0" fill="#1baf7a" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s0" x="510.0" y="106.0" width="22.0" height="13.8" rx="0" fill="#2a78d6" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s1" x="510.0" y="119.8" width="22.0" height="11.4" rx="0" fill="#eb6834" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s2" x="510.0" y="131.2" width="22.0" height="4.8" rx="0" fill="#1baf7a" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s0" x="537.0" y="106.0" width="22.0" height="13.8" rx="0" fill="#2a78d6" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s1" x="537.0" y="119.8" width="22.0" height="11.4" rx="0" fill="#eb6834" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s2" x="537.0" y="131.2" width="22.0" height="4.8" rx="0" fill="#1baf7a" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s0" x="564.0" y="106.0" width="22.0" height="13.8" rx="0" fill="#2a78d6" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s1" x="564.0" y="119.8" width="22.0" height="11.4" rx="0" fill="#eb6834" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s2" x="564.0" y="131.2" width="22.0" height="4.8" rx="0" fill="#1baf7a" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s0" x="591.0" y="106.0" width="22.0" height="13.8" rx="0" fill="#2a78d6" stroke="none" stroke-width="1.2" opacity="1"/>
+<rect class="s1" x="591.0" y="119.8" width="22.0" height="11.4" rx="0" fill="#eb6834" stroke="none" stroke-width="1.2" opacity="1"/>
+<rect class="s2" x="591.0" y="131.2" width="22.0" height="4.8" rx="0" fill="#1baf7a" stroke="none" stroke-width="1.2" opacity="1"/>
+<rect class="kink" x="589.0" y="104.0" width="26.0" height="34.0" rx="2" fill="none" stroke="#15201f" stroke-width="1.8"/>
+<rect class="s0" x="618.0" y="106.0" width="22.0" height="13.8" rx="0" fill="#2a78d6" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s1" x="618.0" y="119.8" width="22.0" height="11.4" rx="0" fill="#eb6834" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s2" x="618.0" y="131.2" width="22.0" height="4.8" rx="0" fill="#1baf7a" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s0" x="645.0" y="106.0" width="22.0" height="13.8" rx="0" fill="#2a78d6" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s1" x="645.0" y="119.8" width="22.0" height="11.4" rx="0" fill="#eb6834" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s2" x="645.0" y="131.2" width="22.0" height="4.8" rx="0" fill="#1baf7a" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s0" x="672.0" y="106.0" width="22.0" height="13.8" rx="0" fill="#2a78d6" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s1" x="672.0" y="119.8" width="22.0" height="11.4" rx="0" fill="#eb6834" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s2" x="672.0" y="131.2" width="22.0" height="4.8" rx="0" fill="#1baf7a" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s0" x="699.0" y="106.0" width="22.0" height="13.8" rx="0" fill="#2a78d6" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s1" x="699.0" y="119.8" width="22.0" height="11.4" rx="0" fill="#eb6834" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s2" x="699.0" y="131.2" width="22.0" height="4.8" rx="0" fill="#1baf7a" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s0" x="402.0" y="142.0" width="22.0" height="13.8" rx="0" fill="#2a78d6" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s1" x="402.0" y="155.8" width="22.0" height="11.4" rx="0" fill="#eb6834" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s2" x="402.0" y="167.2" width="22.0" height="4.8" rx="0" fill="#1baf7a" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s0" x="429.0" y="142.0" width="22.0" height="13.8" rx="0" fill="#2a78d6" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s1" x="429.0" y="155.8" width="22.0" height="11.4" rx="0" fill="#eb6834" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s2" x="429.0" y="167.2" width="22.0" height="4.8" rx="0" fill="#1baf7a" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s0" x="456.0" y="142.0" width="22.0" height="13.8" rx="0" fill="#2a78d6" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s1" x="456.0" y="155.8" width="22.0" height="11.4" rx="0" fill="#eb6834" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s2" x="456.0" y="167.2" width="22.0" height="4.8" rx="0" fill="#1baf7a" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s0" x="483.0" y="142.0" width="22.0" height="13.8" rx="0" fill="#2a78d6" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s1" x="483.0" y="155.8" width="22.0" height="11.4" rx="0" fill="#eb6834" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s2" x="483.0" y="167.2" width="22.0" height="4.8" rx="0" fill="#1baf7a" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s0" x="510.0" y="142.0" width="22.0" height="13.8" rx="0" fill="#2a78d6" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s1" x="510.0" y="155.8" width="22.0" height="11.4" rx="0" fill="#eb6834" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s2" x="510.0" y="167.2" width="22.0" height="4.8" rx="0" fill="#1baf7a" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s0" x="537.0" y="142.0" width="22.0" height="13.8" rx="0" fill="#2a78d6" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s1" x="537.0" y="155.8" width="22.0" height="11.4" rx="0" fill="#eb6834" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s2" x="537.0" y="167.2" width="22.0" height="4.8" rx="0" fill="#1baf7a" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s0" x="564.0" y="142.0" width="22.0" height="13.8" rx="0" fill="#2a78d6" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s1" x="564.0" y="155.8" width="22.0" height="11.4" rx="0" fill="#eb6834" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s2" x="564.0" y="167.2" width="22.0" height="4.8" rx="0" fill="#1baf7a" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s0" x="591.0" y="142.0" width="22.0" height="13.8" rx="0" fill="#2a78d6" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s1" x="591.0" y="155.8" width="22.0" height="11.4" rx="0" fill="#eb6834" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s2" x="591.0" y="167.2" width="22.0" height="4.8" rx="0" fill="#1baf7a" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s0" x="618.0" y="142.0" width="22.0" height="13.8" rx="0" fill="#2a78d6" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s1" x="618.0" y="155.8" width="22.0" height="11.4" rx="0" fill="#eb6834" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s2" x="618.0" y="167.2" width="22.0" height="4.8" rx="0" fill="#1baf7a" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s0" x="645.0" y="142.0" width="22.0" height="13.8" rx="0" fill="#2a78d6" stroke="none" stroke-width="1.2" opacity="1"/>
+<rect class="s1" x="645.0" y="155.8" width="22.0" height="11.4" rx="0" fill="#eb6834" stroke="none" stroke-width="1.2" opacity="1"/>
+<rect class="s2" x="645.0" y="167.2" width="22.0" height="4.8" rx="0" fill="#1baf7a" stroke="none" stroke-width="1.2" opacity="1"/>
+<rect class="kink" x="643.0" y="140.0" width="26.0" height="34.0" rx="2" fill="none" stroke="#15201f" stroke-width="1.8"/>
+<rect class="s0" x="672.0" y="142.0" width="22.0" height="13.8" rx="0" fill="#2a78d6" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s1" x="672.0" y="155.8" width="22.0" height="11.4" rx="0" fill="#eb6834" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s2" x="672.0" y="167.2" width="22.0" height="4.8" rx="0" fill="#1baf7a" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s0" x="699.0" y="142.0" width="22.0" height="13.8" rx="0" fill="#2a78d6" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s1" x="699.0" y="155.8" width="22.0" height="11.4" rx="0" fill="#eb6834" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s2" x="699.0" y="167.2" width="22.0" height="4.8" rx="0" fill="#1baf7a" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s0" x="402.0" y="178.0" width="22.0" height="13.8" rx="0" fill="#2a78d6" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s1" x="402.0" y="191.8" width="22.0" height="11.4" rx="0" fill="#eb6834" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s2" x="402.0" y="203.2" width="22.0" height="4.8" rx="0" fill="#1baf7a" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s0" x="429.0" y="178.0" width="22.0" height="13.8" rx="0" fill="#2a78d6" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s1" x="429.0" y="191.8" width="22.0" height="11.4" rx="0" fill="#eb6834" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s2" x="429.0" y="203.2" width="22.0" height="4.8" rx="0" fill="#1baf7a" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s0" x="456.0" y="178.0" width="22.0" height="13.8" rx="0" fill="#2a78d6" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s1" x="456.0" y="191.8" width="22.0" height="11.4" rx="0" fill="#eb6834" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s2" x="456.0" y="203.2" width="22.0" height="4.8" rx="0" fill="#1baf7a" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s0" x="483.0" y="178.0" width="22.0" height="13.8" rx="0" fill="#2a78d6" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s1" x="483.0" y="191.8" width="22.0" height="11.4" rx="0" fill="#eb6834" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s2" x="483.0" y="203.2" width="22.0" height="4.8" rx="0" fill="#1baf7a" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s0" x="510.0" y="178.0" width="22.0" height="13.8" rx="0" fill="#2a78d6" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s1" x="510.0" y="191.8" width="22.0" height="11.4" rx="0" fill="#eb6834" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s2" x="510.0" y="203.2" width="22.0" height="4.8" rx="0" fill="#1baf7a" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s0" x="537.0" y="178.0" width="22.0" height="13.8" rx="0" fill="#2a78d6" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s1" x="537.0" y="191.8" width="22.0" height="11.4" rx="0" fill="#eb6834" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s2" x="537.0" y="203.2" width="22.0" height="4.8" rx="0" fill="#1baf7a" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s0" x="564.0" y="178.0" width="22.0" height="13.8" rx="0" fill="#2a78d6" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s1" x="564.0" y="191.8" width="22.0" height="11.4" rx="0" fill="#eb6834" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s2" x="564.0" y="203.2" width="22.0" height="4.8" rx="0" fill="#1baf7a" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s0" x="591.0" y="178.0" width="22.0" height="13.8" rx="0" fill="#2a78d6" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s1" x="591.0" y="191.8" width="22.0" height="11.4" rx="0" fill="#eb6834" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s2" x="591.0" y="203.2" width="22.0" height="4.8" rx="0" fill="#1baf7a" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s0" x="618.0" y="178.0" width="22.0" height="13.8" rx="0" fill="#2a78d6" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s1" x="618.0" y="191.8" width="22.0" height="11.4" rx="0" fill="#eb6834" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s2" x="618.0" y="203.2" width="22.0" height="4.8" rx="0" fill="#1baf7a" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s0" x="645.0" y="178.0" width="22.0" height="13.8" rx="0" fill="#2a78d6" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s1" x="645.0" y="191.8" width="22.0" height="11.4" rx="0" fill="#eb6834" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s2" x="645.0" y="203.2" width="22.0" height="4.8" rx="0" fill="#1baf7a" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s0" x="672.0" y="178.0" width="22.0" height="13.8" rx="0" fill="#2a78d6" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s1" x="672.0" y="191.8" width="22.0" height="11.4" rx="0" fill="#eb6834" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s2" x="672.0" y="203.2" width="22.0" height="4.8" rx="0" fill="#1baf7a" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s0" x="699.0" y="178.0" width="22.0" height="13.8" rx="0" fill="#2a78d6" stroke="none" stroke-width="1.2" opacity="1"/>
+<rect class="s1" x="699.0" y="191.8" width="22.0" height="11.4" rx="0" fill="#eb6834" stroke="none" stroke-width="1.2" opacity="1"/>
+<rect class="s2" x="699.0" y="203.2" width="22.0" height="4.8" rx="0" fill="#1baf7a" stroke="none" stroke-width="1.2" opacity="1"/>
+<rect class="kink" x="697.0" y="176.0" width="26.0" height="34.0" rx="2" fill="none" stroke="#15201f" stroke-width="1.8"/>
+<rect class="s0" x="402.0" y="214.0" width="22.0" height="13.8" rx="0" fill="#2a78d6" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s1" x="402.0" y="227.8" width="22.0" height="11.4" rx="0" fill="#eb6834" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s2" x="402.0" y="239.2" width="22.0" height="4.8" rx="0" fill="#1baf7a" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s0" x="429.0" y="214.0" width="22.0" height="13.8" rx="0" fill="#2a78d6" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s1" x="429.0" y="227.8" width="22.0" height="11.4" rx="0" fill="#eb6834" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s2" x="429.0" y="239.2" width="22.0" height="4.8" rx="0" fill="#1baf7a" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s0" x="456.0" y="214.0" width="22.0" height="13.8" rx="0" fill="#2a78d6" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s1" x="456.0" y="227.8" width="22.0" height="11.4" rx="0" fill="#eb6834" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s2" x="456.0" y="239.2" width="22.0" height="4.8" rx="0" fill="#1baf7a" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s0" x="483.0" y="214.0" width="22.0" height="13.8" rx="0" fill="#2a78d6" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s1" x="483.0" y="227.8" width="22.0" height="11.4" rx="0" fill="#eb6834" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s2" x="483.0" y="239.2" width="22.0" height="4.8" rx="0" fill="#1baf7a" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s0" x="510.0" y="214.0" width="22.0" height="13.8" rx="0" fill="#2a78d6" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s1" x="510.0" y="227.8" width="22.0" height="11.4" rx="0" fill="#eb6834" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s2" x="510.0" y="239.2" width="22.0" height="4.8" rx="0" fill="#1baf7a" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s0" x="537.0" y="214.0" width="22.0" height="13.8" rx="0" fill="#2a78d6" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s1" x="537.0" y="227.8" width="22.0" height="11.4" rx="0" fill="#eb6834" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s2" x="537.0" y="239.2" width="22.0" height="4.8" rx="0" fill="#1baf7a" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s0" x="564.0" y="214.0" width="22.0" height="13.8" rx="0" fill="#2a78d6" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s1" x="564.0" y="227.8" width="22.0" height="11.4" rx="0" fill="#eb6834" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s2" x="564.0" y="239.2" width="22.0" height="4.8" rx="0" fill="#1baf7a" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s0" x="591.0" y="214.0" width="22.0" height="13.8" rx="0" fill="#2a78d6" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s1" x="591.0" y="227.8" width="22.0" height="11.4" rx="0" fill="#eb6834" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s2" x="591.0" y="239.2" width="22.0" height="4.8" rx="0" fill="#1baf7a" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s0" x="618.0" y="214.0" width="22.0" height="13.8" rx="0" fill="#2a78d6" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s1" x="618.0" y="227.8" width="22.0" height="11.4" rx="0" fill="#eb6834" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s2" x="618.0" y="239.2" width="22.0" height="4.8" rx="0" fill="#1baf7a" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s0" x="645.0" y="214.0" width="22.0" height="13.8" rx="0" fill="#2a78d6" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s1" x="645.0" y="227.8" width="22.0" height="11.4" rx="0" fill="#eb6834" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s2" x="645.0" y="239.2" width="22.0" height="4.8" rx="0" fill="#1baf7a" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s0" x="672.0" y="214.0" width="22.0" height="13.8" rx="0" fill="#2a78d6" stroke="none" stroke-width="1.2" opacity="1"/>
+<rect class="s1" x="672.0" y="227.8" width="22.0" height="11.4" rx="0" fill="#eb6834" stroke="none" stroke-width="1.2" opacity="1"/>
+<rect class="s2" x="672.0" y="239.2" width="22.0" height="4.8" rx="0" fill="#1baf7a" stroke="none" stroke-width="1.2" opacity="1"/>
+<rect class="kink" x="670.0" y="212.0" width="26.0" height="34.0" rx="2" fill="none" stroke="#15201f" stroke-width="1.8"/>
+<rect class="s0" x="699.0" y="214.0" width="22.0" height="13.8" rx="0" fill="#2a78d6" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s1" x="699.0" y="227.8" width="22.0" height="11.4" rx="0" fill="#eb6834" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s2" x="699.0" y="239.2" width="22.0" height="4.8" rx="0" fill="#1baf7a" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s0" x="402.0" y="250.0" width="22.0" height="13.8" rx="0" fill="#2a78d6" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s1" x="402.0" y="263.8" width="22.0" height="11.4" rx="0" fill="#eb6834" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s2" x="402.0" y="275.2" width="22.0" height="4.8" rx="0" fill="#1baf7a" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s0" x="429.0" y="250.0" width="22.0" height="13.8" rx="0" fill="#2a78d6" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s1" x="429.0" y="263.8" width="22.0" height="11.4" rx="0" fill="#eb6834" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s2" x="429.0" y="275.2" width="22.0" height="4.8" rx="0" fill="#1baf7a" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s0" x="456.0" y="250.0" width="22.0" height="13.8" rx="0" fill="#2a78d6" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s1" x="456.0" y="263.8" width="22.0" height="11.4" rx="0" fill="#eb6834" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s2" x="456.0" y="275.2" width="22.0" height="4.8" rx="0" fill="#1baf7a" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s0" x="483.0" y="250.0" width="22.0" height="13.8" rx="0" fill="#2a78d6" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s1" x="483.0" y="263.8" width="22.0" height="11.4" rx="0" fill="#eb6834" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s2" x="483.0" y="275.2" width="22.0" height="4.8" rx="0" fill="#1baf7a" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s0" x="510.0" y="250.0" width="22.0" height="13.8" rx="0" fill="#2a78d6" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s1" x="510.0" y="263.8" width="22.0" height="11.4" rx="0" fill="#eb6834" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s2" x="510.0" y="275.2" width="22.0" height="4.8" rx="0" fill="#1baf7a" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s0" x="537.0" y="250.0" width="22.0" height="13.8" rx="0" fill="#2a78d6" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s1" x="537.0" y="263.8" width="22.0" height="11.4" rx="0" fill="#eb6834" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s2" x="537.0" y="275.2" width="22.0" height="4.8" rx="0" fill="#1baf7a" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s0" x="564.0" y="250.0" width="22.0" height="13.8" rx="0" fill="#2a78d6" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s1" x="564.0" y="263.8" width="22.0" height="11.4" rx="0" fill="#eb6834" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s2" x="564.0" y="275.2" width="22.0" height="4.8" rx="0" fill="#1baf7a" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s0" x="591.0" y="250.0" width="22.0" height="13.8" rx="0" fill="#2a78d6" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s1" x="591.0" y="263.8" width="22.0" height="11.4" rx="0" fill="#eb6834" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s2" x="591.0" y="275.2" width="22.0" height="4.8" rx="0" fill="#1baf7a" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s0" x="618.0" y="250.0" width="22.0" height="13.8" rx="0" fill="#2a78d6" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s1" x="618.0" y="263.8" width="22.0" height="11.4" rx="0" fill="#eb6834" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s2" x="618.0" y="275.2" width="22.0" height="4.8" rx="0" fill="#1baf7a" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s0" x="645.0" y="250.0" width="22.0" height="13.8" rx="0" fill="#2a78d6" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s1" x="645.0" y="263.8" width="22.0" height="11.4" rx="0" fill="#eb6834" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s2" x="645.0" y="275.2" width="22.0" height="4.8" rx="0" fill="#1baf7a" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s0" x="672.0" y="250.0" width="22.0" height="13.8" rx="0" fill="#2a78d6" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s1" x="672.0" y="263.8" width="22.0" height="11.4" rx="0" fill="#eb6834" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s2" x="672.0" y="275.2" width="22.0" height="4.8" rx="0" fill="#1baf7a" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s0" x="699.0" y="250.0" width="22.0" height="13.8" rx="0" fill="#2a78d6" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s1" x="699.0" y="263.8" width="22.0" height="11.4" rx="0" fill="#eb6834" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<rect class="s2" x="699.0" y="275.2" width="22.0" height="4.8" rx="0" fill="#1baf7a" stroke="none" stroke-width="1.2" opacity="0.28"/>
+<text class="ink2" x="394.0" y="298.0" font-size="11.5" font-weight="400" text-anchor="start" fill="#4a5654">72 tutor groups, each a mix of all three home areas;</text>
+<text class="ink2" x="394.0" y="314.0" font-size="11.5" font-weight="400" text-anchor="start" fill="#4a5654">5 chosen (outlined): 125 to 130 students</text>
+</svg>
+</div><figcaption>Left: stratified, some from every home area. Right: cluster, all from 5 randomly chosen tutor groups, each of which is a mix of the three areas.</figcaption></figure>
+<blockquote><strong>The sentence to write down:</strong> <em>Stratified: some from every group, and the groups should be alike inside. Cluster: everyone from some groups, and each group should look like the whole population.</em></blockquote>
+<h3>The gate sample: chosen, but not at random</h3>
+<div class="script"><div class="line ask"><span class="lbl">Ask</span><span class="txt">"Nobody chooses who arrives first. So isn't Plan E random?"</span></div><div class="line listen"><span class="lbl">Listen for</span><span class="txt">No. No random mechanism selected the students; the deputy chose the place and the time, and who arrives first depends on how students travel.</span></div><div class="line intro"><span class="lbl">Recall</span><span class="txt"><em>Random selection and how far a generalization reaches (1.10.E.1–4)</em>: a sample is random only when a random mechanism selects the units.</span></div><div class="line ask"><span class="lbl">Ask</span><span class="txt">"Think about who arrives first at the main gate on Monday. Who might the plan miss?"</span></div><div class="line listen"><span class="lbl">Listen for</span><span class="txt">Students who come in later, for example on the village buses that drop at the side entrance, and students who use another entrance. The earliest arrivals may well be the students who live close by and walk.</span></div><div class="line ask"><span class="lbl">Ask</span><span class="txt">"To whom could the deputy's results be generalised?"</span></div><div class="line listen"><span class="lbl">Listen for</span><span class="txt">Only to students similar to those who arrive first at the main gate. Not to all 1,842.</span></div></div>
+<p>The course description has names for what goes wrong with samples like this, <strong>undercoverage</strong> and <strong>convenience</strong>, and Session 7 teaches them (topic 1.12). Today the student needs the test and the consequence: no random mechanism, so no generalisation beyond students like those in it.</p>
+<h3>Which plan suits the bus question, and why</h3>
+<div class="script"><div class="line ask"><span class="lbl">Ask</span><span class="txt">"Plans A to D are all random. For the principal's bus question, is there any reason to prefer one?"</span></div><div class="line listen"><span class="lbl">Listen for</span><span class="txt">Plan B. Bus use depends heavily on home area: most Villages students will be on a bus, most Town students will not. Stratifying by area guarantees each area its share, so the estimate varies less from sample to sample. Plan C is the easiest to carry out, and it works here because the tutor groups are mixed.</span></div><div class="line intro"><span class="lbl">Recall</span><span class="txt"><em>Choosing a sampling method to suit the question (1.11.B.1)</em>: name the characteristic and connect it to the question.</span></div><div class="line ask"><span class="lbl">Ask</span><span class="txt">"And for the deputy's comparison of Suburbs and Villages?"</span></div><div class="line listen"><span class="lbl">Listen for</span><span class="txt">Stratified again, because it guarantees enough Villages students. An SRS of 120 would contain about 19 of them on average (120 × 294 ÷ 1,842 = 19.2), and could by chance contain far fewer. The head of year could even take more Villages students than their share to compare the two areas better.</span></div></div>
+<p>A model justification, in the form the course description's sample scoring accepts:</p>
+<blockquote><em>"Plan B is the most appropriate. Journey time and mode of travel differ a great deal between the three home areas and are similar within each one, so taking a simple random sample inside each area guarantees that every area is represented in its proportion, and estimates will vary less from sample to sample than with a simple random sample of the same size. Because the students are selected at random, the results can be generalised to all 1,842 Lincoln High students."</em></blockquote>
+<h3>Sampling Methods tool: many samples from each plan</h3>
+<div class="sim"><div class="sim-head"><span class="lbl">Interactive</span><span class="ttl">Sampling Methods</span><a href="tools/sampling-methods.html" target="_blank" rel="noopener">Open full screen &#8599;</a></div><div class="sim-body"><iframe src="tools/sampling-methods.html" height="1500" loading="lazy" title="Sampling Methods"></iframe></div><div class="sim-why"><p>A simulated Lincoln High with the same 1,842 students, home areas and 72 mixed tutor groups. The student chooses a method and presses <strong>Draw one sample</strong>: the grid shows who was chosen. Ask them to name the method from the picture before reading the caption. Then <strong>Draw 100 samples</strong> for each of the four methods and compare the rows of sample means. Last, switch the tutor groups to <strong>Formed by home area</strong>, and draw 100 cluster samples again.</p></div></div>
+<p>This is the session's one tool, and it earns its place on the standard's three tests. How far a sampling method's results scatter is a property of the <strong>process</strong>, visible only over many samples. A static figure can show one sample from each method, but not what happens when the population is rearranged. And the student <strong>drives</strong> it, choosing the method and the arrangement.</p>
+<p>What the student should see, from the tool's own unit tests over 4,000 samples each (the population is simulated; its mean journey time, the parameter, is 19.0 minutes):</p>
+<div class="tbl"><table><thead><tr><th>Method</th><th>How far the sample means scatter (their SD)</th></tr></thead><tbody><tr><td>Simple random, n = 120</td><td>about 0.93 minutes</td></tr><tr><td>Stratified by home area, 55 + 46 + 19</td><td>about 0.45 minutes: about half as much</td></tr><tr><td>Cluster, 5 mixed tutor groups</td><td>about 0.88 minutes, much like the SRS</td></tr><tr><td>Cluster, 5 tutor groups formed by home area</td><td>about 3.9 minutes: four times as much</td></tr><tr><td>Systematic, every 15th</td><td>only 15 possible samples; their means have an SD of about 0.71 minutes</td></tr></tbody></table></div>
+<div class="script"><div class="line ask"><span class="lbl">Ask</span><span class="txt">"All four rows centre on 19.0. So what does the choice of method change?"</span></div><div class="line listen"><span class="lbl">Listen for</span><span class="txt">How much the sample means vary from sample to sample. Every random method is aimed at the parameter; stratifying by area lands closer to it more often.</span></div><div class="line ask"><span class="lbl">Ask</span><span class="txt">"Why did the cluster samples go wild when the tutor groups were formed by home area?"</span></div><div class="line listen"><span class="lbl">Listen for</span><span class="txt">Each tutor group then holds students from one area, so five groups can easily be all Town or all Villages. The clusters no longer mirror the school.</span></div><div class="line intro"><span class="lbl">Recall</span><span class="txt"><em>Cluster random sample (1.11.A.5)</em>: ideally each cluster mirrors the heterogeneity of the population.</span></div></div>
+<hr>
+<h2>87–105 min · Activity — Odd One Out</h2>
+<p>The course description's Sample Instructional Activity for topic 1.10: after modelling an example, groups of four each get four study descriptions; three are of the same type, observational or experimental, and one is different; the group finds the odd one out and explains why.</p>
+<p><strong>The one-to-one conversion.</strong> You model one round aloud. The student then does two rounds alone, reading each card and saying <em>experiment</em> or <em>observational</em>, with the reason, before naming the odd one out. At the end of the last round you add a fifth card, as Session 1's conversion table planned. Every answer must quote the test from the theory: <strong>did the researcher impose the treatment?</strong></p>
+<h3>The modelled round: four Lincoln High studies</h3>
+<p>Think aloud through all four, naming the test each time. The odd one out is <strong>M4</strong>.</p>
+<div class="tbl"><table><thead><tr><th>Card</th><th>Study</th><th>Type, and the reason</th></tr></thead><tbody><tr><td>M1</td><td>The PE department times 60 students on a 1 km run and asks each how many hours of sport they did last week</td><td>Observational: nothing imposed; both values are recorded</td></tr><tr><td>M2</td><td>The principal gives a questionnaire about school lunches to 150 randomly chosen students</td><td>Observational: a survey</td></tr><tr><td>M3</td><td>The office uses last year's registers to compare the absence rates of Town and Villages students</td><td>Observational: retrospective, data from the past</td></tr><tr><td>M4</td><td>A maths teacher uses a random number generator to split her 28 students into two groups; one does homework online and the other on paper for four weeks, and she compares their test scores</td><td><strong>Experiment</strong>: she assigned the homework format</td></tr></tbody></table></div>
+<h3>Round 1: four Oakfield School studies</h3>
+<p>The student reads and decides. Say nothing until they have named the odd one out and given the reason.</p>
+<div class="tbl"><table><thead><tr><th>Card</th><th>Study</th><th>Type, and the reason</th></tr></thead><tbody><tr><td>O1</td><td>A teacher tosses a coin for each of 48 Year 7 students: heads, they read a text on paper; tails, the same text on a tablet. She compares their quiz scores</td><td>Experiment: the format is imposed</td></tr><tr><td>O2</td><td>The canteen offers a new lunch menu on days chosen by rolling a die through March, and records the number of lunches sold each day</td><td>Experiment: the menu is imposed, and the units are <strong>days</strong></td></tr><tr><td>O3</td><td>Oakfield compares the end-of-year maths results of students who chose to attend the lunchtime maths club with students who did not</td><td><strong>Observational</strong>: the students chose; nothing imposed</td></tr><tr><td>O4</td><td>Thirty Year 10 volunteers are randomly split between two warm-up routines before a test, and their scores are compared</td><td>Experiment: the routine is imposed, even though the students volunteered</td></tr></tbody></table></div>
+<p>The odd one out is <strong>O3</strong>, and it is the card students most often call an experiment, because it compares two groups. <em>"Who decided which students went to the club?"</em> The students did. Nothing was imposed, so it is observational however much it looks like a trial; and students who choose a maths club may differ from the others in ways that also raise maths results, which is the confounding problem of the theory section.</p>
+<h3>Round 2: four library studies</h3>
+<div class="tbl"><table><thead><tr><th>Card</th><th>Study</th><th>Type, and the reason</th></tr></thead><tbody><tr><td>L1</td><td>The library service selects 200 people who join in January and records how many items each borrows every month for the next two years</td><td>Observational: prospective</td></tr><tr><td>L2</td><td>The Central branch emails a questionnaire about opening hours to 500 randomly chosen members</td><td>Observational: a survey</td></tr><tr><td>L3</td><td>Using last year's records, the service compares the weekly visits of branches that have a café with branches that do not</td><td>Observational: retrospective</td></tr><tr><td>L4</td><td>Eighty members who signed up for a reading challenge are split at random: half get a weekly reminder email, half get none. The library compares how many books each group finishes</td><td><strong>Experiment</strong>: the reminders are imposed</td></tr></tbody></table></div>
+<p>The odd one out is <strong>L4</strong>. Two pushes to make, because this round reverses the traps of Round 1:</p>
+<div class="script"><div class="line ask"><span class="lbl">Push</span><span class="txt">"The 80 members volunteered. Surely a study of volunteers can't be an experiment?"</span></div><div class="line listen"><span class="lbl">Listen for</span><span class="txt">It can. Whether it is an experiment depends on who assigned the treatment, not on how the units were recruited. The volunteering limits how far the results reach: only to members similar to those who signed up.</span></div><div class="line ask"><span class="lbl">Push</span><span class="txt">"L1 follows members into the future and records what happens. Isn't that an experiment?"</span></div><div class="line listen"><span class="lbl">Listen for</span><span class="txt">No. A prospective study still imposes nothing.</span></div><div class="line intro"><span class="lbl">Recall</span><span class="txt"><em>Prospective, retrospective and survey (1.10.D.2–4)</em>, and <em>Random selection and how far a generalization reaches (1.10.E.1–4)</em> for the volunteers.</span></div></div>
+<h3>The fifth card: an experiment with no comparison</h3>
+<p>Once the student has named L4, add a fifth card to the table:</p>
+<blockquote><strong>L5 (the café).</strong> <em>The café prints its menu board in larger type for one week and records its takings that week.</em></blockquote>
+<div class="script"><div class="line ask"><span class="lbl">Ask</span><span class="txt">"Which side does L5 join?"</span></div><div class="line listen"><span class="lbl">Listen for</span><span class="txt">The experiment side. The café imposed a condition, the larger print, on the units, the days of that week.</span></div><div class="line ifsay"><span class="lbl">If "observational, because there's nothing to compare it with"</span><span class="txt">"Did someone decide to change something, in order to see the effect?" Yes. That makes it an experiment, and a poor one: with no comparison, a good week could be the weather. What makes an experiment well designed, starting with comparing at least two treatment groups, is Session 7.</span></div><div class="line intro"><span class="lbl">Recall</span><span class="txt"><em>Experiment: the researcher imposes treatments (1.10.C.1)</em>: an experiment does not have to be well designed.</span></div></div>
+<hr>
+<h2>105–130 min · Scenario B — St Mary's text reminders: a random sample is not an experiment</h2>
+<p>St Mary's again, from Sessions 1, 3, 4 and 5, now its outpatient clinics. Last year <strong>9,600</strong> patients had an outpatient appointment. Some had signed up for a <strong>text-message reminder</strong> the day before; the rest had not. The records office used a random number generator to select <strong>400</strong> of the 9,600, and from each patient's file recorded whether they had signed up for reminders and whether they <strong>missed</strong> the appointment.</p>
+<div class="tbl"><table><thead><tr><th></th><th>Patients</th><th>Missed the appointment</th></tr></thead><tbody><tr><td>Signed up for text reminders</td><td>160</td><td>12</td></tr><tr><td>Did not sign up</td><td>240</td><td>48</td></tr><tr class="tot"><td><strong>Total</strong></td><td><strong>400</strong></td><td><strong>60</strong></td></tr></tbody></table></div>
+<p><strong>The trap this scenario carries: random selection licenses generalisation, not cause.</strong> Scenario A spent forty minutes on how to choose a good random sample; this one shows the limit of even a perfect one. Scenario A has taught the student that a random sample is what makes a result trustworthy, and will be tempted to think it makes every conclusion trustworthy. The course description names the confusion of random selection with random assignment as a common error.</p>
+<h3>What kind of study are the records?</h3>
+<div class="script"><div class="line ask"><span class="lbl">Ask</span><span class="txt">"Experiment or observational study? If observational, which kind?"</span></div><div class="line listen"><span class="lbl">Listen for</span><span class="txt">Observational: the patients chose whether to sign up; the hospital imposed nothing. Retrospective: the 400 were selected now and their data come from the past.</span></div><div class="line intro"><span class="lbl">Recall</span><span class="txt"><em>Observational study: nothing is imposed (1.10.D.1)</em> and <em>Prospective, retrospective and survey (1.10.D.2–4)</em>.</span></div><div class="line ask"><span class="lbl">Ask</span><span class="txt">"Is it a random sample? Is it a census?"</span></div><div class="line listen"><span class="lbl">Listen for</span><span class="txt">A random sample: a random number generator chose the 400 from all 9,600. Not a census: 400 of 9,600.</span></div><div class="line ask"><span class="lbl">Ask</span><span class="txt">"Work out the proportion of each group who missed their appointment."</span></div><div class="line listen"><span class="lbl">Listen for</span><span class="txt">Signed up: 12 ÷ 160 = 0.075, 7.5%. Not signed up: 48 ÷ 240 = 0.200, 20.0%.</span></div></div>
+<h3>The manager's claim: random, large, and still not evidence of cause</h3>
+<p>The outpatients manager has the same numbers:</p>
+<blockquote><em>"This was a proper random sample of 400 patients, not a handful. Patients with reminders missed 7.5% of appointments and patients without missed 20.0%. That proves text reminders cut missed appointments by more than half, so we should make them compulsory."</em></blockquote>
+<div class="script"><div class="line ask"><span class="lbl">Ask</span><span class="txt">"Which parts of that are right?"</span></div><div class="line listen"><span class="lbl">Listen for</span><span class="txt">The sample was random, and the difference is real for these 400. Because it was random, the association can be generalised: among all 9,600 of last year's outpatients, those who signed up for reminders probably missed fewer appointments.</span></div><div class="line ask"><span class="lbl">Ask</span><span class="txt">"And which part is wrong?"</span></div><div class="line listen"><span class="lbl">Listen for</span><span class="txt">"Proves text reminders cut missed appointments." The patients chose whether to sign up, so the two groups may differ in other ways that also affect missing appointments.</span></div><div class="line ifsay"><span class="lbl">If "a random sample makes it fair"</span><span class="txt">"What did the random number generator decide: who was in the study, or who got a reminder?" Only who was in the study. The patients decided who got a reminder.</span></div><div class="line intro"><span class="lbl">Recall</span><span class="txt"><em>Random selection and how far a generalization reaches (1.10.E.1–4)</em>: random selection supports generalisation, not cause. <em>Investigative question, third component (1.10.A.3)</em>: a cause-and-effect conclusion belongs to an experiment that uses random assignment.</span></div></div>
+<h3>Booking method as the confounding variable</h3>
+<div class="script"><div class="line ask"><span class="lbl">Ask</span><span class="txt">"Think about who signs up for a reminder. What else might be different about those patients?"</span></div><div class="line listen"><span class="lbl">Listen for</span><span class="txt">Anything reasonable: they are more organised, they booked the appointment themselves, they have a mobile phone number on file, they are younger or older. Push for one the records hold.</span></div></div>
+<p>The records hold one: <strong>how the appointment was booked</strong>. Patients who booked their own appointment online were offered the reminder on the booking form; patients whose appointment was booked by the hospital, and sent by letter, were not.</p>
+<div class="tbl"><table><thead><tr><th>How the appointment was booked</th><th>Patients</th><th>Signed up for reminders</th><th>Missed</th></tr></thead><tbody><tr><td>Self-booked online</td><td>200</td><td>140, which is <strong>70.0%</strong></td><td>10, which is <strong>5.0%</strong></td></tr><tr><td>Booked by the hospital</td><td>200</td><td>20, which is <strong>10.0%</strong></td><td>50, which is <strong>25.0%</strong></td></tr><tr class="tot"><td><strong>Total</strong></td><td><strong>400</strong></td><td><strong>160</strong></td><td><strong>60</strong></td></tr></tbody></table></div>
+<figure><div class="figscroll"><svg viewBox="0 0 760 310" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="St Mary&#x27;s records, 400 randomly selected outpatients. How the appointment was booked is associated with signing up for text reminders (70.0% of self-booked patients signed up, 10.0% of hospital-booked) and with missing the appointment (5.0% of self-booked missed, 25.0% of hospital-booked). Between signing up and missing the association is 7.5% against 20.0%, but the records cannot say whether reminders caused it." font-family="Public Sans, system-ui, sans-serif">
+<style>
+  .ink { fill: #15201f; }
+  .ink2 { fill: #4a5654; }
+  .ink3 { fill: #6f7b79; }
+  .kink { stroke: #15201f; }
+  .kink2 { stroke: #4a5654; }
+  .kink3 { stroke: #6f7b79; }
+  .axis { stroke: #c3c9c6; }
+  .grid { stroke: #dcdfdd; }
+  .surf { fill: #ffffff; }
+  .band { fill: #eef1ef; }
+  .acc { fill: #1a6b63; }
+  .kacc { stroke: #1a6b63; }
+  .amb { fill: #7d5a11; }
+  .kamb { stroke: #7d5a11; }
+  .s0 { fill: #2a78d6; }
+  .k0 { stroke: #2a78d6; }
+  .s1 { fill: #eb6834; }
+  .k1 { stroke: #eb6834; }
+  .s2 { fill: #1baf7a; }
+  .k2 { stroke: #1baf7a; }
+  .s3 { fill: #eda100; }
+  .k3 { stroke: #eda100; }
+  .s4 { fill: #e87ba4; }
+  .k4 { stroke: #e87ba4; }
+  .s5 { fill: #008300; }
+  .k5 { stroke: #008300; }
+  @media (prefers-color-scheme: dark) {
+    .ink { fill: #e9edeb; }
+    .ink2 { fill: #a5b0ad; }
+    .ink3 { fill: #7e8a87; }
+    .kink { stroke: #e9edeb; }
+    .kink2 { stroke: #a5b0ad; }
+    .kink3 { stroke: #7e8a87; }
+    .axis { stroke: #3a4644; }
+    .grid { stroke: #2a3533; }
+    .surf { fill: #182120; }
+    .band { fill: #1e2827; }
+    .acc { fill: #54b8ab; }
+    .kacc { stroke: #54b8ab; }
+    .amb { fill: #d9ab52; }
+    .kamb { stroke: #d9ab52; }
+    .s0 { fill: #3987e5; }
+    .k0 { stroke: #3987e5; }
+    .s1 { fill: #d95926; }
+    .k1 { stroke: #d95926; }
+    .s2 { fill: #199e70; }
+    .k2 { stroke: #199e70; }
+    .s3 { fill: #c98500; }
+    .k3 { stroke: #c98500; }
+    .s4 { fill: #d55181; }
+    .k4 { stroke: #d55181; }
+    .s5 { fill: #008300; }
+    .k5 { stroke: #008300; }
+  }
+</style>
+<rect class="surf kamb" x="215.0" y="12.0" width="330.0" height="64.0" rx="5" fill="#ffffff" stroke="#7d5a11" stroke-width="1.8"/>
+<text class="ink" x="380.0" y="38.0" font-size="13.5" font-weight="600" text-anchor="middle" fill="#15201f">How the appointment was booked</text>
+<text class="ink2" x="380.0" y="58.0" font-size="11.5" font-weight="400" text-anchor="middle" fill="#4a5654">self-booked online (200) or booked by the hospital (200)</text>
+<rect class="surf kacc" x="15.0" y="226.0" width="270.0" height="64.0" rx="5" fill="#ffffff" stroke="#1a6b63" stroke-width="1.8"/>
+<text class="ink" x="150.0" y="252.0" font-size="13.5" font-weight="600" text-anchor="middle" fill="#15201f">Signed up for text reminders</text>
+<text class="ink2" x="150.0" y="272.0" font-size="11.5" font-weight="400" text-anchor="middle" fill="#4a5654">160 of the 400 signed up</text>
+<rect class="surf kacc" x="475.0" y="226.0" width="270.0" height="64.0" rx="5" fill="#ffffff" stroke="#1a6b63" stroke-width="1.8"/>
+<text class="ink" x="610.0" y="252.0" font-size="13.5" font-weight="600" text-anchor="middle" fill="#15201f">Missed the appointment</text>
+<text class="ink2" x="610.0" y="272.0" font-size="11.5" font-weight="400" text-anchor="middle" fill="#4a5654">60 of the 400 missed</text>
+<line class="kamb" x1="300.0" y1="78.0" x2="190.6" y2="215.0" stroke="#7d5a11" stroke-width="2" fill="none"/>
+<polygon class="amb" points="185.0,222.0 187.5,212.4 193.8,217.5" fill="#7d5a11" stroke="none"/>
+<line class="kamb" x1="460.0" y1="78.0" x2="569.4" y2="215.0" stroke="#7d5a11" stroke-width="2" fill="none"/>
+<polygon class="amb" points="575.0,222.0 566.2,217.5 572.5,212.4" fill="#7d5a11" stroke="none"/>
+<rect class="surf kamb" x="58.0" y="104.0" width="162.0" height="60.0" rx="4" fill="#ffffff" stroke="#7d5a11" stroke-width="1"/>
+<rect class="surf kamb" x="550.0" y="104.0" width="162.0" height="60.0" rx="4" fill="#ffffff" stroke="#7d5a11" stroke-width="1"/>
+<rect class="surf" x="346.0" y="231.0" width="68.0" height="21.0" rx="4" fill="#ffffff" stroke="none" stroke-width="1.2"/>
+<rect class="surf" x="312.0" y="268.0" width="136.0" height="36.0" rx="4" fill="#ffffff" stroke="none" stroke-width="1.2"/>
+<text class="ink" x="68.0" y="120.0" font-size="12" font-weight="600" text-anchor="start" fill="#15201f">signed up:</text>
+<text class="ink2" x="68.0" y="138.0" font-size="12" font-weight="400" text-anchor="start" fill="#4a5654">self-booked 70.0%</text>
+<text class="ink2" x="68.0" y="156.0" font-size="12" font-weight="400" text-anchor="start" fill="#4a5654">hospital-booked 10.0%</text>
+<text class="ink" x="560.0" y="120.0" font-size="12" font-weight="600" text-anchor="start" fill="#15201f">missed:</text>
+<text class="ink2" x="560.0" y="138.0" font-size="12" font-weight="400" text-anchor="start" fill="#4a5654">self-booked 5.0%</text>
+<text class="ink2" x="560.0" y="156.0" font-size="12" font-weight="400" text-anchor="start" fill="#4a5654">hospital-booked 25.0%</text>
+<line class="kink3" x1="290.0" y1="258.0" x2="461.0" y2="258.0" stroke="#6f7b79" stroke-width="1.6" fill="none" stroke-dasharray="6 5"/>
+<polygon class="ink3" points="470.0,258.0 461.0,262.1 461.0,253.9" fill="#6f7b79" stroke="none"/>
+<text class="ink" x="380.0" y="246.0" font-size="12.5" font-weight="600" text-anchor="middle" fill="#15201f">cause?</text>
+<text class="ink2" x="380.0" y="282.0" font-size="11.5" font-weight="400" text-anchor="middle" fill="#4a5654">missed: signed up 7.5%</text>
+<text class="ink2" x="380.0" y="298.0" font-size="11.5" font-weight="400" text-anchor="middle" fill="#4a5654">not signed up 20.0%</text>
+</svg>
+</div><figcaption>Booking method is associated with both variables. Patients who booked for themselves chose a date that suited them, and were far more likely to sign up for reminders.</figcaption></figure>
+<div class="script"><div class="line ask"><span class="lbl">Ask</span><span class="txt">"Is booking method a confounding variable? Check the definition."</span></div><div class="line listen"><span class="lbl">Listen for</span><span class="txt">Yes. It is associated with the explanatory variable, signing up (70.0% against 10.0%), and with the response, missing (5.0% against 25.0%). So it gives another explanation: self-booked patients both sign up more and miss less, whether or not the reminders do anything.</span></div><div class="line intro"><span class="lbl">Recall</span><span class="txt"><em>Confounding variable in an observational study (1.10.D.5)</em>: associated with <strong>both</strong>, and so an alternative explanation that reduces the possibility of a causal conclusion.</span></div><div class="line ask"><span class="lbl">Ask</span><span class="txt">"If St Mary's had looked at all 9,600 files instead of 400, would the problem go away?"</span></div><div class="line listen"><span class="lbl">Listen for</span><span class="txt">No. That would be a census, and the percentages would be parameters, but the patients would still have chosen whether to sign up. A census removes the variation from sample to sample; it does not remove a confounding variable.</span></div><div class="line ask"><span class="lbl">Ask</span><span class="txt">"So do the records show that reminders do nothing?"</span></div><div class="line listen"><span class="lbl">Listen for</span><span class="txt">No. They cannot show that either. They cannot separate the effect of reminders from the effect of booking method.</span></div></div>
+<blockquote><strong>The model answer to the manager:</strong> <em>"The sample was selected at random, so we can generalise the association to all of last year's 9,600 outpatients: patients who signed up for reminders missed fewer appointments. But this is an observational study; patients chose whether to sign up. Booking method is a possible confounding variable: 70.0% of self-booked patients signed up against 10.0% of hospital-booked patients, and 5.0% of self-booked patients missed against 25.0%. So the records cannot show that reminders caused the difference."</em></blockquote>
+<h3>Designing the experiment St Mary's would need</h3>
+<div class="script"><div class="line ask"><span class="lbl">Ask</span><span class="txt">"How could St Mary's find out whether reminders <strong>cause</strong> fewer missed appointments?"</span></div><div class="line listen"><span class="lbl">Listen for</span><span class="txt">Impose the reminders: take next month's patients and use a random number generator to decide, for each one, whether they get a text reminder.</span></div><div class="line intro"><span class="lbl">Recall</span><span class="txt"><em>Experiment: the researcher imposes treatments (1.10.C.1)</em>.</span></div><div class="line ask"><span class="lbl">Ask</span><span class="txt">"Name the experimental units, the factor, the treatments and the response."</span></div><div class="line listen"><span class="lbl">Listen for</span><span class="txt">Units: next month's outpatients (their appointments). Factor: the reminder. Treatments: a text reminder, or no text reminder. Response: whether the patient attends or misses the appointment, measured afterwards.</span></div><div class="line intro"><span class="lbl">Recall</span><span class="txt"><em>Experimental units, factors, levels, treatments and the response (1.10.C.2–4)</em>.</span></div><div class="line ask"><span class="lbl">Ask</span><span class="txt">"The clinic also wants to try a phone call instead of a text, and sending the reminder 1 day or 3 days before. How many treatments is that?"</span></div><div class="line listen"><span class="lbl">Listen for</span><span class="txt">Two factors: method (text, phone call) and timing (1 day, 3 days). The treatments are the combinations: 2 × 2 = 4. A fifth group with no reminder would make 5 groups to compare.</span></div></div>
+<p>Random assignment spreads the self-booked and hospital-booked patients across both groups by chance, so booking method can no longer explain a difference between them. Why that works, and what else a well-designed experiment needs, is Session 7 (topic 1.13). And a difference between the groups could still be chance alone; deciding whether it is too large for that is Sessions 15 and 16. Say both, so that neither is a surprise.</p>
+<h3>How far each study's conclusion reaches</h3>
+<div class="tbl"><table><thead><tr><th>Study</th><th>Units selected at random from a population?</th><th>Treatments imposed at random?</th><th>What it can conclude</th></tr></thead><tbody><tr><td>The records: 400 of last year's 9,600</td><td><strong>Yes</strong></td><td><strong>No</strong>: patients chose</td><td>an <strong>association</strong>, generalised to all 9,600 of last year's outpatients</td></tr><tr><td>The experiment: next month's patients, reminders assigned at random</td><td><strong>No</strong>: next month's patients, not a random sample</td><td><strong>Yes</strong></td><td><strong>cause and effect</strong>, for patients similar to next month's St Mary's outpatients</td></tr></tbody></table></div>
+<blockquote><strong>The sentence to write down:</strong> <em>Random selection lets you generalise to the population you sampled. Random assignment of treatments lets you conclude cause and effect. A study can have one without the other.</em></blockquote>
+<p>Link it back to the Session 5 debrief. "Each kilometre adds 3.9 minutes" was a cause sentence about observational data. Now the student can say why it needed <em>predicted</em>, and which kind of study would have been needed for <em>adds</em>.</p>
+<hr>
+<h2>130–142 min · Solo case — the café's loyalty members</h2>
+<p>Unaided. The café from Sessions 2 to 5 has <strong>1,260 loyalty-card members</strong>: 504 use the café's app and 756 use a paper card. The owner asks: <em>"Do members who use the app spend more per visit, on average, than members who use the paper card?"</em> Her assistant's plan: from the loyalty list, use a random number generator to choose <strong>40 app users and 40 paper-card users</strong>, and look up how much each spent on their most recent visit. Watch, say nothing, note where they hesitate.</p>
+<ol><li>Give the three components of the owner's question.</li><li>Name the sampling method in the assistant's plan, and give one reason it suits this question.</li><li>Is this an experiment or an observational study? If observational, which kind?</li><li>The app users spent more, on average. The owner says: "The app makes people spend more. I'll move everyone onto it." Name a possible confounding variable, and explain how it could be associated with both variables.</li><li>A colleague suggests a poster at the till instead, asking members to scan a code and report what they spent. To whom could those results be generalised, and why?</li></ol>
+<p><strong>Answers.</strong></p>
+<ol><li><strong>First:</strong> the variables are the type of loyalty card (app or paper) and the amount spent per visit. <strong>Second:</strong> the parameters are the mean amount spent per visit by all app members and by all paper-card members; a test, with the direction <em>greater than</em> (app greater than paper). <strong>Third:</strong> the population is all 1,260 of the café's loyalty-card members; the conclusion is a generalisation to them, not cause and effect.</li><li>A <strong>stratified random sample</strong>, with card type as the strata. It suits the question because the question compares the two groups, and stratifying guarantees 40 of each; an SRS of 80 would contain about 32 app users (80 × 504 ÷ 1,260 = 32) and could by chance contain far fewer.</li><li><strong>Observational</strong>: the members chose their card; nothing was imposed. <strong>Retrospective</strong>: the members are selected now and their past spending is looked up.</li><li>For example, <strong>how often a member visits</strong>, or their <strong>age</strong>. Regular customers, such as office workers buying lunch every day, may be more likely to bother with the app, and lunch customers spend more per visit than someone buying a coffee. So visit type is associated with the card and with the spending, and could explain the difference without the app changing anyone's behaviour.</li><li><strong>Only to members similar to those who choose to respond.</strong> The members volunteer themselves, so it is not a random sample (1.10.E.3), and the results cannot be generalised to all 1,260 members.</li></ol>
+<p><strong>Watch for:</strong> calling the assistant's plan "cluster, with two clusters" (it takes some from every group, so it is stratified; this is Scenario A's trap again); "the app is a treatment, so it's an experiment" (the members chose it); a confounding variable linked only to spending ("richer people spend more"), which earns half; and "the poster is random because anyone can respond".</p>
+<hr>
+<h2>142–150 min · Teach it back</h2>
+<blockquote><em>"Explain to me what random selection gives a study, and what random assignment gives it. Use St Mary's to show a study that had one and not the other."</em></blockquote>
+<p>A good answer contains three things. Random selection of the units from a population lets the results be <strong>generalised to that population</strong> (1.10.E.2). Random assignment of treatments, in an experiment, is what allows a <strong>cause-and-effect</strong> conclusion (1.10.A.3). And St Mary's records had the first but not the second: a random sample of 400 of 9,600, so the association generalises to all 9,600, but the patients chose whether to sign up, so booking method, associated with both signing up and missing, is a confounding variable and the records cannot show that reminders work.</p>
+<p>If the student gets the two definitions but cannot place St Mary's, that is the part to reteach at the start of Session 7, which builds its whole account of experiments on it. If they say "a random sample shows cause", go back to the manager's claim and ask again <em>"what did the random number generator decide?"</em> Then set the homework.</p>
+<hr>
+<hr>
+<h1>Homework — Session 6</h1>
+<p><strong>40 marks · bring to Session 7, self-marked</strong></p>
+<h2>How to do this homework</h2>
+<ol><li>Do every part <strong>with the answer key closed.</strong> Where you are unsure, answer anyway and put a <strong>?</strong> beside it.</li><li>Then open the key and <strong>mark your own work honestly.</strong> Write the correct answer beside anything wrong — do not erase what you originally wrote.</li><li><strong>Bring the marked sheet.</strong> Your wrong answers and your question marks are what Session 7 opens with.</li></ol>
+<p>Everything here was taught in the session; this sheet is practice. There is almost no arithmetic. The marks are for naming things exactly and giving the reason, so write the reason every time, even when the answer feels obvious.</p>
+<hr>
+<h2>Part A — Vocabulary (8 marks)</h2>
+<p>Match each term to its meaning.</p>
+<div class="tbl"><table><thead><tr><th></th><th>Term</th><th></th><th>Meaning</th></tr></thead><tbody><tr><td>1</td><td>Census</td><td>A</td><td>Data are recorded from every individual in the population</td></tr><tr><td>2</td><td>Experiment</td><td>B</td><td>The researcher records the values of variables without imposing any treatment</td></tr><tr><td>3</td><td>Observational study</td><td>C</td><td>Units are selected at a point in time and data from the past are gathered</td></tr><tr><td>4</td><td>Prospective study</td><td>D</td><td>The researcher assigns conditions to experimental units</td></tr><tr><td>5</td><td>Retrospective study</td><td>E</td><td>A variable associated with both the explanatory and the response variable, which offers another explanation for their relationship</td></tr><tr><td>6</td><td>Survey</td><td>F</td><td>An observational study that collects data from people with a standard set of questions</td></tr><tr><td>7</td><td>Confounding variable</td><td>G</td><td>Units are selected at a point in time and data are gathered then and into the future</td></tr><tr><td>8</td><td>Treatment</td><td>H</td><td>A level of the explanatory variable, or a combination of levels, imposed on the experimental units</td></tr></tbody></table></div>
+<h2>Part B — The hospital network's patient survey (10 marks)</h2>
+<p>The hospital network from Session 1 discharged <strong>12,400 patients</strong> last year from its six hospitals: St Mary's, Riverside, Northgate, Parkview, Eastwood and Hillcrest. It wants to know how satisfied its patients were, and has five plans for choosing about 300 of them.</p>
+<ul><li><strong>Plan P.</strong> Number all 12,400 patients and use a random number generator to choose 300 different numbers.</li><li><strong>Plan Q.</strong> From each hospital's own discharge list, use a random number generator to choose 50 patients.</li><li><strong>Plan R.</strong> The network has 124 wards. Use a random number generator to choose 3 wards, and survey every patient discharged from them.</li><li><strong>Plan S.</strong> Take the network's discharge list in date order. Use a random number generator to choose a start from 1 to 41, then take every 41st patient.</li><li><strong>Plan T.</strong> Print a link to an online questionnaire on every discharge letter, and use the replies that come back.</li></ul>
+<p><strong>B1.</strong> Name the sampling method of each of Plans P, Q, R and S, and say whether Plan T gives a random sample. (5)</p>
+<p><strong>B2.</strong> In Plan P the random number generator gives 0417 twice. What should be done, and does that make Plan P sampling with or without replacement? (1)</p>
+<p><strong>B3.</strong> The network wants to compare patient satisfaction across its six hospitals. Which is more appropriate for that purpose, Plan P or Plan Q? Justify your choice. (2)</p>
+<p><strong>B4.</strong> The network's wards specialise: some are maternity wards, some surgical, some children's wards. Explain why this makes Plan R's clusters a poor choice. (1)</p>
+<p><strong>B5.</strong> To whom can the results of Plan T be generalised? (1)</p>
+<h2>Part C — Experiment or observational study? (8 marks)</h2>
+<p>For each study, say whether it is an <strong>experiment</strong> or an <strong>observational study</strong>, with the reason (1 mark). Then, for an observational study, say whether it is prospective, retrospective or a survey; for an experiment, name the treatments and the response (1 mark).</p>
+<p><strong>C1.</strong> Sixty Year 9 volunteers at Oakfield School each toss a coin: heads, they use a new online spelling programme for six weeks; tails, they use the usual spelling book. Everyone then takes the same spelling test. (2)</p>
+<p><strong>C2.</strong> The library service uses a random number generator to choose 300 of its members, and uses last year's records to compare the number of items borrowed by members who had used the e-book service with members who had not. (2)</p>
+<p><strong>C3.</strong> On one Saturday, every customer at the café is handed a card with the same five questions about the menu. (2)</p>
+<p><strong>C4.</strong> Lincoln High uses a random number generator to choose 150 of this September's new students, and records each one's journey time to school every term until they leave, five years later. (2)</p>
+<h2>Part D — The library's investigative question (6 marks)</h2>
+<p>In Session 3 you compared random samples of Central and Westside library members. The library service's question is:</p>
+<blockquote><em>"Is there a difference between the mean number of hours spent in library buildings last year by all Central branch members and by all Westside branch members?"</em></blockquote>
+<p><strong>D1.</strong> State the first component of this investigative question. (1)</p>
+<p><strong>D2.</strong> State the second component: the parameters, and the direction the question is testing. (2)</p>
+<p><strong>D3.</strong> State the third component: the population, and the type of conclusion the study can reach. (2)</p>
+<p><strong>D4.</strong> Rewrite the question so that its goal is to <strong>estimate</strong> the difference within a range of values, rather than to test it. (1)</p>
+<h2>Part E — Tables outside the café (4 marks)</h2>
+<p>The café's records for the last 60 days show, for each day, whether tables were put outside and the day's takings. On days with tables outside, mean takings were higher.</p>
+<p><strong>E1.</strong> Is this an experiment or an observational study? Explain. (1)</p>
+<p><strong>E2.</strong> Name a possible confounding variable, and explain how it is associated with <strong>both</strong> tables outside and takings. (2)</p>
+<p><strong>E3.</strong> Describe how the café could find out whether putting tables outside <strong>causes</strong> higher takings. (1)</p>
+<h2>Part F — How far Oakfield's results reach (4 marks)</h2>
+<p>Oakfield School has 900 students.</p>
+<p><strong>F1.</strong> The head uses a random number generator to choose 60 of the 900 students and asks each how many hours of homework they did last week. To whom can the results be generalised? Explain. (2)</p>
+<p><strong>F2.</strong> A teacher asks her own Year 8 class of 30 for volunteers to answer the same question, and 12 volunteer. To whom can their results be generalised? Explain. (2)</p>
+<hr>
+<hr>
+<h1>Answer key</h1>
+<p><em>For the student to mark their own work, after attempting everything.</em></p>
+<h3>Part A (8 marks, 1 each)</h3>
+<p>1–A · 2–D · 3–B · 4–G · 5–C · 6–F · 7–E · 8–H</p>
+<h3>Part B (10 marks)</h3>
+<p><strong>B1.</strong> (5, 1 each) <strong>P: simple random sample.</strong> <strong>Q: stratified random sample</strong>, with the hospitals as strata. <strong>R: cluster random sample</strong>, with the wards as clusters. <strong>S: systematic random sample</strong>, with a random start and an interval of 41. <strong>T: not a random sample</strong>: the patients who reply volunteer themselves.</p>
+<blockquote><strong>"Random sample" on its own does not earn a mark for P, Q, R or S.</strong> All four are random; the mark is for which method. If you called Q a cluster sample, ask: did every hospital contribute? Yes, 50 each: that is stratified. If you called R stratified, ask: did every ward contribute? No, 3 of 124, and all of their patients: that is cluster.</blockquote>
+<p><strong>B2.</strong> (1) Ignore the repeat and take another number, so no patient is chosen twice. That is sampling <strong>without replacement</strong>.</p>
+<p><strong>B3.</strong> (2) <strong>Plan Q</strong> (1). It guarantees 50 patients from every hospital, so each hospital can be compared with enough patients; an SRS of 300 would contain very few patients from the smaller hospitals, and possibly almost none by chance, and satisfaction may differ between hospitals (1).</p>
+<blockquote>In Session 1's survey of 300, Hillcrest had only 18 patients. A justification must name the characteristic (every stratum guaranteed its place) <strong>and</strong> connect it to the question (comparing the six hospitals). "Stratified is more accurate" earns nothing on its own.</blockquote>
+<p><strong>B4.</strong> (1) A good cluster mirrors the whole population. Specialised wards do not: a maternity ward contains no surgical patients. Three wards could easily all be one kind, missing whole groups of patients, so the results would vary a great deal depending on which wards were chosen.</p>
+<p><strong>B5.</strong> (1) Only to patients similar to those who chose to reply. It is not a random sample, so it cannot be generalised to all 12,400.</p>
+<h3>Part C (8 marks)</h3>
+<p><strong>C1.</strong> (2) <strong>Experiment</strong>: the coin decides which programme each student uses, so the treatment is imposed (1). Treatments: the online spelling programme and the usual spelling book; response: the spelling test score (1).</p>
+<blockquote>The students volunteered. That does not stop it being an experiment; it limits how far the result reaches, to students similar to the volunteers.</blockquote>
+<p><strong>C2.</strong> (2) <strong>Observational</strong>: the members chose whether to use e-books; nothing was imposed (1). <strong>Retrospective</strong>: the members are selected now and last year's records are used (1).</p>
+<p><strong>C3.</strong> (2) <strong>Observational</strong>: nothing is imposed; the customers are asked questions (1). <strong>A survey</strong>: data from people with a standard set of questions (1).</p>
+<p><strong>C4.</strong> (2) <strong>Observational</strong>: nothing is imposed on the students (1). <strong>Prospective</strong>: the students are selected now and data are gathered into the future (1).</p>
+<blockquote>Following the students forward for five years does not make C4 an experiment. Only imposing a treatment does.</blockquote>
+<h3>Part D (6 marks)</h3>
+<p><strong>D1.</strong> (1) The variables of interest: <strong>the branch</strong> (Central or Westside) and <strong>the number of hours spent in library buildings last year</strong>. "Branch and hours" in full; "hours" alone does not earn the mark.</p>
+<p><strong>D2.</strong> (2) The parameters: <strong>the mean number of hours spent in library buildings last year by all Central members, and by all Westside members</strong> (1). The direction: <strong>different</strong> (not equal); the question asks whether there is a difference, not whether one is greater (1).</p>
+<p><strong>D3.</strong> (2) The population: <strong>all members of the Central and Westside branches</strong> (1). The conclusion: a generalisation to all members of the two branches, because the samples were chosen at random; <strong>not</strong> cause and effect, because nothing was imposed: members chose their branch (1).</p>
+<p><strong>D4.</strong> (1) For example: <em>"Between what values does the difference between the mean hours spent in library buildings last year by all Central members and by all Westside members lie?"</em> Any version whose goal is to estimate the difference within a range of values earns the mark.</p>
+<h3>Part E (4 marks)</h3>
+<p><strong>E1.</strong> (1) <strong>Observational</strong>: the records show what happened; no treatment was assigned by the study. (The manager chose when to put tables out, for reasons of their own, which is exactly the problem in E2.)</p>
+<p><strong>E2.</strong> (2) <strong>The weather</strong>, for example (1). On warm, dry days the manager is more likely to put tables outside, and on warm, dry days more people come to the café, so the weather is associated with both tables outside and takings and could explain the higher takings on its own (1).</p>
+<blockquote>Naming a variable that affects takings, without saying how it is linked to putting the tables out, earns one mark, not two. Both links are the definition.</blockquote>
+<p><strong>E3.</strong> (1) Run an experiment: for each of the coming days, use a random number generator (or a coin) to decide whether the tables go outside, then compare the takings on the two kinds of day. The treatment must be imposed by the study, and at random, not chosen by the manager.</p>
+<h3>Part F (4 marks)</h3>
+<p><strong>F1.</strong> (2) <strong>To all 900 Oakfield students</strong> (1), because the 60 were selected with a random mechanism from the 900 (1).</p>
+<p><strong>F2.</strong> (2) <strong>Only to students similar to those 12 volunteers</strong> (1), because the students volunteered themselves: the sample is not random (1). Not to the whole class of 30, not to Year 8, and not to the school.</p>
+<h3>Marks summary</h3>
+<div class="tbl"><table><thead><tr><th>Part</th><th>Marks</th></tr></thead><tbody><tr><td>A — Vocabulary</td><td>8</td></tr><tr><td>B — The hospital network's patient survey</td><td>10</td></tr><tr><td>C — Experiment or observational study?</td><td>8</td></tr><tr><td>D — The library's investigative question</td><td>6</td></tr><tr><td>E — Tables outside the café</td><td>4</td></tr><tr><td>F — How far Oakfield's results reach</td><td>4</td></tr><tr class="tot"><td><strong>Total</strong></td><td><strong>40</strong></td></tr></tbody></table></div>
+<hr>
+<hr>
+<h1>Reference sheet — keep this</h1>
+<p><em>Every term carries an example from this session. Most use Lincoln High, 1,842 students; St Mary's is the 400 of 9,600 outpatients.</em></p>
+<h3>The three parts of an investigative question, at Lincoln High (1.10.A)</h3>
+<div class="tbl"><table><thead><tr><th>Component</th><th>What it gives</th><th>Example: <em>Is there a difference between the mean journey time of all Suburbs students and all Villages students?</em></th></tr></thead><tbody><tr class="tot"><td><strong>First</strong></td><td>the variables of interest; guides the data collection</td><td>home area (Suburbs or Villages) and journey time to school, in minutes</td></tr><tr class="tot"><td><strong>Second</strong></td><td>the parameter, and the analysis: a <strong>test</strong> with a direction (not equal, greater than, less than, associated) or an <strong>interval</strong> to estimate it</td><td>the mean journey times of all Suburbs and all Villages students; a test, direction <em>different</em></td></tr><tr class="tot"><td><strong>Third</strong></td><td>the population, and the type of conclusion; cause and effect only for an experiment with random assignment</td><td>all Lincoln High students in the Suburbs or Villages; a generalisation, not cause</td></tr></tbody></table></div>
+<p><em>Example of an interval question: "Between what values does the proportion of all Lincoln High students who travel mainly by bus lie?"</em></p>
+<h3>Study types: each definition with its example (1.10.B–D)</h3>
+<p><strong>Census</strong> — data recorded from every individual in the population. A summary from a census is a parameter. <em>Example: the office's home areas for all 1,842 students: 846 Town, 702 Suburbs, 294 Villages.</em></p>
+<p><strong>Experiment</strong> — the researcher assigns treatments to experimental units. <em>Example: St Mary's uses a random number generator to decide which of next month's patients get a text reminder.</em></p>
+<p><strong>Experimental unit</strong> — the unit a treatment is assigned to. <em>Subjects</em> or <em>participants</em> when they are people. <em>Example: each of next month's outpatients. At Oakfield's canteen, each day in March.</em></p>
+<p><strong>Factor, levels, treatments</strong> — the explanatory variable imposed; its categories; the levels, or with two or more factors their combinations. <em>Example: method (text, phone call) and timing (1 day, 3 days before): 2 × 2 = 4 treatments.</em></p>
+<p><strong>Response variable</strong> — the outcome measured on each unit after the treatment. <em>Example: whether the patient attended or missed the appointment.</em></p>
+<p><strong>Observational study</strong> — nothing is imposed; the values of the variables are recorded. <em>Example: St Mary's records of who signed up for reminders and who missed.</em></p>
+<p><strong>Prospective study</strong> — units selected at a point in time; data gathered then and into the future. <em>Example: the library follows 200 January joiners for two years.</em></p>
+<p><strong>Retrospective study</strong> — units selected at a point in time; data gathered from the past. <em>Example: 400 of last year's St Mary's outpatients, from their files.</em></p>
+<p><strong>Survey</strong> — an observational study with a standard set of questions to people. <em>Example: the Lincoln High travel survey.</em></p>
+<blockquote><strong>The one test:</strong> did the researcher impose the treatment? Comparing two groups does not make an experiment (Oakfield's maths club). Volunteers can be in an experiment (the reading challenge). Following people forward does not make an experiment (the library's January joiners).</blockquote>
+<h3>Confounding and generalization: what a study lets you say (1.10.D.5, 1.10.E)</h3>
+<p><strong>Confounding variable</strong> — in an observational study, a variable associated with <strong>both</strong> the explanatory and the response variable, which offers another explanation for their relationship. <em>Example: booking method at St Mary's. Self-booked patients signed up for reminders far more (70.0% against 10.0%) and missed far less (5.0% against 25.0%).</em></p>
+<p><strong>Random sample</strong> — every unit selected by a random mechanism, such as a random number generator. <em>Example: Plan A, 120 different numbers from 0001 to 1842.</em></p>
+<p><strong>Not a random sample</strong> — units chosen deliberately, or volunteers. <em>Example: Plan E, the first 120 at the main gate; the café's poster at the till.</em></p>
+<div class="tbl"><table><thead><tr><th>Selected at random?</th><th>Treatments imposed at random?</th><th>You may conclude</th></tr></thead><tbody><tr><td>Yes</td><td>No</td><td>an association, generalised to the population sampled: St Mary's records, to all 9,600</td></tr><tr><td>No</td><td>Yes</td><td>cause and effect, for units similar to those in the study: the reminder experiment</td></tr><tr><td>No</td><td>No</td><td>an association, for individuals similar to those in the study: the gate sample</td></tr></tbody></table></div>
+<blockquote><strong>Random selection lets you generalise. Random assignment lets you conclude cause.</strong> A random sample, a large sample and even a census cannot remove a confounding variable.</blockquote>
+<h3>The four random sampling methods, with Lincoln High's plans (1.11.A)</h3>
+<p><strong>Sampling without replacement</strong> — a unit can be chosen only once. <strong>With replacement</strong> — a unit is returned and can be chosen again. <em>Example: Plan A ignores a repeated number: without replacement.</em></p>
+<div class="tbl"><table><thead><tr><th>Method</th><th>Definition</th><th>Lincoln High example</th></tr></thead><tbody><tr class="tot"><td><strong>Simple random sample (SRS)</strong></td><td>every sample of size <em>n</em> has the same chance of being selected</td><td>Plan A: 120 different numbers from 0001 to 1842</td></tr><tr class="tot"><td><strong>Stratified random sample</strong></td><td>split everyone into strata by a shared attribute; an SRS inside every stratum; combine</td><td>Plan B: 55 Town, 46 Suburbs, 19 Villages</td></tr><tr class="tot"><td><strong>Cluster random sample</strong></td><td>split into clusters, ideally each like the population; an SRS of clusters; everyone in the chosen clusters</td><td>Plan C: every student in 5 of the 72 tutor groups</td></tr><tr class="tot"><td><strong>Systematic random sample</strong></td><td>a random start, then a fixed interval</td><td>Plan D: random start 1 to 15, then every 15th: 122 or 123 students</td></tr></tbody></table></div>
+<blockquote><strong>Stratified: some from every group. Cluster: everyone from some groups.</strong> Strata should be alike inside; clusters should each look like the whole population.</blockquote>
+<blockquote><strong>Equal chance for every individual does not make an SRS.</strong> Plan D gives every student a 1 in 15 chance but allows only 15 different samples.</blockquote>
+<h3>Choosing a method: the characteristics to cite (1.11.B)</h3>
+<div class="tbl"><table><thead><tr><th>Method</th><th>Cite this when it suits the question</th><th>Example</th></tr></thead><tbody><tr><td>Stratified</td><td>guarantees every group; less variation from sample to sample when the variable differs between groups; separate estimates per group</td><td>Lincoln's bus question, by home area; the network comparing six hospitals; the café comparing app and paper members</td></tr><tr><td>Cluster</td><td>practical when individuals come in natural groups that each mirror the population</td><td>Lincoln's mixed tutor groups: yes. Specialised hospital wards: no</td></tr><tr><td>Systematic</td><td>easy with an ordered list or a stream</td><td>every 15th on the alphabetical roll</td></tr><tr><td>Simple random</td><td>needs only a complete list</td><td>the roll numbered 0001 to 1842</td></tr></tbody></table></div>
+<p><em>Model justification: "Plan B, because journey time differs a great deal between home areas and little within them, so a simple random sample inside each area guarantees every area its share and gives estimates that vary less than an SRS of the same size; the students are chosen at random, so the results generalise to all 1,842."</em></p>
+<div class="note red"><span class="lbl">Not in the course description</span><p><strong>Multistage sampling</strong>, <strong>sampling frame</strong>, <strong>table of random digits</strong>, <strong>quota sampling</strong>, <strong>lurking variable</strong> and <strong>scope of inference</strong> appear in the prep books but nowhere in the course description. The words for what goes wrong with a sample, such as <strong>undercoverage</strong>, <strong>nonresponse</strong>, <strong>voluntary response</strong> and <strong>convenience</strong>, are in the course description and are Session 7's.</p></div>
+<hr>
+<p><em>CED references: Topic 1.10 (1.10.A.1–3, 1.10.B.1, 1.10.C.1–4, 1.10.D.1–5, 1.10.E.1–4), Topic 1.11 (1.11.A.1–6, 1.11.B.1); the unit guide's note on random selection and random assignment; sample exam multiple-choice question 7 and free-response question 1. Course and Exam Description effective Fall 2026.</em></p>
+<p><em>Supporting reading: Barron's pdf 220–237 · Princeton Review 180–186 · 5 Steps to a 5 122–125.</em></p>
+<p><em>Next session: Topics 1.12–1.13 — what goes wrong with samples (bias, voluntary response, undercoverage, nonresponse, response bias), and how to design an experiment: comparison, random assignment, replication, control, blinding and blocking.</em></p>
+</main>
+<script>window.COURSE_NAV={"kicker": "CED 1.10–1.11", "title": "Session 6, Collecting Data", "map": [{"label": "Course", "items": [{"href": "index.html", "label": "Home", "current": false}, {"href": "plan.html", "label": "The 20-hour plan", "current": false}]}, {"label": "Block A · Describing one variable", "items": [{"href": "s01-tutor.html", "label": "Session 1 · Tutor", "current": false}, {"href": "s01-student.html", "label": "Session 1 · Student", "current": false}, {"href": "s01-test.html", "label": "Session 1 · Test", "current": false}, {"href": "s02-tutor.html", "label": "Session 2 · Tutor", "current": false}, {"href": "s02-student.html", "label": "Session 2 · Student", "current": false}, {"href": "s02-test.html", "label": "Session 2 · Test", "current": false}, {"href": "s03-tutor.html", "label": "Session 3 · Tutor", "current": false}, {"href": "s03-student.html", "label": "Session 3 · Student", "current": false}, {"href": "s03-test.html", "label": "Session 3 · Test", "current": false}]}, {"label": "Block B · Describing two variables", "items": [{"href": "s04-tutor.html", "label": "Session 4 · Tutor", "current": false}, {"href": "s04-student.html", "label": "Session 4 · Student", "current": false}, {"href": "s04-test.html", "label": "Session 4 · Test", "current": false}, {"href": "s05-tutor.html", "label": "Session 5 · Tutor", "current": false}, {"href": "s05-student.html", "label": "Session 5 · Student", "current": false}, {"href": "s05-test.html", "label": "Session 5 · Test", "current": false}]}, {"label": "Block C · Collecting data", "items": [{"href": "s06-tutor.html", "label": "Session 6 · Tutor", "current": true}, {"href": "s06-student.html", "label": "Session 6 · Student", "current": false}, {"href": "s06-test.html", "label": "Session 6 · Test", "current": false}]}, {"label": "Interactive", "items": [{"href": "tools/unit1-explorer.html", "label": "Unit 1 Explorer", "current": false}, {"href": "tools/boxplot-builder.html", "label": "Boxplot Builder", "current": false}, {"href": "tools/guess-correlation.html", "label": "Guess the Correlation", "current": false}, {"href": "tools/least-squares-fitter.html", "label": "Least-squares Fitter", "current": false}, {"href": "tools/sampling-methods.html", "label": "Sampling Methods", "current": false}]}], "prev": {"href": "s05-test.html", "label": "Session 5 · Test"}, "next": {"href": "s06-student.html", "label": "Session 6 · Student"}, "variants": [{"href": "s06-tutor.html", "label": "Tutor", "current": true}, {"href": "s06-student.html", "label": "Student", "current": false}, {"href": "s06-test.html", "label": "Test", "current": false}]};</script>
+<script src="assets/course.js"></script>
+</body>
+</html>

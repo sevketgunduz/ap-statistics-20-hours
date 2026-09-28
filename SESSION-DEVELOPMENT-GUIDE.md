@@ -72,13 +72,14 @@ A later session and its test must use these exactly as earlier sessions did.
 | Variable names | explanatory / response, never independent / dependent | Session 4 |
 | Calculator | TI-84; LinReg(a+bx) with Stat Diagnostics on | Session 4 |
 | Regression | ŷ = a + bx with ŷ and x named in context; residual = y − ŷ (positive underpredicts); a and b to 4 significant figures keeping at least 2 dp; predictions and residuals to 1 dp from the equation as written; *r*² read from the calculator | Session 5 |
+| Sampling and study design | method names in full (simple random / stratified random / cluster random / systematic random); stratified = some from every group, cluster = everyone from some groups; an SRS makes every sample of size n equally likely; an experiment imposes treatments; random selection → generalisation, random assignment → cause; a confounding variable is linked to both variables | Session 6 |
 | Session tests | Session 1's test opens Session 3 (as Session 1's document says); Session 4's builder placed Session 2's at the start of Session 4. **Not yet confirmed** as the general rule | Sessions 3–4 |
 
 ### Data
 
 Every data set is registered once in `build/datasets.json`, with the sessions that use it. Read it before designing a scenario; register every new set before quoting a number from it.
 
-**Contexts already used in sessions** (reuse them for continuity; the data carry forward): Lincoln High commute and distance · the hospital survey, St Mary's and Riverside, St Mary's evening shifts · the café (drinks per hour, midday temperatures, fridge log, spring mornings, coffee machine) · the library (Central and Westside branches, 18 branches, members' ages) · Oakfield School · the Session 2 test scores out of 50 · the gym (Session 1).
+**Contexts already used in sessions** (reuse them for continuity; the data carry forward): Lincoln High commute and distance · the hospital survey, St Mary's and Riverside, St Mary's evening shifts · the café (drinks per hour, midday temperatures, fridge log, spring mornings, coffee machine) · the library (Central and Westside branches, 18 branches, members' ages) · Oakfield School · the Session 2 test scores out of 50 · the gym (Session 1) · Session 6's Lincoln High sampling plans, St Mary's text reminders, café loyalty members, hospital-network survey and Oakfield's 900-student roll.
 
 **Contexts already used in tests** (do not reuse these as teaching scenarios, and do not reuse any session context in a test):
 
@@ -89,6 +90,7 @@ Every data set is registered once in `build/datasets.json`, with the sessions th
 | Session 3 | animal shelter, weather °C/°F, swimming gala, pizza shops, maths/history exams, athletics, tomato plants |
 | Session 4 | used cars, house fires, screen time and sleep, height and arm span, engine size and fuel use, flats and rent, revision hours |
 | Session 5 | taxi fares, car braking distances, rainfall and wheat yield, candle burning, school heating and outdoor temperature |
+| Session 6 | commuter train carriages, bakery oven experiment, new drivers, breakfast and grades, step-count app, Northbridge water company, radio phone-in, revision app, housing estate |
 
 Add the new session's contexts to both lists as part of step 3.
 

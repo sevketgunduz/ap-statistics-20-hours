@@ -198,6 +198,44 @@
       ]
     },
     {
+      "label": "Block C · Collecting data",
+      "items": [
+        {
+          "id": "s06t",
+          "label": "Session 6 · Tutor",
+          "out": "s06-tutor.html",
+          "src": "Session-06-Tutoring-Document.md",
+          "kind": "md",
+          "session": 6,
+          "variant": "tutor",
+          "title": "Session 6, Collecting Data",
+          "topics": "CED 1.10–1.11"
+        },
+        {
+          "id": "s06s",
+          "label": "Session 6 · Student",
+          "out": "s06-student.html",
+          "src": "Session-06-Student-Workbook.md",
+          "kind": "md",
+          "session": 6,
+          "variant": "student",
+          "title": "Session 6 Workbook",
+          "topics": "CED 1.10–1.11"
+        },
+        {
+          "id": "s06x",
+          "label": "Session 6 · Test",
+          "out": "s06-test.html",
+          "src": "Session-06-MC-Test.md",
+          "kind": "md",
+          "session": 6,
+          "variant": "test",
+          "title": "Session 6 Test",
+          "topics": "CED 1.10–1.11 · 20 questions"
+        }
+      ]
+    },
+    {
       "label": "Interactive",
       "items": [
         {
@@ -235,6 +273,15 @@
           "kind": "tool",
           "title": "Least-squares Fitter",
           "topics": "Session 5"
+        },
+        {
+          "id": "sim5",
+          "label": "Sampling Methods",
+          "out": "tools/sampling-methods.html",
+          "src": "html-fragment:sampling-methods.html",
+          "kind": "tool",
+          "title": "Sampling Methods",
+          "topics": "Session 6"
         }
       ]
     }

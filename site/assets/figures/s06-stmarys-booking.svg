@@ -1,0 +1,86 @@
+<svg viewBox="0 0 760 310" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="St Mary&#x27;s records, 400 randomly selected outpatients. How the appointment was booked is associated with signing up for text reminders (70.0% of self-booked patients signed up, 10.0% of hospital-booked) and with missing the appointment (5.0% of self-booked missed, 25.0% of hospital-booked). Between signing up and missing the association is 7.5% against 20.0%, but the records cannot say whether reminders caused it." font-family="Public Sans, system-ui, sans-serif">
+<style>
+  .ink { fill: #15201f; }
+  .ink2 { fill: #4a5654; }
+  .ink3 { fill: #6f7b79; }
+  .kink { stroke: #15201f; }
+  .kink2 { stroke: #4a5654; }
+  .kink3 { stroke: #6f7b79; }
+  .axis { stroke: #c3c9c6; }
+  .grid { stroke: #dcdfdd; }
+  .surf { fill: #ffffff; }
+  .band { fill: #eef1ef; }
+  .acc { fill: #1a6b63; }
+  .kacc { stroke: #1a6b63; }
+  .amb { fill: #7d5a11; }
+  .kamb { stroke: #7d5a11; }
+  .s0 { fill: #2a78d6; }
+  .k0 { stroke: #2a78d6; }
+  .s1 { fill: #eb6834; }
+  .k1 { stroke: #eb6834; }
+  .s2 { fill: #1baf7a; }
+  .k2 { stroke: #1baf7a; }
+  .s3 { fill: #eda100; }
+  .k3 { stroke: #eda100; }
+  .s4 { fill: #e87ba4; }
+  .k4 { stroke: #e87ba4; }
+  .s5 { fill: #008300; }
+  .k5 { stroke: #008300; }
+  @media (prefers-color-scheme: dark) {
+    .ink { fill: #e9edeb; }
+    .ink2 { fill: #a5b0ad; }
+    .ink3 { fill: #7e8a87; }
+    .kink { stroke: #e9edeb; }
+    .kink2 { stroke: #a5b0ad; }
+    .kink3 { stroke: #7e8a87; }
+    .axis { stroke: #3a4644; }
+    .grid { stroke: #2a3533; }
+    .surf { fill: #182120; }
+    .band { fill: #1e2827; }
+    .acc { fill: #54b8ab; }
+    .kacc { stroke: #54b8ab; }
+    .amb { fill: #d9ab52; }
+    .kamb { stroke: #d9ab52; }
+    .s0 { fill: #3987e5; }
+    .k0 { stroke: #3987e5; }
+    .s1 { fill: #d95926; }
+    .k1 { stroke: #d95926; }
+    .s2 { fill: #199e70; }
+    .k2 { stroke: #199e70; }
+    .s3 { fill: #c98500; }
+    .k3 { stroke: #c98500; }
+    .s4 { fill: #d55181; }
+    .k4 { stroke: #d55181; }
+    .s5 { fill: #008300; }
+    .k5 { stroke: #008300; }
+  }
+</style>
+<rect class="surf kamb" x="215.0" y="12.0" width="330.0" height="64.0" rx="5" fill="#ffffff" stroke="#7d5a11" stroke-width="1.8"/>
+<text class="ink" x="380.0" y="38.0" font-size="13.5" font-weight="600" text-anchor="middle" fill="#15201f">How the appointment was booked</text>
+<text class="ink2" x="380.0" y="58.0" font-size="11.5" font-weight="400" text-anchor="middle" fill="#4a5654">self-booked online (200) or booked by the hospital (200)</text>
+<rect class="surf kacc" x="15.0" y="226.0" width="270.0" height="64.0" rx="5" fill="#ffffff" stroke="#1a6b63" stroke-width="1.8"/>
+<text class="ink" x="150.0" y="252.0" font-size="13.5" font-weight="600" text-anchor="middle" fill="#15201f">Signed up for text reminders</text>
+<text class="ink2" x="150.0" y="272.0" font-size="11.5" font-weight="400" text-anchor="middle" fill="#4a5654">160 of the 400 signed up</text>
+<rect class="surf kacc" x="475.0" y="226.0" width="270.0" height="64.0" rx="5" fill="#ffffff" stroke="#1a6b63" stroke-width="1.8"/>
+<text class="ink" x="610.0" y="252.0" font-size="13.5" font-weight="600" text-anchor="middle" fill="#15201f">Missed the appointment</text>
+<text class="ink2" x="610.0" y="272.0" font-size="11.5" font-weight="400" text-anchor="middle" fill="#4a5654">60 of the 400 missed</text>
+<line class="kamb" x1="300.0" y1="78.0" x2="190.6" y2="215.0" stroke="#7d5a11" stroke-width="2" fill="none"/>
+<polygon class="amb" points="185.0,222.0 187.5,212.4 193.8,217.5" fill="#7d5a11" stroke="none"/>
+<line class="kamb" x1="460.0" y1="78.0" x2="569.4" y2="215.0" stroke="#7d5a11" stroke-width="2" fill="none"/>
+<polygon class="amb" points="575.0,222.0 566.2,217.5 572.5,212.4" fill="#7d5a11" stroke="none"/>
+<rect class="surf kamb" x="58.0" y="104.0" width="162.0" height="60.0" rx="4" fill="#ffffff" stroke="#7d5a11" stroke-width="1"/>
+<rect class="surf kamb" x="550.0" y="104.0" width="162.0" height="60.0" rx="4" fill="#ffffff" stroke="#7d5a11" stroke-width="1"/>
+<rect class="surf" x="346.0" y="231.0" width="68.0" height="21.0" rx="4" fill="#ffffff" stroke="none" stroke-width="1.2"/>
+<rect class="surf" x="312.0" y="268.0" width="136.0" height="36.0" rx="4" fill="#ffffff" stroke="none" stroke-width="1.2"/>
+<text class="ink" x="68.0" y="120.0" font-size="12" font-weight="600" text-anchor="start" fill="#15201f">signed up:</text>
+<text class="ink2" x="68.0" y="138.0" font-size="12" font-weight="400" text-anchor="start" fill="#4a5654">self-booked 70.0%</text>
+<text class="ink2" x="68.0" y="156.0" font-size="12" font-weight="400" text-anchor="start" fill="#4a5654">hospital-booked 10.0%</text>
+<text class="ink" x="560.0" y="120.0" font-size="12" font-weight="600" text-anchor="start" fill="#15201f">missed:</text>
+<text class="ink2" x="560.0" y="138.0" font-size="12" font-weight="400" text-anchor="start" fill="#4a5654">self-booked 5.0%</text>
+<text class="ink2" x="560.0" y="156.0" font-size="12" font-weight="400" text-anchor="start" fill="#4a5654">hospital-booked 25.0%</text>
+<line class="kink3" x1="290.0" y1="258.0" x2="461.0" y2="258.0" stroke="#6f7b79" stroke-width="1.6" fill="none" stroke-dasharray="6 5"/>
+<polygon class="ink3" points="470.0,258.0 461.0,262.1 461.0,253.9" fill="#6f7b79" stroke="none"/>
+<text class="ink" x="380.0" y="246.0" font-size="12.5" font-weight="600" text-anchor="middle" fill="#15201f">cause?</text>
+<text class="ink2" x="380.0" y="282.0" font-size="11.5" font-weight="400" text-anchor="middle" fill="#4a5654">missed: signed up 7.5%</text>
+<text class="ink2" x="380.0" y="298.0" font-size="11.5" font-weight="400" text-anchor="middle" fill="#4a5654">not signed up 20.0%</text>
+</svg>

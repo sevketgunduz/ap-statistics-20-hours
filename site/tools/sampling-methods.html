@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sampling Methods · AP Statistics in Twenty Hours</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Spectral:ital,wght@0,600;0,700;1,600&display=swap">
+<link rel="stylesheet" href="../assets/course.css">
+</head>
+<body>
+<main class="page page--wide">
+<style>.page{max-width:none;padding-inline:0}.page .wrap{max-width:62rem}</style><style>
+  /* Sampling Methods. Scoped sm- classes; colours are course.css tokens only. */
+  .sm-wrap{max-width:62rem;margin-inline:auto;padding:30px 24px 48px}
+  @media(max-width:520px){.sm-wrap{padding-inline:14px}}
+  .sm-eyebrow{font-family:var(--f-mono);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);font-weight:500;margin:0 0 8px}
+  .sm-wrap h1{margin:0 0 10px}
+  .sm-lede{max-width:66ch;color:var(--ink-2);margin:0 0 20px}
+  .sm-tool{background:var(--surface);border:1px solid var(--rule);border-radius:4px;overflow:hidden}
+  .sm-controls{display:flex;flex-wrap:wrap;gap:14px 22px;align-items:flex-end;padding:16px 20px;background:var(--surface-2);border-bottom:1px solid var(--rule)}
+  .sm-ctl{display:flex;flex-direction:column;gap:6px;min-width:0}
+  .sm-lbl{font-family:var(--f-mono);font-size:.64rem;letter-spacing:.11em;text-transform:uppercase;color:var(--ink-3);font-weight:600}
+  .sm-seg{display:flex;border:1px solid var(--rule-strong);border-radius:3px;overflow:hidden;flex-wrap:wrap}
+  .sm-seg button{appearance:none;border:0;background:var(--surface);color:var(--ink-2);cursor:pointer;font-family:var(--f-body);font-size:.82rem;font-weight:600;padding:8px 12px}
+  .sm-seg button+button{border-left:1px solid var(--rule-strong)}
+  .sm-seg button[aria-pressed="true"]{background:var(--accent);color:#fff}
+  .sm-btns{display:flex;gap:10px;flex-wrap:wrap;padding:14px 20px 0}
+  .sm-btn{appearance:none;font-family:var(--f-body);font-size:.88rem;font-weight:600;cursor:pointer;padding:9px 15px;border-radius:3px;border:1px solid var(--accent);background:transparent;color:var(--accent)}
+  .sm-btn:hover{background:var(--accent-soft)}
+  .sm-btn.sm-primary{background:var(--accent);color:#fff}
+  .sm-main{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:0}
+  @media(max-width:760px){.sm-main{grid-template-columns:minmax(0,1fr)}}
+  .sm-pop{padding:12px 16px 10px;border-right:1px solid var(--rule)}
+  @media(max-width:760px){.sm-pop{border-right:0;border-bottom:1px solid var(--rule)}}
+  .sm-pop svg{display:block;width:100%;height:auto}
+  .sm-legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:.8rem;color:var(--ink-2);margin-top:8px}
+  .sm-key{display:inline-block;width:11px;height:11px;border-radius:2px;vertical-align:-1px;margin-right:5px}
+  .sm-side{padding:16px 20px;display:flex;flex-direction:column;gap:12px}
+  .sm-say{margin:0;font-size:.93rem;color:var(--ink-2);min-height:6.2em}
+  .sm-say b{color:var(--ink)}
+  .sm-read{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin:0;border:1px solid var(--rule);border-radius:3px}
+  .sm-stat{padding:8px 11px;border-right:1px solid var(--rule)}
+  .sm-stat:last-child{border-right:0}
+  .sm-stat dt{font-family:var(--f-mono);font-size:.58rem;letter-spacing:.11em;text-transform:uppercase;color:var(--ink-3);margin-bottom:2px}
+  .sm-stat dd{margin:0;font-family:var(--f-mono);font-size:1.02rem;font-weight:600;font-variant-numeric:tabular-nums;color:var(--ink)}
+  .sm-strips{border-top:1px solid var(--rule);padding:12px 16px 14px}
+  .sm-strips svg{display:block;width:100%;height:auto}
+  .sm-table{width:100%;border-collapse:collapse;font-size:.84rem;margin-top:8px;table-layout:fixed;min-width:0}
+  .sm-table th:nth-child(1){width:31%} .sm-table th:nth-child(2){width:17%} .sm-table th:nth-child(3),.sm-table th:nth-child(4){width:26%}
+  .sm-table th,.sm-table td{text-align:left;padding:5px 8px;border-bottom:1px solid var(--rule);font-variant-numeric:tabular-nums}
+  .sm-table th{font-family:var(--f-mono);font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);font-weight:600}
+  .sm-table td{font-family:var(--f-mono);color:var(--ink)}
+  .sm-table td:first-child{font-family:var(--f-body)}
+  .sm-tblwrap{overflow-x:auto}
+  @media(max-width:520px){.sm-table{font-size:.76rem}.sm-table th,.sm-table td{padding:5px 4px}.sm-table th{font-size:.54rem;letter-spacing:.05em}.sm-strips,.sm-pop{padding-inline:8px}}
+  .sm-notes{display:grid;gap:12px;margin-top:18px;max-width:70ch}
+  .sm-note{border-radius:3px;padding:13px 17px}
+  .sm-note .sm-nl{display:block;font-family:var(--f-mono);font-size:.62rem;letter-spacing:.13em;text-transform:uppercase;font-weight:600;margin-bottom:4px}
+  .sm-note p{margin:0;font-size:.92rem;color:var(--ink-2)}
+  .sm-note strong{color:var(--ink)}
+  .sm-note.teal{background:var(--accent-soft);border:1px solid var(--accent)} .sm-note.teal .sm-nl{color:var(--accent-deep)}
+  .sm-note.amber{background:var(--amber-soft);border:1px solid var(--amber-rule)} .sm-note.amber .sm-nl{color:var(--amber)}
+  /* svg marks */
+  .sm-t{fill:var(--ink-3);font-size:11px;font-family:var(--f-body)}
+  .sm-tk{fill:var(--ink-2);font-size:11.5px;font-family:var(--f-body);font-weight:600}
+  .sm-axis{stroke:var(--rule-strong)} .sm-grid{stroke:var(--rule)}
+  .sm-par{stroke:var(--ink);stroke-dasharray:4 3}
+  .sm-a0{fill:var(--s1)} .sm-a1{fill:var(--s2)} .sm-a2{fill:var(--s3)}
+  .sm-cell{fill-opacity:.2}
+  .sm-cell.sm-on{fill-opacity:1}
+  .sm-dot{fill:var(--data);fill-opacity:.8}
+  .sm-last{fill:none;stroke:var(--ink);stroke-width:1.4}
+  .sm-rowbg{fill:var(--surface-2)}
+  .sm-rowbg.sm-cur{fill:var(--accent-soft)}
+  :focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+</style>
+
+<div class="sm-wrap">
+  <p class="sm-eyebrow">AP Statistics &middot; Session 6 &middot; CED 1.10&ndash;1.11</p>
+  <h1>Sampling Methods</h1>
+  <p class="sm-lede">A simulated Lincoln High: 1,842 students in 72 tutor groups, each student coloured by home area. Choose a random sampling method and draw samples of about 120. Each sample gives a <b>statistic</b>, the sample mean journey time. The <b>parameter</b>, the mean journey time of all 1,842, stays fixed. Watch how far each method's sample means scatter around it.</p>
+
+  <div class="sm-tool">
+    <div class="sm-controls">
+      <div class="sm-ctl">
+        <span class="sm-lbl" id="smMethodLbl">Sampling method</span>
+        <div class="sm-seg" role="group" aria-labelledby="smMethodLbl" id="smMethods">
+          <button type="button" data-m="srs" aria-pressed="true">Simple random</button>
+          <button type="button" data-m="strat" aria-pressed="false">Stratified by home area</button>
+          <button type="button" data-m="clus" aria-pressed="false">Cluster: 5 tutor groups</button>
+          <button type="button" data-m="sys" aria-pressed="false">Systematic: every 15th</button>
+        </div>
+      </div>
+      <div class="sm-ctl">
+        <span class="sm-lbl" id="smArrLbl">Tutor groups are</span>
+        <div class="sm-seg" role="group" aria-labelledby="smArrLbl">
+          <button type="button" id="smArrMix" aria-pressed="true">Mixed</button>
+          <button type="button" id="smArrArea" aria-pressed="false">Formed by home area</button>
+        </div>
+      </div>
+    </div>
+    <div class="sm-btns">
+      <button type="button" class="sm-btn sm-primary" id="smOne">Draw one sample</button>
+      <button type="button" class="sm-btn" id="smHundred">Draw 100 samples</button>
+      <button type="button" class="sm-btn" id="smClear">Clear results</button>
+    </div>
+
+    <div class="sm-main">
+      <div class="sm-pop">
+        <svg id="smPop" viewBox="0 0 560 272" role="img" aria-label="The population"></svg>
+        <div class="sm-legend" aria-hidden="true">
+          <span><span class="sm-key" style="background:var(--s1)"></span>Town, within 3 km (846)</span>
+          <span><span class="sm-key" style="background:var(--s2)"></span>Suburbs, 3 to 10 km (702)</span>
+          <span><span class="sm-key" style="background:var(--s3)"></span>Villages, beyond 10 km (294)</span>
+        </div>
+      </div>
+      <div class="sm-side">
+        <p class="sm-say" id="smSay" aria-live="polite"></p>
+        <dl class="sm-read">
+          <div class="sm-stat"><dt>Sample size</dt><dd id="smN">&mdash;</dd></div>
+          <div class="sm-stat"><dt>Sample mean</dt><dd id="smXbar">&mdash;</dd></div>
+          <div class="sm-stat"><dt>Parameter</dt><dd id="smMu">&mdash;</dd></div>
+        </dl>
+      </div>
+    </div>
+
+    <div class="sm-strips">
+      <span class="sm-lbl">Every sample mean so far, by method &middot; dashed line: the parameter</span>
+      <svg id="smStrips" viewBox="0 0 600 300" role="img" aria-label="Sample means by method"></svg>
+      <div class="sm-tblwrap">
+        <table class="sm-table" aria-label="Summary of the sample means for each method">
+          <thead><tr><th>Method</th><th>Samples</th><th>Mean of the means</th><th>SD of the means</th></tr></thead>
+          <tbody id="smTbody"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="sm-notes">
+    <div class="sm-note teal"><span class="sm-nl">Try this first</span>
+      <p>Draw <strong>one sample with each method</strong> and look at the grid each time: which students did it pick? Say the method's name from the picture before you read the caption. Then press <strong>Draw 100 samples</strong> for each method and compare the four rows. Every method is random, and every method's sample means centre on the parameter. They do not all scatter the same amount. Notice too that the systematic row piles up on a few values: on one fixed roll, a random start from 1 to 15 can produce only <strong>15 different samples</strong>, so it is not a simple random sample.</p></div>
+    <div class="sm-note teal"><span class="sm-nl">Then this</span>
+      <p>Stratified sampling by home area gives sample means that scatter <strong>less</strong> than a simple random sample of the same size. Journey times are similar within a home area and very different between areas, and stratifying makes sure every sample has the right number from each area.</p></div>
+    <div class="sm-note amber"><span class="sm-nl">And the catch</span>
+      <p>Switch the tutor groups to <strong>Formed by home area</strong>, clear the results, and draw 100 cluster samples. Now each tutor group holds students from one area, so the clusters no longer mirror the school, and five of them can easily be all Town or all Villages. The cluster sample means spread out far more. A cluster sample works best when each cluster is like a small copy of the population.</p></div>
+  </div>
+</div>
+
+<script>
+(function () {
+  "use strict";
+  /* STATS-BEGIN : pure functions, extracted and unit-tested in Node */
+  function mulberry32(a) {
+    return function () {
+      a |= 0; a = (a + 0x6D2B79F5) | 0;
+      var t = Math.imul(a ^ (a >>> 15), 1 | a);
+      t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+      return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+    };
+  }
+  function gauss(rng) {
+    var u = 1 - rng(), v = rng();
+    return Math.sqrt(-2 * Math.log(u)) * Math.cos(2 * Math.PI * v);
+  }
+  function mean(v) { var t = 0; for (var i = 0; i < v.length; i++) t += v[i]; return t / v.length; }
+  function sd(v) {
+    if (v.length < 2) return NaN;
+    var m = mean(v), t = 0;
+    for (var i = 0; i < v.length; i++) t += (v[i] - m) * (v[i] - m);
+    return Math.sqrt(t / (v.length - 1));
+  }
+  function shuffle(a, rng) {
+    for (var i = a.length - 1; i > 0; i--) { var j = Math.floor(rng() * (i + 1)); var t = a[i]; a[i] = a[j]; a[j] = t; }
+    return a;
+  }
+  function range(n) { var a = []; for (var i = 0; i < n; i++) a.push(i); return a; }
+  /* Choose k different items from arr, every set of k equally likely (partial Fisher-Yates):
+     sampling WITHOUT replacement, the basis of a simple random sample. */
+  function choose(arr, k, rng) {
+    var a = arr.slice(), n = a.length;
+    for (var i = 0; i < k; i++) { var j = i + Math.floor(rng() * (n - i)); var t = a[i]; a[i] = a[j]; a[j] = t; }
+    return a.slice(0, k);
+  }
+  var AREA_SIZES = [846, 702, 294];           /* Town, Suburbs, Villages: N = 1842 */
+  var AREA_MEAN = [11, 21, 37], AREA_SD = [3, 5, 9], AREA_MIN = [3, 8, 15];
+  var ALLOC = [55, 46, 19];                   /* stratified: proportional to area size, total 120 */
+  var GROUP_SIZES = (function () { var g = [], i; for (i = 0; i < 42; i++) g.push(26); for (i = 0; i < 30; i++) g.push(25); return g; })();
+  var K_SYS = 15, N_SRS = 120, M_CLUS = 5;
+  /* The fixed simulated school: every student has a home area and a journey time (whole minutes),
+     and a place on the alphabetical roll that has nothing to do with where they live. */
+  function makePopulation(seed) {
+    var rng = mulberry32(seed), area = [], time = [], a, i;
+    for (a = 0; a < 3; a++) for (i = 0; i < AREA_SIZES[a]; i++) {
+      area.push(a);
+      time.push(Math.max(AREA_MIN[a], Math.round(AREA_MEAN[a] + AREA_SD[a] * gauss(rng))));
+    }
+    var roll = shuffle(range(area.length), rng);          /* roll[p] = student at roll position p */
+    var mixOrder = shuffle(range(area.length), rng);      /* order used to fill mixed tutor groups */
+    return { area: area, time: time, roll: roll, mixOrder: mixOrder, N: area.length };
+  }
+  /* Tutor groups: an array of 72 arrays of student ids, sizes GROUP_SIZES.
+     mode "mixed": filled from a random order, so each group is like a small copy of the school.
+     mode "area": filled from students sorted by home area, so each group holds (almost) one area. */
+  function formGroups(pop, mode) {
+    var order = mode === "area" ? range(pop.N) : pop.mixOrder.slice();
+    var groups = [], p = 0;
+    for (var g = 0; g < GROUP_SIZES.length; g++) {
+      var m = [];
+      for (var j = 0; j < GROUP_SIZES[g]; j++) m.push(order[p++]);
+      groups.push(m);
+    }
+    return groups;
+  }
+  function byArea(pop) { var s = [[], [], []]; for (var i = 0; i < pop.N; i++) s[pop.area[i]].push(i); return s; }
+  function sampleSRS(pop, rng) { return { ids: choose(range(pop.N), N_SRS, rng) }; }
+  function sampleStrat(pop, rng) {
+    var s = byArea(pop), ids = [];
+    for (var a = 0; a < 3; a++) ids = ids.concat(choose(s[a], ALLOC[a], rng));
+    return { ids: ids };
+  }
+  function sampleCluster(groups, rng) {
+    var chosen = choose(range(groups.length), M_CLUS, rng).sort(function (x, y) { return x - y; }), ids = [];
+    chosen.forEach(function (g) { ids = ids.concat(groups[g]); });
+    return { ids: ids, groups: chosen };
+  }
+  function sampleSystematic(pop, rng) {
+    var start = 1 + Math.floor(rng() * K_SYS), ids = [];   /* random start from 1 to 15 */
+    for (var p = start; p <= pop.N; p += K_SYS) ids.push(pop.roll[p - 1]);
+    return { ids: ids, start: start };
+  }
+  function sampleMean(pop, ids) { var t = 0; for (var i = 0; i < ids.length; i++) t += pop.time[ids[i]]; return t / ids.length; }
+  function populationMean(pop) { return mean(pop.time); }
+  /* STATS-END */
+
+  var SEED = 20260929;
+  var pop = makePopulation(SEED), MU = populationMean(pop);
+  var NS = "http://www.w3.org/2000/svg";
+  var rng = mulberry32((Date.now() ^ 0x5a5a) >>> 0);
+  var METHODS = [
+    { id: "srs", name: "Simple random sample" },
+    { id: "strat", name: "Stratified random sample" },
+    { id: "clus", name: "Cluster random sample" },
+    { id: "sys", name: "Systematic random sample" }
+  ];
+  var state = { method: "srs", arr: "mixed", groups: formGroups(pop, "mixed"), last: null, res: { srs: [], strat: [], clus: [], sys: [] } };
+  var popSvg = document.getElementById("smPop"), stripSvg = document.getElementById("smStrips"), say = document.getElementById("smSay");
+  var cells = new Array(pop.N);
+
+  function el(n, a) { var e = document.createElementNS(NS, n); for (var k in a) e.setAttribute(k, a[k]); return e; }
+  function txt(x, y, s, cls, anchor) { var t = el("text", { x: x, y: y, "class": cls, "text-anchor": anchor || "middle" }); t.textContent = s; return t; }
+  function f1(v) { return isFinite(v) ? v.toFixed(1) : "—"; }
+  function f2(v) { return isFinite(v) ? v.toFixed(2) : "—"; }
+
+  /* population grid: one column per tutor group, students stacked by home area within the column */
+  var GX = 21, GY = 8, CW = 7.2, CH = 8.6;
+  function drawPop() {
+    while (popSvg.firstChild) popSvg.removeChild(popSvg.firstChild);
+    state.groups.forEach(function (m, g) {
+      var sorted = m.slice().sort(function (a, b) { return pop.area[a] - pop.area[b] || a - b; });
+      sorted.forEach(function (id, r) {
+        var c = el("rect", { x: (GX + g * CW).toFixed(1), y: (GY + r * CH).toFixed(1), width: (CW - 1.4).toFixed(1), height: (CH - 1.6).toFixed(1), rx: 1, "class": "sm-cell sm-a" + pop.area[id] });
+        cells[id] = c; popSvg.appendChild(c);
+      });
+      if ((g + 1) % 12 === 0 || g === 0) popSvg.appendChild(txt(GX + g * CW + CW / 2, GY + 26 * CH + 12, String(g + 1), "sm-t"));
+    });
+    popSvg.appendChild(txt(GX + 36 * CW, GY + 26 * CH + 26, "each column is one tutor group · 72 groups · 1,842 students", "sm-t"));
+    markSample();
+  }
+  function markSample() {
+    for (var i = 0; i < cells.length; i++) if (cells[i]) cells[i].setAttribute("class", "sm-cell sm-a" + pop.area[i]);
+    var n = 0;
+    if (state.last) state.last.ids.forEach(function (id) { cells[id].setAttribute("class", "sm-cell sm-on sm-a" + pop.area[id]); n++; });
+    popSvg.setAttribute("aria-label", "Population of 1,842 students in 72 tutor groups" + (state.last ? "; " + n + " students highlighted in the latest sample" : ""));
+  }
+  function drawOne(method) {
+    var s = method === "srs" ? sampleSRS(pop, rng) : method === "strat" ? sampleStrat(pop, rng) : method === "clus" ? sampleCluster(state.groups, rng) : sampleSystematic(pop, rng);
+    s.method = method; s.mean = sampleMean(pop, s.ids);
+    state.res[method].push(s.mean);
+    return s;
+  }
+  function describe(s) {
+    var counts = [0, 0, 0]; s.ids.forEach(function (id) { counts[pop.area[id]]++; });
+    var mix = " It has " + counts[0] + " Town, " + counts[1] + " Suburbs and " + counts[2] + " Villages students.";
+    if (s.method === "srs") return "<b>Simple random sample.</b> 120 different students chosen by random number from the whole roll: every possible group of 120 was equally likely." + mix;
+    if (s.method === "strat") return "<b>Stratified random sample.</b> A simple random sample inside each home area: 55 Town, 46 Suburbs, 19 Villages, combined into one sample of 120. Every sample has exactly these numbers.";
+    if (s.method === "clus") return "<b>Cluster random sample.</b> Five tutor groups chosen at random (" + s.groups.map(function (g) { return g + 1; }).join(", ") + "), and <b>every</b> student in them: " + s.ids.length + " students." + mix;
+    return "<b>Systematic random sample.</b> Random start " + s.start + " on the alphabetical roll, then every 15th student: " + s.ids.length + " students." + mix;
+  }
+  function update(s) {
+    state.last = s; markSample();
+    document.getElementById("smN").textContent = s ? s.ids.length : "—";
+    document.getElementById("smXbar").textContent = s ? f1(s.mean) + " min" : "—";
+    say.innerHTML = s ? describe(s) : "Choose a method and draw a sample.";
+    drawStrips();
+  }
+  var LO = 6, HI = 32, SX0 = 150, SX1 = 588, ROWH = 62, TOP = 8;
+  function sx(v) { return SX0 + (Math.min(HI, Math.max(LO, v)) - LO) / (HI - LO) * (SX1 - SX0); }
+  function drawStrips() {
+    while (stripSvg.firstChild) stripSvg.removeChild(stripSvg.firstChild);
+    var bottom = TOP + 4 * ROWH;
+    for (var v = LO; v <= HI; v += 2) {
+      stripSvg.appendChild(el("line", { x1: sx(v), y1: TOP, x2: sx(v), y2: bottom, "class": "sm-grid", "stroke-width": 1 }));
+      stripSvg.appendChild(txt(sx(v), bottom + 16, String(v), "sm-t"));
+    }
+    stripSvg.appendChild(txt((SX0 + SX1) / 2, bottom + 34, "sample mean journey time (minutes)", "sm-t"));
+    METHODS.forEach(function (m, k) {
+      var y0 = TOP + k * ROWH, base = y0 + ROWH - 8;
+      stripSvg.appendChild(el("rect", { x: 0, y: y0 + 2, width: SX1 + 8, height: ROWH - 4, "class": "sm-rowbg" + (m.id === state.method ? " sm-cur" : ""), rx: 3 }));
+      stripSvg.appendChild(txt(8, y0 + ROWH / 2 + 4, m.name.replace(" random sample", ""), "sm-tk", "start"));
+      stripSvg.appendChild(el("line", { x1: SX0, y1: base, x2: SX1, y2: base, "class": "sm-axis", "stroke-width": 1 }));
+      /* stacked dotplot, bins of 0.25 minutes */
+      var bins = {}, vals = state.res[m.id], maxStack = 1;
+      vals.forEach(function (x) { var b = Math.round(x * 4) / 4; bins[b] = (bins[b] || 0) + 1; if (bins[b] > maxStack) maxStack = bins[b]; });
+      var step = Math.min(5, (ROWH - 16) / maxStack), seen = {};
+      vals.forEach(function (x, i) {
+        var b = Math.round(x * 4) / 4; seen[b] = (seen[b] || 0) + 1;
+        var cy = base - 3 - (seen[b] - 1) * step;
+        stripSvg.appendChild(el("circle", { cx: sx(b).toFixed(1), cy: cy.toFixed(1), r: 2.4, "class": "sm-dot" }));
+        if (state.last && state.last.method === m.id && i === vals.length - 1) stripSvg.appendChild(el("circle", { cx: sx(b).toFixed(1), cy: cy.toFixed(1), r: 4.6, "class": "sm-last" }));
+      });
+    });
+    stripSvg.appendChild(el("line", { x1: sx(MU), y1: TOP, x2: sx(MU), y2: bottom, "class": "sm-par", "stroke-width": 1.5 }));
+    var tb = document.getElementById("smTbody"); tb.innerHTML = "";
+    METHODS.forEach(function (m) {
+      var v = state.res[m.id], tr = document.createElement("tr");
+      tr.innerHTML = "<td>" + m.name.replace(" random sample", "") + "</td><td>" + v.length + "</td><td>" + (v.length ? f2(mean(v)) : "—") + "</td><td>" + (v.length > 1 ? f2(sd(v)) : "—") + "</td>";
+      tb.appendChild(tr);
+    });
+    stripSvg.setAttribute("aria-label", "Sample means by method. " + METHODS.map(function (m) { var v = state.res[m.id]; return m.name + ": " + v.length + " samples" + (v.length > 1 ? ", SD " + f2(sd(v)) : ""); }).join("; "));
+  }
+
+  var mBtns = Array.prototype.slice.call(document.querySelectorAll("#smMethods button"));
+  mBtns.forEach(function (b) {
+    b.addEventListener("click", function () {
+      state.method = b.getAttribute("data-m");
+      mBtns.forEach(function (o) { o.setAttribute("aria-pressed", o === b ? "true" : "false"); });
+      update(drawOne(state.method));
+    });
+  });
+  document.getElementById("smOne").addEventListener("click", function () { update(drawOne(state.method)); });
+  document.getElementById("smHundred").addEventListener("click", function () { var s; for (var i = 0; i < 100; i++) s = drawOne(state.method); update(s); });
+  document.getElementById("smClear").addEventListener("click", function () { state.res = { srs: [], strat: [], clus: [], sys: [] }; update(null); });
+  var bMix = document.getElementById("smArrMix"), bArea = document.getElementById("smArrArea");
+  function setArr(mode) {
+    state.arr = mode; state.groups = formGroups(pop, mode);
+    bMix.setAttribute("aria-pressed", mode === "mixed" ? "true" : "false");
+    bArea.setAttribute("aria-pressed", mode === "area" ? "true" : "false");
+    state.res.clus = []; state.last = null;
+    drawPop(); update(null);
+    say.innerHTML = mode === "area"
+      ? "Tutor groups are now <b>formed by home area</b>: each column holds students from one area. The cluster results have been cleared. Draw cluster samples again and compare."
+      : "Tutor groups are <b>mixed</b> again: each column is like a small copy of the school. The cluster results have been cleared.";
+  }
+  bMix.addEventListener("click", function () { setArr("mixed"); });
+  bArea.addEventListener("click", function () { setArr("area"); });
+
+  document.getElementById("smMu").textContent = f1(MU) + " min";
+  drawPop();
+  update(drawOne("srs"));
+})();
+</script>
+
+</main>
+<script>window.COURSE_NAV={"kicker": "Session 6", "title": "Sampling Methods", "map": [{"label": "Course", "items": [{"href": "../index.html", "label": "Home", "current": false}, {"href": "../plan.html", "label": "The 20-hour plan", "current": false}]}, {"label": "Block A · Describing one variable", "items": [{"href": "../s01-tutor.html", "label": "Session 1 · Tutor", "current": false}, {"href": "../s01-student.html", "label": "Session 1 · Student", "current": false}, {"href": "../s01-test.html", "label": "Session 1 · Test", "current": false}, {"href": "../s02-tutor.html", "label": "Session 2 · Tutor", "current": false}, {"href": "../s02-student.html", "label": "Session 2 · Student", "current": false}, {"href": "../s02-test.html", "label": "Session 2 · Test", "current": false}, {"href": "../s03-tutor.html", "label": "Session 3 · Tutor", "current": false}, {"href": "../s03-student.html", "label": "Session 3 · Student", "current": false}, {"href": "../s03-test.html", "label": "Session 3 · Test", "current": false}]}, {"label": "Block B · Describing two variables", "items": [{"href": "../s04-tutor.html", "label": "Session 4 · Tutor", "current": false}, {"href": "../s04-student.html", "label": "Session 4 · Student", "current": false}, {"href": "../s04-test.html", "label": "Session 4 · Test", "current": false}, {"href": "../s05-tutor.html", "label": "Session 5 · Tutor", "current": false}, {"href": "../s05-student.html", "label": "Session 5 · Student", "current": false}, {"href": "../s05-test.html", "label": "Session 5 · Test", "current": false}]}, {"label": "Block C · Collecting data", "items": [{"href": "../s06-tutor.html", "label": "Session 6 · Tutor", "current": false}, {"href": "../s06-student.html", "label": "Session 6 · Student", "current": false}, {"href": "../s06-test.html", "label": "Session 6 · Test", "current": false}]}, {"label": "Interactive", "items": [{"href": "../tools/unit1-explorer.html", "label": "Unit 1 Explorer", "current": false}, {"href": "../tools/boxplot-builder.html", "label": "Boxplot Builder", "current": false}, {"href": "../tools/guess-correlation.html", "label": "Guess the Correlation", "current": false}, {"href": "../tools/least-squares-fitter.html", "label": "Least-squares Fitter", "current": false}, {"href": "../tools/sampling-methods.html", "label": "Sampling Methods", "current": true}]}], "prev": {"href": "../tools/least-squares-fitter.html", "label": "Least-squares Fitter"}};</script>
+<script src="../assets/course.js"></script>
+</body>
+</html>
