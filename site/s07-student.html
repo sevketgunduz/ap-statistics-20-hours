@@ -1,0 +1,1163 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Session 7 Workbook · AP Statistics in Twenty Hours</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Spectral:ital,wght@0,600;0,700;1,600&display=swap">
+<link rel="stylesheet" href="assets/course.css">
+</head>
+<body>
+<main class="page">
+<h1>Session 7 — Collecting Data: Bias and Experimental Design</h1>
+<p class="standfirst"><strong>AP Statistics · Twenty-Hour Course · Student edition, to work through on your own</strong><br><strong>CED Topics 1.12, 1.13 · About 204 minutes, plus homework</strong></p>
+<hr>
+<h2>How to use this</h2>
+<p>Session 6 asked how a study chose its units and what that lets it conclude. Today asks what goes wrong. A sampling method can be wrong <strong>in the same direction every time</strong>, and the course description calls that <strong>bias</strong>. An experiment can be well or badly designed, and the course description names exactly what a well-designed one contains. There is very little arithmetic. The marks go to <strong>exact names, directions and reasons</strong>, so the writing is the whole of the work.</p>
+<div class="note amber"><span class="lbl">Write first, then reveal</span><p>Every <strong>Your turn</strong> box asks you to do something before the text shows you the answer. <strong>Do it on paper first.</strong> The names of the biases, their directions, the designs and every judgement are hidden behind reveals so that you cannot read them before you commit. A wrong answer you wrote yourself, and then corrected, stays with you; a right one you read does not.</p></div>
+<p><strong>What you need:</strong> paper and a pen. A calculator helps in Parts 3 and 5. Part 3 has an interactive tool; it works on a phone, but a larger screen is easier.</p>
+<h3>How this maps to your tutor's document</h3>
+<p>Working alone with a pen is slower than working with a tutor, so each part is given about a quarter longer than the tutor's segment. Take the time.</p>
+<div class="tbl"><table><thead><tr><th>Your section</th><th>Tutor's section</th><th>Minutes</th></tr></thead><tbody><tr><td>Part 1 — Your Session 6 homework, and a warm-up</td><td>0–12 Homework debrief and diagnostic</td><td>15</td></tr><tr><td>Part 2 — Theory: bias in samples, and the design of experiments</td><td>12–54 Theory — bias in samples, and the design of experiments</td><td>53</td></tr><tr><td>Part 3 — Lincoln High's travel survey against a known parameter</td><td>54–89 Scenario A</td><td>44</td></tr><tr><td>Part 4 — Password, on your own</td><td>89–107 Activity</td><td>23</td></tr><tr><td>Part 5 — St Mary's reminder experiment</td><td>107–142 Scenario B</td><td>44</td></tr><tr><td>Part 6 — On your own: Riverside's hand-cream trial</td><td>142–154 Solo case</td><td>15</td></tr><tr><td>Part 7 — Explain it back</td><td>154–162 Teach it back</td><td>10</td></tr><tr class="tot"><td><strong>Total</strong></td><td><strong>162 minutes</strong></td><td><strong>204</strong></td></tr></tbody></table></div>
+<p>If your tutor has not yet set the <strong>Session 5 test</strong>, take it before Part 1: 20 questions, 35 minutes, timed, answer key closed.</p>
+<div class="note red"><span class="lbl">Words you may have met that the course description does not use</span><p><strong>Lurking variable</strong>, <strong>Hawthorne effect</strong>, <strong>selection bias</strong>, <strong>measurement bias</strong>, <strong>interviewer bias</strong>, <strong>sampling error</strong>, <strong>randomized comparative experiment</strong>, <strong>crossover design</strong>, <strong>sampling frame</strong>, <strong>multistage sampling</strong>, <strong>quota sampling</strong> and <strong>scope of inference</strong> are prep-book terms, not examinable. Use <em>extraneous variable</em> or <em>confounding variable</em> for a lurking variable; the four named biases in Part 2 cover selection and measurement bias; a design in which each unit receives both treatments in a random order is a <strong>matched pairs design</strong>.</p></div>
+<hr>
+<h2>Part 1 — Your Session 6 homework, and a warm-up</h2>
+<p>Get out your marked Session 6 homework and make two lists: the questions you got <strong>wrong</strong>, and the questions you marked with a <strong>?</strong>, including the ones that turned out right.</p>
+<p><strong>Two specific things to check.</strong> They are two of the likeliest errors on that sheet, and both come back today in a new form.</p>
+<ul><li><strong>B1: did you call Plan Q a cluster sample, or Plan R a stratified one?</strong> Plan Q took 50 patients from every hospital: some from every group, so stratified. Plan R took every patient in 3 of the 124 wards: everyone from some groups, so cluster. Today adds a third way of using groups: in a <strong>randomized block design</strong> the units are grouped first, like strata, and the treatments are then assigned at random inside <strong>every</strong> block. The test of each is the same question: <em>what happens inside each group, and does every group take part?</em></li><li><strong>E2: did you name the weather but give only one link?</strong> "Warm days bring more customers" earns one mark of two; it says nothing about why warm days also have tables outside. A confounding variable must be associated with <strong>both</strong> variables. Today the word comes back in an experiment, where a variable becomes confounding by travelling with <strong>the treatment a unit got</strong>; and E3's answer, a coin each day, is exactly the fix that Part 2 explains: random assignment.</li></ul>
+<p>If you put a <strong>?</strong> on B5, Plan T: "only patients similar to those who replied" was right. Today names what went wrong with it, <strong>voluntary response bias</strong>, and asks which way it pushes the result.</p>
+<h3>Warm-up</h3>
+<div class="yourturn"><p>Four questions. Answer all four on paper before revealing.</p>
+<ol><li>In Session 6, the café put up a poster asking members to scan a code and report what they spent. To whom could the results be generalised, and why?</li><li>A poll of 5,000 people who chose to take part, or a simple random sample of 500 from the same population. Which would you trust to estimate a proportion, and why?</li><li>St Mary's plans to decide at random which patients get a text reminder. Why at random? Why not let the receptionists choose?</li><li>What is a placebo, and why would an experiment use one?</li></ol></div>
+<details><summary><strong>Reveal — and what your answers mean</strong></summary><div class="tbl"><table><thead><tr><th>If you said</th><th>It means</th><th>Do this</th></tr></thead><tbody><tr class="tot"><td><strong>1:</strong> only members like the ones who replied, because they volunteered</td><td>Session 6 held</td><td>Carry on; Part 2's <em>Convenience and voluntary response</em> names the problem</td></tr><tr class="tot"><td><strong>1:</strong> to all the members, if enough reply</td><td>You think size makes a sample trustworthy</td><td>Read Part 2's <em>Bias</em> subsection slowly, especially "what it does not say". Part 3 is built on this</td></tr><tr class="tot"><td><strong>2:</strong> the random 500, because the 5,000 chose themselves</td><td>You have the idea</td><td>Carry on; Part 2 adds the word <strong>bias</strong> and its direction</td></tr><tr class="tot"><td><strong>2:</strong> the 5,000, because it is bigger</td><td>This is the trap of Part 3</td><td>Read Part 2's <em>Bias</em> subsection twice, then let the tool in Part 3 settle it</td></tr><tr class="tot"><td><strong>3:</strong> so the groups are fair, or so the receptionists can't pick</td><td>You have the purpose in words</td><td>Part 2's <em>Extraneous variables, and what random assignment is for</em> gives the exact version</td></tr><tr class="tot"><td><strong>3:</strong> so the results can be generalised</td><td>You are mixing up random assignment and random selection</td><td>Session 6: random selection generalises, random assignment licenses cause. Then Part 2's cause subsection</td></tr><tr class="tot"><td><strong>4:</strong> a fake treatment, so people don't know whether they got the real one</td><td>Sound, informally</td><td>Part 2's <em>Control groups, placebos and the placebo effect</em> gives the course description's definition, which is a difference between groups, not a feeling</td></tr><tr class="tot"><td><strong>4:</strong> blank</td><td>New word</td><td>Nothing is assumed; Part 2 starts from the definition</td></tr></tbody></table></div></details>
+<hr>
+<h2>Part 2 — Theory: bias in samples, and the design of experiments</h2>
+<p>Every idea the session uses is stated here, each with its code from the course description, the rule, and what the rule does <strong>not</strong> say, which is where most marks are lost. Eighteen subsections: the longest theory part yet, because nearly every term in these two topics is examined by name, and several mean something more precise in the course description than in the prep books.</p>
+<p><strong>Read this part in full before Part 3.</strong> The illustrations are bare on purpose; Parts 3 to 7 apply the same rules to Lincoln High, the Password cards, St Mary's and Riverside. There is nothing to write until the self-check at the end. When a later part says "from Part 2", this is where to look.</p>
+<p><strong>What this part builds on, by name.</strong> From Session 6: <em>Random selection and how far a generalization reaches (1.10.E.1–4)</em>; the four random sampling methods (1.11.A.3–6); <em>Experiment: the researcher imposes treatments (1.10.C.1)</em>; <em>Experimental units, factors, levels, treatments and the response (1.10.C.2–4)</em>; and <em>Confounding variable in an observational study (1.10.D.5)</em>. From Session 1: a <strong>parameter</strong> summarises a population and a <strong>statistic</strong> summarises a sample.</p>
+<h3>Bias: a systematic error in the sampling method (1.12.A.1)</h3>
+<p><strong>Bias</strong> in a sampling method is a <strong>systematic error in the sampling procedure</strong> that results in a statistic being <strong>consistently larger</strong> or <strong>consistently smaller</strong> than the parameter the statistic is used to estimate.</p>
+<p>What it does not say. Bias is not the difference between one sample's statistic and the parameter: every random sample misses the parameter by some amount, in one direction or the other, and that is <strong>variation from sample to sample</strong>, not bias. Bias is a property of the <strong>method</strong>, seen over the samples it would produce: they land on the same side, again and again. So a bigger sample from the same method does <strong>not</strong> reduce bias; it reduces the variation, and the estimates cluster more tightly around the wrong value. And "biased" is not a complete answer. The exam wants the mechanism (who is over- or under-represented, and why) and the <strong>direction</strong> (too high or too low), and the unit guide names the missing direction as a common error.</p>
+<p><em>Illustration:</em> a method whose samples give 64, 66, 65, 67, 66 when the parameter is 50 has low variability and is biased. A method giving 42, 58, 51, 45, 55 has high variability and is unbiased. The first looks more convincing and is always wrong.</p>
+<figure><div class="figscroll"><svg viewBox="0 0 760 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Four dotplots of 40 values of a statistic each, from four methods, against a parameter of 50. Unbiased methods centre on 50; biased methods centre near 66. High-variability methods spread widely; low-variability methods cluster tightly. A biased method with low variability clusters tightly around the wrong value." font-family="Public Sans, system-ui, sans-serif">
+<style>
+  .ink { fill: #15201f; }
+  .ink2 { fill: #4a5654; }
+  .ink3 { fill: #6f7b79; }
+  .kink { stroke: #15201f; }
+  .kink2 { stroke: #4a5654; }
+  .kink3 { stroke: #6f7b79; }
+  .axis { stroke: #c3c9c6; }
+  .grid { stroke: #dcdfdd; }
+  .surf { fill: #ffffff; }
+  .band { fill: #eef1ef; }
+  .acc { fill: #1a6b63; }
+  .kacc { stroke: #1a6b63; }
+  .amb { fill: #7d5a11; }
+  .kamb { stroke: #7d5a11; }
+  .s0 { fill: #2a78d6; }
+  .k0 { stroke: #2a78d6; }
+  .s1 { fill: #eb6834; }
+  .k1 { stroke: #eb6834; }
+  .s2 { fill: #1baf7a; }
+  .k2 { stroke: #1baf7a; }
+  .s3 { fill: #eda100; }
+  .k3 { stroke: #eda100; }
+  .s4 { fill: #e87ba4; }
+  .k4 { stroke: #e87ba4; }
+  .s5 { fill: #008300; }
+  .k5 { stroke: #008300; }
+  @media (prefers-color-scheme: dark) {
+    .ink { fill: #e9edeb; }
+    .ink2 { fill: #a5b0ad; }
+    .ink3 { fill: #7e8a87; }
+    .kink { stroke: #e9edeb; }
+    .kink2 { stroke: #a5b0ad; }
+    .kink3 { stroke: #7e8a87; }
+    .axis { stroke: #3a4644; }
+    .grid { stroke: #2a3533; }
+    .surf { fill: #182120; }
+    .band { fill: #1e2827; }
+    .acc { fill: #54b8ab; }
+    .kacc { stroke: #54b8ab; }
+    .amb { fill: #d9ab52; }
+    .kamb { stroke: #d9ab52; }
+    .s0 { fill: #3987e5; }
+    .k0 { stroke: #3987e5; }
+    .s1 { fill: #d95926; }
+    .k1 { stroke: #d95926; }
+    .s2 { fill: #199e70; }
+    .k2 { stroke: #199e70; }
+    .s3 { fill: #c98500; }
+    .k3 { stroke: #c98500; }
+    .s4 { fill: #d55181; }
+    .k4 { stroke: #d55181; }
+    .s5 { fill: #008300; }
+    .k5 { stroke: #008300; }
+  }
+</style>
+<rect class="surf kink3" x="20.0" y="16.0" width="350.0" height="170.0" rx="4" fill="#ffffff" stroke="#6f7b79" stroke-width="1.2"/>
+<text class="ink" x="34.0" y="38.0" font-size="12.5" font-weight="600" text-anchor="start" fill="#15201f">Unbiased, high variability</text>
+<text class="ink2" x="356.0" y="38.0" font-size="11.5" font-weight="400" text-anchor="end" fill="#4a5654" font-family="IBM Plex Mono, monospace">centre 51.8</text>
+<line class="axis" x1="40.0" y1="152.0" x2="350.0" y2="152.0" stroke="#c3c9c6" stroke-width="1.2" fill="none"/>
+<line class="axis" x1="40.0" y1="152.0" x2="40.0" y2="156.0" stroke="#c3c9c6" stroke-width="1.2" fill="none"/>
+<text class="ink3" x="40.0" y="169.0" font-size="10.5" font-weight="400" text-anchor="middle" fill="#6f7b79">20</text>
+<line class="axis" x1="84.3" y1="152.0" x2="84.3" y2="156.0" stroke="#c3c9c6" stroke-width="1.2" fill="none"/>
+<text class="ink3" x="84.3" y="169.0" font-size="10.5" font-weight="400" text-anchor="middle" fill="#6f7b79">30</text>
+<line class="axis" x1="128.6" y1="152.0" x2="128.6" y2="156.0" stroke="#c3c9c6" stroke-width="1.2" fill="none"/>
+<text class="ink3" x="128.6" y="169.0" font-size="10.5" font-weight="400" text-anchor="middle" fill="#6f7b79">40</text>
+<line class="axis" x1="172.9" y1="152.0" x2="172.9" y2="156.0" stroke="#c3c9c6" stroke-width="1.2" fill="none"/>
+<text class="ink3" x="172.9" y="169.0" font-size="10.5" font-weight="400" text-anchor="middle" fill="#6f7b79">50</text>
+<line class="axis" x1="217.1" y1="152.0" x2="217.1" y2="156.0" stroke="#c3c9c6" stroke-width="1.2" fill="none"/>
+<text class="ink3" x="217.1" y="169.0" font-size="10.5" font-weight="400" text-anchor="middle" fill="#6f7b79">60</text>
+<line class="axis" x1="261.4" y1="152.0" x2="261.4" y2="156.0" stroke="#c3c9c6" stroke-width="1.2" fill="none"/>
+<text class="ink3" x="261.4" y="169.0" font-size="10.5" font-weight="400" text-anchor="middle" fill="#6f7b79">70</text>
+<line class="axis" x1="305.7" y1="152.0" x2="305.7" y2="156.0" stroke="#c3c9c6" stroke-width="1.2" fill="none"/>
+<text class="ink3" x="305.7" y="169.0" font-size="10.5" font-weight="400" text-anchor="middle" fill="#6f7b79">80</text>
+<line class="axis" x1="350.0" y1="152.0" x2="350.0" y2="156.0" stroke="#c3c9c6" stroke-width="1.2" fill="none"/>
+<text class="ink3" x="350.0" y="169.0" font-size="10.5" font-weight="400" text-anchor="middle" fill="#6f7b79">90</text>
+<line class="kink" x1="172.9" y1="50.0" x2="172.9" y2="152.0" stroke="#15201f" stroke-width="1.4" fill="none" stroke-dasharray="4 3"/>
+<circle class="s0" cx="88.7" cy="147.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="88.7" cy="139.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="110.9" cy="147.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="133.0" cy="147.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="137.4" cy="147.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="141.9" cy="147.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="141.9" cy="139.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="146.3" cy="147.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="146.3" cy="139.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="146.3" cy="131.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="155.1" cy="147.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="155.1" cy="139.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="164.0" cy="147.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="168.4" cy="147.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="168.4" cy="139.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="172.9" cy="147.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="177.3" cy="147.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="181.7" cy="147.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="181.7" cy="139.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="186.1" cy="147.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="186.1" cy="139.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="190.6" cy="147.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="190.6" cy="139.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="199.4" cy="147.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="199.4" cy="139.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="199.4" cy="131.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="199.4" cy="123.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="203.9" cy="147.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="203.9" cy="139.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="203.9" cy="131.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="208.3" cy="147.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="208.3" cy="139.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="208.3" cy="131.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="221.6" cy="147.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="226.0" cy="147.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="226.0" cy="139.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="230.4" cy="147.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="239.3" cy="147.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="239.3" cy="139.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="248.1" cy="147.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<rect class="surf kink3" x="390.0" y="16.0" width="350.0" height="170.0" rx="4" fill="#ffffff" stroke="#6f7b79" stroke-width="1.2"/>
+<text class="ink" x="404.0" y="38.0" font-size="12.5" font-weight="600" text-anchor="start" fill="#15201f">Unbiased, low variability</text>
+<text class="ink2" x="726.0" y="38.0" font-size="11.5" font-weight="400" text-anchor="end" fill="#4a5654" font-family="IBM Plex Mono, monospace">centre 50.3</text>
+<line class="axis" x1="410.0" y1="152.0" x2="720.0" y2="152.0" stroke="#c3c9c6" stroke-width="1.2" fill="none"/>
+<line class="axis" x1="410.0" y1="152.0" x2="410.0" y2="156.0" stroke="#c3c9c6" stroke-width="1.2" fill="none"/>
+<text class="ink3" x="410.0" y="169.0" font-size="10.5" font-weight="400" text-anchor="middle" fill="#6f7b79">20</text>
+<line class="axis" x1="454.3" y1="152.0" x2="454.3" y2="156.0" stroke="#c3c9c6" stroke-width="1.2" fill="none"/>
+<text class="ink3" x="454.3" y="169.0" font-size="10.5" font-weight="400" text-anchor="middle" fill="#6f7b79">30</text>
+<line class="axis" x1="498.6" y1="152.0" x2="498.6" y2="156.0" stroke="#c3c9c6" stroke-width="1.2" fill="none"/>
+<text class="ink3" x="498.6" y="169.0" font-size="10.5" font-weight="400" text-anchor="middle" fill="#6f7b79">40</text>
+<line class="axis" x1="542.9" y1="152.0" x2="542.9" y2="156.0" stroke="#c3c9c6" stroke-width="1.2" fill="none"/>
+<text class="ink3" x="542.9" y="169.0" font-size="10.5" font-weight="400" text-anchor="middle" fill="#6f7b79">50</text>
+<line class="axis" x1="587.1" y1="152.0" x2="587.1" y2="156.0" stroke="#c3c9c6" stroke-width="1.2" fill="none"/>
+<text class="ink3" x="587.1" y="169.0" font-size="10.5" font-weight="400" text-anchor="middle" fill="#6f7b79">60</text>
+<line class="axis" x1="631.4" y1="152.0" x2="631.4" y2="156.0" stroke="#c3c9c6" stroke-width="1.2" fill="none"/>
+<text class="ink3" x="631.4" y="169.0" font-size="10.5" font-weight="400" text-anchor="middle" fill="#6f7b79">70</text>
+<line class="axis" x1="675.7" y1="152.0" x2="675.7" y2="156.0" stroke="#c3c9c6" stroke-width="1.2" fill="none"/>
+<text class="ink3" x="675.7" y="169.0" font-size="10.5" font-weight="400" text-anchor="middle" fill="#6f7b79">80</text>
+<line class="axis" x1="720.0" y1="152.0" x2="720.0" y2="156.0" stroke="#c3c9c6" stroke-width="1.2" fill="none"/>
+<text class="ink3" x="720.0" y="169.0" font-size="10.5" font-weight="400" text-anchor="middle" fill="#6f7b79">90</text>
+<line class="kink" x1="542.9" y1="50.0" x2="542.9" y2="152.0" stroke="#15201f" stroke-width="1.4" fill="none" stroke-dasharray="4 3"/>
+<circle class="s0" cx="503.0" cy="147.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="516.3" cy="147.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="520.7" cy="147.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="525.1" cy="147.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="529.6" cy="147.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="529.6" cy="139.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="529.6" cy="131.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="534.0" cy="147.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="534.0" cy="139.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="534.0" cy="131.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="534.0" cy="123.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="538.4" cy="147.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="538.4" cy="139.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="538.4" cy="131.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="538.4" cy="123.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="542.9" cy="147.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="542.9" cy="139.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="542.9" cy="131.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="542.9" cy="123.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="542.9" cy="115.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="542.9" cy="107.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="542.9" cy="99.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="547.3" cy="147.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="547.3" cy="139.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="547.3" cy="131.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="551.7" cy="147.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="551.7" cy="139.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="551.7" cy="131.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="551.7" cy="123.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="556.1" cy="147.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="556.1" cy="139.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="556.1" cy="131.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="560.6" cy="147.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="560.6" cy="139.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="560.6" cy="131.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="560.6" cy="123.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="560.6" cy="115.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="560.6" cy="107.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="569.4" cy="147.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="573.9" cy="147.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<rect class="surf kink3" x="20.0" y="214.0" width="350.0" height="170.0" rx="4" fill="#ffffff" stroke="#6f7b79" stroke-width="1.2"/>
+<text class="ink" x="34.0" y="236.0" font-size="12.5" font-weight="600" text-anchor="start" fill="#15201f">Biased, high variability</text>
+<text class="ink2" x="356.0" y="236.0" font-size="11.5" font-weight="400" text-anchor="end" fill="#4a5654" font-family="IBM Plex Mono, monospace">centre 64.3</text>
+<line class="axis" x1="40.0" y1="350.0" x2="350.0" y2="350.0" stroke="#c3c9c6" stroke-width="1.2" fill="none"/>
+<line class="axis" x1="40.0" y1="350.0" x2="40.0" y2="354.0" stroke="#c3c9c6" stroke-width="1.2" fill="none"/>
+<text class="ink3" x="40.0" y="367.0" font-size="10.5" font-weight="400" text-anchor="middle" fill="#6f7b79">20</text>
+<line class="axis" x1="84.3" y1="350.0" x2="84.3" y2="354.0" stroke="#c3c9c6" stroke-width="1.2" fill="none"/>
+<text class="ink3" x="84.3" y="367.0" font-size="10.5" font-weight="400" text-anchor="middle" fill="#6f7b79">30</text>
+<line class="axis" x1="128.6" y1="350.0" x2="128.6" y2="354.0" stroke="#c3c9c6" stroke-width="1.2" fill="none"/>
+<text class="ink3" x="128.6" y="367.0" font-size="10.5" font-weight="400" text-anchor="middle" fill="#6f7b79">40</text>
+<line class="axis" x1="172.9" y1="350.0" x2="172.9" y2="354.0" stroke="#c3c9c6" stroke-width="1.2" fill="none"/>
+<text class="ink3" x="172.9" y="367.0" font-size="10.5" font-weight="400" text-anchor="middle" fill="#6f7b79">50</text>
+<line class="axis" x1="217.1" y1="350.0" x2="217.1" y2="354.0" stroke="#c3c9c6" stroke-width="1.2" fill="none"/>
+<text class="ink3" x="217.1" y="367.0" font-size="10.5" font-weight="400" text-anchor="middle" fill="#6f7b79">60</text>
+<line class="axis" x1="261.4" y1="350.0" x2="261.4" y2="354.0" stroke="#c3c9c6" stroke-width="1.2" fill="none"/>
+<text class="ink3" x="261.4" y="367.0" font-size="10.5" font-weight="400" text-anchor="middle" fill="#6f7b79">70</text>
+<line class="axis" x1="305.7" y1="350.0" x2="305.7" y2="354.0" stroke="#c3c9c6" stroke-width="1.2" fill="none"/>
+<text class="ink3" x="305.7" y="367.0" font-size="10.5" font-weight="400" text-anchor="middle" fill="#6f7b79">80</text>
+<line class="axis" x1="350.0" y1="350.0" x2="350.0" y2="354.0" stroke="#c3c9c6" stroke-width="1.2" fill="none"/>
+<text class="ink3" x="350.0" y="367.0" font-size="10.5" font-weight="400" text-anchor="middle" fill="#6f7b79">90</text>
+<line class="kink" x1="172.9" y1="248.0" x2="172.9" y2="350.0" stroke="#15201f" stroke-width="1.4" fill="none" stroke-dasharray="4 3"/>
+<circle class="s0" cx="150.7" cy="345.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="155.1" cy="345.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="164.0" cy="345.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="181.7" cy="345.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="186.1" cy="345.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="190.6" cy="345.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="190.6" cy="337.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="195.0" cy="345.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="199.4" cy="345.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="203.9" cy="345.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="208.3" cy="345.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="208.3" cy="337.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="208.3" cy="329.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="212.7" cy="345.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="217.1" cy="345.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="217.1" cy="337.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="221.6" cy="345.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="221.6" cy="337.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="230.4" cy="345.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="243.7" cy="345.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="243.7" cy="337.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="248.1" cy="345.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="252.6" cy="345.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="257.0" cy="345.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="257.0" cy="337.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="261.4" cy="345.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="261.4" cy="337.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="265.9" cy="345.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="265.9" cy="337.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="265.9" cy="329.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="270.3" cy="345.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="270.3" cy="337.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="279.1" cy="345.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="283.6" cy="345.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="283.6" cy="337.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="288.0" cy="345.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="288.0" cy="337.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="296.9" cy="345.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="301.3" cy="345.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="305.7" cy="345.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<rect class="surf kink3" x="390.0" y="214.0" width="350.0" height="170.0" rx="4" fill="#ffffff" stroke="#6f7b79" stroke-width="1.2"/>
+<text class="ink" x="404.0" y="236.0" font-size="12.5" font-weight="600" text-anchor="start" fill="#15201f">Biased, low variability</text>
+<text class="ink2" x="726.0" y="236.0" font-size="11.5" font-weight="400" text-anchor="end" fill="#4a5654" font-family="IBM Plex Mono, monospace">centre 65.8</text>
+<line class="axis" x1="410.0" y1="350.0" x2="720.0" y2="350.0" stroke="#c3c9c6" stroke-width="1.2" fill="none"/>
+<line class="axis" x1="410.0" y1="350.0" x2="410.0" y2="354.0" stroke="#c3c9c6" stroke-width="1.2" fill="none"/>
+<text class="ink3" x="410.0" y="367.0" font-size="10.5" font-weight="400" text-anchor="middle" fill="#6f7b79">20</text>
+<line class="axis" x1="454.3" y1="350.0" x2="454.3" y2="354.0" stroke="#c3c9c6" stroke-width="1.2" fill="none"/>
+<text class="ink3" x="454.3" y="367.0" font-size="10.5" font-weight="400" text-anchor="middle" fill="#6f7b79">30</text>
+<line class="axis" x1="498.6" y1="350.0" x2="498.6" y2="354.0" stroke="#c3c9c6" stroke-width="1.2" fill="none"/>
+<text class="ink3" x="498.6" y="367.0" font-size="10.5" font-weight="400" text-anchor="middle" fill="#6f7b79">40</text>
+<line class="axis" x1="542.9" y1="350.0" x2="542.9" y2="354.0" stroke="#c3c9c6" stroke-width="1.2" fill="none"/>
+<text class="ink3" x="542.9" y="367.0" font-size="10.5" font-weight="400" text-anchor="middle" fill="#6f7b79">50</text>
+<line class="axis" x1="587.1" y1="350.0" x2="587.1" y2="354.0" stroke="#c3c9c6" stroke-width="1.2" fill="none"/>
+<text class="ink3" x="587.1" y="367.0" font-size="10.5" font-weight="400" text-anchor="middle" fill="#6f7b79">60</text>
+<line class="axis" x1="631.4" y1="350.0" x2="631.4" y2="354.0" stroke="#c3c9c6" stroke-width="1.2" fill="none"/>
+<text class="ink3" x="631.4" y="367.0" font-size="10.5" font-weight="400" text-anchor="middle" fill="#6f7b79">70</text>
+<line class="axis" x1="675.7" y1="350.0" x2="675.7" y2="354.0" stroke="#c3c9c6" stroke-width="1.2" fill="none"/>
+<text class="ink3" x="675.7" y="367.0" font-size="10.5" font-weight="400" text-anchor="middle" fill="#6f7b79">80</text>
+<line class="axis" x1="720.0" y1="350.0" x2="720.0" y2="354.0" stroke="#c3c9c6" stroke-width="1.2" fill="none"/>
+<text class="ink3" x="720.0" y="367.0" font-size="10.5" font-weight="400" text-anchor="middle" fill="#6f7b79">90</text>
+<line class="kink" x1="542.9" y1="248.0" x2="542.9" y2="350.0" stroke="#15201f" stroke-width="1.4" fill="none" stroke-dasharray="4 3"/>
+<circle class="s0" cx="587.1" cy="345.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="591.6" cy="345.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="591.6" cy="337.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="596.0" cy="345.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="596.0" cy="337.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="600.4" cy="345.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="600.4" cy="337.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="600.4" cy="329.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="600.4" cy="321.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="604.9" cy="345.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="604.9" cy="337.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="604.9" cy="329.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="604.9" cy="321.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="604.9" cy="313.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="604.9" cy="305.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="609.3" cy="345.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="609.3" cy="337.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="609.3" cy="329.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="609.3" cy="321.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="613.7" cy="345.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="613.7" cy="337.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="618.1" cy="345.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="618.1" cy="337.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="618.1" cy="329.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="618.1" cy="321.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="618.1" cy="313.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="618.1" cy="305.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="618.1" cy="297.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="618.1" cy="289.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="622.6" cy="345.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="622.6" cy="337.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="622.6" cy="329.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="622.6" cy="321.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="627.0" cy="345.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="627.0" cy="337.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="627.0" cy="329.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="631.4" cy="345.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="631.4" cy="337.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="631.4" cy="329.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<circle class="s0" cx="640.3" cy="345.0" r="3.4" fill="#2a78d6" stroke="none" stroke-width="1.2" fill-opacity="0.85"/>
+<text class="ink3" x="380.0" y="404.0" font-size="11" font-weight="400" text-anchor="middle" fill="#6f7b79">dashed line: the parameter, 50  ·  each dot: the statistic from one sample</text>
+</svg>
+</div><figcaption>Bias is where a method's estimates centre; variability is how far they spread. The bottom-right method is the dangerous one: consistent, confident and wrong. More data from it would only tighten the cluster around 66.</figcaption></figure>
+<h3>Convenience and voluntary response: samples not chosen by chance (1.12.A.2, 1.12.A.6)</h3>
+<p><strong>Nonrandom sampling methods</strong>, for example samples chosen by <strong>convenience</strong> or by <strong>voluntary response</strong>, <strong>introduce potential bias because they do not use random chance to select the individuals</strong> (1.12.A.6). A convenience sample takes the individuals who are easiest to reach. <strong>Voluntary response bias</strong> is a bias that may occur when a sample consists <strong>entirely of volunteers</strong> (1.12.A.2).</p>
+<p>What it does not say. It does not say every nonrandom sample gives a wrong answer; it says the answer cannot be trusted, because nothing but luck would make it right. It is Session 6's rule (1.10.E.3) with a name: a sample whose units are deliberately chosen or volunteer themselves is not random, and its results reach only individuals similar to those in it. The direction comes from <strong>who</strong> volunteers or who is convenient: volunteers are usually the people who care most about the question, often those with strong or negative views. A large number of volunteers is still a sample of volunteers.</p>
+<p><em>Illustration:</em> a population of 1,000, of whom 200 hold a strong view. A notice invites replies; 150 of the 200 reply and 50 of the other 800. The replies are 150 ÷ 200 = 75% strong view, against 20% in the population: too high, because holding the view is what makes people reply.</p>
+<h3>Undercoverage bias: part of the population left out (1.12.A.3)</h3>
+<p><strong>Undercoverage bias</strong> may occur when the sampling method <strong>fails to include part of the population</strong>, or a part of the population is <strong>less likely to be selected</strong> based on the sampling method.</p>
+<p>What it does not say. It is about who <strong>could be selected</strong>, before anyone is asked anything. It can happen inside a random method: a simple random sample from an out-of-date list still cannot pick anyone missing from the list. It does not need the part to be missed completely; <em>less likely</em> is enough. And it causes bias only in so far as the part left out differs, on the variable of interest, from the part included; the direction follows from how it differs.</p>
+<p><em>Illustration:</em> a population of 1,000, of whom 300 have property <em>P</em>. A method that can reach only the 700 who use one entrance, where 70 of the 700 have <em>P</em>, estimates the proportion near 70 ÷ 700 = 0.10, against the parameter 0.30. Too low, because most of the individuals with <em>P</em> use the other entrance.</p>
+<h3>Nonresponse bias: chosen but not answering (1.12.A.4)</h3>
+<p><strong>Nonresponse bias</strong> may occur because of a <strong>failure to obtain responses from some individuals chosen to be sampled</strong>. The respondents and nonrespondents could <strong>differ significantly in ways that are important for the study</strong>.</p>
+<p>What it does not say. The individuals were <strong>chosen</strong>, often at random, and then did not respond; that is what separates it from voluntary response, where nobody was chosen, and from undercoverage, where some could never have been chosen. A random sample with nonresponse is no longer protected by its randomness, because the data are the respondents, and they chose themselves out of the chosen. But nonresponse alone is not bias: if the nonrespondents are like the respondents on the variable of interest, the estimate is not pushed either way. The claim needs the second sentence of the definition, a reason the two groups differ, and from it the direction.</p>
+<p><em>Illustration:</em> 100 chosen at random; 40 have property <em>P</em>. Of the 40, 16 respond; of the 60 without <em>P</em>, 54 respond. The respondents give 16 ÷ 70 = 0.23, against 0.40 among all 100: too low, because those with <em>P</em> responded less. Had both groups responded at 90%, there would be nonresponse and no bias.</p>
+<h3>Response bias: answers pushed one way, including question wording (1.12.A.5)</h3>
+<p><strong>Response bias</strong> may occur when <strong>responses to a survey or measurements of observational units tend to differ from the "true" value in one direction</strong>. Examples include questions that are <strong>confusing or leading</strong> (<strong>question wording bias</strong>) and <strong>self-reported responses</strong>.</p>
+<p>What it does not say. It is about the <strong>answers</strong>, not who gives them: the right individuals can be chosen at random, every one can respond, and the data can still be biased. It covers measurements as well as questions: a scale that always reads 0.5 kg heavy gives response bias. "In one direction" is the point, again: honest people making random slips in both directions are variation, not bias. Self-reports lean the way people prefer to see themselves: more exercise, less screen time.</p>
+<p><em>Illustration:</em> "Most experts agree that X is good. Do you support X?" invites <em>yes</em>: the wording leans toward support, so the proportion supporting X comes out too high. "Do you support X?" leans neither way.</p>
+<h3>Telling the biases apart, and saying which way they push (1.12.A.2–6)</h3>
+<p>The four named biases are told apart by <strong>where in the process</strong> the error enters:</p>
+<div class="tbl"><table><thead><tr><th>Where it goes wrong</th><th>The bias</th><th>The question to ask</th></tr></thead><tbody><tr><td>Who <strong>can</strong> be chosen</td><td><strong>undercoverage</strong></td><td>Is part of the population left out, or less likely to be chosen?</td></tr><tr><td>Who <strong>chooses themselves</strong> in</td><td><strong>voluntary response</strong> (and convenience: who the sampler chooses because they are easy)</td><td>Did a random mechanism select the individuals at all?</td></tr><tr><td>Who, having been chosen, <strong>drops out</strong></td><td><strong>nonresponse</strong></td><td>Were individuals chosen who did not respond, and do they differ?</td></tr><tr><td>What the respondents <strong>say</strong>, or what a measurement <strong>reads</strong></td><td><strong>response</strong> (question wording, self-report)</td><td>Would the answers lean one way even from the right people?</td></tr></tbody></table></div>
+<p>What it does not say. One study can have several: a notice on a single door is convenience, voluntary response and undercoverage at once. Naming one correctly, with its mechanism and direction, earns the marks; listing all four without either earns none. And a sentence of the form <strong>"the estimate will be too high/low because [group] is over/under-represented, and [group] tends to [value of the variable]"</strong> is the whole answer.</p>
+<p><em>Illustration:</em> "Selected by random number; 30% did not reply" is nonresponse, not voluntary response: they were chosen first. "Anyone could reply" is voluntary response: nobody was chosen.</p>
+<h3>The four elements of a well-designed experiment (1.13.A.1)</h3>
+<p>A well-designed experiment should include:</p>
+<ol><li><strong>Comparisons of at least two treatment groups</strong>, one of which could be a control group (1.13.A.1.i);</li><li><strong>Random assignment</strong> of treatments to experimental units (1.13.A.1.ii);</li><li><strong>Replication</strong> (1.13.A.1.iii);</li><li><strong>Direct control</strong> of potential extraneous sources of variation in the response (1.13.A.1.iv).</li></ol>
+<p>What it does not say. It does not say an experiment without all four is not an experiment: Session 6's café that printed a larger menu for one week imposed a treatment and was an experiment, a poorly designed one, because it had no comparison. The four are <strong>elements of good design</strong>, each doing a different job, and the subsections below give each job. And <em>control</em> here is <strong>direct control</strong>, keeping extraneous variables the same; it is not the same thing as a control group, which belongs to the first element.</p>
+<p><em>Illustration:</em> 40 units, two treatments A and B, 20 of each chosen by a random number generator, every unit measured under the same conditions. That has comparison (A against B), random assignment, replication (20 per treatment) and direct control (the same conditions).</p>
+<h3>Control groups, placebos and the placebo effect (1.13.A.2–3)</h3>
+<p>A <strong>control group</strong> is a collection of experimental units <strong>created for comparison</strong>. A control group may be given a <strong>treatment different from the treatment of interest</strong>, to determine if the treatment of interest has an effect; for example a treatment with an <strong>inactive substance, a placebo</strong>, may be given (1.13.A.2).</p>
+<p>The <strong>placebo effect</strong> is <strong>the difference between the average response to a placebo and the average response to no treatment</strong> (1.13.A.3).</p>
+<div class="formula">placebo effect = (average response of the placebo group) − (average response of the no-treatment group)</div>
+<p>What it does not say. A control group need not receive nothing: it may receive the usual treatment, or a placebo, or a different version of the treatment. It exists so that the treatment of interest has something to be compared with. The placebo effect is not "people feel better when they think they are treated", as the prep books put it; it is a <strong>measured difference between two groups</strong>, so an experiment with a treatment group and a placebo group but no no-treatment group cannot measure it. What a placebo group <em>can</em> do is give the comparison with the treatment of interest a fair baseline: both groups then believe they may be treated.</p>
+<p><em>Illustration:</em> three groups' average responses are 12 (active treatment), 9 (placebo) and 6 (no treatment). The placebo effect is 9 − 6 = 3. The treatment's effect beyond the placebo is 12 − 9 = 3.</p>
+<h3>Single-blind and double-blind experiments (1.13.A.4–5)</h3>
+<p>In a <strong>single-blind</strong> (also called <strong>single-masked</strong>) experiment, the <strong>participants do not know which treatment they are receiving</strong>, but members of the research team who interact with them do know, <strong>or vice versa</strong> (1.13.A.4).</p>
+<p>In a <strong>double-blind</strong> (also called <strong>double-masked</strong>) experiment, <strong>neither</strong> the participants <strong>nor</strong> the members of the research team who interact with them know which treatment each participant is receiving (1.13.A.5).</p>
+<p>What it does not say. "Vice versa" matters: when participants must know their treatment (they can see whether they received a text, or which exercise they did), keeping the staff who measure or interact with them unaware is still single-blind. Keeping participants or staff blind is not one of the four elements listed in 1.13.A.1. It serves the same purpose as direct control: it stops one extraneous source of variation, knowing which treatment was given, from differing between the groups and changing how participants respond or how staff measure. And it is about the people who <strong>interact with the participants</strong>; the statistician who prepared the random assignment list will always know.</p>
+<p><em>Illustration:</em> a treatment and a placebo, identical in appearance, in bottles labelled 1 and 2 by someone who then takes no part. If neither the participants nor the staff who measure them know what 1 and 2 mean, the experiment is double-blind.</p>
+<h3>Extraneous variables, and what random assignment is for (1.13.A.6–7)</h3>
+<p>An <strong>extraneous source of variation</strong>, also called an <strong>extraneous variable</strong>, is a variable that is <strong>known (or believed) to affect the response</strong> but is <strong>not an explanatory variable being studied</strong> (1.13.A.6).</p>
+<p>The <strong>purpose of random assignment</strong> is to <strong>create treatment groups that are as similar as possible with respect to extraneous sources of variation</strong>. If random assignment is successful, the <strong>respective distributions of each extraneous variable will be approximately the same for all the treatment groups</strong> (1.13.A.7).</p>
+<p>What it does not say. Random assignment does not make the groups identical: by chance they differ a little, and a larger number of units makes that difference smaller. It balances <strong>every</strong> extraneous variable at once, including the ones nobody thought to measure, which is what no deliberate allocation can do. And it has nothing to do with how the units were <strong>obtained</strong>: random assignment of volunteers is still random assignment, and it gives no licence to generalise beyond people like the volunteers (Session 6: random selection does that).</p>
+<p><em>Illustration:</em> 20 units, 10 of them high on an extraneous variable <em>w</em>. Split at random into two groups of 10: the number of high-<em>w</em> units in the first group is usually 4, 5 or 6 (in about 82% of random splits), and never all 10 unless by an extraordinary chance (1 split in 184,756). Split by letting the units choose, and all 10 high-<em>w</em> units may choose the same group.</p>
+<h3>Confounding in an experiment (1.13.A.8)</h3>
+<p>A <strong>confounding variable in an experiment</strong> is a variable that is <strong>related to the explanatory variable</strong> in such a way that it is <strong>difficult to determine which variable, explanatory or confounding, is influencing the change in the response variable</strong>. However, <strong>in a well-designed experiment, the potential for confounding variables is reduced</strong>.</p>
+<p>What it does not say. Recall Session 6's version for an observational study (1.10.D.5): associated with both the explanatory and the response variable. In an experiment the explanatory variable is imposed, so a variable becomes confounding when it <strong>travels with the treatment</strong>: every unit that got treatment A also got something else. That happens when the researcher assigns treatments by some rule other than chance, such as by day, by location or by who seems suitable. "Reduced", not "removed": random assignment makes confounding unlikely, not impossible.</p>
+<p><em>Illustration:</em> treatment A is given every morning and treatment B every afternoon. If the response differs, time of day and treatment cannot be separated: time of day is confounded with the treatment.</p>
+<h3>Replication and direct control (1.13.A.9–10)</h3>
+<p><strong>Replication</strong> within an experiment means <strong>more than one experimental unit is assigned to each treatment</strong> (1.13.A.9).</p>
+<p><strong>Direct control</strong> in an experiment means <strong>keeping the settings of certain potential extraneous sources of variation in the response variable the same</strong> from experimental unit to experimental unit (1.13.A.10).</p>
+<p>What it does not say. Replication is not repeating the whole experiment another time (Barron's makes the same point); it is having several units in each treatment group, so that a difference between groups is not the difference between two individuals. Direct control does not balance an extraneous variable, as random assignment does; it removes its variation altogether by fixing it, and it can only be applied to variables the researcher can hold fixed. The three jobs are different: direct control fixes the variables it can, random assignment balances the rest, and replication makes the chance differences between groups small.</p>
+<p><em>Illustration:</em> with one unit per treatment, a difference of 5 could be the treatment or the two units. With 20 per treatment, all measured at the same temperature, a difference of 5 in the group averages is far harder to put down to the units, and cannot be put down to temperature.</p>
+<h3>The completely randomized design (1.13.B.1)</h3>
+<p>In a <strong>completely randomized design</strong>, <strong>treatments are assigned to experimental units completely at random</strong>. Often the number of experimental units assigned to each treatment will be the same, but the <strong>sample sizes in each treatment do not have to be the same</strong>.</p>
+<p>What it does not say. "Completely at random" means every unit is assigned by the random mechanism with no grouping first: the simplest design, and the default when there is no strong extraneous variable to block on. Describing it on the exam means saying <strong>how</strong>: number the units, use a random number generator to choose which units receive each treatment, and give the rest the other.</p>
+<p><em>Illustration:</em> number 30 units 1 to 30; a random number generator gives 15 different numbers, and those units receive A; the other 15 receive B.</p>
+<h3>The randomized block design, and why to block (1.13.B.2–3)</h3>
+<p>A <strong>blocking variable</strong> is a <strong>source of extraneous variation</strong> in the response variable. In a <strong>randomized block design</strong>, the experimental units are <strong>first grouped according to similar values of a blocking variable</strong>. These groups are called <strong>blocks</strong>. Units within the same block are <strong>homogeneous</strong> with respect to the blocking variable. After the blocks are formed, the treatments are <strong>randomly assigned to experimental units within each block</strong> so that <strong>all treatments occur within every block</strong> (1.13.B.2).</p>
+<p>The <strong>purpose of blocking</strong> is to <strong>separate the variation in the response caused by the blocking variable from the rest of the extraneous variation</strong> in the response. Blocking allows for <strong>more precise comparisons</strong> of the response across the treatments. Within a block, the treatments can be compared without having to worry about variation in the response caused by changes in the blocking variable (1.13.B.3).</p>
+<p>What it does not say. The blocks are <strong>not</strong> formed at random: they are formed deliberately from the blocking variable, and the randomness goes <strong>inside</strong> each block. It is the experimental version of Session 6's stratified sample: groups that are alike inside, and every group used. Blocking does not replace random assignment, and it is not what makes a cause-and-effect conclusion possible; that is random assignment's job (1.13.D.1). Blocking's job is <strong>precision</strong>: the comparison is not blurred by a variable known to matter. A variable is worth blocking on only if it is known before the experiment and is related to the response.</p>
+<p><em>Illustration:</em> 20 units, of which 12 are type 1 and 8 are type 2, and type affects the response. Block by type; within the 12, a random number generator gives 6 treatment A and 6 treatment B; within the 8, 4 and 4. Compare A and B within each block.</p>
+<h3>The matched pairs design (1.13.B.4)</h3>
+<p>A <strong>matched pairs design</strong> is a <strong>randomized block design with only two treatments</strong>. Experimental units are <strong>arranged in pairs by matching on one or more extraneous sources of variation</strong> in the response variable. Each pair receives both treatments by <strong>randomly assigning one treatment to one member of the pair</strong> and the other treatment to the second member. <strong>Alternatively, each experimental unit may get both treatments while the order of the treatments is randomized</strong>.</p>
+<p>What it does not say. The pairs are blocks of size 2, so everything about blocks applies: formed deliberately, random inside. The random step is either <strong>which member</strong> gets which treatment or <strong>which order</strong> a single unit gets them in; a design where every unit gets A first and B second is not randomized, and the order is confounded with the treatment. The comparison is made <strong>within each pair</strong>, which removes the variation between pairs.</p>
+<figure><div class="figscroll"><svg viewBox="0 0 760 560" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Three experimental designs for 20 units and two treatments, A and B. Completely randomized: all 20 units are randomly assigned, 10 to A and 10 to B, and the responses are compared. Randomized block: the units are first grouped into blocks by a blocking variable, 12 in block 1 and 8 in block 2, then treatments are randomly assigned within each block, and treatments are compared within each block. Matched pairs: 10 pairs matched on an extraneous variable; in each pair one unit is randomly given A and the other B, or each unit gets both treatments in a random order." font-family="Public Sans, system-ui, sans-serif">
+<style>
+  .ink { fill: #15201f; }
+  .ink2 { fill: #4a5654; }
+  .ink3 { fill: #6f7b79; }
+  .kink { stroke: #15201f; }
+  .kink2 { stroke: #4a5654; }
+  .kink3 { stroke: #6f7b79; }
+  .axis { stroke: #c3c9c6; }
+  .grid { stroke: #dcdfdd; }
+  .surf { fill: #ffffff; }
+  .band { fill: #eef1ef; }
+  .acc { fill: #1a6b63; }
+  .kacc { stroke: #1a6b63; }
+  .amb { fill: #7d5a11; }
+  .kamb { stroke: #7d5a11; }
+  .s0 { fill: #2a78d6; }
+  .k0 { stroke: #2a78d6; }
+  .s1 { fill: #eb6834; }
+  .k1 { stroke: #eb6834; }
+  .s2 { fill: #1baf7a; }
+  .k2 { stroke: #1baf7a; }
+  .s3 { fill: #eda100; }
+  .k3 { stroke: #eda100; }
+  .s4 { fill: #e87ba4; }
+  .k4 { stroke: #e87ba4; }
+  .s5 { fill: #008300; }
+  .k5 { stroke: #008300; }
+  @media (prefers-color-scheme: dark) {
+    .ink { fill: #e9edeb; }
+    .ink2 { fill: #a5b0ad; }
+    .ink3 { fill: #7e8a87; }
+    .kink { stroke: #e9edeb; }
+    .kink2 { stroke: #a5b0ad; }
+    .kink3 { stroke: #7e8a87; }
+    .axis { stroke: #3a4644; }
+    .grid { stroke: #2a3533; }
+    .surf { fill: #182120; }
+    .band { fill: #1e2827; }
+    .acc { fill: #54b8ab; }
+    .kacc { stroke: #54b8ab; }
+    .amb { fill: #d9ab52; }
+    .kamb { stroke: #d9ab52; }
+    .s0 { fill: #3987e5; }
+    .k0 { stroke: #3987e5; }
+    .s1 { fill: #d95926; }
+    .k1 { stroke: #d95926; }
+    .s2 { fill: #199e70; }
+    .k2 { stroke: #199e70; }
+    .s3 { fill: #c98500; }
+    .k3 { stroke: #c98500; }
+    .s4 { fill: #d55181; }
+    .k4 { stroke: #d55181; }
+    .s5 { fill: #008300; }
+    .k5 { stroke: #008300; }
+  }
+</style>
+<text class="acc" x="20.0" y="20.0" font-size="11" font-weight="600" text-anchor="start" fill="#1a6b63" font-family="IBM Plex Mono, monospace">COMPLETELY RANDOMIZED DESIGN</text>
+<rect class="surf kink3" x="20.0" y="34.0" width="150.0" height="56.0" rx="4" fill="#ffffff" stroke="#6f7b79" stroke-width="1.4"/>
+<text class="ink" x="95.0" y="66.5" font-size="12.5" font-weight="600" text-anchor="middle" fill="#15201f">20 units</text>
+<rect class="surf kamb" x="215.0" y="34.0" width="150.0" height="56.0" rx="4" fill="#ffffff" stroke="#7d5a11" stroke-width="1.4"/>
+<text class="ink" x="290.0" y="58.5" font-size="12.5" font-weight="600" text-anchor="middle" fill="#15201f">Random</text>
+<text class="ink2" x="290.0" y="74.5" font-size="11.5" font-weight="400" text-anchor="middle" fill="#4a5654">assignment</text>
+<line class="kink2" x1="170.0" y1="62.0" x2="204.0" y2="62.0" stroke="#4a5654" stroke-width="1.5" fill="none"/>
+<polygon class="ink2" points="213.0,62.0 204.0,66.1 204.0,57.9" fill="#4a5654" stroke="none"/>
+<rect class="surf kink3" x="410.0" y="22.0" width="150.0" height="36.0" rx="4" fill="#ffffff" stroke="#6f7b79" stroke-width="1.4"/>
+<text class="ink" x="485.0" y="44.5" font-size="12" font-weight="600" text-anchor="middle" fill="#15201f">A: 10 units</text>
+<rect class="surf kink3" x="410.0" y="66.0" width="150.0" height="36.0" rx="4" fill="#ffffff" stroke="#6f7b79" stroke-width="1.4"/>
+<text class="ink" x="485.0" y="88.5" font-size="12" font-weight="600" text-anchor="middle" fill="#15201f">B: 10 units</text>
+<line class="kink2" x1="365.0" y1="56.0" x2="399.6" y2="43.1" stroke="#4a5654" stroke-width="1.5" fill="none"/>
+<polygon class="ink2" points="408.0,40.0 401.0,47.0 398.1,39.3" fill="#4a5654" stroke="none"/>
+<line class="kink2" x1="365.0" y1="68.0" x2="399.6" y2="80.9" stroke="#4a5654" stroke-width="1.5" fill="none"/>
+<polygon class="ink2" points="408.0,84.0 398.1,84.7 401.0,77.0" fill="#4a5654" stroke="none"/>
+<rect class="surf kink3" x="605.0" y="34.0" width="135.0" height="56.0" rx="4" fill="#ffffff" stroke="#6f7b79" stroke-width="1.4"/>
+<text class="ink" x="672.5" y="58.5" font-size="12.5" font-weight="600" text-anchor="middle" fill="#15201f">Compare</text>
+<text class="ink2" x="672.5" y="74.5" font-size="11.5" font-weight="400" text-anchor="middle" fill="#4a5654">the responses</text>
+<line class="kink2" x1="560.0" y1="40.0" x2="594.6" y2="52.9" stroke="#4a5654" stroke-width="1.5" fill="none"/>
+<polygon class="ink2" points="603.0,56.0 593.1,56.7 596.0,49.0" fill="#4a5654" stroke="none"/>
+<line class="kink2" x1="560.0" y1="84.0" x2="594.6" y2="71.1" stroke="#4a5654" stroke-width="1.5" fill="none"/>
+<polygon class="ink2" points="603.0,68.0 596.0,75.0 593.1,67.3" fill="#4a5654" stroke="none"/>
+<text class="acc" x="20.0" y="150.0" font-size="11" font-weight="600" text-anchor="start" fill="#1a6b63" font-family="IBM Plex Mono, monospace">RANDOMIZED BLOCK DESIGN</text>
+<rect class="surf kink3" x="20.0" y="210.0" width="150.0" height="56.0" rx="4" fill="#ffffff" stroke="#6f7b79" stroke-width="1.4"/>
+<text class="ink" x="95.0" y="242.5" font-size="12.5" font-weight="600" text-anchor="middle" fill="#15201f">20 units</text>
+<rect class="surf kink3" x="215.0" y="164.0" width="150.0" height="46.0" rx="4" fill="#ffffff" stroke="#6f7b79" stroke-width="1.4"/>
+<text class="ink" x="290.0" y="183.5" font-size="12.5" font-weight="600" text-anchor="middle" fill="#15201f">Block 1: 12 units</text>
+<text class="ink2" x="290.0" y="199.5" font-size="10" font-weight="400" text-anchor="middle" fill="#4a5654">alike on the blocking variable</text>
+<rect class="surf kink3" x="215.0" y="266.0" width="150.0" height="46.0" rx="4" fill="#ffffff" stroke="#6f7b79" stroke-width="1.4"/>
+<text class="ink" x="290.0" y="285.5" font-size="12.5" font-weight="600" text-anchor="middle" fill="#15201f">Block 2: 8 units</text>
+<text class="ink2" x="290.0" y="301.5" font-size="10" font-weight="400" text-anchor="middle" fill="#4a5654">alike on the blocking variable</text>
+<line class="kink2" x1="170.0" y1="230.0" x2="206.4" y2="196.1" stroke="#4a5654" stroke-width="1.5" fill="none"/>
+<polygon class="ink2" points="213.0,190.0 209.2,199.1 203.6,193.1" fill="#4a5654" stroke="none"/>
+<line class="kink2" x1="170.0" y1="246.0" x2="206.4" y2="279.9" stroke="#4a5654" stroke-width="1.5" fill="none"/>
+<polygon class="ink2" points="213.0,286.0 203.6,282.9 209.2,276.9" fill="#4a5654" stroke="none"/>
+<text class="ink3" x="192.0" y="242.0" font-size="12" font-weight="400" text-anchor="start" fill="#6f7b79"></text>
+<rect class="surf kamb" x="390.0" y="164.0" width="90.0" height="46.0" rx="4" fill="#ffffff" stroke="#7d5a11" stroke-width="1.4"/>
+<text class="ink" x="435.0" y="191.5" font-size="11.5" font-weight="600" text-anchor="middle" fill="#15201f">Random</text>
+<rect class="surf kamb" x="390.0" y="266.0" width="90.0" height="46.0" rx="4" fill="#ffffff" stroke="#7d5a11" stroke-width="1.4"/>
+<text class="ink" x="435.0" y="293.5" font-size="11.5" font-weight="600" text-anchor="middle" fill="#15201f">Random</text>
+<line class="kink2" x1="365.0" y1="187.0" x2="379.0" y2="187.0" stroke="#4a5654" stroke-width="1.5" fill="none"/>
+<polygon class="ink2" points="388.0,187.0 379.0,191.1 379.0,182.9" fill="#4a5654" stroke="none"/>
+<line class="kink2" x1="365.0" y1="289.0" x2="379.0" y2="289.0" stroke="#4a5654" stroke-width="1.5" fill="none"/>
+<polygon class="ink2" points="388.0,289.0 379.0,293.1 379.0,284.9" fill="#4a5654" stroke="none"/>
+<rect class="surf kink3" x="505.0" y="152.0" width="90.0" height="30.0" rx="4" fill="#ffffff" stroke="#6f7b79" stroke-width="1.4"/>
+<text class="ink" x="550.0" y="171.5" font-size="11.5" font-weight="600" text-anchor="middle" fill="#15201f">A: 6</text>
+<rect class="surf kink3" x="505.0" y="192.0" width="90.0" height="30.0" rx="4" fill="#ffffff" stroke="#6f7b79" stroke-width="1.4"/>
+<text class="ink" x="550.0" y="211.5" font-size="11.5" font-weight="600" text-anchor="middle" fill="#15201f">B: 6</text>
+<rect class="surf kink3" x="505.0" y="254.0" width="90.0" height="30.0" rx="4" fill="#ffffff" stroke="#6f7b79" stroke-width="1.4"/>
+<text class="ink" x="550.0" y="273.5" font-size="11.5" font-weight="600" text-anchor="middle" fill="#15201f">A: 4</text>
+<rect class="surf kink3" x="505.0" y="294.0" width="90.0" height="30.0" rx="4" fill="#ffffff" stroke="#6f7b79" stroke-width="1.4"/>
+<text class="ink" x="550.0" y="313.5" font-size="11.5" font-weight="600" text-anchor="middle" fill="#15201f">B: 4</text>
+<line class="kink2" x1="480.0" y1="182.0" x2="495.3" y2="172.7" stroke="#4a5654" stroke-width="1.5" fill="none"/>
+<polygon class="ink2" points="503.0,168.0 497.4,176.2 493.2,169.2" fill="#4a5654" stroke="none"/>
+<line class="kink2" x1="480.0" y1="192.0" x2="495.3" y2="201.3" stroke="#4a5654" stroke-width="1.5" fill="none"/>
+<polygon class="ink2" points="503.0,206.0 493.2,204.8 497.4,197.8" fill="#4a5654" stroke="none"/>
+<line class="kink2" x1="480.0" y1="284.0" x2="495.3" y2="274.7" stroke="#4a5654" stroke-width="1.5" fill="none"/>
+<polygon class="ink2" points="503.0,270.0 497.4,278.2 493.2,271.2" fill="#4a5654" stroke="none"/>
+<line class="kink2" x1="480.0" y1="294.0" x2="495.3" y2="303.3" stroke="#4a5654" stroke-width="1.5" fill="none"/>
+<polygon class="ink2" points="503.0,308.0 493.2,306.8 497.4,299.8" fill="#4a5654" stroke="none"/>
+<rect class="surf kink3" x="620.0" y="160.0" width="120.0" height="56.0" rx="4" fill="#ffffff" stroke="#6f7b79" stroke-width="1.4"/>
+<text class="ink" x="680.0" y="184.5" font-size="12.5" font-weight="600" text-anchor="middle" fill="#15201f">Compare A, B</text>
+<text class="ink2" x="680.0" y="200.5" font-size="11.5" font-weight="400" text-anchor="middle" fill="#4a5654">in block 1</text>
+<rect class="surf kink3" x="620.0" y="262.0" width="120.0" height="56.0" rx="4" fill="#ffffff" stroke="#6f7b79" stroke-width="1.4"/>
+<text class="ink" x="680.0" y="286.5" font-size="12.5" font-weight="600" text-anchor="middle" fill="#15201f">Compare A, B</text>
+<text class="ink2" x="680.0" y="302.5" font-size="11.5" font-weight="400" text-anchor="middle" fill="#4a5654">in block 2</text>
+<line class="kink2" x1="595.0" y1="168.0" x2="610.3" y2="177.3" stroke="#4a5654" stroke-width="1.5" fill="none"/>
+<polygon class="ink2" points="618.0,182.0 608.2,180.8 612.4,173.8" fill="#4a5654" stroke="none"/>
+<line class="kink2" x1="595.0" y1="206.0" x2="610.0" y2="198.2" stroke="#4a5654" stroke-width="1.5" fill="none"/>
+<polygon class="ink2" points="618.0,194.0 611.9,201.8 608.1,194.5" fill="#4a5654" stroke="none"/>
+<line class="kink2" x1="595.0" y1="270.0" x2="610.3" y2="279.3" stroke="#4a5654" stroke-width="1.5" fill="none"/>
+<polygon class="ink2" points="618.0,284.0 608.2,282.8 612.4,275.8" fill="#4a5654" stroke="none"/>
+<line class="kink2" x1="595.0" y1="308.0" x2="610.0" y2="300.2" stroke="#4a5654" stroke-width="1.5" fill="none"/>
+<polygon class="ink2" points="618.0,296.0 611.9,303.8 608.1,296.5" fill="#4a5654" stroke="none"/>
+<text class="acc" x="20.0" y="356.0" font-size="11" font-weight="600" text-anchor="start" fill="#1a6b63" font-family="IBM Plex Mono, monospace">MATCHED PAIRS DESIGN</text>
+<rect class="surf kink3" x="20.0" y="370.0" width="150.0" height="70.0" rx="4" fill="#ffffff" stroke="#6f7b79" stroke-width="1.4"/>
+<text class="ink" x="95.0" y="393.5" font-size="12.5" font-weight="600" text-anchor="middle" fill="#15201f">10 pairs</text>
+<text class="ink2" x="95.0" y="409.5" font-size="11.5" font-weight="400" text-anchor="middle" fill="#4a5654">matched on an</text>
+<text class="ink2" x="95.0" y="425.5" font-size="11.5" font-weight="400" text-anchor="middle" fill="#4a5654">extraneous variable</text>
+<rect class="surf kamb" x="215.0" y="370.0" width="150.0" height="70.0" rx="4" fill="#ffffff" stroke="#7d5a11" stroke-width="1.4"/>
+<text class="ink" x="290.0" y="393.5" font-size="12" font-weight="600" text-anchor="middle" fill="#15201f">In each pair,</text>
+<text class="ink2" x="290.0" y="409.5" font-size="11.5" font-weight="400" text-anchor="middle" fill="#4a5654">random: one unit gets A,</text>
+<text class="ink2" x="290.0" y="425.5" font-size="11.5" font-weight="400" text-anchor="middle" fill="#4a5654">the other gets B</text>
+<line class="kink2" x1="170.0" y1="405.0" x2="204.0" y2="405.0" stroke="#4a5654" stroke-width="1.5" fill="none"/>
+<polygon class="ink2" points="213.0,405.0 204.0,409.1 204.0,400.9" fill="#4a5654" stroke="none"/>
+<rect class="surf kink3" x="410.0" y="370.0" width="150.0" height="70.0" rx="4" fill="#ffffff" stroke="#6f7b79" stroke-width="1.4"/>
+<text class="ink" x="485.0" y="401.5" font-size="12.5" font-weight="600" text-anchor="middle" fill="#15201f">Compare A and B</text>
+<text class="ink2" x="485.0" y="417.5" font-size="11.5" font-weight="400" text-anchor="middle" fill="#4a5654">within every pair</text>
+<line class="kink2" x1="365.0" y1="405.0" x2="399.0" y2="405.0" stroke="#4a5654" stroke-width="1.5" fill="none"/>
+<polygon class="ink2" points="408.0,405.0 399.0,409.1 399.0,400.9" fill="#4a5654" stroke="none"/>
+<rect class="band kink3" x="215.0" y="456.0" width="345.0" height="50.0" rx="4" fill="#eef1ef" stroke="#6f7b79" stroke-width="1.2"/>
+<text class="ink" x="387.0" y="477.0" font-size="12" font-weight="600" text-anchor="middle" fill="#15201f">or: each unit gets both treatments,</text>
+<text class="ink2" x="387.0" y="495.0" font-size="11.5" font-weight="400" text-anchor="middle" fill="#4a5654">in an order chosen at random</text>
+<text class="ink2" x="605.0" y="394.0" font-size="11.5" font-weight="400" text-anchor="start" fill="#4a5654">A matched pairs design</text>
+<text class="ink2" x="605.0" y="410.0" font-size="11.5" font-weight="400" text-anchor="start" fill="#4a5654">is a randomized block</text>
+<text class="ink2" x="605.0" y="426.0" font-size="11.5" font-weight="400" text-anchor="start" fill="#4a5654">design with two treatments</text>
+<text class="ink2" x="605.0" y="442.0" font-size="11.5" font-weight="400" text-anchor="start" fill="#4a5654">and blocks of size 2.</text>
+<text class="ink3" x="20.0" y="546.0" font-size="11" font-weight="400" text-anchor="start" fill="#6f7b79">Amber boxes: where the random mechanism is used. Blocks and pairs are formed from the extraneous variable, not at random.</text>
+</svg>
+</div><figcaption>Where the chance goes in each design. In all three, a random mechanism assigns the treatments; the block and pair designs first group the units deliberately, so that each comparison is made between units that are alike.</figcaption></figure>
+<p><em>Illustration:</em> 10 units in 5 pairs matched on size. For each pair, a coin decides which unit gets A; the other gets B. Or: each of 10 units gets both, with a coin deciding which comes first.</p>
+<h3>Choosing between designs (1.13.C.1)</h3>
+<p><strong>One experimental design may be more appropriate than another</strong> based on <strong>the goals of the investigative study, the characteristics of the population, and the sample and variables involved</strong>.</p>
+<p>What it does not say. No design is best in general. A justification names the feature of <strong>this</strong> study that makes one design better, and connects it to the design's job, exactly as Session 6's justification of a sampling method did (1.11.B.1). The usual reason to prefer a block or matched pairs design is an extraneous variable, known in advance, that is strongly related to the response: blocking on it gives a more precise comparison. The usual reason to prefer a completely randomized design is that there is no such variable, or pairing is impractical. "Blocking is better" earns nothing on its own.</p>
+<div class="tbl"><table><thead><tr><th>Design</th><th>Choose it when</th><th>Its advantage</th></tr></thead><tbody><tr><td>Completely randomized</td><td>no strong extraneous variable is known in advance</td><td>simplest; random assignment balances everything</td></tr><tr><td>Randomized block</td><td>a known extraneous variable is strongly related to the response</td><td>separates that variable's variation, so the comparison is more precise</td></tr><tr><td>Matched pairs</td><td>two treatments, and units can be matched closely, or one unit can take both</td><td>removes the variation between pairs; often the most precise</td></tr></tbody></table></div>
+<p><em>Illustration:</em> if the response depends strongly on a variable <em>v</em> that is known for every unit before the experiment, block on <em>v</em> and say so: "because <em>v</em> is strongly related to the response, blocking on <em>v</em> separates its variation from the comparison of the treatments."</p>
+<h3>Cause and effect from random assignment, and statistical significance (1.13.D.1)</h3>
+<p><strong>Using random assignment</strong> of treatments to experimental units <strong>allows for cause-and-effect conclusions</strong> between the explanatory and the response variables <strong>because the potential for confounding variables is reduced</strong> (1.13.D.1).</p>
+<p>The course description's unit guide completes it: <em>for data collected using well-designed experiments, <strong>statistically significant</strong> differences between or among experimental treatment groups are evidence that the treatments caused the effect.</em> A difference is <strong>statistically significant</strong> when it is too large to be explained plausibly by the chance variation that random assignment itself creates. Deciding that is a calculation, formally a p-value compared with a significance level (3.7.B.1), and Sessions 15 and 16 teach it. Today the student is told whether a difference is statistically significant, and decides what may be concluded from it.</p>
+<p>What it does not say. Random assignment is <strong>the</strong> element to cite for cause; the unit guide says a complete answer "cites the random assignment of treatments and does not refer to other irrelevant elements". A blind design, blocking, replication and a control group all improve an experiment, but none of them is the reason a cause can be claimed. A difference that is <strong>not</strong> statistically significant is not evidence that the treatment does nothing; it means the experiment could not tell the treatment's effect from chance. And cause says nothing about <strong>whom</strong> the conclusion reaches; that is the next subsection.</p>
+<p><em>Illustration:</em> treatments A and B assigned at random to 200 units; A's average response is higher, and the difference is statistically significant. Conclusion: A causes a higher response than B, for units like these. Had the difference not been statistically significant: the experiment gives no convincing evidence of a difference, which is not the same as showing there is none.</p>
+<h3>Experiments on volunteers: how far the conclusion reaches (1.13.D.2)</h3>
+<p>Depending on the experimental unit, it <strong>may be unethical or difficult to randomly select experimental units</strong> to participate in an experiment. In that case, the study's experimental units are <strong>obtained from volunteers</strong> and will <strong>represent the population of experimental units similar to those who participated</strong> in the study.</p>
+<p>What it does not say. It is Session 6's rule (1.10.E.2–4) applied to experiments: random <strong>selection</strong> decides how far the result reaches, random <strong>assignment</strong> decides whether it can be about cause, and a study can have one without the other. Most experiments on people use volunteers, so most licence cause, for people similar to the volunteers. It does not make the volunteers' result wrong; it limits whom it is about.</p>
+<div class="tbl"><table><thead><tr><th>Units selected at random?</th><th>Treatments assigned at random?</th><th>What the study may conclude</th></tr></thead><tbody><tr><td>Yes</td><td>Yes</td><td>cause and effect, for the whole population sampled</td></tr><tr><td>No (volunteers, or everyone available)</td><td>Yes</td><td>cause and effect, for units similar to those in the study</td></tr><tr><td>Yes</td><td>No (observational)</td><td>an association, for the whole population sampled</td></tr><tr><td>No</td><td>No</td><td>an association, for units similar to those in the study</td></tr></tbody></table></div>
+<p><em>Illustration:</em> 60 volunteers, treatments assigned by random number, a statistically significant difference: the treatment caused the difference, for people similar to the 60 volunteers.</p>
+<h3>Self-check on the theory</h3>
+<p>Answer each on paper, then open its reveal. If one goes wrong, reread that subsection's "what it does not say" paragraph before Part 3: the rest of the session leans on every one of them.</p>
+<p><strong>Check 1.</strong> A method's estimates are 0.52, 0.49, 0.51, 0.50 and 0.53, and the parameter is 0.40. Is the method biased? What would a larger sample from the same method do?</p>
+<details><summary><strong>Reveal — check 1</strong></summary><p><strong>Biased</strong>: consistently too high. A larger sample would cluster the estimates more tightly, <strong>around the wrong value</strong>. It reduces variation, not bias.</p></details>
+<p><strong>Check 2.</strong> A random sample of 200 is chosen and 60 never reply. Which bias might that be, and what must be true for it to push the estimate?</p>
+<details><summary><strong>Reveal — check 2</strong></summary><p><strong>Nonresponse bias</strong>: they were chosen, then did not respond. It pushes the estimate only if the 60 <strong>differ</strong> from the 140 on the variable being measured.</p></details>
+<p><strong>Check 3.</strong> A survey can reach only people who use one particular website. Which bias?</p>
+<details><summary><strong>Reveal — check 3</strong></summary><p><strong>Undercoverage bias</strong>: part of the population cannot be selected at all.</p></details>
+<p><strong>Check 4.</strong> Name the four elements of a well-designed experiment.</p>
+<details><summary><strong>Reveal — check 4</strong></summary><p><strong>Comparison</strong> of at least two treatment groups, <strong>random assignment</strong>, <strong>replication</strong>, and <strong>direct control</strong> of extraneous sources of variation.</p></details>
+<p><strong>Check 5.</strong> An experiment has a treatment group and a placebo group. Can it measure the placebo effect?</p>
+<details><summary><strong>Reveal — check 5</strong></summary><p><strong>No.</strong> The placebo effect is the average response to a placebo <strong>minus the average response to no treatment</strong>, so it needs a no-treatment group.</p></details>
+<p><strong>Check 6.</strong> The participants know which treatment they got, but the nurse who measures them does not. What is that called?</p>
+<details><summary><strong>Reveal — check 6</strong></summary><p><strong>Single-blind</strong>: the "or vice versa" case of the definition.</p></details>
+<p><strong>Check 7.</strong> In a randomized block design, what is random, and what is not?</p>
+<details><summary><strong>Reveal — check 7</strong></summary><p>The <strong>blocks</strong> are formed from the blocking variable, <strong>not</strong> at random. The <strong>treatments</strong> are assigned at random <strong>within every block</strong>.</p></details>
+<p><strong>Check 8.</strong> Which element of an experiment do you cite to justify a cause-and-effect conclusion?</p>
+<details><summary><strong>Reveal — check 8</strong></summary><p><strong>Random assignment</strong> of treatments, and only that. A blind design, blocking, replication and a control group improve an experiment, but none of them is the reason a cause can be claimed.</p></details>
+<hr>
+<h2>Part 3 — Lincoln High's travel survey against a known parameter</h2>
+<p>Lincoln High from Sessions 1 to 6, with its <strong>1,842 students</strong> in three home areas. In Session 1 a randomly chosen 120 students were asked how they travel, and 43 came by bus: a statistic of 43 ÷ 120 = 0.358. The parameter, the proportion of <strong>all</strong> 1,842 who travel by bus, was unknown. Now it is known. The county's school bus scheme requires every student who travels to school by bus to hold a bus pass, and the office has the full list of passes: a <strong>census</strong>.</p>
+<div class="tbl"><table><thead><tr><th>Home area</th><th>Students</th><th>Bus-pass holders</th></tr></thead><tbody><tr><td>Town, within 3 km</td><td>846</td><td>85</td></tr><tr><td>Suburbs, 3 to 10 km</td><td>702</td><td>316</td></tr><tr><td>Villages, beyond 10 km</td><td>294</td><td>250</td></tr><tr class="tot"><td><strong>Total</strong></td><td><strong>1,842</strong></td><td><strong>651</strong></td></tr></tbody></table></div>
+<p>The parameter is 651 ÷ 1,842 = <strong>0.353</strong>. The parameter is almost never known, and that is what makes this part useful: every sampling method's answer can be checked against it.</p>
+<h3>Work out the four estimates</h3>
+<p>Before the bus-pass list existed, staff had tried four ways to estimate the proportion.</p>
+<div class="tbl"><table><thead><tr><th>Method</th><th>How the students were chosen</th><th>In the data</th><th>By bus</th></tr></thead><tbody><tr class="tot"><td><strong>A</strong> (Session 1)</td><td>A random number generator chose 120 from the roll</td><td>120</td><td>43</td></tr><tr class="tot"><td><strong>E</strong> (Session 6)</td><td>The first 120 students through the <strong>main gate</strong> on a Monday; the school buses drop at the <strong>side bus bay</strong></td><td>120</td><td>12</td></tr><tr class="tot"><td><strong>F</strong></td><td>A link in the parents' newsletter: <em>"We are reviewing the bus timetable. Tell us how your child travels."</em> The first 212 replies</td><td>212</td><td>128</td></tr><tr class="tot"><td><strong>G</strong></td><td>A random number generator chose 120; the office <strong>phoned their homes at 4:30 pm</strong> on a Tuesday; 87 answered</td><td>87</td><td>17</td></tr></tbody></table></div>
+<div class="yourturn"><ol><li>Work out each method's estimate of the proportion who travel by bus, and say whether it is too high or too low.</li><li>Plan A is slightly too high. Is that bias?</li><li>Sketch the four estimates on a number line from 0 to 0.7, with the parameter marked.</li></ol></div>
+<details><summary><strong>Reveal — the four estimates</strong></summary><p><strong>1.</strong> A: 43 ÷ 120 = <strong>0.358</strong>, slightly above. E: 12 ÷ 120 = <strong>0.100</strong>, too low. F: 128 ÷ 212 = <strong>0.604</strong>, too high. G: 17 ÷ 87 = <strong>0.195</strong>, too low.</p>
+<p><strong>2. No.</strong> One random sample misses the parameter by chance, and the next would miss the other way; Plan A misses by 0.005. Bias is a method that misses <strong>in the same direction every time</strong> (Part 2, <em>Bias</em>).</p>
+<p><strong>3.</strong></p>
+<figure><div class="figscroll"><svg viewBox="0 0 760 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Four estimates of the proportion of all 1,842 Lincoln High students who travel mainly by bus, against the parameter 651/1842 = 0.353 from the bus-pass census. Simple random sample 43/120 = 0.358, close to it. Main gate 12/120 = 0.100, too low. Newsletter replies 128/212 = 0.604, too high. Phoned at 4:30 pm, 17 of the 87 who answered = 0.195, too low." font-family="Public Sans, system-ui, sans-serif">
+<style>
+  .ink { fill: #15201f; }
+  .ink2 { fill: #4a5654; }
+  .ink3 { fill: #6f7b79; }
+  .kink { stroke: #15201f; }
+  .kink2 { stroke: #4a5654; }
+  .kink3 { stroke: #6f7b79; }
+  .axis { stroke: #c3c9c6; }
+  .grid { stroke: #dcdfdd; }
+  .surf { fill: #ffffff; }
+  .band { fill: #eef1ef; }
+  .acc { fill: #1a6b63; }
+  .kacc { stroke: #1a6b63; }
+  .amb { fill: #7d5a11; }
+  .kamb { stroke: #7d5a11; }
+  .s0 { fill: #2a78d6; }
+  .k0 { stroke: #2a78d6; }
+  .s1 { fill: #eb6834; }
+  .k1 { stroke: #eb6834; }
+  .s2 { fill: #1baf7a; }
+  .k2 { stroke: #1baf7a; }
+  .s3 { fill: #eda100; }
+  .k3 { stroke: #eda100; }
+  .s4 { fill: #e87ba4; }
+  .k4 { stroke: #e87ba4; }
+  .s5 { fill: #008300; }
+  .k5 { stroke: #008300; }
+  @media (prefers-color-scheme: dark) {
+    .ink { fill: #e9edeb; }
+    .ink2 { fill: #a5b0ad; }
+    .ink3 { fill: #7e8a87; }
+    .kink { stroke: #e9edeb; }
+    .kink2 { stroke: #a5b0ad; }
+    .kink3 { stroke: #7e8a87; }
+    .axis { stroke: #3a4644; }
+    .grid { stroke: #2a3533; }
+    .surf { fill: #182120; }
+    .band { fill: #1e2827; }
+    .acc { fill: #54b8ab; }
+    .kacc { stroke: #54b8ab; }
+    .amb { fill: #d9ab52; }
+    .kamb { stroke: #d9ab52; }
+    .s0 { fill: #3987e5; }
+    .k0 { stroke: #3987e5; }
+    .s1 { fill: #d95926; }
+    .k1 { stroke: #d95926; }
+    .s2 { fill: #199e70; }
+    .k2 { stroke: #199e70; }
+    .s3 { fill: #c98500; }
+    .k3 { stroke: #c98500; }
+    .s4 { fill: #d55181; }
+    .k4 { stroke: #d55181; }
+    .s5 { fill: #008300; }
+    .k5 { stroke: #008300; }
+  }
+</style>
+<line class="grid" x1="270.0" y1="28.0" x2="270.0" y2="234.0" stroke="#dcdfdd" stroke-width="1" fill="none"/>
+<text class="ink3" x="270.0" y="252.0" font-size="11" font-weight="400" text-anchor="middle" fill="#6f7b79">0.0</text>
+<line class="grid" x1="335.7" y1="28.0" x2="335.7" y2="234.0" stroke="#dcdfdd" stroke-width="1" fill="none"/>
+<text class="ink3" x="335.7" y="252.0" font-size="11" font-weight="400" text-anchor="middle" fill="#6f7b79">0.1</text>
+<line class="grid" x1="401.4" y1="28.0" x2="401.4" y2="234.0" stroke="#dcdfdd" stroke-width="1" fill="none"/>
+<text class="ink3" x="401.4" y="252.0" font-size="11" font-weight="400" text-anchor="middle" fill="#6f7b79">0.2</text>
+<line class="grid" x1="467.1" y1="28.0" x2="467.1" y2="234.0" stroke="#dcdfdd" stroke-width="1" fill="none"/>
+<text class="ink3" x="467.1" y="252.0" font-size="11" font-weight="400" text-anchor="middle" fill="#6f7b79">0.3</text>
+<line class="grid" x1="532.9" y1="28.0" x2="532.9" y2="234.0" stroke="#dcdfdd" stroke-width="1" fill="none"/>
+<text class="ink3" x="532.9" y="252.0" font-size="11" font-weight="400" text-anchor="middle" fill="#6f7b79">0.4</text>
+<line class="grid" x1="598.6" y1="28.0" x2="598.6" y2="234.0" stroke="#dcdfdd" stroke-width="1" fill="none"/>
+<text class="ink3" x="598.6" y="252.0" font-size="11" font-weight="400" text-anchor="middle" fill="#6f7b79">0.5</text>
+<line class="grid" x1="664.3" y1="28.0" x2="664.3" y2="234.0" stroke="#dcdfdd" stroke-width="1" fill="none"/>
+<text class="ink3" x="664.3" y="252.0" font-size="11" font-weight="400" text-anchor="middle" fill="#6f7b79">0.6</text>
+<line class="grid" x1="730.0" y1="28.0" x2="730.0" y2="234.0" stroke="#dcdfdd" stroke-width="1" fill="none"/>
+<text class="ink3" x="730.0" y="252.0" font-size="11" font-weight="400" text-anchor="middle" fill="#6f7b79">0.7</text>
+<text class="ink3" x="500.0" y="272.0" font-size="11.5" font-weight="400" text-anchor="middle" fill="#6f7b79">proportion who travel mainly by bus</text>
+<line class="kink" x1="502.2" y1="20.0" x2="502.2" y2="234.0" stroke="#15201f" stroke-width="1.6" fill="none" stroke-dasharray="5 3"/>
+<text class="ink" x="508.2" y="18.0" font-size="11.5" font-weight="600" text-anchor="start" fill="#15201f">parameter 0.353 (bus-pass census, all 1,842)</text>
+<text class="ink" x="20.0" y="57.0" font-size="12" font-weight="600" text-anchor="start" fill="#15201f">Simple random sample (Session 1)</text>
+<text class="ink2" x="20.0" y="73.0" font-size="11.5" font-weight="400" text-anchor="start" fill="#4a5654" font-family="IBM Plex Mono, monospace">43 of 120 = 0.358</text>
+<circle class="s0 kink" cx="505.5" cy="59.0" r="6.0" fill="#2a78d6" stroke="#15201f" stroke-width="1.0"/>
+<text class="ink" x="20.0" y="107.0" font-size="12" font-weight="600" text-anchor="start" fill="#15201f">First 120 through the main gate</text>
+<text class="ink2" x="20.0" y="123.0" font-size="11.5" font-weight="400" text-anchor="start" fill="#4a5654" font-family="IBM Plex Mono, monospace">12 of 120 = 0.100</text>
+<line class="kamb" x1="502.2" y1="109.0" x2="351.7" y2="109.0" stroke="#7d5a11" stroke-width="2.0" fill="none"/>
+<polygon class="amb" points="342.7,109.0 351.7,104.7 351.7,113.3" fill="#7d5a11" stroke="none"/>
+<text class="amb" x="419.0" y="101.0" font-size="11" font-weight="600" text-anchor="middle" fill="#7d5a11">too low</text>
+<circle class="s1 kink" cx="335.7" cy="109.0" r="6.0" fill="#eb6834" stroke="#15201f" stroke-width="1.0"/>
+<text class="ink" x="20.0" y="157.0" font-size="12" font-weight="600" text-anchor="start" fill="#15201f">Newsletter link, first 212 replies</text>
+<text class="ink2" x="20.0" y="173.0" font-size="11.5" font-weight="400" text-anchor="start" fill="#4a5654" font-family="IBM Plex Mono, monospace">128 of 212 = 0.604</text>
+<line class="kamb" x1="502.2" y1="159.0" x2="650.8" y2="159.0" stroke="#7d5a11" stroke-width="2.0" fill="none"/>
+<polygon class="amb" points="659.8,159.0 650.8,163.3 650.8,154.7" fill="#7d5a11" stroke="none"/>
+<text class="amb" x="584.5" y="151.0" font-size="11" font-weight="600" text-anchor="middle" fill="#7d5a11">too high</text>
+<circle class="s1 kink" cx="666.8" cy="159.0" r="6.0" fill="#eb6834" stroke="#15201f" stroke-width="1.0"/>
+<text class="ink" x="20.0" y="207.0" font-size="12" font-weight="600" text-anchor="start" fill="#15201f">Random 120, phoned at 4:30 pm</text>
+<text class="ink2" x="20.0" y="223.0" font-size="11.5" font-weight="400" text-anchor="start" fill="#4a5654" font-family="IBM Plex Mono, monospace">17 of 87 = 0.195</text>
+<line class="kamb" x1="502.2" y1="209.0" x2="414.4" y2="209.0" stroke="#7d5a11" stroke-width="2.0" fill="none"/>
+<polygon class="amb" points="405.4,209.0 414.4,204.7 414.4,213.3" fill="#7d5a11" stroke="none"/>
+<text class="amb" x="450.3" y="201.0" font-size="11" font-weight="600" text-anchor="middle" fill="#7d5a11">too low</text>
+<circle class="s1 kink" cx="398.4" cy="209.0" r="6.0" fill="#eb6834" stroke="#15201f" stroke-width="1.0"/>
+</svg>
+</div><figcaption>Only the random sample lands near the parameter. The other three miss by 0.16 to 0.25, and each misses in the direction its method pushes.</figcaption></figure></details>
+<h3>The main-gate sample</h3>
+<div class="yourturn"><ol><li>Plan E: name the bias, and say which way it pushes the estimate and why.</li><li>Session 6 said Plan E's results reach only students similar to those who arrive first at the main gate. What does today add?</li></ol></div>
+<details><summary><strong>Reveal — convenience and undercoverage</strong></summary><p><strong>1.</strong> <strong>Undercoverage bias</strong>: the school-bus students arrive at the side bus bay, so most of them cannot be in a sample taken at the main gate. <strong>Too low</strong>, because the part of the population left out is mostly bus users. It is also a <strong>convenience</strong> sample: the first students to arrive where the deputy stood.</p>
+<p>"It's biased because it's not random" is true and earns nothing on its own. The answer is <strong>who</strong> is missing and <strong>which way</strong> that pushes the estimate.</p>
+<p><strong>2.</strong> Session 6 said how far the result reaches. Today says what is wrong with it, and in which direction.</p>
+<p><em>The main-gate sample has undercoverage bias: students who arrive by school bus use the side bus bay and are unlikely to be selected, so the proportion who travel by bus will be too low.</em></p></details>
+<h3>The newsletter link: is 212 better than 120?</h3>
+<p>This is the trap of Part 3.</p>
+<div class="yourturn"><ol><li>Plan F has 212 students, nearly twice Plan A's 120. Is it the better estimate? Name its bias and direction.</li><li>What would it take to fix Plan F?</li></ol></div>
+<details><summary><strong>Reveal — voluntary response, and why 212 replies do not help</strong></summary><p><strong>1. No.</strong> The 212 chose themselves. The newsletter said the bus timetable was under review, so the parents who reply are those with a stake in the buses: bus users are over-represented. <strong>Voluntary response bias</strong>, and the estimate is <strong>too high</strong>.</p>
+<p>More data from a method that pushes up only pushes up with more confidence. The tool at the end of this part shows it.</p>
+<p><strong>2.</strong> Not more replies. Choose the students by a <strong>random mechanism</strong>, then chase the replies.</p>
+<p><em>The newsletter replies have voluntary response bias: the parents who choose to reply are those who care about the bus timetable, mostly parents of bus users, so the estimate is too high. More replies would not fix it.</em></p></details>
+<h3>The 4:30 phone calls</h3>
+<div class="yourturn"><ol><li>Plan G was chosen at random, like Plan A. Why is it so far off? Name the bias and its direction.</li><li>Is it voluntary response bias, since the students chose whether to answer?</li><li>Suppose the bus students answered as often as everyone else. Would 33 missing students still bias the result?</li><li>Write the answer an examiner wants, in two or three sentences.</li></ol></div>
+<details><summary><strong>Reveal — nonresponse from a random sample</strong></summary><p><strong>1.</strong> 33 of the 120 chosen did not answer. At 4:30 many bus students are still on the bus, especially from the Villages, so the students who answered are mostly not bus users. <strong>Nonresponse bias</strong>, <strong>too low</strong>.</p>
+<p><strong>2. No.</strong> They were <strong>chosen first</strong>, by random number. Chosen and then lost is nonresponse; never chosen at all is voluntary response.</p>
+<p><strong>3. No.</strong> Nonresponse biases the estimate only when the nonrespondents <strong>differ</strong> from the respondents on the variable of interest.</p>
+<p><strong>4.</strong> The course description's unit guide names the error to avoid: students "forget to support claims about nonresponse bias with evidence indicating whether the sample result is likely to be too high or too low." A model answer:</p>
+<blockquote><em>"Plan G has nonresponse bias. Of the 120 students chosen at random, 33 did not answer the 4:30 pm call. Students who travel by bus, especially from the Villages, are likely to be still travelling at 4:30, so bus users are under-represented among those who answered, and the proportion who travel by bus will be too low."</em></blockquote></details>
+<h3>Two wordings of one question</h3>
+<p>The school council wanted a second answer from the survey: should the school keep the <strong>late bus</strong>, which leaves at 5:15 pm after clubs? It chose a new random sample of 120 students and, to see whether the wording mattered, gave a random half one version and the other half the other.</p>
+<div class="tbl"><table><thead><tr><th>Version</th><th>Wording</th><th>Answered yes</th></tr></thead><tbody><tr><td>1</td><td><em>"Do you agree that the school should keep the late bus, so that students who live far away can stay for clubs and sport?"</em></td><td>49 of 60</td></tr><tr><td>2</td><td><em>"Should the school keep paying £38,000 a year for a late bus that most students never use?"</em></td><td>17 of 60</td></tr></tbody></table></div>
+<div class="yourturn"><ol><li>Work out each percentage. The students were chosen at random and every one answered: where can bias come from?</li><li>Which version gives the true level of support? Write a neutral version.</li><li>What kind of study did the council run, splitting the sample into two random halves?</li></ol></div>
+<details><summary><strong>Reveal — response bias from question wording</strong></summary><p><strong>1.</strong> Version 1: 49 ÷ 60 = <strong>81.7%</strong>. Version 2: 17 ÷ 60 = <strong>28.3%</strong>. The bias comes from <strong>the question</strong>: version 1 leads toward yes, version 2 toward no. The same kind of students gave answers 53.3 percentage points apart. That is <strong>response bias</strong> from question wording (Part 2).</p>
+<p><strong>2. Neither.</strong> Both lead. Neutral: <em>"Should the school keep the late bus? Yes or no."</em></p>
+<p><strong>3.</strong> An <strong>experiment</strong>: it assigned the wording, a treatment, at random. That is why it can say the wording caused the difference.</p>
+<p><strong>The four problems, in one table:</strong></p>
+<div class="tbl"><table><thead><tr><th>Plan</th><th>Bias</th><th>Direction</th></tr></thead><tbody><tr><td>E, main gate</td><td>undercoverage (and convenience)</td><td>too low</td></tr><tr><td>F, newsletter</td><td>voluntary response</td><td>too high</td></tr><tr><td>G, phone at 4:30</td><td>nonresponse</td><td>too low</td></tr><tr><td>Late-bus question</td><td>response bias, question wording</td><td>whichever way the wording leads</td></tr></tbody></table></div></details>
+<h3>The Sampling Bias tool</h3>
+<div class="sim"><div class="sim-head"><span class="lbl">Interactive</span><span class="ttl">Sampling Bias</span><a href="tools/sampling-bias.html" target="_blank" rel="noopener">Open full screen &#8599;</a></div><div class="sim-body"><iframe src="tools/sampling-bias.html" height="1500" loading="lazy" title="Sampling Bias"></iframe></div><div class="sim-why"><p>A simulated Lincoln High with the same 1,842 students and 651 bus users, so the parameter, 0.353, is known. The four buttons are Plans A, E, F and G, and the tool opens with one sample from each at n = 120. Press <strong>Draw 100 samples</strong> for each method and decide which rows are biased before you read the table. Then change the sample size to <strong>480</strong> and do it again. Last, choose the 4:30 phone calls and set the bus users' answer rate to <strong>90%, like everyone else</strong>.</p></div></div>
+<div class="yourturn"><p>After using the tool, answer on paper.</p>
+<ol><li>At n = 120, which methods are biased, and how can you tell from the dots?</li><li>What happened to every row when you went from 120 to 480? So what does a bigger sample fix, and what does it not?</li><li>What happened to the phone calls when bus users answered as often as everyone else?</li></ol></div>
+<details><summary><strong>Reveal — what the tool shows</strong></summary><p>The tool's own tests, over 4,000 samples of each kind:</p>
+<div class="tbl"><table><thead><tr><th>Method</th><th>Centre of the estimates at n = 120</th><th>Their SD at n = 30</th><th>at n = 120</th><th>at n = 480</th></tr></thead><tbody><tr><td>Simple random sample</td><td>0.353, the parameter</td><td>0.086</td><td>0.042</td><td>0.019</td></tr><tr><td>First through the main gate</td><td>0.099: too low by 0.255</td><td>0.054</td><td>0.026</td><td>0.011</td></tr><tr><td>Newsletter link replies</td><td>0.612: too high by 0.259 (0.580 at n = 480)</td><td>0.087</td><td>0.043</td><td>0.019</td></tr><tr><td>Phoned at 4:30 pm</td><td>0.195: too low by 0.158</td><td>0.085</td><td>0.041</td><td>0.020</td></tr><tr><td>Phoned at 4:30, equal answer rates</td><td>0.353, the parameter</td><td>0.092</td><td>0.045</td><td>0.020</td></tr></tbody></table></div>
+<p><strong>1.</strong> The main gate, the newsletter and the phone calls. Their dots all sit <strong>on one side</strong> of the dashed line; the simple random samples fall on <strong>both</strong> sides.</p>
+<p><strong>2.</strong> Every row got <strong>narrower</strong>: the SD roughly halved. The random samples closed in on 0.353; the biased ones closed in on their own <strong>wrong</strong> values. A bigger sample reduces the variation from sample to sample. It does nothing about bias.</p>
+<p><strong>3.</strong> The bias <strong>vanished</strong>, although about one chosen student in ten still did not answer. Nonresponse biases the result only when the nonrespondents differ.</p></details>
+<hr>
+<h2>Part 4 — Password, on your own</h2>
+<p>The course description's activity for topics 1.11–1.12 is a password-style game with nine terms: <strong>simple random sample, stratified random sample, cluster random sample, systematic random sample, bias, voluntary response bias, undercoverage bias, nonresponse bias and response bias</strong>. In class, one partner gives clues and the other names the term. On your own, you play <strong>both</strong> roles: first you write the clues, then you name the terms from someone else's.</p>
+<p><strong>The rule for every clue:</strong> it may not contain any word of the term itself. So <em>random</em>, <em>sample</em> and <em>bias</em> are banned on every card they appear on, and the clue must describe <strong>how the individuals are chosen</strong> or <strong>where the error enters</strong>. A term scores if a clue names it at the first attempt.</p>
+<h3>Write a clue for each of the nine terms</h3>
+<div class="yourturn"><p>For each of the nine terms, write a clue of one sentence that obeys the rule. Keep each one short enough to say aloud in ten seconds.</p></div>
+<details><summary><strong>Reveal — clues that score first time</strong></summary><div class="tbl"><table><thead><tr><th>Term</th><th>A clue that scores first time</th></tr></thead><tbody><tr><td>Simple random sample</td><td>"Number everyone and let a generator pick; every possible group of that size is equally likely."</td></tr><tr><td>Stratified random sample</td><td>"Split everyone into groups that are alike inside, then take some from every group."</td></tr><tr><td>Cluster random sample</td><td>"Split everyone into groups that each look like the whole, pick a few groups by chance, and take everyone in them."</td></tr><tr><td>Systematic random sample</td><td>"A starting point chosen by chance, then every k-th one on the list."</td></tr><tr><td>Bias</td><td>"The method lands on the same side of the truth, sample after sample, too high or too low."</td></tr><tr><td>Voluntary response bias</td><td>"Nobody is picked; people choose to take part, usually the ones who care most."</td></tr><tr><td>Undercoverage bias</td><td>"Part of the population could never be picked, or is less likely to be."</td></tr><tr><td>Nonresponse bias</td><td>"They were picked, but some never answered, and they differ from those who did."</td></tr><tr><td>Response bias</td><td>"The right people answer, but the answers lean one way: a leading question, or people describing themselves."</td></tr></tbody></table></div>
+<p>Check your own against two things. Does it break the rule? And could it describe a <strong>different</strong> term? "People didn't take part" fits both nonresponse and voluntary response; "some people were missed" fits undercoverage and nonresponse. Those are the clues a partner guesses wrong, and they are the confusions the exam uses.</p></details>
+<h3>Name the term from each clue</h3>
+<div class="yourturn"><p>Name the term for each clue. Score one for each you get without looking back.</p>
+<ol><li>"Everyone in a few whole groups, and nobody from the rest."</li><li>"They were chosen, but a third of them never sent the form back."</li><li>"The question began 'Most people agree that…'."</li><li>"Start somewhere by chance, then every 25th."</li><li>"Anyone who wanted to could phone in."</li><li>"Some from every group, and the groups are alike inside."</li><li>"The list we chose from had nobody without a landline."</li><li>"Every group of 50 had the same chance of being the one chosen."</li><li>"Sample after sample, the estimate came out above the true value."</li></ol></div>
+<details><summary><strong>Reveal — the nine clues named</strong></summary><ol><li>Cluster random sample. 2. Nonresponse bias. 3. Response bias (question wording). 4. Systematic random sample. 5. Voluntary response bias. 6. Stratified random sample. 7. Undercoverage bias. 8. Simple random sample. 9. Bias.</li></ol>
+<p>If you mixed up 2 and 5, or 2 and 7, reread Part 2's <em>Telling the biases apart</em>: the question is <strong>where</strong> the error enters, at who can be chosen, who chooses themselves in, or who drops out after being chosen.</p></details>
+<h3>Name the term from the study</h3>
+<div class="yourturn"><p>The speed round. For each study, name the term (a sampling method or a bias) within ten seconds, and for a bias say which way it pushes the result.</p>
+<ol><li>The library puts a questionnaire on the front page of its website and uses the 410 that are filled in.</li><li>Oakfield chooses 60 students by random number to ask how many days of school they missed last term; 11 are absent on survey day and are never asked.</li><li>The café asks its customers about the menu, between 7 and 9 am only.</li><li>Riverside asks patients, in front of the nurse who treated them, how good their nurse was.</li><li>St Mary's chooses 3 of its 40 wards at random and surveys every patient in them.</li><li>Lincoln High chooses a random start from 1 to 20 on the roll, then every 20th student.</li></ol></div>
+<details><summary><strong>Reveal — the speed round</strong></summary><div class="tbl"><table><thead><tr><th>Study</th><th>Term</th></tr></thead><tbody><tr><td>1</td><td><strong>Voluntary response bias</strong>: nobody was chosen</td></tr><tr><td>2</td><td><strong>Nonresponse bias</strong>: chosen, then not reached; the absent students are likely to miss more days, so the estimate is <strong>too low</strong></td></tr><tr><td>3</td><td><strong>Undercoverage bias</strong> (and convenience): afternoon customers cannot be chosen</td></tr><tr><td>4</td><td><strong>Response bias</strong>: the answers will lean favourable, <strong>too high</strong></td></tr><tr><td>5</td><td><strong>Cluster random sample</strong></td></tr><tr><td>6</td><td><strong>Systematic random sample</strong></td></tr></tbody></table></div>
+<p>Your score out of 24: one for each of your nine clues that obeys the rule and fits only its own term, one for each of the nine clues you named, and one for each of the six studies. Nineteen or more is the standard. Below that, reread the Part 2 subsections of the terms you missed before Part 5.</p></details>
+<hr>
+<h2>Part 5 — St Mary's reminder experiment</h2>
+<p>St Mary's outpatient clinics, from Session 6. The records of 400 of last year's 9,600 outpatients showed that patients who signed up for text reminders missed fewer appointments (7.5% against 20.0%), but the patients had chosen whether to sign up, and <strong>booking method</strong> was a confounding variable: 70.0% of self-booked patients signed up against 10.0% of hospital-booked patients, and 5.0% of self-booked patients missed against 25.0%. Session 6 ended by sketching the experiment that could settle it. Today it is designed, run and concluded.</p>
+<p>Next month St Mary's clinics have <strong>800 outpatients</strong> with appointments: <strong>400 self-booked online</strong> and <strong>400 booked by the hospital</strong>. Until now the hospital has not sent reminders to patients who did not sign up, so not sending one is what these patients would otherwise have received.</p>
+<p>The trap of Part 5: <strong>each element of a good experiment does a different job, and only one of them, random assignment, is what licenses a conclusion about cause.</strong></p>
+<h3>The four elements, applied</h3>
+<div class="yourturn"><ol><li>Name the experimental units, the treatments and the response.</li><li>Where are the four elements of a well-designed experiment in this plan?</li><li>Name three things St Mary's should keep the same for every patient.</li><li>The manager suggests sending the no-text group a text about the hospital car park instead. Would that still be a control group? What would comparing it with the reminder group tell you?</li></ol></div>
+<details><summary><strong>Reveal — the elements in the reminder experiment</strong></summary><p><strong>1.</strong> Units: the 800 patients (their appointments). Treatments: a text reminder the day before, or no text. Response: whether the patient misses the appointment.</p>
+<p><strong>2.</strong> <strong>Comparison</strong>: text against no text; the no-text group is the <strong>control group</strong>. <strong>Random assignment</strong>: a random number generator decides who gets a text. <strong>Replication</strong>: hundreds of patients in each group. <strong>Direct control</strong>: everything else kept the same.</p>
+<p><strong>3.</strong> For example: the wording of the text; when it is sent (10 am the day before); the rule for "missed" (not arrived within 15 minutes of the appointment time); the same month and the same clinics for both groups.</p>
+<p><strong>4. Yes.</strong> A control group may receive a treatment different from the treatment of interest (Part 2). Comparing it with the reminder group would show the effect of the reminder's <strong>content</strong>, beyond the mere fact of receiving a text from the hospital. To measure the effect of the car-park text itself, the way the placebo effect is measured, you would need a third group that gets no text.</p>
+<p>On ethics, because skill 2.B says <em>ethically</em>: the no-text patients receive what every patient who had not signed up received before, so nobody gets less than usual care, and the result decides whether everyone gets a reminder in future.</p></details>
+<h3>The receptionist's easier plan</h3>
+<blockquote><em>"Let's send texts to everyone with an appointment on Monday, Tuesday or Wednesday, and none on Thursday or Friday. Much simpler to run."</em></blockquote>
+<div class="yourturn"><ol><li>What is wrong with the receptionist's plan? Use the right term.</li><li>It is still an experiment. Doesn't that mean it shows cause?</li><li>How does random assignment fix it?</li></ol></div>
+<details><summary><strong>Reveal — clinic day as a confounding variable</strong></summary><p><strong>1.</strong> The <strong>day travels with the treatment</strong>. If Thursday and Friday patients miss more anyway, because different clinics run on those days or Friday afternoons are harder to attend, the difference would be the day, not the text, and nobody could tell which. The day is a <strong>confounding variable in an experiment</strong>: related to the explanatory variable, so it is difficult to tell which one changed the response (1.13.A.8).</p>
+<p><strong>2.</strong> It is an experiment, but a badly designed one. What decided who got a text was the day of the week, not chance, and that is exactly how confounding gets into an experiment.</p>
+<p><strong>3.</strong> A random number generator decides for each patient, so every day, every clinic and every kind of patient ends up in both groups in about the same proportions (1.13.A.7).</p></details>
+<h3>Completely randomized, or blocked by booking method?</h3>
+<p>Two plans are on the table:</p>
+<ul><li><strong>Plan 1.</strong> Number the 800 patients; a random number generator chooses 400 different numbers, and those patients get a text; the other 400 do not.</li><li><strong>Plan 2.</strong> Form two groups by booking method: the 400 self-booked and the 400 hospital-booked. Within each, a random number generator chooses 200 to get a text; the other 200 do not.</li></ul>
+<div class="yourturn"><ol><li>Name each design, and say what is random in each.</li><li>Draw Plan 2 as a diagram, from the 800 patients to the comparison.</li><li>In Plan 1, will the text group contain exactly 200 self-booked patients? Roughly what percentage of it would you expect to be self-booked, and how far might it stray?</li></ol></div>
+<details><summary><strong>Reveal — the two designs, drawn and compared</strong></summary><p><strong>1.</strong> Plan 1: <strong>completely randomized design</strong>; all 800 are assigned at random. Plan 2: <strong>randomized block design</strong>, with booking method as the blocking variable; the blocks are formed from booking method, <strong>not</strong> at random, and the texts are assigned at random <strong>inside each block</strong>.</p>
+<p><strong>2.</strong></p>
+<figure><div class="figscroll"><svg viewBox="0 0 760 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="St Mary&#x27;s reminder experiment as a randomized block design. 800 of next month&#x27;s outpatients are grouped by how the appointment was booked: 400 self-booked online and 400 booked by the hospital. Within each block a random number generator assigns 200 patients to a text reminder the day before and 200 to no text. Within each block, compare the proportion who miss the appointment." font-family="Public Sans, system-ui, sans-serif">
+<style>
+  .ink { fill: #15201f; }
+  .ink2 { fill: #4a5654; }
+  .ink3 { fill: #6f7b79; }
+  .kink { stroke: #15201f; }
+  .kink2 { stroke: #4a5654; }
+  .kink3 { stroke: #6f7b79; }
+  .axis { stroke: #c3c9c6; }
+  .grid { stroke: #dcdfdd; }
+  .surf { fill: #ffffff; }
+  .band { fill: #eef1ef; }
+  .acc { fill: #1a6b63; }
+  .kacc { stroke: #1a6b63; }
+  .amb { fill: #7d5a11; }
+  .kamb { stroke: #7d5a11; }
+  .s0 { fill: #2a78d6; }
+  .k0 { stroke: #2a78d6; }
+  .s1 { fill: #eb6834; }
+  .k1 { stroke: #eb6834; }
+  .s2 { fill: #1baf7a; }
+  .k2 { stroke: #1baf7a; }
+  .s3 { fill: #eda100; }
+  .k3 { stroke: #eda100; }
+  .s4 { fill: #e87ba4; }
+  .k4 { stroke: #e87ba4; }
+  .s5 { fill: #008300; }
+  .k5 { stroke: #008300; }
+  @media (prefers-color-scheme: dark) {
+    .ink { fill: #e9edeb; }
+    .ink2 { fill: #a5b0ad; }
+    .ink3 { fill: #7e8a87; }
+    .kink { stroke: #e9edeb; }
+    .kink2 { stroke: #a5b0ad; }
+    .kink3 { stroke: #7e8a87; }
+    .axis { stroke: #3a4644; }
+    .grid { stroke: #2a3533; }
+    .surf { fill: #182120; }
+    .band { fill: #1e2827; }
+    .acc { fill: #54b8ab; }
+    .kacc { stroke: #54b8ab; }
+    .amb { fill: #d9ab52; }
+    .kamb { stroke: #d9ab52; }
+    .s0 { fill: #3987e5; }
+    .k0 { stroke: #3987e5; }
+    .s1 { fill: #d95926; }
+    .k1 { stroke: #d95926; }
+    .s2 { fill: #199e70; }
+    .k2 { stroke: #199e70; }
+    .s3 { fill: #c98500; }
+    .k3 { stroke: #c98500; }
+    .s4 { fill: #d55181; }
+    .k4 { stroke: #d55181; }
+    .s5 { fill: #008300; }
+    .k5 { stroke: #008300; }
+  }
+</style>
+<rect class="surf kink3" x="20.0" y="112.0" width="150.0" height="72.0" rx="4" fill="#ffffff" stroke="#6f7b79" stroke-width="1.4"/>
+<text class="ink" x="95.0" y="136.5" font-size="12.5" font-weight="600" text-anchor="middle" fill="#15201f">800 outpatients</text>
+<text class="ink2" x="95.0" y="152.5" font-size="11.5" font-weight="400" text-anchor="middle" fill="#4a5654">next month,</text>
+<text class="ink2" x="95.0" y="168.5" font-size="11.5" font-weight="400" text-anchor="middle" fill="#4a5654">St Mary's clinics</text>
+<rect class="surf kink3" x="215.0" y="32.0" width="150.0" height="62.0" rx="4" fill="#ffffff" stroke="#6f7b79" stroke-width="1.4"/>
+<text class="ink" x="290.0" y="59.5" font-size="12.5" font-weight="600" text-anchor="middle" fill="#15201f">Self-booked online</text>
+<text class="ink2" x="290.0" y="75.5" font-size="11" font-weight="400" text-anchor="middle" fill="#4a5654">block 1: 400 patients</text>
+<rect class="surf kink3" x="215.0" y="202.0" width="150.0" height="62.0" rx="4" fill="#ffffff" stroke="#6f7b79" stroke-width="1.4"/>
+<text class="ink" x="290.0" y="229.5" font-size="12.5" font-weight="600" text-anchor="middle" fill="#15201f">Booked by the hospital</text>
+<text class="ink2" x="290.0" y="245.5" font-size="11" font-weight="400" text-anchor="middle" fill="#4a5654">block 2: 400 patients</text>
+<line class="kink2" x1="170.0" y1="138.0" x2="208.5" y2="71.8" stroke="#4a5654" stroke-width="1.5" fill="none"/>
+<polygon class="ink2" points="213.0,64.0 212.0,73.8 204.9,69.7" fill="#4a5654" stroke="none"/>
+<line class="kink2" x1="170.0" y1="158.0" x2="208.5" y2="224.2" stroke="#4a5654" stroke-width="1.5" fill="none"/>
+<polygon class="ink2" points="213.0,232.0 204.9,226.3 212.0,222.2" fill="#4a5654" stroke="none"/>
+<text class="ink3" x="95.0" y="100.0" font-size="11" font-weight="400" text-anchor="middle" fill="#6f7b79">block by booking method</text>
+<rect class="surf kamb" x="390.0" y="32.0" width="100.0" height="62.0" rx="4" fill="#ffffff" stroke="#7d5a11" stroke-width="1.4"/>
+<text class="ink" x="440.0" y="51.5" font-size="11.5" font-weight="600" text-anchor="middle" fill="#15201f">Random</text>
+<text class="ink2" x="440.0" y="67.5" font-size="10.5" font-weight="400" text-anchor="middle" fill="#4a5654">number</text>
+<text class="ink2" x="440.0" y="83.5" font-size="10.5" font-weight="400" text-anchor="middle" fill="#4a5654">generator</text>
+<rect class="surf kamb" x="390.0" y="202.0" width="100.0" height="62.0" rx="4" fill="#ffffff" stroke="#7d5a11" stroke-width="1.4"/>
+<text class="ink" x="440.0" y="221.5" font-size="11.5" font-weight="600" text-anchor="middle" fill="#15201f">Random</text>
+<text class="ink2" x="440.0" y="237.5" font-size="10.5" font-weight="400" text-anchor="middle" fill="#4a5654">number</text>
+<text class="ink2" x="440.0" y="253.5" font-size="10.5" font-weight="400" text-anchor="middle" fill="#4a5654">generator</text>
+<line class="kink2" x1="365.0" y1="63.0" x2="379.0" y2="63.0" stroke="#4a5654" stroke-width="1.5" fill="none"/>
+<polygon class="ink2" points="388.0,63.0 379.0,67.1 379.0,58.9" fill="#4a5654" stroke="none"/>
+<line class="kink2" x1="365.0" y1="233.0" x2="379.0" y2="233.0" stroke="#4a5654" stroke-width="1.5" fill="none"/>
+<polygon class="ink2" points="388.0,233.0 379.0,237.1 379.0,228.9" fill="#4a5654" stroke="none"/>
+<rect class="surf kink3" x="515.0" y="10.0" width="105.0" height="42.0" rx="4" fill="#ffffff" stroke="#6f7b79" stroke-width="1.4"/>
+<text class="ink" x="567.5" y="35.5" font-size="12" font-weight="600" text-anchor="middle" fill="#15201f">Text: 200</text>
+<rect class="surf kink3" x="515.0" y="74.0" width="105.0" height="42.0" rx="4" fill="#ffffff" stroke="#6f7b79" stroke-width="1.4"/>
+<text class="ink" x="567.5" y="99.5" font-size="12" font-weight="600" text-anchor="middle" fill="#15201f">No text: 200</text>
+<rect class="surf kink3" x="515.0" y="180.0" width="105.0" height="42.0" rx="4" fill="#ffffff" stroke="#6f7b79" stroke-width="1.4"/>
+<text class="ink" x="567.5" y="205.5" font-size="12" font-weight="600" text-anchor="middle" fill="#15201f">Text: 200</text>
+<rect class="surf kink3" x="515.0" y="244.0" width="105.0" height="42.0" rx="4" fill="#ffffff" stroke="#6f7b79" stroke-width="1.4"/>
+<text class="ink" x="567.5" y="269.5" font-size="12" font-weight="600" text-anchor="middle" fill="#15201f">No text: 200</text>
+<line class="kink2" x1="490.0" y1="55.0" x2="506.6" y2="38.4" stroke="#4a5654" stroke-width="1.5" fill="none"/>
+<polygon class="ink2" points="513.0,32.0 509.5,41.3 503.7,35.5" fill="#4a5654" stroke="none"/>
+<line class="kink2" x1="490.0" y1="71.0" x2="506.6" y2="87.6" stroke="#4a5654" stroke-width="1.5" fill="none"/>
+<polygon class="ink2" points="513.0,94.0 503.7,90.5 509.5,84.7" fill="#4a5654" stroke="none"/>
+<line class="kink2" x1="490.0" y1="225.0" x2="506.6" y2="208.4" stroke="#4a5654" stroke-width="1.5" fill="none"/>
+<polygon class="ink2" points="513.0,202.0 509.5,211.3 503.7,205.5" fill="#4a5654" stroke="none"/>
+<line class="kink2" x1="490.0" y1="241.0" x2="506.6" y2="257.6" stroke="#4a5654" stroke-width="1.5" fill="none"/>
+<polygon class="ink2" points="513.0,264.0 503.7,260.5 509.5,254.7" fill="#4a5654" stroke="none"/>
+<rect class="surf kink3" x="645.0" y="40.0" width="100.0" height="50.0" rx="4" fill="#ffffff" stroke="#6f7b79" stroke-width="1.4"/>
+<text class="ink" x="695.0" y="61.5" font-size="12" font-weight="600" text-anchor="middle" fill="#15201f">Compare</text>
+<text class="ink2" x="695.0" y="77.5" font-size="11.5" font-weight="400" text-anchor="middle" fill="#4a5654">% who miss</text>
+<rect class="surf kink3" x="645.0" y="210.0" width="100.0" height="50.0" rx="4" fill="#ffffff" stroke="#6f7b79" stroke-width="1.4"/>
+<text class="ink" x="695.0" y="231.5" font-size="12" font-weight="600" text-anchor="middle" fill="#15201f">Compare</text>
+<text class="ink2" x="695.0" y="247.5" font-size="11.5" font-weight="400" text-anchor="middle" fill="#4a5654">% who miss</text>
+<line class="kink2" x1="620.0" y1="32.0" x2="636.8" y2="49.5" stroke="#4a5654" stroke-width="1.5" fill="none"/>
+<polygon class="ink2" points="643.0,56.0 633.8,52.3 639.7,46.7" fill="#4a5654" stroke="none"/>
+<line class="kink2" x1="620.0" y1="94.0" x2="635.9" y2="81.5" stroke="#4a5654" stroke-width="1.5" fill="none"/>
+<polygon class="ink2" points="643.0,76.0 638.4,84.8 633.4,78.3" fill="#4a5654" stroke="none"/>
+<line class="kink2" x1="620.0" y1="202.0" x2="636.8" y2="219.5" stroke="#4a5654" stroke-width="1.5" fill="none"/>
+<polygon class="ink2" points="643.0,226.0 633.8,222.3 639.7,216.7" fill="#4a5654" stroke="none"/>
+<line class="kink2" x1="620.0" y1="264.0" x2="635.9" y2="251.5" stroke="#4a5654" stroke-width="1.5" fill="none"/>
+<polygon class="ink2" points="643.0,246.0 638.4,254.8 633.4,248.3" fill="#4a5654" stroke="none"/>
+</svg>
+</div><figcaption>The blocks are formed deliberately from booking method; the random number generator works inside each block.</figcaption></figure>
+<p><strong>3. Not exactly, but close</strong>: about 50%. Random assignment makes the groups similar, not identical.</p>
+<figure><div class="figscroll"><svg viewBox="0 0 760 330" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Histogram of the percentage of the text-reminder group who self-booked, in 1,000 random assignments of 800 patients (400 self-booked) to two groups of 400. The percentages cluster tightly around 50%, from 44.5% to 55.0%. A randomized block design gives exactly 50% every time. When patients chose for themselves, in the Session 6 records, 87.5% of those who signed up for reminders had self-booked." font-family="Public Sans, system-ui, sans-serif">
+<style>
+  .ink { fill: #15201f; }
+  .ink2 { fill: #4a5654; }
+  .ink3 { fill: #6f7b79; }
+  .kink { stroke: #15201f; }
+  .kink2 { stroke: #4a5654; }
+  .kink3 { stroke: #6f7b79; }
+  .axis { stroke: #c3c9c6; }
+  .grid { stroke: #dcdfdd; }
+  .surf { fill: #ffffff; }
+  .band { fill: #eef1ef; }
+  .acc { fill: #1a6b63; }
+  .kacc { stroke: #1a6b63; }
+  .amb { fill: #7d5a11; }
+  .kamb { stroke: #7d5a11; }
+  .s0 { fill: #2a78d6; }
+  .k0 { stroke: #2a78d6; }
+  .s1 { fill: #eb6834; }
+  .k1 { stroke: #eb6834; }
+  .s2 { fill: #1baf7a; }
+  .k2 { stroke: #1baf7a; }
+  .s3 { fill: #eda100; }
+  .k3 { stroke: #eda100; }
+  .s4 { fill: #e87ba4; }
+  .k4 { stroke: #e87ba4; }
+  .s5 { fill: #008300; }
+  .k5 { stroke: #008300; }
+  @media (prefers-color-scheme: dark) {
+    .ink { fill: #e9edeb; }
+    .ink2 { fill: #a5b0ad; }
+    .ink3 { fill: #7e8a87; }
+    .kink { stroke: #e9edeb; }
+    .kink2 { stroke: #a5b0ad; }
+    .kink3 { stroke: #7e8a87; }
+    .axis { stroke: #3a4644; }
+    .grid { stroke: #2a3533; }
+    .surf { fill: #182120; }
+    .band { fill: #1e2827; }
+    .acc { fill: #54b8ab; }
+    .kacc { stroke: #54b8ab; }
+    .amb { fill: #d9ab52; }
+    .kamb { stroke: #d9ab52; }
+    .s0 { fill: #3987e5; }
+    .k0 { stroke: #3987e5; }
+    .s1 { fill: #d95926; }
+    .k1 { stroke: #d95926; }
+    .s2 { fill: #199e70; }
+    .k2 { stroke: #199e70; }
+    .s3 { fill: #c98500; }
+    .k3 { stroke: #c98500; }
+    .s4 { fill: #d55181; }
+    .k4 { stroke: #d55181; }
+    .s5 { fill: #008300; }
+    .k5 { stroke: #008300; }
+  }
+</style>
+<line class="grid" x1="60.0" y1="262.0" x2="730.0" y2="262.0" stroke="#dcdfdd" stroke-width="1" fill="none"/>
+<text class="ink3" x="52.0" y="266.0" font-size="10.5" font-weight="400" text-anchor="end" fill="#6f7b79">0</text>
+<line class="grid" x1="60.0" y1="174.5" x2="730.0" y2="174.5" stroke="#dcdfdd" stroke-width="1" fill="none"/>
+<text class="ink3" x="52.0" y="178.5" font-size="10.5" font-weight="400" text-anchor="end" fill="#6f7b79">100</text>
+<line class="grid" x1="60.0" y1="87.0" x2="730.0" y2="87.0" stroke="#dcdfdd" stroke-width="1" fill="none"/>
+<text class="ink3" x="52.0" y="91.0" font-size="10.5" font-weight="400" text-anchor="end" fill="#6f7b79">200</text>
+<rect class="s0" x="198.8" y="257.6" width="8.8" height="4.4" rx="0" fill="#2a78d6" stroke="none" stroke-width="0"/>
+<rect class="s0" x="208.4" y="244.5" width="8.8" height="17.5" rx="0" fill="#2a78d6" stroke="none" stroke-width="0"/>
+<rect class="s0" x="217.9" y="221.8" width="8.8" height="40.2" rx="0" fill="#2a78d6" stroke="none" stroke-width="0"/>
+<rect class="s0" x="227.5" y="165.8" width="8.8" height="96.2" rx="0" fill="#2a78d6" stroke="none" stroke-width="0"/>
+<rect class="s0" x="237.1" y="80.0" width="8.8" height="182.0" rx="0" fill="#2a78d6" stroke="none" stroke-width="0"/>
+<rect class="s0" x="246.6" y="82.6" width="8.8" height="179.4" rx="0" fill="#2a78d6" stroke="none" stroke-width="0"/>
+<rect class="s0" x="256.2" y="109.8" width="8.8" height="152.2" rx="0" fill="#2a78d6" stroke="none" stroke-width="0"/>
+<rect class="s0" x="265.8" y="131.6" width="8.8" height="130.4" rx="0" fill="#2a78d6" stroke="none" stroke-width="0"/>
+<rect class="s0" x="275.4" y="212.1" width="8.8" height="49.9" rx="0" fill="#2a78d6" stroke="none" stroke-width="0"/>
+<rect class="s0" x="284.9" y="243.6" width="8.8" height="18.4" rx="0" fill="#2a78d6" stroke="none" stroke-width="0"/>
+<rect class="s0" x="294.5" y="257.6" width="8.8" height="4.4" rx="0" fill="#2a78d6" stroke="none" stroke-width="0"/>
+<line class="axis" x1="60.0" y1="262.0" x2="730.0" y2="262.0" stroke="#c3c9c6" stroke-width="1.2" fill="none"/>
+<line class="axis" x1="60.0" y1="262.0" x2="60.0" y2="266.0" stroke="#c3c9c6" stroke-width="1.2" fill="none"/>
+<text class="ink3" x="60.0" y="280.0" font-size="11" font-weight="400" text-anchor="middle" fill="#6f7b79">30%</text>
+<line class="axis" x1="155.7" y1="262.0" x2="155.7" y2="266.0" stroke="#c3c9c6" stroke-width="1.2" fill="none"/>
+<text class="ink3" x="155.7" y="280.0" font-size="11" font-weight="400" text-anchor="middle" fill="#6f7b79">40%</text>
+<line class="axis" x1="251.4" y1="262.0" x2="251.4" y2="266.0" stroke="#c3c9c6" stroke-width="1.2" fill="none"/>
+<text class="ink3" x="251.4" y="280.0" font-size="11" font-weight="400" text-anchor="middle" fill="#6f7b79">50%</text>
+<line class="axis" x1="347.1" y1="262.0" x2="347.1" y2="266.0" stroke="#c3c9c6" stroke-width="1.2" fill="none"/>
+<text class="ink3" x="347.1" y="280.0" font-size="11" font-weight="400" text-anchor="middle" fill="#6f7b79">60%</text>
+<line class="axis" x1="442.9" y1="262.0" x2="442.9" y2="266.0" stroke="#c3c9c6" stroke-width="1.2" fill="none"/>
+<text class="ink3" x="442.9" y="280.0" font-size="11" font-weight="400" text-anchor="middle" fill="#6f7b79">70%</text>
+<line class="axis" x1="538.6" y1="262.0" x2="538.6" y2="266.0" stroke="#c3c9c6" stroke-width="1.2" fill="none"/>
+<text class="ink3" x="538.6" y="280.0" font-size="11" font-weight="400" text-anchor="middle" fill="#6f7b79">80%</text>
+<line class="axis" x1="634.3" y1="262.0" x2="634.3" y2="266.0" stroke="#c3c9c6" stroke-width="1.2" fill="none"/>
+<text class="ink3" x="634.3" y="280.0" font-size="11" font-weight="400" text-anchor="middle" fill="#6f7b79">90%</text>
+<line class="axis" x1="730.0" y1="262.0" x2="730.0" y2="266.0" stroke="#c3c9c6" stroke-width="1.2" fill="none"/>
+<text class="ink3" x="730.0" y="280.0" font-size="11" font-weight="400" text-anchor="middle" fill="#6f7b79">100%</text>
+<text class="ink3" x="395.0" y="302.0" font-size="11.5" font-weight="400" text-anchor="middle" fill="#6f7b79">percentage of the text-reminder group who self-booked their appointment</text>
+<text class="ink3" x="20.0" y="24.0" font-size="11" font-weight="400" text-anchor="start" fill="#6f7b79">number of the 1,000 random assignments</text>
+<text class="ink" x="293.4" y="58.0" font-size="12" font-weight="600" text-anchor="start" fill="#15201f">completely randomized: 44.5% to 55.0%</text>
+<text class="ink2" x="293.4" y="74.0" font-size="11.5" font-weight="400" text-anchor="start" fill="#4a5654">block design: exactly 50% every time</text>
+<line class="kamb" x1="610.4" y1="100.0" x2="610.4" y2="262.0" stroke="#7d5a11" stroke-width="2.0" fill="none" stroke-dasharray="5 3"/>
+<circle class="amb" cx="610.4" cy="262.0" r="5.0" fill="#7d5a11" stroke="none" stroke-width="1.2"/>
+<text class="amb" x="604.4" y="114.0" font-size="11.5" font-weight="600" text-anchor="end" fill="#7d5a11">patients chose (Session 6 records):</text>
+<text class="amb" x="604.4" y="130.0" font-size="11.5" font-weight="400" text-anchor="end" fill="#7d5a11">87.5% of those who signed up</text>
+<text class="amb" x="604.4" y="146.0" font-size="11.5" font-weight="400" text-anchor="end" fill="#7d5a11">had self-booked</text>
+</svg>
+</div><figcaption>In 1,000 completely randomized assignments of the 800 patients, the text group was between 44.5% and 55.0% self-booked, and 996 of the 1,000 were between 45% and 55%. When patients chose for themselves, in Session 6's records, 87.5% of those who signed up had self-booked (140 of 160). The block design fixes it at exactly 50%.</figcaption></figure>
+<p>That picture is the answer to Session 6's confounding problem: letting patients choose put 87.5% of self-booked patients in the reminder group; random assignment puts about half.</p></details>
+<div class="yourturn"><p>Plan 1 already balances booking method, roughly. Write a justification, of two or three sentences, for St Mary's preferring Plan 2.</p></div>
+<details><summary><strong>Reveal — justifying the block design</strong></summary><blockquote><em>"A randomized block design is more appropriate. Booking method is known for every patient in advance and is strongly associated with missing appointments (25.0% of hospital-booked patients missed last year, against 5.0% of self-booked). Blocking by booking method separates that variation from the comparison of the two treatments, so text and no text are compared among similar patients and the comparison is more precise."</em></blockquote>
+<p>"Because it's more random" is wrong: both plans assign every patient by random number. Plan 2 is more <strong>precise</strong>, not more random. And "blocking is better" on its own earns nothing: name the feature of this study, and connect it to what blocking does (Part 2, <em>Choosing between designs</em>).</p></details>
+<h3>Does blocking license the cause?</h3>
+<div class="yourturn"><ol><li>The manager says: <em>"Because we blocked by booking method, we have controlled the confounding variable, so we can say reminders cause fewer missed appointments."</em> Is that the right reason?</li><li>Suppose St Mary's formed the blocks and then let each block's clinic manager choose which 200 patients got texts. What would be lost?</li></ol></div>
+<details><summary><strong>Reveal — random assignment inside every block</strong></summary><p><strong>1. No.</strong> Blocking makes the comparison more precise for the <strong>one</strong> variable blocked on. What allows a cause-and-effect conclusion is <strong>random assignment</strong>: it balances booking method <strong>and</strong> every other extraneous variable, including ones nobody measured, such as a patient's age, distance from the hospital or how organised they are.</p>
+<p><strong>2.</strong> Everything that licenses cause. A manager might text the patients most likely to forget, or least likely. The blocks would be there and the random assignment would not.</p>
+<p><em>Direct control fixes what it can. Blocking separates one known variable, for precision. Random assignment balances everything else, and it is the only one I cite for cause.</em></p></details>
+<h3>Who is blind at St Mary's?</h3>
+<div class="yourturn"><ol><li>Can the patients be blind to their treatment?</li><li>Who else interacts with the patients, and should they know who got a text?</li><li>So is the experiment single-blind, double-blind or neither?</li></ol></div>
+<details><summary><strong>Reveal — single-blind, the other way round</strong></summary><p><strong>1. No.</strong> A patient who gets a text knows it.</p>
+<p><strong>2.</strong> The receptionists who record whether each patient arrived. They should <strong>not</strong> know, so that "missed" is recorded the same way for everyone.</p>
+<p><strong>3.</strong> <strong>Single-blind</strong>: the participants know their treatment, but the research team who interact with them do not. That is the "or vice versa" case of Part 2's definition.</p></details>
+<h3>The results, and what they allow</h3>
+<p>The experiment ran with Plan 2.</p>
+<div class="tbl"><table><thead><tr><th>Block</th><th>Treatment</th><th>Patients</th><th>Missed</th></tr></thead><tbody><tr><td>Self-booked online</td><td>Text</td><td>200</td><td>8</td></tr><tr><td>Self-booked online</td><td>No text</td><td>200</td><td>12</td></tr><tr><td>Booked by the hospital</td><td>Text</td><td>200</td><td>30</td></tr><tr><td>Booked by the hospital</td><td>No text</td><td>200</td><td>50</td></tr></tbody></table></div>
+<p>The hospital's statistician reports that the overall difference between the text and no-text groups is <strong>statistically significant</strong>: random assignment alone would rarely produce a difference this large if texts made no difference. How that is decided is Sessions 15 and 16.</p>
+<div class="yourturn"><ol><li>Work out the percentage who missed in each of the four groups, and for all text and all no-text patients.</li><li>What would a comparison that ignored booking method have mixed together?</li><li>What may St Mary's conclude? Which element do you cite?</li><li>Suppose instead the text group had missed 58 of 400, against 62 of 400, and the difference was not statistically significant. Would that show that reminders do nothing?</li><li>To whom does the conclusion apply? Could it be generalised to all hospitals?</li></ol></div>
+<details><summary><strong>Reveal — a statistically significant difference, and its conclusion</strong></summary><p><strong>1.</strong></p>
+<div class="tbl"><table><thead><tr><th>Block</th><th>Treatment</th><th>Missed</th></tr></thead><tbody><tr><td>Self-booked online</td><td>Text</td><td>8 ÷ 200 = <strong>4.0%</strong></td></tr><tr><td>Self-booked online</td><td>No text</td><td>12 ÷ 200 = <strong>6.0%</strong></td></tr><tr><td>Booked by the hospital</td><td>Text</td><td>30 ÷ 200 = <strong>15.0%</strong></td></tr><tr><td>Booked by the hospital</td><td>No text</td><td>50 ÷ 200 = <strong>25.0%</strong></td></tr><tr class="tot"><td><strong>All patients</strong></td><td><strong>Text</strong></td><td><strong>38 ÷ 400 = 9.5%</strong></td></tr><tr class="tot"><td><strong>All patients</strong></td><td><strong>No text</strong></td><td><strong>62 ÷ 400 = 15.5%</strong></td></tr></tbody></table></div>
+<p>With a text: 2.0 points lower among self-booked patients, 10.0 points lower among hospital-booked patients, 6.0 points lower overall.</p>
+<p><strong>2.</strong> Two kinds of patient who miss at very different rates: 20 of 400 self-booked (5.0%) and 80 of 400 hospital-booked (20.0%). Blocking kept that variation out of the comparison.</p>
+<p><strong>3.</strong> That text reminders <strong>caused</strong> a reduction in missed appointments, because the texts were <strong>randomly assigned</strong> and the difference is statistically significant. Cite random assignment, and nothing else.</p>
+<p><strong>4. No.</strong> 58 ÷ 400 = 14.5% against 15.5%: a difference that small could easily come from the random assignment alone, so the experiment would give no convincing evidence either way. Not significant is not evidence of no effect.</p>
+<p><strong>5.</strong> The 800 were not a random sample of any larger population; they were everyone with an appointment in one month. So the conclusion applies to <strong>patients similar to that month's St Mary's outpatients</strong>, not to all hospitals (Part 2, <em>Experiments on volunteers</em>). Session 6's records had random selection and no random assignment; this experiment has the reverse.</p>
+<blockquote><em>"Because the text reminders were randomly assigned to patients within each booking-method block, and the difference in the percentage who missed (9.5% with a text, 15.5% without) is statistically significant, we can conclude that text reminders caused a reduction in missed appointments. The patients were all of one month's outpatients, not a random sample, so the conclusion applies to patients similar to St Mary's outpatients that month."</em></blockquote>
+<p>Nothing in that conclusion mentions blocking, replication or the blind receptionists. They made the experiment better; the conclusion rests on random assignment.</p></details>
+<hr>
+<h2>Part 6 — On your own: Riverside's hand-cream trial</h2>
+<p>Work this without looking back, then check.</p>
+<p>Riverside hospital, from Sessions 1 and 3, is testing a new hand cream for nurses, whose hands dry out from constant washing. <strong>Thirty nurses volunteer.</strong> For each nurse, a coin toss decides which hand gets the new cream; the other hand gets a <strong>placebo cream</strong> with the same base, colour and smell but no active ingredient. The pharmacy labels the tubes <em>L</em> and <em>R</em> for each nurse and keeps the key. For two weeks every nurse applies 1 ml from each tube, to the matching hand, after every wash. Then a skin specialist, who does not know which hand had which cream, scores each hand's dryness from 0 (none) to 10 (severe).</p>
+<div class="yourturn"><ol><li>Name the experimental design, and give one reason it is more appropriate here than a completely randomized design with 15 nurses on each cream.</li><li>What is the placebo cream for? Could this experiment measure the placebo effect?</li><li>Is the experiment single-blind, double-blind or neither? Say who does not know what.</li><li>Name one variable that is directly controlled, and why it matters.</li><li>The new-cream hand scored lower (less dry) for 24 of the 30 nurses, and the hospital's statistician says the difference is statistically significant. What can Riverside conclude, and about whom?</li></ol></div>
+<details><summary><strong>Reveal — Riverside's answers</strong></summary><ol><li>A <strong>matched pairs design</strong>: each nurse is a pair of hands, matched on everything about that nurse, and a coin decides which hand gets which cream. It is more appropriate because dryness depends heavily on the nurse (how often they wash, their skin, their ward); comparing two hands of the same nurse removes that variation, so the comparison of the creams is more precise than comparing 15 nurses with 15 others.</li><li>It is the <strong>control</strong>: a treatment different from the treatment of interest, so that any effect of applying a cream at all is the same on both hands and only the active ingredient differs. It <strong>cannot</strong> measure the placebo effect, which is placebo against <strong>no treatment</strong>, and no hand went without cream.</li><li><strong>Double-blind</strong>: the nurses do not know which tube is the new cream, and the specialist who scores the hands does not know either. (The pharmacy knows, but takes no part in treating or measuring.)</li><li>For example, the <strong>amount of cream</strong> (1 ml per hand), <strong>when it is applied</strong> (after every wash), or the <strong>two weeks</strong>, the same for everyone. Each would otherwise affect dryness separately from which cream was used.</li><li>The new cream <strong>causes</strong> less dryness than the placebo cream, because the creams were <strong>randomly assigned</strong> to the hands and the difference is statistically significant. The nurses volunteered, so the conclusion applies to <strong>nurses similar to these 30 volunteers</strong>, not to all nurses or all people.</li></ol>
+<p><strong>Check yourself for these:</strong> "completely randomized, because a coin was used" (the coin is inside each pair, which makes it matched pairs); "it measures the placebo effect because there's a placebo" (that needs a no-treatment group); "single-blind, because the pharmacy knows" (the pharmacy does not interact with the nurses); citing the placebo or the double-blind design as the reason for cause in question 5 (the reason is random assignment); and "all nurses" in question 5.</p></details>
+<hr>
+<h2>Part 7 — Explain it back</h2>
+<div class="yourturn"><p>Out loud, or in writing, as if to someone who has never studied statistics: <em>what goes wrong with a sample that is biased, and why does a bigger one not help? Then: what does random assignment do in an experiment that blocking does not?</em></p></div>
+<details><summary><strong>Reveal — what a good answer contains</strong></summary><p>Four things.</p>
+<ol><li><strong>Bias</strong> is a systematic error in the method, so its statistics are consistently too high or too low, and a named bias comes with its mechanism and direction: Lincoln High's newsletter replies were too high because parents of bus users chose to reply.</li><li>A <strong>bigger sample</strong> from the same method reduces the variation from sample to sample but not the bias, as the tool showed at n = 480.</li><li><strong>Random assignment</strong> makes the treatment groups similar on every extraneous variable, measured or not, which is what allows a cause-and-effect conclusion.</li><li><strong>Blocking</strong> separates the variation of one known variable for a more precise comparison, and is not the reason a cause can be claimed.</li></ol>
+<p>If you could explain bias but said "blocking lets us conclude cause", reread Part 5's <em>Does blocking license the cause?</em> before Session 8.</p></details>
+<hr>
+<hr>
+<h1>Homework — Session 7</h1>
+<p><strong>40 marks · bring to Session 8, self-marked</strong></p>
+<h2>How to do this homework</h2>
+<ol><li>Do every part <strong>with the answer key closed.</strong> Where you are unsure, answer anyway and put a <strong>?</strong> beside it.</li><li>Then open the key and <strong>mark your own work honestly.</strong> Write the correct answer beside anything wrong — do not erase what you originally wrote.</li><li><strong>Bring the marked sheet.</strong> Your wrong answers and your question marks are what Session 8 opens with.</li></ol>
+<p>Everything here was taught in the session; this sheet is practice. Almost every mark is for a <strong>reason</strong>: when you name a bias, say which way it pushes the result and why; when you name a design, say what is random in it; when you conclude, say which element allows the conclusion and whom it reaches.</p>
+<hr>
+<h2>Part A — Vocabulary (10 marks)</h2>
+<p>Match each term to its meaning.</p>
+<div class="tbl"><table><thead><tr><th></th><th>Term</th><th></th><th>Meaning</th></tr></thead><tbody><tr><td>1</td><td>Bias</td><td>A</td><td>Some individuals chosen to be sampled do not respond, and they may differ from those who do</td></tr><tr><td>2</td><td>Voluntary response bias</td><td>B</td><td>The average response to a placebo minus the average response to no treatment</td></tr><tr><td>3</td><td>Undercoverage bias</td><td>C</td><td>More than one experimental unit is assigned to each treatment</td></tr><tr><td>4</td><td>Nonresponse bias</td><td>D</td><td>A systematic error in a sampling method that makes a statistic consistently larger or smaller than the parameter</td></tr><tr><td>5</td><td>Response bias</td><td>E</td><td>Neither the participants nor the research team who interact with them know which treatment each participant receives</td></tr><tr><td>6</td><td>Control group</td><td>F</td><td>Part of the population is left out of the sampling method, or is less likely to be selected</td></tr><tr><td>7</td><td>Placebo effect</td><td>G</td><td>Answers or measurements tend to differ from the true value in one direction</td></tr><tr><td>8</td><td>Double-blind</td><td>H</td><td>A source of extraneous variation used to group the units before treatments are randomly assigned within each group</td></tr><tr><td>9</td><td>Replication</td><td>I</td><td>A sample made up entirely of volunteers</td></tr><tr><td>10</td><td>Blocking variable</td><td>J</td><td>Experimental units created for comparison, which may receive a placebo or a treatment other than the one of interest</td></tr></tbody></table></div>
+<h2>Part B — The hospital network's patient survey, again (10 marks)</h2>
+<p>The hospital network from Sessions 1 and 6 discharged <strong>12,400 patients</strong> last year. It wants to estimate the proportion of all 12,400 who <strong>would recommend their hospital to a friend</strong>. For each plan below, <strong>name the bias</strong>, and <strong>say whether the estimate is likely to be too high or too low</strong>, with a reason (1 mark each).</p>
+<p><strong>B1.</strong> Plan T from Session 6: every discharge letter carried a link headed <em>"Had a problem during your stay? Tell us here."</em> 1,150 patients used it. (2)</p>
+<p><strong>B2.</strong> A random number generator chose 300 of the 12,400, and each was posted a questionnaire. 126 were returned. The network found that patients who had been readmitted within a month returned far fewer questionnaires than other patients. (2)</p>
+<p><strong>B3.</strong> A random number generator chose 300 patients from the list of those who had given an <strong>email address</strong>. Only 38% of patients over 75 gave one, against 90% of younger patients, and the network's earlier surveys found that patients over 75 are the most likely to recommend their hospital. (2)</p>
+<p><strong>B4.</strong> The questionnaire asks: <em>"Our nurses worked tirelessly through a very difficult winter. Would you recommend our hospital to a friend?"</em> Name the bias and its likely direction, and rewrite the question neutrally. (2)</p>
+<p><strong>B5.</strong> A manager says: <em>"The link in B1 only got 1,150 replies. Leave it open for three more months and we will have 3,000, which will fix the problem."</em> Explain why it will not. (2)</p>
+<h2>Part C — Oakfield's reading experiment (10 marks)</h2>
+<p>In Session 6's Odd One Out, an Oakfield teacher compared reading on paper and on a tablet with 48 Year 7 students. She now wants to run it properly. Every student will read the same passage, on paper or on a tablet, and then take the same 20-question comprehension quiz.</p>
+<p><strong>C1.</strong> Name the experimental units, the treatments and the response. (1)</p>
+<p><strong>C2.</strong> A colleague suggests: <em>"Let the students who like tablets use tablets, and the rest use paper."</em> Explain why this would make a cause-and-effect conclusion difficult, naming a possible confounding variable. (2)</p>
+<p><strong>C3.</strong> Describe how to assign the 48 students to the two treatments in a <strong>completely randomized design</strong>. (2)</p>
+<p><strong>C4.</strong> The school knows each student's reading age: 20 of the 48 have a reading age above their actual age and 28 do not. Describe a <strong>randomized block design</strong> using reading age, and explain why it may be more appropriate than the completely randomized design. (3)</p>
+<p><strong>C5.</strong> Name one variable the teacher should <strong>directly control</strong>, and say why. (1)</p>
+<p><strong>C6.</strong> Can the students be blind to their treatment? Could the person marking the quizzes be? (1)</p>
+<h2>Part D — The library's display experiment (6 marks)</h2>
+<p>The library service from Sessions 4 and 5 has <strong>18 branches</strong>, with weekly visits from 250 to 2,200. It wants to know whether a <strong>display of new books at the entrance</strong> increases the number of items borrowed per week. It will run the display for eight weeks in 9 of the branches. The branches' weekly visits, in order, are:</p>
+<pre class="data">250  450  630  700  700  710  830  910  910
+1090 1160 1350 1400 1410 1480 1550 2020 2200</pre>
+<p><strong>D1.</strong> Explain why a <strong>matched pairs design</strong> suits this study, and describe how to form the pairs and assign the display. (3)</p>
+<p><strong>D2.</strong> After eight weeks, the branches with the display borrowed more items per week, and the difference is statistically significant. What can the library service conclude, and about which branches? (2)</p>
+<p><strong>D3.</strong> Which element of the design allows the conclusion to be about cause? (1)</p>
+<h2>Part E — The café's tables, decided by coin (4 marks)</h2>
+<p>Session 6's homework E3 asked how the café could find out whether putting tables outside <strong>causes</strong> higher takings. The café has now done it: on each of 40 days in spring, the owner tossed a coin at opening time, heads tables out and tails tables in. Mean takings were higher on table days, and the difference is statistically significant.</p>
+<p><strong>E1.</strong> Can the café conclude that putting tables outside causes higher takings? Justify your answer by citing the relevant element of the design. (2)</p>
+<p><strong>E2.</strong> The owner wants to use the result to decide about tables in December. Comment. (1)</p>
+<p><strong>E3.</strong> Suppose instead the difference had <strong>not</strong> been statistically significant. Would that show that tables make no difference to takings? (1)</p>
+<hr>
+<hr>
+<h1>Answer key</h1>
+<p><em>For the student to mark their own work, after attempting everything.</em></p>
+<h3>Part A (10 marks, 1 each)</h3>
+<p>1–D · 2–I · 3–F · 4–A · 5–G · 6–J · 7–B · 8–E · 9–C · 10–H</p>
+<h3>Part B (10 marks)</h3>
+<p><strong>B1.</strong> (2) <strong>Voluntary response bias</strong> (1): the patients chose themselves. <strong>Too low</strong> (1): the heading invites patients who had a problem, who are the least likely to recommend the hospital, so they are over-represented.</p>
+<p><strong>B2.</strong> (2) <strong>Nonresponse bias</strong> (1): the 300 were chosen, and 174 did not respond. <strong>Too high</strong> (1): readmitted patients, who are likely to be less satisfied, responded less, so satisfied patients are over-represented among the respondents.</p>
+<blockquote>The direction must come with its reason. "Nonresponse bias, because 174 did not reply" earns one mark: nonresponse biases the estimate only when the nonrespondents differ, and the mark is for saying how they differ and which way that pushes.</blockquote>
+<p><strong>B3.</strong> (2) <strong>Undercoverage bias</strong> (1): patients without an email address cannot be selected, and most patients over 75 have none. <strong>Too low</strong> (1): the over-75s are the most likely to recommend, and they are under-represented.</p>
+<blockquote>This one is random and still biased. The random number generator chose from an incomplete list; randomness cannot reach people who are not on it.</blockquote>
+<p><strong>B4.</strong> (2) <strong>Response bias</strong>, from question wording (1): the preamble leads toward <em>yes</em>, so the estimate is likely to be <strong>too high</strong>. A neutral version: <em>"Would you recommend this hospital to a friend? Yes or no."</em> (1 for a rewrite with no leading preamble.)</p>
+<p><strong>B5.</strong> (2) The bias comes from the <strong>method</strong>, patients choosing themselves in response to a heading about problems (1). More replies from the same method are more of the same patients: the estimate would vary less, around the same wrong value (1).</p>
+<h3>Part C (10 marks)</h3>
+<p><strong>C1.</strong> (1) Units: the 48 students. Treatments: reading the passage on paper, and on a tablet. Response: the quiz score out of 20. All three needed for the mark.</p>
+<p><strong>C2.</strong> (2) The students would choose their own treatment, so the treatment would travel with whatever made them choose it (1). For example, <strong>how much a student reads on screens at home</strong>: students who like tablets may read on screens more, and that practice could raise their quiz scores on a tablet whatever the effect of the tablet itself; so a difference could be due to it, not to the format (1).</p>
+<blockquote>A confounding variable in an experiment is one related to <strong>which treatment</strong> a unit gets (1.13.A.8). Name the variable <strong>and</strong> say how it is tied to the choice and to the score.</blockquote>
+<p><strong>C3.</strong> (2) Number the students 1 to 48. Use a random number generator to choose 24 different numbers (ignoring repeats); those students read on a tablet (1). The other 24 read on paper; then compare the mean quiz scores of the two groups (1).</p>
+<p><strong>C4.</strong> (3) Form two blocks by reading age: the 20 above their age, and the 28 not (1). Within each block, use a random number generator to assign half to paper and half to tablet: 10 and 10, and 14 and 14 (1). It may be more appropriate because reading age is known in advance and is strongly related to comprehension scores; blocking separates that variation from the comparison of paper and tablet, so the comparison is more precise (1).</p>
+<blockquote>"Blocking is better" earns nothing. The mark is for naming the feature of this study, that reading age is known and affects the scores, and connecting it to what blocking does.</blockquote>
+<p><strong>C5.</strong> (1) For example: <strong>the same passage</strong> and the same quiz for everyone; <strong>the same time allowed</strong>; the same room or time of day. Each could otherwise affect the score separately from the format.</p>
+<p><strong>C6.</strong> (1) The students <strong>cannot</strong> be blind: they can see whether they have paper or a tablet. The person marking the quizzes <strong>can</strong> be, if the quizzes carry only a number; then the experiment is single-blind, the "or vice versa" case.</p>
+<h3>Part D (6 marks)</h3>
+<p><strong>D1.</strong> (3) Weekly visits vary enormously, from 250 to 2,200, and a branch's borrowing depends strongly on how many people visit; pairing branches with similar visits removes that variation from the comparison (1). Pair the branches in order: (250, 450), (630, 700), (700, 710), (830, 910), (910, 1090), (1160, 1350), (1400, 1410), (1480, 1550), (2020, 2200) (1). In each pair, toss a coin to decide which branch gets the display; the other does not; compare the two branches within each pair (1).</p>
+<p><strong>D2.</strong> (2) The display <strong>caused</strong> an increase in items borrowed per week (1), for <strong>these 18 branches</strong> during those eight weeks, or branches similar to them: all 18 of the service's branches took part, so the conclusion is about this service's branches, not about libraries in general (1).</p>
+<p><strong>D3.</strong> (1) <strong>Random assignment</strong>: the coin in each pair decided which branch got the display. Not the pairing, which made the comparison more precise.</p>
+<h3>Part E (4 marks)</h3>
+<p><strong>E1.</strong> (2) <strong>Yes</strong> (1). The treatment was <strong>randomly assigned</strong> to the days by a coin, so the weather and every other day-to-day variable should be balanced between table days and no-table days, and the difference is statistically significant (1).</p>
+<blockquote>"Yes, because there were 40 days" cites replication, and "yes, because it was an experiment" cites nothing. The mark is for random assignment.</blockquote>
+<p><strong>E2.</strong> (1) The 40 days were spring days, not a random selection of days from the whole year, so the conclusion applies to days similar to those spring days. December's weather is different, and the result may not hold.</p>
+<p><strong>E3.</strong> (1) <strong>No.</strong> It would mean the difference could plausibly have come from the random assignment alone, so the experiment would give no convincing evidence of an effect; that is not evidence of no effect.</p>
+<h3>Marks summary</h3>
+<div class="tbl"><table><thead><tr><th>Part</th><th>Marks</th></tr></thead><tbody><tr><td>A — Vocabulary</td><td>10</td></tr><tr><td>B — The hospital network's patient survey, again</td><td>10</td></tr><tr><td>C — Oakfield's reading experiment</td><td>10</td></tr><tr><td>D — The library's display experiment</td><td>6</td></tr><tr><td>E — The café's tables, decided by coin</td><td>4</td></tr><tr class="tot"><td><strong>Total</strong></td><td><strong>40</strong></td></tr></tbody></table></div>
+<hr>
+<hr>
+<h1>Reference sheet — keep this</h1>
+<p><em>Every term carries an example from this session. Lincoln High's parameter is 651 of 1,842 = 0.353; St Mary's experiment is next month's 800 outpatients.</em></p>
+<h3>Bias and its kinds, with Lincoln High's samples (1.12.A)</h3>
+<p><strong>Bias</strong> — a systematic error in the sampling method: its statistic is consistently too high or consistently too low. Always give the direction and the reason. <em>Example: the newsletter replies gave 0.604 against 0.353, and the tool showed this method centring near 0.61 sample after sample.</em></p>
+<p><strong>Convenience sample</strong> — the individuals easiest to reach; nonrandom, so potentially biased. <em>Example: the first 120 through the main gate: 0.100.</em></p>
+<p><strong>Voluntary response bias</strong> — the sample is made up entirely of volunteers, usually those who care most. <em>Example: parents replying to a newsletter about the bus timetable, so bus users over-represented: too high.</em></p>
+<p><strong>Undercoverage bias</strong> — part of the population is left out, or less likely to be chosen. <em>Example: school-bus students use the side bus bay, so a main-gate sample misses them: too low.</em></p>
+<p><strong>Nonresponse bias</strong> — individuals chosen for the sample do not respond, and differ from those who do. <em>Example: 33 of 120 did not answer at 4:30 pm; bus users were still travelling: too low.</em></p>
+<p><strong>Response bias</strong> — the answers or measurements lean one way; includes question wording (leading or confusing questions) and self-reports. <em>Example: the late bus: 81.7% yes to one wording, 28.3% to the other.</em></p>
+<blockquote><strong>A bigger sample does not cure bias.</strong> At n = 480 the biased methods clustered more tightly around their wrong values. Only changing the method helps.</blockquote>
+<h3>Well-designed experiments: the elements, with St Mary's (1.13.A)</h3>
+<div class="tbl"><table><thead><tr><th>Element (1.13.A.1)</th><th>Meaning</th><th>St Mary's reminder experiment</th></tr></thead><tbody><tr class="tot"><td><strong>Comparison</strong> of at least two treatment groups</td><td>one may be a control group</td><td>text against no text</td></tr><tr class="tot"><td><strong>Random assignment</strong></td><td>a random mechanism decides each unit's treatment</td><td>a random number generator, inside each block</td></tr><tr class="tot"><td><strong>Replication</strong></td><td>more than one unit per treatment</td><td>200 patients per treatment in each block</td></tr><tr class="tot"><td><strong>Direct control</strong></td><td>keep extraneous variables the same for every unit</td><td>same wording, sent at 10 am the day before, same rule for "missed"</td></tr></tbody></table></div>
+<p><strong>Control group</strong> — units created for comparison; may receive a placebo or a different treatment. <em>Example: the no-text patients; or a car-park text, which would isolate the effect of the reminder's content.</em></p>
+<p><strong>Placebo</strong> and <strong>placebo effect</strong> — an inactive treatment; the placebo effect is average response to placebo minus average response to no treatment. <em>Example: Riverside's placebo cream. With no untreated hand, that trial cannot measure the placebo effect.</em></p>
+<p><strong>Single-blind</strong> — the participants do not know their treatment but the team who interact with them do, <strong>or vice versa</strong>. <strong>Double-blind</strong> — neither knows. <em>Example: single-blind at St Mary's (patients know, receptionists do not); double-blind at Riverside (nurses and specialist both unaware).</em></p>
+<p><strong>Extraneous variable</strong> — known or believed to affect the response, but not being studied. <strong>Random assignment</strong> makes its distribution about the same in every treatment group. <em>Example: booking method. In 1,000 random assignments the text group was 44.5% to 55.0% self-booked, against 87.5% when patients chose.</em></p>
+<p><strong>Confounding variable in an experiment</strong> — related to the explanatory variable, so its effect cannot be told apart from the treatment's. <em>Example: texting only Monday to Wednesday patients: the day would travel with the text.</em></p>
+<h3>Three experimental designs, each with its example (1.13.B–C)</h3>
+<div class="tbl"><table><thead><tr><th>Design</th><th>What is random</th><th>Choose it when</th><th>Example</th></tr></thead><tbody><tr class="tot"><td><strong>Completely randomized</strong></td><td>every unit's treatment, with no grouping first</td><td>no strong extraneous variable is known in advance</td><td>Plan 1: 400 of the 800 texted, by random number</td></tr><tr class="tot"><td><strong>Randomized block</strong></td><td>treatments within each block; the blocks are formed from the blocking variable</td><td>a known variable is strongly related to the response</td><td>Plan 2: blocks by booking method, 200 texted in each</td></tr><tr class="tot"><td><strong>Matched pairs</strong></td><td>which member of each pair gets which treatment, or the order for one unit</td><td>two treatments, and close matching is possible</td><td>Riverside: a coin chooses which hand gets the new cream</td></tr></tbody></table></div>
+<p><em>Model justification: "Booking method is known in advance and strongly associated with missing appointments, so blocking on it separates that variation from the comparison of text and no text, giving a more precise comparison."</em></p>
+<h3>What an experiment lets you conclude, and about whom (1.13.D)</h3>
+<p><strong>Cause and effect</strong> — from <strong>random assignment</strong>, with a <strong>statistically significant</strong> difference. Cite random assignment and nothing else. <em>Example: "Because texts were randomly assigned within blocks and 9.5% against 15.5% is statistically significant, texts caused fewer missed appointments."</em></p>
+<p><strong>Not statistically significant</strong> — the difference could be chance from the random assignment; not evidence of no effect. <em>Example: 14.5% against 15.5% would not have shown that texts do nothing.</em></p>
+<p><strong>How far it reaches</strong> — random selection generalises to the population; volunteers or everyone available reach only units similar to them. <em>Example: St Mary's: patients similar to that month's outpatients. Riverside: nurses similar to the 30 volunteers.</em></p>
+<div class="tbl"><table><thead><tr><th>Selected at random?</th><th>Assigned at random?</th><th>You may conclude</th></tr></thead><tbody><tr><td>Yes</td><td>Yes</td><td>cause, for the whole population sampled</td></tr><tr><td>No</td><td>Yes</td><td>cause, for units similar to those in the study: St Mary's, Riverside</td></tr><tr><td>Yes</td><td>No</td><td>an association, for the population sampled: Session 6's St Mary's records</td></tr><tr><td>No</td><td>No</td><td>an association, for units similar to those in the study: Lincoln's gate sample</td></tr></tbody></table></div>
+<div class="note red"><span class="lbl">Not in the course description</span><p><strong>Lurking variable</strong>, <strong>Hawthorne effect</strong>, <strong>selection bias</strong>, <strong>measurement bias</strong>, <strong>interviewer bias</strong>, <strong>sampling error</strong>, <strong>randomized comparative experiment</strong>, <strong>crossover design</strong>, <strong>sampling frame</strong>, <strong>multistage sampling</strong>, <strong>quota sampling</strong> and <strong>scope of inference</strong> appear in the prep books but nowhere in the course description. Use <em>extraneous variable</em> or <em>confounding variable</em>, name the four biases above, and call a design where each unit receives both treatments in random order a <strong>matched pairs design</strong>.</p></div>
+<hr>
+<p><em>CED references: Topic 1.12 (1.12.A.1–6), Topic 1.13 (1.13.A.1–10, 1.13.B.1–4, 1.13.C.1, 1.13.D.1–2); Topic 3.7 (3.7.B.1) for the formal meaning of statistically significant; the Unit 1 guide's notes on nonresponse direction, random selection and random assignment, and statistically significant differences in well-designed experiments; the Sample Instructional Activity for topics 1.11–1.12 (Password-style games). Course and Exam Description effective Fall 2026.</em></p>
+<p><em>Supporting reading: Barron's pdf 245–262 · Princeton Review 187–196 · 5 Steps to a 5 126–133.</em></p>
+<p><em>Next session: Topics 2.1–2.3 — two-way tables, with joint, marginal and conditional relative frequencies, and simulation as a way of estimating a probability.</em></p>
+</main>
+<script>window.COURSE_NAV={"kicker": "CED 1.12–1.13", "title": "Session 7 Workbook", "map": [{"label": "Course", "items": [{"href": "index.html", "label": "Home", "current": false}, {"href": "plan.html", "label": "The 20-hour plan", "current": false}]}, {"label": "Block A · Describing one variable", "items": [{"href": "s01-tutor.html", "label": "Session 1 · Tutor", "current": false}, {"href": "s01-student.html", "label": "Session 1 · Student", "current": false}, {"href": "s01-test.html", "label": "Session 1 · Test", "current": false}, {"href": "s02-tutor.html", "label": "Session 2 · Tutor", "current": false}, {"href": "s02-student.html", "label": "Session 2 · Student", "current": false}, {"href": "s02-test.html", "label": "Session 2 · Test", "current": false}, {"href": "s03-tutor.html", "label": "Session 3 · Tutor", "current": false}, {"href": "s03-student.html", "label": "Session 3 · Student", "current": false}, {"href": "s03-test.html", "label": "Session 3 · Test", "current": false}]}, {"label": "Block B · Describing two variables", "items": [{"href": "s04-tutor.html", "label": "Session 4 · Tutor", "current": false}, {"href": "s04-student.html", "label": "Session 4 · Student", "current": false}, {"href": "s04-test.html", "label": "Session 4 · Test", "current": false}, {"href": "s05-tutor.html", "label": "Session 5 · Tutor", "current": false}, {"href": "s05-student.html", "label": "Session 5 · Student", "current": false}, {"href": "s05-test.html", "label": "Session 5 · Test", "current": false}]}, {"label": "Block C · Collecting data", "items": [{"href": "s06-tutor.html", "label": "Session 6 · Tutor", "current": false}, {"href": "s06-student.html", "label": "Session 6 · Student", "current": false}, {"href": "s06-test.html", "label": "Session 6 · Test", "current": false}, {"href": "s07-tutor.html", "label": "Session 7 · Tutor", "current": false}, {"href": "s07-student.html", "label": "Session 7 · Student", "current": true}, {"href": "s07-test.html", "label": "Session 7 · Test", "current": false}]}, {"label": "Interactive", "items": [{"href": "tools/unit1-explorer.html", "label": "Unit 1 Explorer", "current": false}, {"href": "tools/boxplot-builder.html", "label": "Boxplot Builder", "current": false}, {"href": "tools/guess-correlation.html", "label": "Guess the Correlation", "current": false}, {"href": "tools/least-squares-fitter.html", "label": "Least-squares Fitter", "current": false}, {"href": "tools/sampling-methods.html", "label": "Sampling Methods", "current": false}, {"href": "tools/sampling-bias.html", "label": "Sampling Bias", "current": false}]}], "prev": {"href": "s07-tutor.html", "label": "Session 7 · Tutor"}, "next": {"href": "s07-test.html", "label": "Session 7 · Test"}, "variants": [{"href": "s07-tutor.html", "label": "Tutor", "current": false}, {"href": "s07-student.html", "label": "Student", "current": true}, {"href": "s07-test.html", "label": "Test", "current": false}]};</script>
+<script src="assets/course.js"></script>
+</body>
+</html>

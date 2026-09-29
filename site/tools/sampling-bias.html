@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sampling Bias · AP Statistics in Twenty Hours</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Spectral:ital,wght@0,600;0,700;1,600&display=swap">
+<link rel="stylesheet" href="../assets/course.css">
+</head>
+<body>
+<main class="page page--wide">
+<style>.page{max-width:none;padding-inline:0}.page .wrap{max-width:62rem}</style><style>
+  /* Sampling Bias. Scoped sb- classes; colours are course.css tokens only. */
+  .sb-wrap{max-width:62rem;margin-inline:auto;padding:30px 24px 48px}
+  @media(max-width:520px){.sb-wrap{padding-inline:14px}}
+  .sb-eyebrow{font-family:var(--f-mono);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);font-weight:500;margin:0 0 8px}
+  .sb-wrap h1{margin:0 0 10px}
+  .sb-lede{max-width:66ch;color:var(--ink-2);margin:0 0 20px}
+  .sb-tool{background:var(--surface);border:1px solid var(--rule);border-radius:4px;overflow:hidden}
+  .sb-controls{display:flex;flex-wrap:wrap;gap:14px 22px;align-items:flex-end;padding:16px 20px;background:var(--surface-2);border-bottom:1px solid var(--rule)}
+  .sb-ctl{display:flex;flex-direction:column;gap:6px;min-width:0}
+  .sb-lbl{font-family:var(--f-mono);font-size:.64rem;letter-spacing:.11em;text-transform:uppercase;color:var(--ink-3);font-weight:600}
+  .sb-seg{display:flex;border:1px solid var(--rule-strong);border-radius:3px;overflow:hidden;flex-wrap:wrap}
+  .sb-seg button{appearance:none;border:0;background:var(--surface);color:var(--ink-2);cursor:pointer;font-family:var(--f-body);font-size:.82rem;font-weight:600;padding:8px 12px}
+  .sb-seg button+button{border-left:1px solid var(--rule-strong)}
+  .sb-seg button[aria-pressed="true"]{background:var(--accent);color:#fff}
+  .sb-seg button[disabled]{opacity:.45;cursor:not-allowed}
+  .sb-btns{display:flex;gap:10px;flex-wrap:wrap;padding:14px 20px 0}
+  .sb-btn{appearance:none;font-family:var(--f-body);font-size:.88rem;font-weight:600;cursor:pointer;padding:9px 15px;border-radius:3px;border:1px solid var(--accent);background:transparent;color:var(--accent)}
+  .sb-btn:hover{background:var(--accent-soft)}
+  .sb-btn.sb-primary{background:var(--accent);color:#fff}
+  .sb-main{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:0}
+  @media(max-width:760px){.sb-main{grid-template-columns:minmax(0,1fr)}}
+  .sb-pop{padding:12px 16px 10px;border-right:1px solid var(--rule)}
+  @media(max-width:760px){.sb-pop{border-right:0;border-bottom:1px solid var(--rule)}}
+  .sb-pop svg{display:block;width:100%;height:auto}
+  .sb-legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:.8rem;color:var(--ink-2);margin-top:8px}
+  .sb-key{display:inline-block;width:11px;height:11px;border-radius:2px;vertical-align:-1px;margin-right:5px}
+  .sb-key.sb-hollow{background:transparent;border:1.5px solid var(--ink-2)}
+  .sb-side{padding:16px 20px;display:flex;flex-direction:column;gap:12px}
+  .sb-say{margin:0;font-size:.93rem;color:var(--ink-2);min-height:7.4em}
+  .sb-say b{color:var(--ink)}
+  .sb-read{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin:0;border:1px solid var(--rule);border-radius:3px}
+  .sb-stat{padding:8px 11px;border-right:1px solid var(--rule)}
+  .sb-stat:last-child{border-right:0}
+  .sb-stat dt{font-family:var(--f-mono);font-size:.58rem;letter-spacing:.11em;text-transform:uppercase;color:var(--ink-3);margin-bottom:2px}
+  .sb-stat dd{margin:0;font-family:var(--f-mono);font-size:1.02rem;font-weight:600;font-variant-numeric:tabular-nums;color:var(--ink)}
+  .sb-strips{border-top:1px solid var(--rule);padding:12px 16px 14px}
+  .sb-strips svg{display:block;width:100%;height:auto}
+  .sb-table{width:100%;border-collapse:collapse;font-size:.84rem;margin-top:8px;table-layout:fixed;min-width:0}
+  .sb-table th:nth-child(1){width:28%} .sb-table th:nth-child(2){width:14%}
+  .sb-table th,.sb-table td{text-align:left;padding:5px 8px;border-bottom:1px solid var(--rule);font-variant-numeric:tabular-nums}
+  .sb-table th{white-space:normal;vertical-align:bottom;font-family:var(--f-mono);font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);font-weight:600}
+  .sb-table td{font-family:var(--f-mono);color:var(--ink)}
+  .sb-table td:first-child{font-family:var(--f-body)}
+  .sb-tblwrap{overflow-x:auto}
+  @media(max-width:520px){.sb-table{font-size:.74rem}.sb-table th,.sb-table td{padding:5px 3px}.sb-table th{font-size:.52rem;letter-spacing:.04em}.sb-strips,.sb-pop{padding-inline:8px}}
+  .sb-notes{display:grid;gap:12px;margin-top:18px;max-width:70ch}
+  .sb-note{border-radius:3px;padding:13px 17px}
+  .sb-note .sb-nl{display:block;font-family:var(--f-mono);font-size:.62rem;letter-spacing:.13em;text-transform:uppercase;font-weight:600;margin-bottom:4px}
+  .sb-note p{margin:0;font-size:.92rem;color:var(--ink-2)}
+  .sb-note strong{color:var(--ink)}
+  .sb-note.teal{background:var(--accent-soft);border:1px solid var(--accent)} .sb-note.teal .sb-nl{color:var(--accent-deep)}
+  .sb-note.amber{background:var(--amber-soft);border:1px solid var(--amber-rule)} .sb-note.amber .sb-nl{color:var(--amber)}
+  /* svg marks */
+  .sb-t{fill:var(--ink-3);font-size:11px;font-family:var(--f-body)}
+  .sb-tk{fill:var(--ink-2);font-size:11.5px;font-family:var(--f-body);font-weight:600}
+  .sb-axis{stroke:var(--rule-strong)} .sb-grid{stroke:var(--rule)}
+  .sb-par{stroke:var(--ink);stroke-dasharray:4 3}
+  .sb-bus{fill:var(--s2)} .sb-nobus{fill:var(--s1)}
+  .sb-cell{fill-opacity:.2}
+  .sb-cell.sb-on{fill-opacity:1}
+  .sb-cell.sb-out{fill-opacity:.05}
+  .sb-cell.sb-miss{fill-opacity:.2;stroke:var(--ink);stroke-width:1.1}
+  .sb-dot{fill:var(--data);fill-opacity:.8}
+  .sb-last{fill:none;stroke:var(--ink);stroke-width:1.4}
+  .sb-rowbg{fill:var(--surface-2)}
+  .sb-rowbg.sb-cur{fill:var(--accent-soft)}
+  :focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+</style>
+
+<div class="sb-wrap">
+  <p class="sb-eyebrow">AP Statistics &middot; Session 7 &middot; CED 1.12</p>
+  <h1>Sampling Bias</h1>
+  <p class="sb-lede">A simulated Lincoln High: 1,842 students in three home areas, and <b>651</b> of them travel mainly by bus. So the <b>parameter</b>, the proportion of all 1,842 who travel by bus, is known here: <b>0.353</b>. Choose a way of collecting a sample, draw it, and see its <b>statistic</b>, the sample proportion who travel by bus. Then draw many samples and see where each method's estimates centre.</p>
+
+  <div class="sb-tool">
+    <div class="sb-controls">
+      <div class="sb-ctl">
+        <span class="sb-lbl" id="sbMethodLbl">How the sample is collected</span>
+        <div class="sb-seg" role="group" aria-labelledby="sbMethodLbl" id="sbMethods">
+          <button type="button" data-m="srs" aria-pressed="true">Simple random sample</button>
+          <button type="button" data-m="gate" aria-pressed="false">First through the main gate</button>
+          <button type="button" data-m="vol" aria-pressed="false">Newsletter link replies</button>
+          <button type="button" data-m="phone" aria-pressed="false">Random, phoned at 4:30 pm</button>
+        </div>
+      </div>
+      <div class="sb-ctl">
+        <span class="sb-lbl" id="sbNLbl">Sample size</span>
+        <div class="sb-seg" role="group" aria-labelledby="sbNLbl" id="sbSizes">
+          <button type="button" data-n="30" aria-pressed="false">30</button>
+          <button type="button" data-n="120" aria-pressed="true">120</button>
+          <button type="button" data-n="480" aria-pressed="false">480</button>
+        </div>
+      </div>
+      <div class="sb-ctl">
+        <span class="sb-lbl" id="sbRLbl">Bus users who answer the 4:30 call</span>
+        <div class="sb-seg" role="group" aria-labelledby="sbRLbl" id="sbRates">
+          <button type="button" data-r="0.4" aria-pressed="true">40%</button>
+          <button type="button" data-r="0.9" aria-pressed="false">90%, like everyone else</button>
+        </div>
+      </div>
+    </div>
+    <div class="sb-btns">
+      <button type="button" class="sb-btn sb-primary" id="sbOne">Draw one sample</button>
+      <button type="button" class="sb-btn" id="sbHundred">Draw 100 samples</button>
+      <button type="button" class="sb-btn" id="sbClear">Clear results</button>
+    </div>
+
+    <div class="sb-main">
+      <div class="sb-pop">
+        <svg id="sbPop" viewBox="0 0 560 246" role="img" aria-label="The population"></svg>
+        <div class="sb-legend" aria-hidden="true">
+          <span><span class="sb-key" style="background:var(--s2)"></span>Travels mainly by bus (651)</span>
+          <span><span class="sb-key" style="background:var(--s1)"></span>Does not (1,191)</span>
+          <span><span class="sb-key sb-hollow"></span>Phoned, did not answer</span>
+        </div>
+      </div>
+      <div class="sb-side">
+        <p class="sb-say" id="sbSay" aria-live="polite"></p>
+        <dl class="sb-read">
+          <div class="sb-stat"><dt>In the data</dt><dd id="sbN">&mdash;</dd></div>
+          <div class="sb-stat"><dt>Sample proportion</dt><dd id="sbPhat">&mdash;</dd></div>
+          <div class="sb-stat"><dt>Parameter</dt><dd id="sbP">&mdash;</dd></div>
+        </dl>
+      </div>
+    </div>
+
+    <div class="sb-strips">
+      <span class="sb-lbl" id="sbStripLbl">Every sample proportion so far, at this sample size &middot; dashed line: the parameter</span>
+      <svg id="sbStrips" viewBox="0 0 600 300" role="img" aria-label="Sample proportions by method"></svg>
+      <div class="sb-tblwrap">
+        <table class="sb-table" aria-label="Summary of the sample proportions for each method at this sample size">
+          <thead><tr><th>Method</th><th>Samples</th><th>Centre of estimates</th><th>SD of estimates</th><th>Centre &minus; parameter</th></tr></thead>
+          <tbody id="sbTbody"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="sb-notes">
+    <div class="sb-note teal"><span class="sb-nl">Try this first</span>
+      <p>At a sample size of 120, press <strong>Draw 100 samples</strong> once for each method. The simple random samples scatter around the dashed line, some above and some below: that is <strong>variation from sample to sample</strong>, and it is not bias. The other three rows sit consistently to one side of the line. That is <strong>bias</strong>: a systematic error in the method, so the statistic is consistently larger, or consistently smaller, than the parameter.</p></div>
+    <div class="sb-note amber"><span class="sb-nl">Then the trap</span>
+      <p>Switch to a sample size of <strong>480</strong> and draw 100 of each again. Every row gets narrower. The simple random samples close in on the parameter; the biased methods close in on the <strong>wrong</strong> value. A bigger sample reduces the variation from sample to sample. It does nothing about bias.</p></div>
+    <div class="sb-note teal"><span class="sb-nl">And one more</span>
+      <p>Choose <strong>Random, phoned at 4:30 pm</strong> and set the bus users' answer rate to <strong>90%, like everyone else</strong>. About one in ten chosen students still fails to answer, but the bias vanishes. Nonresponse biases a result when the people who do not respond <strong>differ</strong> from those who do in a way that matters for the question: here, bus users are still on the bus at 4:30.</p></div>
+  </div>
+</div>
+
+<script>
+(function () {
+  "use strict";
+  /* STATS-BEGIN : pure functions, extracted and unit-tested in Node */
+  function mulberry32(a) {
+    return function () {
+      a |= 0; a = (a + 0x6D2B79F5) | 0;
+      var t = Math.imul(a ^ (a >>> 15), 1 | a);
+      t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+      return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+    };
+  }
+  function mean(v) { var t = 0; for (var i = 0; i < v.length; i++) t += v[i]; return t / v.length; }
+  function sd(v) {
+    if (v.length < 2) return NaN;
+    var m = mean(v), t = 0;
+    for (var i = 0; i < v.length; i++) t += (v[i] - m) * (v[i] - m);
+    return Math.sqrt(t / (v.length - 1));
+  }
+  function shuffle(a, rng) {
+    for (var i = a.length - 1; i > 0; i--) { var j = Math.floor(rng() * (i + 1)); var t = a[i]; a[i] = a[j]; a[j] = t; }
+    return a;
+  }
+  function range(n) { var a = []; for (var i = 0; i < n; i++) a.push(i); return a; }
+  /* k different items from arr, every set of k equally likely (partial Fisher-Yates) */
+  function choose(arr, k, rng) {
+    var a = arr.slice(), n = a.length;
+    for (var i = 0; i < k; i++) { var j = i + Math.floor(rng() * (n - i)); var t = a[i]; a[i] = a[j]; a[j] = t; }
+    return a.slice(0, k);
+  }
+  var AREA_SIZES = [846, 702, 294];      /* Town, Suburbs, Villages: N = 1842 */
+  var AREA_BUS = [85, 316, 250];         /* bus users in each area: 651 in all, parameter 651/1842 */
+  var GATE_BUS = 130;                    /* bus users who come in by the main gate; the other 521 use the side bus bay */
+  var W_BUS = 3, W_OTHER = 1;            /* newsletter: a bus user is 3 times as likely to reply at any moment */
+  var R_OTHER = 0.9;                     /* 4:30 phone call: students not on a bus answer 90% of the time */
+  /* The fixed simulated school. Every student has a home area, travels by bus or not,
+     and either passes the main gate each morning or comes in by the side bus bay. */
+  function makePopulation(seed) {
+    var rng = mulberry32(seed), area = [], bus = [], a, i;
+    for (a = 0; a < 3; a++) {
+      var flags = [];
+      for (i = 0; i < AREA_SIZES[a]; i++) flags.push(i < AREA_BUS[a] ? 1 : 0);
+      shuffle(flags, rng);
+      for (i = 0; i < AREA_SIZES[a]; i++) { area.push(a); bus.push(flags[i]); }
+    }
+    var N = area.length, gate = [], busIds = [];
+    for (i = 0; i < N; i++) { gate.push(bus[i] ? 0 : 1); if (bus[i]) busIds.push(i); }
+    choose(busIds, GATE_BUS, rng).forEach(function (id) { gate[id] = 1; });
+    return { area: area, bus: bus, gate: gate, N: N };
+  }
+  function parameter(pop) { return mean(pop.bus); }
+  function propBus(pop, ids) { if (!ids.length) return NaN; var t = 0; for (var i = 0; i < ids.length; i++) t += pop.bus[ids[i]]; return t / ids.length; }
+  /* Simple random sample of n: the data are all n */
+  function sampleSRS(pop, n, rng) { var ids = choose(range(pop.N), n, rng); return { chosen: ids, data: ids }; }
+  /* Convenience: the first n through the main gate. Arrival order is random each morning,
+     but the 521 bus users who use the side bus bay can never be in it (undercoverage). */
+  function sampleGate(pop, n, rng) {
+    var at = []; for (var i = 0; i < pop.N; i++) if (pop.gate[i]) at.push(i);
+    var ids = choose(at, n, rng); return { chosen: ids, data: ids };
+  }
+  /* Voluntary response: the first n replies to a newsletter link. Each student replies after an
+     exponential waiting time with rate W_BUS or W_OTHER; the n earliest replies are the data. */
+  function sampleVoluntary(pop, n, rng) {
+    var t = [];
+    for (var i = 0; i < pop.N; i++) t.push({ id: i, time: -Math.log(1 - rng()) / (pop.bus[i] ? W_BUS : W_OTHER) });
+    t.sort(function (x, y) { return x.time - y.time; });
+    var ids = []; for (var k = 0; k < n; k++) ids.push(t[k].id);
+    return { chosen: ids, data: ids };
+  }
+  /* Nonresponse: a simple random sample of n is phoned at 4:30 pm; each answers with probability
+     rBus (bus users, many still travelling) or R_OTHER. The data are the students who answered. */
+  function samplePhone(pop, n, rBus, rng) {
+    var ids = choose(range(pop.N), n, rng), data = [];
+    for (var i = 0; i < ids.length; i++) if (rng() < (pop.bus[ids[i]] ? rBus : R_OTHER)) data.push(ids[i]);
+    return { chosen: ids, data: data };
+  }
+  /* Theory, for the tests */
+  function srsSD(p, N, n) { return Math.sqrt(p * (1 - p) / n * (N - n) / (N - 1)); }
+  function gateCentre(pop) { var b = 0, m = 0; for (var i = 0; i < pop.N; i++) if (pop.gate[i]) { m++; b += pop.bus[i]; } return b / m; }
+  function phoneCentre(p, rBus) { return p * rBus / (p * rBus + (1 - p) * R_OTHER); }
+  function volCentre(pop, n) {
+    var B = 0; for (var i = 0; i < pop.N; i++) B += pop.bus[i];
+    var O = pop.N - B, lo = 0, hi = 50, t = 0;
+    for (var k = 0; k < 200; k++) {
+      t = (lo + hi) / 2;
+      var m = B * (1 - Math.exp(-W_BUS * t)) + O * (1 - Math.exp(-W_OTHER * t));
+      if (m < n) lo = t; else hi = t;
+    }
+    return B * (1 - Math.exp(-W_BUS * t)) / n;
+  }
+  /* STATS-END */
+
+  var SEED = 20261001;
+  var pop = makePopulation(SEED), P = parameter(pop);
+  var NS = "http://www.w3.org/2000/svg";
+  var rng = mulberry32((Date.now() ^ 0x3c3c) >>> 0);
+  var METHODS = [
+    { id: "srs", name: "Simple random sample", short: "Simple random" },
+    { id: "gate", name: "First through the main gate", short: "Main gate" },
+    { id: "vol", name: "Newsletter link replies", short: "Newsletter" },
+    { id: "phone", name: "Random, phoned at 4:30 pm", short: "Phoned 4:30" }
+  ];
+  var state = { method: "srs", n: 120, rBus: 0.4, last: null, res: {} };
+  var popSvg = document.getElementById("sbPop"), stripSvg = document.getElementById("sbStrips"), say = document.getElementById("sbSay");
+  var cells = new Array(pop.N);
+
+  function key(m) { return m + "|" + state.n + (m === "phone" ? "|" + state.rBus : ""); }
+  function results(m) { var k = key(m); if (!state.res[k]) state.res[k] = []; return state.res[k]; }
+  function el(n, a) { var e = document.createElementNS(NS, n); for (var k in a) e.setAttribute(k, a[k]); return e; }
+  function txt(x, y, s, cls, anchor) { var t = el("text", { x: x, y: y, "class": cls, "text-anchor": anchor || "middle" }); t.textContent = s; return t; }
+  function f3(v) { return isFinite(v) ? v.toFixed(3) : "—"; }
+  function sgn3(v) { return isFinite(v) ? (v >= 0 ? "+" : "−") + Math.abs(v).toFixed(3) : "—"; }
+
+  /* population: three blocks (Town, Suburbs, Villages), 30 students per column, bus users at the foot of each block */
+  var ROWS = 30, CW = 8.2, CH = 6.9, X0 = 8, Y0 = 34, GAP = 14;
+  function drawPop() {
+    while (popSvg.firstChild) popSvg.removeChild(popSvg.firstChild);
+    var names = ["Town", "Suburbs", "Villages"], x = X0, start = 0;
+    for (var a = 0; a < 3; a++) {
+      var ids = [];
+      for (var i = start; i < start + AREA_SIZES[a]; i++) ids.push(i);
+      ids.sort(function (p, q) { return pop.bus[p] - pop.bus[q] || p - q; });
+      var cols = Math.ceil(ids.length / ROWS);
+      ids.forEach(function (id, k) {
+        var c = Math.floor(k / ROWS), r = k % ROWS;
+        var rect = el("rect", { x: (x + c * CW).toFixed(1), y: (Y0 + r * CH).toFixed(1), width: (CW - 1.4).toFixed(1), height: (CH - 1.4).toFixed(1), rx: 1 });
+        cells[id] = rect; popSvg.appendChild(rect);
+      });
+      popSvg.appendChild(txt(x, 12, names[a], "sb-tk", "start"));
+      popSvg.appendChild(txt(x, 26, AREA_SIZES[a] + " · " + AREA_BUS[a] + " by bus", "sb-t", "start"));
+      x += cols * CW + GAP; start += AREA_SIZES[a];
+    }
+    markSample();
+  }
+  function markSample() {
+    var s = state.last, on = {}, miss = {};
+    if (s) { s.data.forEach(function (id) { on[id] = 1; }); s.chosen.forEach(function (id) { if (!on[id]) miss[id] = 1; }); }
+    for (var i = 0; i < pop.N; i++) {
+      var cls = "sb-cell " + (pop.bus[i] ? "sb-bus" : "sb-nobus");
+      if (on[i]) cls += " sb-on"; else if (miss[i]) cls += " sb-miss";
+      else if (state.method === "gate" && !pop.gate[i]) cls += " sb-out";
+      cells[i].setAttribute("class", cls);
+    }
+    popSvg.setAttribute("aria-label", "Population of 1,842 students, 651 of them bus users" + (s ? "; " + s.data.length + " students in the latest data highlighted" : "") + (state.method === "gate" ? "; the 521 bus users who use the side bus bay are faded because the gate sample can never reach them" : ""));
+  }
+  function drawOne(m) {
+    var s = m === "srs" ? sampleSRS(pop, state.n, rng) : m === "gate" ? sampleGate(pop, state.n, rng) : m === "vol" ? sampleVoluntary(pop, state.n, rng) : samplePhone(pop, state.n, state.rBus, rng);
+    s.method = m; s.phat = propBus(pop, s.data);
+    if (isFinite(s.phat)) results(m).push(s.phat);
+    return s;
+  }
+  function describe(s) {
+    var b = 0; s.data.forEach(function (id) { b += pop.bus[id]; });
+    var tail = " " + b + " of the " + s.data.length + " travel by bus: a sample proportion of " + f3(s.phat) + ".";
+    if (s.method === "srs") return "<b>Simple random sample.</b> " + s.data.length + " students chosen by random number from all 1,842." + tail;
+    if (s.method === "gate") return "<b>First through the main gate.</b> The first " + s.data.length + " students to arrive at the main gate. The 521 bus users who come in by the side bus bay, faded in the grid, cannot be chosen at all." + tail;
+    if (s.method === "vol") return "<b>Newsletter link.</b> The first " + s.data.length + " replies. Nobody was chosen: these students chose themselves, and bus users, who care about the timetable, reply more readily." + tail;
+    return "<b>Random, phoned at 4:30 pm.</b> A simple random sample of " + s.chosen.length + " was phoned; " + s.data.length + " answered and " + (s.chosen.length - s.data.length) + " did not (outlined in the grid)." + tail;
+  }
+  function update(s) {
+    state.last = s; markSample();
+    document.getElementById("sbN").textContent = s ? (s.method === "phone" ? s.data.length + " of " + s.chosen.length : String(s.data.length)) : "—";
+    document.getElementById("sbPhat").textContent = s ? f3(s.phat) : "—";
+    say.innerHTML = s ? describe(s) : "Choose a method and draw a sample.";
+    drawStrips();
+  }
+  var LO = 0, HI = 0.8, SX0 = 118, SX1 = 588, ROWH = 62, TOP = 8;
+  function sx(v) { return SX0 + (Math.min(HI, Math.max(LO, v)) - LO) / (HI - LO) * (SX1 - SX0); }
+  function drawStrips() {
+    while (stripSvg.firstChild) stripSvg.removeChild(stripSvg.firstChild);
+    var bottom = TOP + 4 * ROWH;
+    for (var v = 0; v <= 8; v++) {
+      var x = sx(v / 10);
+      stripSvg.appendChild(el("line", { x1: x, y1: TOP, x2: x, y2: bottom, "class": "sb-grid", "stroke-width": 1 }));
+      stripSvg.appendChild(txt(x, bottom + 16, (v / 10).toFixed(1), "sb-t"));
+    }
+    stripSvg.appendChild(txt((SX0 + SX1) / 2, bottom + 34, "sample proportion who travel by bus · n = " + state.n + (state.method === "phone" ? " phoned" : ""), "sb-t"));
+    METHODS.forEach(function (m, k) {
+      var y0 = TOP + k * ROWH, base = y0 + ROWH - 8;
+      stripSvg.appendChild(el("rect", { x: 0, y: y0 + 2, width: SX1 + 8, height: ROWH - 4, "class": "sb-rowbg" + (m.id === state.method ? " sb-cur" : ""), rx: 3 }));
+      stripSvg.appendChild(txt(8, y0 + ROWH / 2 + 4, m.short, "sb-tk", "start"));
+      stripSvg.appendChild(el("line", { x1: SX0, y1: base, x2: SX1, y2: base, "class": "sb-axis", "stroke-width": 1 }));
+      var vals = results(m.id), bins = {}, maxStack = 1;
+      vals.forEach(function (x) { var b = Math.round(x * 100) / 100; bins[b] = (bins[b] || 0) + 1; if (bins[b] > maxStack) maxStack = bins[b]; });
+      var step = Math.min(5, (ROWH - 16) / maxStack), seen = {};
+      vals.forEach(function (x, i) {
+        var b = Math.round(x * 100) / 100; seen[b] = (seen[b] || 0) + 1;
+        var cy = base - 3 - (seen[b] - 1) * step;
+        stripSvg.appendChild(el("circle", { cx: sx(b).toFixed(1), cy: cy.toFixed(1), r: 2.4, "class": "sb-dot" }));
+        if (state.last && state.last.method === m.id && i === vals.length - 1) stripSvg.appendChild(el("circle", { cx: sx(b).toFixed(1), cy: cy.toFixed(1), r: 4.6, "class": "sb-last" }));
+      });
+    });
+    stripSvg.appendChild(el("line", { x1: sx(P), y1: TOP, x2: sx(P), y2: bottom, "class": "sb-par", "stroke-width": 1.5 }));
+    var tb = document.getElementById("sbTbody"); tb.innerHTML = "";
+    METHODS.forEach(function (m) {
+      var v = results(m.id), tr = document.createElement("tr");
+      tr.innerHTML = "<td>" + m.short + "</td><td>" + v.length + "</td><td>" + (v.length ? f3(mean(v)) : "—") + "</td><td>" + (v.length > 1 ? f3(sd(v)) : "—") + "</td><td>" + (v.length ? sgn3(mean(v) - P) : "—") + "</td>";
+      tb.appendChild(tr);
+    });
+    stripSvg.setAttribute("aria-label", "Sample proportions by method at sample size " + state.n + ". " + METHODS.map(function (m) { var v = results(m.id); return m.name + ": " + v.length + " samples" + (v.length ? ", centre " + f3(mean(v)) : ""); }).join("; ") + ". Parameter " + f3(P) + ".");
+  }
+
+  function press(groupSel, btn) { Array.prototype.forEach.call(document.querySelectorAll(groupSel + " button"), function (o) { o.setAttribute("aria-pressed", o === btn ? "true" : "false"); }); }
+  Array.prototype.forEach.call(document.querySelectorAll("#sbMethods button"), function (b) {
+    b.addEventListener("click", function () { state.method = b.getAttribute("data-m"); press("#sbMethods", b); update(drawOne(state.method)); });
+  });
+  Array.prototype.forEach.call(document.querySelectorAll("#sbSizes button"), function (b) {
+    b.addEventListener("click", function () { state.n = parseInt(b.getAttribute("data-n"), 10); press("#sbSizes", b); update(drawOne(state.method)); });
+  });
+  Array.prototype.forEach.call(document.querySelectorAll("#sbRates button"), function (b) {
+    b.addEventListener("click", function () { state.rBus = parseFloat(b.getAttribute("data-r")); press("#sbRates", b); state.method = "phone"; press("#sbMethods", document.querySelector('#sbMethods button[data-m="phone"]')); update(drawOne("phone")); });
+  });
+  document.getElementById("sbOne").addEventListener("click", function () { update(drawOne(state.method)); });
+  document.getElementById("sbHundred").addEventListener("click", function () { var s; for (var i = 0; i < 100; i++) s = drawOne(state.method); update(s); });
+  document.getElementById("sbClear").addEventListener("click", function () { state.res = {}; update(null); });
+
+  document.getElementById("sbP").textContent = f3(P);
+  drawPop();
+  /* open in a working state: one sample from each method at n = 120, the simple random one shown */
+  ["gate", "vol", "phone"].forEach(function (m) { drawOne(m); });
+  update(drawOne("srs"));
+})();
+</script>
+
+</main>
+<script>window.COURSE_NAV={"kicker": "Session 7", "title": "Sampling Bias", "map": [{"label": "Course", "items": [{"href": "../index.html", "label": "Home", "current": false}, {"href": "../plan.html", "label": "The 20-hour plan", "current": false}]}, {"label": "Block A · Describing one variable", "items": [{"href": "../s01-tutor.html", "label": "Session 1 · Tutor", "current": false}, {"href": "../s01-student.html", "label": "Session 1 · Student", "current": false}, {"href": "../s01-test.html", "label": "Session 1 · Test", "current": false}, {"href": "../s02-tutor.html", "label": "Session 2 · Tutor", "current": false}, {"href": "../s02-student.html", "label": "Session 2 · Student", "current": false}, {"href": "../s02-test.html", "label": "Session 2 · Test", "current": false}, {"href": "../s03-tutor.html", "label": "Session 3 · Tutor", "current": false}, {"href": "../s03-student.html", "label": "Session 3 · Student", "current": false}, {"href": "../s03-test.html", "label": "Session 3 · Test", "current": false}]}, {"label": "Block B · Describing two variables", "items": [{"href": "../s04-tutor.html", "label": "Session 4 · Tutor", "current": false}, {"href": "../s04-student.html", "label": "Session 4 · Student", "current": false}, {"href": "../s04-test.html", "label": "Session 4 · Test", "current": false}, {"href": "../s05-tutor.html", "label": "Session 5 · Tutor", "current": false}, {"href": "../s05-student.html", "label": "Session 5 · Student", "current": false}, {"href": "../s05-test.html", "label": "Session 5 · Test", "current": false}]}, {"label": "Block C · Collecting data", "items": [{"href": "../s06-tutor.html", "label": "Session 6 · Tutor", "current": false}, {"href": "../s06-student.html", "label": "Session 6 · Student", "current": false}, {"href": "../s06-test.html", "label": "Session 6 · Test", "current": false}, {"href": "../s07-tutor.html", "label": "Session 7 · Tutor", "current": false}, {"href": "../s07-student.html", "label": "Session 7 · Student", "current": false}, {"href": "../s07-test.html", "label": "Session 7 · Test", "current": false}]}, {"label": "Interactive", "items": [{"href": "../tools/unit1-explorer.html", "label": "Unit 1 Explorer", "current": false}, {"href": "../tools/boxplot-builder.html", "label": "Boxplot Builder", "current": false}, {"href": "../tools/guess-correlation.html", "label": "Guess the Correlation", "current": false}, {"href": "../tools/least-squares-fitter.html", "label": "Least-squares Fitter", "current": false}, {"href": "../tools/sampling-methods.html", "label": "Sampling Methods", "current": false}, {"href": "../tools/sampling-bias.html", "label": "Sampling Bias", "current": true}]}], "prev": {"href": "../tools/sampling-methods.html", "label": "Sampling Methods"}};</script>
+<script src="../assets/course.js"></script>
+</body>
+</html>

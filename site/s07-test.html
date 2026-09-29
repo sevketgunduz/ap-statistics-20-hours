@@ -1,0 +1,505 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Session 7 Test · AP Statistics in Twenty Hours</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Spectral:ital,wght@0,600;0,700;1,600&display=swap">
+<link rel="stylesheet" href="assets/course.css">
+</head>
+<body>
+<main class="page">
+<h1>Session 7 — Multiple-Choice Test</h1>
+<p class="standfirst"><strong>AP Statistics · Twenty-Hour Course · CED Topics 1.12, 1.13</strong> <strong>20 questions · 35 minutes · no calculator needed</strong></p>
+<hr>
+<h2>Before you start</h2>
+<p>None of the scenarios here is one you worked in Session 7. Lincoln High's travel survey, the St Mary's reminder experiment, Riverside's hand-cream trial and the homework's studies have all been left out. Each question gives you a new sample or a new experiment and asks what is wrong with it, what it is, or what it lets you conclude.</p>
+<p>The test uses the session's conventions throughout:</p>
+<ul><li><strong>A bias is named with its mechanism and its direction</strong>: too high or too low, and why.</li><li><strong>Nonresponse</strong> means chosen, then lost. <strong>Voluntary response</strong> means nobody was chosen. <strong>Undercoverage</strong> means some of the population could never be chosen, or were less likely to be.</li><li><strong>A bigger sample reduces variation, not bias.</strong></li><li>The four elements of a well-designed experiment are <strong>comparison, random assignment, replication and direct control</strong>. "Direct control" is not the same as a control group.</li><li>The <strong>placebo effect</strong> is the placebo group's mean response minus the no-treatment group's.</li><li><strong>Random assignment</strong> justifies cause; <strong>blocking</strong> buys precision. "Not statistically significant" is not evidence of no effect.</li></ul>
+<p>The CED has five learning objectives for these two topics, so this test has 20 questions.</p>
+<h3>What is being tested</h3>
+<div class="tbl"><table><thead><tr><th>Q</th><th>CED objective</th><th>Bloom level</th></tr></thead><tbody><tr><td>1</td><td>1.12.A Recognise a biased method from its estimates</td><td>Analysis</td></tr><tr><td>2</td><td>1.12.A A bigger sample does not remove bias</td><td><strong>Synthesis</strong></td></tr><tr><td>3</td><td>1.12.A Voluntary response</td><td>Application</td></tr><tr><td>4</td><td>1.12.A Undercoverage</td><td>Application</td></tr><tr><td>5</td><td>1.12.A Nonresponse</td><td>Analysis</td></tr><tr><td>6</td><td>1.12.A Response bias from wording, with its direction</td><td>Analysis</td></tr><tr><td>7</td><td>1.12.A A convenience sample, with its direction</td><td>Analysis</td></tr><tr><td>8</td><td>1.13.A The placebo effect</td><td>Application</td></tr><tr><td>9</td><td>1.13.A Blinding, and why a placebo group is needed</td><td><strong>Synthesis</strong></td></tr><tr><td>10</td><td>1.13.A The four elements of a well-designed experiment</td><td>Analysis</td></tr><tr><td>11</td><td>1.13.D What a significant result lets you conclude, and about whom</td><td><strong>Synthesis</strong></td></tr><tr><td>12</td><td>1.13.D A result that is not significant</td><td>Analysis</td></tr><tr><td>13</td><td>1.13.B Identify a randomized block design</td><td>Application</td></tr><tr><td>14</td><td>1.13.C Why block</td><td><strong>Synthesis</strong></td></tr><tr><td>15</td><td>1.13.B A matched pairs design within one unit</td><td>Analysis</td></tr><tr><td>16</td><td>1.13.A Confounding when assignment is not random</td><td>Analysis</td></tr><tr><td>17</td><td>1.13.B + 1.13.C Matched pairs, and why the order is randomized</td><td>Analysis</td></tr><tr><td>18</td><td>1.13.B Identify a completely randomized design</td><td>Application</td></tr><tr><td>19</td><td>1.13.A A control group against direct control</td><td>Analysis</td></tr><tr><td>20</td><td>1.13.A + 1.13.D Find the single error</td><td><strong>Synthesis</strong></td></tr></tbody></table></div>
+<p>Five questions at synthesis, eleven at analysis, four at application. All five learning objectives of Session 7 are tested at least twice.</p>
+<hr>
+<hr>
+<h1>The test</h1>
+<h2>Questions 1–2 · Two ways of sampling</h2>
+<blockquote>In a town, <strong>40%</strong> of adults use the bus at least once a week. Two survey methods were each run <strong>100 times</strong>, with a sample of 100 adults each time, and the sample proportion who use the bus was recorded every time. Method X picks adults at random from the electoral roll. Method Y interviews adults outside the railway station.</blockquote>
+<figure><div class="figscroll"><svg viewBox="0 0 700 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Dotplots of 100 sample proportions from Method X and from Method Y, with the true proportion 0.40 marked" font-family="Public Sans, system-ui, sans-serif">
+<style>
+  .ink   { fill: #15201f; }
+  .ink2  { fill: #4a5654; }
+  .ink3  { fill: #6f7b79; }
+  .axis  { stroke: #c3c9c6; }
+  .grid  { stroke: #dcdfdd; }
+  .gap   { stroke: #ffffff; }
+  @media (prefers-color-scheme: dark) {
+    .ink  { fill: #e9edeb; }
+    .ink2 { fill: #a5b0ad; }
+    .ink3 { fill: #7e8a87; }
+    .axis { stroke: #3a4644; }
+    .grid { stroke: #2a3533; }
+    .gap  { stroke: #182120; }
+  }
+
+  .s0 { fill: #2a78d6; }
+  .s1 { fill: #eb6834; }
+  @media (prefers-color-scheme: dark) {
+    .s0 { fill: #3987e5; }
+    .s1 { fill: #d95926; }
+  }
+  .k1 { stroke: #eb6834; }
+  @media (prefers-color-scheme: dark) { .k1 { stroke: #d95926; } }
+</style>
+<text class="ink" x="60.0" y="32.0" font-size="13" text-anchor="start" font-weight="700" fill="#15201f">Method X</text>
+<circle class="s0 gap" cx="128.9" cy="123.4" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="128.9" cy="115.6" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="156.4" cy="123.4" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="156.4" cy="115.6" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="156.4" cy="107.8" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="156.4" cy="100.0" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="170.2" cy="123.4" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="170.2" cy="115.6" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="170.2" cy="107.8" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="170.2" cy="100.0" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="184.0" cy="123.4" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="184.0" cy="115.6" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="184.0" cy="107.8" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="184.0" cy="100.0" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="184.0" cy="92.2" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="184.0" cy="84.4" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="197.8" cy="123.4" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="197.8" cy="115.6" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="197.8" cy="107.8" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="211.6" cy="123.4" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="211.6" cy="115.6" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="211.6" cy="107.8" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="211.6" cy="100.0" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="211.6" cy="92.2" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="211.6" cy="84.4" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="211.6" cy="76.6" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="225.3" cy="123.4" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="225.3" cy="115.6" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="225.3" cy="107.8" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="239.1" cy="123.4" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="239.1" cy="115.6" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="239.1" cy="107.8" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="239.1" cy="100.0" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="239.1" cy="92.2" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="239.1" cy="84.4" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="239.1" cy="76.6" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="239.1" cy="68.8" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="252.9" cy="123.4" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="252.9" cy="115.6" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="252.9" cy="107.8" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="252.9" cy="100.0" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="252.9" cy="92.2" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="252.9" cy="84.4" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="252.9" cy="76.6" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="252.9" cy="68.8" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="266.7" cy="123.4" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="266.7" cy="115.6" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="266.7" cy="107.8" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="266.7" cy="100.0" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="266.7" cy="92.2" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="266.7" cy="84.4" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="266.7" cy="76.6" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="280.4" cy="123.4" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="280.4" cy="115.6" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="280.4" cy="107.8" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="280.4" cy="100.0" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="280.4" cy="92.2" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="280.4" cy="84.4" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="294.2" cy="123.4" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="294.2" cy="115.6" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="294.2" cy="107.8" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="294.2" cy="100.0" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="294.2" cy="92.2" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="308.0" cy="123.4" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="308.0" cy="115.6" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="308.0" cy="107.8" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="308.0" cy="100.0" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="308.0" cy="92.2" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="308.0" cy="84.4" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="321.8" cy="123.4" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="321.8" cy="115.6" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="321.8" cy="107.8" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="321.8" cy="100.0" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="321.8" cy="92.2" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="321.8" cy="84.4" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="321.8" cy="76.6" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="321.8" cy="68.8" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="321.8" cy="61.0" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="335.6" cy="123.4" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="335.6" cy="115.6" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="335.6" cy="107.8" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="335.6" cy="100.0" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="335.6" cy="92.2" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="335.6" cy="84.4" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="335.6" cy="76.6" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="335.6" cy="68.8" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="349.3" cy="123.4" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="349.3" cy="115.6" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="349.3" cy="107.8" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="349.3" cy="100.0" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="349.3" cy="92.2" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="349.3" cy="84.4" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="363.1" cy="123.4" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="363.1" cy="115.6" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="376.9" cy="123.4" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="376.9" cy="115.6" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="376.9" cy="107.8" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="390.7" cy="123.4" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="390.7" cy="115.6" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="445.8" cy="123.4" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<line class="axis" x1="60.0" y1="128.0" x2="680.0" y2="128.0" stroke-width="1.5" stroke="#c3c9c6" fill="none"/>
+<line class="axis" x1="60.0" y1="128.0" x2="60.0" y2="132.0" stroke-width="1" stroke="#c3c9c6" fill="none"/>
+<text class="ink3" x="60.0" y="145.0" font-size="11" text-anchor="middle" fill="#6f7b79">0.25</text>
+<line class="axis" x1="128.9" y1="128.0" x2="128.9" y2="132.0" stroke-width="1" stroke="#c3c9c6" fill="none"/>
+<text class="ink3" x="128.9" y="145.0" font-size="11" text-anchor="middle" fill="#6f7b79">0.30</text>
+<line class="axis" x1="197.8" y1="128.0" x2="197.8" y2="132.0" stroke-width="1" stroke="#c3c9c6" fill="none"/>
+<text class="ink3" x="197.8" y="145.0" font-size="11" text-anchor="middle" fill="#6f7b79">0.35</text>
+<line class="axis" x1="266.7" y1="128.0" x2="266.7" y2="132.0" stroke-width="1" stroke="#c3c9c6" fill="none"/>
+<text class="ink3" x="266.7" y="145.0" font-size="11" text-anchor="middle" fill="#6f7b79">0.40</text>
+<line class="axis" x1="335.6" y1="128.0" x2="335.6" y2="132.0" stroke-width="1" stroke="#c3c9c6" fill="none"/>
+<text class="ink3" x="335.6" y="145.0" font-size="11" text-anchor="middle" fill="#6f7b79">0.45</text>
+<line class="axis" x1="404.4" y1="128.0" x2="404.4" y2="132.0" stroke-width="1" stroke="#c3c9c6" fill="none"/>
+<text class="ink3" x="404.4" y="145.0" font-size="11" text-anchor="middle" fill="#6f7b79">0.50</text>
+<line class="axis" x1="473.3" y1="128.0" x2="473.3" y2="132.0" stroke-width="1" stroke="#c3c9c6" fill="none"/>
+<text class="ink3" x="473.3" y="145.0" font-size="11" text-anchor="middle" fill="#6f7b79">0.55</text>
+<line class="axis" x1="542.2" y1="128.0" x2="542.2" y2="132.0" stroke-width="1" stroke="#c3c9c6" fill="none"/>
+<text class="ink3" x="542.2" y="145.0" font-size="11" text-anchor="middle" fill="#6f7b79">0.60</text>
+<line class="axis" x1="611.1" y1="128.0" x2="611.1" y2="132.0" stroke-width="1" stroke="#c3c9c6" fill="none"/>
+<text class="ink3" x="611.1" y="145.0" font-size="11" text-anchor="middle" fill="#6f7b79">0.65</text>
+<line class="axis" x1="680.0" y1="128.0" x2="680.0" y2="132.0" stroke-width="1" stroke="#c3c9c6" fill="none"/>
+<text class="ink3" x="680.0" y="145.0" font-size="11" text-anchor="middle" fill="#6f7b79">0.70</text>
+<text class="ink" x="60.0" y="204.0" font-size="13" text-anchor="start" font-weight="700" fill="#15201f">Method Y</text>
+<circle class="s0 gap" cx="266.7" cy="295.4" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="280.4" cy="295.4" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="280.4" cy="287.6" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="335.6" cy="295.4" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="349.3" cy="295.4" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="349.3" cy="287.6" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="363.1" cy="295.4" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="363.1" cy="287.6" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="376.9" cy="295.4" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="376.9" cy="287.6" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="390.7" cy="295.4" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="390.7" cy="287.6" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="390.7" cy="279.8" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="390.7" cy="272.0" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="390.7" cy="264.2" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="390.7" cy="256.4" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="404.4" cy="295.4" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="404.4" cy="287.6" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="418.2" cy="295.4" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="418.2" cy="287.6" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="418.2" cy="279.8" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="418.2" cy="272.0" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="418.2" cy="264.2" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="432.0" cy="295.4" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="432.0" cy="287.6" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="432.0" cy="279.8" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="432.0" cy="272.0" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="432.0" cy="264.2" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="432.0" cy="256.4" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="432.0" cy="248.6" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="432.0" cy="240.8" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="432.0" cy="233.0" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="445.8" cy="295.4" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="445.8" cy="287.6" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="445.8" cy="279.8" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="445.8" cy="272.0" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="445.8" cy="264.2" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="445.8" cy="256.4" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="445.8" cy="248.6" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="445.8" cy="240.8" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="445.8" cy="233.0" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="459.6" cy="295.4" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="459.6" cy="287.6" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="459.6" cy="279.8" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="459.6" cy="272.0" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="459.6" cy="264.2" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="459.6" cy="256.4" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="459.6" cy="248.6" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="459.6" cy="240.8" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="459.6" cy="233.0" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="459.6" cy="225.2" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="473.3" cy="295.4" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="473.3" cy="287.6" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="473.3" cy="279.8" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="473.3" cy="272.0" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="473.3" cy="264.2" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="473.3" cy="256.4" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="473.3" cy="248.6" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="473.3" cy="240.8" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="487.1" cy="295.4" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="487.1" cy="287.6" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="487.1" cy="279.8" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="500.9" cy="295.4" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="500.9" cy="287.6" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="500.9" cy="279.8" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="500.9" cy="272.0" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="514.7" cy="295.4" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="514.7" cy="287.6" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="514.7" cy="279.8" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="514.7" cy="272.0" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="514.7" cy="264.2" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="528.4" cy="295.4" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="528.4" cy="287.6" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="528.4" cy="279.8" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="528.4" cy="272.0" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="528.4" cy="264.2" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="528.4" cy="256.4" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="528.4" cy="248.6" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="542.2" cy="295.4" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="542.2" cy="287.6" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="542.2" cy="279.8" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="542.2" cy="272.0" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="542.2" cy="264.2" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="542.2" cy="256.4" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="542.2" cy="248.6" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="542.2" cy="240.8" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="542.2" cy="233.0" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="542.2" cy="225.2" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="556.0" cy="295.4" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="556.0" cy="287.6" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="556.0" cy="279.8" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="569.8" cy="295.4" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="569.8" cy="287.6" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="583.6" cy="295.4" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="583.6" cy="287.6" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="583.6" cy="279.8" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="597.3" cy="295.4" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="638.7" cy="295.4" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="666.2" cy="295.4" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<circle class="s0 gap" cx="666.2" cy="287.6" r="3.6" stroke-width="1" fill="#2a78d6" stroke="#ffffff"/>
+<line class="axis" x1="60.0" y1="300.0" x2="680.0" y2="300.0" stroke-width="1.5" stroke="#c3c9c6" fill="none"/>
+<line class="axis" x1="60.0" y1="300.0" x2="60.0" y2="304.0" stroke-width="1" stroke="#c3c9c6" fill="none"/>
+<text class="ink3" x="60.0" y="317.0" font-size="11" text-anchor="middle" fill="#6f7b79">0.25</text>
+<line class="axis" x1="128.9" y1="300.0" x2="128.9" y2="304.0" stroke-width="1" stroke="#c3c9c6" fill="none"/>
+<text class="ink3" x="128.9" y="317.0" font-size="11" text-anchor="middle" fill="#6f7b79">0.30</text>
+<line class="axis" x1="197.8" y1="300.0" x2="197.8" y2="304.0" stroke-width="1" stroke="#c3c9c6" fill="none"/>
+<text class="ink3" x="197.8" y="317.0" font-size="11" text-anchor="middle" fill="#6f7b79">0.35</text>
+<line class="axis" x1="266.7" y1="300.0" x2="266.7" y2="304.0" stroke-width="1" stroke="#c3c9c6" fill="none"/>
+<text class="ink3" x="266.7" y="317.0" font-size="11" text-anchor="middle" fill="#6f7b79">0.40</text>
+<line class="axis" x1="335.6" y1="300.0" x2="335.6" y2="304.0" stroke-width="1" stroke="#c3c9c6" fill="none"/>
+<text class="ink3" x="335.6" y="317.0" font-size="11" text-anchor="middle" fill="#6f7b79">0.45</text>
+<line class="axis" x1="404.4" y1="300.0" x2="404.4" y2="304.0" stroke-width="1" stroke="#c3c9c6" fill="none"/>
+<text class="ink3" x="404.4" y="317.0" font-size="11" text-anchor="middle" fill="#6f7b79">0.50</text>
+<line class="axis" x1="473.3" y1="300.0" x2="473.3" y2="304.0" stroke-width="1" stroke="#c3c9c6" fill="none"/>
+<text class="ink3" x="473.3" y="317.0" font-size="11" text-anchor="middle" fill="#6f7b79">0.55</text>
+<line class="axis" x1="542.2" y1="300.0" x2="542.2" y2="304.0" stroke-width="1" stroke="#c3c9c6" fill="none"/>
+<text class="ink3" x="542.2" y="317.0" font-size="11" text-anchor="middle" fill="#6f7b79">0.60</text>
+<line class="axis" x1="611.1" y1="300.0" x2="611.1" y2="304.0" stroke-width="1" stroke="#c3c9c6" fill="none"/>
+<text class="ink3" x="611.1" y="317.0" font-size="11" text-anchor="middle" fill="#6f7b79">0.65</text>
+<line class="axis" x1="680.0" y1="300.0" x2="680.0" y2="304.0" stroke-width="1" stroke="#c3c9c6" fill="none"/>
+<text class="ink3" x="680.0" y="317.0" font-size="11" text-anchor="middle" fill="#6f7b79">0.70</text>
+<line class="k1" x1="266.7" y1="22" x2="266.7" y2="300" stroke-width="1.6" stroke-dasharray="5 4" stroke="#eb6834" fill="none"/>
+<text class="ink2" x="272.7" y="34.0" font-size="11.5" text-anchor="start" fill="#4a5654">true proportion 0.40</text>
+<text class="ink2" x="370.0" y="350.0" font-size="12.5" text-anchor="middle" fill="#4a5654">Sample proportion</text>
+</svg>
+</div><figcaption>Each dot is one sample's proportion. The orange line marks the true proportion, 0.40.</figcaption></figure>
+<p><strong>1.</strong> Which statement is best supported by the dotplots?</p>
+<ul><li><strong>(A)</strong> Method X is biased, because its estimates are spread from 0.30 to 0.53.</li><li><strong>(B)</strong> Method Y is biased. Its estimates are centred near 0.55, well above the true 0.40, so it overestimates the proportion time after time, not just by chance.</li><li><strong>(C)</strong> Both methods are biased, because neither gives exactly 0.40 every time.</li><li><strong>(D)</strong> Neither method is biased, because both spread about as widely.</li><li><strong>(E)</strong> Method Y is better, because its estimates are larger.</li></ul>
+<p><strong>2.</strong> Method Y is repeated with samples of <strong>400</strong> adults instead of 100. What will its dotplot most likely look like?</p>
+<ul><li><strong>(A)</strong> Centred on 0.40, because a larger sample removes the bias.</li><li><strong>(B)</strong> More spread out, because more people are asked.</li><li><strong>(C)</strong> Exactly the same as with samples of 100.</li><li><strong>(D)</strong> Centred on 0.40, and less spread out.</li><li><strong>(E)</strong> Less spread out, but still centred near 0.55. A larger sample reduces the variation between samples, not the bias of the method.</li></ul>
+<hr>
+<h2>Questions 3–7 · What went wrong with the sample?</h2>
+<p><strong>3.</strong> A museum puts a poll on its website: <em>"Should the museum open until 9 pm on Fridays?"</em> Of the <strong>1,860 people who choose to answer</strong>, 81% say yes. The main problem is</p>
+<ul><li><strong>(A)</strong> voluntary response bias. The respondents chose themselves, and people keen on late opening are more likely to bother, so 81% is likely to overstate support.</li><li><strong>(B)</strong> nonresponse bias, because most visitors did not answer.</li><li><strong>(C)</strong> undercoverage, because the museum has more visitors than 1,860.</li><li><strong>(D)</strong> response bias, because the question mentions a time.</li><li><strong>(E)</strong> No bias: 1,860 is a large sample.</li></ul>
+<p><strong>4.</strong> A council chooses households at random from the <strong>printed landline telephone directory</strong> to ask about internet use at home. The main problem is</p>
+<ul><li><strong>(A)</strong> voluntary response, because households choose whether to answer.</li><li><strong>(B)</strong> nonresponse, because some calls will not be answered.</li><li><strong>(C)</strong> undercoverage. Households with no landline, or an unlisted number, can never be chosen, and they are likely to differ in internet use. Mobile-only households, for example, may use the internet more, so the estimate could be too low.</li><li><strong>(D)</strong> response bias, because internet use is hard to remember.</li><li><strong>(E)</strong> No problem, because the households are chosen at random.</li></ul>
+<p><strong>5.</strong> A council randomly selects <strong>800 residents</strong> and posts each a questionnaire about a new leisure centre. <strong>224</strong> return it. What is the main concern?</p>
+<ul><li><strong>(A)</strong> Voluntary response, because the residents chose whether to reply.</li><li><strong>(B)</strong> Undercoverage, because only residents with an address could be sampled.</li><li><strong>(C)</strong> Response bias, because the questions were written down.</li><li><strong>(D)</strong> Nonresponse bias. The 800 were chosen at random, but only 224, or 28%, replied. If the residents who reply differ from those who do not, for example by caring more about leisure facilities, the results will be biased.</li><li><strong>(E)</strong> No concern, because the sample was chosen at random.</li></ul>
+<p><strong>6.</strong> A survey asks: <em>"Do you agree that the council should stop wasting money on new cycle lanes?"</em> What effect is the wording most likely to have?</p>
+<ul><li><strong>(A)</strong> None, because the answer is a simple yes or no.</li><li><strong>(B)</strong> Response bias. The loaded words "wasting money" push people towards agreeing, so the proportion who agree will probably be <strong>too high</strong>.</li><li><strong>(C)</strong> Undercoverage, because cyclists are a minority of residents.</li><li><strong>(D)</strong> Response bias that makes the proportion who agree too low.</li><li><strong>(E)</strong> Nonresponse, because some people will not answer a loaded question.</li></ul>
+<p><strong>7.</strong> To estimate the proportion of the town's adults who <strong>drive into the town centre</strong>, a researcher interviews shoppers in the multi-storey car park at 2 pm on a Saturday. Which description of the bias is best?</p>
+<ul><li><strong>(A)</strong> There is no bias, because every shopper in the car park had an equal chance of being interviewed.</li><li><strong>(B)</strong> Nonresponse, because some shoppers refused.</li><li><strong>(C)</strong> Voluntary response, because the shoppers chose to be in the car park.</li><li><strong>(D)</strong> It is biased, but the direction cannot be known.</li><li><strong>(E)</strong> It is a convenience sample. People in a car park are far more likely to have driven, so the proportion who drive will be <strong>overestimated</strong>.</li></ul>
+<hr>
+<h2>Questions 8–12 · The throat-lozenge trial</h2>
+<blockquote>A company recruits <strong>90 adult volunteers</strong> who each have a sore throat. They are <strong>randomly assigned</strong>, 30 to each group, to receive:<br>- a herbal lozenge,<br>- a placebo lozenge that looks and tastes the same, or<br>- no lozenge.<br>The response is the number of days until symptoms are gone. Neither the volunteers who get a lozenge nor the nurses who record symptoms know which lozenge is which. The mean recovery times are <strong>herbal 3.1 days, placebo 3.6 days, no lozenge 4.4 days</strong>. The difference between herbal and placebo is <strong>statistically significant</strong>.</blockquote>
+<p><strong>8.</strong> Using the course's definition, the placebo effect in this trial is</p>
+<ul><li><strong>(A)</strong> −0.5 days</li><li><strong>(B)</strong> −1.3 days</li><li><strong>(C)</strong> −0.8 days</li><li><strong>(D)</strong> +0.8 days</li><li><strong>(E)</strong> 3.6 days</li></ul>
+<p><strong>9.</strong> Which statement about blinding in this trial is correct?</p>
+<ul><li><strong>(A)</strong> The comparison between the herbal and placebo lozenges is double-blind: neither those volunteers nor the nurses know which lozenge a volunteer had. The no-lozenge group cannot be blinded, since its members know they got nothing, and that is why the placebo group is needed.</li><li><strong>(B)</strong> The whole trial is double-blind, including the no-lozenge group.</li><li><strong>(C)</strong> The trial cannot be blinded at all, because the volunteers can taste the lozenge.</li><li><strong>(D)</strong> It is single-blind, because only the nurses are blinded.</li><li><strong>(E)</strong> Blinding does not matter, because the volunteers were randomly assigned.</li></ul>
+<p><strong>10.</strong> Which pairing of a feature of the trial with one of the four elements of a well-designed experiment is <strong>correct</strong>?</p>
+<ul><li><strong>(A)</strong> "The nurses do not know who had which lozenge" is <strong>replication</strong>.</li><li><strong>(B)</strong> "There are 30 volunteers in each group" is <strong>random assignment</strong>.</li><li><strong>(C)</strong> "The no-lozenge group" is <strong>direct control</strong>.</li><li><strong>(D)</strong> "Every volunteer is told to take one lozenge every four hours and to drink the same amount of water" is <strong>direct control</strong>.</li><li><strong>(E)</strong> "Three groups are compared" is <strong>replication</strong>.</li></ul>
+<p><strong>11.</strong> Because the difference between herbal and placebo is statistically significant, the company may conclude that</p>
+<ul><li><strong>(A)</strong> the herbal lozenge shortens recovery for everyone who ever has a sore throat.</li><li><strong>(B)</strong> the herbal lozenge causes quicker recovery than the placebo lozenge, for adults similar to these volunteers. Random assignment supports the cause-and-effect conclusion, but the volunteers were not a random sample, so it reaches only people like them.</li><li><strong>(C)</strong> the herbal lozenge is associated with quicker recovery, but cause cannot be claimed, because the study used volunteers.</li><li><strong>(D)</strong> the herbal lozenge works for everyone, because the difference is statistically significant.</li><li><strong>(E)</strong> nothing, because only 30 people were in each group.</li></ul>
+<p><strong>12.</strong> Suppose instead that the difference between herbal and placebo had <strong>not</strong> been statistically significant. Which conclusion would be correct?</p>
+<ul><li><strong>(A)</strong> The herbal lozenge has no effect.</li><li><strong>(B)</strong> The herbal lozenge works exactly as well as the placebo.</li><li><strong>(C)</strong> The trial was badly designed.</li><li><strong>(D)</strong> The placebo effect is zero.</li><li><strong>(E)</strong> The trial would not have given convincing evidence that the herbal lozenge works better than the placebo. That is not evidence that it has no effect: the difference seen could have been due to chance.</li></ul>
+<hr>
+<h2>Questions 13–15 · Testing fence paint</h2>
+<blockquote>A paint company wants to compare two exterior paints, <strong>A and B</strong>, for how well they last. It has <strong>60 fence panels</strong> to paint: <strong>30 on a south-facing side</strong> that gets full sun, and <strong>30 on a north-facing side</strong> in shade. After two years each panel's condition is scored.</blockquote>
+<p><strong>13.</strong> Which plan is a <strong>randomized block design</strong>?</p>
+<ul><li><strong>(A)</strong> On each side separately, randomly assign 15 panels to paint A and 15 to paint B.</li><li><strong>(B)</strong> Paint all the south panels with A and all the north panels with B.</li><li><strong>(C)</strong> Number all 60 panels and randomly assign 30 to A and 30 to B, ignoring which side they are on.</li><li><strong>(D)</strong> Let the painter choose which paint to use on each panel.</li><li><strong>(E)</strong> Randomly choose one side of the fence and paint all of its panels with A.</li></ul>
+<p><strong>14.</strong> Why is blocking by side a good choice here?</p>
+<ul><li><strong>(A)</strong> Because blocking, not random assignment, is what allows a cause-and-effect conclusion.</li><li><strong>(B)</strong> Because it doubles the number of panels.</li><li><strong>(C)</strong> Because sunlight is likely to affect how paint lasts. Comparing A and B within each side removes that source of variation from the comparison, giving a more precise estimate of the difference between the paints.</li><li><strong>(D)</strong> Because it means the panels no longer need to be randomly assigned.</li><li><strong>(E)</strong> Because it makes the study a census of the fence.</li></ul>
+<p><strong>15.</strong> A second plan paints <strong>every panel with both paints</strong>: each panel is divided into a left half and a right half, and a coin toss decides which half gets paint A. This is</p>
+<ul><li><strong>(A)</strong> a completely randomized design with 120 units.</li><li><strong>(B)</strong> not an experiment, because every panel receives both paints.</li><li><strong>(C)</strong> a randomized block design with two blocks, the two halves.</li><li><strong>(D)</strong> a matched pairs design, with each panel a pair of halves and the paints randomly assigned within each pair.</li><li><strong>(E)</strong> an observational study, because the panels were not chosen at random.</li></ul>
+<hr>
+<h2>Questions 16–20 · Separate questions</h2>
+<p><strong>16.</strong> A running coach wants to compare a new running shoe with the club's current shoe. She gives the new shoe to the <strong>15 fastest runners</strong> in the club and the current shoe to the other 15, and compares their 5 km times a month later. The main problem is that</p>
+<ul><li><strong>(A)</strong> there is no comparison group.</li><li><strong>(B)</strong> runner ability is confounded with the shoe. The fastest runners got the new shoe, so a faster time in that group could be due to their ability rather than the shoe. Random assignment would have prevented this.</li><li><strong>(C)</strong> 15 runners per group is too few for any experiment.</li><li><strong>(D)</strong> it should have been a survey of runners.</li><li><strong>(E)</strong> there is no problem, because the coach imposed the treatments.</li></ul>
+<p><strong>17.</strong> A better plan has each of <strong>40 runners</strong> run 5 km once in each shoe, a week apart, with a <strong>coin toss deciding which shoe each runner wears first</strong>. Which statement is correct?</p>
+<ul><li><strong>(A)</strong> It is a matched pairs design: each runner is compared with themselves. Randomizing the order stops the order itself, such as getting fitter or more familiar with the course by the second run, from being confused with the effect of the shoe.</li><li><strong>(B)</strong> It is a completely randomized design, because the coin is random.</li><li><strong>(C)</strong> The order does not matter, because the same runners wear both shoes.</li><li><strong>(D)</strong> It is an observational study, because every runner wears both shoes.</li><li><strong>(E)</strong> It is a randomized block design with two blocks, the two shoes.</li></ul>
+<p><strong>18.</strong> An online shop shows each of its next <strong>2,000 visitors</strong> one of two page designs, <strong>chosen at random for each visitor</strong>, and records whether the visitor buys something. This is</p>
+<ul><li><strong>(A)</strong> a matched pairs design, because there are two designs.</li><li><strong>(B)</strong> a randomized block design, blocked by visitor.</li><li><strong>(C)</strong> a completely randomized design.</li><li><strong>(D)</strong> an observational study, because the visitors chose to visit the shop.</li><li><strong>(E)</strong> a census of the shop's customers.</li></ul>
+<p><strong>19.</strong> Which statement about <strong>control</strong> in an experiment is correct?</p>
+<ul><li><strong>(A)</strong> "Direct control" means including a group that receives no treatment.</li><li><strong>(B)</strong> A control group must always receive a placebo.</li><li><strong>(C)</strong> Every experiment must have a no-treatment control group.</li><li><strong>(D)</strong> Control is achieved by randomly assigning the treatments.</li><li><strong>(E)</strong> A control group is a group used for comparison, such as one receiving a placebo, no treatment or the current treatment. Direct control means holding other variables the same for every unit, which is a different idea.</li></ul>
+<p><strong>20.</strong> A student writes this report on the lozenge trial from questions 8–12. <strong>Exactly one</strong> of the five statements is incorrect.</p>
+<blockquote><strong>I.</strong> The treatments are the herbal lozenge, the placebo lozenge and no lozenge.<br><strong>II.</strong> The experimental units are the 90 volunteers.<br><strong>III.</strong> Random assignment is what allows a cause-and-effect conclusion.<br><strong>IV.</strong> Because the volunteers were randomly assigned, the results can be generalised to all adults with a sore throat.<br><strong>V.</strong> Replication is shown by having 30 volunteers in each group.</blockquote>
+<p>Which statement is incorrect?</p>
+<ul><li><strong>(A)</strong> I</li><li><strong>(B)</strong> II</li><li><strong>(C)</strong> III</li><li><strong>(D)</strong> IV</li><li><strong>(E)</strong> V</li></ul>
+<hr>
+<hr>
+<h1>Answers and explanations</h1>
+<p>Each explanation says why the key is right <strong>and what misconception each wrong option represents.</strong> A wrong answer tells you which idea to reteach, and the diagnostic table at the end maps every distractor to a specific gap.</p>
+<blockquote><strong>Answers are collapsed.</strong> Click a question to open it, or press <strong><code>e</code></strong> to open every explanation at once. That keeps the key hidden while the test is on a shared screen.</blockquote>
+<h2>Answers 1–2 · Two ways of sampling</h2>
+<details>
+<summary><strong>Question 1</strong></summary>
+<p><strong>Answer: (B)</strong></p>
+<p>CED 1.12.A.1: bias occurs when a method <strong>consistently</strong> produces estimates that are too high or too low. Method X's 100 estimates are centred on 0.40: they miss on both sides, and their mean is 0.40. Method Y's are centred near 0.55: almost every sample is too high. Only 4 of Method Y's 100 estimates are within 0.05 of the truth, against 67 of Method X's.</p>
+<ul><li><strong>(A)</strong> confuses variability with bias. Random samples always vary; bias is about where they centre.</li><li><strong>(C)</strong> treats any error as bias. Both methods have sampling variability; only Y has a systematic error.</li><li><strong>(D)</strong> looks at spread and ignores centre. The two spreads are similar; the centres are 0.15 apart.</li><li><strong>(E)</strong> confuses a larger estimate with a better one.</li></ul>
+</details>
+<details>
+<summary><strong>Question 2</strong></summary>
+<p><strong>Answer: (E)</strong></p>
+<p>A larger sample gives each estimate less random variation, so the dots cluster more tightly: from a standard deviation of about 0.05 to about 0.025 for samples four times as large. But the method is still interviewing people outside the station, who are more likely to use public transport. So the centre stays near 0.55. This is Session 7's Scenario A trap: <strong>a bigger sample cures variation, not bias.</strong></p>
+<ul><li><strong>(A)</strong> and <strong>(D)</strong> believe size removes bias. It cannot, because the bias comes from <strong>who</strong> is asked, not <strong>how many</strong>.</li><li><strong>(B)</strong> reverses the effect of sample size on spread.</li><li><strong>(C)</strong> ignores the effect of sample size altogether.</li></ul>
+</details>
+<h2>Answers 3–7 · What went wrong with the sample?</h2>
+<details>
+<summary><strong>Question 3</strong></summary>
+<p><strong>Answer: (A)</strong></p>
+<p>CED 1.12.A.2: in <strong>voluntary response</strong> sampling, people choose whether to take part, and those with strong opinions are more likely to. No one was selected: 1,860 people selected themselves.</p>
+<ul><li><strong>(B)</strong> Nonresponse needs a chosen sample that fails to respond. Nobody was chosen here, so it is voluntary response, not nonresponse. This distinction is one of the session's conventions.</li><li><strong>(C)</strong> Undercoverage is about people who <strong>could not</strong> be chosen. Every website visitor could answer.</li><li><strong>(D)</strong> Mentioning a time does not push answers in either direction. The wording is neutral.</li><li><strong>(E)</strong> Size does not cure bias (question 2).</li></ul>
+</details>
+<details>
+<summary><strong>Question 4</strong></summary>
+<p><strong>Answer: (C)</strong></p>
+<p>CED 1.12.A.3: <strong>undercoverage</strong> occurs when part of the population has a reduced chance, or none, of being included. Households without a listed landline cannot be chosen, and they are likely to differ in exactly the variable measured. (C) names the mechanism and a plausible direction, as the session requires.</p>
+<ul><li><strong>(A)</strong> Households were chosen, not self-selected.</li><li><strong>(B)</strong> Unanswered calls would be a nonresponse problem, but the bigger fault is who could never be called.</li><li><strong>(D)</strong> Memory problems could cause response bias, but that is not what the design gets wrong.</li><li><strong>(E)</strong> Choosing at random from a list that leaves people out is still undercoverage. Randomness only helps within the list.</li></ul>
+</details>
+<details>
+<summary><strong>Question 5</strong></summary>
+<p><strong>Answer: (D)</strong></p>
+<p>CED 1.12.A.4: <strong>nonresponse</strong> bias can occur when individuals chosen for the sample cannot be contacted or do not respond. The 800 were chosen at random, and 576 were then lost.</p>
+<ul><li><strong>(A)</strong> is the confusion the session names: voluntary response has <strong>no</strong> chosen sample. Here there is one, so the problem is nonresponse.</li><li><strong>(B)</strong> would be undercoverage only if some residents could not be reached by post at all. That is not the main issue.</li><li><strong>(C)</strong> Written questions do not by themselves push answers one way.</li><li><strong>(E)</strong> A random sample protects against bias only if the chosen individuals respond. A 28% response undoes much of that protection.</li></ul>
+</details>
+<details>
+<summary><strong>Question 6</strong></summary>
+<p><strong>Answer: (B)</strong></p>
+<p>CED 1.12.A.5: <strong>response bias</strong> occurs when problems in the data-gathering instrument lead to inaccurate responses. Question wording is one such problem. "Wasting money" invites agreement, so the proportion who agree is likely to be too high.</p>
+<ul><li><strong>(A)</strong> A yes/no format does not protect a loaded question.</li><li><strong>(C)</strong> Cyclists being a minority is a fact about the population, not a flaw in the sample.</li><li><strong>(D)</strong> gets the mechanism right and the direction wrong. The wording pushes towards agreement.</li><li><strong>(E)</strong> confuses a loaded question with a refusal to answer.</li></ul>
+</details>
+<details>
+<summary><strong>Question 7</strong></summary>
+<p><strong>Answer: (E)</strong></p>
+<p>CED 1.12.A.6: a <strong>convenience</strong> sample is made of individuals who are easy to reach, and it tends to produce biased data. Interviewing in a car park selects exactly the people who drove. The session's rule is to say the direction: the proportion who drive will be too high.</p>
+<ul><li><strong>(A)</strong> confuses equal chance <em>within the car park</em> with equal chance in the <em>town's adults</em>. Nobody who didn't come to the car park could be chosen.</li><li><strong>(B)</strong> Refusals may happen, but they are not the main flaw.</li><li><strong>(C)</strong> Being in the car park is not choosing to answer the survey. The researcher chose who to approach.</li><li><strong>(D)</strong> The direction is clear here, and saying it is part of a complete answer.</li></ul>
+</details>
+<h2>Answers 8–12 · The throat-lozenge trial</h2>
+<details>
+<summary><strong>Question 8</strong></summary>
+<p><strong>Answer: (C)</strong></p>
+<p>CED 1.13.A.3: the <strong>placebo effect</strong> is the average response to the placebo minus the average response to no treatment. So 3.6 − 4.4 = <strong>−0.8 days</strong>: the placebo group recovered 0.8 days sooner than the group given nothing, although the placebo lozenge contained no herbal ingredient.</p>
+<ul><li><strong>(A)</strong> −0.5 is herbal minus placebo, the effect of the herbal ingredient beyond the placebo.</li><li><strong>(B)</strong> −1.3 is herbal minus no lozenge, which combines the herbal effect and the placebo effect.</li><li><strong>(D)</strong> reverses the subtraction.</li><li><strong>(E)</strong> is the placebo group's mean, not a difference.</li></ul>
+</details>
+<details>
+<summary><strong>Question 9</strong></summary>
+<p><strong>Answer: (A)</strong></p>
+<p>CED 1.13.A.4–5: in a <strong>double-blind</strong> experiment, neither the subjects nor the people measuring the response know which treatment each subject received. That is true for the two lozenge groups. The no-lozenge group cannot be blinded, which is exactly why the trial includes a placebo. Comparing herbal with placebo separates the herbal ingredient from the effect of simply taking a lozenge.</p>
+<ul><li><strong>(B)</strong> overlooks the fact that the no-lozenge volunteers know they got nothing.</li><li><strong>(C)</strong> misreads the design: the placebo looks and tastes the same, so the volunteers cannot tell by taste.</li><li><strong>(D)</strong> ignores that the lozenge volunteers are blinded too.</li><li><strong>(E)</strong> confuses the jobs of random assignment and blinding. Random assignment balances the groups; blinding stops expectations from affecting the responses or the measurements.</li></ul>
+</details>
+<details>
+<summary><strong>Question 10</strong></summary>
+<p><strong>Answer: (D)</strong></p>
+<p>CED 1.13.A.10: <strong>direct control</strong> means holding other potential sources of variation the same for all units. Dose, timing and water intake are fixed for everyone.</p>
+<ul><li><strong>(A)</strong> Blinding is a separate feature, not replication.</li><li><strong>(B)</strong> 30 per group is <strong>replication</strong>: more than one unit per treatment (CED 1.13.A.9). It is not random assignment.</li><li><strong>(C)</strong> The no-lozenge group is a <strong>comparison</strong>, or control, group. Calling it "direct control" is the confusion question 19 tests.</li><li><strong>(E)</strong> Comparing three groups is <strong>comparison</strong>, not replication.</li></ul>
+</details>
+<details>
+<summary><strong>Question 11</strong></summary>
+<p><strong>Answer: (B)</strong></p>
+<p>CED 1.13.D.1–2: a statistically significant difference in a well-designed experiment with <strong>random assignment</strong> supports a cause-and-effect conclusion. When the units are volunteers rather than a random sample, it applies only to units <strong>similar to those in the experiment</strong>.</p>
+<ul><li><strong>(A)</strong> and <strong>(D)</strong> generalise beyond the volunteers. Significance does not make a sample representative.</li><li><strong>(C)</strong> reverses the roles. Volunteers limit <strong>who</strong> the conclusion reaches, not <strong>whether</strong> it can be causal. Random assignment is what licenses cause.</li><li><strong>(E)</strong> confuses group size with validity. The result is significant, so the groups were large enough to show this difference.</li></ul>
+</details>
+<details>
+<summary><strong>Question 12</strong></summary>
+<p><strong>Answer: (E)</strong></p>
+<p>A difference that is not statistically significant means the data do not give convincing evidence of a real difference: the difference seen could plausibly be due to chance. It does <strong>not</strong> show that there is no difference. The session states this as a convention.</p>
+<ul><li><strong>(A)</strong> and <strong>(B)</strong> read absence of evidence as evidence of absence.</li><li><strong>(C)</strong> confuses the result with the design. A well-designed experiment can find no significant difference.</li><li><strong>(D)</strong> is irrelevant. The question compares herbal with placebo, not placebo with nothing.</li></ul>
+</details>
+<h2>Answers 13–15 · Testing fence paint</h2>
+<details>
+<summary><strong>Question 13</strong></summary>
+<p><strong>Answer: (A)</strong></p>
+<p>CED 1.13.B.2: in a <strong>randomized block design</strong>, units are grouped into blocks by a variable expected to affect the response, and treatments are <strong>randomly assigned within each block</strong>. The blocks here are the two sides, formed by sunlight. Randomisation happens inside each side.</p>
+<ul><li><strong>(B)</strong> confounds paint with side completely. Any difference could be the sun.</li><li><strong>(C)</strong> is a completely randomized design. It is valid, but it is not blocked.</li><li><strong>(D)</strong> has no random assignment. The painter's choices could be linked to panel condition.</li><li><strong>(E)</strong> is the same confounding as (B), with a random start.</li></ul>
+</details>
+<details>
+<summary><strong>Question 14</strong></summary>
+<p><strong>Answer: (C)</strong></p>
+<p>CED 1.13.B.3: blocking is used when a variable, here sunlight, is expected to affect the response. Comparing paints <strong>within</strong> each side keeps the sun from blurring the comparison, so the paint difference is estimated more precisely.</p>
+<ul><li><strong>(A)</strong> is Session 7's Scenario B trap. Random assignment, not blocking, is what justifies cause. Blocking buys precision.</li><li><strong>(B)</strong> Blocking changes how units are grouped, not how many there are.</li><li><strong>(D)</strong> Randomisation is still required <strong>within</strong> each block.</li><li><strong>(E)</strong> confuses the design with a census.</li></ul>
+</details>
+<details>
+<summary><strong>Question 15</strong></summary>
+<p><strong>Answer: (D)</strong></p>
+<p>CED 1.13.B.4: a <strong>matched pairs</strong> design is a block design with two treatments and blocks of size two. Here each panel is a block of two halves, and the coin decides which half gets which paint. It is the strongest version of blocking, because the two halves of a panel face the same sun, wood and weather.</p>
+<ul><li><strong>(A)</strong> ignores the pairing, which is the whole point of the design.</li><li><strong>(B)</strong> confuses "each unit gets both treatments" with "no treatments imposed". The paints are imposed and randomly assigned.</li><li><strong>(C)</strong> misidentifies the blocks. There are 60 blocks, the panels, each containing two halves.</li><li><strong>(E)</strong> confuses random selection with random assignment. Nothing about an experiment requires the units to be sampled at random.</li></ul>
+</details>
+<h2>Answers 16–20 · Separate questions</h2>
+<details>
+<summary><strong>Question 16</strong></summary>
+<p><strong>Answer: (B)</strong></p>
+<p>CED 1.13.A.8: confounding in an experiment occurs when the effect of the treatment cannot be separated from another variable. Here ability determined who got which shoe, so ability and shoe are tied together. Random assignment breaks that link (CED 1.13.A.7).</p>
+<ul><li><strong>(A)</strong> There is a comparison group: the current shoe.</li><li><strong>(C)</strong> Group size is not the fault. The same assignment with 500 runners would be just as confounded.</li><li><strong>(D)</strong> A survey could not compare the shoes fairly at all.</li><li><strong>(E)</strong> Imposing treatments makes it an experiment, but not a well-designed one.</li></ul>
+</details>
+<details>
+<summary><strong>Question 17</strong></summary>
+<p><strong>Answer: (A)</strong></p>
+<p>Each runner is a block of two runs, one per shoe, so this is <strong>matched pairs</strong> with one unit taking both treatments. This is a matched pairs design, as the session's conventions say. The coin toss randomises the <strong>order</strong>, because the second run could be faster or slower for reasons unrelated to the shoe, such as fitness, familiarity or weather.</p>
+<ul><li><strong>(B)</strong> ignores the pairing.</li><li><strong>(C)</strong> misses the order effect, which randomising the order is designed to remove.</li><li><strong>(D)</strong> confuses receiving both treatments with no treatment being imposed.</li><li><strong>(E)</strong> treats the treatments as blocks. The blocks are the runners.</li></ul>
+</details>
+<details>
+<summary><strong>Question 18</strong></summary>
+<p><strong>Answer: (C)</strong></p>
+<p>CED 1.13.B.1: in a <strong>completely randomized design</strong>, treatments are assigned to units completely at random, with no blocking. Each visitor gets one design, by chance.</p>
+<ul><li><strong>(A)</strong> confuses "two treatments" with matched pairs. Matched pairs needs pairs of similar units, or one unit taking both treatments.</li><li><strong>(B)</strong> Each visitor sees only one design, so there are no blocks.</li><li><strong>(D)</strong> confuses how the units arrived with how the treatments were assigned. The shop imposes the design, so it is an experiment.</li><li><strong>(E)</strong> is about sampling, not design.</li></ul>
+</details>
+<details>
+<summary><strong>Question 19</strong></summary>
+<p><strong>Answer: (E)</strong></p>
+<p>CED 1.13.A.2 and 1.13.A.10 describe two different ideas:</p>
+<ul><li>A <strong>control group</strong> is a comparison group, receiving a placebo, no treatment or an existing treatment.</li><li><strong>Direct control</strong> is holding other variables constant.</li></ul>
+<p>The session's conventions stress that they are not the same.</p>
+<ul><li><strong>(A)</strong> is the confusion itself.</li><li><strong>(B)</strong> and <strong>(C)</strong> are too narrow. A control group can receive the current treatment. The paint and shoe experiments compare two real treatments and are still well designed.</li><li><strong>(D)</strong> confuses control with random assignment. They are separate elements.</li></ul>
+</details>
+<details>
+<summary><strong>Question 20</strong></summary>
+<p><strong>Answer: (D)</strong></p>
+<p>Statement IV confuses <strong>random assignment</strong> with <strong>random selection</strong>. Random assignment supports cause; generalising to a population needs a random sample from it. The volunteers were not one, so the conclusion reaches only adults similar to them (question 11).</p>
+<ul><li><strong>(A)</strong> I is correct: there are three treatments.</li><li><strong>(B)</strong> II is correct.</li><li><strong>(C)</strong> III is correct (CED 1.13.D.1).</li><li><strong>(E)</strong> V is correct (CED 1.13.A.9).</li></ul>
+</details>
+<hr>
+<hr>
+<h1>Marking and diagnosis</h1>
+<h2>Score</h2>
+<p>One mark per question. <strong>Total 20.</strong></p>
+<div class="tbl"><table><thead><tr><th>Score</th><th>Reading</th></tr></thead><tbody><tr><td>17–20</td><td>Session 7 is secure. Block C is complete; move to Session 8.</td></tr><tr><td>13–16</td><td>Solid. Reteach only the specific items missed, using the table below.</td></tr><tr><td>9–12</td><td>The terms are there, but applying them is not yet reliable. Re-run the Password activity and Scenario B before moving on.</td></tr><tr><td>0–8</td><td>Reteach Session 7. Free-response question 1 draws on this session and Session 6 more than on any others.</td></tr></tbody></table></div>
+<h2>What each miss points to</h2>
+<div class="tbl"><table><thead><tr><th>Missed</th><th>The gap</th><th>Theory to reread</th><th>Where it is applied</th></tr></thead><tbody><tr><td>1, 2</td><td>Bias is a consistent error of the method; size cures variation, not bias</td><td><em>Bias: a systematic error in the sampling method (1.12.A.1)</em></td><td><em>Four estimates of one proportion</em>, <em>The newsletter link: voluntary response, and why 212 replies do not help</em> and <em>Sampling Bias tool: many samples from each method</em></td></tr><tr><td>3, 7</td><td>Voluntary response and convenience samples, with their direction</td><td><em>Convenience and voluntary response: samples not chosen by chance (1.12.A.2, 1.12.A.6)</em></td><td><em>The main-gate sample: convenience and undercoverage</em></td></tr><tr><td>4</td><td>Undercoverage: some could never be chosen</td><td><em>Undercoverage bias: part of the population left out (1.12.A.3)</em></td><td><em>The main-gate sample: convenience and undercoverage</em></td></tr><tr><td>5</td><td>Nonresponse: chosen, then lost</td><td><em>Nonresponse bias: chosen but not answering (1.12.A.4)</em></td><td><em>The 4:30 phone calls: nonresponse from a random sample</em></td></tr><tr><td>6</td><td>Response bias from wording, and its direction</td><td><em>Response bias: answers pushed one way, including question wording (1.12.A.5)</em></td><td><em>Two wordings of the late-bus question: response bias</em></td></tr><tr><td>8, 9</td><td>The placebo effect, and why blinding needs a placebo</td><td><em>Control groups, placebos and the placebo effect (1.13.A.2–3)</em> and <em>Single-blind and double-blind experiments (1.13.A.4–5)</em></td><td><em>Who knows which patients got a text?</em></td></tr><tr><td>10, 19</td><td>The four elements; a control group is not direct control</td><td><em>The four elements of a well-designed experiment (1.13.A.1)</em> and <em>Replication and direct control (1.13.A.9–10)</em></td><td><em>Four elements in the reminder experiment</em></td></tr><tr><td>16</td><td>Confounding when assignment is not random</td><td><em>Extraneous variables, and what random assignment is for (1.13.A.6–7)</em> and <em>Confounding in an experiment (1.13.A.8)</em></td><td><em>The receptionist's plan: clinic day as a confounding variable</em></td></tr><tr><td>13, 14</td><td>Randomized block design, and why block</td><td><em>The randomized block design, and why to block (1.13.B.2–3)</em></td><td><em>Completely randomized, or blocked by booking method?</em> and <em>Random assignment inside every block</em></td></tr><tr><td>15, 17, 18</td><td>Matched pairs and completely randomized designs</td><td><em>The matched pairs design (1.13.B.4)</em> and <em>The completely randomized design (1.13.B.1)</em></td><td><em>Completely randomized, or blocked by booking method?</em></td></tr><tr><td>11, 12, 20</td><td>Cause from random assignment, reach from random selection; "not significant" is not "no effect"</td><td><em>Cause and effect from random assignment, and statistical significance (1.13.D.1)</em> and <em>Experiments on volunteers: how far the conclusion reaches (1.13.D.2)</em></td><td><em>The results: a statistically significant difference</em> and <em>The conclusion St Mary's may write, and about whom</em></td></tr></tbody></table></div>
+<blockquote><strong>Three misses worth treating as urgent.</strong> <strong>Question 2</strong>, believing a bigger sample cures bias, is the most tempting wrong idea in this topic, because a large number feels trustworthy. It returns in Block E, where sample size is exactly the thing that changes an interval's width but never its bias. <strong>Question 11 or 20</strong>, mixing up random assignment and random selection, costs the conclusion mark on almost every free-response question about an experiment. <strong>Question 14, option (A)</strong>, crediting blocking with cause, is Session 7's second trap, and it returns whenever a design question asks "why block?".</blockquote>
+<hr>
+<p><em>CED references: Topic 1.12 (1.12.A.1–6), Topic 1.13 (1.13.A.1–10, 1.13.B.1–4, 1.13.C.1, 1.13.D.1–2). Course and Exam Description effective Fall 2026.</em></p>
+<p><em>The numbers in this test were checked by script: the 100 simulated samples for each method (Method X centred at 0.40, Method Y near 0.55), the spreads at n = 100 and n = 400, the placebo effect and the other differences between the lozenge means, and the counts in the paint, shoe and shop designs.</em></p>
+</main>
+<script>window.COURSE_NAV={"kicker": "CED 1.12–1.13 · 20 questions", "title": "Session 7 Test", "map": [{"label": "Course", "items": [{"href": "index.html", "label": "Home", "current": false}, {"href": "plan.html", "label": "The 20-hour plan", "current": false}]}, {"label": "Block A · Describing one variable", "items": [{"href": "s01-tutor.html", "label": "Session 1 · Tutor", "current": false}, {"href": "s01-student.html", "label": "Session 1 · Student", "current": false}, {"href": "s01-test.html", "label": "Session 1 · Test", "current": false}, {"href": "s02-tutor.html", "label": "Session 2 · Tutor", "current": false}, {"href": "s02-student.html", "label": "Session 2 · Student", "current": false}, {"href": "s02-test.html", "label": "Session 2 · Test", "current": false}, {"href": "s03-tutor.html", "label": "Session 3 · Tutor", "current": false}, {"href": "s03-student.html", "label": "Session 3 · Student", "current": false}, {"href": "s03-test.html", "label": "Session 3 · Test", "current": false}]}, {"label": "Block B · Describing two variables", "items": [{"href": "s04-tutor.html", "label": "Session 4 · Tutor", "current": false}, {"href": "s04-student.html", "label": "Session 4 · Student", "current": false}, {"href": "s04-test.html", "label": "Session 4 · Test", "current": false}, {"href": "s05-tutor.html", "label": "Session 5 · Tutor", "current": false}, {"href": "s05-student.html", "label": "Session 5 · Student", "current": false}, {"href": "s05-test.html", "label": "Session 5 · Test", "current": false}]}, {"label": "Block C · Collecting data", "items": [{"href": "s06-tutor.html", "label": "Session 6 · Tutor", "current": false}, {"href": "s06-student.html", "label": "Session 6 · Student", "current": false}, {"href": "s06-test.html", "label": "Session 6 · Test", "current": false}, {"href": "s07-tutor.html", "label": "Session 7 · Tutor", "current": false}, {"href": "s07-student.html", "label": "Session 7 · Student", "current": false}, {"href": "s07-test.html", "label": "Session 7 · Test", "current": true}]}, {"label": "Interactive", "items": [{"href": "tools/unit1-explorer.html", "label": "Unit 1 Explorer", "current": false}, {"href": "tools/boxplot-builder.html", "label": "Boxplot Builder", "current": false}, {"href": "tools/guess-correlation.html", "label": "Guess the Correlation", "current": false}, {"href": "tools/least-squares-fitter.html", "label": "Least-squares Fitter", "current": false}, {"href": "tools/sampling-methods.html", "label": "Sampling Methods", "current": false}, {"href": "tools/sampling-bias.html", "label": "Sampling Bias", "current": false}]}], "prev": {"href": "s07-student.html", "label": "Session 7 · Student"}, "next": {"href": "tools/unit1-explorer.html", "label": "Unit 1 Explorer"}, "variants": [{"href": "s07-tutor.html", "label": "Tutor", "current": false}, {"href": "s07-student.html", "label": "Student", "current": false}, {"href": "s07-test.html", "label": "Test", "current": true}]};</script>
+<script src="assets/course.js"></script>
+</body>
+</html>

@@ -1077,7 +1077,8 @@
   "library-branches-18": {
    "sessions": [
     4,
-    5
+    5,
+    7
    ],
    "desc": "18 library branches: public computers, weekly visits, residents served in thousands (Homework E, the confounding variable).",
    "computers": [
@@ -2805,7 +2806,8 @@
   },
   "lincoln-sampling-plans": {
    "sessions": [
-    6
+    6,
+    7
    ],
    "desc": "Lincoln High, N = 1,842 on the alphabetical school roll: home areas (from the office's address records, a census), tutor groups, and the five sampling plans of Scenario A, n about 120.",
    "N": 1842,
@@ -2921,7 +2923,8 @@
   },
   "st-marys-reminders-records": {
    "sessions": [
-    6
+    6,
+    7
    ],
    "desc": "St Mary's outpatients (Scenario B): 400 of last year's 9,600 outpatients selected with a random number generator; from the records, whether each had signed up for text reminders, whether they missed the appointment, and how it was booked. Retrospective observational study.",
    "N": 9600,
@@ -3095,7 +3098,8 @@
   },
   "hospital-network-sampling-hw": {
    "sessions": [
-    6
+    6,
+    7
    ],
    "desc": "Homework Part B: the Session 1 hospital network, 12,400 patients discharged last year from six hospitals; five survey plans.",
    "N": 12400,
@@ -3141,6 +3145,657 @@
    "random_sample": 60,
    "class_size": 30,
    "volunteers": 12
+  },
+  "lincoln-bus-survey-bias": {
+   "sessions": [
+    7
+   ],
+   "desc": "Scenario A: Lincoln High, N = 1,842. Bus-pass census gives the parameter; four earlier estimates of the proportion who travel mainly by bus, each checked against it; the late-bus wording split.",
+   "N": 1842,
+   "bus_pass_census": {
+    "Town (within 3 km)": {
+     "N": 846,
+     "bus": 85
+    },
+    "Suburbs (3 to 10 km)": {
+     "N": 702,
+     "bus": 316
+    },
+    "Villages (beyond 10 km)": {
+     "N": 294,
+     "bus": 250
+    },
+    "total_bus": 651,
+    "parameter": 0.3534
+   },
+   "estimates": {
+    "A_srs_session1": {
+     "n": 120,
+     "bus": 43,
+     "phat": 0.358,
+     "error": "+0.005, chance"
+    },
+    "E_main_gate": {
+     "n": 120,
+     "bus": 12,
+     "phat": 0.1,
+     "bias": "undercoverage and convenience, too low"
+    },
+    "F_newsletter": {
+     "n": 212,
+     "bus": 128,
+     "phat": 0.604,
+     "bias": "voluntary response, too high"
+    },
+    "G_phone_430": {
+     "chosen": 120,
+     "answered": 87,
+     "nonrespondents": 33,
+     "bus": 17,
+     "phat": 0.195,
+     "bias": "nonresponse, too low"
+    }
+   },
+   "late_bus_wording": {
+    "sample": "new SRS of 120, split at random 60/60",
+    "version1_keep_clubs": {
+     "yes": 49,
+     "n": 60,
+     "pct": 81.7
+    },
+    "version2_cost": {
+     "yes": 17,
+     "n": 60,
+     "pct": 28.3
+    },
+    "gap_points": 53.3
+   }
+  },
+  "sampling-bias-tool-population": {
+   "sessions": [
+    7
+   ],
+   "desc": "The simulated Lincoln High inside the Sampling Bias tool (build/fragments/sampling-bias.html). Seed 20261001 (mulberry32). Bus users fixed by area (85/316/250 = 651); 130 of the 651 use the main gate, the other 521 the side bus bay; all 1,191 non-bus users use the main gate.",
+   "seed": 20261001,
+   "parameter": 0.3534,
+   "model": {
+    "gate": "SRS of n from the 1,321 main-gate users (130 bus): centre 130/1321 = 0.0984",
+    "newsletter": "first n replies; exponential reply times, rate 3 for bus users and 1 for others (successive weighted sampling)",
+    "phone": "SRS of n phoned; answer probability 0.4 (bus) or 0.9 (others); data = those who answered; with 0.9 for both the method is unbiased",
+    "theory_centres": {
+     "gate": 0.0984,
+     "newsletter_n30": 0.6189,
+     "newsletter_n120": 0.6119,
+     "newsletter_n212": 0.6043,
+     "newsletter_n480": 0.5794,
+     "phone_r0.4": 0.1955
+    }
+   },
+   "repeated_sampling_4000_draws": {
+    "note": "Node unit test, seeds 1030/1120/1480; centre and SD of the sample proportions",
+    "n30": {
+     "srs": {
+      "centre": 0.3542,
+      "sd": 0.0862
+     },
+     "gate": {
+      "centre": 0.0985,
+      "sd": 0.0535
+     },
+     "vol": {
+      "centre": 0.6196,
+      "sd": 0.0875
+     },
+     "phone": {
+      "centre": 0.1943,
+      "sd": 0.0853
+     },
+     "phoneEq": {
+      "centre": 0.3563,
+      "sd": 0.0916
+     }
+    },
+    "n120": {
+     "srs": {
+      "centre": 0.3528,
+      "sd": 0.0416
+     },
+     "gate": {
+      "centre": 0.0988,
+      "sd": 0.0256
+     },
+     "vol": {
+      "centre": 0.6123,
+      "sd": 0.043
+     },
+     "phone": {
+      "centre": 0.1954,
+      "sd": 0.0412
+     },
+     "phoneEq": {
+      "centre": 0.3534,
+      "sd": 0.0449
+     }
+    },
+    "n480": {
+     "srs": {
+      "centre": 0.3533,
+      "sd": 0.0188
+     },
+     "gate": {
+      "centre": 0.0984,
+      "sd": 0.0107
+     },
+     "vol": {
+      "centre": 0.5797,
+      "sd": 0.019
+     },
+     "phone": {
+      "centre": 0.1956,
+      "sd": 0.0196
+     },
+     "phoneEq": {
+      "centre": 0.3539,
+      "sd": 0.0199
+     }
+    }
+   }
+  },
+  "st-marys-reminder-experiment": {
+   "sessions": [
+    7
+   ],
+   "desc": "Scenario B: next month's 800 St Mary's outpatients, randomized block design by booking method; text reminder the day before or no text; response: missed the appointment. Continues st-marys-reminders-records (Session 6).",
+   "N": 800,
+   "blocks": {
+    "self_booked_online": {
+     "n": 400,
+     "text": {
+      "n": 200,
+      "missed": 8,
+      "pct": 4.0
+     },
+     "no_text": {
+      "n": 200,
+      "missed": 12,
+      "pct": 6.0
+     }
+    },
+    "booked_by_hospital": {
+     "n": 400,
+     "text": {
+      "n": 200,
+      "missed": 30,
+      "pct": 15.0
+     },
+     "no_text": {
+      "n": 200,
+      "missed": 50,
+      "pct": 25.0
+     }
+    }
+   },
+   "overall": {
+    "text": {
+     "n": 400,
+     "missed": 38,
+     "pct": 9.5
+    },
+    "no_text": {
+     "n": 400,
+     "missed": 62,
+     "pct": 15.5
+    },
+    "difference_points": 6.0
+   },
+   "significance_check": {
+    "two_prop_z": 2.566,
+    "one_sided_p": 0.0051,
+    "two_sided_p": 0.0103,
+    "randomisation_within_blocks_one_sided_p_100000": 0.0056,
+    "statement": "statistically significant (the session states it; the calculation is Sessions 15-16)"
+   },
+   "not_significant_contrast": {
+    "text_missed": 58,
+    "no_text_missed": 62,
+    "n_each": 400,
+    "pct": [
+     14.5,
+     15.5
+    ],
+    "z": 0.396,
+    "two_sided_p": 0.692
+   },
+   "balance_figure_crd": {
+    "seed": 20260930,
+    "draws": 1000,
+    "mean": 49.966,
+    "sd": 1.791,
+    "min": 44.5,
+    "max": 55.0,
+    "bins_centred_whole_pct": {
+     "45": 5,
+     "46": 20,
+     "47": 46,
+     "48": 110,
+     "49": 208,
+     "50": 205,
+     "51": 174,
+     "52": 149,
+     "53": 57,
+     "54": 21,
+     "55": 5
+    },
+    "theory_sd": 1.769
+   },
+   "patient_choice_session6": {
+    "pct_self_booked_among_signers": 87.5,
+    "pct_self_booked_among_non_signers": 25.0
+   },
+   "block_miss_rates": {
+    "self_booked": {
+     "missed": 20,
+     "n": 400,
+     "pct": 5.0
+    },
+    "hospital_booked": {
+     "missed": 80,
+     "n": 400,
+     "pct": 20.0
+    }
+   }
+  },
+  "riverside-hand-cream": {
+   "sessions": [
+    7
+   ],
+   "desc": "Solo case: 30 Riverside nurse volunteers, matched pairs (two hands per nurse), coin decides which hand gets the new cream, placebo cream on the other; double-blind; dryness scored 0-10 by a specialist.",
+   "nurses": 30,
+   "new_cream_hand_lower": 24,
+   "sign_test_one_sided_p": 0.00072,
+   "sign_test_two_sided_p": 0.00143
+  },
+  "s07-theory-abstract": {
+   "sessions": [
+    7
+   ],
+   "desc": "Made-up illustrations in the Session 7 theory section and figure s07-theory-bias-variability. No context.",
+   "bias_variability_figure": {
+    "seed": 20261002,
+    "parameter": 50,
+    "panels": {
+     "Unbiased, high variability": {
+      "mu": 50,
+      "sd": 9,
+      "values": [
+       53,
+       54,
+       57,
+       46,
+       44,
+       31,
+       44,
+       41,
+       48,
+       62,
+       63,
+       36,
+       50,
+       49,
+       57,
+       43,
+       52,
+       58,
+       61,
+       56,
+       56,
+       51,
+       65,
+       62,
+       52,
+       53,
+       43,
+       31,
+       56,
+       58,
+       49,
+       58,
+       44,
+       46,
+       54,
+       42,
+       57,
+       67,
+       56,
+       65
+      ],
+      "centre": 51.75
+     },
+     "Unbiased, low variability": {
+      "mu": 50,
+      "sd": 3,
+      "values": [
+       52,
+       50,
+       50,
+       50,
+       50,
+       56,
+       50,
+       49,
+       47,
+       48,
+       52,
+       49,
+       48,
+       54,
+       49,
+       53,
+       51,
+       48,
+       53,
+       48,
+       54,
+       52,
+       57,
+       54,
+       54,
+       50,
+       52,
+       51,
+       41,
+       49,
+       50,
+       46,
+       44,
+       54,
+       45,
+       54,
+       53,
+       51,
+       47,
+       47
+      ],
+      "centre": 50.3
+     },
+     "Biased, high variability": {
+      "mu": 66,
+      "sd": 9,
+      "values": [
+       69,
+       57,
+       59,
+       72,
+       55,
+       67,
+       70,
+       58,
+       74,
+       58,
+       71,
+       75,
+       45,
+       71,
+       72,
+       63,
+       54,
+       61,
+       70,
+       69,
+       54,
+       60,
+       66,
+       66,
+       46,
+       76,
+       53,
+       61,
+       68,
+       56,
+       78,
+       76,
+       48,
+       80,
+       75,
+       52,
+       71,
+       58,
+       60,
+       79
+      ],
+      "centre": 64.33
+     },
+     "Biased, low variability": {
+      "mu": 66,
+      "sd": 3,
+      "values": [
+       62,
+       61,
+       64,
+       64,
+       69,
+       65,
+       63,
+       60,
+       68,
+       67,
+       63,
+       70,
+       68,
+       68,
+       65,
+       69,
+       67,
+       67,
+       63,
+       63,
+       64,
+       64,
+       65,
+       67,
+       70,
+       65,
+       68,
+       67,
+       67,
+       66,
+       69,
+       72,
+       61,
+       67,
+       70,
+       64,
+       62,
+       66,
+       64,
+       67
+      ],
+      "centre": 65.78
+     }
+    }
+   },
+   "voluntary": {
+    "N": 1000,
+    "strong_view": 200,
+    "replies_strong": 150,
+    "replies_other": 50,
+    "pct_strong_in_replies": 75.0
+   },
+   "undercoverage": {
+    "N": 1000,
+    "with_P": 300,
+    "reachable": 700,
+    "reachable_with_P": 70,
+    "estimate": 0.1,
+    "parameter": 0.3
+   },
+   "nonresponse": {
+    "chosen": 100,
+    "with_P": 40,
+    "respond_with_P": 16,
+    "respond_without_P": 54,
+    "estimate": 0.2286,
+    "truth": 0.4
+   },
+   "placebo": {
+    "active": 12,
+    "placebo": 9,
+    "none": 6,
+    "placebo_effect": 3,
+    "beyond_placebo": 3
+   },
+   "random_split_20": {
+    "high_w": 10,
+    "groups_of": 10,
+    "P_4_to_6_high_in_first_group": 0.8211,
+    "P_all_10": "1/184756"
+   },
+   "designs_figure": {
+    "units": 20,
+    "crd": [
+     10,
+     10
+    ],
+    "blocks": {
+     "block1": [
+      6,
+      6
+     ],
+     "block2": [
+      4,
+      4
+     ]
+    },
+    "pairs": 10
+   }
+  },
+  "hospital-network-bias-hw": {
+   "sessions": [
+    7
+   ],
+   "desc": "Homework Part B: the hospital network's 12,400 discharged patients; parameter: proportion who would recommend their hospital. Plans and biases.",
+   "N": 12400,
+   "B1_link": {
+    "replies": 1150,
+    "bias": "voluntary response",
+    "direction": "too low (heading invites problems)"
+   },
+   "B2_post": {
+    "chosen": 300,
+    "returned": 126,
+    "nonrespondents": 174,
+    "bias": "nonresponse",
+    "direction": "too high (readmitted patients returned fewer)"
+   },
+   "B3_email": {
+    "chosen": 300,
+    "email_rate_over75": 0.38,
+    "email_rate_younger": 0.9,
+    "bias": "undercoverage",
+    "direction": "too low (over-75s most likely to recommend)"
+   },
+   "B4_wording": {
+    "bias": "response bias, question wording",
+    "direction": "too high"
+   }
+  },
+  "oakfield-reading-experiment-hw": {
+   "sessions": [
+    7
+   ],
+   "desc": "Homework Part C: 48 Oakfield Year 7 students, paper or tablet, 20-question comprehension quiz (Session 6 card O1). Block by reading age: 20 above their age, 28 not.",
+   "n": 48,
+   "crd": [
+    24,
+    24
+   ],
+   "blocks": {
+    "reading_age_above": {
+     "n": 20,
+     "alloc": [
+      10,
+      10
+     ]
+    },
+    "not_above": {
+     "n": 28,
+     "alloc": [
+      14,
+      14
+     ]
+    }
+   }
+  },
+  "library-display-pairs-hw": {
+   "sessions": [
+    7
+   ],
+   "desc": "Homework Part D: the 18 branches of library-branches-18, paired by weekly visits for a matched pairs design (display of new books at the entrance, 8 weeks).",
+   "weekly_visits_sorted": [
+    250,
+    450,
+    630,
+    700,
+    700,
+    710,
+    830,
+    910,
+    910,
+    1090,
+    1160,
+    1350,
+    1400,
+    1410,
+    1480,
+    1550,
+    2020,
+    2200
+   ],
+   "pairs": [
+    [
+     250,
+     450
+    ],
+    [
+     630,
+     700
+    ],
+    [
+     700,
+     710
+    ],
+    [
+     830,
+     910
+    ],
+    [
+     910,
+     1090
+    ],
+    [
+     1160,
+     1350
+    ],
+    [
+     1400,
+     1410
+    ],
+    [
+     1480,
+     1550
+    ],
+    [
+     2020,
+     2200
+    ]
+   ]
+  },
+  "cafe-tables-coin-hw": {
+   "sessions": [
+    7
+   ],
+   "desc": "Homework Part E: 40 spring days, a coin at opening decides tables outside; mean takings higher on table days, statistically significant (stated, not computed: no takings data are given).",
+   "days": 40
   }
  }
 }

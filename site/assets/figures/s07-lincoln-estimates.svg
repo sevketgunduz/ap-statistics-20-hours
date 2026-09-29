@@ -1,0 +1,98 @@
+<svg viewBox="0 0 760 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Four estimates of the proportion of all 1,842 Lincoln High students who travel mainly by bus, against the parameter 651/1842 = 0.353 from the bus-pass census. Simple random sample 43/120 = 0.358, close to it. Main gate 12/120 = 0.100, too low. Newsletter replies 128/212 = 0.604, too high. Phoned at 4:30 pm, 17 of the 87 who answered = 0.195, too low." font-family="Public Sans, system-ui, sans-serif">
+<style>
+  .ink { fill: #15201f; }
+  .ink2 { fill: #4a5654; }
+  .ink3 { fill: #6f7b79; }
+  .kink { stroke: #15201f; }
+  .kink2 { stroke: #4a5654; }
+  .kink3 { stroke: #6f7b79; }
+  .axis { stroke: #c3c9c6; }
+  .grid { stroke: #dcdfdd; }
+  .surf { fill: #ffffff; }
+  .band { fill: #eef1ef; }
+  .acc { fill: #1a6b63; }
+  .kacc { stroke: #1a6b63; }
+  .amb { fill: #7d5a11; }
+  .kamb { stroke: #7d5a11; }
+  .s0 { fill: #2a78d6; }
+  .k0 { stroke: #2a78d6; }
+  .s1 { fill: #eb6834; }
+  .k1 { stroke: #eb6834; }
+  .s2 { fill: #1baf7a; }
+  .k2 { stroke: #1baf7a; }
+  .s3 { fill: #eda100; }
+  .k3 { stroke: #eda100; }
+  .s4 { fill: #e87ba4; }
+  .k4 { stroke: #e87ba4; }
+  .s5 { fill: #008300; }
+  .k5 { stroke: #008300; }
+  @media (prefers-color-scheme: dark) {
+    .ink { fill: #e9edeb; }
+    .ink2 { fill: #a5b0ad; }
+    .ink3 { fill: #7e8a87; }
+    .kink { stroke: #e9edeb; }
+    .kink2 { stroke: #a5b0ad; }
+    .kink3 { stroke: #7e8a87; }
+    .axis { stroke: #3a4644; }
+    .grid { stroke: #2a3533; }
+    .surf { fill: #182120; }
+    .band { fill: #1e2827; }
+    .acc { fill: #54b8ab; }
+    .kacc { stroke: #54b8ab; }
+    .amb { fill: #d9ab52; }
+    .kamb { stroke: #d9ab52; }
+    .s0 { fill: #3987e5; }
+    .k0 { stroke: #3987e5; }
+    .s1 { fill: #d95926; }
+    .k1 { stroke: #d95926; }
+    .s2 { fill: #199e70; }
+    .k2 { stroke: #199e70; }
+    .s3 { fill: #c98500; }
+    .k3 { stroke: #c98500; }
+    .s4 { fill: #d55181; }
+    .k4 { stroke: #d55181; }
+    .s5 { fill: #008300; }
+    .k5 { stroke: #008300; }
+  }
+</style>
+<line class="grid" x1="270.0" y1="28.0" x2="270.0" y2="234.0" stroke="#dcdfdd" stroke-width="1" fill="none"/>
+<text class="ink3" x="270.0" y="252.0" font-size="11" font-weight="400" text-anchor="middle" fill="#6f7b79">0.0</text>
+<line class="grid" x1="335.7" y1="28.0" x2="335.7" y2="234.0" stroke="#dcdfdd" stroke-width="1" fill="none"/>
+<text class="ink3" x="335.7" y="252.0" font-size="11" font-weight="400" text-anchor="middle" fill="#6f7b79">0.1</text>
+<line class="grid" x1="401.4" y1="28.0" x2="401.4" y2="234.0" stroke="#dcdfdd" stroke-width="1" fill="none"/>
+<text class="ink3" x="401.4" y="252.0" font-size="11" font-weight="400" text-anchor="middle" fill="#6f7b79">0.2</text>
+<line class="grid" x1="467.1" y1="28.0" x2="467.1" y2="234.0" stroke="#dcdfdd" stroke-width="1" fill="none"/>
+<text class="ink3" x="467.1" y="252.0" font-size="11" font-weight="400" text-anchor="middle" fill="#6f7b79">0.3</text>
+<line class="grid" x1="532.9" y1="28.0" x2="532.9" y2="234.0" stroke="#dcdfdd" stroke-width="1" fill="none"/>
+<text class="ink3" x="532.9" y="252.0" font-size="11" font-weight="400" text-anchor="middle" fill="#6f7b79">0.4</text>
+<line class="grid" x1="598.6" y1="28.0" x2="598.6" y2="234.0" stroke="#dcdfdd" stroke-width="1" fill="none"/>
+<text class="ink3" x="598.6" y="252.0" font-size="11" font-weight="400" text-anchor="middle" fill="#6f7b79">0.5</text>
+<line class="grid" x1="664.3" y1="28.0" x2="664.3" y2="234.0" stroke="#dcdfdd" stroke-width="1" fill="none"/>
+<text class="ink3" x="664.3" y="252.0" font-size="11" font-weight="400" text-anchor="middle" fill="#6f7b79">0.6</text>
+<line class="grid" x1="730.0" y1="28.0" x2="730.0" y2="234.0" stroke="#dcdfdd" stroke-width="1" fill="none"/>
+<text class="ink3" x="730.0" y="252.0" font-size="11" font-weight="400" text-anchor="middle" fill="#6f7b79">0.7</text>
+<text class="ink3" x="500.0" y="272.0" font-size="11.5" font-weight="400" text-anchor="middle" fill="#6f7b79">proportion who travel mainly by bus</text>
+<line class="kink" x1="502.2" y1="20.0" x2="502.2" y2="234.0" stroke="#15201f" stroke-width="1.6" fill="none" stroke-dasharray="5 3"/>
+<text class="ink" x="508.2" y="18.0" font-size="11.5" font-weight="600" text-anchor="start" fill="#15201f">parameter 0.353 (bus-pass census, all 1,842)</text>
+<text class="ink" x="20.0" y="57.0" font-size="12" font-weight="600" text-anchor="start" fill="#15201f">Simple random sample (Session 1)</text>
+<text class="ink2" x="20.0" y="73.0" font-size="11.5" font-weight="400" text-anchor="start" fill="#4a5654" font-family="IBM Plex Mono, monospace">43 of 120 = 0.358</text>
+<circle class="s0 kink" cx="505.5" cy="59.0" r="6.0" fill="#2a78d6" stroke="#15201f" stroke-width="1.0"/>
+<text class="ink" x="20.0" y="107.0" font-size="12" font-weight="600" text-anchor="start" fill="#15201f">First 120 through the main gate</text>
+<text class="ink2" x="20.0" y="123.0" font-size="11.5" font-weight="400" text-anchor="start" fill="#4a5654" font-family="IBM Plex Mono, monospace">12 of 120 = 0.100</text>
+<line class="kamb" x1="502.2" y1="109.0" x2="351.7" y2="109.0" stroke="#7d5a11" stroke-width="2.0" fill="none"/>
+<polygon class="amb" points="342.7,109.0 351.7,104.7 351.7,113.3" fill="#7d5a11" stroke="none"/>
+<text class="amb" x="419.0" y="101.0" font-size="11" font-weight="600" text-anchor="middle" fill="#7d5a11">too low</text>
+<circle class="s1 kink" cx="335.7" cy="109.0" r="6.0" fill="#eb6834" stroke="#15201f" stroke-width="1.0"/>
+<text class="ink" x="20.0" y="157.0" font-size="12" font-weight="600" text-anchor="start" fill="#15201f">Newsletter link, first 212 replies</text>
+<text class="ink2" x="20.0" y="173.0" font-size="11.5" font-weight="400" text-anchor="start" fill="#4a5654" font-family="IBM Plex Mono, monospace">128 of 212 = 0.604</text>
+<line class="kamb" x1="502.2" y1="159.0" x2="650.8" y2="159.0" stroke="#7d5a11" stroke-width="2.0" fill="none"/>
+<polygon class="amb" points="659.8,159.0 650.8,163.3 650.8,154.7" fill="#7d5a11" stroke="none"/>
+<text class="amb" x="584.5" y="151.0" font-size="11" font-weight="600" text-anchor="middle" fill="#7d5a11">too high</text>
+<circle class="s1 kink" cx="666.8" cy="159.0" r="6.0" fill="#eb6834" stroke="#15201f" stroke-width="1.0"/>
+<text class="ink" x="20.0" y="207.0" font-size="12" font-weight="600" text-anchor="start" fill="#15201f">Random 120, phoned at 4:30 pm</text>
+<text class="ink2" x="20.0" y="223.0" font-size="11.5" font-weight="400" text-anchor="start" fill="#4a5654" font-family="IBM Plex Mono, monospace">17 of 87 = 0.195</text>
+<line class="kamb" x1="502.2" y1="209.0" x2="414.4" y2="209.0" stroke="#7d5a11" stroke-width="2.0" fill="none"/>
+<polygon class="amb" points="405.4,209.0 414.4,204.7 414.4,213.3" fill="#7d5a11" stroke="none"/>
+<text class="amb" x="450.3" y="201.0" font-size="11" font-weight="600" text-anchor="middle" fill="#7d5a11">too low</text>
+<circle class="s1 kink" cx="398.4" cy="209.0" r="6.0" fill="#eb6834" stroke="#15201f" stroke-width="1.0"/>
+</svg>

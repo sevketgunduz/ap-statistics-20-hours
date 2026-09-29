@@ -232,6 +232,39 @@
           "variant": "test",
           "title": "Session 6 Test",
           "topics": "CED 1.10–1.11 · 20 questions"
+        },
+        {
+          "id": "s07t",
+          "label": "Session 7 · Tutor",
+          "out": "s07-tutor.html",
+          "src": "Session-07-Tutoring-Document.md",
+          "kind": "md",
+          "session": 7,
+          "variant": "tutor",
+          "title": "Session 7, Bias and Experiments",
+          "topics": "CED 1.12–1.13"
+        },
+        {
+          "id": "s07s",
+          "label": "Session 7 · Student",
+          "out": "s07-student.html",
+          "src": "Session-07-Student-Workbook.md",
+          "kind": "md",
+          "session": 7,
+          "variant": "student",
+          "title": "Session 7 Workbook",
+          "topics": "CED 1.12–1.13"
+        },
+        {
+          "id": "s07x",
+          "label": "Session 7 · Test",
+          "out": "s07-test.html",
+          "src": "Session-07-MC-Test.md",
+          "kind": "md",
+          "session": 7,
+          "variant": "test",
+          "title": "Session 7 Test",
+          "topics": "CED 1.12–1.13 · 20 questions"
         }
       ]
     },
@@ -282,6 +315,15 @@
           "kind": "tool",
           "title": "Sampling Methods",
           "topics": "Session 6"
+        },
+        {
+          "id": "sim6",
+          "label": "Sampling Bias",
+          "out": "tools/sampling-bias.html",
+          "src": "html-fragment:sampling-bias.html",
+          "kind": "tool",
+          "title": "Sampling Bias",
+          "topics": "Session 7"
         }
       ]
     }
