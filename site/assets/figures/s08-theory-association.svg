@@ -1,0 +1,127 @@
+<svg viewBox="0 0 760 330" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Two segmented bar charts. Left, not associated: Group A and Group B both split X 50%, Y 30%, Z 20%. Right, associated: Group A splits 50%, 30%, 20% and Group B 20%, 30%, 50%." font-family="Public Sans, system-ui, sans-serif">
+<style>
+  .ink { fill: #15201f; }
+  .ink2 { fill: #4a5654; }
+  .ink3 { fill: #6f7b79; }
+  .surf { fill: #ffffff; }
+  .band { fill: #eef1ef; }
+  .acc { fill: #1a6b63; }
+  .amb { fill: #7d5a11; }
+  .s0 { fill: #2a78d6; }
+  .s1 { fill: #eb6834; }
+  .s2 { fill: #1baf7a; }
+  .s3 { fill: #eda100; }
+  .s4 { fill: #e87ba4; }
+  .s5 { fill: #008300; }
+  .kink { stroke: #15201f; }
+  .kink2 { stroke: #4a5654; }
+  .kink3 { stroke: #6f7b79; }
+  .axis { stroke: #c3c9c6; }
+  .grid { stroke: #dcdfdd; }
+  .kacc { stroke: #1a6b63; }
+  .kamb { stroke: #7d5a11; }
+  .k0 { stroke: #2a78d6; }
+  .k1 { stroke: #eb6834; }
+  .k2 { stroke: #1baf7a; }
+  .k3 { stroke: #eda100; }
+  .k4 { stroke: #e87ba4; }
+  .k5 { stroke: #008300; }
+  .ksurf { stroke: #ffffff; }
+  @media (prefers-color-scheme: dark) {
+    .ink { fill: #e9edeb; }
+    .ink2 { fill: #a5b0ad; }
+    .ink3 { fill: #7e8a87; }
+    .surf { fill: #182120; }
+    .band { fill: #1e2827; }
+    .acc { fill: #54b8ab; }
+    .amb { fill: #d9ab52; }
+    .s0 { fill: #3987e5; }
+    .s1 { fill: #d95926; }
+    .s2 { fill: #199e70; }
+    .s3 { fill: #c98500; }
+    .s4 { fill: #d55181; }
+    .s5 { fill: #008300; }
+    .kink { stroke: #e9edeb; }
+    .kink2 { stroke: #a5b0ad; }
+    .kink3 { stroke: #7e8a87; }
+    .axis { stroke: #3a4644; }
+    .grid { stroke: #2a3533; }
+    .kacc { stroke: #54b8ab; }
+    .kamb { stroke: #d9ab52; }
+    .k0 { stroke: #3987e5; }
+    .k1 { stroke: #d95926; }
+    .k2 { stroke: #199e70; }
+    .k3 { stroke: #c98500; }
+    .k4 { stroke: #d55181; }
+    .k5 { stroke: #008300; }
+    .ksurf { stroke: #182120; }
+  }
+</style>
+<rect class="s0" x="78.0" y="12.0" width="12.0" height="12.0" fill="#2a78d6" rx="2"/>
+<text class="ink2" x="95.0" y="22.0" font-size="12" font-weight="500" text-anchor="start" fill="#4a5654">X</text>
+<rect class="s1" x="123.7" y="12.0" width="12.0" height="12.0" fill="#eb6834" rx="2"/>
+<text class="ink2" x="140.7" y="22.0" font-size="12" font-weight="500" text-anchor="start" fill="#4a5654">Y</text>
+<rect class="s2" x="169.4" y="12.0" width="12.0" height="12.0" fill="#1baf7a" rx="2"/>
+<text class="ink2" x="186.4" y="22.0" font-size="12" font-weight="500" text-anchor="start" fill="#4a5654">Z</text>
+<text class="ink" x="78.0" y="56.0" font-size="12.5" font-weight="700" text-anchor="start" fill="#15201f">Not associated: the bars match</text>
+<line class="axis" x1="78.0" y1="280.0" x2="378.0" y2="280.0" stroke="#c3c9c6" stroke-width="1" fill="none"/>
+<text class="ink3" x="70.0" y="284.0" font-size="11" font-weight="400" text-anchor="end" fill="#6f7b79">0%</text>
+<line class="grid" x1="78.0" y1="238.0" x2="378.0" y2="238.0" stroke="#dcdfdd" stroke-width="1" fill="none"/>
+<text class="ink3" x="70.0" y="242.0" font-size="11" font-weight="400" text-anchor="end" fill="#6f7b79">20%</text>
+<line class="grid" x1="78.0" y1="196.0" x2="378.0" y2="196.0" stroke="#dcdfdd" stroke-width="1" fill="none"/>
+<text class="ink3" x="70.0" y="200.0" font-size="11" font-weight="400" text-anchor="end" fill="#6f7b79">40%</text>
+<line class="grid" x1="78.0" y1="154.0" x2="378.0" y2="154.0" stroke="#dcdfdd" stroke-width="1" fill="none"/>
+<text class="ink3" x="70.0" y="158.0" font-size="11" font-weight="400" text-anchor="end" fill="#6f7b79">60%</text>
+<line class="grid" x1="78.0" y1="112.0" x2="378.0" y2="112.0" stroke="#dcdfdd" stroke-width="1" fill="none"/>
+<text class="ink3" x="70.0" y="116.0" font-size="11" font-weight="400" text-anchor="end" fill="#6f7b79">80%</text>
+<line class="grid" x1="78.0" y1="70.0" x2="378.0" y2="70.0" stroke="#dcdfdd" stroke-width="1" fill="none"/>
+<text class="ink3" x="70.0" y="74.0" font-size="11" font-weight="400" text-anchor="end" fill="#6f7b79">100%</text>
+<rect class="s0" x="108.0" y="175.0" width="90.0" height="105.0" fill="#2a78d6"/>
+<rect class="surf" x="138.8" y="217.6" width="28.5" height="17.2" fill="#ffffff" rx="3"/>
+<text class="ink" x="153.0" y="231.5" font-size="11" font-weight="600" text-anchor="middle" fill="#15201f">50%</text>
+<rect class="s1" x="108.0" y="112.0" width="90.0" height="63.0" fill="#eb6834"/>
+<rect class="surf" x="138.8" y="133.6" width="28.5" height="17.2" fill="#ffffff" rx="3"/>
+<text class="ink" x="153.0" y="147.5" font-size="11" font-weight="600" text-anchor="middle" fill="#15201f">30%</text>
+<rect class="s2" x="108.0" y="70.0" width="90.0" height="42.0" fill="#1baf7a"/>
+<rect class="surf" x="138.8" y="81.1" width="28.5" height="17.2" fill="#ffffff" rx="3"/>
+<text class="ink" x="153.0" y="95.0" font-size="11" font-weight="600" text-anchor="middle" fill="#15201f">20%</text>
+<text class="ink" x="153.0" y="298.0" font-size="12" font-weight="600" text-anchor="middle" fill="#15201f">Group A</text>
+<rect class="s0" x="258.0" y="175.0" width="90.0" height="105.0" fill="#2a78d6"/>
+<rect class="surf" x="288.8" y="217.6" width="28.5" height="17.2" fill="#ffffff" rx="3"/>
+<text class="ink" x="303.0" y="231.5" font-size="11" font-weight="600" text-anchor="middle" fill="#15201f">50%</text>
+<rect class="s1" x="258.0" y="112.0" width="90.0" height="63.0" fill="#eb6834"/>
+<rect class="surf" x="288.8" y="133.6" width="28.5" height="17.2" fill="#ffffff" rx="3"/>
+<text class="ink" x="303.0" y="147.5" font-size="11" font-weight="600" text-anchor="middle" fill="#15201f">30%</text>
+<rect class="s2" x="258.0" y="70.0" width="90.0" height="42.0" fill="#1baf7a"/>
+<rect class="surf" x="288.8" y="81.1" width="28.5" height="17.2" fill="#ffffff" rx="3"/>
+<text class="ink" x="303.0" y="95.0" font-size="11" font-weight="600" text-anchor="middle" fill="#15201f">20%</text>
+<text class="ink" x="303.0" y="298.0" font-size="12" font-weight="600" text-anchor="middle" fill="#15201f">Group B</text>
+<text class="ink" x="428.0" y="56.0" font-size="12.5" font-weight="700" text-anchor="start" fill="#15201f">Associated: the bars differ</text>
+<line class="axis" x1="428.0" y1="280.0" x2="728.0" y2="280.0" stroke="#c3c9c6" stroke-width="1" fill="none"/>
+<line class="grid" x1="428.0" y1="238.0" x2="728.0" y2="238.0" stroke="#dcdfdd" stroke-width="1" fill="none"/>
+<line class="grid" x1="428.0" y1="196.0" x2="728.0" y2="196.0" stroke="#dcdfdd" stroke-width="1" fill="none"/>
+<line class="grid" x1="428.0" y1="154.0" x2="728.0" y2="154.0" stroke="#dcdfdd" stroke-width="1" fill="none"/>
+<line class="grid" x1="428.0" y1="112.0" x2="728.0" y2="112.0" stroke="#dcdfdd" stroke-width="1" fill="none"/>
+<line class="grid" x1="428.0" y1="70.0" x2="728.0" y2="70.0" stroke="#dcdfdd" stroke-width="1" fill="none"/>
+<rect class="s0" x="458.0" y="175.0" width="90.0" height="105.0" fill="#2a78d6"/>
+<rect class="surf" x="488.8" y="217.6" width="28.5" height="17.2" fill="#ffffff" rx="3"/>
+<text class="ink" x="503.0" y="231.5" font-size="11" font-weight="600" text-anchor="middle" fill="#15201f">50%</text>
+<rect class="s1" x="458.0" y="112.0" width="90.0" height="63.0" fill="#eb6834"/>
+<rect class="surf" x="488.8" y="133.6" width="28.5" height="17.2" fill="#ffffff" rx="3"/>
+<text class="ink" x="503.0" y="147.5" font-size="11" font-weight="600" text-anchor="middle" fill="#15201f">30%</text>
+<rect class="s2" x="458.0" y="70.0" width="90.0" height="42.0" fill="#1baf7a"/>
+<rect class="surf" x="488.8" y="81.1" width="28.5" height="17.2" fill="#ffffff" rx="3"/>
+<text class="ink" x="503.0" y="95.0" font-size="11" font-weight="600" text-anchor="middle" fill="#15201f">20%</text>
+<text class="ink" x="503.0" y="298.0" font-size="12" font-weight="600" text-anchor="middle" fill="#15201f">Group A</text>
+<rect class="s0" x="608.0" y="238.0" width="90.0" height="42.0" fill="#2a78d6"/>
+<rect class="surf" x="638.8" y="249.1" width="28.5" height="17.2" fill="#ffffff" rx="3"/>
+<text class="ink" x="653.0" y="263.0" font-size="11" font-weight="600" text-anchor="middle" fill="#15201f">20%</text>
+<rect class="s1" x="608.0" y="175.0" width="90.0" height="63.0" fill="#eb6834"/>
+<rect class="surf" x="638.8" y="196.6" width="28.5" height="17.2" fill="#ffffff" rx="3"/>
+<text class="ink" x="653.0" y="210.5" font-size="11" font-weight="600" text-anchor="middle" fill="#15201f">30%</text>
+<rect class="s2" x="608.0" y="70.0" width="90.0" height="105.0" fill="#1baf7a"/>
+<rect class="surf" x="638.8" y="112.6" width="28.5" height="17.2" fill="#ffffff" rx="3"/>
+<text class="ink" x="653.0" y="126.5" font-size="11" font-weight="600" text-anchor="middle" fill="#15201f">50%</text>
+<text class="ink" x="653.0" y="298.0" font-size="12" font-weight="600" text-anchor="middle" fill="#15201f">Group B</text>
+<text class="ink3" x="78.0" y="322.0" font-size="11" font-weight="400" text-anchor="start" fill="#6f7b79">Segment height: percentage of that group in each response category</text>
+</svg>

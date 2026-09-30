@@ -1,0 +1,315 @@
+<style>
+  /* Overbooking Simulation. Scoped ob- classes; colours are course.css tokens only. */
+  .ob-wrap{max-width:62rem;margin-inline:auto;padding:30px 24px 48px}
+  @media(max-width:520px){.ob-wrap{padding-inline:14px}}
+  .ob-eyebrow{font-family:var(--f-mono);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);font-weight:500;margin:0 0 8px}
+  .ob-wrap h1{margin:0 0 10px}
+  .ob-lede{max-width:66ch;color:var(--ink-2);margin:0 0 20px}
+  .ob-tool{background:var(--surface);border:1px solid var(--rule);border-radius:4px;overflow:hidden}
+  .ob-controls{display:flex;flex-wrap:wrap;gap:14px 22px;align-items:flex-end;padding:16px 20px;background:var(--surface-2);border-bottom:1px solid var(--rule)}
+  .ob-ctl{display:flex;flex-direction:column;gap:6px;min-width:0}
+  .ob-lbl{font-family:var(--f-mono);font-size:.64rem;letter-spacing:.11em;text-transform:uppercase;color:var(--ink-3);font-weight:600}
+  .ob-seg{display:flex;border:1px solid var(--rule-strong);border-radius:3px;overflow:hidden;flex-wrap:wrap}
+  .ob-seg button{appearance:none;border:0;background:var(--surface);color:var(--ink-2);cursor:pointer;font-family:var(--f-body);font-size:.82rem;font-weight:600;padding:8px 12px}
+  .ob-seg button+button{border-left:1px solid var(--rule-strong)}
+  .ob-seg button[aria-pressed="true"]{background:var(--accent);color:#fff}
+  .ob-btns{display:flex;gap:10px;flex-wrap:wrap;padding:14px 20px;border-bottom:1px solid var(--rule)}
+  .ob-btn{appearance:none;font-family:var(--f-body);font-size:.88rem;font-weight:600;cursor:pointer;padding:9px 15px;border-radius:3px;border:1px solid var(--accent);background:transparent;color:var(--accent)}
+  .ob-btn:hover{background:var(--accent-soft)}
+  .ob-btn.ob-primary{background:var(--accent);color:#fff}
+  .ob-btn[disabled]{opacity:.45;cursor:not-allowed}
+  .ob-main{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:0}
+  .ob-left{padding:14px 20px 16px;border-right:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+  .ob-right{padding:14px 20px 16px;display:flex;flex-direction:column;gap:12px}
+  .ob-trial{display:flex;flex-wrap:wrap;gap:5px;margin:8px 0 6px;min-height:46px}
+  .ob-chip{display:flex;flex-direction:column;align-items:center;justify-content:center;min-width:34px;padding:4px 3px;border-radius:3px;border:1px solid var(--rule-strong);background:var(--surface)}
+  .ob-chip .ob-d{font-family:var(--f-mono);font-size:.95rem;font-weight:600;color:var(--ink);font-variant-numeric:tabular-nums}
+  .ob-chip .ob-w{font-size:.62rem;color:var(--ink-3);text-transform:uppercase;letter-spacing:.06em}
+  .ob-chip.ob-miss{border-color:var(--alarm);background:var(--amber-soft)}
+  .ob-chip.ob-miss .ob-w{color:var(--alarm);font-weight:600}
+  .ob-rule{font-size:.84rem;color:var(--ink-2);margin:0}
+  .ob-say{margin:0;font-size:.93rem;color:var(--ink-2);min-height:4.6em}
+  .ob-say b{color:var(--ink)}
+  .ob-read{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin:0;border:1px solid var(--rule);border-radius:3px}
+  .ob-stat{padding:8px 11px;border-right:1px solid var(--rule)}
+  .ob-stat:last-child{border-right:0}
+  .ob-stat dt{font-family:var(--f-mono);font-size:.58rem;letter-spacing:.11em;text-transform:uppercase;color:var(--ink-3);margin-bottom:2px}
+  .ob-stat dd{margin:0;font-family:var(--f-mono);font-size:1.05rem;font-weight:600;font-variant-numeric:tabular-nums;color:var(--ink)}
+  .ob-table{width:100%;border-collapse:collapse;font-size:.84rem;table-layout:fixed}
+  .ob-table th:nth-child(1){width:44%} .ob-table th:nth-child(2){width:24%}
+  .ob-table th,.ob-table td{text-align:left;padding:5px 8px;border-bottom:1px solid var(--rule);font-variant-numeric:tabular-nums}
+  .ob-table th{white-space:normal;overflow-wrap:anywhere;font-family:var(--f-mono);font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);font-weight:600;vertical-align:bottom}
+  .ob-table td{font-family:var(--f-mono);color:var(--ink)}
+  .ob-table td:first-child{font-family:var(--f-body)}
+  .ob-table tr.ob-ev td{background:var(--accent-soft);font-weight:600}
+  .ob-table tr.ob-tot td{border-top:2px solid var(--rule-strong);font-weight:600}
+  .ob-chart{border-top:1px solid var(--rule);padding:12px 16px 14px}
+  .ob-chart svg{display:block;width:100%;height:auto}
+  .ob-show{display:flex;align-items:center;gap:8px;font-size:.86rem;color:var(--ink-2);margin-top:6px}
+  .ob-show input{accent-color:var(--accent);width:16px;height:16px}
+  .ob-notes{display:grid;gap:12px;margin-top:18px;max-width:70ch}
+  .ob-note{border-radius:3px;padding:13px 17px}
+  .ob-note .ob-nl{display:block;font-family:var(--f-mono);font-size:.62rem;letter-spacing:.13em;text-transform:uppercase;font-weight:600;margin-bottom:4px}
+  .ob-note p{margin:0;font-size:.92rem;color:var(--ink-2)}
+  .ob-note strong{color:var(--ink)}
+  .ob-note.teal{background:var(--accent-soft);border:1px solid var(--accent)} .ob-note.teal .ob-nl{color:var(--accent-deep)}
+  .ob-note.amber{background:var(--amber-soft);border:1px solid var(--amber-rule)} .ob-note.amber .ob-nl{color:var(--amber)}
+  @media(max-width:520px){.ob-table{font-size:.76rem}.ob-table th,.ob-table td{padding:5px 4px}.ob-chart,.ob-left,.ob-right{padding-inline:10px}.ob-chip{min-width:28px}}
+  /* svg marks */
+  .ob-t{fill:var(--ink-3);font-size:11px;font-family:var(--f-body)}
+  .ob-tk{fill:var(--ink-2);font-size:11.5px;font-family:var(--f-body);font-weight:600}
+  .ob-axis{stroke:var(--rule-strong)} .ob-grid{stroke:var(--rule)}
+  .ob-old{fill:none;stroke:var(--ink-3);stroke-opacity:.55;stroke-width:1.2}
+  .ob-cur{fill:none;stroke:var(--data);stroke-width:2.2}
+  .ob-end{fill:var(--data)}
+  .ob-ref{stroke:var(--ink);stroke-dasharray:5 4;stroke-width:1.4}
+  .ob-reft{fill:var(--ink);font-size:11px;font-family:var(--f-body);font-weight:600}
+  :focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+</style>
+
+<div class="ob-wrap">
+  <p class="ob-eyebrow">AP Statistics &middot; Session 8 &middot; CED 2.3</p>
+  <h1>Overbooking Simulation</h1>
+  <p class="ob-lede">A St Mary's clinic session has <b>10 appointment slots</b>. Each booked patient misses the appointment with the probability you choose, independently of the others. One <b>trial</b> is one whole clinic session: every booked patient gets a random digit, and the digit decides whether they turn up. Run trials, choose the <b>event</b> you care about, and watch its relative frequency as the number of trials grows.</p>
+
+  <div class="ob-tool">
+    <div class="ob-controls">
+      <div class="ob-ctl">
+        <span class="ob-lbl" id="obBookLbl">Patients booked into 10 slots</span>
+        <div class="ob-seg" role="group" aria-labelledby="obBookLbl" id="obBooked">
+          <button type="button" data-b="10" aria-pressed="false">10</button>
+          <button type="button" data-b="11" aria-pressed="true">11</button>
+          <button type="button" data-b="12" aria-pressed="false">12</button>
+        </div>
+      </div>
+      <div class="ob-ctl">
+        <span class="ob-lbl" id="obPLbl">Chance a patient misses</span>
+        <div class="ob-seg" role="group" aria-labelledby="obPLbl" id="obP">
+          <button type="button" data-p="0.1" aria-pressed="true">0.10, with a text</button>
+          <button type="button" data-p="0.155" aria-pressed="false">0.155, no text</button>
+        </div>
+      </div>
+      <div class="ob-ctl">
+        <span class="ob-lbl" id="obELbl">Event to estimate</span>
+        <div class="ob-seg" role="group" aria-labelledby="obELbl" id="obEvent">
+          <button type="button" data-e="over" aria-pressed="true">More turn up than slots</button>
+          <button type="button" data-e="full" aria-pressed="false">Exactly 10 turn up</button>
+          <button type="button" data-e="unused" aria-pressed="false">At least one slot unused</button>
+        </div>
+      </div>
+    </div>
+    <div class="ob-btns">
+      <button type="button" class="ob-btn ob-primary" id="obRun1">Run 1 trial</button>
+      <button type="button" class="ob-btn" id="obRun10">Run 10 trials</button>
+      <button type="button" class="ob-btn" id="obRun100">Run 100 trials</button>
+      <button type="button" class="ob-btn" id="obRun1000">Run 1,000 trials</button>
+      <button type="button" class="ob-btn" id="obNew">Start a new run</button>
+      <button type="button" class="ob-btn" id="obClear">Clear all runs</button>
+    </div>
+
+    <div class="ob-main">
+      <div class="ob-left">
+        <span class="ob-lbl">The latest trial: one clinic session</span>
+        <div class="ob-trial" id="obTrial" aria-label="The latest trial"></div>
+        <p class="ob-rule" id="obRule"></p>
+        <p class="ob-say" id="obSay" aria-live="polite"></p>
+      </div>
+      <div class="ob-right">
+        <dl class="ob-read">
+          <div class="ob-stat"><dt>Trials in this run</dt><dd id="obN">&mdash;</dd></div>
+          <div class="ob-stat"><dt>Event happened</dt><dd id="obK">&mdash;</dd></div>
+          <div class="ob-stat"><dt>Relative frequency</dt><dd id="obRF">&mdash;</dd></div>
+        </dl>
+        <table class="ob-table" aria-label="Counts of simulated outcomes in this run">
+          <thead><tr><th>Patients who turned up</th><th>Count</th><th>Relative frequency</th></tr></thead>
+          <tbody id="obCounts"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="ob-chart">
+      <span class="ob-lbl">Relative frequency of the event after each trial &middot; this run in colour, earlier runs with the same settings in grey</span>
+      <svg id="obChart" viewBox="0 0 640 300" role="img" aria-label="Running relative frequency"></svg>
+      <label class="ob-show"><input type="checkbox" id="obShow"> Show the value Session 10&rsquo;s probability rules give for this event</label>
+    </div>
+  </div>
+
+  <div class="ob-notes">
+    <div class="ob-note teal"><span class="ob-nl">Try this first</span>
+      <p>The tool opens with a run of 20 trials, the same size as the hand simulation. Press <strong>Run 10 trials</strong> a few times and watch the coloured line jump. Then press <strong>Run 1,000 trials</strong> several times. The line settles: that is the <strong>law of large numbers</strong>. Its relative frequency after many trials is the estimate of the probability.</p></div>
+    <div class="ob-note amber"><span class="ob-nl">Then the trap</span>
+      <p>Press <strong>Start a new run</strong> and run 20 trials again. The new run's estimate after 20 trials is rarely the same as the first run's. After 5,000 trials the runs agree to about two decimal places. A handful of trials gives an estimate; it does not give the probability.</p></div>
+    <div class="ob-note teal"><span class="ob-nl">And the decision</span>
+      <p>Switch between <strong>10, 11 and 12 booked</strong>, and between the events. Booking more patients makes an unused slot less likely and an overfull session more likely. The simulation cannot choose for St Mary's; it tells the manager how often each thing will happen.</p></div>
+  </div>
+</div>
+
+<script>
+(function () {
+  "use strict";
+  /* STATS-BEGIN : pure functions, extracted and unit-tested in Node */
+  function mulberry32(a) {
+    return function () {
+      a |= 0; a = (a + 0x6D2B79F5) | 0;
+      var t = Math.imul(a ^ (a >>> 15), 1 | a);
+      t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+      return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+    };
+  }
+  var SLOTS = 10;
+  /* How a random value decides one patient. p = 0.10: one digit 0-9, digit 0 means the patient misses.
+     p = 0.155: a three-digit number 000-999, 000-154 means the patient misses. */
+  function places(p) { return p === 0.1 ? 1 : 3; }
+  function drawValue(p, rng) { return Math.floor(rng() * Math.pow(10, places(p))); }
+  function isMiss(value, p) { return value < Math.round(p * Math.pow(10, places(p))); }
+  /* One trial: one clinic session. Returns the values drawn and the number of booked patients who turned up. */
+  function trial(booked, p, rng) {
+    var vals = [], up = 0;
+    for (var i = 0; i < booked; i++) { var v = drawValue(p, rng); vals.push(v); if (!isMiss(v, p)) up++; }
+    return { values: vals, turnedUp: up };
+  }
+  function inEvent(turnedUp, ev) {
+    if (ev === "over") return turnedUp > SLOTS;
+    if (ev === "full") return turnedUp === SLOTS;
+    return turnedUp < SLOTS;             /* "unused": at least one slot unused */
+  }
+  /* Counts of each outcome (number who turned up), from the list of trials, and their total */
+  function countOutcomes(ups, booked) {
+    var c = []; for (var k = 0; k <= booked; k++) c.push(0);
+    for (var i = 0; i < ups.length; i++) c[ups[i]]++;
+    return c;
+  }
+  function eventCount(counts, ev) { var t = 0; for (var k = 0; k < counts.length; k++) if (inEvent(k, ev)) t += counts[k]; return t; }
+  /* Running relative frequency of the event after trial 1, 2, ..., n */
+  function runningRF(ups, ev) { var out = [], c = 0; for (var i = 0; i < ups.length; i++) { if (inEvent(ups[i], ev)) c++; out.push(c / (i + 1)); } return out; }
+  /* The value the probability rules give (Session 10 onward); used only to draw the optional reference line and in tests */
+  function choose(n, k) { var r = 1; for (var i = 1; i <= k; i++) r = r * (n - k + i) / i; return r; }
+  function exactProb(booked, p, ev) {
+    var t = 0;
+    for (var k = 0; k <= booked; k++) if (inEvent(k, ev)) t += choose(booked, k) * Math.pow(1 - p, k) * Math.pow(p, booked - k);
+    return t;
+  }
+  /* STATS-END */
+
+  var NS = "http://www.w3.org/2000/svg";
+  var rng = mulberry32((Date.now() ^ 0x5eed) >>> 0);
+  var MAXT = 20000;
+  var state = { booked: 11, p: 0.1, ev: "over", runs: {}, show: false };
+  var EVNAME = { over: "more patients turn up than the 10 slots", full: "exactly 10 patients turn up", unused: "at least one slot is unused (9 or fewer turn up)" };
+  function key() { return state.booked + "|" + state.p; }
+  function runs() { var k = key(); if (!state.runs[k]) state.runs[k] = [{ ups: [], last: null }]; return state.runs[k]; }
+  function cur() { var r = runs(); return r[r.length - 1]; }
+  function el(n, a) { var e = document.createElementNS(NS, n); for (var k in a) e.setAttribute(k, a[k]); return e; }
+  function txt(x, y, s, cls, anchor) { var t = el("text", { x: x, y: y, "class": cls, "text-anchor": anchor || "middle" }); t.textContent = s; return t; }
+  function f3(v) { return isFinite(v) ? v.toFixed(3) : "—"; }
+  function fmt(n) { return n.toLocaleString("en-GB"); }
+  function pad(v) { var s = String(v); while (s.length < places(state.p)) s = "0" + s; return s; }
+
+  function run(n) {
+    var c = cur();
+    for (var i = 0; i < n && c.ups.length < MAXT; i++) { var t = trial(state.booked, state.p, rng); c.ups.push(t.turnedUp); c.last = t; }
+    render();
+  }
+  function renderTrial() {
+    var box = document.getElementById("obTrial"), c = cur(); box.innerHTML = "";
+    if (!c.last) { box.textContent = "No trials yet in this run."; return; }
+    c.last.values.forEach(function (v, i) {
+      var miss = isMiss(v, state.p), d = document.createElement("div");
+      d.className = "ob-chip" + (miss ? " ob-miss" : "");
+      d.innerHTML = '<span class="ob-d">' + pad(v) + '</span><span class="ob-w">' + (miss ? "misses" : "comes") + "</span>";
+      d.setAttribute("aria-label", "Patient " + (i + 1) + ": " + pad(v) + ", " + (miss ? "misses" : "turns up"));
+      box.appendChild(d);
+    });
+  }
+  function render() {
+    var c = cur(), n = c.ups.length, counts = countOutcomes(c.ups, state.booked), k = eventCount(counts, state.ev);
+    renderTrial();
+    document.getElementById("obRule").innerHTML = state.p === 0.1
+      ? "Each patient gets one random digit, 0 to 9. <b>Digit 0 means the patient misses</b> (1 digit in 10, probability 0.10); 1 to 9 means they turn up."
+      : "Each patient gets a random three-digit number, 000 to 999. <b>000 to 154 means the patient misses</b> (155 numbers in 1,000, probability 0.155); 155 to 999 means they turn up.";
+    var say = document.getElementById("obSay");
+    if (c.last) {
+      var up = c.last.turnedUp, missed = state.booked - up;
+      say.innerHTML = "<b>Trial " + fmt(n) + ":</b> " + missed + " of the " + state.booked + " booked patients missed, so " + up + " turned up. " +
+        (up > SLOTS ? "That is more than the 10 slots: " + (up - SLOTS) + " patient" + (up - SLOTS > 1 ? "s" : "") + " cannot be seen in this session." : up === SLOTS ? "Exactly 10: every slot is used and nobody waits." : (SLOTS - up) + " slot" + (SLOTS - up > 1 ? "s are" : " is") + " unused.") +
+        " The event, <b>" + EVNAME[state.ev] + "</b>, " + (inEvent(up, state.ev) ? "happened" : "did not happen") + " in this trial.";
+    } else say.textContent = "Run a trial.";
+    document.getElementById("obN").textContent = fmt(n);
+    document.getElementById("obK").textContent = n ? fmt(k) : "—";
+    document.getElementById("obRF").textContent = n ? f3(k / n) : "—";
+    var tb = document.getElementById("obCounts"); tb.innerHTML = "";
+    var low = state.booked - 4;                  /* group the rare small outcomes into one row */
+    var rows = [{ lab: low + " or fewer", c: 0, ev: null }];
+    for (var j = 0; j <= low; j++) rows[0].c += counts[j];
+    rows[0].ev = inEvent(low, state.ev) && inEvent(0, state.ev);
+    for (var m = low + 1; m <= state.booked; m++) rows.push({ lab: String(m), c: counts[m], ev: inEvent(m, state.ev) });
+    rows.forEach(function (r) {
+      var tr = document.createElement("tr"); if (r.ev) tr.className = "ob-ev";
+      tr.innerHTML = "<td>" + r.lab + "</td><td>" + fmt(r.c) + "</td><td>" + (n ? f3(r.c / n) : "—") + "</td>"; tb.appendChild(tr);
+    });
+    var tt = document.createElement("tr"); tt.className = "ob-tot";
+    tt.innerHTML = "<td>Total</td><td>" + fmt(n) + "</td><td>" + (n ? "1.000" : "—") + "</td>"; tb.appendChild(tt);
+    ["obRun1", "obRun10", "obRun100", "obRun1000"].forEach(function (id) { document.getElementById(id).disabled = n >= MAXT; });
+    drawChart();
+  }
+  /* chart: x is the trial number on a log scale, 1 to 10^d; y is the running relative frequency, 0 to 1 */
+  var X0 = 46, X1 = 604, Y0 = 16, Y1 = 250;
+  function drawChart() {
+    var svg = document.getElementById("obChart"); while (svg.firstChild) svg.removeChild(svg.firstChild);
+    var all = runs(), maxN = 1;
+    all.forEach(function (r) { if (r.ups.length > maxN) maxN = r.ups.length; });
+    var dec = Math.max(2, Math.ceil(Math.log(maxN) / Math.LN10 - 1e-9));
+    function sx(i) { return X0 + Math.log(i) / Math.LN10 / dec * (X1 - X0); }
+    function sy(v) { return Y1 - v * (Y1 - Y0); }
+    for (var g = 0; g <= 10; g += 2) {
+      var y = sy(g / 10);
+      svg.appendChild(el("line", { x1: X0, y1: y, x2: X1, y2: y, "class": g === 0 ? "ob-axis" : "ob-grid", "stroke-width": 1 }));
+      svg.appendChild(txt(X0 - 6, y + 4, (g / 10).toFixed(1), "ob-t", "end"));
+    }
+    for (var d = 0; d <= dec; d++) {
+      var x = sx(Math.pow(10, d));
+      svg.appendChild(el("line", { x1: x, y1: Y0, x2: x, y2: Y1, "class": "ob-grid", "stroke-width": 1 }));
+      svg.appendChild(txt(x, Y1 + 16, fmt(Math.pow(10, d)), "ob-t"));
+    }
+    svg.appendChild(txt((X0 + X1) / 2, Y1 + 36, "number of trials (log scale)", "ob-t"));
+    all.forEach(function (r, ri) {
+      if (!r.ups.length) return;
+      var rf = runningRF(r.ups, state.ev), pts = [], last = -1;
+      for (var i = 1; i <= rf.length; i++) {
+        var px = sx(i);
+        if (px - last >= 0.8 || i === rf.length) { pts.push(px.toFixed(1) + "," + sy(rf[i - 1]).toFixed(1)); last = px; }
+      }
+      var isCur = ri === all.length - 1;
+      svg.appendChild(el("polyline", { points: pts.join(" "), "class": isCur ? "ob-cur" : "ob-old" }));
+      if (isCur) svg.appendChild(el("circle", { cx: sx(rf.length).toFixed(1), cy: sy(rf[rf.length - 1]).toFixed(1), r: 4, "class": "ob-end" }));
+    });
+    if (state.show) {
+      var e = exactProb(state.booked, state.p, state.ev), yy = sy(e);
+      svg.appendChild(el("line", { x1: X0, y1: yy, x2: X1, y2: yy, "class": "ob-ref" }));
+      svg.appendChild(txt(X1 - 4, yy - 6, "rules give " + e.toFixed(3), "ob-reft", "end"));
+    }
+    var c = cur(), rfNow = c.ups.length ? eventCount(countOutcomes(c.ups, state.booked), state.ev) / c.ups.length : NaN;
+    svg.setAttribute("aria-label", "Running relative frequency of the event " + EVNAME[state.ev] + ", " + all.length + " run" + (all.length > 1 ? "s" : "") +
+      ". Current run: " + c.ups.length + " trials, relative frequency " + f3(rfNow) + (state.show ? ". Reference value " + exactProb(state.booked, state.p, state.ev).toFixed(3) : "") + ".");
+  }
+  function press(groupSel, btn) { Array.prototype.forEach.call(document.querySelectorAll(groupSel + " button"), function (o) { o.setAttribute("aria-pressed", o === btn ? "true" : "false"); }); }
+  Array.prototype.forEach.call(document.querySelectorAll("#obBooked button"), function (b) {
+    b.addEventListener("click", function () { state.booked = parseInt(b.getAttribute("data-b"), 10); press("#obBooked", b); if (!cur().ups.length) run(20); else render(); });
+  });
+  Array.prototype.forEach.call(document.querySelectorAll("#obP button"), function (b) {
+    b.addEventListener("click", function () { state.p = parseFloat(b.getAttribute("data-p")); press("#obP", b); if (!cur().ups.length) run(20); else render(); });
+  });
+  Array.prototype.forEach.call(document.querySelectorAll("#obEvent button"), function (b) {
+    b.addEventListener("click", function () { state.ev = b.getAttribute("data-e"); press("#obEvent", b); render(); });
+  });
+  document.getElementById("obRun1").addEventListener("click", function () { run(1); });
+  document.getElementById("obRun10").addEventListener("click", function () { run(10); });
+  document.getElementById("obRun100").addEventListener("click", function () { run(100); });
+  document.getElementById("obRun1000").addEventListener("click", function () { run(1000); });
+  document.getElementById("obNew").addEventListener("click", function () { var r = runs(); if (cur().ups.length) r.push({ ups: [], last: null }); run(20); });
+  document.getElementById("obClear").addEventListener("click", function () { state.runs = {}; render(); });
+  document.getElementById("obShow").addEventListener("change", function (e) { state.show = e.target.checked; drawChart(); });
+  /* open in a working state: one run of 20 trials, 11 booked, probability 0.10 */
+  run(20);
+})();
+</script>

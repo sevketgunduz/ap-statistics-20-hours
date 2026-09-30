@@ -74,13 +74,14 @@ A later session and its test must use these exactly as earlier sessions did.
 | Regression | ŷ = a + bx with ŷ and x named in context; residual = y − ŷ (positive underpredicts); a and b to 4 significant figures keeping at least 2 dp; predictions and residuals to 1 dp from the equation as written; *r*² read from the calculator | Session 5 |
 | Sampling and study design | method names in full (simple random / stratified random / cluster random / systematic random); stratified = some from every group, cluster = everyone from some groups; an SRS makes every sample of size n equally likely; an experiment imposes treatments; random selection → generalisation, random assignment → cause; a confounding variable is linked to both variables | Session 6 |
 | Bias and experiments | a bias is named with mechanism and direction; nonresponse = chosen then lost, voluntary response = nobody chosen, undercoverage = some could never be chosen; bigger samples cut variation, not bias; four elements: comparison, random assignment, replication, direct control (not a control group); placebo effect = placebo mean − no-treatment mean; random assignment → cause, blocking → precision; not significant ≠ no effect | Session 7 |
+| Two-way tables and simulation | joint = cell ÷ table total, marginal = row or column total ÷ table total, conditional = cell ÷ the total of the level conditioned on; proportions to 3 dp and percentages to 1 dp, from counts; the condition named ("of the …"); association = conditional distributions differ, never counts; mosaic width = marginal, height = conditional, area = joint; simulation in five steps (model, assign digits, define trial and event, run many trials, estimate = trials with event ÷ trials); "random number generator", not "random digit table"; the law of large numbers says nothing about the short run | Session 8 |
 | Session tests | Session 1's test opens Session 3 (as Session 1's document says); Session 4's builder placed Session 2's at the start of Session 4. **Not yet confirmed** as the general rule | Sessions 3–4 |
 
 ### Data
 
 Every data set is registered once in `build/datasets.json`, with the sessions that use it. Read it before designing a scenario; register every new set before quoting a number from it.
 
-**Contexts already used in sessions** (reuse them for continuity; the data carry forward): Lincoln High commute and distance · the hospital survey, St Mary's and Riverside, St Mary's evening shifts · the café (drinks per hour, midday temperatures, fridge log, spring mornings, coffee machine) · the library (Central and Westside branches, 18 branches, members' ages) · Oakfield School · the Session 2 test scores out of 50 · the gym (Session 1) · Session 6's Lincoln High sampling plans, St Mary's text reminders, café loyalty members, hospital-network survey and Oakfield's 900-student roll · Session 7's Lincoln High bus-pass survey plans, St Mary's reminder experiment and Riverside's hand-cream trial.
+**Contexts already used in sessions** (reuse them for continuity; the data carry forward): Lincoln High commute and distance · the hospital survey, St Mary's and Riverside, St Mary's evening shifts · the café (drinks per hour, midday temperatures, fridge log, spring mornings, coffee machine) · the library (Central and Westside branches, 18 branches, members' ages) · Oakfield School · the Session 2 test scores out of 50 · the gym (Session 1) · Session 6's Lincoln High sampling plans, St Mary's text reminders, café loyalty members, hospital-network survey and Oakfield's 900-student roll · Session 7's Lincoln High bus-pass survey plans, St Mary's reminder experiment and Riverside's hand-cream trial · Session 8's Lincoln High travel register (home area × travel mode), the hospital waiting-time table, the café loyalty visit times, St Mary's overbooking simulation, the library's two branches' formats, Oakfield's lunch survey, the hospital recommendation mosaic and the café scratch sleeves.
 
 **Contexts already used in tests** (do not reuse these as teaching scenarios, and do not reuse any session context in a test):
 
@@ -93,6 +94,7 @@ Every data set is registered once in `build/datasets.json`, with the sessions th
 | Session 5 | taxi fares, car braking distances, rainfall and wheat yield, candle burning, school heating and outdoor temperature |
 | Session 6 | commuter train carriages, bakery oven experiment, new drivers, breakfast and grades, step-count app, Northbridge water company, radio phone-in, revision app, housing estate |
 | Session 7 | town bus-use survey methods, museum website poll, landline directory survey, council leisure-centre mail-out, cycle-lane wording, car-park interviews, throat-lozenge trial, fence paint, running shoes, online shop page designs |
+| Session 8 | pets and housing type (400 households), wildlife camera fox simulation (p = 0.3, 5 nights) |
 
 Add the new session's contexts to both lists as part of step 3.
 
@@ -171,7 +173,7 @@ From `AP-Statistics-20-Hour-Lesson-Plan.md`. Check each topic range against the 
 | 6 | 1.10–1.11 | investigative question revisited, sampling methods, why randomisation licenses inference | — |
 | 7 | 1.12–1.13 | bias, experiments versus observational studies, control, blocking, blinding, confounding, scope of inference | Sampling bias |
 | 8 | 2.1–2.3 | two-way tables: joint, marginal, conditional; simulation | — |
-| 9 | 2.4–2.5 | law of large numbers, probability rules, mutually exclusive events | — |
+| 9 | 2.4–2.5 | probability rules, complements, mutually exclusive events (the law of large numbers is CED 2.3.A.7 and was taught in Session 8; recall it, do not re-teach it) | — |
 | 10 | 2.6–2.7 | conditional probability, independence, multiplication rule | — |
 | 11 | 2.8–2.10 | random variables, expected value and SD, combining, binomial | Binomial explorer |
 | 12 | 2.11–2.12 | normal distribution; sampling distributions and the CLT | Central Limit Theorem · Normal area |

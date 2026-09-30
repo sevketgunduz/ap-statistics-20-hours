@@ -1,0 +1,111 @@
+<svg viewBox="0 0 760 350" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Segmented bar chart of home area within each travel mode, all 1,842 Lincoln High students. Bus users (651): Town 13.1%, Suburbs 48.5%, Villages 38.4%. Car (522): Town 38.9%, Suburbs 53.8%, Villages 7.3%. Walk or cycle (669): Town 83.4%, Suburbs 15.7%, Villages 0.9%." font-family="Public Sans, system-ui, sans-serif">
+<style>
+  .ink { fill: #15201f; }
+  .ink2 { fill: #4a5654; }
+  .ink3 { fill: #6f7b79; }
+  .surf { fill: #ffffff; }
+  .band { fill: #eef1ef; }
+  .acc { fill: #1a6b63; }
+  .amb { fill: #7d5a11; }
+  .s0 { fill: #2a78d6; }
+  .s1 { fill: #eb6834; }
+  .s2 { fill: #1baf7a; }
+  .s3 { fill: #eda100; }
+  .s4 { fill: #e87ba4; }
+  .s5 { fill: #008300; }
+  .kink { stroke: #15201f; }
+  .kink2 { stroke: #4a5654; }
+  .kink3 { stroke: #6f7b79; }
+  .axis { stroke: #c3c9c6; }
+  .grid { stroke: #dcdfdd; }
+  .kacc { stroke: #1a6b63; }
+  .kamb { stroke: #7d5a11; }
+  .k0 { stroke: #2a78d6; }
+  .k1 { stroke: #eb6834; }
+  .k2 { stroke: #1baf7a; }
+  .k3 { stroke: #eda100; }
+  .k4 { stroke: #e87ba4; }
+  .k5 { stroke: #008300; }
+  .ksurf { stroke: #ffffff; }
+  @media (prefers-color-scheme: dark) {
+    .ink { fill: #e9edeb; }
+    .ink2 { fill: #a5b0ad; }
+    .ink3 { fill: #7e8a87; }
+    .surf { fill: #182120; }
+    .band { fill: #1e2827; }
+    .acc { fill: #54b8ab; }
+    .amb { fill: #d9ab52; }
+    .s0 { fill: #3987e5; }
+    .s1 { fill: #d95926; }
+    .s2 { fill: #199e70; }
+    .s3 { fill: #c98500; }
+    .s4 { fill: #d55181; }
+    .s5 { fill: #008300; }
+    .kink { stroke: #e9edeb; }
+    .kink2 { stroke: #a5b0ad; }
+    .kink3 { stroke: #7e8a87; }
+    .axis { stroke: #3a4644; }
+    .grid { stroke: #2a3533; }
+    .kacc { stroke: #54b8ab; }
+    .kamb { stroke: #d9ab52; }
+    .k0 { stroke: #3987e5; }
+    .k1 { stroke: #d95926; }
+    .k2 { stroke: #199e70; }
+    .k3 { stroke: #c98500; }
+    .k4 { stroke: #d55181; }
+    .k5 { stroke: #008300; }
+    .ksurf { stroke: #182120; }
+  }
+</style>
+<rect class="s3" x="78.0" y="12.0" width="12.0" height="12.0" fill="#eda100" rx="2"/>
+<text class="ink2" x="95.0" y="22.0" font-size="12" font-weight="500" text-anchor="start" fill="#4a5654">Town</text>
+<rect class="s4" x="143.9" y="12.0" width="12.0" height="12.0" fill="#e87ba4" rx="2"/>
+<text class="ink2" x="160.9" y="22.0" font-size="12" font-weight="500" text-anchor="start" fill="#4a5654">Suburbs</text>
+<rect class="s5" x="229.9" y="12.0" width="12.0" height="12.0" fill="#008300" rx="2"/>
+<text class="ink2" x="246.9" y="22.0" font-size="12" font-weight="500" text-anchor="start" fill="#4a5654">Villages</text>
+<line class="axis" x1="78.0" y1="288.0" x2="740.0" y2="288.0" stroke="#c3c9c6" stroke-width="1" fill="none"/>
+<text class="ink3" x="70.0" y="292.0" font-size="11" font-weight="400" text-anchor="end" fill="#6f7b79">0%</text>
+<line class="grid" x1="78.0" y1="239.2" x2="740.0" y2="239.2" stroke="#dcdfdd" stroke-width="1" fill="none"/>
+<text class="ink3" x="70.0" y="243.2" font-size="11" font-weight="400" text-anchor="end" fill="#6f7b79">20%</text>
+<line class="grid" x1="78.0" y1="190.4" x2="740.0" y2="190.4" stroke="#dcdfdd" stroke-width="1" fill="none"/>
+<text class="ink3" x="70.0" y="194.4" font-size="11" font-weight="400" text-anchor="end" fill="#6f7b79">40%</text>
+<line class="grid" x1="78.0" y1="141.6" x2="740.0" y2="141.6" stroke="#dcdfdd" stroke-width="1" fill="none"/>
+<text class="ink3" x="70.0" y="145.6" font-size="11" font-weight="400" text-anchor="end" fill="#6f7b79">60%</text>
+<line class="grid" x1="78.0" y1="92.8" x2="740.0" y2="92.8" stroke="#dcdfdd" stroke-width="1" fill="none"/>
+<text class="ink3" x="70.0" y="96.8" font-size="11" font-weight="400" text-anchor="end" fill="#6f7b79">80%</text>
+<line class="grid" x1="78.0" y1="44.0" x2="740.0" y2="44.0" stroke="#dcdfdd" stroke-width="1" fill="none"/>
+<text class="ink3" x="70.0" y="48.0" font-size="11" font-weight="400" text-anchor="end" fill="#6f7b79">100%</text>
+<rect class="s3" x="123.3" y="256.1" width="130.0" height="31.9" fill="#eda100"/>
+<rect class="surf" x="167.9" y="262.2" width="40.8" height="17.2" fill="#ffffff" rx="3"/>
+<text class="ink" x="188.3" y="276.0" font-size="11" font-weight="600" text-anchor="middle" fill="#15201f">13.1%</text>
+<rect class="s4" x="123.3" y="137.7" width="130.0" height="118.4" fill="#e87ba4"/>
+<rect class="surf" x="167.9" y="187.0" width="40.8" height="17.2" fill="#ffffff" rx="3"/>
+<text class="ink" x="188.3" y="200.9" font-size="11" font-weight="600" text-anchor="middle" fill="#15201f">48.5%</text>
+<rect class="s5" x="123.3" y="44.0" width="130.0" height="93.7" fill="#008300"/>
+<rect class="surf" x="167.9" y="80.9" width="40.8" height="17.2" fill="#ffffff" rx="3"/>
+<text class="ink" x="188.3" y="94.8" font-size="11" font-weight="600" text-anchor="middle" fill="#15201f">38.4%</text>
+<text class="ink" x="188.3" y="306.0" font-size="12.5" font-weight="600" text-anchor="middle" fill="#15201f">Bus</text>
+<text class="ink3" x="188.3" y="321.0" font-size="10.5" font-weight="400" text-anchor="middle" fill="#6f7b79">651 students</text>
+<rect class="s3" x="344.0" y="193.1" width="130.0" height="94.9" fill="#eda100"/>
+<rect class="surf" x="388.6" y="230.6" width="40.8" height="17.2" fill="#ffffff" rx="3"/>
+<text class="ink" x="409.0" y="244.5" font-size="11" font-weight="600" text-anchor="middle" fill="#15201f">38.9%</text>
+<rect class="s4" x="344.0" y="61.8" width="130.0" height="131.3" fill="#e87ba4"/>
+<rect class="surf" x="388.6" y="117.5" width="40.8" height="17.2" fill="#ffffff" rx="3"/>
+<text class="ink" x="409.0" y="131.4" font-size="11" font-weight="600" text-anchor="middle" fill="#15201f">53.8%</text>
+<rect class="s5" x="344.0" y="44.0" width="130.0" height="17.8" fill="#008300"/>
+<rect class="surf" x="391.7" y="43.0" width="34.6" height="17.2" fill="#ffffff" rx="3"/>
+<text class="ink" x="409.0" y="56.8" font-size="11" font-weight="600" text-anchor="middle" fill="#15201f">7.3%</text>
+<text class="ink" x="409.0" y="306.0" font-size="12.5" font-weight="600" text-anchor="middle" fill="#15201f">Car</text>
+<text class="ink3" x="409.0" y="321.0" font-size="10.5" font-weight="400" text-anchor="middle" fill="#6f7b79">522 students</text>
+<rect class="s3" x="564.7" y="84.5" width="130.0" height="203.5" fill="#eda100"/>
+<rect class="surf" x="609.3" y="176.3" width="40.8" height="17.2" fill="#ffffff" rx="3"/>
+<text class="ink" x="629.7" y="190.2" font-size="11" font-weight="600" text-anchor="middle" fill="#15201f">83.4%</text>
+<rect class="s4" x="564.7" y="46.2" width="130.0" height="38.3" fill="#e87ba4"/>
+<rect class="surf" x="609.3" y="55.4" width="40.8" height="17.2" fill="#ffffff" rx="3"/>
+<text class="ink" x="629.7" y="69.3" font-size="11" font-weight="600" text-anchor="middle" fill="#15201f">15.7%</text>
+<rect class="s5" x="564.7" y="44.0" width="130.0" height="2.2" fill="#008300"/>
+<text class="ink2" x="700.7" y="49.1" font-size="10.5" font-weight="600" text-anchor="start" fill="#4a5654">0.9%</text>
+<text class="ink" x="629.7" y="306.0" font-size="12.5" font-weight="600" text-anchor="middle" fill="#15201f">Walk or cycle</text>
+<text class="ink3" x="629.7" y="321.0" font-size="10.5" font-weight="400" text-anchor="middle" fill="#6f7b79">669 students</text>
+<text class="ink3" x="78.0" y="342.0" font-size="11" font-weight="400" text-anchor="start" fill="#6f7b79">Each bar is one travel mode, 100% tall; segment height: percentage of that mode&#x27;s students from each area</text>
+</svg>

@@ -1,0 +1,60 @@
+<svg viewBox="0 0 760 350" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mosaic plot of hospital and waiting time, the 155 surveyed patients of St Mary&#x27;s and Riverside. Column widths: St Mary&#x27;s 54.2%, Riverside 45.8%. St Mary&#x27;s: under 20 min 9.5%, 20 to 39 min 54.8%, 40 min or more 35.7%. Riverside: 19.7%, 76.1%, 4.2%." font-family="Public Sans, system-ui, sans-serif">
+<style>
+  .ink { fill: var(--ink, #15201f); }
+  .ink2 { fill: var(--ink-2, #4a5654); }
+  .ink3 { fill: var(--ink-3, #6f7b79); }
+  .surf { fill: var(--surface, #ffffff); }
+  .band { fill: var(--surface-2, #eef1ef); }
+  .acc { fill: var(--accent, #1a6b63); }
+  .amb { fill: var(--amber, #7d5a11); }
+  .s0 { fill: var(--s1, #2a78d6); }
+  .s1 { fill: var(--s2, #eb6834); }
+  .s2 { fill: var(--s3, #1baf7a); }
+  .s3 { fill: var(--s4, #eda100); }
+  .s4 { fill: var(--s5, #e87ba4); }
+  .s5 { fill: var(--s6, #008300); }
+  .kink { stroke: var(--ink, #15201f); }
+  .kink2 { stroke: var(--ink-2, #4a5654); }
+  .kink3 { stroke: var(--ink-3, #6f7b79); }
+  .axis { stroke: var(--rule-strong, #c3c9c6); }
+  .grid { stroke: var(--rule, #dcdfdd); }
+  .kacc { stroke: var(--accent, #1a6b63); }
+  .kamb { stroke: var(--amber, #7d5a11); }
+  .k0 { stroke: var(--s1, #2a78d6); }
+  .k1 { stroke: var(--s2, #eb6834); }
+  .k2 { stroke: var(--s3, #1baf7a); }
+  .k3 { stroke: var(--s4, #eda100); }
+  .k4 { stroke: var(--s5, #e87ba4); }
+  .k5 { stroke: var(--s6, #008300); }
+  .ksurf { stroke: var(--surface, #ffffff); }
+</style>
+<rect class="s0" x="78.0" y="12.0" width="12.0" height="12.0" fill="#2a78d6" rx="2"/>
+<text class="ink2" x="95.0" y="22.0" font-size="12" font-weight="500" text-anchor="start" fill="#4a5654">Under 20 min</text>
+<rect class="s3" x="197.6" y="12.0" width="12.0" height="12.0" fill="#eda100" rx="2"/>
+<text class="ink2" x="214.6" y="22.0" font-size="12" font-weight="500" text-anchor="start" fill="#4a5654">20 to 39 min</text>
+<rect class="s1" x="317.3" y="12.0" width="12.0" height="12.0" fill="#eb6834" rx="2"/>
+<text class="ink2" x="334.3" y="22.0" font-size="12" font-weight="500" text-anchor="start" fill="#4a5654">40 min or more</text>
+<line class="axis" x1="74.0" y1="284.0" x2="78.0" y2="284.0" stroke="#c3c9c6" stroke-width="1" fill="none"/>
+<text class="ink3" x="70.0" y="288.0" font-size="11" font-weight="400" text-anchor="end" fill="#6f7b79">0%</text>
+<line class="axis" x1="74.0" y1="236.0" x2="78.0" y2="236.0" stroke="#c3c9c6" stroke-width="1" fill="none"/>
+<text class="ink3" x="70.0" y="240.0" font-size="11" font-weight="400" text-anchor="end" fill="#6f7b79">20%</text>
+<line class="axis" x1="74.0" y1="188.0" x2="78.0" y2="188.0" stroke="#c3c9c6" stroke-width="1" fill="none"/>
+<text class="ink3" x="70.0" y="192.0" font-size="11" font-weight="400" text-anchor="end" fill="#6f7b79">40%</text>
+<line class="axis" x1="74.0" y1="140.0" x2="78.0" y2="140.0" stroke="#c3c9c6" stroke-width="1" fill="none"/>
+<text class="ink3" x="70.0" y="144.0" font-size="11" font-weight="400" text-anchor="end" fill="#6f7b79">60%</text>
+<line class="axis" x1="74.0" y1="92.0" x2="78.0" y2="92.0" stroke="#c3c9c6" stroke-width="1" fill="none"/>
+<text class="ink3" x="70.0" y="96.0" font-size="11" font-weight="400" text-anchor="end" fill="#6f7b79">80%</text>
+<line class="axis" x1="74.0" y1="44.0" x2="78.0" y2="44.0" stroke="#c3c9c6" stroke-width="1" fill="none"/>
+<text class="ink3" x="70.0" y="48.0" font-size="11" font-weight="400" text-anchor="end" fill="#6f7b79">100%</text>
+<rect class="s0 ksurf" x="78.0" y="261.1" width="356.6" height="22.9" fill="#2a78d6" stroke="#ffffff" stroke-width="1"/>
+<rect class="s3 ksurf" x="78.0" y="129.7" width="356.6" height="131.4" fill="#eda100" stroke="#ffffff" stroke-width="1"/>
+<rect class="s1 ksurf" x="78.0" y="44.0" width="356.6" height="85.7" fill="#eb6834" stroke="#ffffff" stroke-width="1"/>
+<text class="ink" x="256.3" y="302.0" font-size="12" font-weight="600" text-anchor="middle" fill="#15201f">St Mary&#x27;s</text>
+<text class="ink3" x="256.3" y="316.0" font-size="10" font-weight="400" text-anchor="middle" fill="#6f7b79">84 · 54.2% wide</text>
+<rect class="s0 ksurf" x="438.6" y="236.7" width="301.4" height="47.3" fill="#2a78d6" stroke="#ffffff" stroke-width="1"/>
+<rect class="s3 ksurf" x="438.6" y="54.1" width="301.4" height="182.5" fill="#eda100" stroke="#ffffff" stroke-width="1"/>
+<rect class="s1 ksurf" x="438.6" y="44.0" width="301.4" height="10.1" fill="#eb6834" stroke="#ffffff" stroke-width="1"/>
+<text class="ink" x="589.3" y="302.0" font-size="12" font-weight="600" text-anchor="middle" fill="#15201f">Riverside</text>
+<text class="ink3" x="589.3" y="316.0" font-size="10" font-weight="400" text-anchor="middle" fill="#6f7b79">71 · 45.8% wide</text>
+<text class="ink3" x="78.0" y="342.0" font-size="11" font-weight="400" text-anchor="start" fill="#6f7b79">Column width: the hospital&#x27;s share of the 155 patients; segment height: percentage of that hospital&#x27;s patients</text>
+</svg>

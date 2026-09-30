@@ -269,6 +269,44 @@
       ]
     },
     {
+      "label": "Block D · Probability and distributions",
+      "items": [
+        {
+          "id": "s08t",
+          "label": "Session 8 · Tutor",
+          "out": "s08-tutor.html",
+          "src": "Session-08-Tutoring-Document.md",
+          "kind": "md",
+          "session": 8,
+          "variant": "tutor",
+          "title": "Session 8, Two-Way Tables and Simulation",
+          "topics": "CED 2.1–2.3"
+        },
+        {
+          "id": "s08s",
+          "label": "Session 8 · Student",
+          "out": "s08-student.html",
+          "src": "Session-08-Student-Workbook.md",
+          "kind": "md",
+          "session": 8,
+          "variant": "student",
+          "title": "Session 8 Workbook",
+          "topics": "CED 2.1–2.3"
+        },
+        {
+          "id": "s08x",
+          "label": "Session 8 · Test",
+          "out": "s08-test.html",
+          "src": "Session-08-MC-Test.md",
+          "kind": "md",
+          "session": 8,
+          "variant": "test",
+          "title": "Session 8 Test",
+          "topics": "CED 2.1–2.3 · 20 questions"
+        }
+      ]
+    },
+    {
       "label": "Interactive",
       "items": [
         {
@@ -324,6 +362,15 @@
           "kind": "tool",
           "title": "Sampling Bias",
           "topics": "Session 7"
+        },
+        {
+          "id": "sim7",
+          "label": "Overbooking Simulation",
+          "out": "tools/overbooking-simulation.html",
+          "src": "html-fragment:overbooking-simulation.html",
+          "kind": "tool",
+          "title": "Overbooking Simulation",
+          "topics": "Session 8"
         }
       ]
     }

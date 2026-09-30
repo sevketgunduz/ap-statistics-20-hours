@@ -3796,6 +3796,792 @@
    ],
    "desc": "Homework Part E: 40 spring days, a coin at opening decides tables outside; mean takings higher on table days, statistically significant (stated, not computed: no takings data are given).",
    "days": 40
+  },
+  "lincoln-travel-register": {
+   "sessions": [
+    8
+   ],
+   "desc": "Scenario A: Lincoln High travel register, a census of all 1,842 students: home area x main travel mode. The Bus column is Session 7's bus-pass census (lincoln-bus-survey-bias). Conditional relative frequencies to 3 dp from the counts.",
+   "rows": [
+    "Town",
+    "Suburbs",
+    "Villages"
+   ],
+   "cols": [
+    "Bus",
+    "Car",
+    "Walk or cycle"
+   ],
+   "cells": [
+    [
+     85,
+     203,
+     558
+    ],
+    [
+     316,
+     281,
+     105
+    ],
+    [
+     250,
+     38,
+     6
+    ]
+   ],
+   "row_totals": [
+    846,
+    702,
+    294
+   ],
+   "col_totals": [
+    651,
+    522,
+    669
+   ],
+   "total": 1842,
+   "cond_row": {
+    "Town": {
+     "Bus": 0.1,
+     "Car": 0.24,
+     "Walk or cycle": 0.66
+    },
+    "Suburbs": {
+     "Bus": 0.45,
+     "Car": 0.4,
+     "Walk or cycle": 0.15
+    },
+    "Villages": {
+     "Bus": 0.85,
+     "Car": 0.129,
+     "Walk or cycle": 0.02
+    }
+   },
+   "cond_col": {
+    "Bus": {
+     "Town": 0.131,
+     "Suburbs": 0.485,
+     "Villages": 0.384
+    },
+    "Car": {
+     "Town": 0.389,
+     "Suburbs": 0.538,
+     "Villages": 0.073
+    },
+    "Walk or cycle": {
+     "Town": 0.834,
+     "Suburbs": 0.157,
+     "Villages": 0.009
+    }
+   },
+   "marg_row": {
+    "Town": 0.459,
+    "Suburbs": 0.381,
+    "Villages": 0.16
+   },
+   "marg_col": {
+    "Bus": 0.353,
+    "Car": 0.283,
+    "Walk or cycle": 0.363
+   }
+  },
+  "hospital-waits-two-way": {
+   "sessions": [
+    8
+   ],
+   "desc": "Activity (Quiz-Quiz-Trade): the registered Session 3 waits (wait-st-marys, wait-riverside) grouped as under 20 min, 20 to 39 min, 40 min or more. Derived, not new data.",
+   "source": [
+    "wait-st-marys",
+    "wait-riverside"
+   ],
+   "rows": [
+    "St Mary's",
+    "Riverside"
+   ],
+   "cols": [
+    "Under 20 min",
+    "20 to 39 min",
+    "40 min or more"
+   ],
+   "cells": [
+    [
+     8,
+     46,
+     30
+    ],
+    [
+     14,
+     54,
+     3
+    ]
+   ],
+   "row_totals": [
+    84,
+    71
+   ],
+   "col_totals": [
+    22,
+    100,
+    33
+   ],
+   "total": 155,
+   "cond_row": {
+    "St Mary's": {
+     "Under 20 min": 0.095,
+     "20 to 39 min": 0.548,
+     "40 min or more": 0.357
+    },
+    "Riverside": {
+     "Under 20 min": 0.197,
+     "20 to 39 min": 0.761,
+     "40 min or more": 0.042
+    }
+   },
+   "cond_col": {
+    "Under 20 min": {
+     "St Mary's": 0.364,
+     "Riverside": 0.636
+    },
+    "20 to 39 min": {
+     "St Mary's": 0.46,
+     "Riverside": 0.54
+    },
+    "40 min or more": {
+     "St Mary's": 0.909,
+     "Riverside": 0.091
+    }
+   },
+   "marg_row": {
+    "St Mary's": 0.542,
+    "Riverside": 0.458
+   },
+   "marg_col": {
+    "Under 20 min": 0.142,
+    "20 to 39 min": 0.645,
+    "40 min or more": 0.213
+   }
+  },
+  "cafe-loyalty-visit-time": {
+   "sessions": [
+    8
+   ],
+   "desc": "Activity trade round: the cafe's 1,260 loyalty members (cafe-loyalty-members, Session 6: 504 app, 756 paper) by usual visit time from the till.",
+   "rows": [
+    "App",
+    "Paper card"
+   ],
+   "cols": [
+    "Before 10 am",
+    "10 am to 2 pm",
+    "After 2 pm"
+   ],
+   "cells": [
+    [
+     280,
+     140,
+     84
+    ],
+    [
+     210,
+     378,
+     168
+    ]
+   ],
+   "row_totals": [
+    504,
+    756
+   ],
+   "col_totals": [
+    490,
+    518,
+    252
+   ],
+   "total": 1260,
+   "cond_row": {
+    "App": {
+     "Before 10 am": 0.556,
+     "10 am to 2 pm": 0.278,
+     "After 2 pm": 0.167
+    },
+    "Paper card": {
+     "Before 10 am": 0.278,
+     "10 am to 2 pm": 0.5,
+     "After 2 pm": 0.222
+    }
+   },
+   "cond_col": {
+    "Before 10 am": {
+     "App": 0.571,
+     "Paper card": 0.429
+    },
+    "10 am to 2 pm": {
+     "App": 0.27,
+     "Paper card": 0.73
+    },
+    "After 2 pm": {
+     "App": 0.333,
+     "Paper card": 0.667
+    }
+   },
+   "marg_row": {
+    "App": 0.4,
+    "Paper card": 0.6
+   },
+   "marg_col": {
+    "Before 10 am": 0.389,
+    "10 am to 2 pm": 0.411,
+    "After 2 pm": 0.2
+   }
+  },
+  "library-formats-solo": {
+   "sessions": [
+    8
+   ],
+   "desc": "Solo case: random sample of 250 members of the Central and Westside branches by borrowing format. Identical conditional relative frequencies (no association). P(both) estimate 75/250 = 0.300.",
+   "rows": [
+    "Central",
+    "Westside"
+   ],
+   "cols": [
+    "Print only",
+    "E-books only",
+    "Both"
+   ],
+   "cells": [
+    [
+     90,
+     15,
+     45
+    ],
+    [
+     60,
+     10,
+     30
+    ]
+   ],
+   "row_totals": [
+    150,
+    100
+   ],
+   "col_totals": [
+    150,
+    25,
+    75
+   ],
+   "total": 250,
+   "cond_row": {
+    "Central": {
+     "Print only": 0.6,
+     "E-books only": 0.1,
+     "Both": 0.3
+    },
+    "Westside": {
+     "Print only": 0.6,
+     "E-books only": 0.1,
+     "Both": 0.3
+    }
+   },
+   "cond_col": {
+    "Print only": {
+     "Central": 0.6,
+     "Westside": 0.4
+    },
+    "E-books only": {
+     "Central": 0.6,
+     "Westside": 0.4
+    },
+    "Both": {
+     "Central": 0.6,
+     "Westside": 0.4
+    }
+   },
+   "marg_row": {
+    "Central": 0.6,
+    "Westside": 0.4
+   },
+   "marg_col": {
+    "Print only": 0.6,
+    "E-books only": 0.1,
+    "Both": 0.3
+   },
+   "simulation": {
+    "p_both": 0.3,
+    "group_size": 4,
+    "event": "none of the 4 borrows both",
+    "digits_both": "0,1,2",
+    "trials": [
+     "4725",
+     "3455",
+     "7469",
+     "5319",
+     "0807",
+     "7246",
+     "7605",
+     "7354",
+     "5256",
+     "9119"
+    ],
+    "none_count": 3,
+    "estimate": 0.3,
+    "rules_value": 0.2401,
+    "python_seed": 3001
+   }
+  },
+  "oakfield-lunch-hw": {
+   "sessions": [
+    8
+   ],
+   "desc": "Homework Part B: random sample of 200 Oakfield students from Years 7, 9 and 11, by usual lunch.",
+   "rows": [
+    "Year 7",
+    "Year 9",
+    "Year 11"
+   ],
+   "cols": [
+    "School lunch",
+    "Packed lunch",
+    "Off site"
+   ],
+   "cells": [
+    [
+     42,
+     21,
+     7
+    ],
+    [
+     35,
+     28,
+     7
+    ],
+    [
+     18,
+     24,
+     18
+    ]
+   ],
+   "row_totals": [
+    70,
+    70,
+    60
+   ],
+   "col_totals": [
+    95,
+    73,
+    32
+   ],
+   "total": 200,
+   "cond_row": {
+    "Year 7": {
+     "School lunch": 0.6,
+     "Packed lunch": 0.3,
+     "Off site": 0.1
+    },
+    "Year 9": {
+     "School lunch": 0.5,
+     "Packed lunch": 0.4,
+     "Off site": 0.1
+    },
+    "Year 11": {
+     "School lunch": 0.3,
+     "Packed lunch": 0.4,
+     "Off site": 0.3
+    }
+   },
+   "cond_col": {
+    "School lunch": {
+     "Year 7": 0.442,
+     "Year 9": 0.368,
+     "Year 11": 0.189
+    },
+    "Packed lunch": {
+     "Year 7": 0.288,
+     "Year 9": 0.384,
+     "Year 11": 0.329
+    },
+    "Off site": {
+     "Year 7": 0.219,
+     "Year 9": 0.219,
+     "Year 11": 0.563
+    }
+   },
+   "marg_row": {
+    "Year 7": 0.35,
+    "Year 9": 0.35,
+    "Year 11": 0.3
+   },
+   "marg_col": {
+    "School lunch": 0.475,
+    "Packed lunch": 0.365,
+    "Off site": 0.16
+   }
+  },
+  "hospital-recommend-hw": {
+   "sessions": [
+    8
+   ],
+   "desc": "Homework Part C mosaic: the Session 1 hospital survey's 300 patients (hospital counts 84/71/52/45/30/18) by whether they would recommend their hospital.",
+   "rows": [
+    "St Mary's",
+    "Riverside",
+    "Northgate",
+    "Parkview",
+    "Eastwood",
+    "Hillcrest"
+   ],
+   "cols": [
+    "Yes",
+    "No"
+   ],
+   "cells": [
+    [
+     63,
+     21
+    ],
+    [
+     64,
+     7
+    ],
+    [
+     39,
+     13
+    ],
+    [
+     27,
+     18
+    ],
+    [
+     24,
+     6
+    ],
+    [
+     9,
+     9
+    ]
+   ],
+   "row_totals": [
+    84,
+    71,
+    52,
+    45,
+    30,
+    18
+   ],
+   "col_totals": [
+    226,
+    74
+   ],
+   "total": 300,
+   "cond_row": {
+    "St Mary's": {
+     "Yes": 0.75,
+     "No": 0.25
+    },
+    "Riverside": {
+     "Yes": 0.901,
+     "No": 0.099
+    },
+    "Northgate": {
+     "Yes": 0.75,
+     "No": 0.25
+    },
+    "Parkview": {
+     "Yes": 0.6,
+     "No": 0.4
+    },
+    "Eastwood": {
+     "Yes": 0.8,
+     "No": 0.2
+    },
+    "Hillcrest": {
+     "Yes": 0.5,
+     "No": 0.5
+    }
+   },
+   "cond_col": {
+    "Yes": {
+     "St Mary's": 0.279,
+     "Riverside": 0.283,
+     "Northgate": 0.173,
+     "Parkview": 0.119,
+     "Eastwood": 0.106,
+     "Hillcrest": 0.04
+    },
+    "No": {
+     "St Mary's": 0.284,
+     "Riverside": 0.095,
+     "Northgate": 0.176,
+     "Parkview": 0.243,
+     "Eastwood": 0.081,
+     "Hillcrest": 0.122
+    }
+   },
+   "marg_row": {
+    "St Mary's": 0.28,
+    "Riverside": 0.237,
+    "Northgate": 0.173,
+    "Parkview": 0.15,
+    "Eastwood": 0.1,
+    "Hillcrest": 0.06
+   },
+   "marg_col": {
+    "Yes": 0.753,
+    "No": 0.247
+   }
+  },
+  "stmarys-overbooking": {
+   "sessions": [
+    8
+   ],
+   "desc": "Scenario B: one St Mary's clinic, 10 slots per session; 100 of 1,000 appointments missed since texts began, so P(miss) estimated 0.10; proposal to book 11. Hand simulation: 20 trials of 11 digits (0 = misses), Python random.Random(seed).",
+   "slots": 10,
+   "records": {
+    "appointments": 1000,
+    "missed": 100,
+    "rf": 0.1
+   },
+   "python_seed": 20261065,
+   "hand_rows": [
+    "69833173146",
+    "86438828445",
+    "72109870098",
+    "57185127035",
+    "94546882727",
+    "77831499035",
+    "70215280025",
+    "02254900902",
+    "48773098938",
+    "12558406349",
+    "05876974748",
+    "61015882233",
+    "37285436448",
+    "41963047784",
+    "39436568993",
+    "87672525612",
+    "29198040690",
+    "15638737253",
+    "82909643395",
+    "98285688426"
+   ],
+   "turned_up": [
+    11,
+    11,
+    8,
+    10,
+    11,
+    10,
+    8,
+    7,
+    10,
+    10,
+    10,
+    10,
+    11,
+    10,
+    11,
+    11,
+    8,
+    11,
+    10,
+    11
+   ],
+   "counts": {
+    "7": 1,
+    "8": 3,
+    "9": 0,
+    "10": 8,
+    "11": 8
+   },
+   "hand_estimates": {
+    "overflow": 0.4,
+    "exactly_full": 0.4,
+    "unused": 0.2
+   },
+   "zeros_in_220": 21,
+   "turned_up_of_220": 199,
+   "rules_values": {
+    "p0.10": {
+     "book10": [
+      0,
+      0.3487,
+      0.6513
+     ],
+     "book11": [
+      0.3138,
+      0.3835,
+      0.3026
+     ],
+     "book12": [
+      0.659,
+      0.2301,
+      0.1109
+     ]
+    },
+    "p0.155": {
+     "book10": [
+      0,
+      0.1856,
+      0.8144
+     ],
+     "book11": [
+      0.1568,
+      0.3164,
+      0.5267
+     ],
+     "book12": [
+      0.4242,
+      0.2943,
+      0.2815
+     ]
+    },
+    "order": [
+     "overflow",
+     "exactly 10",
+     "at least one unused"
+    ]
+   },
+   "figure_long_runs": "figures/s08-stmarys-running: five runs of 10,000 with Python random.Random(911..955); ends 0.3134, 0.3211, 0.3198, 0.3145, 0.3126",
+   "tool_tests": {
+    "sd_of_estimate_200_runs": {
+     "20": 0.1035,
+     "200": 0.0336,
+     "2000": 0.0102
+    },
+    "share_within_0.05": {
+     "20": 0.33,
+     "5000": 1.0
+    }
+   }
+  },
+  "overbooking-tool-model": {
+   "sessions": [
+    8
+   ],
+   "desc": "The Overbooking Simulation tool (build/fragments/overbooking-simulation.html). mulberry32, seeded from the clock at open. p = 0.10: one digit per patient, 0 = misses. p = 0.155: three-digit number 000-999, 000-154 = misses. Booked 10/11/12 into 10 slots. Opens with one run of 20 trials at 11 booked, p = 0.10. Max 20,000 trials per run.",
+   "slots": 10,
+   "booked": [
+    10,
+    11,
+    12
+   ],
+   "p_miss": [
+    0.1,
+    0.155
+   ],
+   "events": {
+    "over": "more than 10 turn up",
+    "full": "exactly 10",
+    "unused": "9 or fewer"
+   }
+  },
+  "cafe-sleeves-hw": {
+   "sessions": [
+    8
+   ],
+   "desc": "Homework Part D: 1 in 5 scratch sleeves wins; 4 coffees; P(at least one win). Digits 0,1 = win.",
+   "p_win": 0.2,
+   "coffees": 4,
+   "trials": [
+    "5459",
+    "9274",
+    "0312",
+    "1120",
+    "4724",
+    "9693",
+    "1054",
+    "1203",
+    "7800",
+    "2472"
+   ],
+   "event_count": 5,
+   "estimate": 0.5,
+   "winning_digits_of_40": 11,
+   "rules_value": 0.5904,
+   "python_seed": 5004
+  },
+  "s08-theory-abstract": {
+   "sessions": [
+    8
+   ],
+   "desc": "Made-up illustrations in the Session 8 theory section. No context.",
+   "two_by_two": {
+    "rows": [
+     "Group A",
+     "Group B"
+    ],
+    "cols": [
+     "yes",
+     "no"
+    ],
+    "cells": [
+     [
+      12,
+      8
+     ],
+     [
+      6,
+      24
+     ]
+    ]
+   },
+   "three_cat": {
+    "rows": [
+     "Group A",
+     "Group B"
+    ],
+    "cols": [
+     "X",
+     "Y",
+     "Z"
+    ],
+    "cells": [
+     [
+      30,
+      18,
+      12
+     ],
+     [
+      8,
+      12,
+      20
+     ]
+    ]
+   },
+   "no_association": {
+    "rows": [
+     "Group A",
+     "Group B"
+    ],
+    "cols": [
+     "X",
+     "Y",
+     "Z"
+    ],
+    "cells": [
+     [
+      30,
+      18,
+      12
+     ],
+     [
+      20,
+      12,
+      8
+     ]
+    ]
+   },
+   "simulation_illustration": {
+    "two_digit_trials": [
+     "37",
+     "05",
+     "90",
+     "41",
+     "22"
+    ],
+    "event": "at least one 0",
+    "count": 2,
+    "estimate": 0.4
+   },
+   "coin": "hypothetical: 7 heads in 10, 5,040 in 10,000"
   }
  }
 }
