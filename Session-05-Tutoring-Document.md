@@ -96,7 +96,7 @@ Then the diagnostic. Four quick questions, answers out loud.
 
 ## 10–35 min · Theory — the least-squares regression line and its residuals
 
-Every concept the session uses is stated here, before any data. Put each subsection on the shared screen, read the rule with the student, and make sure they can say in their own words what it does **not** say; that is where the marks go. The illustrations are bare, made-up numbers, and most reuse Session 4's tiny data sets so the arithmetic is quick. Lincoln High, the café and St Mary's come afterwards and apply these rules; when a question there needs a definition, point back to the subsection here rather than restating it. The section ends with six check questions.
+Every concept the session uses is stated here, before any data. Put each subsection on the shared screen, read the rule with the student, and make sure they can say in their own words what it does **not** say; that is where the marks go. Each subsection carries two examples doing different jobs: the *Illustration* uses bare, made-up numbers, so the structure is visible with nothing to distract from it, and the *Education example* is a study of the kind this course is about, so the rule is seen doing something. Read bare first and concrete second. Most of the bare ones reuse Session 4's tiny data sets, so the arithmetic is quick. Lincoln High, the café and St Mary's come afterwards and apply these rules; when a question there needs a definition, point back to the subsection here rather than restating it. The section ends with six check questions.
 
 ### The linear regression model and the predicted value ŷ (5.3.A.1–2)
 
@@ -112,6 +112,14 @@ What it does not say. ŷ is a **prediction**, not the observed value: an individ
 
 *Illustration:* for the model ŷ = 1 + 0.5*x*, an individual with *x* = 4 has predicted response ŷ = 1 + 0.5 × 4 = **3**.
 
+*Education example:* the district fits a line to **40 Year 4 classes**, relating weekly minutes of reading practice to the reading-age gain in months over one term:
+
+:::formula
+predicted gain (months) = 1.2 + 0.045 × (minutes of practice per week)
+:::
+
+For a class practising 100 minutes a week the model predicts 1.2 + 0.045 × 100 = **5.70 months**. That is a prediction for the class, not a promise: the hat on ŷ is doing the work of the word *predicted*.
+
 ### Interpolation and extrapolation (5.3.A.3–4)
 
 **Interpolation** is predicting a response value using a value of the explanatory variable that is **within** the interval of *x*-values used to determine the regression line. **Extrapolation** is predicting a response value using a value of the explanatory variable that is **beyond** that interval. **The predicted value is less reliable the further the estimate is extrapolated.**
@@ -119,6 +127,8 @@ What it does not say. ŷ is a **prediction**, not the observed value: an individ
 What it does not say. The line is evidence only about the range of *x* it was fitted on; beyond it, nobody knows whether the pattern continues, bends or stops. Extrapolation is not forbidden, and the arithmetic is the same, but the answer must say that it is an extrapolation and so less reliable. The test is the interval of *x*-values, not whether some individual had exactly that *x*: a prediction at an *x* inside the interval where no individual happens to sit is still interpolation.
 
 *Illustration:* a line fitted to *x*-values from 2 to 10. Predicting at *x* = 6 is interpolation; at *x* = 15 it is extrapolation; at *x* = 40 it is a much less reliable extrapolation than at 15.
+
+*Education example:* the 40 classes practised between 0 and 160 minutes a week. Predicting the gain for a class at 120 minutes is **interpolation** — inside the range, and reasonable. Predicting for a class at 400 minutes is **extrapolation**, and the model happily returns 1.2 + 0.045 × 400 = 19.20 months, a year and a half of reading age in a single term. The arithmetic is right and the answer is nonsense, which is exactly what extrapolation looks like.
 
 ### Residuals: observed minus predicted (5.4.A.1)
 
@@ -134,6 +144,8 @@ What it does not say. The order matters: observed minus predicted, never the oth
 
 *Illustration:* for ŷ = 1 + 0.5*x*, the point (2, 3) has ŷ = 2, so its residual is 3 − 2 = **+1**. The point (1, 1) has ŷ = 1.5, so its residual is 1 − 1.5 = **−0.5**.
 
+*Education example:* one class practised 140 minutes a week, so the model predicted 1.2 + 0.045 × 140 = 7.50 months. The class actually gained **6.1 months**. Its residual is 6.1 − 7.50 = **−1.40 months**: observed minus predicted, in the units of the response, never the other way round.
+
 ### What the sign of a residual says (5.4.B.1)
 
 If the residual is **positive**, the model **underpredicts** (underestimates) the value of the response variable. If the residual is **negative**, the model **overpredicts** (overestimates) it.
@@ -148,6 +160,8 @@ What it does not say. The sign is about the **model's** error, seen from the ind
 
 *Illustration:* the point (2, 3) with residual +1: its response is 1 unit **more than predicted** for *x* = 2, so the model underpredicts it by 1.
 
+*Education example:* that residual of −1.40 is **negative**, so the model **over-predicted** this class: it gained 1.4 months less than a class practising 140 minutes a week typically does. Useful to a district adviser, because the question to ask is what else was going on in that classroom — not whether the model is broken.
+
 ### Residual plots (5.4.C.1–2)
 
 A **residual plot** is a scatterplot of the **residuals** against the **predicted response values**, or against the **explanatory variable values**. Residual plots are used to investigate whether the linear regression model is appropriate for the observed data.
@@ -155,6 +169,8 @@ A **residual plot** is a scatterplot of the **residuals** against the **predicte
 What it does not say. The two choices of horizontal axis give the same picture for a line with positive slope and a mirror image for negative slope; either is correct. A residual plot always has a horizontal line at residual = 0, and a point's height above or below it is its residual. The plot is a tool for judging the **model**; it does not replace the scatterplot, which is still where the description of the association comes from.
 
 *Illustration:* for ŷ = 1 + 0.5*x* and the points (1, 1), (2, 3), (3, 2), the residuals are −0.5, +1, −0.5, so the residual plot has points at (1, −0.5), (2, 1) and (3, −0.5).
+
+*Education example:* plot all 40 residuals against weekly practice minutes. Each class contributes one point, the horizontal axis is the same as the scatterplot's, and the vertical axis is months above or below prediction, centred on zero. The class above sits at (140, −1.40).
 
 ### Reading a residual plot: randomness or curvature (5.4.C.3–4)
 
@@ -165,6 +181,8 @@ The linear regression model should only be fitted if the data show a linear tren
 *A: points scattered about a straight trend. Their residuals jump above and below 0 with no pattern: the linear model is appropriate. B: the five points (1, 1), (2, 4), (3, 9), (4, 16), (5, 25), on the curve y = x², with r = 0.98. The least-squares line is ŷ = −7 + 6x, and the residuals are +2, −1, −2, −1, +2: positive at both ends, negative in the middle. That curve says the linear model is not the most appropriate, although r is very close to 1.*
 
 What it does not say. The residual plot answers a question *r* cannot: Session 4 showed that *r* close to 1 does not prove linear form (5.2.A.3), and the residual plot is how to check. "Apparent randomness" means no systematic shape, not that the residuals are small; a weak linear association has large, patternless residuals, and the linear model is still the appropriate one. Curvature says a straight line is not the *most* appropriate model; it does not say the variables are unrelated.
+
+*Education example:* suppose that residual plot is not random but **bends**: classes practising 40 to 90 minutes sit above the line, while those under 20 and those over 130 sit below it. That is **diminishing returns** — extra practice helps less once a class already does a lot — and it says the straight line is the wrong model, even though the original scatterplot looked acceptably straight. The residual plot magnifies the departure the scatterplot hid.
 
 ### Least squares: the line that minimises Σ(residual²) (5.5.A.1)
 
@@ -179,6 +197,8 @@ Here the sum Σ runs over all *n* individuals, and each term is one residual squ
 What it does not say. "Best" means best by this one criterion, the smallest sum of squared residuals; it does not mean the line fits well, or that a line is the right model at all. Squaring stops positive and negative residuals from cancelling, and it makes big residuals count for much more than small ones, so a single point far from the pattern can add a large share of the total.
 
 *Illustration:* for (1, 1), (2, 3), (3, 2), the least-squares line is ŷ = 1 + 0.5*x*, with residuals −0.5, +1, −0.5 and Σ(residual²) = 0.25 + 1 + 0.25 = **1.5**. The line *y* = *x* gives residuals 0, 1, −1 and a sum of **2**; the flat line *y* = 2 gives −1, 1, 0 and also **2**. And the least-squares line passes through (x̄, ȳ) = (2, 2): 1 + 0.5 × 2 = 2.
+
+*Education example:* of all the lines that could be drawn through the 40 classes, the least-squares line is the one making the sum of the squared residuals smallest. Squaring is why a single badly fitting class — the one 1.4 months below prediction — pulls the line more than two classes half a month out, and why one unusual class can shift a conclusion about the whole district.
 
 ### Finding a and b: technology, or the formula sheet (5.5.A.2–4)
 
@@ -198,6 +218,8 @@ What it does not say. The formula-sheet route is a way to get the same line when
 
 *Illustration:* the three points again: *r* = 0.5, *sₓ* = 1, *s_y* = 1, x̄ = 2, ȳ = 2. So *b* = 0.5 × (1 ÷ 1) = **0.5** and *a* = 2 − 0.5 × 2 = **1**: the same line, ŷ = 1 + 0.5*x*.
 
+*Education example:* the district's analyst gets a = 1.2 and b = 0.045 from software in one step. By hand, the formula sheet gives b = r × (s_y ÷ s_x) and then a = ȳ − b x̄, so the five summary statistics — both means, both standard deviations and r — are enough to rebuild the whole line without ever seeing the 40 data points.
+
 ### The coefficient of determination r² (5.5.A.5)
 
 In simple linear regression, the square of the correlation coefficient, ***r*²**, is called the **coefficient of determination**. The value of *r*² is **the proportion of variation in the response variable that is explained by the linear relationship with the explanatory variable**.
@@ -210,6 +232,8 @@ What it does not say. It is a proportion of **variation in the response**, not a
 
 *Illustration:* for the three points, *r* = 0.5, so *r*² = **0.25**: 25% of the variation in *y* is explained by the linear relationship with *x*. For the five points on *y* = *x*², *r*² = 0.96, and their residual plot still curves.
 
+*Education example:* for the reading model **r² = 0.58**: about **58% of the variation in reading-age gain** across the 40 classes is explained by the linear relationship with weekly practice minutes. The remaining 42% is everything else — the teacher, the books, what happens at home. Read it carefully: it is not 58% of the classes, and it is not a claim that practice *causes* 58% of the gain.
+
 ### Interpreting the slope (5.5.B.1–2)
 
 The **coefficients** of the least-squares regression line are its slope, *b*, and its *y*-intercept, *a*. They are calculated from a sample of values, so they are statistics in Session 1's sense (5.5.B.1). The **slope** is interpreted as the **predicted increase or decrease in the response variable for a one-unit increase in the explanatory variable**, in context.
@@ -220,6 +244,8 @@ What it does not say. The word **predicted** (or "on average") is not decoration
 
 *Illustration:* for ŷ = 1 + 0.5*x*: for each one-unit increase in *x*, the predicted *y* increases by **0.5**.
 
+*Education example:* the slope 0.045 means that for each **extra minute** of weekly practice, the model predicts **0.045 more months** of reading-age gain. That is a clumsy sentence, so scale it: each extra **10 minutes a week** predicts about **0.45 months** more gain. Note *predicted* — the slope describes the line through 40 classes, not a guarantee for the next class.
+
 ### Interpreting the y-intercept, and when it means nothing (5.5.B.3)
 
 The **y-intercept** is the **predicted value of the response variable when the explanatory variable is 0**, interpreted in context. Sometimes it has **no reasonable interpretation**, because *x* = 0 is **beyond the interval of *x*-values** used to fit the line, so interpreting it would be extrapolation. At other times it has **no logical interpretation** because it is a **negative value for a response that cannot be negative**, such as a height.
@@ -227,6 +253,8 @@ The **y-intercept** is the **predicted value of the response variable when the e
 What it does not say. The intercept is always part of the equation and always needed for predictions; the question is only whether **it means anything on its own**. Checking takes one sentence each way: is 0 inside the interval of *x*-values, and is the predicted value possible? A correct answer can be "the predicted *y* when *x* = 0 is *a*, but no individual had an *x* near 0, so this is an extrapolation and has no reliable meaning here."
 
 *Illustration:* for ŷ = 1 + 0.5*x* fitted to *x* from 1 to 3, the intercept says the predicted *y* at *x* = 0 is 1, but *x* = 0 is outside 1 to 3, so it is an extrapolation. A line ŷ = −20 + 4*x* for a response that cannot be negative predicts −20 at *x* = 0: impossible, so no logical interpretation.
+
+*Education example:* here the intercept **does** mean something. It predicts a gain of **1.2 months** for a class doing **no** reading practice at all, and since some of the 40 classes genuinely did none, x = 0 is inside the data. Pupils make some progress anyway, which is what 1.2 months says. Contrast the university's model, predicted mark = 28 + 0.52 × attendance %: the intercept of 28 marks at 0% attendance is pure **extrapolation**, because the lowest attendance observed was 35%, and no student in the data ever attended nothing.
 
 ### Six check questions before the data
 

@@ -77,7 +77,7 @@ Until now you have looked at one variable at a time. Today every individual give
 
 That question produces the most common reasoning error in statistics: seeing two things move together and concluding that one causes the other. It also produces a quieter error, trusting a single number, the correlation *r*, without looking at the picture it came from. Parts 4 and 5 are built to break both habits.
 
-**Read this part in full before Part 3.** It states every idea the session uses, each with its code from the course description, the rule, the formula where there is one, and what the rule does **not** say, which is where most marks are lost. The illustrations use bare, made-up numbers on purpose; Parts 3 to 7 apply the same rules to real data. There is nothing to write until the self-check at the end. When a later part says "from Part 2", this is where to look.
+**Read this part in full before Part 3.** It states every idea the session uses, each with its code from the course description, the rule, the formula where there is one, and what the rule does **not** say, which is where most marks are lost. Each subsection carries two examples, and they do different work. The *Illustration* uses bare, made-up numbers, so you can see the structure with nothing to distract you. The *Education example* is a real study of the kind this course is about, so you can see the same rule doing something. Read both; if one of them clicks and the other does not, that is fine. Parts 3 to 7 then apply the same rules to real data. There is nothing to write until the self-check at the end. When a later part says "from Part 2", this is where to look.
 
 ### Bivariate quantitative data (5.1.A.1)
 
@@ -87,6 +87,8 @@ What it does not say. The two values in a pair must belong to the same individua
 
 *Illustration:* the pair (3, 7) says that one individual has the value 3 for the first variable and 7 for the second. Ten such pairs from ten individuals are a bivariate data set with *n* = 10.
 
+*Education example:* a university records, for each of **120 students** on its first-year statistics module, the **percentage of lectures attended** and the **final exam mark**. Two quantitative variables measured on the same individual, so the data are bivariate. Note the unit is one student: a pair of figures for the module as a whole would not be bivariate data, it would be two summaries.
+
 ### Explanatory and response variables (5.1.A.2)
 
 The **explanatory variable** is the one whose values are used to **explain or predict** the values of the other. The **response variable** is the one being explained or predicted. The explanatory variable goes on the **x-axis** and the response on the **y-axis**.
@@ -95,11 +97,15 @@ What it does not say. Calling a variable explanatory describes the question bein
 
 *Illustration:* if *x* is used to predict *y*, then *x* is explanatory and goes across. Ask the reverse question, predicting *x* from *y*, and the roles and the axes swap.
 
+*Education example:* attendance is the **explanatory** variable and exam mark the **response**, because attendance comes first and is the thing being offered as the explanation. Reversing them makes no sense — a student cannot attend lectures in October because of a mark awarded in May. But note the word: *explanatory* describes its role in the analysis, not a proven cause, and these data are observational.
+
 ### The scatterplot: one point per individual (5.1.A)
 
 A **scatterplot** shows the relationship between two quantitative variables with **one point for each individual**: its value of the explanatory variable across, its value of the response variable up. To construct one, label each axis with the variable **and its units**, choose scales that cover all the data, and plot every pair.
 
 What it does not say. A point is an individual, not a value; and the individuals need not be people. An axis that does not start at 0 is not an error, but it should be a choice made on purpose, because a squashed axis makes it harder to judge how close points are to a pattern. A scatterplot shows how two variables go together; on its own it never shows why.
+
+*Education example:* one dot per student, 120 of them, horizontal axis attendance from 0% to 100%, vertical axis exam mark from 0 to 100. A student who attended 80% of lectures and scored 71 is the single point (80, 71). Every student appears exactly once, however typical or odd they are.
 
 ### Describing an association: the four features (5.1.B.1)
 
@@ -114,6 +120,8 @@ A description of the association shown in a scatterplot includes **form, directi
 
 What it does not say. A description that lists the four words without the variables earns little. The course description says it is "typically insufficient to write generally about the direction of a relationship": every feature is stated **in context**, about the two variables and the individuals.
 
+*Education example:* for the attendance plot, all four features in context: *"There is a **positive**, roughly **linear** association of **moderate strength** between lecture attendance and exam mark for these 120 students. One student attended 95% of lectures and scored 31, which sits well below the pattern, and there is a **cluster** of students at 100% attendance."* Drop any one of the four and the mark goes.
+
 ### Direction: positive or negative (5.1.B.3)
 
 A **positive association** means that as values of the explanatory variable increase, values of the response variable **tend to increase**. A **negative association** means they **tend to decrease**. The course description adds "if any": some associations have no single direction.
@@ -121,6 +129,8 @@ A **positive association** means that as values of the explanatory variable incr
 What it does not say. "Tends to" is a statement about the trend, not a promise about every individual: in a positive association some points still sit lower than points to their left. *Positive* does not mean "there is a relationship", and it does not mean "good". Direction belongs to the trend of the whole plot, not to one group of points within it.
 
 *Illustration:* for the pairs (1, 5), (2, 4), (3, 4), (4, 2), *y* stays at 4 from *x* = 2 to *x* = 3, but across the whole range it tends to fall: a negative association.
+
+*Education example:* **positive** — students who attended more lectures tended to score higher. Say *tended*: the direction is a statement about the overall pattern, and plenty of individual students sit against it, including the one at 95% attendance who scored 31.
 
 ### Unusual features: clusters and points off the pattern (5.1.B.5)
 
@@ -130,6 +140,8 @@ What it does not say. Unusual is judged against the **pattern**, not against eit
 
 *Illustration:* the points (1, 2), (2, 4), (3, 6), (4, 8) and (10, 20) all lie on the pattern *y* = 2*x*; (10, 20) is far from the rest and has the largest value of both variables, but it **fits**. Add (3, 15): its *x* and its *y* are both inside the range of the others, yet it is the one point that **does not fit**.
 
+*Education example:* two unusual features in the attendance plot. A **point off the pattern**: the student at 95% attendance scoring 31, who attended almost everything and still failed — worth asking about, perhaps illness at the exam. And a **cluster**: a block of points at exactly 100%, because one degree programme makes attendance compulsory, so those students cannot appear anywhere else on the axis.
+
 ### Form and strength (5.1.B.2, 5.1.B.4)
 
 The **form** of an association can be described as **linear** or **non-linear**. The **strength** is **how closely the points follow the general pattern**, and can be described as **strong, moderate or weak**.
@@ -138,6 +150,8 @@ What it does not say. The evidence for linear form is that the response changes 
 
 *Illustration:* pattern A rises 1 unit of *y* per unit of *x*, with every point within 0.1 of it; pattern B rises 10 units per unit of *x*, with points scattered up to 20 units from it. A is the stronger association, although B is much steeper.
 
+*Education example:* the attendance plot is roughly **linear** in form — no bend — and **moderately strong**: the upward drift is unmistakable, but at any given attendance the marks still scatter over 30 points or more, so knowing a student's attendance would not let you predict their mark closely. Strength is about how tightly the points hug the pattern, not how steep the pattern is.
+
 ### Scatterplots as evidence for a claim (5.1.C.1)
 
 A scatterplot of two quantitative variables may reveal information that can be used to **justify claims** about the variables in context. The template is the one from Sessions 1 to 3: **state the claim · quote what the plot shows, with numbers · say what that does and does not establish · keep it in context.**
@@ -145,6 +159,8 @@ A scatterplot of two quantitative variables may reveal information that can be u
 What it does not say. The evidence covers the individuals plotted. Extending it to a wider group needs those individuals to have been chosen at random, and enough of them. A scatterplot can support a claim that two variables are associated; it cannot support a claim that one causes the other.
 
 *Illustration:* to check "every individual with *x* above 5 has *y* above 10", count the points to the right of *x* = 5, then count how many of those sit above *y* = 10. The claim holds for these individuals only if the two counts are equal.
+
+*Education example:* the plot supports *"lecture attendance and exam mark are positively associated among these 120 students."* It does **not** support *"attending more lectures will raise your mark"*, and it does not support a claim about next year's cohort either. What a scatterplot evidences is a pattern in the individuals plotted.
 
 ### Correlation coefficient r: what it summarises (5.2.A.1)
 
@@ -159,6 +175,8 @@ Here *n* is the number of individuals (pairs); *xᵢ* and *yᵢ* are the *i*-th 
 What it does not say. *r* is not a percentage or a proportion of anything; *r*² is a different number with its own meaning, and it belongs to Session 5. *r* is not a slope. And it measures **linear** association only; the last three subsections of this section are about what that leaves out.
 
 *Illustration:* for the three pairs (1, 1), (2, 3), (3, 2), *x̄* = 2, *sₓ* = 1, *ȳ* = 2 and *s_y* = 1, so the z-scores are *zₓ* = −1, 0, 1 and *z_y* = −1, 1, 0. The products are 1, 0, 0, total 1, and *r* = 1 ÷ (3 − 1) = **0.5**.
+
+*Education example:* for the 120 students, **r = 0.62**. One number carrying direction (positive) and the strength of the **linear** part of the association — and nothing else. It does not say the association is linear, it does not say how steep the pattern is, and it does not identify the student at 95% attendance who scored 31.
 
 ### Properties of r, and the course's strength guide (5.2.A.1–2)
 
@@ -179,6 +197,8 @@ Why *r* is unit-free: converting units adds a constant or multiplies by a positi
 The course description gives no cut-offs; it says only that strength "can be described as strong, moderate, or weak" and depends on how close *r* is to −1 or 1. This course uses: **|r| of about 0.8 or more, strong; about 0.5 to 0.8, moderate; below about 0.5, weak**. The course description's own sample question describes r = −0.591 as "moderate and negative", which fits. But strength belongs to the scatterplot first: always look at the plot, and never let the guide overrule what the points show.
 :::
 
+*Education example:* r = 0.62 has no units — not marks, not percentage points — so it is unchanged if attendance is recorded as a proportion rather than a percentage. It is also unchanged if someone plots mark on the horizontal axis instead: r does not know which variable was called explanatory. On the course's guide, 0.62 is a **moderate** positive linear association.
+
 ### A high r does not prove linear form (5.2.A.3)
 
 A correlation coefficient close to −1 or 1 does **not necessarily mean that a linear model is appropriate**.
@@ -186,6 +206,8 @@ A correlation coefficient close to −1 or 1 does **not necessarily mean that a 
 What it does not say. It does not say a high *r* is wrong or useless: it still reports a strong tendency in one direction. It says *r* cannot tell you the form; only the scatterplot can. A curve that bends steadily in one direction can have *r* very close to 1.
 
 *Illustration:* the pairs (1, 1), (2, 4), (3, 9), (4, 16), (5, 25) lie exactly on the curve *y* = *x*². Their correlation is *r* = **0.98**, yet *y* rises by 3, then 5, then 7, then 9: not a steady rate, so not linear.
+
+*Education example:* the same university plots **weekly study hours** against exam mark. Marks climb with study hours up to about 25 hours a week and then **fall back** — the students reporting 45 hours are often the ones who left everything to the last fortnight. The correlation still comes out around 0.55, a respectable-looking figure for a relationship that plainly bends. A high r is consistent with a curve; only looking at the plot, or at a residual plot in Session 5, shows the bend.
 
 ### r = 0 means no linear association, not no association (5.2.A.2)
 
@@ -195,6 +217,8 @@ What it does not say. It does not say the variables are unrelated. A strong curv
 
 *Illustration:* the pairs (−2, 4), (−1, 1), (0, 0), (1, 1), (2, 4) lie exactly on *y* = *x*², so *y* is completely determined by *x*. The means are 0 and 2; the products of the deviations from the means are −4, 1, 0, −1, 4, total 0, so *r* = **0** exactly.
 
+*Education example:* exam **anxiety** against exam performance. Performance rises as anxiety goes from very low to moderate — a little pressure helps — and then falls away at high anxiety. The relationship is strong, and anyone looking at the scatterplot sees it immediately, yet **r comes out near 0**, because the rise and the fall cancel. An r of 0 rules out a *linear* association, and nothing more.
+
 ### Correlation does not imply causation (5.2.A.4)
 
 A perceived or real relationship between two variables does **not** mean that changes in one variable **cause** changes in the other. That is, **correlation does not necessarily imply causation.**
@@ -202,6 +226,8 @@ A perceived or real relationship between two variables does **not** mean that ch
 What it does not say. It does not say the association is false or unimportant; the association can be perfectly real. It says the data cannot tell you *why* the variables move together. One common reason is a **confounding variable** (topic 1.10, taught properly in Session 6): a variable that provides an alternative explanation for the observed relationship between the explanatory and response variables, and which must be **associated with both** of them (1.10.D.5). Records of what happened, an observational study in Session 1's terms, can show an association but not what a change would do; finding that out needs the change to be made deliberately and compared, which is Session 7's experiments.
 
 *Illustration:* suppose a third quantity *w* is large for some individuals and small for others, and both *x* and *y* tend to rise with *w*. Then *x* and *y* rise together, with a high *r*, even if changing *x* would do nothing at all to *y*.
+
+*Education example:* across a region's schools, the number of computers per pupil correlates positively with attainment. It does not follow that buying computers raises attainment: **school funding** is associated with having more computers **and** with attainment, through smaller classes, better-paid staff and more books. That is Session 6's **confounding variable** (1.10.D.5) arriving early — and the reason r, however high, cannot carry a causal claim.
 
 ### Self-check on the theory
 
