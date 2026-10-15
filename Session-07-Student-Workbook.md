@@ -79,7 +79,7 @@ Four questions. Answer all four on paper before revealing.
 
 Every idea the session uses is stated here, each with its code from the course description, the rule, and what the rule does **not** say, which is where most marks are lost. Eighteen subsections: the longest theory part yet, because nearly every term in these two topics is examined by name, and several mean something more precise in the course description than in the prep books.
 
-**Read this part in full before Part 3.** The illustrations are bare on purpose; Parts 3 to 7 apply the same rules to Lincoln High, the Password cards, St Mary's and Riverside. There is nothing to write until the self-check at the end. When a later part says "from Part 2", this is where to look.
+**Read this part in full before Part 3.** Each subsection carries two examples, and they do different work. The *Illustration* is deliberately bare, so you can see the structure with nothing to distract you. The *Education example* is a real study of the kind this course is about, so you can see the same rule doing something. Read both; if one of them clicks and the other does not, that is fine. Parts 3 to 7 then apply the same rules to Lincoln High, the Password cards, St Mary's and Riverside. There is nothing to write until the self-check at the end. When a later part says "from Part 2", this is where to look.
 
 **What this part builds on, by name.** From Session 6: *Random selection and how far a generalization reaches (1.10.E.1–4)*; the four random sampling methods (1.11.A.3–6); *Experiment: the researcher imposes treatments (1.10.C.1)*; *Experimental units, factors, levels, treatments and the response (1.10.C.2–4)*; and *Confounding variable in an observational study (1.10.D.5)*. From Session 1: a **parameter** summarises a population and a **statistic** summarises a sample.
 
@@ -95,6 +95,8 @@ What it does not say. Bias is not the difference between one sample's statistic 
 
 *Bias is where a method's estimates centre; variability is how far they spread. The bottom-right method is the dangerous one: consistent, confident and wrong. More data from it would only tighten the cluster around 66.*
 
+*Education example:* the university emails all 9,000 undergraduates asking how many lectures they attended last week. Students who attend regularly are the likeliest to answer, so every time the survey is run the estimate sits **above** the true attendance rate. Emailing 4,000 instead of 400 would not fix it: the estimates would simply cluster more tightly around the wrong number. The complete answer names the mechanism and the direction — *too high, because regular attenders are over-represented among those who reply, and regular attenders attend more.*
+
 ### Convenience and voluntary response: samples not chosen by chance (1.12.A.2, 1.12.A.6)
 
 **Nonrandom sampling methods**, for example samples chosen by **convenience** or by **voluntary response**, **introduce potential bias because they do not use random chance to select the individuals** (1.12.A.6). A convenience sample takes the individuals who are easiest to reach. **Voluntary response bias** is a bias that may occur when a sample consists **entirely of volunteers** (1.12.A.2).
@@ -102,6 +104,8 @@ What it does not say. Bias is not the difference between one sample's statistic 
 What it does not say. It does not say every nonrandom sample gives a wrong answer; it says the answer cannot be trusted, because nothing but luck would make it right. It is Session 6's rule (1.10.E.3) with a name: a sample whose units are deliberately chosen or volunteer themselves is not random, and its results reach only individuals similar to those in it. The direction comes from **who** volunteers or who is convenient: volunteers are usually the people who care most about the question, often those with strong or negative views. A large number of volunteers is still a sample of volunteers.
 
 *Illustration:* a population of 1,000, of whom 200 hold a strong view. A notice invites replies; 150 of the 200 reply and 50 of the other 800. The replies are 150 ÷ 200 = 75% strong view, against 20% in the population: too high, because holding the view is what makes people reply.
+
+*Education example:* two ways to get the attendance figure wrong. **Convenience:** a researcher stands outside the main lecture theatre at 9 a.m. and asks whoever walks past — the people easiest to reach are, by construction, people who came to a lecture. **Voluntary response:** a link in the student newsletter, answered by whoever cares enough to click. Both push the estimate up, and 3,000 replies to the newsletter is still 3,000 volunteers.
 
 ### Undercoverage bias: part of the population left out (1.12.A.3)
 
@@ -111,6 +115,8 @@ What it does not say. It is about who **could be selected**, before anyone is as
 
 *Illustration:* a population of 1,000, of whom 300 have property *P*. A method that can reach only the 700 who use one entrance, where 70 of the 700 have *P*, estimates the proportion near 70 ÷ 700 = 0.10, against the parameter 0.30. Too low, because most of the individuals with *P* use the other entrance.
 
+*Education example:* the survey is sent to university email addresses. Students on industrial placement, who stopped checking that inbox months ago, **cannot be selected at all** — the link never reaches them. They are also the students attending fewest lectures, so the estimate comes out too high. Note that this happens even if the 600 recipients were drawn by random number: randomness cannot reach someone the list does not cover.
+
 ### Nonresponse bias: chosen but not answering (1.12.A.4)
 
 **Nonresponse bias** may occur because of a **failure to obtain responses from some individuals chosen to be sampled**. The respondents and nonrespondents could **differ significantly in ways that are important for the study**.
@@ -119,6 +125,8 @@ What it does not say. The individuals were **chosen**, often at random, and then
 
 *Illustration:* 100 chosen at random; 40 have property *P*. Of the 40, 16 respond; of the 60 without *P*, 54 respond. The respondents give 16 ÷ 70 = 0.23, against 0.40 among all 100: too low, because those with *P* responded less. Had both groups responded at 90%, there would be nonresponse and no bias.
 
+*Education example:* 600 students are drawn by random number and 210 reply. Students who have stopped attending are the least likely to reply, so the estimate is again too high — and the random draw no longer protects it, because the data are the 210 who chose themselves out of the 600. Had the non-repliers attended at the same rate as the repliers, there would be heavy nonresponse and no bias at all.
+
 ### Response bias: answers pushed one way, including question wording (1.12.A.5)
 
 **Response bias** may occur when **responses to a survey or measurements of observational units tend to differ from the "true" value in one direction**. Examples include questions that are **confusing or leading** (**question wording bias**) and **self-reported responses**.
@@ -126,6 +134,8 @@ What it does not say. The individuals were **chosen**, often at random, and then
 What it does not say. It is about the **answers**, not who gives them: the right individuals can be chosen at random, every one can respond, and the data can still be biased. It covers measurements as well as questions: a scale that always reads 0.5 kg heavy gives response bias. "In one direction" is the point, again: honest people making random slips in both directions are variation, not bias. Self-reports lean the way people prefer to see themselves: more exercise, less screen time.
 
 *Illustration:* "Most experts agree that X is good. Do you support X?" invites *yes*: the wording leans toward support, so the proportion supporting X comes out too high. "Do you support X?" leans neither way.
+
+*Education example:* three ways the answers lean. **Wording:** "Attendance is strongly linked to degree classification. How many lectures did you attend last week?" invites over-reporting. **Self-report:** students over-state attendance much as they over-state exercise, because it is how they prefer to see themselves. **Measurement:** a card reader on the lecture-theatre door that fails to register one card in twenty under-counts attendance every single week. The first two push up, the third pushes down, and none of them is about who was chosen.
 
 ### Telling the biases apart, and saying which way they push (1.12.A.2–6)
 
@@ -142,6 +152,8 @@ What it does not say. One study can have several: a notice on a single door is c
 
 *Illustration:* "Selected by random number; 30% did not reply" is nonresponse, not voluntary response: they were chosen first. "Anyone could reply" is voluntary response: nobody was chosen.
 
+*Education example:* a notice pinned to one lecture theatre's door asking students to scan a code and report their attendance is all three at once — **convenience** (that door is where the researcher happened to be), **voluntary response** (nobody was selected), and **undercoverage** (students who never come to that building cannot see the notice). Listing all three earns nothing on its own. *"Too high, because students who attend that building are over-represented, and they attend more lectures than those who do not"* earns the marks.
+
 ### The four elements of a well-designed experiment (1.13.A.1)
 
 A well-designed experiment should include:
@@ -154,6 +166,8 @@ A well-designed experiment should include:
 What it does not say. It does not say an experiment without all four is not an experiment: Session 6's café that printed a larger menu for one week imposed a treatment and was an experiment, a poorly designed one, because it had no comparison. The four are **elements of good design**, each doing a different job, and the subsections below give each job. And *control* here is **direct control**, keeping extraneous variables the same; it is not the same thing as a control group, which belongs to the first element.
 
 *Illustration:* 40 units, two treatments A and B, 20 of each chosen by a random number generator, every unit measured under the same conditions. That has comparison (A against B), random assignment, replication (20 per treatment) and direct control (the same conditions).
+
+*Education example:* the district trials a new phonics programme in 60 Year 1 classes. Thirty classes are assigned the new programme and thirty keep the existing one, chosen by random number; every class teaches it for one term, 30 minutes a day, with all teachers given the same two days of training. That is **comparison** (new against existing), **random assignment** (by generator), **replication** (30 classes per programme) and **direct control** (the same training, the same daily time, the same term).
 
 ### Control groups, placebos and the placebo effect (1.13.A.2–3)
 
@@ -169,6 +183,8 @@ What it does not say. A control group need not receive nothing: it may receive t
 
 *Illustration:* three groups' average responses are 12 (active treatment), 9 (placebo) and 6 (no treatment). The placebo effect is 9 − 6 = 3. The treatment's effect beyond the placebo is 12 − 9 = 3.
 
+*Education example:* the control group here is **not** "nothing": it keeps the **existing** phonics programme, which is the comparison the district actually cares about. A placebo barely makes sense in a classroom — there is no inactive reading lesson — so education trials normally use *business as usual* as the control. And note what follows: measuring a **placebo effect** would need a third group given no reading instruction at all, which no school would allow. The trial can compare new against existing; it cannot report a placebo effect, because it has no no-treatment group to subtract.
+
 ### Single-blind and double-blind experiments (1.13.A.4–5)
 
 In a **single-blind** (also called **single-masked**) experiment, the **participants do not know which treatment they are receiving**, but members of the research team who interact with them do know, **or vice versa** (1.13.A.4).
@@ -178,6 +194,8 @@ In a **double-blind** (also called **double-masked**) experiment, **neither** th
 What it does not say. "Vice versa" matters: when participants must know their treatment (they can see whether they received a text, or which exercise they did), keeping the staff who measure or interact with them unaware is still single-blind. Keeping participants or staff blind is not one of the four elements listed in 1.13.A.1. It serves the same purpose as direct control: it stops one extraneous source of variation, knowing which treatment was given, from differing between the groups and changing how participants respond or how staff measure. And it is about the people who **interact with the participants**; the statistician who prepared the random assignment list will always know.
 
 *Illustration:* a treatment and a placebo, identical in appearance, in bottles labelled 1 and 2 by someone who then takes no part. If neither the participants nor the staff who measure them know what 1 and 2 mean, the experiment is double-blind.
+
+*Education example:* teachers obviously know which phonics programme they are teaching, so they cannot be kept unaware. But the assessors who score the children's reading at the end of term **can** be kept unaware of which class had which programme. Participants know, the people who measure them do not: that is **single-blind**, and it is exactly the "or vice versa" half of the definition. Education trials are the standard case for it, because you can almost never blind a teacher.
 
 ### Extraneous variables, and what random assignment is for (1.13.A.6–7)
 
@@ -189,6 +207,8 @@ What it does not say. Random assignment does not make the groups identical: by c
 
 *Illustration:* 20 units, 10 of them high on an extraneous variable *w*. Split at random into two groups of 10: the number of high-*w* units in the first group is usually 4, 5 or 6 (in about 82% of random splits), and never all 10 unless by an extraordinary chance (1 split in 184,756). Split by letting the units choose, and all 10 high-*w* units may choose the same group.
 
+*Education example:* extraneous variables in the phonics trial include teacher experience, class size, the proportion of pupils learning English as an additional language, and each school's existing attainment. Randomly assigning the 60 classes balances **all of them at once**, including any nobody thought to record. Letting the thirty keenest teachers take the new programme could not: keenness would then travel with the treatment, and so would everything keenness goes with.
+
 ### Confounding in an experiment (1.13.A.8)
 
 A **confounding variable in an experiment** is a variable that is **related to the explanatory variable** in such a way that it is **difficult to determine which variable, explanatory or confounding, is influencing the change in the response variable**. However, **in a well-designed experiment, the potential for confounding variables is reduced**.
@@ -196,6 +216,8 @@ A **confounding variable in an experiment** is a variable that is **related to t
 What it does not say. Recall Session 6's version for an observational study (1.10.D.5): associated with both the explanatory and the response variable. In an experiment the explanatory variable is imposed, so a variable becomes confounding when it **travels with the treatment**: every unit that got treatment A also got something else. That happens when the researcher assigns treatments by some rule other than chance, such as by day, by location or by who seems suitable. "Reduced", not "removed": random assignment makes confounding unlikely, not impossible.
 
 *Illustration:* treatment A is given every morning and treatment B every afternoon. If the response differs, time of day and treatment cannot be separated: time of day is confounded with the treatment.
+
+*Education example:* suppose the district gives the new programme to all 30 classes in the north of the district and keeps the existing one in all 30 in the south. Catchment affluence now **travels with the treatment**: if the northern classes read better at the end, the programme and the catchment cannot be separated. Nothing about the measurement went wrong — the fault is that the treatments were allocated by area rather than by chance.
 
 ### Replication and direct control (1.13.A.9–10)
 
@@ -207,6 +229,8 @@ What it does not say. Replication is not repeating the whole experiment another 
 
 *Illustration:* with one unit per treatment, a difference of 5 could be the treatment or the two units. With 20 per treatment, all measured at the same temperature, a difference of 5 in the group averages is far harder to put down to the units, and cannot be put down to temperature.
 
+*Education example:* **replication** is the 30 classes per programme rather than one class each. With one class per programme the study would still be an experiment, but any difference could just as easily be the two teachers. **Direct control** is every class getting the same 30 minutes a day, the same term length, and the same end-of-term assessment administered the same way — extraneous variables held equal rather than balanced by chance.
+
 ### The completely randomized design (1.13.B.1)
 
 In a **completely randomized design**, **treatments are assigned to experimental units completely at random**. Often the number of experimental units assigned to each treatment will be the same, but the **sample sizes in each treatment do not have to be the same**.
@@ -214,6 +238,8 @@ In a **completely randomized design**, **treatments are assigned to experimental
 What it does not say. "Completely at random" means every unit is assigned by the random mechanism with no grouping first: the simplest design, and the default when there is no strong extraneous variable to block on. Describing it on the exam means saying **how**: number the units, use a random number generator to choose which units receive each treatment, and give the rest the other.
 
 *Illustration:* number 30 units 1 to 30; a random number generator gives 15 different numbers, and those units receive A; the other 15 receive B.
+
+*Education example:* number the 60 classes 1 to 60, let a generator pick 30 for the new programme, and give the remaining 30 the existing one. Nothing is grouped beforehand, which is what makes it *completely* randomized — and it is the right choice when the district has no particular reason to expect one source of variation to dominate.
 
 ### The randomized block design, and why to block (1.13.B.2–3)
 
@@ -224,6 +250,8 @@ The **purpose of blocking** is to **separate the variation in the response cause
 What it does not say. The blocks are **not** formed at random: they are formed deliberately from the blocking variable, and the randomness goes **inside** each block. It is the experimental version of Session 6's stratified sample: groups that are alike inside, and every group used. Blocking does not replace random assignment, and it is not what makes a cause-and-effect conclusion possible; that is random assignment's job (1.13.D.1). Blocking's job is **precision**: the comparison is not blurred by a variable known to matter. A variable is worth blocking on only if it is known before the experiment and is related to the response.
 
 *Illustration:* 20 units, of which 12 are type 1 and 8 are type 2, and type affects the response. Block by type; within the 12, a random number generator gives 6 treatment A and 6 treatment B; within the 8, 4 and 4. Compare A and B within each block.
+
+*Education example:* reading attainment differs far more **between** the district's twelve schools than within them, so school is a natural blocking variable. **Block by school:** within each school, randomly assign half its classes to each programme. Every school then contributes to both treatments, and the between-school differences drop out of the comparison instead of being left to chance. With only 20 classes available, this is what makes the trial worth running.
 
 ### The matched pairs design (1.13.B.4)
 
@@ -236,6 +264,8 @@ What it does not say. The pairs are blocks of size 2, so everything about blocks
 *Where the chance goes in each design. In all three, a random mechanism assigns the treatments; the block and pair designs first group the units deliberately, so that each comparison is made between units that are alike.*
 
 *Illustration:* 10 units in 5 pairs matched on size. For each pair, a coin decides which unit gets A; the other gets B. Or: each of 10 units gets both, with a coin deciding which comes first.
+
+*Education example:* the trial has exactly two treatments, so matched pairs is available. Pair the 60 classes by their prior reading score — the two strongest together, then the next two, and so on — and inside each pair toss a coin for which class gets the new programme. With pupils rather than classes as units, a vocabulary study can go further still: give each child both a phonics-taught word list and a whole-word-taught list, in random order, so every child is their own pair and differences between children vanish entirely.
 
 ### Choosing between designs (1.13.C.1)
 
@@ -251,6 +281,8 @@ What it does not say. No design is best in general. A justification names the fe
 
 *Illustration:* if the response depends strongly on a variable *v* that is known for every unit before the experiment, block on *v* and say so: "because *v* is strongly related to the response, blocking on *v* separates its variation from the comparison of the treatments."
 
+*Education example:* three versions of the same trial. "Does the new programme beat the existing one across the district?" with all 60 classes available — **complete randomization**, the simplest thing that works. The same question with only 20 classes and large school-to-school differences — **randomized blocks** by school, which buys precision complete randomization cannot. Only 12 classes, with good prior attainment data — **matched pairs** on prior score, which makes 12 go furthest. The design follows the goal and the constraints, not a preference.
+
 ### Cause and effect from random assignment, and statistical significance (1.13.D.1)
 
 **Using random assignment** of treatments to experimental units **allows for cause-and-effect conclusions** between the explanatory and the response variables **because the potential for confounding variables is reduced** (1.13.D.1).
@@ -260,6 +292,8 @@ The course description's unit guide completes it: *for data collected using well
 What it does not say. Random assignment is **the** element to cite for cause; the unit guide says a complete answer "cites the random assignment of treatments and does not refer to other irrelevant elements". A blind design, blocking, replication and a control group all improve an experiment, but none of them is the reason a cause can be claimed. A difference that is **not** statistically significant is not evidence that the treatment does nothing; it means the experiment could not tell the treatment's effect from chance. And cause says nothing about **whom** the conclusion reaches; that is the next subsection.
 
 *Illustration:* treatments A and B assigned at random to 200 units; A's average response is higher, and the difference is statistically significant. Conclusion: A causes a higher response than B, for units like these. Had the difference not been statistically significant: the experiment gives no convincing evidence of a difference, which is not the same as showing there is none.
+
+*Education example:* because the 60 classes were assigned by random number, a reading gain for the new programme that is **statistically significant** supports the conclusion that *the programme caused the gain* in those classes. "Statistically significant" means the gap is larger than the random assignment alone could plausibly have produced — not that it is large, and not that it matters educationally, which is a separate judgement the district still has to make.
 
 ### Experiments on volunteers: how far the conclusion reaches (1.13.D.2)
 
@@ -275,6 +309,8 @@ What it does not say. It is Session 6's rule (1.10.E.2–4) applied to experimen
 | No | No | an association, for units similar to those in the study |
 
 *Illustration:* 60 volunteers, treatments assigned by random number, a statistically significant difference: the treatment caused the difference, for people similar to the 60 volunteers.
+
+*Education example:* the district cannot compel schools to take part, so the twelve in the trial volunteered. Random assignment **among those twelve** still supports a cause-and-effect conclusion about them. But the conclusion reaches only schools **similar to the volunteers** — and schools that volunteer for a phonics trial tend to be the better-resourced and more enthusiastic ones, which is a real limit on what the district may claim for the schools that stayed out.
 
 ### Self-check on the theory
 

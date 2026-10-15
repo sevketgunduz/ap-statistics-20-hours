@@ -105,7 +105,7 @@ Four quick questions, answers out loud.
 
 ## 12–54 min · Theory — two categorical variables, and probability by simulation
 
-Every concept the session uses is stated here, before any data. Put each subsection on the shared screen, read the rule with the student, and have them say what it does **not** say; that is where the marks go. The illustrations are deliberately bare: two made-up tables with groups A and B, a die and a coin. Lincoln High, the hospital cards, St Mary's and the library come afterwards and apply these rules; when a question there needs a definition, point back to the subsection here rather than restating it. The section ends with eight check questions.
+Every concept the session uses is stated here, before any data. Put each subsection on the shared screen, read the rule with the student, and have them say what it does **not** say; that is where the marks go. Each subsection carries two examples doing different jobs: the *Illustration* is deliberately bare, so the structure is visible with nothing to distract from it, and the *Education example* is a study of the kind this course is about, so the rule is seen doing something. Read bare first and concrete second. The bare ones here are two made-up tables with groups A and B, a die and a coin. Lincoln High, the hospital cards, St Mary's and the library come afterwards and apply these rules; when a question there needs a definition, point back to the subsection here rather than restating it. The section ends with eight check questions.
 
 **What this section builds on, by name.** From Session 1: *Frequency and relative frequency tables (1.3.A.1–2)*, rf = f ÷ n, and the template for a claim. From Session 2: *Bar charts (1.4.A)*, *Pie charts and the slice angle (1.4.A)* and *Comparing data sets with different totals (1.4.C)*. From Session 4: an **association** between two variables. From Session 6: an observational study shows association, not cause, and a **random number generator** chooses at random (1.11.A.3). They are recalled where they are needed and not re-taught.
 
@@ -133,6 +133,16 @@ What it does not say. Which variable goes across and which goes down is a choice
 | Group B | 6 | 24 | 30 |
 | **Total** | **18** | **32** | **50** |
 
+*Education example:* the district cross-tabulates its **400 Year 11 pupils** by whether they attended the optional revision programme and whether they passed:
+
+| | Passed | Did not pass | Total |
+|---|---|---|---|
+| Attended revision | 180 | 60 | **240** |
+| Did not attend | 80 | 80 | **160** |
+| **Total** | **260** | **140** | **400** |
+
+The cells can hold counts, as here, or relative frequencies. The margins give each variable's own distribution: 240 against 160 for attendance, 260 against 140 for the result.
+
 ### Joint relative frequency: one cell over the table total (2.2.A.1)
 
 A **joint relative frequency** in a two-way table is a **cell frequency divided by the total for the entire table**.
@@ -147,6 +157,8 @@ What it does not say. A joint relative frequency describes a **pair of levels am
 
 *Illustration:* in the table above, the joint relative frequency of *Group A and yes* is 12 ÷ 50 = **0.240**. The four joint relative frequencies are 0.240, 0.160, 0.120 and 0.480, and they add to 1.
 
+*Education example:* 180 pupils both attended and passed, so that cell's **joint** relative frequency is 180 ÷ 400 = **0.450**. Read it as: 45.0% of **all Year 11 pupils in the district** are in that one cell. The denominator is the whole table, which is what makes it joint.
+
 ### Marginal relative frequency: a row or column total over the table total (2.2.A.2)
 
 A **marginal relative frequency** in a two-way table is a **row total divided by the total for the entire table**, or a **column total divided by the total for the entire table**.
@@ -158,6 +170,8 @@ marginal relative frequency = row total ÷ table total, or column total ÷ table
 What it does not say. A marginal relative frequency is Session 1's relative frequency for **one variable on its own**, ignoring the other. It takes its name from the margins, where the totals sit. The row marginals add to 1, and so do the column marginals. Marginal relative frequencies say **nothing** about the relationship between the variables: two tables with the same margins can have completely different cells.
 
 *Illustration:* Group A's marginal relative frequency is 20 ÷ 50 = **0.400**; *yes* has 18 ÷ 50 = **0.360**.
+
+*Education example:* 240 of the 400 attended, so the **marginal** relative frequency for attending is 240 ÷ 400 = **0.600**. That is the distribution of attendance on its own, with the results ignored entirely — the row total over the grand total.
 
 ### Conditional relative frequency: restricting to one level (2.2.A.3)
 
@@ -173,6 +187,8 @@ What it does not say. The condition is announced by the words **of**, **among**,
 
 *Illustration:* of Group A, 12 ÷ 20 = **0.600** said yes; of Group B, 6 ÷ 30 = **0.200** said yes.
 
+*Education example:* restrict to the 240 who attended: 180 ÷ 240 = **0.750** passed. Restrict to the 160 who did not: 80 ÷ 160 = **0.500** passed. These two **conditional** relative frequencies are the only numbers that speak to the district's actual question, because each one asks "within this group, what happened?" — and they use the group as the denominator, not the whole table.
+
 ### Rows or columns: conditioning the other way asks a different question (2.2.A.3)
 
 A cell can be divided by its **row total** or by its **column total**. The two answers are different numbers, answering different questions, and the question decides which.
@@ -185,6 +201,8 @@ A cell can be divided by its **row total** or by its **column total**. The two a
 What it does not say. Nothing in the cell itself says which total to use; only the wording does. So the first step is always to find the condition, the words after *of*, *among* or *given*, and put **that** level's total underneath. The course description's own sample question is phrased *"of all pints of blood classified as positive, approximately what proportion is blood type A?"*: the condition is *positive*, so the positive total goes underneath, whatever order the table's rows and columns are in. Swapping the condition is the most common error with two-way tables, and it will cost marks again in Session 10, where these two numbers become two different **conditional probabilities**.
 
 *Illustration:* of the 32 who said no, 8 ÷ 32 = 0.250 are in Group A; of the 20 in Group A, 8 ÷ 20 = 0.400 said no. Same cell, two questions, two answers.
+
+*Education example:* the same 180 pupils, divided two ways. *"What proportion of attenders passed?"* is 180 ÷ 240 = **0.750**. *"What proportion of those who passed had attended?"* is 180 ÷ 260 = **0.692**. Both are correct arithmetic about the same cell, and only the first bears on whether the programme is worth running — the second would be the right question only if the district were asking who its successful pupils turn out to be.
 
 ### Side-by-side bar charts (2.1.A.2)
 
@@ -200,6 +218,8 @@ What it does not say. Read it in two directions: **within a cluster**, the bars 
 
 *Each cluster is one group. The X bars, blue, fall from 50% in Group A to 20% in Group B; the Z bars rise from 20% to 50%. The Y bars are level at 30%.*
 
+*Education example:* two groups along the axis, attended and did not attend, with two bars above each — passed and did not pass — at heights 0.750 and 0.250, then 0.500 and 0.500. A governor can read the two pass rates straight off the scale and compare them directly, which is what this graph is best at.
+
 ### Segmented bar charts (2.1.A.2)
 
 A **segmented bar chart** draws **one bar for each level** of one variable. When it shows relative frequencies, every bar is **100% tall**, and it is divided into **segments**, one for each level of the other variable, whose heights are the **conditional relative frequencies** within that group.
@@ -211,6 +231,8 @@ What it does not say. A segment's value is its **height**, the top edge minus th
 ![Segmented bar chart of the made-up table: Group A split X 50%, Y 30%, Z 20%; Group B split X 20%, Y 30%, Z 50%](figures/s08-theory-segmented.svg)
 
 *Both bars are 100% tall, although Group A has 60 individuals and Group B only 40. The Y segments are the same height, 30%, but sit at different levels, which is why they look different.*
+
+*Education example:* one full-height bar for attenders and one for non-attenders, each divided into a passed segment and a did-not-pass segment: 75.0% against 25.0%, and 50.0% against 50.0%. The association is the **difference in segment height between the two bars** — here a 25 percentage point step, visible at a glance without reading any number.
 
 ### Mosaic plots, where widths carry the marginal relative frequencies (2.1.A.2)
 
@@ -232,6 +254,8 @@ What it does not say. A tall segment is a large share **of its group**, not nece
 
 *The same heights as the segmented bar chart, but Group A's bar is half as wide again as Group B's. The largest tile, A and X, is 30% of the area, the largest cell.*
 
+*Education example:* the same two bars, but the attenders' bar is drawn **1.5 times as wide** as the non-attenders', because 240 against 160 is a ratio of 1.5. The picture now carries two facts at once: most Year 11 pupils attended, **and** those who did passed more often. A segmented chart shows only the second.
+
 ### Choosing among the three graphs (2.1.A.2)
 
 All three graphs show the relative frequency of one variable's levels within each level of the other. They differ in what they make easy to see.
@@ -245,6 +269,8 @@ All three graphs show the relative frequency of one variable's levels within eac
 What it does not say. No graph is best in general; the exam asks which graph shows a particular feature, or what a given graph shows and does not show, and the answer names the feature (Skill 4.A). A two-way table of counts holds everything any of the graphs shows, and more exactly; the graphs make the comparison visible.
 
 *Illustration:* the question "which group is larger?" can be answered from the table or the mosaic plot, but not from a segmented or side-by-side bar chart of relative frequencies.
+
+*Education example:* for the district's governors, who want the pass-rate gap in one look, the **segmented** chart is clearest. For a published report that must also show how many pupils were involved, the **mosaic** carries both. If someone will read exact pass rates off an axis and quote them, use the **side-by-side**. The question decides, not the fashion.
 
 ### Association between two categorical variables (2.1.A.3, 2.2.B.1)
 
@@ -262,6 +288,8 @@ What it does not say. It is decided by **conditional relative frequencies**, nev
 
 *Left: the counts differ (30 against 20 in category X) because the groups differ in size, but every share is the same. Right: X falls from 50% to 20% and Z rises from 20% to 50%.*
 
+*Education example:* 75.0% of attenders passed against 50.0% of non-attenders. The conditional distributions of the result differ between the two attendance groups, so there **is** an association between attending and passing. Note at once what that is not: pupils chose whether to attend, so this is exactly Session 6's confounding problem (1.10.D.5) — motivation is associated with attending **and** with passing, and would produce this table on its own.
+
 ### Justifying a claim from a two-way table or its graphs (2.1.B.1, 2.2.C.1)
 
 **Tabular and graphical representations** for the distributions of two categorical variables **may reveal information that can be used to justify claims about the variable in context** (2.1.B.1). **Summary statistics** for two categorical variables **may reveal information that can be used to justify claims about the variables in context** (2.2.C.1).
@@ -271,6 +299,8 @@ A justified claim uses Session 1's template: **state the claim · quote the numb
 What it does not say. One number cannot justify a comparison: "60.0% of Group A said yes" says nothing about Group B. A joint relative frequency does not justify a claim about a group, because it is a share of everyone. Counts do not justify a comparison between groups of different sizes. And the claim must not go beyond the data: a census describes its population, a random sample generalises to its population (Session 6), and neither gives cause without random assignment.
 
 *Illustration:* "Group A individuals were more likely to say yes than Group B individuals: 60.0% of Group A (12 of 20) against 20.0% of Group B (6 of 30)."
+
+*Education example:* a governor says *"the revision programme works, so we should make it compulsory."* The table supports: *"pupils who attended passed at 75.0% against 50.0% for those who did not, a gap of 25 percentage points."* It does not support *"works"*, because nobody assigned attendance — and it gives no reason to expect the same gap from pupils made to attend, who are the very pupils who chose not to.
 
 ### Random process, outcome and event (2.3.A.1–3)
 
@@ -282,6 +312,8 @@ What it does not say. "Random" does not mean haphazard or patternless: each resu
 
 *Illustration:* roll a die once. The random process is the roll; one outcome is 4; the event *even* is the collection {2, 4, 6}, and it happens when any of those three outcomes does.
 
+*Education example:* the district has 30 places on a summer school and 50 applicants, so it allocates them by lottery. The **random process** is the draw. An **outcome** is one particular set of 30 names. An **event** is a collection of outcomes, such as *"at least 20 of the 30 places go to the two smallest schools"* — one description covering a great many different sets of 30.
+
 ### Simulation: outcomes assigned to values chosen by chance (2.3.A.4)
 
 **Simulation** is **a way to model random events such that simulated outcomes closely match real-world outcomes**. **All possible outcomes are associated with a value to be determined by chance.** **Record the counts of simulated outcomes and the count total.**
@@ -291,6 +323,8 @@ In practice the values are usually **digits from a random number generator**, ea
 What it does not say. A simulation is only as good as its **model**. If the probabilities put in are wrong, or the simulated results influence each other when the real ones do not (or the other way round), the simulated outcomes will not match the real ones, however many trials are run. The digits must match the probability exactly: a probability of 0.1 is one digit of the ten; a probability of 0.155 needs three-digit numbers, 000 to 154 out of 000 to 999. And one trial may use several digits: a trial is one run of the **whole** process being modelled.
 
 *Illustration:* an outcome with probability 0.3 is modelled by the digits 0, 1 and 2, three of the ten; the digits 3 to 9 mean it does not happen.
+
+*Education example:* the two smallest schools have 14 applicants between them, and their head teachers want to know how often a fair lottery would give them fewer than 5 of the 30 places. Number the applicants 01 to 50, mark which numbers belong to those two schools, draw 30 different two-digit numbers at random, and count how many of the 30 are marked. One pass through that is one trial.
 
 ### Five steps for carrying out a simulation (2.3.A.4)
 
@@ -310,6 +344,8 @@ What it does not say. The denominator is the number of **trials**, not the numbe
 
 *Illustration:* the event *at least one 0 in two digits*, where each digit stands for one try with probability 0.1 of the outcome. Five trials: 37, 05, 90, 41, 22. The event happened in 2 of the 5 trials (05 and 90), so the estimate is 2 ÷ 5 = 0.4, from ten digits and five trials.
 
+*Education example:* for the summer-school lottery. **Model:** 50 applicants, 30 chosen at random, nobody chosen twice. **Assign:** 01–50 to the applicants, with 14 of those numbers marked as the two small schools; ignore 51–00 and any repeat. **Trial:** draw 30 distinct numbers, count the marked ones, record whether it is fewer than 5. **Repeat:** many times. **Conclude:** the proportion of trials with fewer than 5 estimates the probability.
+
 ### Probability as long-run relative frequency, estimated from data (2.3.A.5–6)
 
 The **probability** of an outcome or event is its **long-run relative frequency**, that is, its **relative frequency over a large number of trials** (2.3.A.5). The **relative frequency** of an outcome or event **determined from empirical data** can be used to **estimate the actual, or true, probability** of that outcome or event (2.3.A.6).
@@ -324,6 +360,8 @@ What it does not say. A relative frequency from a limited number of trials, or f
 
 *Illustration:* a process repeated 1,000 times, with the event happening 312 times, gives an estimated probability of 312 ÷ 1,000 = 0.312.
 
+*Education example:* running that lottery simulation 10,000 times gives 412 trials in which the two small schools received fewer than 5 places, so the probability is estimated as 412 ÷ 10,000 = **0.0412**. It is an estimate, not the probability itself: another 10,000 trials would return a slightly different figure, and neither run is wrong.
+
 ### The law of large numbers (2.3.A.7)
 
 The **law of large numbers** states that **for independent trials, as the number of trials increases, the long-run relative frequency of the outcome or event gets closer and closer to a single value**.
@@ -333,6 +371,8 @@ The **law of large numbers** states that **for independent trials, as the number
 What it does not say. It says nothing about the **short run**: after a few trials the relative frequency can be far from the value it will settle on, and two short runs of the same process usually disagree. It does not say the results **even out** by compensating: after a run of tails, the next toss of a fair coin is still heads with probability 0.5, because independent trials have no memory. The count of heads can drift further from half the tosses even while the relative frequency closes in on 0.5. The single value is the **probability** (2.3.A.5), which is why more trials give a better estimate.
 
 *Illustration:* suppose a fair coin gives 7 heads in its first 10 tosses (0.7, two more than half) and 5,040 heads in 10,000 (0.504, forty more than half). The gap in the **count** grew from 2 to 40; the gap in the **relative frequency** shrank from 0.2 to 0.004.
+
+*Education example:* with 20 simulated lotteries the estimate might come out as 0.00 or 0.15; with 10,000 it settles close to 0.04 and stays there. The estimate does not become **exact**, it becomes **stable**. And the law says nothing whatever about one particular draw: a year in which the two small schools get only 3 places is not evidence the lottery was rigged, because 0.0412 of fair lotteries do exactly that.
 
 ### Eight check questions before the scenarios
 
