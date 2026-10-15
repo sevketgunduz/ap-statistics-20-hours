@@ -26,7 +26,7 @@ Launch the `session-builder` agent in the background, with a self-contained prom
 
 - the session number, CED topics, block label and manifest entries (`sNNt` and `sNNs`, `kind: md`, placed in the right block group, creating the group if it is new)
 - the four rules most often broken, stated explicitly:
-  1. **theory before examples** (§3.1)
+  1. **theory before examples** (§3.1), each theory entry carrying both an `*Illustration:*` (bare) and an `*Education example:*` (a real study, one coherent strand per session, never the session's own scenarios)
   2. **nothing deferred for time** (§0.6)
   3. **distinguishable headings** (§4)
   4. **write first, then reveal**
@@ -53,7 +53,7 @@ Tell the user the agent is running. Do not duplicate its work while it runs.
 
 When the agent reports, work through the guide's *Reviewing a built session* checklist yourself, by script where you can:
 
-- the theory section precedes the first scenario in both documents
+- the theory section precedes the first scenario in both documents, and every CED-coded entry in it has one bare illustration (or a figure in its place) **and** one education example
 - the objectives match the CED verbatim
 - no deferral phrases appear ("over-full", "short of time", "cut", "in this hour")
 - homework marks sum to the stated total

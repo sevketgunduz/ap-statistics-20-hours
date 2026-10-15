@@ -84,7 +84,14 @@ Theory comes first; examples and activities apply it. The section is one H2, *Th
 2. **The definition or rule**, faithful to the CED's essential knowledge. Paraphrase is fine; changing the meaning is not.
 3. **The formula**, in a `:::formula` block, where one exists, with every symbol defined.
 4. **Why it matters and what it does not say**: its properties, its limits, and the misreading students make, in a sentence or two each.
-5. **At most one abstract illustration** — a tiny made-up case such as "for 2, 4, 9 …" that shows the rule working. No context, no scenario data, no activity: those belong to the scenarios.
+5. **One abstract illustration**, labelled `*Illustration:*` — a tiny made-up case such as "for 2, 4, 9 …" or "30 units, 15 given condition A" that shows the rule working with nothing to distract from the structure. No scenario data and no activity: those belong to the scenarios.
+6. **One domain example**, labelled `*Education example:*` — the same rule at work in a real study of the kind this course is about, concrete enough that a student can picture it. Pick contexts from education, health, transport or consumer research; prefer education, since that is the world the student already knows.
+
+**Why both.** They do different jobs. The abstract illustration shows the *structure* — it is what a student needs in order to transfer the rule to a context they have never seen. The domain example shows the rule *doing something*, and is what a student who cannot yet abstract has to hold on to. Read bare first and concrete second: the student who cannot abstract gets it from the second, and the student who can uses the second to check themselves.
+
+**Rules for the domain example.** It must not reuse the session's own scenario contexts — those are the scenarios' job, and a student who has already met the context in theory gets nothing new from the scenario. Within a session the domain examples should form **one coherent strand** (one district, one university module, one intervention, revisited), so the student sees a few studies through many lenses rather than many unrelated vignettes. Where a concept has a trap that only becomes visible in a real setting, the domain example is the place to show it: the experimental unit that is a tutorial group rather than a student, the cluster that fails because classes are streamed.
+
+Entries whose structural content is carried by a figure may use the figure in place of the abstract illustration, but still take a domain example.
 
 Nothing in the scenarios, activity, solo case or homework may rely on a concept the theory section has not stated. The one exception is a named retrieval check from an earlier session's theory. Off-syllabus content stays out of the theory section; it goes in a red extension block where it is relevant.
 

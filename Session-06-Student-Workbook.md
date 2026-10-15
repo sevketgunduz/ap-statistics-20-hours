@@ -73,7 +73,7 @@ Four questions. Answer all four on paper before revealing.
 
 Every idea the session uses is stated here, each with its code from the course description, the rule, and what the rule does **not** say, which is where most marks are lost. This is the longest theory part yet: sixteen subsections, and nearly every term in them is examined by name.
 
-**Read this part in full before Part 3.** The illustrations are bare on purpose; Parts 3 to 7 apply the same rules to Lincoln High, the activity cards, St Mary's and the café. There is nothing to write until the self-check at the end. When a later part says "from Part 2", this is where to look.
+**Read this part in full before Part 3.** Each subsection carries two examples, and they do different work. The *Illustration* is deliberately bare — units, conditions, a grid of 40 — so you can see the structure with nothing to distract you. The *Education example* is a real study of the kind this course is about, so you can see the same rule doing something. Read both; if one of them clicks and the other does not, that is fine. Parts 3 to 7 then apply the same rules to Lincoln High, the activity cards, St Mary's and the café. There is nothing to write until the self-check at the end. When a later part says "from Part 2", this is where to look.
 
 ### Investigative question, first component: the variables (1.10.A.1)
 
@@ -82,6 +82,8 @@ Session 1 established that an investigative question has a defined purpose, is n
 What it does not say. "Time" or "areas" is not a variable of interest; the course description's scoring notes reject both. The first component names each variable completely enough that someone could go and collect it: *daily commute time to work, in minutes*, and *which of the two areas the person lives in*. It says what is measured, not yet what will be done with it.
 
 *Illustration:* in "What proportion of this bakery's loaves weigh less than 400 g?", from Session 1's theory, the variable of interest is **the weight of a loaf**, or equivalently whether each loaf is under 400 g.
+
+*Education example:* a district wants to know whether its after-school reading club is helping. The variables of interest are **each pupil's reading-age score in months** and **whether that pupil attended the club**. "Reading" is not a variable of interest, and neither is "progress": both would leave a data collector with nothing to measure.
 
 ### Investigative question, second component: the parameter and the analysis (1.10.A.2)
 
@@ -94,6 +96,8 @@ What it does not say. Neither procedure is carried out today; the skill is readi
 
 *Illustration:* "Is the proportion of all the bakery's loaves that weigh less than 400 g **greater than** 0.05?" is a test: parameter, the proportion of all the bakery's loaves under 400 g; direction, greater than. "**Between what values** does the proportion of all the bakery's loaves under 400 g lie?" is an interval: the same parameter, and the goal of estimating it within a range.
 
+*Education example:* "Is the **mean reading-age gain** of all Year 4 pupils in the district **greater than** 6 months?" is a test — parameter, the mean gain for all the district's Year 4 pupils; direction, greater than. "**Between what values** does that mean gain lie?" is an interval: same parameter, goal of estimating it within a range. Note that "the mean gain of the 300 pupils we tested" is neither, because it is not a population value.
+
 ### Investigative question, third component: the population and the conclusion (1.10.A.3)
 
 The **third component indicates the type of conclusion** the study can reach. It gives the **population** to which the conclusions will apply, and, **in the case of an experiment that uses random assignment, a cause-and-effect conclusion**.
@@ -101,6 +105,8 @@ The **third component indicates the type of conclusion** the study can reach. It
 What it does not say. The population must be stated as exactly as the question allows: "all adults in Areas Three and Six of Region Y" earns the point in the course description's sample question, and "everyone in Region Y" does not. And a cause-and-effect conclusion belongs only to an experiment that assigns its treatments at random; every other study can reach at most a conclusion about association. The subsections that follow say what an experiment is, and when a conclusion can reach a population.
 
 *Illustration:* for the bakery's question, the population is **all the loaves the bakery makes**, and the conclusion is a generalisation about them, if the loaves weighed were chosen at random; there is no cause-and-effect conclusion, because nothing was done to the loaves.
+
+*Education example:* for the reading-club question the population is **all Year 4 pupils in the district's twelve primary schools**, which is as exact as the question allows; "all primary pupils" would not earn the point. The conclusion is a generalisation about those pupils if they were chosen at random, and it is **not** a cause-and-effect conclusion, because nobody decided which pupils attended the club.
 
 ### Census: data from every individual in the population (1.10.B.1)
 
@@ -110,6 +116,8 @@ What it does not say. A census is not a sample, so a numerical summary from a ce
 
 *Illustration:* a factory receives 500 screws. Testing all 500 is a census, and the proportion faulty is a parameter; testing 20 of them is a sample, and the proportion faulty among the 20 is a statistic.
 
+*Education example:* a university records the final mark of **all 318 students** enrolled in its first-year statistics module. That is a census of the module, and the mean mark is a **parameter**. Marks from 40 of those students would be a sample, and their mean a **statistic**. Note what the census still cannot do: it shows how the 318 performed, not what caused the performance.
+
 ### Experiment: the researcher imposes treatments (1.10.C.1)
 
 An **experiment** is a study in which a researcher **assigns conditions, or treatments, to experimental units** to explore an investigative question about the population.
@@ -117,6 +125,8 @@ An **experiment** is a study in which a researcher **assigns conditions, or trea
 What it does not say. Comparing two groups does not make a study an experiment; many observational studies compare groups. What makes it an experiment is that the **researcher decided** which unit gets which condition. It does not have to be well designed: an experiment with one treatment and no comparison is still an experiment, a poor one. When the treatments are allocated to the units by a random mechanism, such as a random number generator, the experiment uses **random assignment**. That is what the third component of an investigative question requires before a cause-and-effect conclusion. Why random assignment has that power, and what else makes an experiment well designed, is Session 7 (topic 1.13).
 
 *Illustration:* 30 units; the researcher gives 15 of them condition A and 15 condition B, then measures each. The researcher chose who got what: an experiment.
+
+*Education example:* a researcher takes 48 tutorial groups and **assigns** 24 of them to weekly low-stakes quizzes and 24 to no quizzes, then compares end-of-term marks. The researcher decided which groups were quizzed, so this is an experiment. Had the researcher instead compared tutors who already choose to quiz with tutors who do not, nothing would have been imposed and it would be an observational study — with the same two groups and the same comparison.
 
 ### Experimental units, factors, levels, treatments and the response (1.10.C.2–4)
 
@@ -131,6 +141,8 @@ What it does not say. The experimental unit is whatever receives the treatment, 
 
 *Illustration:* factor 1 has two levels (low, high) and factor 2 has three levels (1, 2, 3 hours). The treatments are the combinations: 2 × 3 = **6 treatments**, from (low, 1 hour) to (high, 3 hours).
 
+*Education example:* in a study of quizzing, factor 1 is **quiz frequency** with levels weekly and fortnightly, and factor 2 is **feedback** with levels score only, score plus a written comment, and no feedback. The treatments are the combinations: 2 × 3 = **6 treatments**. The response variable is the **end-of-term exam mark**. The experimental unit is **one tutorial group**, not one student, because the quizzing is delivered to a whole group at a time — which matters, since it is the groups that were assigned and so the groups that must be counted.
+
 ### Observational study: nothing is imposed (1.10.D.1)
 
 An **observational study** is a study where **treatments are not imposed**. The researcher **records the values** of the variables of interest to explore an investigative question.
@@ -138,6 +150,8 @@ An **observational study** is a study where **treatments are not imposed**. The 
 What it does not say. It is not a lesser kind of study: most of what is known about people comes from observational studies, and for many questions an experiment would be impossible or unethical. What it cannot do is decide who has which value of the explanatory variable, and the confounding-variable subsection below says why that matters.
 
 *Illustration:* 30 units, of which 15 already have condition A and 15 already have condition B; the researcher measures each. The comparison is identical to the experiment above, but nobody assigned the conditions: an observational study.
+
+*Education example:* a researcher records, for 600 pupils, **whether each already attends a homework club** and each pupil's end-of-year mathematics score. Nobody assigned attendance; pupils and their families chose it. The researcher only writes down what is already true, so this is an observational study — and for a question like this an experiment may be impossible, because a school cannot usually forbid a willing pupil from attending.
 
 ### Prospective, retrospective and survey (1.10.D.2–4)
 
@@ -153,6 +167,8 @@ What it does not say. Following people forward in time does not make a study an 
 
 *One question decides the type: did the researcher impose treatments? The three kinds of observational study are told apart by when the data come from, and a survey by its standard questions to people.*
 
+*Education example:* three studies of the same district. **Prospective:** enrol 500 pupils as they start Year 7 and record attendance and attainment each term for the next three years. **Retrospective:** take this year's Year 10 cohort and pull their Year 6 test scores from existing records. **Survey:** ask every Year 10 pupil the same fixed set of questions about homework hours. All three impose nothing, so all three are observational — following pupils forward for three years does not make the first one an experiment.
+
 ### Confounding variable in an observational study (1.10.D.5)
 
 A **confounding variable** in an observational study **provides an alternative explanation** for the observed relationship between the explanatory and response variables, which **reduces the possibility of concluding a causal relationship** between them. To be a confounding variable, a variable **must be associated with both the explanatory variable and the response variable**.
@@ -160,6 +176,8 @@ A **confounding variable** in an observational study **provides an alternative e
 What it does not say. Any variable that affects the response is not automatically a confounding variable: it must also be associated with the explanatory variable, and an answer that explains only one link earns half the credit. It does not say the association is false; the association is real, and the confounding variable is another way it could have arisen. And a confounding variable is not removed by a bigger sample, a random sample, or a census. It is a problem of **who has which value of the explanatory variable**, which only imposing the treatments can address. How random assignment addresses it is Session 7 (1.13.A.7–8).
 
 *Illustration:* of 10 units that chose condition A, 8 are high on a third variable *w*; of 10 that chose B, 2 are. If high *w* raises the response, group A will score higher even if condition A does nothing: *w* is associated with the condition and with the response.
+
+*Education example:* pupils who attend the homework club score higher in mathematics than pupils who do not. **Parental involvement** is a plausible confounding variable: it is associated with **attending the club** (involved parents sign their children up and get them there) and it is associated with **higher scores** (involved parents also help at home). So the gap may reflect the families rather than the club. The association is real; the club's effect is what is in doubt — and surveying 6,000 pupils rather than 600, or choosing them at random, would not remove the problem.
 
 ### Random selection and how far a generalization reaches (1.10.E.1–4)
 
@@ -176,6 +194,8 @@ What it does not say. *Random* does not mean *haphazard*, *typical-looking* or *
 
 *Illustration:* 50 names drawn by a random number generator from a list of 2,000 people support conclusions about the 2,000. The first 50 of those 2,000 to reply to an email support conclusions only about people similar to those who replied.
 
+*Education example:* a random number generator selects 200 of a university's 9,000 undergraduates, who are then asked about study hours. Those results may be generalised to **all 9,000**. Compare a notice in the library inviting students to take part: those students **volunteered**, so the results generalise only to students **similar to those who volunteered** — who are likely to be more motivated than average, in a study about study hours. Note also what neither sample can do: a random sample of an observational study still cannot show that anything causes anything.
+
 ### Sampling without replacement and with replacement (1.11.A.1–2)
 
 In **sampling without replacement**, an observational unit can be selected **only once**: it is not returned to the population before the next selection. In **sampling with replacement**, a unit is returned before the next selection, so it **can be selected more than once**.
@@ -183,6 +203,8 @@ In **sampling without replacement**, an observational unit can be selected **onl
 What it does not say. Surveys and the four methods below sample **without** replacement: nobody is interviewed twice, and a repeated random number is ignored. Sampling with replacement matters later, when drawing from a population is modelled as repeated independent draws (the 10% condition in Sessions 13 and 18 is about when the difference can be ignored).
 
 *Illustration:* drawing 2 of 5 numbered slips. Without replacement, (3, 3) is impossible. With replacement, slip 3 goes back into the hat, and (3, 3) can happen.
+
+*Education example:* to pick 30 pupils from a roll of 480, a researcher generates random numbers between 1 and 480 and **ignores any number that comes up twice** — no pupil is interviewed about their homework twice. That is sampling without replacement, and it is what every survey and all four methods below do.
 
 ### Simple random sample: every sample of size n equally likely (1.11.A.3)
 
@@ -192,6 +214,8 @@ What it does not say. "Every individual has the same chance" is **not** the defi
 
 *Illustration:* from A, B, C and D, choose 2. There are 6 possible samples, AB, AC, AD, BC, BD and CD, and an SRS gives each a chance of 1 in 6. Tossing a coin, heads AB and tails CD, gives every individual a 1 in 2 chance too, but only 2 of the 6 samples can happen: **not** an SRS.
 
+*Education example:* a university numbers all 9,000 undergraduates from its enrolment list and a generator draws 200 — every possible group of 200 students is equally likely, so this is a simple random sample. It needed a complete list of enrolments, which is the method's main cost. Contrast a researcher who takes **the first 200 names alphabetically**: there is a list, and every student is on it, but no random mechanism chose the sample, and only one sample of 200 was ever possible.
+
 ### Stratified random sample: an SRS inside every stratum (1.11.A.4)
 
 A **stratified random sample** divides **all** individuals in the population into **non-overlapping groups, called strata**, based on one or more **shared attributes or characteristics** (homogeneous grouping). A **simple random sample is selected within each stratum**, and the selected individuals are **combined** to form one sample.
@@ -199,6 +223,8 @@ A **stratified random sample** divides **all** individuals in the population int
 What it does not say. The strata are formed **before** sampling, from an attribute known for everyone, and **every** stratum contributes. The individuals within a stratum should be alike (homogeneous), ideally in a way related to the variable being studied. The strata need not contribute equal numbers.
 
 *Illustration:* 40 individuals in 5 rows of 8, where each row shares an attribute. Choosing 2 at random from **every** row gives a stratified random sample of 10, with the rows as strata.
+
+*Education example:* a district has twelve primary schools of very different sizes, and reading scores differ a lot **between** schools while being fairly similar **within** each one. Stratifying **by school** and taking a simple random sample inside each guarantees that every school contributes, allows a separate estimate for each school, and makes the district-wide estimate vary less from sample to sample than a simple random sample would. It requires knowing each pupil's school before sampling — which, here, the district already does.
 
 ### Cluster random sample: every unit in randomly chosen clusters (1.11.A.5)
 
@@ -208,6 +234,8 @@ What it does not say. The ideal is the **opposite** of stratifying: a stratum sh
 
 *Illustration:* the same 40 individuals, now seen as 8 columns of 5, each column containing one individual from every row. Choosing 2 columns at random and taking all 10 individuals in them is a cluster random sample, with the columns as clusters.
 
+*Education example:* the same district has 60 Year 4 classes. Taking a simple random sample of **3 classes** and testing **every** pupil in those three is a cluster random sample: the practical choice, because a tester visits three classrooms rather than 60. It works only if each class mirrors the district. If classes are **streamed by attainment**, they do not: the clusters differ sharply from one another, and three classes could easily miss whole attainment bands — which is exactly when stratifying by stream would be the better plan.
+
 ### Systematic random sample: a random start and a fixed interval (1.11.A.6)
 
 A **systematic random sample** selects its members from the population according to a **random starting point** and a **fixed, periodic interval** between successive sampling units.
@@ -215,6 +243,8 @@ A **systematic random sample** selects its members from the population according
 What it does not say. The start must be random; "every 4th, starting with the first" is not a random sample. It is **not** an SRS: with an interval of *k*, only *k* different samples are possible. And it depends on the order of the list: if the list has a pattern that repeats with the same interval, every sample can hit the same point of the pattern.
 
 *Illustration:* number the 40 individuals 1 to 40, choose a random start from 1 to 4, say 3, and take every 4th: 3, 7, 11, …, 39. That is 10 individuals, and only 4 samples were possible.
+
+*Education example:* an attendance officer takes a roll of 480 pupils, picks a random start between 1 and 10, and samples every 10th name from there. Easy to do, and it spreads the sample across the whole roll. The danger is a pattern that repeats with the interval: if the roll is grouped by class with exactly 30 pupils each, and each class is listed in rank order, an interval of 30 would select the same rank position in every class — the top pupil from each one, every time.
 
 ### Choosing a sampling method to suit the question (1.11.B.1)
 
@@ -232,6 +262,8 @@ What it does not say. All four are **random** sampling methods, so each supports
 ![Four panels showing the same 40 individuals sampled by simple random, stratified, cluster and systematic random sampling](figures/s06-theory-four-methods.svg)
 
 *The same 40 individuals, four ways, n = 10 each time. The rows are strata and the columns are clusters, so each column mirrors the whole grid. There are 847,660,528 possible simple random samples of 10; stratifying by row allows 17,210,368 of them, choosing 2 of 8 columns allows 28, and the systematic plan allows 4. Every individual has a 1 in 4 chance in all four panels.*
+
+*Education example:* two questions about the same district get different answers. "**Do reading gains differ between our twelve schools?**" needs an estimate for each school, so **stratify by school** — and the justification is that it guarantees every school a place and gains differ markedly between schools. "**What is the mean gain across the district?**", asked with one tester and a week of time, points to **cluster sampling by class**, because the gain can be estimated without visiting all 60 classes. Writing "stratified is better" earns nothing; writing "stratifying by school guarantees pupils from every school, and reading gain differs a lot between schools" earns the mark.
 
 ### Self-check on the theory
 
