@@ -3799,7 +3799,8 @@
   },
   "lincoln-travel-register": {
    "sessions": [
-    8
+    8,
+    9
    ],
    "desc": "Scenario A: Lincoln High travel register, a census of all 1,842 students: home area x main travel mode. The Bus column is Session 7's bus-pass census (lincoln-bus-survey-bias). Conditional relative frequencies to 3 dp from the counts.",
    "rows": [
@@ -4035,7 +4036,8 @@
   },
   "library-formats-solo": {
    "sessions": [
-    8
+    8,
+    9
    ],
    "desc": "Solo case: random sample of 250 members of the Central and Westside branches by borrowing format. Identical conditional relative frequencies (no association). P(both) estimate 75/250 = 0.300.",
    "rows": [
@@ -4129,7 +4131,8 @@
   },
   "oakfield-lunch-hw": {
    "sessions": [
-    8
+    8,
+    9
    ],
    "desc": "Homework Part B: random sample of 200 Oakfield students from Years 7, 9 and 11, by usual lunch.",
    "rows": [
@@ -4217,7 +4220,8 @@
   },
   "hospital-recommend-hw": {
    "sessions": [
-    8
+    8,
+    9
    ],
    "desc": "Homework Part C mosaic: the Session 1 hospital survey's 300 patients (hospital counts 84/71/52/45/30/18) by whether they would recommend their hospital.",
    "rows": [
@@ -4330,7 +4334,8 @@
   },
   "stmarys-overbooking": {
    "sessions": [
-    8
+    8,
+    9
    ],
    "desc": "Scenario B: one St Mary's clinic, 10 slots per session; 100 of 1,000 appointments missed since texts began, so P(miss) estimated 0.10; proposal to book 11. Hand simulation: 20 trials of 11 digits (0 = misses), Python random.Random(seed).",
    "slots": 10,
@@ -4582,6 +4587,274 @@
     "estimate": 0.4
    },
    "coin": "hypothetical: 7 heads in 10, 5,040 in 10,000"
+  },
+  "s09-theory-abstract": {
+   "sessions": [
+    9
+   ],
+   "desc": "Made-up illustrations in the Session 9 theory section: a fair six-sided die, and one 30-unit table used for intersections, mutual exclusivity and complements. No context.",
+   "die": {
+    "sample_space": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6
+    ],
+    "P_even": 0.5,
+    "P_seven": 0,
+    "P_less_than_seven": 1
+   },
+   "thirty_units": {
+    "rows": [
+     "Type A",
+     "Type B"
+    ],
+    "cols": [
+     "Yes",
+     "No"
+    ],
+    "cells": [
+     [
+      4,
+      8
+     ],
+     [
+      6,
+      12
+     ]
+    ],
+    "row_totals": [
+     12,
+     18
+    ],
+    "col_totals": [
+     10,
+     20
+    ],
+    "total": 30,
+    "P_A": 0.4,
+    "P_A_complement": 0.6,
+    "P_yes": 0.333,
+    "P_A_and_yes": 0.133,
+    "P_A_and_B": 0
+   }
+  },
+  "s09-theory-education": {
+   "sessions": [
+    9
+   ],
+   "desc": "Education examples in the Session 9 theory section, continuing the Sessions 6-8 strand: the district's summer-school lottery and its 400 Year 11 pupils (both from Session 8's theory), plus the university's first-year statistics module grades (new; the 318-student module was registered in Session 6's theory as a census).",
+   "district_lottery": {
+    "applicants": 50,
+    "places": 30,
+    "from_two_smallest_schools": 14,
+    "P_first_draw_small_school": 0.28,
+    "P_complement": 0.72,
+    "P_named_applicant_gets_place": 0.6,
+    "P_complement_named": 0.4
+   },
+   "district_year11": {
+    "rows": [
+     "Attended revision",
+     "Did not attend"
+    ],
+    "cols": [
+     "Passed",
+     "Did not pass"
+    ],
+    "cells": [
+     [
+      180,
+      60
+     ],
+     [
+      80,
+      80
+     ]
+    ],
+    "row_totals": [
+     240,
+     160
+    ],
+    "col_totals": [
+     260,
+     140
+    ],
+    "total": 400,
+    "P_attended_and_passed": 0.45,
+    "P_attended": 0.6,
+    "P_passed": 0.65,
+    "P_did_not_attend": 0.4
+   },
+   "module_grades": {
+    "students": 318,
+    "counts": {
+     "A": 44,
+     "B": 93,
+     "C": 103,
+     "D": 59,
+     "F": 19
+    },
+    "probabilities": {
+     "A": 0.138,
+     "B": 0.292,
+     "C": 0.324,
+     "D": 0.186,
+     "F": 0.06
+    },
+    "sum_to_3dp": 1.0,
+    "P_not_F": 0.94,
+    "note": "Chosen so the five probabilities to 3 dp sum to exactly 1.000."
+   }
+  },
+  "stmarys-appointment-outcomes": {
+   "sessions": [
+    9
+   ],
+   "desc": "Scenario B: all 1,000 St Mary's clinic appointment records since the text reminders began, classified into four nonoverlapping outcomes, and cross-tabulated by first appointment against follow-up. The 100 missed records are Session 8's stmarys-overbooking input, P(miss) = 0.100.",
+   "outcomes": {
+    "Attended on time": 770,
+    "Attended late": 70,
+    "Cancelled in advance": 60,
+    "Missed without notice": 100
+   },
+   "total": 1000,
+   "probabilities": {
+    "Attended on time": 0.77,
+    "Attended late": 0.07,
+    "Cancelled in advance": 0.06,
+    "Missed without notice": 0.1,
+    "sum": 1.0
+   },
+   "P_attended": 0.84,
+   "P_not_attended": 0.16,
+   "overlapping_list": {
+    "entries": [
+     "attends",
+     "attends late",
+     "cancels",
+     "misses"
+    ],
+    "probabilities_sum_to": 1.07,
+    "why": "attends contains the 70 late attenders, so the entries overlap"
+   },
+   "two_way": {
+    "rows": [
+     "First appointment",
+     "Follow-up"
+    ],
+    "cols": [
+     "On time",
+     "Late",
+     "Cancelled in advance",
+     "Missed without notice"
+    ],
+    "cells": [
+     [
+      280,
+      32,
+      28,
+      60
+     ],
+     [
+      490,
+      38,
+      32,
+      40
+     ]
+    ],
+    "row_totals": [
+     400,
+     600
+    ],
+    "col_totals": [
+     770,
+     70,
+     60,
+     100
+    ],
+    "total": 1000,
+    "P_first": 0.4,
+    "P_first_and_missed": 0.06,
+    "P_followup_and_missed": 0.04,
+    "P_first_and_cancelled": 0.028,
+    "P_first_and_on_time": 0.28,
+    "count_first_or_missed": 440
+   }
+  },
+  "cafe-loyalty-food-solo": {
+   "sessions": [
+    9
+   ],
+   "desc": "Solo case: a random sample of 240 of the cafe's 1,260 loyalty members (cafe-loyalty-members, Session 6), by usual drink and whether they usually add food. Counts chosen so the three drink probabilities to 3 dp sum to exactly 1.000 and no rounding tie arises.",
+   "rows": [
+    "Coffee",
+    "Tea",
+    "Cold drink"
+   ],
+   "cols": [
+    "Adds food",
+    "No food"
+   ],
+   "cells": [
+    [
+     84,
+     66
+    ],
+    [
+     22,
+     28
+    ],
+    [
+     14,
+     26
+    ]
+   ],
+   "row_totals": [
+    150,
+    50,
+    40
+   ],
+   "col_totals": [
+    120,
+    120
+   ],
+   "total": 240,
+   "probabilities": {
+    "P_coffee": 0.625,
+    "P_tea": 0.208,
+    "P_cold": 0.167,
+    "sum": 1.0,
+    "P_adds_food": 0.5,
+    "P_coffee_and_food": 0.35,
+    "P_tea_and_food": 0.092,
+    "P_cold_and_food": 0.058,
+    "P_not_coffee": 0.375,
+    "P_coffee_and_tea": 0,
+    "cond_food_given_coffee": 0.56
+   }
+  },
+  "gym-prize-draw-hw": {
+   "sessions": [
+    9
+   ],
+   "desc": "Homework Part C: the Session 1 gym, now 400 members, each on exactly one membership type; one member drawn at random for a prize. The 1.6 distractor is 160 divided by 100.",
+   "membership": {
+    "Off-peak": 160,
+    "Peak": 180,
+    "Student": 60
+   },
+   "total": 400,
+   "probabilities": {
+    "Off-peak": 0.4,
+    "Peak": 0.45,
+    "Student": 0.15,
+    "sum": 1.0,
+    "P_not_student": 0.85,
+    "P_peak_and_student": 0
+   }
   }
  }
 }

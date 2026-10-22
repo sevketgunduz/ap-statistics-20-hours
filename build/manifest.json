@@ -303,6 +303,39 @@
           "variant": "test",
           "title": "Session 8 Test",
           "topics": "CED 2.1–2.3 · 20 questions"
+        },
+        {
+          "id": "s09t",
+          "label": "Session 9 · Tutor",
+          "out": "s09-tutor.html",
+          "src": "Session-09-Tutoring-Document.md",
+          "kind": "md",
+          "session": 9,
+          "variant": "tutor",
+          "title": "Session 9, Probability and Mutually Exclusive Events",
+          "topics": "CED 2.4–2.5"
+        },
+        {
+          "id": "s09s",
+          "label": "Session 9 · Student",
+          "out": "s09-student.html",
+          "src": "Session-09-Student-Workbook.md",
+          "kind": "md",
+          "session": 9,
+          "variant": "student",
+          "title": "Session 9 Workbook",
+          "topics": "CED 2.4–2.5"
+        },
+        {
+          "id": "s09x",
+          "label": "Session 9 · Test",
+          "out": "s09-test.html",
+          "src": "Session-09-MC-Test.md",
+          "kind": "md",
+          "session": 9,
+          "variant": "test",
+          "title": "Session 9 Test",
+          "topics": "CED 2.4–2.5 · 16 questions"
         }
       ]
     },
