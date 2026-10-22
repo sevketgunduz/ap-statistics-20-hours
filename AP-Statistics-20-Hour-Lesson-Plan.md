@@ -135,7 +135,7 @@ Nine terms — the four sampling designs plus bias, voluntary response, undercov
 
 #### Session 8 — Topics 2.1, 2.2, 2.3
 
-Two-way tables: joint, marginal, and conditional percentages. Simulation as a way of estimating a probability before any rules exist. The tables built here become the concrete object that conditional probability is defined on in session 10.
+Two-way tables: joint, marginal, and conditional percentages. Simulation as a way of estimating a probability before any rules exist, and **the law of large numbers** (2.3.A.7), which says what a long run of trials settles towards and nothing at all about a short one. The tables built here become the concrete object that conditional probability is defined on in session 10.
 
 **Activity — Quiz-Quiz-Trade [CED]**
 Each student gets a card with a two-way-table question and its answer on the back. Students pair up, quiz each other, swap cards, and find a new partner. Keeps circulation and repetition high in a short session.
@@ -144,10 +144,16 @@ Each student gets a card with a two-way-table question and its answer on the bac
 
 #### Session 9 — Topics 2.4, 2.5
 
-The law of large numbers. Basic probability rules and complements. Mutually exclusive events, and the addition rule that follows from them.
+Sample spaces, and why their outcomes must not overlap. Theoretical probability when every outcome is equally likely — and what to do when they are not. The 0-to-1 bound as a check. Complements, written three ways. Joint probability, and mutually exclusive events as the case where it is zero.
+
+> **Two things this session does not cover.** The **law of large numbers** is CED 2.3.A.7 and is taught in Session 8; recall it here, do not re-teach it. The **union** — P(A ∪ B) = P(A) + P(B) − P(A ∩ B) — is CED 2.7.A.3 and belongs to Session 10. Topic 2.5 stops at *"if two events are mutually exclusive then P(A ∩ B) = 0"* and goes no further. Note also that the CED never uses the phrase *addition rule*; it says *the probability of the union*. All three prep books use it, so it sits on the removed-names list with Venn and tree diagrams.
+>
+> A compound event such as "Stalls or concession" is still answerable in this session, by **counting the outcomes it contains** — which is what 2.4.A.2 gives you. What is unavailable is the formula.
 
 **Activity — Think-Pair-Share [CED]**
 Five probability questions — one each for the complement rule, a mutually exclusive event, a conditional probability, the general multiplication rule, and an independent event. Students identify only the formula needed, with no calculation, then compare with a partner. Recognition is the skill being drilled.
+
+> **The CED lists this activity against topics 2.4, 2.5, 2.6 *and* 2.7**, so it spans Sessions 9 and 10. Only two of the five cards — the complement rule and the mutually exclusive event — fall in this session; conditional probability, the general multiplication rule and independence are Session 10's. Run the two here and the rest next session, or hold the whole activity for Session 10. The one-to-one conversion is **Think-Aloud**: the student names the rule and narrates the reasoning, with no calculation (see the conversion table).
 
 `B pdf 273–277` · `PR 206–221` · `5S 143–147`
 
