@@ -7,6 +7,11 @@
 !/.github/
 !/.gitignore
 !/*.md
+# Practice tests worked through in the course, written as markdown next to
+# the session documents. Only the .md files travel; scans stay local.
+!/Practice Tests/
+/Practice Tests/*
+!/Practice Tests/*.md
 # The session-builder agent and the /build-session command travel with the
 # repository; everything else under .claude/ (local settings, launch config) stays local.
 !/.claude/
