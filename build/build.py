@@ -47,6 +47,27 @@ def inline_md(t):
     return t
 
 
+def split_cells(line):
+    """Split one markdown table row into cells on unescaped pipes.
+
+    A cell may contain a literal vertical bar written as '\\|', which matters
+    for conditional-probability notation such as P(A | B)."""
+    cells = re.split(r"(?<!\\)\|", line.strip().strip("|"))
+    return [c.replace("\\|", "|").strip() for c in cells]
+
+
+def render_table(hdr, rows):
+    """Render one parsed markdown table. Shared by the table branch and the
+    blockquote branch, so a table inside a scenario quote is still a table."""
+    th = "".join("<th>%s</th>" % inline_md(c) for c in hdr)
+    tb = ""
+    for r in rows:
+        cls = ' class="tot"' if r and r[0].startswith("**") else ""
+        tb += "<tr%s>%s</tr>" % (cls, "".join("<td>%s</td>" % inline_md(c) for c in r))
+    return ('<div class="tbl"><table><thead><tr>%s</tr></thead><tbody>%s</tbody></table></div>'
+            % (th, tb))
+
+
 def read_svg(name):
     for d in (FIGS_IN,):
         p = os.path.join(d, name)
@@ -155,17 +176,11 @@ def render_md(md, depth):
 
         # ---- table -------------------------------------------------------
         if s.startswith("|") and i + 1 < n and re.match(r"^\|[\s:\-\|]+\|$", lines[i + 1].strip()):
-            hdr = [c.strip() for c in s.strip("|").split("|")]
+            hdr = split_cells(s)
             i += 2; rows = []
             while i < n and lines[i].strip().startswith("|"):
-                rows.append([c.strip() for c in lines[i].strip().strip("|").split("|")]); i += 1
-            th = "".join("<th>%s</th>" % inline_md(c) for c in hdr)
-            tb = ""
-            for r in rows:
-                cls = ' class="tot"' if r and r[0].startswith("**") else ""
-                tb += "<tr%s>%s</tr>" % (cls, "".join("<td>%s</td>" % inline_md(c) for c in r))
-            out.append('<div class="tbl"><table><thead><tr>%s</tr></thead><tbody>%s</tbody></table></div>'
-                       % (th, tb))
+                rows.append(split_cells(lines[i].strip())); i += 1
+            out.append(render_table(hdr, rows))
             continue
 
         # ---- blockquote --------------------------------------------------
@@ -173,8 +188,24 @@ def render_md(md, depth):
             buf = []
             while i < n and lines[i].strip().startswith(">"):
                 buf.append(lines[i].strip().lstrip(">").strip()); i += 1
-            out.append("<blockquote>%s</blockquote>" %
-                       "<br>".join(inline_md(b) for b in buf if b))
+            # A scenario quote may carry a two-way table. Render that as a real
+            # table; the lines around it stay inline, joined with <br> as before.
+            parts, run, j = [], [], 0
+            while j < len(buf):
+                if (buf[j].startswith("|") and j + 1 < len(buf)
+                        and re.match(r"^\|[\s:\-\|]+\|$", buf[j + 1])):
+                    if run:
+                        parts.append("<br>".join(inline_md(b) for b in run if b))
+                        run = []
+                    hdr = split_cells(buf[j]); j += 2; rows = []
+                    while j < len(buf) and buf[j].startswith("|"):
+                        rows.append(split_cells(buf[j])); j += 1
+                    parts.append(render_table(hdr, rows))
+                else:
+                    run.append(buf[j]); j += 1
+            if run:
+                parts.append("<br>".join(inline_md(b) for b in run if b))
+            out.append("<blockquote>%s</blockquote>" % "".join(parts))
             continue
 
         # ---- lists -------------------------------------------------------

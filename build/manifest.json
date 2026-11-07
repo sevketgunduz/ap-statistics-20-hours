@@ -336,6 +336,39 @@
           "variant": "test",
           "title": "Session 9 Test",
           "topics": "CED 2.4–2.5 · 16 questions"
+        },
+        {
+          "id": "s10t",
+          "label": "Session 10 · Tutor",
+          "out": "s10-tutor.html",
+          "src": "Session-10-Tutoring-Document.md",
+          "kind": "md",
+          "session": 10,
+          "variant": "tutor",
+          "title": "Session 10, Conditional Probability, Independence and Unions",
+          "topics": "CED 2.6–2.7"
+        },
+        {
+          "id": "s10s",
+          "label": "Session 10 · Student",
+          "out": "s10-student.html",
+          "src": "Session-10-Student-Workbook.md",
+          "kind": "md",
+          "session": 10,
+          "variant": "student",
+          "title": "Session 10 Workbook",
+          "topics": "CED 2.6–2.7"
+        },
+        {
+          "id": "s10x",
+          "label": "Session 10 · Test",
+          "out": "s10-test.html",
+          "src": "Session-10-MC-Test.md",
+          "kind": "md",
+          "session": 10,
+          "variant": "test",
+          "title": "Session 10 Test",
+          "topics": "CED 2.6–2.7 · 18 questions"
         }
       ]
     },
